@@ -23,6 +23,8 @@ namespace StarResonanceDpsAnalysis.Forms.ModuleForm
         {
             InitializeComponent();
             FormGui.SetDefaultGUI(this);
+
+            ApplyLocalization();
         }
 
         private void ModuleCalculationForm_Load(object sender, EventArgs e)
@@ -90,9 +92,7 @@ namespace StarResonanceDpsAnalysis.Forms.ModuleForm
         {
             if (MessageAnalyzer.PayloadBuffer.Length == 0)
             {
-                var result = AppMessageBox.ShowMessage("""
-                    请先过图一次在点此按钮
-                    """, this);
+                var result = AppMessageBox.ShowMessage(Properties.Strings.Notice_ChangeMaps, this);
                 return;
             }
 
@@ -180,16 +180,16 @@ namespace StarResonanceDpsAnalysis.Forms.ModuleForm
                       new Size(contentW, int.MaxValue), TextFormatFlags.WordBreak).Height + card.LineGap;
 
                 // 最高属性等级
-                y += TextRenderer.MeasureText($"最高属性等级 {card.HighestLevel}", fontBody,
+                y += TextRenderer.MeasureText($"{Properties.Strings.ModuleCalc_TotalScore}{card.HighestLevel}", fontBody,
                       new Size(contentW, int.MaxValue), TextFormatFlags.WordBreak).Height + card.LineGap;
 
                 // 综合评分（两段同一行，测一整段足够）
                 string scoreText = string.IsNullOrEmpty(card.Score) ? "—" : card.Score;
-                y += TextRenderer.MeasureText($"综合评分：{scoreText}", fontBody,
+                y += TextRenderer.MeasureText($"{Properties.Strings.ModuleCalc_TotalScore}{scoreText}", fontBody,
                       new Size(contentW, int.MaxValue), TextFormatFlags.WordBreak).Height + card.SectionGap;
 
                 // 列表标题
-                y += TextRenderer.MeasureText("模组列表：", fontBody,
+                y += TextRenderer.MeasureText(Properties.Strings.ModuleCalc_ModuleList, fontBody,
                       new Size(contentW, int.MaxValue), TextFormatFlags.WordBreak).Height + card.LineGap;
 
                 // 列表每行（左列宽 = contentW - 右列自然宽 - gap；右列自然宽不换行）
@@ -210,7 +210,7 @@ namespace StarResonanceDpsAnalysis.Forms.ModuleForm
                 y += card.SectionGap;
 
                 // 属性分布标题
-                y += TextRenderer.MeasureText("属性分布：", fontBody,
+                y += TextRenderer.MeasureText(Properties.Strings.ModuleCalc_AttrEffects, fontBody,
                       new Size(contentW, int.MaxValue), TextFormatFlags.WordBreak).Height + card.LineGap;
 
                 // 属性分布每行
@@ -264,7 +264,7 @@ namespace StarResonanceDpsAnalysis.Forms.ModuleForm
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("装饰用");
+            MessageBox.Show("装饰用 (For Decoration)");
         }
 
         private void ModuleCalculationForm_ForeColorChanged(object sender, EventArgs e)
@@ -558,5 +558,252 @@ namespace StarResonanceDpsAnalysis.Forms.ModuleForm
             base.OnFormClosed(e);
         }
 
+        public void ApplyLocalization()
+        {
+            // Title and labels
+            TitleText.Text = Properties.Strings.ModuleCalc_Title;
+            label1.Text = Properties.Strings.ModuleCalc_Label1;
+
+            // Group boxes
+            groupBox1.Text = Properties.Strings.ModuleCalc_GroupBox1;
+            groupBox3.Text = Properties.Strings.ModuleCalc_GroupBox3;
+
+            // Buttons
+            button1.Text = Properties.Strings.ModuleCalc_Button1;
+            // button2.Text = Properties.Strings.ModuleCalc_Button2;
+
+            //select1.PrefixText = Properties.Strings.ModuleCalc_Select1_Prefix;
+            //select2.PrefixText = Properties.Strings.ModuleCalc_Select2_Prefix;
+            //select3.PrefixText = Properties.Strings.ModuleCalc_Select3_Prefix;
+            //select4.PrefixText = Properties.Strings.ModuleCalc_Select4_Prefix;
+            //select5.PrefixText = Properties.Strings.ModuleCalc_Select5_Prefix;
+            //select6.PrefixText = Properties.Strings.ModuleCalc_Select6_Prefix;
+            //select7.PrefixText = Properties.Strings.ModuleCalc_Select7_Prefix;
+            //select8.PrefixText = Properties.Strings.ModuleCalc_Select8_Prefix;
+            //select9.PrefixText = Properties.Strings.ModuleCalc_Select9_Prefix;
+            //select10.PrefixText = Properties.Strings.ModuleCalc_Select10_Prefix;
+            //select11.PrefixText = Properties.Strings.ModuleCalc_Select11_Prefix;
+            //select12.PrefixText = Properties.Strings.ModuleCalc_Select12_Prefix;
+
+            select1.PrefixText = "";
+            select2.PrefixText = "";
+            select3.PrefixText = "";
+            select4.PrefixText = "";
+            select5.PrefixText = "";
+            select6.PrefixText = "";
+            select7.PrefixText = "";
+            select8.PrefixText = "";
+            select9.PrefixText = "";
+            select10.PrefixText = "";
+            select11.PrefixText = "";
+            select12.PrefixText = "";
+
+            // Selects (dropdowns) - Text and Items
+            select1.Text = Properties.Strings.ModuleCalc_Select1;
+            select1.Items.Clear();
+            select1.Items.AddRange(new[]
+            {
+                Properties.Strings.ModuleCategory_Attack,
+                Properties.Strings.ModuleCategory_Support,
+                Properties.Strings.ModuleCategory_Guardian,
+                Properties.Strings.ModuleCategory_All
+            });
+            select1.SelectedValue = Properties.Strings.ModuleCategory_All;
+
+            select2.Text = Properties.Strings.ModuleCalc_Select2;
+            select2.Items.Clear();
+            select2.Items.AddRange(new[]
+            {
+                Properties.Strings.ModuleAttr_StrengthBoost,
+                Properties.Strings.ModuleAttr_AgilityBoost,
+                Properties.Strings.ModuleAttr_IntelligenceBoost,
+                Properties.Strings.ModuleAttr_SpecialAttackDamage,
+                Properties.Strings.ModuleAttr_EliteStrike,
+                Properties.Strings.ModuleAttr_SpecialHealingBoost,
+                Properties.Strings.ModuleAttr_ExpertHealingBoost,
+                Properties.Strings.ModuleAttr_CastingFocus,
+                Properties.Strings.ModuleAttr_AttackSpeedFocus,
+                Properties.Strings.ModuleAttr_CriticalFocus,
+                Properties.Strings.ModuleAttr_LuckFocus,
+                Properties.Strings.ModuleAttr_MagicResistance,
+                Properties.Strings.ModuleAttr_PhysicalResistance,
+                Properties.Strings.ModuleAttr_ExtremeDamageStack,
+                Properties.Strings.ModuleAttr_ExtremeFlexibleMovement,
+                Properties.Strings.ModuleAttr_ExtremeLifeConvergence,
+                Properties.Strings.ModuleAttr_ExtremeEmergencyMeasures,
+                Properties.Strings.ModuleAttr_ExtremeLifeFluctuation,
+                Properties.Strings.ModuleAttr_ExtremeLifeDrain,
+                Properties.Strings.ModuleAttr_ExtremeTeamCrit,
+                Properties.Strings.ModuleAttr_ExtremeDesperateGuardian
+            });
+
+            select3.Text = Properties.Strings.ModuleCalc_Select3;
+            select3.Items.Clear();
+            select3.Items.AddRange(new[]
+            {
+                Properties.Strings.ModuleCalc_Select3_Item_SortByTotalAttr,
+                Properties.Strings.ModuleCalc_Select3_Item_SortByScore
+            });
+            select3.SelectedValue = Properties.Strings.ModuleCalc_Select3_Item_SortByScore;
+
+            select4.Text = Properties.Strings.ModuleCalc_Select4;
+            select4.Items.Clear();
+            select4.Items.AddRange(new[]
+            {
+                Properties.Strings.ModuleAttr_StrengthBoost,
+                Properties.Strings.ModuleAttr_AgilityBoost,
+                Properties.Strings.ModuleAttr_IntelligenceBoost,
+                Properties.Strings.ModuleAttr_SpecialAttackDamage,
+                Properties.Strings.ModuleAttr_EliteStrike,
+                Properties.Strings.ModuleAttr_SpecialHealingBoost,
+                Properties.Strings.ModuleAttr_ExpertHealingBoost,
+                Properties.Strings.ModuleAttr_CastingFocus,
+                Properties.Strings.ModuleAttr_AttackSpeedFocus,
+                Properties.Strings.ModuleAttr_CriticalFocus,
+                Properties.Strings.ModuleAttr_LuckFocus,
+                Properties.Strings.ModuleAttr_MagicResistance,
+                Properties.Strings.ModuleAttr_PhysicalResistance,
+                Properties.Strings.ModuleAttr_ExtremeDamageStack,
+                Properties.Strings.ModuleAttr_ExtremeFlexibleMovement,
+                Properties.Strings.ModuleAttr_ExtremeLifeConvergence,
+                Properties.Strings.ModuleAttr_ExtremeEmergencyMeasures,
+                Properties.Strings.ModuleAttr_ExtremeLifeFluctuation,
+                Properties.Strings.ModuleAttr_ExtremeLifeDrain,
+                Properties.Strings.ModuleAttr_ExtremeTeamCrit,
+                Properties.Strings.ModuleAttr_ExtremeDesperateGuardian
+            });
+
+            select5.Text = Properties.Strings.ModuleCalc_Select5;
+            select5.Items.Clear();
+            select5.Items.AddRange(new[]
+            {
+                Properties.Strings.ModuleAttr_StrengthBoost,
+                Properties.Strings.ModuleAttr_AgilityBoost,
+                Properties.Strings.ModuleAttr_IntelligenceBoost,
+                Properties.Strings.ModuleAttr_SpecialAttackDamage,
+                Properties.Strings.ModuleAttr_EliteStrike,
+                Properties.Strings.ModuleAttr_SpecialHealingBoost,
+                Properties.Strings.ModuleAttr_ExpertHealingBoost,
+                Properties.Strings.ModuleAttr_CastingFocus,
+                Properties.Strings.ModuleAttr_AttackSpeedFocus,
+                Properties.Strings.ModuleAttr_CriticalFocus,
+                Properties.Strings.ModuleAttr_LuckFocus,
+                Properties.Strings.ModuleAttr_MagicResistance,
+                Properties.Strings.ModuleAttr_PhysicalResistance,
+                Properties.Strings.ModuleAttr_ExtremeDamageStack,
+                Properties.Strings.ModuleAttr_ExtremeFlexibleMovement,
+                Properties.Strings.ModuleAttr_ExtremeLifeConvergence,
+                Properties.Strings.ModuleAttr_ExtremeEmergencyMeasures,
+                Properties.Strings.ModuleAttr_ExtremeLifeFluctuation,
+                Properties.Strings.ModuleAttr_ExtremeLifeDrain,
+                Properties.Strings.ModuleAttr_ExtremeTeamCrit,
+                Properties.Strings.ModuleAttr_ExtremeDesperateGuardian
+            });
+
+            select6.Text = Properties.Strings.ModuleCalc_Select6; //todo come back here
+            select6.Items.Clear();
+            select6.Items.AddRange(new[]
+            {
+                Properties.Strings.ModuleAttr_StrengthBoost,
+                Properties.Strings.ModuleAttr_AgilityBoost,
+                Properties.Strings.ModuleAttr_IntelligenceBoost,
+                Properties.Strings.ModuleAttr_SpecialAttackDamage,
+                Properties.Strings.ModuleAttr_EliteStrike,
+                Properties.Strings.ModuleAttr_SpecialHealingBoost,
+                Properties.Strings.ModuleAttr_ExpertHealingBoost,
+                Properties.Strings.ModuleAttr_CastingFocus,
+                Properties.Strings.ModuleAttr_AttackSpeedFocus,
+                Properties.Strings.ModuleAttr_CriticalFocus,
+                Properties.Strings.ModuleAttr_LuckFocus,
+                Properties.Strings.ModuleAttr_MagicResistance,
+                Properties.Strings.ModuleAttr_PhysicalResistance,
+                Properties.Strings.ModuleAttr_ExtremeDamageStack,
+                Properties.Strings.ModuleAttr_ExtremeFlexibleMovement,
+                Properties.Strings.ModuleAttr_ExtremeLifeConvergence,
+                Properties.Strings.ModuleAttr_ExtremeEmergencyMeasures,
+                Properties.Strings.ModuleAttr_ExtremeLifeFluctuation,
+                Properties.Strings.ModuleAttr_ExtremeLifeDrain,
+                Properties.Strings.ModuleAttr_ExtremeTeamCrit,
+                Properties.Strings.ModuleAttr_ExtremeDesperateGuardian
+            });
+
+            select7.Text = Properties.Strings.ModuleCalc_Select7;
+            select7.Items.Clear();
+            select7.Items.AddRange(new[]
+            {
+                Properties.Strings.ModuleAttr_StrengthBoost,
+                Properties.Strings.ModuleAttr_AgilityBoost,
+                Properties.Strings.ModuleAttr_IntelligenceBoost,
+                Properties.Strings.ModuleAttr_SpecialAttackDamage,
+                Properties.Strings.ModuleAttr_EliteStrike,
+                Properties.Strings.ModuleAttr_SpecialHealingBoost,
+                Properties.Strings.ModuleAttr_ExpertHealingBoost,
+                Properties.Strings.ModuleAttr_CastingFocus,
+                Properties.Strings.ModuleAttr_AttackSpeedFocus,
+                Properties.Strings.ModuleAttr_CriticalFocus,
+                Properties.Strings.ModuleAttr_LuckFocus,
+                Properties.Strings.ModuleAttr_MagicResistance,
+                Properties.Strings.ModuleAttr_PhysicalResistance,
+                Properties.Strings.ModuleAttr_ExtremeDamageStack,
+                Properties.Strings.ModuleAttr_ExtremeFlexibleMovement,
+                Properties.Strings.ModuleAttr_ExtremeLifeConvergence,
+                Properties.Strings.ModuleAttr_ExtremeEmergencyMeasures,
+                Properties.Strings.ModuleAttr_ExtremeLifeFluctuation,
+                Properties.Strings.ModuleAttr_ExtremeLifeDrain,
+                Properties.Strings.ModuleAttr_ExtremeTeamCrit,
+                Properties.Strings.ModuleAttr_ExtremeDesperateGuardian
+            });
+
+            // Exclude selects (if you want to localize their text)
+            select8.Text = Properties.Strings.ModuleCalc_Select8;
+            select9.Text = Properties.Strings.ModuleCalc_Select9;
+            select10.Text = Properties.Strings.ModuleCalc_Select10;
+            select11.Text = Properties.Strings.ModuleCalc_Select11;
+            select12.Text = Properties.Strings.ModuleCalc_Select12;
+
+            select8.Items.Clear();
+            select8.Items.AddRange(new[]
+            {
+                Properties.Strings.ModuleAttr_StrengthBoost,
+                Properties.Strings.ModuleAttr_AgilityBoost,
+                Properties.Strings.ModuleAttr_IntelligenceBoost,
+                Properties.Strings.ModuleAttr_SpecialAttackDamage,
+                Properties.Strings.ModuleAttr_EliteStrike,
+                Properties.Strings.ModuleAttr_SpecialHealingBoost,
+                Properties.Strings.ModuleAttr_ExpertHealingBoost,
+                Properties.Strings.ModuleAttr_CastingFocus,
+                Properties.Strings.ModuleAttr_AttackSpeedFocus,
+                Properties.Strings.ModuleAttr_CriticalFocus,
+                Properties.Strings.ModuleAttr_LuckFocus,
+                Properties.Strings.ModuleAttr_MagicResistance,
+                Properties.Strings.ModuleAttr_PhysicalResistance,
+                Properties.Strings.ModuleAttr_ExtremeDamageStack,
+                Properties.Strings.ModuleAttr_ExtremeFlexibleMovement,
+                Properties.Strings.ModuleAttr_ExtremeLifeConvergence,
+                Properties.Strings.ModuleAttr_ExtremeEmergencyMeasures,
+                Properties.Strings.ModuleAttr_ExtremeLifeFluctuation,
+                Properties.Strings.ModuleAttr_ExtremeLifeDrain,
+                Properties.Strings.ModuleAttr_ExtremeTeamCrit,
+                Properties.Strings.ModuleAttr_ExtremeDesperateGuardian
+            });
+
+            select9.Items.Clear();
+            select9.Items.AddRange(select8.Items.Cast<string>().ToArray());
+
+            select10.Items.Clear();
+            select10.Items.AddRange(select8.Items.Cast<string>().ToArray());
+
+            select11.Items.Clear();
+            select11.Items.AddRange(select8.Items.Cast<string>().ToArray());
+
+            select12.Items.Clear();
+            select12.Items.AddRange(select8.Items.Cast<string>().ToArray());
+
+            inputNumber1.PrefixText = Properties.Strings.ModuleCalc_InputNumber1_Prefix;
+            inputNumber2.PrefixText = Properties.Strings.ModuleCalc_InputNumber2_Prefix;
+            inputNumber3.PrefixText = Properties.Strings.ModuleCalc_InputNumber3_Prefix;
+            inputNumber4.PrefixText = Properties.Strings.ModuleCalc_InputNumber4_Prefix;
+            inputNumber5.PrefixText = Properties.Strings.ModuleCalc_InputNumber5_Prefix;
+        }
     }
 }

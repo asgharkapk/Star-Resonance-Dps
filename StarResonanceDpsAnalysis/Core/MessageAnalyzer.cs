@@ -834,17 +834,17 @@ namespace StarResonanceDpsAnalysis.Core
         /// </summary>
         public static string GetProfessionNameFromId(int professionId) => professionId switch
         {
-            1 => "雷影剑士",
-            2 => "冰魔导师",
-            3 => "涤罪恶火_战斧",
-            4 => "青岚骑士",
-            5 => "森语者",
-            9 => "巨刃守护者",
-            11 => "神射手",
-            12 => "神盾骑士",
-            8 => "雷霆一闪_手炮",
-            10 => "暗灵祈舞_仪刀_仪仗",
-            13 => "灵魂乐手",
+            1 => Properties.Strings.Profession_Stormblade,
+            2 => Properties.Strings.Profession_FrostMage,
+            3 => Properties.Strings.Profession_PurifyingAxe,
+            4 => Properties.Strings.Profession_WindKnight,
+            5 => Properties.Strings.Profession_VerdantOracle,
+            9 => Properties.Strings.Profession_HeavyGuardian,
+            11 => Properties.Strings.Profession_Marksman,
+            12 => Properties.Strings.Profession_AegisKnight,
+            8 => Properties.Strings.Profession_ThunderHandCannon,
+            10 => Properties.Strings.Profession_DarkSpiritDance,
+            13 => Properties.Strings.Profession_SoulMusician,
             _ => string.Empty,
         };
     }

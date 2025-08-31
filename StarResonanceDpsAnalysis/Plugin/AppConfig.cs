@@ -5,6 +5,7 @@ using StarResonanceDpsAnalysis.Extends;
 using StarResonanceDpsAnalysis.Properties;
 using System;
 using System.Drawing;
+using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -226,6 +227,30 @@ namespace StarResonanceDpsAnalysis.Plugin
         private static Keys? _clearHistoryKey = null;
         private static string _damageDisplayType = null;
 
+        private static string? _language = null;
+
+        public static string Language
+        {
+            get
+            {
+                if (_language == null)
+                {
+                    var value = GetValue("SetUp", "Language", "zh");
+                    _language = value;
+                }
+                return _language;
+            }
+            set
+            {
+
+                SetValue("SetUp", "Language", value);
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(value);
+                _language = value;
+
+            }
+
+        }
+
         /// <summary>
         /// DPS伤害类型显示
         /// </summary>
@@ -235,7 +260,7 @@ namespace StarResonanceDpsAnalysis.Plugin
             {
                 if (_damageDisplayType == null)
                 {
-                    var value = GetValue("SetUp", "DamageDisplayType1", "KMB显示");
+                    var value = GetValue("SetUp", "DamageDisplayType1", "K");
                     _damageDisplayType = value;
                 }
                 return _damageDisplayType;

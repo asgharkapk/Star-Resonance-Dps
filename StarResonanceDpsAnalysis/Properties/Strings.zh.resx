@@ -1,0 +1,631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Header_FullRecord_Healing" xml:space="preserve">
+    <value>全程治疗</value>
+  </data>
+  <data name="Header_FullRecord_Taken" xml:space="preserve">
+    <value>全程承伤</value>
+  </data>
+  <data name="Header_FullRecord_NpcTaken" xml:space="preserve">
+    <value>全程 · NPC承伤</value>
+  </data>
+  <data name="Header_FullRecord_Damage" xml:space="preserve">
+    <value>全程伤害</value>
+  </data>
+  <data name="Header_Current_Healing" xml:space="preserve">
+    <value>当前治疗</value>
+  </data>
+  <data name="Header_Current_Taken" xml:space="preserve">
+    <value>当前承伤</value>
+  </data>
+  <data name="Header_Current_NpcTaken" xml:space="preserve">
+    <value>当前 · NPC承伤</value>
+  </data>
+  <data name="Header_Current_Damage" xml:space="preserve">
+    <value>当前伤害</value>
+  </data>
+  <data name="Header_NpcAttackers_FullRecord" xml:space="preserve">
+    <value>全程 · NPC攻击者榜 (NPC:{0})</value>
+  </data>
+  <data name="Header_NpcAttackers_Current" xml:space="preserve">
+    <value>当前 · NPC攻击者榜 (NPC:{0})</value>
+  </data>
+  <data name="Menu_HistoricalBattles" xml:space="preserve">
+    <value>历史战斗</value>
+  </data>
+  <data name="Menu_Settings" xml:space="preserve">
+    <value>基础设置</value>
+  </data>
+  <data name="Menu_MainForm" xml:space="preserve">
+    <value>主窗体</value>
+  </data>
+  <data name="Menu_ModuleConfig" xml:space="preserve">
+    <value>模组配置</value>
+  </data>
+  <data name="Menu_DeathStatistics" xml:space="preserve">
+    <value>死亡统计</value>
+  </data>
+  <data name="Menu_SkillDiary" xml:space="preserve">
+    <value>技能日记</value>
+  </data>
+  <data name="Menu_DamageReference" xml:space="preserve">
+    <value>伤害参考</value>
+  </data>
+  <data name="Menu_PilingMode" xml:space="preserve">
+    <value>打桩模式</value>
+  </data>
+  <data name="Menu_Exit" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="Tooltip_ClearData" xml:space="preserve">
+    <value>清空当前数据</value>
+  </data>
+  <data name="Tooltip_SwitchSingleTotal" xml:space="preserve">
+    <value>点击切换：单次统计/全程统</value>
+  </data>
+  <data name="Msg_UidNotFound" xml:space="preserve">
+    <value>未获取到UID，请换个地图后再进协会</value>
+  </data>
+  <data name="Msg_PilingComplete" xml:space="preserve">
+    <value>打桩完成,是否上传(排行榜仅供娱乐，请勿恶意上传)
+1.如果对自己数据不满意可再次勾选打桩模式重新打桩</value>
+  </data>
+  <data name="Msg_UploadSuccess" xml:space="preserve">
+    <value>上传成功</value>
+  </data>
+  <data name="Msg_UploadFail" xml:space="preserve">
+    <value>上传失败</value>
+  </data>
+  <data name="Msg_UploadFailDetail" xml:space="preserve">
+    <value>请检查网络状况，服务器暂时不支持外网上传</value>
+  </data>
+  <data name="Msg_PilingModeInfo" xml:space="preserve">
+    <value>打桩时间为3分钟，需注意以下3点:
+0.:打桩模式开启后只会记录自己的数据
+1.开启后请找协会内最右侧木桩[靠窗的那根]
+2.确保战斗计时为0开启
+3.如果伤害不满意可关闭打桩模式重新勾选
+4.异常数据会被删除
+</value>
+  </data>
+  <data name="Header_DpsStatistics_Title" xml:space="preserve">
+    <value>DPS伤害统计表</value>
+  </data>
+  <data name="Header_DpsStatistics_Subtitle" xml:space="preserve">
+    <value>当前伤害</value>
+  </data>
+  <data name="TotalDamageLabel" xml:space="preserve">
+    <value>总伤害</value>
+  </data>
+  <data name="TotalTreatmentLabel" xml:space="preserve">
+    <value>总治疗</value>
+  </data>
+  <data name="AlwaysInjuredLabel" xml:space="preserve">
+    <value>总承伤</value>
+  </data>
+  <data name="NpcTakeDamageLabel" xml:space="preserve">
+    <value>承伤</value>
+  </data>
+  <data name="SettingsButtonLabel" xml:space="preserve">
+    <value>基础设置</value>
+  </data>
+  <data name="ClearButtonLabel" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Tooltip_AlwaysOnTop" xml:space="preserve">
+    <value>置顶</value>
+  </data>
+  <data name="SwitchModeButtonLabel" xml:space="preserve">
+    <value>切换模式</value>
+  </data>
+  <data name="Tooltip_Minimize" xml:space="preserve">
+    <value>最小化</value>
+  </data>
+  <data name="Tooltip_SwitchTheme" xml:space="preserve">
+    <value>主题</value>
+  </data>
+  <data name="PilingModeCheckboxLabel" xml:space="preserve">
+    <value>打桩模式</value>
+  </data>
+  <data name="Profession_Stormblade" xml:space="preserve">
+    <value>雷影剑士</value>
+  </data>
+  <data name="Profession_FrostMage" xml:space="preserve">
+    <value>冰魔导师</value>
+  </data>
+  <data name="Profession_PurifyingAxe" xml:space="preserve">
+    <value>涤罪恶火_战斧</value>
+  </data>
+  <data name="Profession_WindKnight" xml:space="preserve">
+    <value>青岚骑士</value>
+  </data>
+  <data name="Profession_VerdantOracle" xml:space="preserve">
+    <value>森语者</value>
+  </data>
+  <data name="Profession_HeavyGuardian" xml:space="preserve">
+    <value>巨刃守护者</value>
+  </data>
+  <data name="Profession_Marksman" xml:space="preserve">
+    <value>神射手</value>
+  </data>
+  <data name="Profession_AegisKnight" xml:space="preserve">
+    <value>神盾骑士</value>
+  </data>
+  <data name="Profession_ThunderHandCannon" xml:space="preserve">
+    <value>雷霆一闪_手炮</value>
+  </data>
+  <data name="Profession_DarkSpiritDance" xml:space="preserve">
+    <value>暗灵祈舞_仪刀_仪仗</value>
+  </data>
+  <data name="Profession_SoulMusician" xml:space="preserve">
+    <value>灵魂乐手</value>
+  </data>
+  <data name="ModuleName_BasicAttack" xml:space="preserve">
+    <value>基础攻击</value>
+  </data>
+  <data name="ModuleName_HighPerformanceAttack" xml:space="preserve">
+    <value>高性能攻击</value>
+  </data>
+  <data name="ModuleName_ExcellentAttack" xml:space="preserve">
+    <value>卓越攻击</value>
+  </data>
+  <data name="ModuleName_BasicHealing" xml:space="preserve">
+    <value>基础治疗</value>
+  </data>
+  <data name="ModuleName_HighPerformanceHealing" xml:space="preserve">
+    <value>高性能治疗</value>
+  </data>
+  <data name="ModuleName_ExcellentHealing" xml:space="preserve">
+    <value>卓越辅助</value>
+  </data>
+  <data name="ModuleName_BasicProtection" xml:space="preserve">
+    <value>基础防护</value>
+  </data>
+  <data name="ModuleName_HighPerformanceProtection" xml:space="preserve">
+    <value>高性能守护</value>
+  </data>
+  <data name="ModuleName_ExcellentProtection" xml:space="preserve">
+    <value>卓越守护</value>
+  </data>
+  <data name="ModuleAttr_StrengthBoost" xml:space="preserve">
+    <value>力量加持</value>
+  </data>
+  <data name="ModuleAttr_AgilityBoost" xml:space="preserve">
+    <value>敏捷加持</value>
+  </data>
+  <data name="ModuleAttr_IntelligenceBoost" xml:space="preserve">
+    <value>智力加持</value>
+  </data>
+  <data name="ModuleAttr_SpecialAttackDamage" xml:space="preserve">
+    <value>特攻伤害</value>
+  </data>
+  <data name="ModuleAttr_EliteStrike" xml:space="preserve">
+    <value>精英打击</value>
+  </data>
+  <data name="ModuleAttr_SpecialHealingBoost" xml:space="preserve">
+    <value>特攻治疗加持</value>
+  </data>
+  <data name="ModuleAttr_ExpertHealingBoost" xml:space="preserve">
+    <value>专精治疗加持</value>
+  </data>
+  <data name="ModuleAttr_CastingFocus" xml:space="preserve">
+    <value>施法专注</value>
+  </data>
+  <data name="ModuleAttr_AttackSpeedFocus" xml:space="preserve">
+    <value>攻速专注</value>
+  </data>
+  <data name="ModuleAttr_CriticalFocus" xml:space="preserve">
+    <value>暴击专注</value>
+  </data>
+  <data name="ModuleAttr_LuckFocus" xml:space="preserve">
+    <value>幸运专注</value>
+  </data>
+  <data name="ModuleAttr_MagicResistance" xml:space="preserve">
+    <value>抵御魔法</value>
+  </data>
+  <data name="ModuleAttr_PhysicalResistance" xml:space="preserve">
+    <value>抵御物理</value>
+  </data>
+  <data name="ModuleAttr_ExtremeDamageStack" xml:space="preserve">
+    <value>极-伤害叠加</value>
+  </data>
+  <data name="ModuleAttr_ExtremeFlexibleMovement" xml:space="preserve">
+    <value>极-灵活身法</value>
+  </data>
+  <data name="ModuleAttr_ExtremeLifeConvergence" xml:space="preserve">
+    <value>极-生命凝聚</value>
+  </data>
+  <data name="ModuleAttr_ExtremeEmergencyMeasures" xml:space="preserve">
+    <value>极-急救措施</value>
+  </data>
+  <data name="ModuleAttr_ExtremeLifeFluctuation" xml:space="preserve">
+    <value>极-生命波动</value>
+  </data>
+  <data name="ModuleAttr_ExtremeLifeDrain" xml:space="preserve">
+    <value>极-生命汲取</value>
+  </data>
+  <data name="ModuleAttr_ExtremeTeamCrit" xml:space="preserve">
+    <value>极-全队幸暴</value>
+  </data>
+  <data name="ModuleAttr_ExtremeDesperateGuardian" xml:space="preserve">
+    <value>极-绝境守护</value>
+  </data>
+  <data name="ModuleCategory_Attack" xml:space="preserve">
+    <value>攻击</value>
+  </data>
+  <data name="ModuleCategory_Guardian" xml:space="preserve">
+    <value>守护</value>
+  </data>
+  <data name="ModuleCategory_Support" xml:space="preserve">
+    <value>辅助</value>
+  </data>
+  <data name="ModuleCategory_All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="ModuleCalc_Title" xml:space="preserve">
+    <value>模组计算器</value>
+  </data>
+  <data name="ModuleCalc_Label1" xml:space="preserve">
+    <value>请选择模组属性</value>
+  </data>
+  <data name="ModuleCalc_GroupBox1" xml:space="preserve">
+    <value>目标词条和等级（0为默认）[可输入文字索引]</value>
+  </data>
+  <data name="ModuleCalc_GroupBox3" xml:space="preserve">
+    <value>排除词条（与目标词条冲突）[可输入文字索引]</value>
+  </data>
+  <data name="ModuleCalc_Button1" xml:space="preserve">
+    <value>计算</value>
+  </data>
+  <data name="ModuleCalc_Button2" xml:space="preserve">
+    <value>排除属性</value>
+  </data>
+  <data name="ModuleCalc_Select1" xml:space="preserve">
+    <value>类型选择</value>
+  </data>
+  <data name="ModuleCalc_Select2" xml:space="preserve">
+    <value>属性1</value>
+  </data>
+  <data name="ModuleCalc_Select3" xml:space="preserve">
+    <value>排序方式</value>
+  </data>
+  <data name="ModuleCalc_Select4" xml:space="preserve">
+    <value>属性2</value>
+  </data>
+  <data name="ModuleCalc_Select5" xml:space="preserve">
+    <value>属性3</value>
+  </data>
+  <data name="ModuleCalc_Select6" xml:space="preserve">
+    <value>属性4</value>
+  </data>
+  <data name="ModuleCalc_Select7" xml:space="preserve">
+    <value>属性5</value>
+  </data>
+  <data name="ModuleCalc_Select8" xml:space="preserve">
+    <value>排除1</value>
+  </data>
+  <data name="ModuleCalc_Select9" xml:space="preserve">
+    <value>排除2</value>
+  </data>
+  <data name="ModuleCalc_Select10" xml:space="preserve">
+    <value>排除3</value>
+  </data>
+  <data name="ModuleCalc_Select11" xml:space="preserve">
+    <value>排除4</value>
+  </data>
+  <data name="ModuleCalc_Select12" xml:space="preserve">
+    <value>排除5</value>
+  </data>
+  <data name="ModuleCalc_Select3_Item_SortByTotalAttr" xml:space="preserve">
+    <value>总属性排序</value>
+  </data>
+  <data name="ModuleCalc_Select3_Item_SortByScore" xml:space="preserve">
+    <value>评分排序</value>
+  </data>
+  <data name="ModuleCalc_Select1_Prefix" xml:space="preserve">
+    <value>类型：</value>
+  </data>
+  <data name="ModuleCalc_Select2_Prefix" xml:space="preserve">
+    <value>属性1：</value>
+  </data>
+  <data name="ModuleCalc_Select3_Prefix" xml:space="preserve">
+    <value>排序：</value>
+  </data>
+  <data name="ModuleCalc_Select4_Prefix" xml:space="preserve">
+    <value>属性2：</value>
+  </data>
+  <data name="ModuleCalc_Select5_Prefix" xml:space="preserve">
+    <value>属性3：</value>
+  </data>
+  <data name="ModuleCalc_Select6_Prefix" xml:space="preserve">
+    <value>属性4：</value>
+  </data>
+  <data name="ModuleCalc_Select7_Prefix" xml:space="preserve">
+    <value>属性5：</value>
+  </data>
+  <data name="ModuleCalc_Select8_Prefix" xml:space="preserve">
+    <value>排除1：</value>
+  </data>
+  <data name="ModuleCalc_Select9_Prefix" xml:space="preserve">
+    <value>排除2：</value>
+  </data>
+  <data name="ModuleCalc_Select10_Prefix" xml:space="preserve">
+    <value>排除3：</value>
+  </data>
+  <data name="ModuleCalc_Select11_Prefix" xml:space="preserve">
+    <value>排除4：</value>
+  </data>
+  <data name="ModuleCalc_Select12_Prefix" xml:space="preserve">
+    <value>排除5：</value>
+  </data>
+  <data name="ModuleCalc_InputNumber1_Prefix" xml:space="preserve">
+    <value>等级：</value>
+  </data>
+  <data name="ModuleCalc_InputNumber2_Prefix" xml:space="preserve">
+    <value>等级：</value>
+  </data>
+  <data name="ModuleCalc_InputNumber3_Prefix" xml:space="preserve">
+    <value>等级：</value>
+  </data>
+  <data name="ModuleCalc_InputNumber4_Prefix" xml:space="preserve">
+    <value>等级：</value>
+  </data>
+  <data name="ModuleCalc_InputNumber5_Prefix" xml:space="preserve">
+    <value>等级：</value>
+  </data>
+  <data name="Notice_ChangeMaps" xml:space="preserve">
+    <value>请先过图一次在点此按钮</value>
+  </data>
+  <data name="Settings_Title" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Settings_Label1" xml:space="preserve">
+    <value>基础设置</value>
+  </data>
+  <data name="Settings_Label2" xml:space="preserve">
+    <value>网络设置</value>
+  </data>
+  <data name="Settings_Label3" xml:space="preserve">
+    <value>按键设置</value>
+  </data>
+  <data name="Settings_Label4" xml:space="preserve">
+    <value>战斗设置</value>
+  </data>
+  <data name="Settings_Label5" xml:space="preserve">
+    <value>换地图是否清空全程统计</value>
+  </data>
+  <data name="Settings_Label6" xml:space="preserve">
+    <value>Delete删除当前键位</value>
+  </data>
+  <data name="Settings_Label7" xml:space="preserve">
+    <value>自动设置错误时可手动设置</value>
+  </data>
+  <data name="Settings_Label8" xml:space="preserve">
+    <value>脱战清空为当前统计非全程统计</value>
+  </data>
+  <data name="Settings_Label9" xml:space="preserve">
+    <value>窗体透明度</value>
+  </data>
+  <data name="Settings_Label10" xml:space="preserve">
+    <value>DPS统计伤害显示类型</value>
+  </data>
+  <data name="Settings_Select2" xml:space="preserve">
+    <value>伤害显示</value>
+  </data>
+  <data name="Settings_LanguageSelect" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="Settings_Input1_Prefix" xml:space="preserve">
+    <value>鼠标穿透键：</value>
+  </data>
+  <data name="Settings_Input2_Prefix" xml:space="preserve">
+    <value>透明键：</value>
+  </data>
+  <data name="Settings_Input3_Prefix" xml:space="preserve">
+    <value>开关键：</value>
+  </data>
+  <data name="Settings_Input4_Prefix" xml:space="preserve">
+    <value>清空数据键：</value>
+  </data>
+  <data name="Settings_Input5_Prefix" xml:space="preserve">
+    <value>清空历史键：</value>
+  </data>
+  <data name="Settings_InputNumber2_Prefix" xml:space="preserve">
+    <value>延迟(秒)：</value>
+  </data>
+  <data name="Settings_InterfaceComboBox_Prefix" xml:space="preserve">
+    <value>网卡：</value>
+  </data>
+  <data name="Settings_Label11" xml:space="preserve">
+    <value>脱战</value>
+  </data>
+  <data name="Settings_InputNumber2_Suffix" xml:space="preserve">
+    <value>秒</value>
+  </data>
+  <data name="SubProfession_Concerto" xml:space="preserve">
+    <value>协奏</value>
+  </data>
+  <data name="SubProfession_IceSpear" xml:space="preserve">
+    <value>冰矛</value>
+  </data>
+  <data name="SubProfession_Iai" xml:space="preserve">
+    <value>居合</value>
+  </data>
+  <data name="SubProfession_MoonBlade" xml:space="preserve">
+    <value>月刃</value>
+  </data>
+  <data name="SubProfession_EagleBow" xml:space="preserve">
+    <value>鹰弓</value>
+  </data>
+  <data name="SubProfession_WolfBow" xml:space="preserve">
+    <value>狼弓</value>
+  </data>
+  <data name="SubProfession_LightShield" xml:space="preserve">
+    <value>光盾</value>
+  </data>
+  <data name="SubProfession_RockShield" xml:space="preserve">
+    <value>岩盾</value>
+  </data>
+  <data name="SubProfession_Block" xml:space="preserve">
+    <value>格挡</value>
+  </data>
+  <data name="SubProfession_IceRay" xml:space="preserve">
+    <value>射线</value>
+  </data>
+  <data name="SubProfession_Lifebloom" xml:space="preserve">
+    <value>愈合</value>
+  </data>
+  <data name="SubProfession_Thornlash" xml:space="preserve">
+    <value>惩戒</value>
+  </data>
+  <data name="SubProfession_RagingSound" xml:space="preserve">
+    <value>狂音</value>
+  </data>
+  <data name="SubProfession_Overdrive" xml:space="preserve">
+    <value>重装</value>
+  </data>
+  <data name="SubProfession_Protection" xml:space="preserve">
+    <value>防盾</value>
+  </data>
+  <data name="SubProfession_AirStyle" xml:space="preserve">
+    <value>空枪</value>
+  </data>
+  <data name="Profession_Unknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="ModuleCalc_TotalScore" xml:space="preserve">
+    <value>综合评分: </value>
+  </data>
+  <data name="ModuleCalc_HighestPowerCore" xml:space="preserve">
+    <value>最高属性等级: </value>
+  </data>
+  <data name="ModuleCalc_ModuleList" xml:space="preserve">
+    <value>模组列表</value>
+  </data>
+  <data name="ModuleCalc_AttrEffects" xml:space="preserve">
+    <value>属性分布: </value>
+  </data>
+  <data name="ModuleCalc_EffectsTotal" xml:space="preserve">
+    <value>总属性值</value>
+  </data>
+  <data name="ModuleCalc_AttrRanking" xml:space="preserve">
+    <value>第一名搭配</value>
+  </data>
+</root>

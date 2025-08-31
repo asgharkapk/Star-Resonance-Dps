@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StarResonanceDpsAnalysis.Core.Module;
+using System;
 using System.Collections.Generic;
 
 namespace StarResonanceDpsAnalysis.Core.Module
@@ -72,45 +73,101 @@ namespace StarResonanceDpsAnalysis.Core.Module
     public static class ModuleMaps
     {
         // 模组名称映射（与 Python MODULE_NAMES 一致）
+        public static string MODULE_NAME_BY_ID(int id) =>
+            id switch
+            {
+                (int)ModuleType.BASIC_ATTACK => Properties.Strings.ModuleName_BasicAttack,
+                (int)ModuleType.HIGH_PERFORMANCE_ATTACK => Properties.Strings.ModuleName_HighPerformanceAttack,
+                (int)ModuleType.EXCELLENT_ATTACK => Properties.Strings.ModuleName_ExcellentAttack,
+                (int)ModuleType.BASIC_HEALING => Properties.Strings.ModuleName_BasicHealing,
+                (int)ModuleType.HIGH_PERFORMANCE_HEALING => Properties.Strings.ModuleName_HighPerformanceHealing,
+                (int)ModuleType.EXCELLENT_HEALING => Properties.Strings.ModuleName_ExcellentHealing, // 注意：Python里是“卓越辅助”
+                (int)ModuleType.BASIC_PROTECTION => Properties.Strings.ModuleName_BasicProtection,
+                (int)ModuleType.HIGH_PERFORMANCE_PROTECTION => Properties.Strings.ModuleName_HighPerformanceProtection,
+                (int)ModuleType.EXCELLENT_PROTECTION => Properties.Strings.ModuleName_ExcellentProtection,
+                _ => string.Empty
+            };
+
+        public static string MODULE_ATTR_NAME_BY_ID(int id) =>
+    id switch
+    {
+        (int)ModuleAttrType.STRENGTH_BOOST => Properties.Strings.ModuleAttr_StrengthBoost,
+        (int)ModuleAttrType.AGILITY_BOOST => Properties.Strings.ModuleAttr_AgilityBoost,
+        (int)ModuleAttrType.INTELLIGENCE_BOOST => Properties.Strings.ModuleAttr_IntelligenceBoost,
+        (int)ModuleAttrType.SPECIAL_ATTACK_DAMAGE => Properties.Strings.ModuleAttr_SpecialAttackDamage,
+        (int)ModuleAttrType.ELITE_STRIKE => Properties.Strings.ModuleAttr_EliteStrike,
+        (int)ModuleAttrType.SPECIAL_HEALING_BOOST => Properties.Strings.ModuleAttr_SpecialHealingBoost,
+        (int)ModuleAttrType.EXPERT_HEALING_BOOST => Properties.Strings.ModuleAttr_ExpertHealingBoost,
+        (int)ModuleAttrType.CASTING_FOCUS => Properties.Strings.ModuleAttr_CastingFocus,
+        (int)ModuleAttrType.ATTACK_SPEED_FOCUS => Properties.Strings.ModuleAttr_AttackSpeedFocus,
+        (int)ModuleAttrType.CRITICAL_FOCUS => Properties.Strings.ModuleAttr_CriticalFocus,
+        (int)ModuleAttrType.LUCK_FOCUS => Properties.Strings.ModuleAttr_LuckFocus,
+        (int)ModuleAttrType.MAGIC_RESISTANCE => Properties.Strings.ModuleAttr_MagicResistance,
+
+        // EXTREME（特殊）属性中文名
+        (int)ModuleAttrType.PHYSICAL_RESISTANCE => Properties.Strings.ModuleAttr_PhysicalResistance,
+        (int)ModuleAttrType.EXTREME_DAMAGE_STACK => Properties.Strings.ModuleAttr_ExtremeDamageStack,
+        (int)ModuleAttrType.EXTREME_FLEXIBLE_MOVEMENT => Properties.Strings.ModuleAttr_ExtremeFlexibleMovement,
+        (int)ModuleAttrType.EXTREME_LIFE_CONVERGENCE => Properties.Strings.ModuleAttr_ExtremeLifeConvergence,
+        (int)ModuleAttrType.EXTREME_EMERGENCY_MEASURES => Properties.Strings.ModuleAttr_ExtremeEmergencyMeasures,
+        (int)ModuleAttrType.EXTREME_LIFE_FLUCTUATION => Properties.Strings.ModuleAttr_ExtremeLifeFluctuation,
+        (int)ModuleAttrType.EXTREME_LIFE_DRAIN => Properties.Strings.ModuleAttr_ExtremeLifeDrain,
+        (int)ModuleAttrType.EXTREME_TEAM_CRIT => Properties.Strings.ModuleAttr_ExtremeTeamCrit,
+        (int)ModuleAttrType.EXTREME_DESPERATE_GUARDIAN => Properties.Strings.ModuleAttr_ExtremeDesperateGuardian,
+        _ => string.Empty
+    };
+
         public static readonly Dictionary<int, string> MODULE_NAMES = new()
         {
-            { (int)ModuleType.BASIC_ATTACK, "基础攻击" },
-            { (int)ModuleType.HIGH_PERFORMANCE_ATTACK, "高性能攻击" },
-            { (int)ModuleType.EXCELLENT_ATTACK, "卓越攻击" },
-            { (int)ModuleType.BASIC_HEALING, "基础治疗" },
-            { (int)ModuleType.HIGH_PERFORMANCE_HEALING, "高性能治疗" },
-            { (int)ModuleType.EXCELLENT_HEALING, "卓越辅助" }, // 注意：Python里是“卓越辅助”
-            { (int)ModuleType.BASIC_PROTECTION, "基础防护" },
-            { (int)ModuleType.HIGH_PERFORMANCE_PROTECTION, "高性能守护" },
-            { (int)ModuleType.EXCELLENT_PROTECTION, "卓越守护" },
+            { (int)ModuleType.BASIC_ATTACK, Properties.Strings.ModuleName_BasicAttack },
+            { (int)ModuleType.HIGH_PERFORMANCE_ATTACK, Properties.Strings.ModuleName_HighPerformanceAttack },
+            { (int)ModuleType.EXCELLENT_ATTACK, Properties.Strings.ModuleName_ExcellentAttack },
+            { (int)ModuleType.BASIC_HEALING, Properties.Strings.ModuleName_BasicHealing },
+            { (int)ModuleType.HIGH_PERFORMANCE_HEALING, Properties.Strings.ModuleName_HighPerformanceHealing },
+            { (int)ModuleType.EXCELLENT_HEALING, Properties.Strings.ModuleName_ExcellentHealing }, // 注意：Python里是“卓越辅助”
+            { (int)ModuleType.BASIC_PROTECTION, Properties.Strings.ModuleName_BasicProtection },
+            { (int)ModuleType.HIGH_PERFORMANCE_PROTECTION, Properties.Strings.ModuleName_HighPerformanceProtection },
+            { (int)ModuleType.EXCELLENT_PROTECTION, Properties.Strings.ModuleName_ExcellentProtection },
+        };
+        public static Dictionary<int, string> MODULE_NAMES_NEW = new()
+        {
+            { (int)ModuleType.BASIC_ATTACK, Properties.Strings.ModuleName_BasicAttack },
+            { (int)ModuleType.HIGH_PERFORMANCE_ATTACK, Properties.Strings.ModuleName_HighPerformanceAttack },
+            { (int)ModuleType.EXCELLENT_ATTACK, Properties.Strings.ModuleName_ExcellentAttack },
+            { (int)ModuleType.BASIC_HEALING, Properties.Strings.ModuleName_BasicHealing },
+            { (int)ModuleType.HIGH_PERFORMANCE_HEALING, Properties.Strings.ModuleName_HighPerformanceHealing },
+            { (int)ModuleType.EXCELLENT_HEALING, Properties.Strings.ModuleName_ExcellentHealing }, // 注意：Python里是“卓越辅助”
+            { (int)ModuleType.BASIC_PROTECTION, Properties.Strings.ModuleName_BasicProtection },
+            { (int)ModuleType.HIGH_PERFORMANCE_PROTECTION, Properties.Strings.ModuleName_HighPerformanceProtection },
+            { (int)ModuleType.EXCELLENT_PROTECTION, Properties.Strings.ModuleName_ExcellentProtection },
         };
 
         // 模组属性名称映射（与 Python MODULE_ATTR_NAMES 一致）
         public static readonly Dictionary<int, string> MODULE_ATTR_NAMES = new()
         {
-            { (int)ModuleAttrType.STRENGTH_BOOST, "力量加持" },
-            { (int)ModuleAttrType.AGILITY_BOOST, "敏捷加持" },
-            { (int)ModuleAttrType.INTELLIGENCE_BOOST, "智力加持" },
-            { (int)ModuleAttrType.SPECIAL_ATTACK_DAMAGE, "特攻伤害" },
-            { (int)ModuleAttrType.ELITE_STRIKE, "精英打击" },
-            { (int)ModuleAttrType.SPECIAL_HEALING_BOOST, "特攻治疗加持" },
-            { (int)ModuleAttrType.EXPERT_HEALING_BOOST, "专精治疗加持" },
-            { (int)ModuleAttrType.CASTING_FOCUS, "施法专注" },
-            { (int)ModuleAttrType.ATTACK_SPEED_FOCUS, "攻速专注" },
-            { (int)ModuleAttrType.CRITICAL_FOCUS, "暴击专注" },
-            { (int)ModuleAttrType.LUCK_FOCUS, "幸运专注" },
-            { (int)ModuleAttrType.MAGIC_RESISTANCE, "抵御魔法" },
-            { (int)ModuleAttrType.PHYSICAL_RESISTANCE, "抵御物理" },
+            { (int)ModuleAttrType.STRENGTH_BOOST, Properties.Strings.ModuleAttr_StrengthBoost },
+            { (int)ModuleAttrType.AGILITY_BOOST, Properties.Strings.ModuleAttr_AgilityBoost },
+            { (int)ModuleAttrType.INTELLIGENCE_BOOST, Properties.Strings.ModuleAttr_IntelligenceBoost },
+            { (int)ModuleAttrType.SPECIAL_ATTACK_DAMAGE, Properties.Strings.ModuleAttr_SpecialAttackDamage },
+            { (int)ModuleAttrType.ELITE_STRIKE, Properties.Strings.ModuleAttr_EliteStrike },
+            { (int)ModuleAttrType.SPECIAL_HEALING_BOOST, Properties.Strings.ModuleAttr_SpecialHealingBoost },
+            { (int)ModuleAttrType.EXPERT_HEALING_BOOST, Properties.Strings.ModuleAttr_ExpertHealingBoost },
+            { (int)ModuleAttrType.CASTING_FOCUS, Properties.Strings.ModuleAttr_CastingFocus },
+            { (int)ModuleAttrType.ATTACK_SPEED_FOCUS, Properties.Strings.ModuleAttr_AttackSpeedFocus },
+            { (int)ModuleAttrType.CRITICAL_FOCUS, Properties.Strings.ModuleAttr_CriticalFocus },
+            { (int)ModuleAttrType.LUCK_FOCUS, Properties.Strings.ModuleAttr_LuckFocus },
+            { (int)ModuleAttrType.MAGIC_RESISTANCE, Properties.Strings.ModuleAttr_MagicResistance },
 
             // EXTREME（特殊）属性中文名
-            { (int)ModuleAttrType.EXTREME_DAMAGE_STACK, "极-伤害叠加" },
-            { (int)ModuleAttrType.EXTREME_FLEXIBLE_MOVEMENT, "极-灵活身法" },
-            { (int)ModuleAttrType.EXTREME_LIFE_CONVERGENCE, "极-生命凝聚" },
-            { (int)ModuleAttrType.EXTREME_EMERGENCY_MEASURES, "极-急救措施" },
-            { (int)ModuleAttrType.EXTREME_LIFE_FLUCTUATION, "极-生命波动" },
-            { (int)ModuleAttrType.EXTREME_LIFE_DRAIN, "极-生命汲取" },
-            { (int)ModuleAttrType.EXTREME_TEAM_CRIT, "极-全队幸暴" },
-            { (int)ModuleAttrType.EXTREME_DESPERATE_GUARDIAN, "极-绝境守护" },
+            { (int)ModuleAttrType.PHYSICAL_RESISTANCE, Properties.Strings.ModuleAttr_PhysicalResistance },
+            { (int)ModuleAttrType.EXTREME_DAMAGE_STACK, Properties.Strings.ModuleAttr_ExtremeDamageStack },
+            { (int)ModuleAttrType.EXTREME_FLEXIBLE_MOVEMENT, Properties.Strings.ModuleAttr_ExtremeFlexibleMovement },
+            { (int)ModuleAttrType.EXTREME_LIFE_CONVERGENCE, Properties.Strings.ModuleAttr_ExtremeLifeConvergence },
+            { (int)ModuleAttrType.EXTREME_EMERGENCY_MEASURES, Properties.Strings.ModuleAttr_ExtremeEmergencyMeasures },
+            { (int)ModuleAttrType.EXTREME_LIFE_FLUCTUATION, Properties.Strings.ModuleAttr_ExtremeLifeFluctuation },
+            { (int)ModuleAttrType.EXTREME_LIFE_DRAIN, Properties.Strings.ModuleAttr_ExtremeLifeDrain },
+            { (int)ModuleAttrType.EXTREME_TEAM_CRIT, Properties.Strings.ModuleAttr_ExtremeTeamCrit },
+            { (int)ModuleAttrType.EXTREME_DESPERATE_GUARDIAN, Properties.Strings.ModuleAttr_ExtremeDesperateGuardian },
         };
 
         // 模组类型到分类的映射（与 Python MODULE_CATEGORY_MAP 一致）
@@ -130,10 +187,10 @@ namespace StarResonanceDpsAnalysis.Core.Module
         // 分类中文名（补齐 ALL）
         public static readonly Dictionary<ModuleCategory, string> MODULE_CATEGORY_NAMES = new()
         {
-            { ModuleCategory.ATTACK, "攻击" },
-            { ModuleCategory.GUARDIAN, "守护" },
-            { ModuleCategory.SUPPORT, "辅助" },
-            { ModuleCategory.ALL, "全部" },
+            { ModuleCategory.ATTACK, Properties.Strings.ModuleCategory_Attack },
+            { ModuleCategory.GUARDIAN, Properties.Strings.ModuleCategory_Guardian },
+            { ModuleCategory.SUPPORT, Properties.Strings.ModuleCategory_Support },
+            { ModuleCategory.ALL, Properties.Strings.ModuleCategory_All },
         };
 
         // 属性阈值和效果等级（与 Python ATTR_THRESHOLDS 一致）

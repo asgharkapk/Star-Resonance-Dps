@@ -61,14 +61,14 @@ namespace StarResonanceDpsAnalysis.Core.Module
                 y += sz.Height + LineGap;
 
                 // 最高属性等级
-                string levelText = $"最高属性等级 {HighestLevel}";
+                string levelText = $"{Properties.Strings.ModuleCalc_HighestPowerCore}{HighestLevel}";
                 sz = AntdUI.Helper.Size(g.MeasureString(levelText, fontBody, w));
                 g.String(levelText, fontBody, AntdUI.Style.Db.Text,
                          new Rectangle(x, y, w, sz.Height), sfLT);
                 y += sz.Height + LineGap;
 
                 // 综合评分
-                string scoreLabel = "综合评分：";
+                string scoreLabel = Properties.Strings.ModuleCalc_TotalScore;
                 int labelW = AntdUI.Helper.Size(g.MeasureString(scoreLabel, fontBody)).Width;
                 sz = AntdUI.Helper.Size(g.MeasureString($"{scoreLabel}{Score}", fontBody, w));
                 g.String(scoreLabel, fontBody, Muted, new Rectangle(x, y, w, sz.Height), sfLT);
@@ -77,7 +77,7 @@ namespace StarResonanceDpsAnalysis.Core.Module
                 y += sz.Height + SectionGap;
 
                 // 模组列表标题
-                const string listTitle = "模组列表：";
+                string listTitle = Properties.Strings.ModuleCalc_ModuleList;
                 sz = AntdUI.Helper.Size(g.MeasureString(listTitle, fontBody, w));
                 g.String(listTitle, fontBody, Muted, new Rectangle(x, y, w, sz.Height), sfLT);
                 y += sz.Height + LineGap;
@@ -111,7 +111,7 @@ namespace StarResonanceDpsAnalysis.Core.Module
                 y += SectionGap;
 
                 // ===== 总属性值（与“综合评分”同格式，同颜色），放在“属性分布”上面 =====
-                const string totalAttrName = "总属性值";
+                string totalAttrName = Properties.Strings.ModuleCalc_AttrEffects;
                 int? totalAttrVal = null;
                 int totalIndex = -1;
                 if (AttrLines != null)
@@ -128,7 +128,7 @@ namespace StarResonanceDpsAnalysis.Core.Module
                 }
                 if (totalAttrVal.HasValue)
                 {
-                    string totalLabel = "总属性值：";
+                    string totalLabel = Properties.Strings.ModuleCalc_AttrEffects;
                     int totalLabelW = AntdUI.Helper.Size(g.MeasureString(totalLabel, fontBody)).Width;
                     string totalTextAll = $"{totalLabel}{totalAttrVal.Value}";
                     var totalSz = AntdUI.Helper.Size(g.MeasureString(totalTextAll, fontBody, w));
@@ -141,7 +141,7 @@ namespace StarResonanceDpsAnalysis.Core.Module
                 }
 
                 // 属性分布标题
-                const string distTitle = "属性分布：";
+                string distTitle = Properties.Strings.ModuleCalc_AttrEffects;
                 sz = AntdUI.Helper.Size(g.MeasureString(distTitle, fontBody, w));
                 g.String(distTitle, fontBody, Muted, new Rectangle(x, y, w, sz.Height), sfLT);
                 y += sz.Height + LineGap;
@@ -195,10 +195,10 @@ namespace StarResonanceDpsAnalysis.Core.Module
                 int y = 0;
 
                 y += AntdUI.Helper.Size(g.MeasureString(RankText ?? string.Empty, fontTitle, contentW)).Height + LineGap;
-                y += AntdUI.Helper.Size(g.MeasureString($"最高属性等级 {HighestLevel}", fontBody, contentW)).Height + LineGap;
-                y += AntdUI.Helper.Size(g.MeasureString($"综合评分：{Score}", fontBody, contentW)).Height + SectionGap;
+                y += AntdUI.Helper.Size(g.MeasureString($"{Properties.Strings.ModuleCalc_HighestPowerCore} {HighestLevel}", fontBody, contentW)).Height + LineGap;
+                y += AntdUI.Helper.Size(g.MeasureString($"{Properties.Strings.ModuleCalc_TotalScore}{Score}", fontBody, contentW)).Height + SectionGap;
 
-                y += AntdUI.Helper.Size(g.MeasureString("模组列表：", fontBody, contentW)).Height + LineGap;
+                y += AntdUI.Helper.Size(g.MeasureString(Properties.Strings.ModuleCalc_ModuleList, fontBody, contentW)).Height + LineGap;
 
                 foreach (var row in ModuleRows ?? Enumerable.Empty<(string Left, string Right)>())
                 {
@@ -216,7 +216,8 @@ namespace StarResonanceDpsAnalysis.Core.Module
                 y += SectionGap;
 
                 // ===== 为“总属性值”预留高度（与“综合评分”同样的测量方式）=====
-                const string totalAttrName = "总属性值";
+                string totalAttrName = Properties.Strings.ModuleCalc_EffectsTotal;
+                ;
                 int? totalAttrVal = null;
                 if (AttrLines != null)
                 {
@@ -227,12 +228,12 @@ namespace StarResonanceDpsAnalysis.Core.Module
                 }
                 if (totalAttrVal.HasValue)
                 {
-                    string totalStr = $"总属性值：{totalAttrVal.Value}";
+                    string totalStr = $"{Properties.Strings.ModuleCalc_TotalScore}：{totalAttrVal.Value}";
                     y += AntdUI.Helper.Size(g.MeasureString(totalStr, fontBody, contentW)).Height + LineGap;
                 }
 
                 // 属性分布标题与内容
-                y += AntdUI.Helper.Size(g.MeasureString("属性分布：", fontBody, contentW)).Height + LineGap;
+                y += AntdUI.Helper.Size(g.MeasureString(Properties.Strings.ModuleCalc_AttrEffects, fontBody, contentW)).Height + LineGap;
 
                 foreach (var (name, val) in AttrLines ?? Enumerable.Empty<(string Name, int Value)>())
                 {
@@ -263,7 +264,7 @@ namespace StarResonanceDpsAnalysis.Core.Module
             {
                 var dto = new ResultCardData
                 {
-                    RankText = $"第{rank}名搭配",
+                    RankText = Properties.Strings.ModuleCalc_AttrRanking == "Rank: " ? $"Rank: {rank}" : $"第{rank}名搭配",
                     HighestLevel = ComputeHighestLevel(s.AttrBreakdown, priorityAttrs),
                     Score = s.Score.ToString("0.0"),
                     AttrLines = s.AttrBreakdown
@@ -272,7 +273,7 @@ namespace StarResonanceDpsAnalysis.Core.Module
                 };
 
                 // 新增：总属性值行（排在最上面）
-                dto.AttrLines.Insert(0, ("总属性值", s.TotalAttrValue));
+                dto.AttrLines.Insert(0, (Properties.Strings.ModuleCalc_EffectsTotal, s.TotalAttrValue));
 
                 for (int i = 0; i < s.Modules.Count; i++)
                 {

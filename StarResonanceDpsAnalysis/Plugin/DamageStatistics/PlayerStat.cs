@@ -498,7 +498,7 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
         public int CombatPower { get; set; } = 0;
 
         /// <summary>职业。</summary>
-        public string Profession { get; set; } = "未知";
+        public string Profession { get; set; } = Properties.Strings.Profession_Unknown;
 
         public string SubProfession { get; set; }=null;
 
@@ -870,7 +870,7 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
             HealingStats.Reset();
             TakenStats.Reset();          // ★ 新增
             TakenDamage = 0;
-            Profession = "未知";
+            Profession = Properties.Strings.Profession_Unknown;
             SkillUsage.Clear();
             TakenDamageBySkill.Clear();
             HealingBySkill.Clear();
@@ -1729,7 +1729,7 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
             // 没有 PlayerData，则用缓存字典
             string nickname = _nicknameRequestedUids.TryGetValue(uid, out var name) ? name : "未知";
             int combatPower = _combatPowerByUid.TryGetValue(uid, out var power) ? power : 0;
-            string profession = _professionByUid.TryGetValue(uid, out var prof) ? prof : "未知";
+            string profession = _professionByUid.TryGetValue(uid, out var prof) ? prof : Properties.Strings.Profession_Unknown;
 
             return (nickname, combatPower, profession);
         }
@@ -1748,7 +1748,7 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
         GetPlayerFullStats(ulong uid)
         {
             if (!_players.TryGetValue(uid, out var p))
-                return (uid, "未知", 0, "未知", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null);
+                return (uid, "未知", 0, Properties.Strings.Profession_Unknown, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null);
 
             var dmg = p.DamageStats;
             var heal = p.HealingStats;

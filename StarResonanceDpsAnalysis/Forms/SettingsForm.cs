@@ -21,7 +21,10 @@ namespace StarResonanceDpsAnalysis.Forms
             FormGui.SetDefaultGUI(this);
             switch1.Checked = AppConfig.ClearPicture == 1;
             select2.SelectedValue = AppConfig.DamageDisplayType;
+            languageSelect.SelectedValue = AppConfig.Language;
             LoadDevices();
+
+            ApplyLocalization();
 
 
         }
@@ -169,12 +172,14 @@ namespace StarResonanceDpsAnalysis.Forms
 
         private void button5_Click(object sender, EventArgs e)
         {
-
-
             // 保存到配置
             AppConfig.Transparency = slider1.Value;
             AppConfig.CombatTimeClearDelaySeconds = (int)inputNumber2.Value;
             AppConfig.DamageDisplayType = select2.SelectedValue.ToString();
+            AppConfig.Language = languageSelect.SelectedValue.ToString();
+
+            FormManager.dpsStatistics.ApplyLocalization();
+            FormManager.moduleCalculationForm.ApplyLocalization(); //has to be open TODO come back, already applies when constructor
 
             this.Close();
         }
@@ -239,6 +244,43 @@ namespace StarResonanceDpsAnalysis.Forms
         private void switch1_CheckedChanged(object sender, BoolEventArgs e)
         {
             AppConfig.ClearPicture = e.Value ? 1 : 0;
+        }
+        public void ApplyLocalization()
+        {
+            // Title and labels
+            TitleText.Text = Properties.Strings.Settings_Title;
+            label1.Text = Properties.Strings.Settings_Label1;
+            label2.Text = Properties.Strings.Settings_Label2;
+            label3.Text = Properties.Strings.Settings_Label3;
+            label4.Text = Properties.Strings.Settings_Label4;
+            label5.Text = Properties.Strings.Settings_Label5;
+            label6.Text = Properties.Strings.Settings_Label6;
+            label7.Text = Properties.Strings.Settings_Label7;
+            label8.Text = Properties.Strings.Settings_Label8;
+            label9.Text = Properties.Strings.Settings_Label9;
+            label10.Text = Properties.Strings.Settings_Label10;
+            label11.Text = Properties.Strings.Settings_Label11;
+
+            // ComboBox/Selects
+            InterfaceComboBox.PrefixText = Properties.Strings.Settings_InterfaceComboBox_Prefix;
+
+            select2.Text = Properties.Strings.Settings_Select2;
+            select2.Items.Clear();
+            select2.Items.AddRange(new object[] { "K", "万 (Wàn) Display (10,000)" });
+
+            // Input fields
+            input1.PrefixText = Properties.Strings.Settings_Input1_Prefix;
+            input2.PrefixText = Properties.Strings.Settings_Input2_Prefix;
+            input3.PrefixText = Properties.Strings.Settings_Input3_Prefix;
+            input4.PrefixText = Properties.Strings.Settings_Input4_Prefix;
+            input5.PrefixText = Properties.Strings.Settings_Input5_Prefix;
+            inputNumber2.PrefixText = Properties.Strings.Settings_InputNumber2_Prefix;
+            inputNumber2.SuffixText = Properties.Strings.Settings_InputNumber2_Suffix;
+        }
+
+        private void input1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

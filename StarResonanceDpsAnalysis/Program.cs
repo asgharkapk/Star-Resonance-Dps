@@ -1,10 +1,11 @@
-using System.Text;
-using System.Windows.Forms;
 using AntdUI;
 using StarResonanceDpsAnalysis.Forms;
 using StarResonanceDpsAnalysis.Forms.ModuleForm;
 using StarResonanceDpsAnalysis.Plugin;
 using StarResonanceDpsAnalysis.Plugin.LaunchFunction;
+using System.Globalization;
+using System.Text;
+using System.Windows.Forms;
 
 namespace StarResonanceDpsAnalysis
 {
@@ -32,7 +33,12 @@ namespace StarResonanceDpsAnalysis
            // float dpiScale = GetPrimaryResolutionScale();
             AppConfig.dpi = AntdUI.Config.Dpi;
 
-       
+            if (!AppConfig.GetConfigExists()) 
+            {
+                AppConfig.Language = "zh";
+            }
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(AppConfig.Language);
+
             AntdUI.Config.TextRenderingHighQuality = true;
 
             

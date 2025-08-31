@@ -1,4 +1,6 @@
-﻿namespace StarResonanceDpsAnalysis.Forms
+﻿using AntdUI;
+
+namespace StarResonanceDpsAnalysis.Forms
 {
     partial class DpsStatisticsForm
     {
@@ -30,8 +32,8 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DpsStatisticsForm));
-            pageHeader1 = new AntdUI.PageHeader();
-            PilingModeCheckbox = new AntdUI.Checkbox();
+            pageHeader1 = new PageHeader();
+            PilingModeCheckbox = new Checkbox();
             button_ThemeSwitch = new AntdUI.Button();
             button2 = new AntdUI.Button();
             button3 = new AntdUI.Button();
@@ -50,6 +52,7 @@
             AlwaysInjuredButton = new AntdUI.Button();
             TotalTreatmentButton = new AntdUI.Button();
             TotalDamageButton = new AntdUI.Button();
+            tooltip = new TooltipComponent();
             pageHeader1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -58,7 +61,7 @@
             // pageHeader1
             // 
             pageHeader1.BackColor = Color.FromArgb(178, 178, 178);
-            pageHeader1.ColorScheme = AntdUI.TAMode.Dark;
+            pageHeader1.ColorScheme = TAMode.Dark;
             pageHeader1.Controls.Add(PilingModeCheckbox);
             pageHeader1.Controls.Add(button_ThemeSwitch);
             pageHeader1.Controls.Add(button2);
@@ -72,12 +75,13 @@
             pageHeader1.Font = new Font("SAO Welcome TT", 8.999999F, FontStyle.Bold);
             pageHeader1.ForeColor = Color.White;
             pageHeader1.Location = new Point(0, 0);
+            pageHeader1.Margin = new Padding(2);
             pageHeader1.MaximizeBox = false;
             pageHeader1.MinimizeBox = false;
-            pageHeader1.Mode = AntdUI.TAMode.Dark;
+            pageHeader1.Mode = TAMode.Dark;
             pageHeader1.Name = "pageHeader1";
-            pageHeader1.Size = new Size(632, 30);
-            pageHeader1.SubFont = new Font("HarmonyOS Sans SC Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            pageHeader1.Size = new Size(527, 25);
+            pageHeader1.SubFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             pageHeader1.SubGap = 0;
             pageHeader1.SubText = "当前伤害";
             pageHeader1.TabIndex = 16;
@@ -85,15 +89,14 @@
             // 
             // PilingModeCheckbox
             // 
-            PilingModeCheckbox.AutoSizeMode = AntdUI.TAutoSize.Width;
+            PilingModeCheckbox.AutoSizeMode = TAutoSize.Width;
             PilingModeCheckbox.BackColor = Color.Transparent;
             PilingModeCheckbox.Dock = DockStyle.Right;
-            PilingModeCheckbox.Font = new Font("阿里妈妈数黑体", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            PilingModeCheckbox.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             PilingModeCheckbox.ForeColor = Color.White;
-            PilingModeCheckbox.Location = new Point(365, 0);
-            PilingModeCheckbox.Margin = new Padding(4);
+            PilingModeCheckbox.Location = new Point(305, 0);
             PilingModeCheckbox.Name = "PilingModeCheckbox";
-            PilingModeCheckbox.Size = new Size(120, 30);
+            PilingModeCheckbox.Size = new Size(100, 25);
             PilingModeCheckbox.TabIndex = 17;
             PilingModeCheckbox.Text = "打桩模式";
             PilingModeCheckbox.TextAlign = ContentAlignment.MiddleCenter;
@@ -102,32 +105,34 @@
             // 
             // button_ThemeSwitch
             // 
-            button_ThemeSwitch.ColorScheme = AntdUI.TAMode.Dark;
+            button_ThemeSwitch.ColorScheme = TAMode.Dark;
             button_ThemeSwitch.Dock = DockStyle.Right;
             button_ThemeSwitch.Ghost = true;
             button_ThemeSwitch.IconRatio = 0.8F;
             button_ThemeSwitch.IconSvg = "SunOutlined";
-            button_ThemeSwitch.Location = new Point(485, 0);
+            button_ThemeSwitch.Location = new Point(405, 0);
+            button_ThemeSwitch.Margin = new Padding(2);
             button_ThemeSwitch.Name = "button_ThemeSwitch";
-            button_ThemeSwitch.Size = new Size(40, 30);
+            button_ThemeSwitch.Size = new Size(33, 25);
             button_ThemeSwitch.TabIndex = 21;
             button_ThemeSwitch.ToggleIconSvg = "MoonOutlined";
             button_ThemeSwitch.Click += button_ThemeSwitch_Click;
+            button_ThemeSwitch.MouseEnter += button_ThemeSwitch_MouseEnter;
             // 
             // button2
             // 
-            button2.ColorScheme = AntdUI.TAMode.Dark;
+            button2.ColorScheme = TAMode.Dark;
             button2.Dock = DockStyle.Right;
             button2.Ghost = true;
             button2.IconRatio = 0.8F;
             button2.IconSvg = resources.GetString("button2.IconSvg");
-            button2.Location = new Point(525, 0);
-            button2.Margin = new Padding(4);
+            button2.Location = new Point(438, 0);
             button2.Name = "button2";
-            button2.Size = new Size(24, 30);
+            button2.Size = new Size(20, 25);
             button2.TabIndex = 20;
             button2.ToggleIconSvg = "";
             button2.Click += button2_Click_1;
+            button2.MouseEnter += button2_MouseEnter;
             // 
             // button3
             // 
@@ -136,25 +141,23 @@
             button3.Icon = Properties.Resources.handoff_normal;
             button3.IconHover = Properties.Resources.handoff_hover;
             button3.IconRatio = 0.8F;
-            button3.Location = new Point(256, 0);
-            button3.Margin = new Padding(4);
+            button3.Location = new Point(227, 0);
             button3.Name = "button3";
-            button3.Size = new Size(28, 30);
+            button3.Size = new Size(23, 25);
             button3.TabIndex = 19;
             button3.Click += button3_Click;
             button3.MouseEnter += button3_MouseEnter;
             // 
             // button_AlwaysOnTop
             // 
-            button_AlwaysOnTop.ColorScheme = AntdUI.TAMode.Dark;
+            button_AlwaysOnTop.ColorScheme = TAMode.Dark;
             button_AlwaysOnTop.Dock = DockStyle.Right;
             button_AlwaysOnTop.Ghost = true;
             button_AlwaysOnTop.IconRatio = 0.8F;
             button_AlwaysOnTop.IconSvg = resources.GetString("button_AlwaysOnTop.IconSvg");
-            button_AlwaysOnTop.Location = new Point(549, 0);
-            button_AlwaysOnTop.Margin = new Padding(4);
+            button_AlwaysOnTop.Location = new Point(458, 0);
             button_AlwaysOnTop.Name = "button_AlwaysOnTop";
-            button_AlwaysOnTop.Size = new Size(27, 30);
+            button_AlwaysOnTop.Size = new Size(22, 25);
             button_AlwaysOnTop.TabIndex = 5;
             button_AlwaysOnTop.ToggleIconSvg = resources.GetString("button_AlwaysOnTop.ToggleIconSvg");
             button_AlwaysOnTop.Click += button_AlwaysOnTop_Click;
@@ -162,15 +165,14 @@
             // 
             // button1
             // 
-            button1.ColorScheme = AntdUI.TAMode.Dark;
+            button1.ColorScheme = TAMode.Dark;
             button1.Dock = DockStyle.Right;
             button1.Ghost = true;
             button1.IconRatio = 0.8F;
             button1.IconSvg = resources.GetString("button1.IconSvg");
-            button1.Location = new Point(576, 0);
-            button1.Margin = new Padding(4);
+            button1.Location = new Point(480, 0);
             button1.Name = "button1";
-            button1.Size = new Size(24, 30);
+            button1.Size = new Size(20, 25);
             button1.TabIndex = 4;
             button1.ToggleIconSvg = "";
             button1.Click += button1_Click;
@@ -180,17 +182,16 @@
             // 
             button_Settings.BackActive = Color.Transparent;
             button_Settings.BackColor = Color.Transparent;
-            button_Settings.ColorScheme = AntdUI.TAMode.Dark;
+            button_Settings.ColorScheme = TAMode.Dark;
             button_Settings.DefaultBack = Color.Transparent;
             button_Settings.Dock = DockStyle.Right;
             button_Settings.Ghost = true;
             button_Settings.Icon = Properties.Resources.setting_hover;
             button_Settings.IconRatio = 1F;
             button_Settings.IconSvg = "";
-            button_Settings.Location = new Point(600, 0);
-            button_Settings.Margin = new Padding(4);
+            button_Settings.Location = new Point(500, 0);
             button_Settings.Name = "button_Settings";
-            button_Settings.Size = new Size(32, 30);
+            button_Settings.Size = new Size(27, 25);
             button_Settings.TabIndex = 3;
             button_Settings.ToggleIconSvg = "";
             button_Settings.Click += button_Settings_Click;
@@ -202,24 +203,22 @@
             panel1.Controls.Add(BattleTimeText);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 489);
-            panel1.Margin = new Padding(4);
+            panel1.Location = new Point(0, 408);
             panel1.Name = "panel1";
             panel1.Radius = 3;
             panel1.Shadow = 3;
-            panel1.ShadowAlign = AntdUI.TAlignMini.Top;
-            panel1.Size = new Size(632, 41);
+            panel1.ShadowAlign = TAlignMini.Top;
+            panel1.Size = new Size(527, 34);
             panel1.TabIndex = 17;
             panel1.Text = "panel1";
             // 
             // label2
             // 
             label2.Dock = DockStyle.Right;
-            label2.Font = new Font("阿里妈妈数黑体", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label2.Location = new Point(472, 4);
-            label2.Margin = new Padding(4);
+            label2.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            label2.Location = new Point(394, 3);
             label2.Name = "label2";
-            label2.Size = new Size(160, 37);
+            label2.Size = new Size(133, 31);
             label2.TabIndex = 20;
             label2.Text = "";
             label2.TextAlign = ContentAlignment.MiddleRight;
@@ -227,20 +226,22 @@
             // BattleTimeText
             // 
             BattleTimeText.Dock = DockStyle.Left;
-            BattleTimeText.Font = new Font("阿里妈妈数黑体", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            BattleTimeText.Location = new Point(46, 4);
+            BattleTimeText.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            BattleTimeText.Location = new Point(38, 3);
+            BattleTimeText.Margin = new Padding(2);
             BattleTimeText.Name = "BattleTimeText";
-            BattleTimeText.Size = new Size(118, 37);
+            BattleTimeText.Size = new Size(98, 31);
             BattleTimeText.TabIndex = 18;
             BattleTimeText.Text = "00:00";
             // 
             // label1
             // 
             label1.Dock = DockStyle.Left;
-            label1.Font = new Font("阿里妈妈数黑体", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label1.Location = new Point(0, 4);
+            label1.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            label1.Location = new Point(0, 3);
+            label1.Margin = new Padding(2);
             label1.Name = "label1";
-            label1.Size = new Size(46, 37);
+            label1.Size = new Size(38, 31);
             label1.TabIndex = 19;
             label1.Text = "";
             // 
@@ -259,19 +260,20 @@
             sortedProgressBarList1.AnimationQuality = Effects.Enum.Quality.Medium;
             sortedProgressBarList1.BackColor = Color.WhiteSmoke;
             sortedProgressBarList1.Dock = DockStyle.Fill;
-            sortedProgressBarList1.Location = new Point(0, 96);
+            sortedProgressBarList1.Location = new Point(0, 80);
             sortedProgressBarList1.Margin = new Padding(8, 6, 8, 6);
             sortedProgressBarList1.Name = "sortedProgressBarList1";
             sortedProgressBarList1.OrderColor = Color.Black;
-            sortedProgressBarList1.OrderFont = new Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
+            sortedProgressBarList1.OrderFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             sortedProgressBarList1.OrderImageAlign = Control.GDI.RenderContent.ContentAlign.MiddleLeft;
             sortedProgressBarList1.OrderImageRenderSize = new Size(0, 0);
             sortedProgressBarList1.OrderImages = null;
             sortedProgressBarList1.ScrollBarWidth = 8;
             sortedProgressBarList1.ScrollOffsetY = 0F;
             sortedProgressBarList1.SeletedItemColor = Color.FromArgb(86, 156, 214);
-            sortedProgressBarList1.Size = new Size(632, 393);
+            sortedProgressBarList1.Size = new Size(527, 328);
             sortedProgressBarList1.TabIndex = 18;
+            sortedProgressBarList1.Load += sortedProgressBarList1_Load;
             // 
             // panel2
             // 
@@ -281,12 +283,11 @@
             panel2.Controls.Add(TotalTreatmentButton);
             panel2.Controls.Add(TotalDamageButton);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 30);
-            panel2.Margin = new Padding(4);
+            panel2.Location = new Point(0, 25);
             panel2.Name = "panel2";
             panel2.Shadow = 3;
-            panel2.ShadowAlign = AntdUI.TAlignMini.Bottom;
-            panel2.Size = new Size(632, 66);
+            panel2.ShadowAlign = TAlignMini.Bottom;
+            panel2.Size = new Size(527, 55);
             panel2.TabIndex = 21;
             panel2.Text = "panel2";
             // 
@@ -295,14 +296,13 @@
             NpcTakeDamageButton.Anchor = AnchorStyles.Top;
             NpcTakeDamageButton.DefaultBack = Color.FromArgb(247, 247, 247);
             NpcTakeDamageButton.DefaultBorderColor = Color.Wheat;
-            NpcTakeDamageButton.Font = new Font("HarmonyOS Sans SC Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            NpcTakeDamageButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             NpcTakeDamageButton.Icon = (Image)resources.GetObject("NpcTakeDamageButton.Icon");
             NpcTakeDamageButton.IconRatio = 0.8F;
-            NpcTakeDamageButton.Location = new Point(447, 9);
-            NpcTakeDamageButton.Margin = new Padding(4);
+            NpcTakeDamageButton.Location = new Point(372, 8);
             NpcTakeDamageButton.Name = "NpcTakeDamageButton";
             NpcTakeDamageButton.Radius = 3;
-            NpcTakeDamageButton.Size = new Size(134, 45);
+            NpcTakeDamageButton.Size = new Size(112, 38);
             NpcTakeDamageButton.TabIndex = 4;
             NpcTakeDamageButton.Text = "承伤";
             NpcTakeDamageButton.Click += DamageType_Click;
@@ -312,13 +312,13 @@
             AlwaysInjuredButton.Anchor = AnchorStyles.Top;
             AlwaysInjuredButton.DefaultBack = Color.FromArgb(247, 247, 247);
             AlwaysInjuredButton.DefaultBorderColor = Color.Wheat;
-            AlwaysInjuredButton.Font = new Font("HarmonyOS Sans SC Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            AlwaysInjuredButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             AlwaysInjuredButton.Icon = (Image)resources.GetObject("AlwaysInjuredButton.Icon");
-            AlwaysInjuredButton.Location = new Point(314, 9);
+            AlwaysInjuredButton.Location = new Point(262, 8);
             AlwaysInjuredButton.Margin = new Padding(4);
             AlwaysInjuredButton.Name = "AlwaysInjuredButton";
             AlwaysInjuredButton.Radius = 3;
-            AlwaysInjuredButton.Size = new Size(134, 45);
+            AlwaysInjuredButton.Size = new Size(112, 38);
             AlwaysInjuredButton.TabIndex = 3;
             AlwaysInjuredButton.Text = "总承伤";
             AlwaysInjuredButton.Click += DamageType_Click;
@@ -327,13 +327,13 @@
             // 
             TotalTreatmentButton.Anchor = AnchorStyles.Top;
             TotalTreatmentButton.DefaultBack = Color.FromArgb(247, 247, 247);
-            TotalTreatmentButton.Font = new Font("HarmonyOS Sans SC Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            TotalTreatmentButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             TotalTreatmentButton.Icon = (Image)resources.GetObject("TotalTreatmentButton.Icon");
-            TotalTreatmentButton.Location = new Point(178, 9);
+            TotalTreatmentButton.Location = new Point(148, 8);
             TotalTreatmentButton.Margin = new Padding(4);
             TotalTreatmentButton.Name = "TotalTreatmentButton";
             TotalTreatmentButton.Radius = 3;
-            TotalTreatmentButton.Size = new Size(134, 45);
+            TotalTreatmentButton.Size = new Size(112, 38);
             TotalTreatmentButton.TabIndex = 2;
             TotalTreatmentButton.Text = "总治疗";
             TotalTreatmentButton.Click += DamageType_Click;
@@ -342,29 +342,35 @@
             // 
             TotalDamageButton.Anchor = AnchorStyles.Top;
             TotalDamageButton.DefaultBack = Color.FromArgb(223, 223, 223);
-            TotalDamageButton.Font = new Font("HarmonyOS Sans SC Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            TotalDamageButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             TotalDamageButton.Icon = (Image)resources.GetObject("TotalDamageButton.Icon");
-            TotalDamageButton.Location = new Point(45, 9);
-            TotalDamageButton.Margin = new Padding(4);
+            TotalDamageButton.Location = new Point(38, 8);
             TotalDamageButton.Name = "TotalDamageButton";
             TotalDamageButton.Radius = 3;
-            TotalDamageButton.Size = new Size(134, 45);
+            TotalDamageButton.Size = new Size(112, 38);
             TotalDamageButton.TabIndex = 1;
             TotalDamageButton.Text = "总伤害";
             TotalDamageButton.Click += DamageType_Click;
             // 
+            // tooltip
+            // 
+            tooltip.ArrowAlign = TAlign.TL;
+            tooltip.Font = new Font("HarmonyOS Sans SC", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            // 
             // DpsStatisticsForm
             // 
-            AutoScaleDimensions = new SizeF(144F, 144F);
+            AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.White;
             BorderWidth = 0;
-            ClientSize = new Size(632, 530);
+            ClientSize = new Size(527, 442);
             Controls.Add(sortedProgressBarList1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(pageHeader1);
+            Font = new Font("HarmonyOS Sans SC", 8F);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(2);
             Name = "DpsStatisticsForm";
             Radius = 3;
             StartPosition = FormStartPosition.CenterScreen;
@@ -402,5 +408,6 @@
         private AntdUI.Button AlwaysInjuredButton;
         private AntdUI.Button NpcTakeDamageButton;
         private AntdUI.Button button_ThemeSwitch;
+        private AntdUI.TooltipComponent tooltip;
     }
 }

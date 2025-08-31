@@ -21,36 +21,22 @@ namespace StarResonanceDpsAnalysis.Plugin
         public static string GetSubProfessionBySkillId(ulong skillId) =>
             skillId switch
             {
-                1241 => "射线",
-
-                2307 or 2361 or 55302 => "协奏",
-
-                20301 => "愈合",
-
-                1518 or 1541 or 21402 => "惩戒",
-
-                2306 => "狂音",
-
-                120901 or 120902 => "冰矛",
-
-                1714 or 1734 => "居合",
-
-                44701 or 179906 => "月刃",
-
-                220112 or 2203622 or 220106  => "鹰弓",
-
-                2292 or 1700820 or 1700825 or 1700827 => "狼弓",
-
-                1419 => "空枪",
-
-                1405 or 1418 => "重装",
-
-                2405 => "防盾",
-                2406 => "光盾",
-                199902 => "岩盾",
-
-                1930 or 1931 or 1934 or 1935 => "格挡",
-
+                1241 => Properties.Strings.SubProfession_IceRay,
+                2307 or 2361 or 55302 => Properties.Strings.SubProfession_Concerto,
+                20301 => Properties.Strings.SubProfession_Lifebloom,
+                1518 or 1541 or 21402 => Properties.Strings.SubProfession_Thornlash,
+                2306 => Properties.Strings.SubProfession_RagingSound,
+                120901 or 120902 => Properties.Strings.SubProfession_IceSpear,
+                1714 or 1734 => Properties.Strings.SubProfession_Iai,
+                44701 or 179906 => Properties.Strings.SubProfession_MoonBlade,
+                220112 or 2203622 or 220106 => Properties.Strings.SubProfession_EagleBow,
+                2292 or 1700820 or 1700825 or 1700827 => Properties.Strings.SubProfession_WolfBow,
+                1419 => Properties.Strings.SubProfession_AirStyle,
+                1405 or 1418 => Properties.Strings.SubProfession_Overdrive,
+                2405 => Properties.Strings.SubProfession_Protection,
+                2406 => Properties.Strings.SubProfession_LightShield,
+                199902 => Properties.Strings.SubProfession_RockShield,
+                1930 or 1931 or 1934 or 1935 => Properties.Strings.SubProfession_Block,
                 _ => string.Empty
             };
 
@@ -531,7 +517,7 @@ namespace StarResonanceDpsAnalysis.Plugin
         /// <returns></returns>
         public static string FormatWithEnglishUnits<T>(T number)
         {
-            if(AppConfig.DamageDisplayType== "KMB显示")
+            if(AppConfig.DamageDisplayType== "K")
             {
                 double value = Convert.ToDouble(number);
 

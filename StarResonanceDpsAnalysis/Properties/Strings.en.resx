@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Header_FullRecord_Healing" xml:space="preserve">
+    <value>Overall Healing</value>
+  </data>
+  <data name="Header_FullRecord_Taken" xml:space="preserve">
+    <value>Overall Damage Taken</value>
+  </data>
+  <data name="Header_FullRecord_NpcTaken" xml:space="preserve">
+    <value>Overall · NPC Damage Taken</value>
+  </data>
+  <data name="Header_FullRecord_Damage" xml:space="preserve">
+    <value>Overall Damage</value>
+  </data>
+  <data name="Header_Current_Healing" xml:space="preserve">
+    <value>Current Healing</value>
+  </data>
+  <data name="Header_Current_Taken" xml:space="preserve">
+    <value>Current Damage Taken</value>
+  </data>
+  <data name="Header_Current_NpcTaken" xml:space="preserve">
+    <value>Current · NPC Damage Taken</value>
+  </data>
+  <data name="Header_Current_Damage" xml:space="preserve">
+    <value>Current Damage</value>
+  </data>
+  <data name="Header_NpcAttackers_FullRecord" xml:space="preserve">
+    <value>Overall · NPC Attackers Ranking (NPC:{0})</value>
+  </data>
+  <data name="Header_NpcAttackers_Current" xml:space="preserve">
+    <value>Current · NPC Attackers Ranking (NPC:{0})</value>
+  </data>
+  <data name="Menu_HistoricalBattles" xml:space="preserve">
+    <value>Battle History</value>
+  </data>
+  <data name="Menu_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Menu_MainForm" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Menu_ModuleConfig" xml:space="preserve">
+    <value>Module Optimizer</value>
+  </data>
+  <data name="Menu_DeathStatistics" xml:space="preserve">
+    <value>Death Statistics</value>
+  </data>
+  <data name="Menu_SkillDiary" xml:space="preserve">
+    <value>Skill Diary</value>
+  </data>
+  <data name="Menu_DamageReference" xml:space="preserve">
+    <value>Damage Reference</value>
+  </data>
+  <data name="Menu_PilingMode" xml:space="preserve">
+    <value>DPS Benchmark</value>
+  </data>
+  <data name="Menu_Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Tooltip_ClearData" xml:space="preserve">
+    <value>Clear Current Data</value>
+  </data>
+  <data name="Tooltip_SwitchSingleTotal" xml:space="preserve">
+    <value>Click to switch: Current/Overall Statistics</value>
+  </data>
+  <data name="Msg_UidNotFound" xml:space="preserve">
+    <value>Could not find player UID，Please re-enter the Guild Association</value>
+  </data>
+  <data name="Msg_PilingComplete" xml:space="preserve">
+    <value>Benchmark completed. Upload? (Leaderboards are for entertainment only. Please refrain from malicious uploads)\n   1. You can reset the benchmark by rechecking the box"</value>
+  </data>
+  <data name="Msg_UploadSuccess" xml:space="preserve">
+    <value>Upload successful</value>
+  </data>
+  <data name="Msg_UploadFail" xml:space="preserve">
+    <value>Upload failed</value>
+  </data>
+  <data name="Msg_UploadFailDetail" xml:space="preserve">
+    <value>Please check your network. The server does not support external uploads at this time.</value>
+  </data>
+  <data name="Msg_PilingModeInfo" xml:space="preserve">
+    <value>Benchmark is 3 minutes. Please read the following instructions:\n   1. Only your own data is recorded\n   2. Use the solo wooden dummy in the Guild Association\n   3. Ensure the combat timer is at 00:00\n   4. Uncheck and recheck the box to reset\n   5. Abnormal data will be deleted\n</value>
+  </data>
+  <data name="Header_DpsStatistics_Title" xml:space="preserve">
+    <value>DPS Damage Statistics Table</value>
+  </data>
+  <data name="Header_DpsStatistics_Subtitle" xml:space="preserve">
+    <value>Current Damage</value>
+  </data>
+  <data name="TotalDamageLabel" xml:space="preserve">
+    <value>DPS</value>
+  </data>
+  <data name="TotalTreatmentLabel" xml:space="preserve">
+    <value>Healing</value>
+  </data>
+  <data name="AlwaysInjuredLabel" xml:space="preserve">
+    <value>Tanking</value>
+  </data>
+  <data name="NpcTakeDamageLabel" xml:space="preserve">
+    <value>Tanking</value>
+  </data>
+  <data name="SettingsButtonLabel" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ClearButtonLabel" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Tooltip_AlwaysOnTop" xml:space="preserve">
+    <value>Always On Top</value>
+  </data>
+  <data name="SwitchModeButtonLabel" xml:space="preserve">
+    <value>Switch Mode</value>
+  </data>
+  <data name="Tooltip_Minimize" xml:space="preserve">
+    <value>Minimize</value>
+  </data>
+  <data name="Tooltip_SwitchTheme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="PilingModeCheckboxLabel" xml:space="preserve">
+    <value>Benchmark</value>
+  </data>
+  <data name="Profession_Stormblade" xml:space="preserve">
+    <value>Stormblade</value>
+  </data>
+  <data name="Profession_FrostMage" xml:space="preserve">
+    <value>FrostMage</value>
+  </data>
+  <data name="Profession_PurifyingAxe" xml:space="preserve">
+    <value>Purifying Evilfire Axe</value>
+  </data>
+  <data name="Profession_WindKnight" xml:space="preserve">
+    <value>Wind Knight</value>
+  </data>
+  <data name="Profession_VerdantOracle" xml:space="preserve">
+    <value>Verdant Oracle</value>
+  </data>
+  <data name="Profession_HeavyGuardian" xml:space="preserve">
+    <value>HeavyGuardian</value>
+  </data>
+  <data name="Profession_Marksman" xml:space="preserve">
+    <value>Marksman</value>
+  </data>
+  <data name="Profession_AegisKnight" xml:space="preserve">
+    <value>AegisKnight</value>
+  </data>
+  <data name="Profession_ThunderHandCannon" xml:space="preserve">
+    <value>Thunder Flash Hand Cannon</value>
+  </data>
+  <data name="Profession_DarkSpiritDance" xml:space="preserve">
+    <value>Dark Spirit Dance Ritual Blade</value>
+  </data>
+  <data name="Profession_SoulMusician" xml:space="preserve">
+    <value>Soul Musician</value>
+  </data>
+  <data name="ModuleName_BasicAttack" xml:space="preserve">
+    <value>Basic Attack</value>
+  </data>
+  <data name="ModuleName_HighPerformanceAttack" xml:space="preserve">
+    <value>High Performance Attack</value>
+  </data>
+  <data name="ModuleName_ExcellentAttack" xml:space="preserve">
+    <value>Excellent Attack</value>
+  </data>
+  <data name="ModuleName_BasicHealing" xml:space="preserve">
+    <value>Basic Healing</value>
+  </data>
+  <data name="ModuleName_HighPerformanceHealing" xml:space="preserve">
+    <value>High Performance Healing</value>
+  </data>
+  <data name="ModuleName_ExcellentHealing" xml:space="preserve">
+    <value>Excellent Support</value>
+  </data>
+  <data name="ModuleName_BasicProtection" xml:space="preserve">
+    <value>Basic Protection</value>
+  </data>
+  <data name="ModuleName_HighPerformanceProtection" xml:space="preserve">
+    <value>High Performance Guardian</value>
+  </data>
+  <data name="ModuleName_ExcellentProtection" xml:space="preserve">
+    <value>Excellent Guardian</value>
+  </data>
+  <data name="ModuleAttr_StrengthBoost" xml:space="preserve">
+    <value>Strength Boost</value>
+  </data>
+  <data name="ModuleAttr_AgilityBoost" xml:space="preserve">
+    <value>Agility Boost</value>
+  </data>
+  <data name="ModuleAttr_IntelligenceBoost" xml:space="preserve">
+    <value>Intelligence Boost</value>
+  </data>
+  <data name="ModuleAttr_SpecialAttackDamage" xml:space="preserve">
+    <value>Special Attack Damage</value>
+  </data>
+  <data name="ModuleAttr_EliteStrike" xml:space="preserve">
+    <value>Elite Strike</value>
+  </data>
+  <data name="ModuleAttr_SpecialHealingBoost" xml:space="preserve">
+    <value>Special Healing Boost</value>
+  </data>
+  <data name="ModuleAttr_ExpertHealingBoost" xml:space="preserve">
+    <value>Expert Healing Boost</value>
+  </data>
+  <data name="ModuleAttr_CastingFocus" xml:space="preserve">
+    <value>Casting Focus</value>
+  </data>
+  <data name="ModuleAttr_AttackSpeedFocus" xml:space="preserve">
+    <value>Attack Speed Focus</value>
+  </data>
+  <data name="ModuleAttr_CriticalFocus" xml:space="preserve">
+    <value>Critical Focus</value>
+  </data>
+  <data name="ModuleAttr_LuckFocus" xml:space="preserve">
+    <value>Luck Focus</value>
+  </data>
+  <data name="ModuleAttr_MagicResistance" xml:space="preserve">
+    <value>Magic Resistance</value>
+  </data>
+  <data name="ModuleAttr_PhysicalResistance" xml:space="preserve">
+    <value>Physical Resistance</value>
+  </data>
+  <data name="ModuleAttr_ExtremeDamageStack" xml:space="preserve">
+    <value>Extreme Damage Stack</value>
+  </data>
+  <data name="ModuleAttr_ExtremeFlexibleMovement" xml:space="preserve">
+    <value>Extreme Flexible Movement</value>
+  </data>
+  <data name="ModuleAttr_ExtremeLifeConvergence" xml:space="preserve">
+    <value>Extreme Life Convergence</value>
+  </data>
+  <data name="ModuleAttr_ExtremeEmergencyMeasures" xml:space="preserve">
+    <value>Extreme Emergency Measures</value>
+  </data>
+  <data name="ModuleAttr_ExtremeLifeFluctuation" xml:space="preserve">
+    <value>Extreme Life Fluctuation</value>
+  </data>
+  <data name="ModuleAttr_ExtremeLifeDrain" xml:space="preserve">
+    <value>Extreme Life Drain</value>
+  </data>
+  <data name="ModuleAttr_ExtremeTeamCrit" xml:space="preserve">
+    <value>Extreme Team Crit</value>
+  </data>
+  <data name="ModuleAttr_ExtremeDesperateGuardian" xml:space="preserve">
+    <value>Extreme Desperate Guardian</value>
+  </data>
+  <data name="ModuleCategory_Attack" xml:space="preserve">
+    <value>Attack</value>
+  </data>
+  <data name="ModuleCategory_Guardian" xml:space="preserve">
+    <value>Guardian</value>
+  </data>
+  <data name="ModuleCategory_Support" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="ModuleCategory_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="ModuleCalc_Title" xml:space="preserve">
+    <value>Module Calculator</value>
+  </data>
+  <data name="ModuleCalc_Label1" xml:space="preserve">
+    <value>Please select module attributes</value>
+  </data>
+  <data name="ModuleCalc_GroupBox1" xml:space="preserve">
+    <value>Exclude Attributes</value>
+  </data>
+  <data name="ModuleCalc_GroupBox3" xml:space="preserve">
+    <value>Include Attributes</value>
+  </data>
+  <data name="ModuleCalc_Button1" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="ModuleCalc_Button2" xml:space="preserve">
+    <value>Exclude Attributes</value>
+  </data>
+  <data name="ModuleCalc_Select1" xml:space="preserve">
+    <value>Type Select</value>
+  </data>
+  <data name="ModuleCalc_Select2" xml:space="preserve">
+    <value>Attribute 1</value>
+  </data>
+  <data name="ModuleCalc_Select3" xml:space="preserve">
+    <value>Sort Mode</value>
+  </data>
+  <data name="ModuleCalc_Select4" xml:space="preserve">
+    <value>Attribute 2</value>
+  </data>
+  <data name="ModuleCalc_Select5" xml:space="preserve">
+    <value>Attribute 3</value>
+  </data>
+  <data name="ModuleCalc_Select6" xml:space="preserve">
+    <value>Attribute 4</value>
+  </data>
+  <data name="ModuleCalc_Select7" xml:space="preserve">
+    <value>Attribute 5</value>
+  </data>
+  <data name="ModuleCalc_Select8" xml:space="preserve">
+    <value>Attribute 5</value>
+  </data>
+  <data name="ModuleCalc_Select9" xml:space="preserve">
+    <value>Attribute 4</value>
+  </data>
+  <data name="ModuleCalc_Select10" xml:space="preserve">
+    <value>Attribute 3</value>
+  </data>
+  <data name="ModuleCalc_Select11" xml:space="preserve">
+    <value>Attribute 2</value>
+  </data>
+  <data name="ModuleCalc_Select12" xml:space="preserve">
+    <value>Attribute 1</value>
+  </data>
+  <data name="ModuleCalc_Select3_Item_SortByTotalAttr" xml:space="preserve">
+    <value>Sort by Total Attribute</value>
+  </data>
+  <data name="ModuleCalc_Select3_Item_SortByScore" xml:space="preserve">
+    <value>Sort by Score</value>
+  </data>
+  <data name="ModuleCalc_Select1_Prefix" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="ModuleCalc_Select2_Prefix" xml:space="preserve">
+    <value>Attribute 1:</value>
+  </data>
+  <data name="ModuleCalc_Select3_Prefix" xml:space="preserve">
+    <value>Sort:</value>
+  </data>
+  <data name="ModuleCalc_Select4_Prefix" xml:space="preserve">
+    <value>Attribute 2:</value>
+  </data>
+  <data name="ModuleCalc_Select5_Prefix" xml:space="preserve">
+    <value>Attribute 3:</value>
+  </data>
+  <data name="ModuleCalc_Select6_Prefix" xml:space="preserve">
+    <value>Attribute 4:</value>
+  </data>
+  <data name="ModuleCalc_Select7_Prefix" xml:space="preserve">
+    <value>Attribute 5:</value>
+  </data>
+  <data name="ModuleCalc_Select8_Prefix" xml:space="preserve">
+    <value>Exclude :</value>
+  </data>
+  <data name="ModuleCalc_Select9_Prefix" xml:space="preserve">
+    <value>Exclude :</value>
+  </data>
+  <data name="ModuleCalc_Select10_Prefix" xml:space="preserve">
+    <value>Exclude :</value>
+  </data>
+  <data name="ModuleCalc_Select11_Prefix" xml:space="preserve">
+    <value>Exclude :</value>
+  </data>
+  <data name="ModuleCalc_Select12_Prefix" xml:space="preserve">
+    <value>Exclude  :</value>
+  </data>
+  <data name="ModuleCalc_InputNumber1_Prefix" xml:space="preserve">
+    <value>Level:</value>
+  </data>
+  <data name="ModuleCalc_InputNumber2_Prefix" xml:space="preserve">
+    <value>Level:</value>
+  </data>
+  <data name="ModuleCalc_InputNumber3_Prefix" xml:space="preserve">
+    <value>Level:</value>
+  </data>
+  <data name="ModuleCalc_InputNumber4_Prefix" xml:space="preserve">
+    <value>Level:</value>
+  </data>
+  <data name="ModuleCalc_InputNumber5_Prefix" xml:space="preserve">
+    <value>Level:</value>
+  </data>
+  <data name="Notice_ChangeMaps" xml:space="preserve">
+    <value>Please re-enter the map and try again</value>
+  </data>
+  <data name="Settings_Title" xml:space="preserve">
+    <value>Basic Setup</value>
+  </data>
+  <data name="Settings_Label1" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Settings_Label2" xml:space="preserve">
+    <value>Network Settings</value>
+  </data>
+  <data name="Settings_Label3" xml:space="preserve">
+    <value>Keybinds</value>
+  </data>
+  <data name="Settings_Label4" xml:space="preserve">
+    <value>Combat Settings</value>
+  </data>
+  <data name="Settings_Label5" xml:space="preserve">
+    <value>Clear current data on map change</value>
+  </data>
+  <data name="Settings_Label6" xml:space="preserve">
+    <value>*Delete key clears keybind</value>
+  </data>
+  <data name="Settings_Label7" xml:space="preserve">
+    <value>*Set manually in case of error</value>
+  </data>
+  <data name="Settings_Label8" xml:space="preserve">
+    <value>*Clears current and not overall data</value>
+  </data>
+  <data name="Settings_Label9" xml:space="preserve">
+    <value>Transparency</value>
+  </data>
+  <data name="Settings_Label10" xml:space="preserve">
+    <value>Damage Display Type</value>
+  </data>
+  <data name="Settings_Select2" xml:space="preserve">
+    <value>Damage Display</value>
+  </data>
+  <data name="Settings_LanguageSelect" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Settings_Input1_Prefix" xml:space="preserve">
+    <value>Clickthrough Key:</value>
+  </data>
+  <data name="Settings_Input2_Prefix" xml:space="preserve">
+    <value>Transparency Key:</value>
+  </data>
+  <data name="Settings_Input3_Prefix" xml:space="preserve">
+    <value>Window Toggle Key:</value>
+  </data>
+  <data name="Settings_Input4_Prefix" xml:space="preserve">
+    <value>Clear Data Key:</value>
+  </data>
+  <data name="Settings_Input5_Prefix" xml:space="preserve">
+    <value>Clear History Key:</value>
+  </data>
+  <data name="Settings_InputNumber2_Prefix" xml:space="preserve">
+    <value>Delay:</value>
+  </data>
+  <data name="Settings_InterfaceComboBox_Prefix" xml:space="preserve">
+    <value>Network Device:</value>
+  </data>
+  <data name="Settings_Label11" xml:space="preserve">
+    <value>Clear data when out of combat timer</value>
+  </data>
+  <data name="Settings_InputNumber2_Suffix" xml:space="preserve">
+    <value>(s)</value>
+  </data>
+  <data name="SubProfession_Concerto" xml:space="preserve">
+    <value>Concerto</value>
+  </data>
+  <data name="SubProfession_IceSpear" xml:space="preserve">
+    <value>Ice Spear</value>
+  </data>
+  <data name="SubProfession_Iai" xml:space="preserve">
+    <value>Iai</value>
+  </data>
+  <data name="SubProfession_MoonBlade" xml:space="preserve">
+    <value>Moon Blade</value>
+  </data>
+  <data name="SubProfession_EagleBow" xml:space="preserve">
+    <value>Eagle Bow</value>
+  </data>
+  <data name="SubProfession_WolfBow" xml:space="preserve">
+    <value>Wolf Bow</value>
+  </data>
+  <data name="SubProfession_LightShield" xml:space="preserve">
+    <value>Light Shield</value>
+  </data>
+  <data name="SubProfession_RockShield" xml:space="preserve">
+    <value>Rock Shield</value>
+  </data>
+  <data name="SubProfession_Block" xml:space="preserve">
+    <value>Block</value>
+  </data>
+  <data name="SubProfession_IceRay" xml:space="preserve">
+    <value>Ray</value>
+  </data>
+  <data name="SubProfession_Lifebloom" xml:space="preserve">
+    <value>Healing</value>
+  </data>
+  <data name="SubProfession_Thornlash" xml:space="preserve">
+    <value>Penalty</value>
+  </data>
+  <data name="SubProfession_RagingSound" xml:space="preserve">
+    <value>Mad Sound</value>
+  </data>
+  <data name="SubProfession_Overdrive" xml:space="preserve">
+    <value>Heavy Armor</value>
+  </data>
+  <data name="SubProfession_Protection" xml:space="preserve">
+    <value>Shield</value>
+  </data>
+  <data name="SubProfession_AirStyle" xml:space="preserve">
+    <value>Air Gun</value>
+  </data>
+  <data name="Profession_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="ModuleCalc_TotalScore" xml:space="preserve">
+    <value>Ability Score Total: </value>
+  </data>
+  <data name="ModuleCalc_HighestPowerCore" xml:space="preserve">
+    <value>Highest Power Core Level: </value>
+  </data>
+  <data name="ModuleCalc_ModuleList" xml:space="preserve">
+    <value>Module List</value>
+  </data>
+  <data name="ModuleCalc_AttrEffects" xml:space="preserve">
+    <value>Power Core Effects: </value>
+  </data>
+  <data name="ModuleCalc_EffectsTotal" xml:space="preserve">
+    <value>Total Effects</value>
+  </data>
+  <data name="ModuleCalc_AttrRanking" xml:space="preserve">
+    <value>Rank: </value>
+  </data>
+</root>

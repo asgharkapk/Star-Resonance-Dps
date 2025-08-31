@@ -74,12 +74,12 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 { // 条件分支开始
                     return; // 直接返回，不做任何处理
                 } // 条件分支结束
-                // # 将选中项的 UID 传入详情窗口刷新
+                  // # 将选中项的 UID 传入详情窗口刷新
                 sortedProgressBarList_SelectionChanged((ulong)d.ID); // 将条目 ID 转为 UID 并调用详情刷新逻辑
             }; // 事件处理结束并解除与下一语句的关联
 
             SetStyle(); // 设置/应用本窗体的个性化样式（定义在同类/局部类的其他部分）
-
+            ApplyLocalization();
         } // 构造函数结束
 
 
@@ -125,7 +125,9 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 // 立刻刷新该 NPC 的攻击者榜（当前/全程均已在方法内部自动分流）
                 RefreshNpcAttackers(_npcFocusId);
                 // 可选：更新标题
-                pageHeader1.SubText = FormManager.showTotal ? $"全程 · NPC攻击者榜 (NPC:{uid})" : $"当前 · NPC攻击者榜 (NPC:{uid})";
+                pageHeader1.SubText = FormManager.showTotal
+                    ? string.Format(Properties.Strings.Header_NpcAttackers_FullRecord, uid)
+                    : string.Format(Properties.Strings.Header_NpcAttackers_Current, uid);
                 return;
             }
 
@@ -164,20 +166,20 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             {
                 pageHeader1.SubText = FormManager.currentIndex switch
                 {
-                    1 => "全程治疗",
-                    2 => "全程承伤",
-                    3 => "全程 · NPC承伤",
-                    _ => "全程伤害"
+                    1 => Properties.Strings.Header_FullRecord_Healing,
+                    2 => Properties.Strings.Header_FullRecord_Taken,
+                    3 => Properties.Strings.Header_FullRecord_NpcTaken,
+                    _ => Properties.Strings.Header_FullRecord_Damage
                 };
             }
             else
             {
                 pageHeader1.SubText = FormManager.currentIndex switch
                 {
-                    1 => "当前治疗",
-                    2 => "当前承伤",
-                    3 => "当前 · NPC承伤",
-                    _ => "当前伤害"
+                    1 => Properties.Strings.Header_Current_Healing,
+                    2 => Properties.Strings.Header_Current_Taken,
+                    3 => Properties.Strings.Header_Current_NpcTaken,
+                    _ => Properties.Strings.Header_Current_Damage
                 };
             }
         }
@@ -250,20 +252,20 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
 
             var menulist = new IContextMenuStripItem[] // 构建右键菜单项数组
              { // 数组开始
-                    new ContextMenuStripItem("历史战斗") // 一级菜单：历史战斗
+                    new ContextMenuStripItem(Properties.Strings.Menu_HistoricalBattles) // 一级菜单：历史战斗
                     { // 配置开始
                         IconSvg = Resources.historicalRecords, // 图标
                     }, // 一级菜单配置结束
-                    new ContextMenuStripItem("基础设置"){ IconSvg = Resources.set_up}, // 一级菜单：基础设置
-                    new ContextMenuStripItem("主窗体"){ IconSvg = Resources.HomeIcon, }, // 一级菜单：主窗体
-                    new ContextMenuStripItem("模组配置"){ IconSvg= Resources.moduleIcon }, // 一级菜单：数据显示设置
+                    new ContextMenuStripItem(Properties.Strings.Menu_Settings){ IconSvg = Resources.set_up}, // 一级菜单：基础设置
+                    new ContextMenuStripItem(Properties.Strings.Menu_MainForm){ IconSvg = Resources.HomeIcon, }, // 一级菜单：主窗体
+                    new ContextMenuStripItem(Properties.Strings.Menu_ModuleConfig){ IconSvg= Resources.moduleIcon }, // 一级菜单：数据显示设置
                     //new ContextMenuStripItem("技能循环监测"), // 一级菜单：技能循环监测
                     //new ContextMenuStripItem(""){ IconSvg = Resources.userUid, }, // 示例：用户 UID（暂不用）
-                    new ContextMenuStripItem("死亡统计"){ IconSvg = Resources.exclude, }, // 一级菜单：统计排除
-                    new ContextMenuStripItem("技能日记"){ IconSvg = Resources.diaryIcon, },
-                    new ContextMenuStripItem("伤害参考"){ IconSvg = Resources.reference, },
-                    new ContextMenuStripItem("打桩模式"){ IconSvg = Resources.Stakes }, // 一级菜单：打桩模式
-                    new ContextMenuStripItem("退出"){ IconSvg = Resources.quit, }, // 一级菜单：退出
+                    new ContextMenuStripItem(Properties.Strings.Menu_DeathStatistics){ IconSvg = Resources.exclude, }, // 一级菜单：统计排除
+                    new ContextMenuStripItem(Properties.Strings.Menu_SkillDiary){ IconSvg = Resources.diaryIcon, },
+                    new ContextMenuStripItem(Properties.Strings.Menu_DamageReference){ IconSvg = Resources.reference, },
+                    new ContextMenuStripItem(Properties.Strings.Menu_PilingMode){ IconSvg = Resources.Stakes }, // 一级菜单：打桩模式
+                    new ContextMenuStripItem(Properties.Strings.Menu_Exit){ IconSvg = Resources.quit, }, // 一级菜单：退出
              } // 数组结束
             ; // 语句结束（分号保持）
 
@@ -276,7 +278,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 // # 菜单点击回调：根据 Text 执行对应动作
                 switch (it.Text) // 分支根据菜单文本
                 {
-                    case "历史战斗":
+                    case var s when s == Properties.Strings.Menu_HistoricalBattles:
                         if (FormManager.historicalBattlesForm == null || FormManager.historicalBattlesForm.IsDisposed)
                         {
                             FormManager.historicalBattlesForm = new HistoricalBattlesForm();
@@ -284,17 +286,17 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                         FormManager.historicalBattlesForm.Show();
                         break;
                     // switch 开始
-                    case "基础设置": // 点击“基础设置”
+                    case var s when s == Properties.Strings.Menu_Settings: // 点击“基础设置”
                         OpenSettingsDialog(); // 打开设置面板
                         break; // 跳出 switch
-                    case "主窗体": // 点击“主窗体”
+                    case var s when s == Properties.Strings.Menu_MainForm: // 点击“主窗体”
                         if (FormManager.mainForm == null || FormManager.mainForm.IsDisposed) // 若主窗体不存在或已释放
                         {
                             FormManager.mainForm = new MainForm(); // 创建主窗体
                         }
                         FormManager.mainForm.Show(); // 显示主窗体
                         break; // 跳出 switch
-                    case "模组配置":
+                    case var s when s == Properties.Strings.Menu_ModuleConfig:
                         if (FormManager.moduleCalculationForm == null || FormManager.moduleCalculationForm.IsDisposed) // 若主窗体不存在或已释放
                         {
                             FormManager.moduleCalculationForm = new ModuleCalculationForm(); // 创建主窗体
@@ -302,14 +304,14 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                         FormManager.moduleCalculationForm.Show(); // 显示主窗体
                         break;
 
-                    case "死亡统计":
+                    case var s when s == Properties.Strings.Menu_DeathStatistics:
                         if (FormManager.deathStatisticsForm == null || FormManager.deathStatisticsForm.IsDisposed)
                         {
                             FormManager.deathStatisticsForm = new DeathStatisticsForm();
                         }
                         FormManager.deathStatisticsForm.Show();
                         break;
-                    case "技能日记":
+                    case var s when s == Properties.Strings.Menu_SkillDiary:
                         if (FormManager.skillDiary == null || FormManager.skillDiary.IsDisposed)
                         {
                             FormManager.skillDiary = new SkillDiary();
@@ -327,7 +329,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                     case "数据显示设置": // 点击“数据显示设置”（当前仅保留占位）
                         //dataDisplay(); 
                         break; // 占位：后续实现
-                    case "伤害参考":
+                    case var s when s == Properties.Strings.Menu_DamageReference:
                         if (FormManager.rankingsForm == null || FormManager.rankingsForm.IsDisposed) // 若监测窗体不存在或已释放
                         {
                             FormManager.rankingsForm = new RankingsForm(); // 创建窗口
@@ -336,10 +338,10 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                         break;
                     case "统计排除": // 点击“统计排除”
                         break; // 占位：后续实现
-                    case "打桩模式": // 点击“打桩模式”
+                    case var s when s == Properties.Strings.Menu_PilingMode: // 点击“打桩模式”
                         PilingModeCheckbox.Visible = !PilingModeCheckbox.Visible;
                         break; // 跳出 switch
-                    case "退出": // 点击“退出”
+                    case var s when s == Properties.Strings.Menu_Exit: // 点击“退出”
                         System.Windows.Forms.Application.Exit(); // 结束应用程序
                         break; // 跳出 switch
                 } // switch 结束
@@ -362,33 +364,35 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         // # 按钮提示气泡（置顶）
         private void button_AlwaysOnTop_MouseEnter(object sender, EventArgs e) // 鼠标进入置顶按钮时显示提示
         {
-            ToolTip(button_AlwaysOnTop, "置顶窗口"); // 显示“置顶窗口”的气泡提示
-
-
+            ToolTip(button_AlwaysOnTop, Properties.Strings.Tooltip_AlwaysOnTop); // 显示“置顶窗口”的气泡提示
         }
 
         // # 通用提示气泡工具
+
         private void ToolTip(System.Windows.Forms.Control control, string text) // 通用封装：在指定控件上显示提示文本
         {
-
-            AntdUI.TooltipComponent tooltip = new AntdUI.TooltipComponent() // 创建 Tooltip 组件实例
-            { // 对象初始化器开始
-                Font = new Font("HarmonyOS Sans SC", 8, FontStyle.Regular), // 设置提示文字字体
-            }; // 对象初始化器结束
-            tooltip.ArrowAlign = AntdUI.TAlign.TL; // 设置箭头朝向/对齐方式
             tooltip.SetTip(control, text); // 在目标控件上显示指定文本提示
         }
 
         // # 按钮提示气泡（清空）
         private void button1_MouseEnter(object sender, EventArgs e) // 鼠标进入“清空”按钮时显示提示
         {
-            ToolTip(button1, "清空当前数据"); // 显示“清空当前数据”的气泡提示
+            ToolTip(button1, Properties.Strings.Tooltip_ClearData); // 显示“清空当前数据”的气泡提示
+        }
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip(button2, Properties.Strings.Tooltip_Minimize);
         }
 
         // # 按钮提示气泡（单次/全程切换）
         private void button3_MouseEnter(object sender, EventArgs e) // 鼠标进入“单次/全程切换”按钮时显示提示
         {
-            ToolTip(button3, "点击切换：单次统计/全程统"); // 显示切换提示（原文如此，保留）
+            ToolTip(button3, Properties.Strings.Tooltip_SwitchSingleTotal); // 显示切换提示（原文如此，保留）
+        }
+
+        private void button_ThemeSwitch_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip(button_ThemeSwitch, Properties.Strings.Tooltip_SwitchTheme);
         }
 
         // 打桩模式定时逻辑
@@ -401,7 +405,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
 
                     PilingModeCheckbox.Checked = false;
                     timer1.Enabled = false;
-                    var _ = AppMessageBox.ShowMessage("未获取到UID，请换个地图后再进协会", this);
+                    var _ = AppMessageBox.ShowMessage(Properties.Strings.Msg_UidNotFound, this);
                     return;
                 }
                 TimeSpan duration = StatisticData._manager.GetCombatDuration();
@@ -411,14 +415,14 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                     timer1.Enabled = false;
 
                     var snapshot = StatisticData._manager.TakeSnapshotAndGet();
-                    var result = AppMessageBox.ShowMessage("打桩完成,是否上传(排行榜仅供娱乐，请勿恶意上传)\n1.如果对自己数据不满意可再次勾选打桩模式重新打桩", this);
+                    var result = AppMessageBox.ShowMessage(Properties.Strings.Msg_PilingComplete, this);
 
                     if (result == DialogResult.OK)
                     {
                         bool data = await Common.AddUserDps(snapshot);
                         if (data)
                         {
-                            AntdUI.Modal.open(new AntdUI.Modal.Config(this, "上传成功", "上传成功")
+                            AntdUI.Modal.open(new AntdUI.Modal.Config(this, Properties.Strings.Msg_UploadSuccess, Properties.Strings.Msg_UploadSuccess)
                             {
                                 CloseIcon = true,
                                 Keyboard = false,
@@ -427,7 +431,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                         }
                         else
                         {
-                            AntdUI.Modal.open(new AntdUI.Modal.Config(this, "上传失败", "请检查网络状况，服务器暂时不支持外网上传")
+                            AntdUI.Modal.open(new AntdUI.Modal.Config(this, Properties.Strings.Msg_UploadFail, Properties.Strings.Msg_UploadFailDetail)
                             {
                                 CloseIcon = true,
                                 Keyboard = false,
@@ -446,7 +450,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
 
             if (e.Value)
             {
-                var result = AppMessageBox.ShowMessage("打桩时间为3分钟，需注意以下3点:\n0.:打桩模式开启后只会记录自己的数据\n1.开启后请找协会内最右侧木桩[靠窗的那根]\n2.确保战斗计时为0开启\n3.如果伤害不满意可关闭打桩模式重新勾选\n4.异常数据会被删除\n", this);
+                var result = AppMessageBox.ShowMessage(Properties.Strings.Msg_PilingModeInfo, this);
                 if (result == DialogResult.OK)
                 {
                     DpsTableDatas.DpsTable.Clear();
@@ -478,8 +482,8 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 sortedProgressBarList1.BackColor = ColorTranslator.FromHtml("#F5F5F5");
                 AppConfig.colorText = Color.Black;
                 sortedProgressBarList1.OrderColor = Color.Black;
-                panel1.Back = ColorTranslator.FromHtml("#F5F5F5");
-                panel2.Back = ColorTranslator.FromHtml("#F5F5F5");
+                panel1.Back = ColorTranslator.FromHtml("#F5F5F5"); //bottom
+                panel2.Back = ColorTranslator.FromHtml("#F5F5F5"); //top
 
                 TotalDamageButton.Icon = Common.BytesToImage(Properties.Resources.伤害);
                 TotalTreatmentButton.Icon = Common.BytesToImage(Properties.Resources.治疗);
@@ -756,6 +760,26 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             FormGui.SetColorMode(FormManager.rankingsForm, AppConfig.IsLight);//设置窗体颜色
             FormGui.SetColorMode(FormManager.historicalBattlesForm, AppConfig.IsLight);//设置窗体颜色
             FormGui.SetColorMode(FormManager.moduleCalculationForm, AppConfig.IsLight);//设置窗体颜色
+        }
+        public void ApplyLocalization()
+        {
+            // Page header
+            // pageHeader1.Text = Properties.Strings.Header_DpsStatistics_Title;
+            pageHeader1.SubText = Properties.Strings.Header_DpsStatistics_Subtitle;
+
+            // Buttons
+            TotalDamageButton.Text = Properties.Strings.TotalDamageLabel;
+            TotalTreatmentButton.Text = Properties.Strings.TotalTreatmentLabel;
+            AlwaysInjuredButton.Text = Properties.Strings.AlwaysInjuredLabel;
+            NpcTakeDamageButton.Text = Properties.Strings.NpcTakeDamageLabel;
+
+            // Checkbox
+            PilingModeCheckbox.Text = Properties.Strings.PilingModeCheckboxLabel;
+        }
+
+        private void sortedProgressBarList1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

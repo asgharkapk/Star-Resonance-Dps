@@ -1,5 +1,6 @@
 ﻿using AntdUI;
 using StarResonanceDpsAnalysis.Forms;
+using StarResonanceDpsAnalysis.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -87,7 +88,7 @@ namespace StarResonanceDpsAnalysis.Core.Module
                         int config_id = value.ConfigId;
 
                         // 模组中文名（从映射表里取）
-                        string module_name = ModuleMaps.MODULE_NAMES[config_id];
+                        string module_name = ModuleMaps.MODULE_NAME_BY_ID(config_id); // ModuleMaps.MODULE_NAMES[config_id];
 
                         var modParts = item.Value.ModNewAttr.ModParts;
 
@@ -113,9 +114,9 @@ namespace StarResonanceDpsAnalysis.Core.Module
                             int partId = modParts[i];
 
                             // 属性中文名，如果没找到就标记未知属性
-                            string attrName = ModuleMaps.MODULE_ATTR_NAMES.TryGetValue(partId, out var name)
-                                ? name
-                                : $"未知属性({partId})";
+                            string attrName = ModuleMaps.MODULE_ATTR_NAME_BY_ID(partId); //.TryGetValue(partId, out var name)
+                                //? name
+                                //: $"未知属性({partId})";
 
                             int attrValue = init_link_nums[i];
               
@@ -342,15 +343,14 @@ namespace StarResonanceDpsAnalysis.Core.Module
                 ModuleCardDisplay.ModuleResultMemory.Clear();
                 return;
             }
-
             // 1) 把“中文类别字符串” → 你的外部枚举 ModuleCategory
             ModuleCategory uiCategory = BuildEliteCandidatePool.MixCategories ? ModuleCategory.ALL
                 : category switch
                 {
-                    "攻击" => ModuleCategory.ATTACK,
-                    "守护" => ModuleCategory.GUARDIAN,
-                    "辅助" => ModuleCategory.SUPPORT,
-                    "全部" => ModuleCategory.ALL,
+                    var attack when attack == Strings.ModuleCategory_Attack => ModuleCategory.ATTACK,
+                    var guardian when guardian == Strings.ModuleCategory_Guardian => ModuleCategory.GUARDIAN,
+                    var support when support == Strings.ModuleCategory_Support => ModuleCategory.SUPPORT,
+                    var all when all == Strings.ModuleCategory_All => ModuleCategory.ALL,
                     _ => ModuleCategory.ATTACK
                 };
 
