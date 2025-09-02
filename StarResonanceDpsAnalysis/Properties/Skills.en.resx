@@ -1,0 +1,1018 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+	<data name="Skill_1401_Name" xml:space="preserve"><value>风华翔舞</value></data>
+	<data name="Skill_1401_Desc" xml:space="preserve"><value>风华翔舞</value></data>
+	<data name="Skill_1402_Name" xml:space="preserve"><value>风华翔舞</value></data>
+	<data name="Skill_1402_Desc" xml:space="preserve"><value>风华翔舞</value></data>
+	<data name="Skill_1409_Name" xml:space="preserve"><value>风神·破阵之风</value></data>
+	<data name="Skill_1409_Desc" xml:space="preserve"><value>风神·破阵之风</value></data>
+	<data name="Skill_1403_Name" xml:space="preserve"><value>风华翔舞</value></data>
+	<data name="Skill_1403_Desc" xml:space="preserve"><value>风华翔舞</value></data>
+	<data name="Skill_1404_Name" xml:space="preserve"><value>风华翔舞</value></data>
+	<data name="Skill_1404_Desc" xml:space="preserve"><value>风华翔舞</value></data>
+	<data name="Skill_1420_Name" xml:space="preserve"><value>风姿卓绝</value></data>
+	<data name="Skill_1420_Desc" xml:space="preserve"><value>风姿卓绝</value></data>
+	<data name="Skill_2031104_Name" xml:space="preserve"><value>幸运一击(长枪)</value></data>
+	<data name="Skill_2031104_Desc" xml:space="preserve"><value>幸运一击(长枪)</value></data>
+	<data name="Skill_1418_Name" xml:space="preserve"><value>疾风刺</value></data>
+	<data name="Skill_1418_Desc" xml:space="preserve"><value>疾风刺</value></data>
+	<data name="Skill_1421_Name" xml:space="preserve"><value>螺旋击刺</value></data>
+	<data name="Skill_1421_Desc" xml:space="preserve"><value>螺旋击刺</value></data>
+	<data name="Skill_1434_Name" xml:space="preserve"><value>神影螺旋</value></data>
+	<data name="Skill_1434_Desc" xml:space="preserve"><value>神影螺旋</value></data>
+	<data name="Skill_140301_Name" xml:space="preserve"><value>神影螺旋</value></data>
+	<data name="Skill_140301_Desc" xml:space="preserve"><value>神影螺旋</value></data>
+	<data name="Skill_1422_Name" xml:space="preserve"><value>破追</value></data>
+	<data name="Skill_1422_Desc" xml:space="preserve"><value>破追</value></data>
+	<data name="Skill_1427_Name" xml:space="preserve"><value>破追</value></data>
+	<data name="Skill_1427_Desc" xml:space="preserve"><value>破追</value></data>
+	<data name="Skill_31901_Name" xml:space="preserve"><value>勇气风环</value></data>
+	<data name="Skill_31901_Desc" xml:space="preserve"><value>勇气风环</value></data>
+	<data name="Skill_2205450_Name" xml:space="preserve"><value>勇气风环吸血</value></data>
+	<data name="Skill_2205450_Desc" xml:space="preserve"><value>勇气风环吸血</value></data>
+	<data name="Skill_1411_Name" xml:space="preserve"><value>疾驰锋刃</value></data>
+	<data name="Skill_1411_Desc" xml:space="preserve"><value>疾驰锋刃</value></data>
+	<data name="Skill_1435_Name" xml:space="preserve"><value>龙击炮</value></data>
+	<data name="Skill_1435_Desc" xml:space="preserve"><value>龙击炮</value></data>
+	<data name="Skill_140401_Name" xml:space="preserve"><value>龙击炮</value></data>
+	<data name="Skill_140401_Desc" xml:space="preserve"><value>龙击炮</value></data>
+	<data name="Skill_2205071_Name" xml:space="preserve"><value>撕裂</value></data>
+	<data name="Skill_2205071_Desc" xml:space="preserve"><value>撕裂</value></data>
+	<data name="Skill_149901_Name" xml:space="preserve"><value>风螺旋/螺旋引爆</value></data>
+	<data name="Skill_149901_Desc" xml:space="preserve"><value>风螺旋/螺旋引爆</value></data>
+	<data name="Skill_1419_Name" xml:space="preserve"><value>翔返</value></data>
+	<data name="Skill_1419_Desc" xml:space="preserve"><value>翔返</value></data>
+	<data name="Skill_1424_Name" xml:space="preserve"><value>刹那</value></data>
+	<data name="Skill_1424_Desc" xml:space="preserve"><value>刹那</value></data>
+	<data name="Skill_1425_Name" xml:space="preserve"><value>飞鸟投</value></data>
+	<data name="Skill_1425_Desc" xml:space="preserve"><value>飞鸟投</value></data>
+	<data name="Skill_149905_Name" xml:space="preserve"><value>飞鸟投</value></data>
+	<data name="Skill_149905_Desc" xml:space="preserve"><value>飞鸟投</value></data>
+	<data name="Skill_1433_Name" xml:space="preserve"><value>极·岚切</value></data>
+	<data name="Skill_1433_Desc" xml:space="preserve"><value>极·岚切</value></data>
+	<data name="Skill_149906_Name" xml:space="preserve"><value>极·岚切</value></data>
+	<data name="Skill_149906_Desc" xml:space="preserve"><value>极·岚切</value></data>
+	<data name="Skill_149907_Name" xml:space="preserve"><value>锐利冲击(风神)</value></data>
+	<data name="Skill_149907_Desc" xml:space="preserve"><value>锐利冲击(风神)</value></data>
+	<data name="Skill_1431_Name" xml:space="preserve"><value>锐利冲击(风神)</value></data>
+	<data name="Skill_1431_Desc" xml:space="preserve"><value>锐利冲击(风神)</value></data>
+	<data name="Skill_149902_Name" xml:space="preserve"><value>长矛贯穿</value></data>
+	<data name="Skill_149902_Desc" xml:space="preserve"><value>长矛贯穿</value></data>
+	<data name="Skill_140501_Name" xml:space="preserve"><value>龙卷风</value></data>
+	<data name="Skill_140501_Desc" xml:space="preserve"><value>龙卷风</value></data>
+	<data name="Skill_1701_Name" xml:space="preserve"><value>我流刀法·诛恶</value></data>
+	<data name="Skill_1701_Desc" xml:space="preserve"><value>我流刀法·诛恶</value></data>
+	<data name="Skill_1702_Name" xml:space="preserve"><value>我流刀法·诛恶</value></data>
+	<data name="Skill_1702_Desc" xml:space="preserve"><value>我流刀法·诛恶</value></data>
+	<data name="Skill_1703_Name" xml:space="preserve"><value>我流刀法·诛恶</value></data>
+	<data name="Skill_1703_Desc" xml:space="preserve"><value>我流刀法·诛恶</value></data>
+	<data name="Skill_1704_Name" xml:space="preserve"><value>我流刀法·诛恶</value></data>
+	<data name="Skill_1704_Desc" xml:space="preserve"><value>我流刀法·诛恶</value></data>
+	<data name="Skill_1713_Name" xml:space="preserve"><value>极诣·大破灭连斩</value></data>
+	<data name="Skill_1713_Desc" xml:space="preserve"><value>极诣·大破灭连斩</value></data>
+	<data name="Skill_1728_Name" xml:space="preserve"><value>极诣·大破灭连斩(天赋)</value></data>
+	<data name="Skill_1728_Desc" xml:space="preserve"><value>极诣·大破灭连斩(天赋)</value></data>
+	<data name="Skill_1714_Name" xml:space="preserve"><value>居合</value></data>
+	<data name="Skill_1714_Desc" xml:space="preserve"><value>居合</value></data>
+	<data name="Skill_1717_Name" xml:space="preserve"><value>一闪</value></data>
+	<data name="Skill_1717_Desc" xml:space="preserve"><value>一闪</value></data>
+	<data name="Skill_1718_Name" xml:space="preserve"><value>飞雷神</value></data>
+	<data name="Skill_1718_Desc" xml:space="preserve"><value>飞雷神</value></data>
+	<data name="Skill_1735_Name" xml:space="preserve"><value>坠龙闪</value></data>
+	<data name="Skill_1735_Desc" xml:space="preserve"><value>坠龙闪</value></data>
+	<data name="Skill_1736_Name" xml:space="preserve"><value>神影斩</value></data>
+	<data name="Skill_1736_Desc" xml:space="preserve"><value>神影斩</value></data>
+	<data name="Skill_155101_Name" xml:space="preserve"><value>雷切</value></data>
+	<data name="Skill_155101_Desc" xml:space="preserve"><value>雷切</value></data>
+	<data name="Skill_1715_Name" xml:space="preserve"><value>月影</value></data>
+	<data name="Skill_1715_Desc" xml:space="preserve"><value>月影</value></data>
+	<data name="Skill_1719_Name" xml:space="preserve"><value>镰车</value></data>
+	<data name="Skill_1719_Desc" xml:space="preserve"><value>镰车</value></data>
+	<data name="Skill_1724_Name" xml:space="preserve"><value>霹雳连斩</value></data>
+	<data name="Skill_1724_Desc" xml:space="preserve"><value>霹雳连斩</value></data>
+	<data name="Skill_1705_Name" xml:space="preserve"><value>超高出力</value></data>
+	<data name="Skill_1705_Desc" xml:space="preserve"><value>超高出力</value></data>
+	<data name="Skill_1732_Name" xml:space="preserve"><value>千雷闪影之意</value></data>
+	<data name="Skill_1732_Desc" xml:space="preserve"><value>千雷闪影之意</value></data>
+	<data name="Skill_1737_Name" xml:space="preserve"><value>神罚之镰</value></data>
+	<data name="Skill_1737_Desc" xml:space="preserve"><value>神罚之镰</value></data>
+	<data name="Skill_1738_Name" xml:space="preserve"><value>缭乱兜割</value></data>
+	<data name="Skill_1738_Desc" xml:space="preserve"><value>缭乱兜割</value></data>
+	<data name="Skill_1739_Name" xml:space="preserve"><value>看破斩</value></data>
+	<data name="Skill_1739_Desc" xml:space="preserve"><value>看破斩</value></data>
+	<data name="Skill_1740_Name" xml:space="preserve"><value>雷霆之镰(触发霹雳升龙斩时)</value></data>
+	<data name="Skill_1740_Desc" xml:space="preserve"><value>雷霆之镰(触发霹雳升龙斩时)</value></data>
+	<data name="Skill_1741_Name" xml:space="preserve"><value>雷霆之镰</value></data>
+	<data name="Skill_1741_Desc" xml:space="preserve"><value>雷霆之镰</value></data>
+	<data name="Skill_1742_Name" xml:space="preserve"><value>霹雳升龙斩</value></data>
+	<data name="Skill_1742_Desc" xml:space="preserve"><value>霹雳升龙斩</value></data>
+	<data name="Skill_44701_Name" xml:space="preserve"><value>月刃</value></data>
+	<data name="Skill_44701_Desc" xml:space="preserve"><value>月刃</value></data>
+	<data name="Skill_179908_Name" xml:space="preserve"><value>雷击</value></data>
+	<data name="Skill_179908_Desc" xml:space="preserve"><value>雷击</value></data>
+	<data name="Skill_179906_Name" xml:space="preserve"><value>月刃回旋</value></data>
+	<data name="Skill_179906_Desc" xml:space="preserve"><value>月刃回旋</value></data>
+	<data name="Skill_2031101_Name" xml:space="preserve"><value>幸运一击(太刀)</value></data>
+	<data name="Skill_2031101_Desc" xml:space="preserve"><value>幸运一击(太刀)</value></data>
+	<data name="Skill_2330_Name" xml:space="preserve"><value>火柱冲击-炎舞奏者强化</value></data>
+	<data name="Skill_2330_Desc" xml:space="preserve"><value>火柱冲击-炎舞奏者强化</value></data>
+	<data name="Skill_55314_Name" xml:space="preserve"><value>安可治疗</value></data>
+	<data name="Skill_55314_Desc" xml:space="preserve"><value>安可治疗</value></data>
+	<data name="Skill_230101_Name" xml:space="preserve"><value>聚合乐章/安可治疗相关</value></data>
+	<data name="Skill_230101_Desc" xml:space="preserve"><value>聚合乐章/安可治疗相关</value></data>
+	<data name="Skill_230401_Name" xml:space="preserve"><value>安可伤害</value></data>
+	<data name="Skill_230401_Desc" xml:space="preserve"><value>安可伤害</value></data>
+	<data name="Skill_230501_Name" xml:space="preserve"><value>无限连奏安可伤害</value></data>
+	<data name="Skill_230501_Desc" xml:space="preserve"><value>无限连奏安可伤害</value></data>
+	<data name="Skill_2031111_Name" xml:space="preserve"><value>幸运一击(灵魂乐手)</value></data>
+	<data name="Skill_2031111_Desc" xml:space="preserve"><value>幸运一击(灵魂乐手)</value></data>
+	<data name="Skill_2306_Name" xml:space="preserve"><value>增幅节拍</value></data>
+	<data name="Skill_2306_Desc" xml:space="preserve"><value>增幅节拍</value></data>
+	<data name="Skill_2317_Name" xml:space="preserve"><value>猛烈挥击</value></data>
+	<data name="Skill_2317_Desc" xml:space="preserve"><value>猛烈挥击</value></data>
+	<data name="Skill_2321_Name" xml:space="preserve"><value>琴弦叩击</value></data>
+	<data name="Skill_2321_Desc" xml:space="preserve"><value>琴弦叩击</value></data>
+	<data name="Skill_2322_Name" xml:space="preserve"><value>琴弦叩击</value></data>
+	<data name="Skill_2322_Desc" xml:space="preserve"><value>琴弦叩击</value></data>
+	<data name="Skill_2323_Name" xml:space="preserve"><value>琴弦叩击</value></data>
+	<data name="Skill_2323_Desc" xml:space="preserve"><value>琴弦叩击</value></data>
+	<data name="Skill_2324_Name" xml:space="preserve"><value>琴弦叩击</value></data>
+	<data name="Skill_2324_Desc" xml:space="preserve"><value>琴弦叩击</value></data>
+	<data name="Skill_2331_Name" xml:space="preserve"><value>音浪烈焰</value></data>
+	<data name="Skill_2331_Desc" xml:space="preserve"><value>音浪烈焰</value></data>
+	<data name="Skill_2335_Name" xml:space="preserve"><value>升格·无限狂想</value></data>
+	<data name="Skill_2335_Desc" xml:space="preserve"><value>升格·无限狂想</value></data>
+	<data name="Skill_230102_Name" xml:space="preserve"><value>聚合乐章</value></data>
+	<data name="Skill_230102_Desc" xml:space="preserve"><value>聚合乐章</value></data>
+	<data name="Skill_230103_Name" xml:space="preserve"><value>聚合乐章</value></data>
+	<data name="Skill_230103_Desc" xml:space="preserve"><value>聚合乐章</value></data>
+	<data name="Skill_230104_Name" xml:space="preserve"><value>聚合乐章</value></data>
+	<data name="Skill_230104_Desc" xml:space="preserve"><value>聚合乐章</value></data>
+	<data name="Skill_230105_Name" xml:space="preserve"><value>炎律狂踏伤害</value></data>
+	<data name="Skill_230105_Desc" xml:space="preserve"><value>炎律狂踏伤害</value></data>
+	<data name="Skill_230106_Name" xml:space="preserve"><value>烈焰音符伤害</value></data>
+	<data name="Skill_230106_Desc" xml:space="preserve"><value>烈焰音符伤害</value></data>
+	<data name="Skill_231001_Name" xml:space="preserve"><value>烈焰狂想伤害</value></data>
+	<data name="Skill_231001_Desc" xml:space="preserve"><value>烈焰狂想伤害</value></data>
+	<data name="Skill_55301_Name" xml:space="preserve"><value>烈焰狂想治疗</value></data>
+	<data name="Skill_55301_Desc" xml:space="preserve"><value>烈焰狂想治疗</value></data>
+	<data name="Skill_55311_Name" xml:space="preserve"><value>安可曲转化</value></data>
+	<data name="Skill_55311_Desc" xml:space="preserve"><value>安可曲转化</value></data>
+	<data name="Skill_55341_Name" xml:space="preserve"><value>英勇乐章治疗</value></data>
+	<data name="Skill_55341_Desc" xml:space="preserve"><value>英勇乐章治疗</value></data>
+	<data name="Skill_55346_Name" xml:space="preserve"><value>无限狂想治疗</value></data>
+	<data name="Skill_55346_Desc" xml:space="preserve"><value>无限狂想治疗</value></data>
+	<data name="Skill_55355_Name" xml:space="preserve"><value>休止的治愈</value></data>
+	<data name="Skill_55355_Desc" xml:space="preserve"><value>休止的治愈</value></data>
+	<data name="Skill_2207141_Name" xml:space="preserve"><value>音符</value></data>
+	<data name="Skill_2207141_Desc" xml:space="preserve"><value>音符</value></data>
+	<data name="Skill_2207151_Name" xml:space="preserve"><value>炽焰治愈</value></data>
+	<data name="Skill_2207151_Desc" xml:space="preserve"><value>炽焰治愈</value></data>
+	<data name="Skill_2207431_Name" xml:space="preserve"><value>炎律狂踏治疗</value></data>
+	<data name="Skill_2207431_Desc" xml:space="preserve"><value>炎律狂踏治疗</value></data>
+	<data name="Skill_2301_Name" xml:space="preserve"><value>琴弦撩拨</value></data>
+	<data name="Skill_2301_Desc" xml:space="preserve"><value>琴弦撩拨</value></data>
+	<data name="Skill_2302_Name" xml:space="preserve"><value>琴弦撩拨</value></data>
+	<data name="Skill_2302_Desc" xml:space="preserve"><value>琴弦撩拨</value></data>
+	<data name="Skill_2303_Name" xml:space="preserve"><value>琴弦撩拨</value></data>
+	<data name="Skill_2303_Desc" xml:space="preserve"><value>琴弦撩拨</value></data>
+	<data name="Skill_2304_Name" xml:space="preserve"><value>琴弦撩拨</value></data>
+	<data name="Skill_2304_Desc" xml:space="preserve"><value>琴弦撩拨</value></data>
+	<data name="Skill_2312_Name" xml:space="preserve"><value>激涌五重奏伤害</value></data>
+	<data name="Skill_2312_Desc" xml:space="preserve"><value>激涌五重奏伤害</value></data>
+	<data name="Skill_2313_Name" xml:space="preserve"><value>热情挥洒</value></data>
+	<data name="Skill_2313_Desc" xml:space="preserve"><value>热情挥洒</value></data>
+	<data name="Skill_2332_Name" xml:space="preserve"><value>激昂·热情挥洒</value></data>
+	<data name="Skill_2332_Desc" xml:space="preserve"><value>激昂·热情挥洒</value></data>
+	<data name="Skill_2336_Name" xml:space="preserve"><value>巡演曲伤害</value></data>
+	<data name="Skill_2336_Desc" xml:space="preserve"><value>巡演曲伤害</value></data>
+	<data name="Skill_2366_Name" xml:space="preserve"><value>巡演曲伤害</value></data>
+	<data name="Skill_2366_Desc" xml:space="preserve"><value>巡演曲伤害(音箱复读的)</value></data>
+	<data name="Skill_55302_Name" xml:space="preserve"><value>愈合节拍</value></data>
+	<data name="Skill_55302_Desc" xml:space="preserve"><value>愈合节拍</value></data>
+	<data name="Skill_55304_Name" xml:space="preserve"><value>激涌五重奏治疗</value></data>
+	<data name="Skill_55304_Desc" xml:space="preserve"><value>激涌五重奏治疗</value></data>
+	<data name="Skill_55339_Name" xml:space="preserve"><value>巡演曲治疗</value></data>
+	<data name="Skill_55339_Desc" xml:space="preserve"><value>巡演曲治疗</value></data>
+	<data name="Skill_55342_Name" xml:space="preserve"><value>愈合乐章治疗</value></data>
+	<data name="Skill_55342_Desc" xml:space="preserve"><value>愈合乐章治疗</value></data>
+	<data name="Skill_2207620_Name" xml:space="preserve"><value>活力解放</value></data>
+	<data name="Skill_2207620_Desc" xml:space="preserve"><value>活力解放</value></data>
+	<data name="Skill_1501_Name" xml:space="preserve"><value>掌控藤曼</value></data>
+	<data name="Skill_1501_Desc" xml:space="preserve"><value>掌控藤曼</value></data>
+	<data name="Skill_1502_Name" xml:space="preserve"><value>掌控藤曼</value></data>
+	<data name="Skill_1502_Desc" xml:space="preserve"><value>掌控藤曼</value></data>
+	<data name="Skill_1503_Name" xml:space="preserve"><value>掌控藤曼</value></data>
+	<data name="Skill_1503_Desc" xml:space="preserve"><value>掌控藤曼</value></data>
+	<data name="Skill_1504_Name" xml:space="preserve"><value>掌控藤曼</value></data>
+	<data name="Skill_1504_Desc" xml:space="preserve"><value>掌控藤曼</value></data>
+	<data name="Skill_1509_Name" xml:space="preserve"><value>希望结界伤害</value></data>
+	<data name="Skill_1509_Desc" xml:space="preserve"><value>希望结界伤害</value></data>
+	<data name="Skill_1518_Name" xml:space="preserve"><value>狂野绽放</value></data>
+	<data name="Skill_1518_Desc" xml:space="preserve"><value>狂野绽放</value></data>
+	<data name="Skill_1529_Name" xml:space="preserve"><value>盛放注能(包含伤害和治疗)</value></data>
+	<data name="Skill_1529_Desc" xml:space="preserve"><value>盛放注能(包含伤害和治疗)</value></data>
+	<data name="Skill_1550_Name" xml:space="preserve"><value>不羁之种</value></data>
+	<data name="Skill_1550_Desc" xml:space="preserve"><value>不羁之种</value></data>
+	<data name="Skill_1551_Name" xml:space="preserve"><value>狂野之种</value></data>
+	<data name="Skill_1551_Desc" xml:space="preserve"><value>狂野之种</value></data>
+	<data name="Skill_1560_Name" xml:space="preserve"><value>再生脉冲</value></data>
+	<data name="Skill_1560_Desc" xml:space="preserve"><value>再生脉冲</value></data>
+	<data name="Skill_20301_Name" xml:space="preserve"><value>生命绽放</value></data>
+	<data name="Skill_20301_Desc" xml:space="preserve"><value>生命绽放</value></data>
+	<data name="Skill_21402_Name" xml:space="preserve"><value>狂野绽放治疗</value></data>
+	<data name="Skill_21402_Desc" xml:space="preserve"><value>狂野绽放治疗</value></data>
+	<data name="Skill_21404_Name" xml:space="preserve"><value>滋养</value></data>
+	<data name="Skill_21404_Desc" xml:space="preserve"><value>滋养</value></data>
+	<data name="Skill_21406_Name" xml:space="preserve"><value>森之祈愿</value></data>
+	<data name="Skill_21406_Desc" xml:space="preserve"><value>森之祈愿</value></data>
+	<data name="Skill_21414_Name" xml:space="preserve"><value>希望结界持续(包含伤害和治疗)</value></data>
+	<data name="Skill_21414_Desc" xml:space="preserve"><value>希望结界持续(包含伤害和治疗)</value></data>
+	<data name="Skill_21427_Name" xml:space="preserve"><value>惩击奶空A1段</value></data>
+	<data name="Skill_21427_Desc" xml:space="preserve"><value>惩击奶空A1段</value></data>
+	<data name="Skill_21428_Name" xml:space="preserve"><value>惩击奶空A2段</value></data>
+	<data name="Skill_21428_Desc" xml:space="preserve"><value>惩击奶空A2段</value></data>
+	<data name="Skill_21429_Name" xml:space="preserve"><value>惩击奶空A3段</value></data>
+	<data name="Skill_21429_Desc" xml:space="preserve"><value>惩击奶空A3段</value></data>
+	<data name="Skill_21430_Name" xml:space="preserve"><value>惩击奶空A4段</value></data>
+	<data name="Skill_21430_Desc" xml:space="preserve"><value>惩击奶空A4段</value></data>
+	<data name="Skill_150103_Name" xml:space="preserve"><value>不羁之种</value></data>
+	<data name="Skill_150103_Desc" xml:space="preserve"><value>不羁之种</value></data>
+	<data name="Skill_150104_Name" xml:space="preserve"><value>不羁之种</value></data>
+	<data name="Skill_150104_Desc" xml:space="preserve"><value>不羁之种</value></data>
+	<data name="Skill_150106_Name" xml:space="preserve"><value>灌注</value></data>
+	<data name="Skill_150106_Desc" xml:space="preserve"><value>灌注</value></data>
+	<data name="Skill_150107_Name" xml:space="preserve"><value>灌注</value></data>
+	<data name="Skill_150107_Desc" xml:space="preserve"><value>灌注</value></data>
+	<data name="Skill_2031005_Name" xml:space="preserve"><value>幸运一击(森语者)</value></data>
+	<data name="Skill_2031005_Desc" xml:space="preserve"><value>幸运一击(森语者)</value></data>
+	<data name="Skill_2202091_Name" xml:space="preserve"><value>治疗链接</value></data>
+	<data name="Skill_2202091_Desc" xml:space="preserve"><value>治疗链接</value></data>
+	<data name="Skill_2202311_Name" xml:space="preserve"><value>滋养之种</value></data>
+	<data name="Skill_2202311_Desc" xml:space="preserve"><value>滋养之种</value></data>
+	<data name="Skill_1541_Name" xml:space="preserve"><value>狂野绽放</value></data>
+	<data name="Skill_1541_Desc" xml:space="preserve"><value>狂野绽放</value></data>
+	<data name="Skill_1561_Name" xml:space="preserve"><value>再生脉冲(包含伤害和治疗)</value></data>
+	<data name="Skill_1561_Desc" xml:space="preserve"><value>再生脉冲(包含伤害和治疗)</value></data>
+	<data name="Skill_21423_Name" xml:space="preserve"><value>共生印记</value></data>
+	<data name="Skill_21423_Desc" xml:space="preserve"><value>共生印记</value></data>
+	<data name="Skill_21424_Name" xml:space="preserve"><value>荆棘</value></data>
+	<data name="Skill_21424_Desc" xml:space="preserve"><value>荆棘</value></data>
+	<data name="Skill_150101_Name" xml:space="preserve"><value>鹿之奔袭</value></data>
+	<data name="Skill_150101_Desc" xml:space="preserve"><value>鹿之奔袭</value></data>
+	<data name="Skill_150110_Name" xml:space="preserve"><value>灌注</value></data>
+	<data name="Skill_150110_Desc" xml:space="preserve"><value>灌注</value></data>
+	<data name="Skill_2031105_Name" xml:space="preserve"><value>幸运一击(惩戒)</value></data>
+	<data name="Skill_2031105_Desc" xml:space="preserve"><value>幸运一击(惩戒)</value></data>
+	<data name="Skill_220101_Name" xml:space="preserve"><value>弹无虚发</value></data>
+	<data name="Skill_220101_Desc" xml:space="preserve"><value>弹无虚发</value></data>
+	<data name="Skill_220103_Name" xml:space="preserve"><value>弹无虚发</value></data>
+	<data name="Skill_220103_Desc" xml:space="preserve"><value>弹无虚发</value></data>
+	<data name="Skill_220104_Name" xml:space="preserve"><value>暴风箭矢</value></data>
+	<data name="Skill_220104_Desc" xml:space="preserve"><value>暴风箭矢</value></data>
+	<data name="Skill_2295_Name" xml:space="preserve"><value>锐眼·光能巨箭</value></data>
+	<data name="Skill_2295_Desc" xml:space="preserve"><value>锐眼·光能巨箭</value></data>
+	<data name="Skill_2291_Name" xml:space="preserve"><value>锐眼·光能巨箭(天赋)</value></data>
+	<data name="Skill_2291_Desc" xml:space="preserve"><value>锐眼·光能巨箭(天赋)</value></data>
+	<data name="Skill_2289_Name" xml:space="preserve"><value>箭雨</value></data>
+	<data name="Skill_2289_Desc" xml:space="preserve"><value>箭雨</value></data>
+	<data name="Skill_2233_Name" xml:space="preserve"><value>聚能射击</value></data>
+	<data name="Skill_2233_Desc" xml:space="preserve"><value>聚能射击</value></data>
+	<data name="Skill_2288_Name" xml:space="preserve"><value>光能轰炸</value></data>
+	<data name="Skill_2288_Desc" xml:space="preserve"><value>光能轰炸</value></data>
+	<data name="Skill_220102_Name" xml:space="preserve"><value>怒涛射击</value></data>
+	<data name="Skill_220102_Desc" xml:space="preserve"><value>怒涛射击</value></data>
+	<data name="Skill_220108_Name" xml:space="preserve"><value>爆炸箭矢</value></data>
+	<data name="Skill_220108_Desc" xml:space="preserve"><value>爆炸箭矢</value></data>
+	<data name="Skill_220109_Name" xml:space="preserve"><value>威慑射击</value></data>
+	<data name="Skill_220109_Desc" xml:space="preserve"><value>威慑射击</value></data>
+	<data name="Skill_1700820_Name" xml:space="preserve"><value>狼协同攻击</value></data>
+	<data name="Skill_1700820_Desc" xml:space="preserve"><value>狼协同攻击</value></data>
+	<data name="Skill_1700827_Name" xml:space="preserve"><value>狼普攻</value></data>
+	<data name="Skill_1700827_Desc" xml:space="preserve"><value>狼普攻</value></data>
+	<data name="Skill_2292_Name" xml:space="preserve"><value>扑咬</value></data>
+	<data name="Skill_2292_Desc" xml:space="preserve"><value>扑咬</value></data>
+	<data name="Skill_2203512_Name" xml:space="preserve"><value>践踏</value></data>
+	<data name="Skill_2203512_Desc" xml:space="preserve"><value>践踏</value></data>
+	<data name="Skill_55231_Name" xml:space="preserve"><value>爆炸箭BUFF引爆</value></data>
+	<data name="Skill_55231_Desc" xml:space="preserve"><value>爆炸箭BUFF引爆</value></data>
+	<data name="Skill_220110_Name" xml:space="preserve"><value>爆炸箭</value></data>
+	<data name="Skill_220110_Desc" xml:space="preserve"><value>爆炸箭</value></data>
+	<data name="Skill_2203291_Name" xml:space="preserve"><value>猎鹰出击</value></data>
+	<data name="Skill_2203291_Desc" xml:space="preserve"><value>猎鹰出击</value></data>
+	<data name="Skill_220113_Name" xml:space="preserve"><value>幻影猎鹰</value></data>
+	<data name="Skill_220113_Desc" xml:space="preserve"><value>幻影猎鹰</value></data>
+	<data name="Skill_2203621_Name" xml:space="preserve"><value>光棱</value></data>
+	<data name="Skill_2203621_Desc" xml:space="preserve"><value>光棱</value></data>
+	<data name="Skill_2203622_Name" xml:space="preserve"><value>光棱溅射</value></data>
+	<data name="Skill_2203622_Desc" xml:space="preserve"><value>光棱溅射</value></data>
+	<data name="Skill_220112_Name" xml:space="preserve"><value>光能裂隙</value></data>
+	<data name="Skill_220112_Desc" xml:space="preserve"><value>光能裂隙</value></data>
+	<data name="Skill_220106_Name" xml:space="preserve"><value>空中射击</value></data>
+	<data name="Skill_220106_Desc" xml:space="preserve"><value>空中射击</value></data>
+	<data name="Skill_2203521_Name" xml:space="preserve"><value>内爆(钢制喙触发)</value></data>
+	<data name="Skill_2203521_Desc" xml:space="preserve"><value>内爆(钢制喙触发)</value></data>
+	<data name="Skill_2203181_Name" xml:space="preserve"><value>闪电冲击</value></data>
+	<data name="Skill_2203181_Desc" xml:space="preserve"><value>闪电冲击</value></data>
+	<data name="Skill_2294_Name" xml:space="preserve"><value>光意·四连矢</value></data>
+	<data name="Skill_2294_Desc" xml:space="preserve"><value>光意·四连矢</value></data>
+	<data name="Skill_220111_Name" xml:space="preserve"><value>光意·四连矢</value></data>
+	<data name="Skill_220111_Desc" xml:space="preserve"><value>光意·四连矢</value></data>
+	<data name="Skill_220203_Name" xml:space="preserve"><value>光意·四连矢</value></data>
+	<data name="Skill_220203_Desc" xml:space="preserve"><value>光意·四连矢</value></data>
+	<data name="Skill_2031109_Name" xml:space="preserve"><value>幸运一击(弓箭手)</value></data>
+	<data name="Skill_2031109_Desc" xml:space="preserve"><value>幸运一击(弓箭手)</value></data>
+	<data name="Skill_220301_Name" xml:space="preserve"><value>锐眼·光能巨箭</value></data>
+	<data name="Skill_220301_Desc" xml:space="preserve"><value>锐眼·光能巨箭</value></data>
+	<data name="Skill_2352_Name" xml:space="preserve"><value>天界雄鹰</value></data>
+	<data name="Skill_2352_Desc" xml:space="preserve"><value>天界雄鹰</value></data>
+	<data name="Skill_120401_Name" xml:space="preserve"><value>雨打潮生</value></data>
+	<data name="Skill_120401_Desc" xml:space="preserve"><value>雨打潮生</value></data>
+	<data name="Skill_1203_Name" xml:space="preserve"><value>雨打潮生</value></data>
+	<data name="Skill_1203_Desc" xml:space="preserve"><value>雨打潮生</value></data>
+	<data name="Skill_120501_Name" xml:space="preserve"><value>雨打潮生</value></data>
+	<data name="Skill_120501_Desc" xml:space="preserve"><value>雨打潮生</value></data>
+	<data name="Skill_120201_Name" xml:space="preserve"><value>雨打潮生</value></data>
+	<data name="Skill_120201_Desc" xml:space="preserve"><value>雨打潮生</value></data>
+	<data name="Skill_120301_Name" xml:space="preserve"><value>雨打潮生</value></data>
+	<data name="Skill_120301_Desc" xml:space="preserve"><value>雨打潮生</value></data>
+	<data name="Skill_2031102_Name" xml:space="preserve"><value>幸运一击(冰法)</value></data>
+	<data name="Skill_2031102_Desc" xml:space="preserve"><value>幸运一击(冰法)</value></data>
+	<data name="Skill_1248_Name" xml:space="preserve"><value>极寒·冰雪颂歌</value></data>
+	<data name="Skill_1248_Desc" xml:space="preserve"><value>极寒·冰雪颂歌</value></data>
+	<data name="Skill_1263_Name" xml:space="preserve"><value>极寒·冰雪颂歌</value></data>
+	<data name="Skill_1263_Desc" xml:space="preserve"><value>极寒·冰雪颂歌</value></data>
+	<data name="Skill_120902_Name" xml:space="preserve"><value>冰矛</value></data>
+	<data name="Skill_120902_Desc" xml:space="preserve"><value>冰矛</value></data>
+	<data name="Skill_1262_Name" xml:space="preserve"><value>陨星风暴</value></data>
+	<data name="Skill_1262_Desc" xml:space="preserve"><value>陨星风暴</value></data>
+	<data name="Skill_121501_Name" xml:space="preserve"><value>清淹绕珠</value></data>
+	<data name="Skill_121501_Desc" xml:space="preserve"><value>清淹绕珠</value></data>
+	<data name="Skill_1216_Name" xml:space="preserve"><value>强化清淹绕珠</value></data>
+	<data name="Skill_1216_Desc" xml:space="preserve"><value>强化清淹绕珠</value></data>
+	<data name="Skill_1257_Name" xml:space="preserve"><value>寒冰风暴</value></data>
+	<data name="Skill_1257_Desc" xml:space="preserve"><value>寒冰风暴</value></data>
+	<data name="Skill_1250_Name" xml:space="preserve"><value>水之涡流</value></data>
+	<data name="Skill_1250_Desc" xml:space="preserve"><value>水之涡流</value></data>
+	<data name="Skill_2204081_Name" xml:space="preserve"><value>冰箭爆炸</value></data>
+	<data name="Skill_2204081_Desc" xml:space="preserve"><value>冰箭爆炸</value></data>
+	<data name="Skill_121302_Name" xml:space="preserve"><value>冰箭</value></data>
+	<data name="Skill_121302_Desc" xml:space="preserve"><value>冰箭</value></data>
+	<data name="Skill_1259_Name" xml:space="preserve"><value>冰霜彗星</value></data>
+	<data name="Skill_1259_Desc" xml:space="preserve"><value>冰霜彗星</value></data>
+	<data name="Skill_120901_Name" xml:space="preserve"><value>贯穿冰矛</value></data>
+	<data name="Skill_120901_Desc" xml:space="preserve"><value>贯穿冰矛</value></data>
+	<data name="Skill_2204241_Name" xml:space="preserve"><value>冰霜冲击</value></data>
+	<data name="Skill_2204241_Desc" xml:space="preserve"><value>冰霜冲击</value></data>
+	<data name="Skill_1261_Name" xml:space="preserve"><value>瞬发寒冰风暴</value></data>
+	<data name="Skill_1261_Desc" xml:space="preserve"><value>瞬发寒冰风暴</value></data>
+	<data name="Skill_2401_Name" xml:space="preserve"><value>公正之剑</value></data>
+	<data name="Skill_2401_Desc" xml:space="preserve"><value>公正之剑</value></data>
+	<data name="Skill_2402_Name" xml:space="preserve"><value>公正之剑</value></data>
+	<data name="Skill_2402_Desc" xml:space="preserve"><value>公正之剑</value></data>
+	<data name="Skill_2403_Name" xml:space="preserve"><value>公正之剑</value></data>
+	<data name="Skill_2403_Desc" xml:space="preserve"><value>公正之剑</value></data>
+	<data name="Skill_2404_Name" xml:space="preserve"><value>公正之剑</value></data>
+	<data name="Skill_2404_Desc" xml:space="preserve"><value>公正之剑</value></data>
+	<data name="Skill_2416_Name" xml:space="preserve"><value>断罪</value></data>
+	<data name="Skill_2416_Desc" xml:space="preserve"><value>断罪</value></data>
+	<data name="Skill_2417_Name" xml:space="preserve"><value>强化断罪</value></data>
+	<data name="Skill_2417_Desc" xml:space="preserve"><value>强化断罪</value></data>
+	<data name="Skill_2407_Name" xml:space="preserve"><value>凛威·圣光灌注</value></data>
+	<data name="Skill_2407_Desc" xml:space="preserve"><value>凛威·圣光灌注</value></data>
+	<data name="Skill_2031110_Name" xml:space="preserve"><value>幸运一击(剑盾)</value></data>
+	<data name="Skill_2031110_Desc" xml:space="preserve"><value>幸运一击(剑盾)</value></data>
+	<data name="Skill_2405_Name" xml:space="preserve"><value>英勇盾击</value></data>
+	<data name="Skill_2405_Desc" xml:space="preserve"><value>英勇盾击</value></data>
+	<data name="Skill_2450_Name" xml:space="preserve"><value>光明冲击</value></data>
+	<data name="Skill_2450_Desc" xml:space="preserve"><value>光明冲击</value></data>
+	<data name="Skill_2410_Name" xml:space="preserve"><value>裁决</value></data>
+	<data name="Skill_2410_Desc" xml:space="preserve"><value>裁决</value></data>
+	<data name="Skill_2451_Name" xml:space="preserve"><value>裁决(神圣触发)</value></data>
+	<data name="Skill_2451_Desc" xml:space="preserve"><value>裁决(神圣触发)</value></data>
+	<data name="Skill_2452_Name" xml:space="preserve"><value>灼热裁决圣剑</value></data>
+	<data name="Skill_2452_Desc" xml:space="preserve"><value>灼热裁决圣剑</value></data>
+	<data name="Skill_2412_Name" xml:space="preserve"><value>清算</value></data>
+	<data name="Skill_2412_Desc" xml:space="preserve"><value>清算</value></data>
+	<data name="Skill_2413_Name" xml:space="preserve"><value>炽热清算</value></data>
+	<data name="Skill_2413_Desc" xml:space="preserve"><value>炽热清算</value></data>
+	<data name="Skill_240101_Name" xml:space="preserve"><value>投掷盾牌</value></data>
+	<data name="Skill_240101_Desc" xml:space="preserve"><value>投掷盾牌</value></data>
+	<data name="Skill_2206401_Name" xml:space="preserve"><value>神圣之击</value></data>
+	<data name="Skill_2206401_Desc" xml:space="preserve"><value>神圣之击</value></data>
+	<data name="Skill_55421_Name" xml:space="preserve"><value>裁决治疗</value></data>
+	<data name="Skill_55421_Desc" xml:space="preserve"><value>裁决治疗</value></data>
+	<data name="Skill_55404_Name" xml:space="preserve"><value>圣环伤害/治疗(相同编号)</value></data>
+	<data name="Skill_55404_Desc" xml:space="preserve"><value>圣环伤害/治疗(相同编号)</value></data>
+	<data name="Skill_2406_Name" xml:space="preserve"><value>先锋打击/先锋追击</value></data>
+	<data name="Skill_2406_Desc" xml:space="preserve"><value>先锋打击/先锋追击</value></data>
+	<data name="Skill_2421_Name" xml:space="preserve"><value>圣剑</value></data>
+	<data name="Skill_2421_Desc" xml:space="preserve"><value>圣剑</value></data>
+	<data name="Skill_240102_Name" xml:space="preserve"><value>光明决心</value></data>
+	<data name="Skill_240102_Desc" xml:space="preserve"><value>光明决心</value></data>
+	<data name="Skill_55412_Name" xml:space="preserve"><value>冷酷征伐</value></data>
+	<data name="Skill_55412_Desc" xml:space="preserve"><value>冷酷征伐</value></data>
+	<data name="Skill_2206241_Name" xml:space="preserve"><value>神圣印记</value></data>
+	<data name="Skill_2206241_Desc" xml:space="preserve"><value>神圣印记</value></data>
+	<data name="Skill_2206552_Name" xml:space="preserve"><value>光明核心</value></data>
+	<data name="Skill_2206552_Desc" xml:space="preserve"><value>光明核心</value></data>
+	<data name="Skill_1005240_Name" xml:space="preserve"><value>绝技! 追猎猛斩(尖兵)</value></data>
+	<data name="Skill_1005240_Desc" xml:space="preserve"><value>绝技! 追猎猛斩(尖兵)</value></data>
+	<data name="Skill_1006940_Name" xml:space="preserve"><value>奥义! 茧房术(蜘蛛)</value></data>
+	<data name="Skill_1006940_Desc" xml:space="preserve"><value>奥义! 茧房术(蜘蛛)</value></data>
+	<data name="Skill_391006_Name" xml:space="preserve"><value>绝技! 纷乱飞弹(虚食人魔)</value></data>
+	<data name="Skill_391006_Desc" xml:space="preserve"><value>绝技! 纷乱飞弹(虚食人魔)</value></data>
+	<data name="Skill_1008440_Name" xml:space="preserve"><value>奥义! 沧澜风啸(飞鱼)</value></data>
+	<data name="Skill_1008440_Desc" xml:space="preserve"><value>奥义! 沧澜风啸(飞鱼)</value></data>
+	<data name="Skill_391301_Name" xml:space="preserve"><value>绝技! 电磁爆弹(枪手)</value></data>
+	<data name="Skill_391301_Desc" xml:space="preserve"><value>绝技! 电磁爆弹(枪手)</value></data>
+	<data name="Skill_3913001_Name" xml:space="preserve"><value>绝技! 电磁爆弹(枪手)</value></data>
+	<data name="Skill_3913001_Desc" xml:space="preserve"><value>绝技! 电磁爆弹(枪手)</value></data>
+	<data name="Skill_1008641_Name" xml:space="preserve"><value>飓风哥布林战士</value></data>
+	<data name="Skill_1008641_Desc" xml:space="preserve"><value>飓风哥布林战士</value></data>
+	<data name="Skill_3210081_Name" xml:space="preserve"><value>蜥蜴人猎手（被动）</value></data>
+	<data name="Skill_3210081_Desc" xml:space="preserve"><value>蜥蜴人猎手（被动）</value></data>
+	<data name="Skill_391007_Name" xml:space="preserve"><value>哥布林弩手（被动）</value></data>
+	<data name="Skill_391007_Desc" xml:space="preserve"><value>哥布林弩手（被动）</value></data>
+	<data name="Skill_391008_Name" xml:space="preserve"><value>变异蜂被动</value></data>
+	<data name="Skill_391008_Desc" xml:space="preserve"><value>变异蜂被动</value></data>
+	<data name="Skill_1700440_Name" xml:space="preserve"><value>奥义！重锤狂袭（姆头）</value></data>
+	<data name="Skill_1700440_Desc" xml:space="preserve"><value>奥义！重锤狂袭（姆头）</value></data>
+	<data name="Skill_1222_Name" xml:space="preserve"><value>幻影冲锋</value></data>
+	<data name="Skill_1222_Desc" xml:space="preserve"><value>幻影冲锋</value></data>
+	<data name="Skill_1241_Name" xml:space="preserve"><value>射线</value></data>
+	<data name="Skill_1241_Desc" xml:space="preserve"><value>射线</value></data>
+	<data name="Skill_199902_Name" xml:space="preserve"><value>岩盾</value></data>
+	<data name="Skill_199902_Desc" xml:space="preserve"><value>岩盾</value></data>
+	<data name="Skill_1240_Name" xml:space="preserve"><value>冻结寒风</value></data>
+	<data name="Skill_1240_Desc" xml:space="preserve"><value>冻结寒风</value></data>
+	<data name="Skill_1242_Name" xml:space="preserve"><value>冰霜之矛</value></data>
+	<data name="Skill_1242_Desc" xml:space="preserve"><value>冰霜之矛</value></data>
+	<data name="Skill_1243_Name" xml:space="preserve"><value>冰之灌注</value></data>
+	<data name="Skill_1243_Desc" xml:space="preserve"><value>冰之灌注</value></data>
+	<data name="Skill_1245_Name" xml:space="preserve"><value>寒冰庇护</value></data>
+	<data name="Skill_1245_Desc" xml:space="preserve"><value>寒冰庇护</value></data>
+	<data name="Skill_1246_Name" xml:space="preserve"><value>浪潮汇聚-水龙卷</value></data>
+	<data name="Skill_1246_Desc" xml:space="preserve"><value>浪潮汇聚-水龙卷</value></data>
+	<data name="Skill_1247_Name" xml:space="preserve"><value>天赋触发彗星</value></data>
+	<data name="Skill_1247_Desc" xml:space="preserve"><value>天赋触发彗星</value></data>
+	<data name="Skill_1249_Name" xml:space="preserve"><value>协同冰晶</value></data>
+	<data name="Skill_1249_Desc" xml:space="preserve"><value>协同冰晶</value></data>
+	<data name="Skill_1405_Name" xml:space="preserve"><value>疾风刺</value></data>
+	<data name="Skill_1405_Desc" xml:space="preserve"><value>疾风刺</value></data>
+	<data name="Skill_1406_Name" xml:space="preserve"><value>风华翔舞</value></data>
+	<data name="Skill_1406_Desc" xml:space="preserve"><value>风华翔舞</value></data>
+	<data name="Skill_1407_Name" xml:space="preserve"><value>风神</value></data>
+	<data name="Skill_1407_Desc" xml:space="preserve"><value>风神</value></data>
+	<data name="Skill_1410_Name" xml:space="preserve"><value>风神·破阵之风</value></data>
+	<data name="Skill_1410_Desc" xml:space="preserve"><value>风神·破阵之风</value></data>
+	<data name="Skill_1426_Name" xml:space="preserve"><value>风神·破阵之风</value></data>
+	<data name="Skill_1426_Desc" xml:space="preserve"><value>风神·破阵之风</value></data>
+	<data name="Skill_1430_Name" xml:space="preserve"><value>翔返</value></data>
+	<data name="Skill_1430_Desc" xml:space="preserve"><value>翔返(额外版本)</value></data>
+	<data name="Skill_1517_Name" xml:space="preserve"><value>掌控藤蔓-红光反制</value></data>
+	<data name="Skill_1517_Desc" xml:space="preserve"><value>掌控藤蔓-红光反制</value></data>
+	<data name="Skill_1527_Name" xml:space="preserve"><value>花语回升</value></data>
+	<data name="Skill_1527_Desc" xml:space="preserve"><value>花语回升</value></data>
+	<data name="Skill_1556_Name" xml:space="preserve"><value>花语回升</value></data>
+	<data name="Skill_1556_Desc" xml:space="preserve"><value>花语回升</value></data>
+	<data name="Skill_1562_Name" xml:space="preserve"><value>再生脉冲-扩散治疗</value></data>
+	<data name="Skill_1562_Desc" xml:space="preserve"><value>再生脉冲-扩散治疗</value></data>
+	<data name="Skill_1711_Name" xml:space="preserve"><value>我流秘刀法</value></data>
+	<data name="Skill_1711_Desc" xml:space="preserve"><value>我流秘刀法</value></data>
+	<data name="Skill_1712_Name" xml:space="preserve"><value>我流秘刀法2</value></data>
+	<data name="Skill_1712_Desc" xml:space="preserve"><value>我流秘刀法2</value></data>
+	<data name="Skill_1716_Name" xml:space="preserve"><value>超高出力</value></data>
+	<data name="Skill_1716_Desc" xml:space="preserve"><value>超高出力</value></data>
+	<data name="Skill_1720_Name" xml:space="preserve"><value>心眼</value></data>
+	<data name="Skill_1720_Desc" xml:space="preserve"><value>心眼</value></data>
+	<data name="Skill_1721_Name" xml:space="preserve"><value>我流秘刀法·壹之型·改</value></data>
+	<data name="Skill_1721_Desc" xml:space="preserve"><value>我流秘刀法·壹之型·改</value></data>
+	<data name="Skill_1722_Name" xml:space="preserve"><value>我流秘刀法·贰之型·改</value></data>
+	<data name="Skill_1722_Desc" xml:space="preserve"><value>我流秘刀法·贰之型·改</value></data>
+	<data name="Skill_1905_Name" xml:space="preserve"><value>斩龙式</value></data>
+	<data name="Skill_1905_Desc" xml:space="preserve"><value>斩龙式</value></data>
+	<data name="Skill_1906_Name" xml:space="preserve"><value>后撤斩</value></data>
+	<data name="Skill_1906_Desc" xml:space="preserve"><value>后撤斩</value></data>
+	<data name="Skill_1907_Name" xml:space="preserve"><value>岩御·崩裂回环</value></data>
+	<data name="Skill_1907_Desc" xml:space="preserve"><value>岩御·崩裂回环</value></data>
+	<data name="Skill_1917_Name" xml:space="preserve"><value>巨岩撞击</value></data>
+	<data name="Skill_1917_Desc" xml:space="preserve"><value>巨岩撞击</value></data>
+	<data name="Skill_1922_Name" xml:space="preserve"><value>护盾猛击</value></data>
+	<data name="Skill_1922_Desc" xml:space="preserve"><value>护盾猛击</value></data>
+	<data name="Skill_1925_Name" xml:space="preserve"><value>怒爆</value></data>
+	<data name="Skill_1925_Desc" xml:space="preserve"><value>怒爆</value></data>
+	<data name="Skill_1926_Name" xml:space="preserve"><value>砂岩之握</value></data>
+	<data name="Skill_1926_Desc" xml:space="preserve"><value>砂岩之握</value></data>
+	<data name="Skill_1928_Name" xml:space="preserve"><value>岩之守护</value></data>
+	<data name="Skill_1928_Desc" xml:space="preserve"><value>岩之守护</value></data>
+	<data name="Skill_1929_Name" xml:space="preserve"><value>不动如山</value></data>
+	<data name="Skill_1929_Desc" xml:space="preserve"><value>不动如山</value></data>
+	<data name="Skill_1936_Name" xml:space="preserve"><value>巨岩躯体</value></data>
+	<data name="Skill_1936_Desc" xml:space="preserve"><value>巨岩躯体</value></data>
+	<data name="Skill_1938_Name" xml:space="preserve"><value>勇者壁垒</value></data>
+	<data name="Skill_1938_Desc" xml:space="preserve"><value>勇者壁垒</value></data>
+	<data name="Skill_1941_Name" xml:space="preserve"><value>碎星崩裂</value></data>
+	<data name="Skill_1941_Desc" xml:space="preserve"><value>碎星崩裂</value></data>
+	<data name="Skill_1943_Name" xml:space="preserve"><value>巨岩轰击</value></data>
+	<data name="Skill_1943_Desc" xml:space="preserve"><value>巨岩轰击</value></data>
+	<data name="Skill_2220_Name" xml:space="preserve"><value>暴风箭矢</value></data>
+	<data name="Skill_2220_Desc" xml:space="preserve"><value>暴风箭矢</value></data>
+	<data name="Skill_2221_Name" xml:space="preserve"><value>暴风箭矢SP</value></data>
+	<data name="Skill_2221_Desc" xml:space="preserve"><value>暴风箭矢SP</value></data>
+	<data name="Skill_2230_Name" xml:space="preserve"><value>怒涛射击</value></data>
+	<data name="Skill_2230_Desc" xml:space="preserve"><value>怒涛射击</value></data>
+	<data name="Skill_2231_Name" xml:space="preserve"><value>精神凝聚</value></data>
+	<data name="Skill_2231_Desc" xml:space="preserve"><value>精神凝聚</value></data>
+	<data name="Skill_2232_Name" xml:space="preserve"><value>箭雨</value></data>
+	<data name="Skill_2232_Desc" xml:space="preserve"><value>箭雨</value></data>
+	<data name="Skill_2234_Name" xml:space="preserve"><value>光能轰炸</value></data>
+	<data name="Skill_2234_Desc" xml:space="preserve"><value>光能轰炸</value></data>
+	<data name="Skill_2237_Name" xml:space="preserve"><value>狂野呼唤</value></data>
+	<data name="Skill_2237_Desc" xml:space="preserve"><value>狂野呼唤</value></data>
+	<data name="Skill_2238_Name" xml:space="preserve"><value>爆炸射击</value></data>
+	<data name="Skill_2238_Desc" xml:space="preserve"><value>爆炸射击</value></data>
+	<data name="Skill_1256_Name" xml:space="preserve"><value>浪潮</value></data>
+	<data name="Skill_1256_Desc" xml:space="preserve"><value>浪潮</value></data>
+
+
+
+	<data name="Skill_1201_Name" xml:space="preserve"><value>雨打潮生</value></data>
+	<data name="Skill_1201_Desc" xml:space="preserve"><value>雨打潮生</value></data>
+	<data name="Skill_1202_Name" xml:space="preserve"><value>雨打潮生-转弯子弹</value></data>
+	<data name="Skill_1202_Desc" xml:space="preserve"><value>雨打潮生-转弯子弹</value></data>
+	<data name="Skill_1204_Name" xml:space="preserve"><value>雨打潮生-普攻1段</value></data>
+	<data name="Skill_1204_Desc" xml:space="preserve"><value>雨打潮生-普攻1段</value></data>
+	<data name="Skill_1210_Name" xml:space="preserve"><value>水之涡流</value></data>
+	<data name="Skill_1210_Desc" xml:space="preserve"><value>水之涡流</value></data>
+	<data name="Skill_1211_Name" xml:space="preserve"><value>清滝绕珠</value></data>
+	<data name="Skill_1211_Desc" xml:space="preserve"><value>清滝绕珠</value></data>
+	<data name="Skill_1219_Name" xml:space="preserve"><value>冰龙卷</value></data>
+	<data name="Skill_1219_Desc" xml:space="preserve"><value>冰龙卷</value></data>
+	<data name="Skill_1223_Name" xml:space="preserve"><value>幻影冲刺</value></data>
+	<data name="Skill_1223_Desc" xml:space="preserve"><value>幻影冲刺</value></data>
+	<data name="Skill_1238_Name" xml:space="preserve"><value>水龙卷-被动版</value></data>
+	<data name="Skill_1238_Desc" xml:space="preserve"><value>水龙卷-被动版</value></data>
+	<data name="Skill_1239_Name" xml:space="preserve"><value>陨星风暴</value></data>
+	<data name="Skill_1239_Desc" xml:space="preserve"><value>陨星风暴</value></data>
+	<data name="Skill_1244_Name" xml:space="preserve"><value>寒冰风暴</value></data>
+	<data name="Skill_1244_Desc" xml:space="preserve"><value>寒冰风暴</value></data>
+	<data name="Skill_1251_Name" xml:space="preserve"><value>水之涡流</value></data>
+	<data name="Skill_1251_Desc" xml:space="preserve"><value>水之涡流</value></data>
+	<data name="Skill_1258_Name" xml:space="preserve"><value>天赋-冰晶落</value></data>
+	<data name="Skill_1258_Desc" xml:space="preserve"><value>天赋-冰晶落</value></data>
+	<data name="Skill_1725_Name" xml:space="preserve"><value>霹雳连斩2</value></data>
+	<data name="Skill_1725_Desc" xml:space="preserve"><value>霹雳连斩2</value></data>
+	<data name="Skill_1726_Name" xml:space="preserve"><value>霹雳连斩3</value></data>
+	<data name="Skill_1726_Desc" xml:space="preserve"><value>霹雳连斩3</value></data>
+	<data name="Skill_1730_Name" xml:space="preserve"><value>无穷雷霆之力</value></data>
+	<data name="Skill_1730_Desc" xml:space="preserve"><value>无穷雷霆之力</value></data>
+	<data name="Skill_1731_Name" xml:space="preserve"><value>千雷闪影之意</value></data>
+	<data name="Skill_1731_Desc" xml:space="preserve"><value>千雷闪影之意</value></data>
+	<data name="Skill_1733_Name" xml:space="preserve"><value>雷霆之镰</value></data>
+	<data name="Skill_1733_Desc" xml:space="preserve"><value>雷霆之镰</value></data>
+	<data name="Skill_1734_Name" xml:space="preserve"><value>雷霆居合斩</value></data>
+	<data name="Skill_1734_Desc" xml:space="preserve"><value>雷霆居合斩</value></data>
+	<data name="Skill_1901_Name" xml:space="preserve"><value>止战之锋1/岩弹</value></data>
+	<data name="Skill_1901_Desc" xml:space="preserve"><value>止战之锋1/岩弹</value></data>
+	<data name="Skill_1902_Name" xml:space="preserve"><value>止战之锋2/岩弹</value></data>
+	<data name="Skill_1902_Desc" xml:space="preserve"><value>止战之锋2/岩弹</value></data>
+	<data name="Skill_1903_Name" xml:space="preserve"><value>止战之锋3</value></data>
+	<data name="Skill_1903_Desc" xml:space="preserve"><value>止战之锋3</value></data>
+	<data name="Skill_1904_Name" xml:space="preserve"><value>止战之锋4</value></data>
+	<data name="Skill_1904_Desc" xml:space="preserve"><value>止战之锋4</value></data>
+	<data name="Skill_1909_Name" xml:space="preserve"><value>止战之锋（跳跃）</value></data>
+	<data name="Skill_1909_Desc" xml:space="preserve"><value>止战之锋（跳跃）</value></data>
+	<data name="Skill_1912_Name" xml:space="preserve"><value>止战之锋-红光反制</value></data>
+	<data name="Skill_1912_Desc" xml:space="preserve"><value>止战之锋-红光反制</value></data>
+	<data name="Skill_1924_Name" xml:space="preserve"><value>碎星冲</value></data>
+	<data name="Skill_1924_Desc" xml:space="preserve"><value>碎星冲</value></data>
+	<data name="Skill_1927_Name" xml:space="preserve"><value>砂石斗篷（初始）</value></data>
+	<data name="Skill_1927_Desc" xml:space="preserve"><value>砂石斗篷（初始）</value></data>
+	<data name="Skill_1930_Name" xml:space="preserve"><value>格挡冲击</value></data>
+	<data name="Skill_1930_Desc" xml:space="preserve"><value>格挡冲击</value></data>
+	<data name="Skill_1931_Name" xml:space="preserve"><value>格挡冲击</value></data>
+	<data name="Skill_1931_Desc" xml:space="preserve"><value>格挡冲击</value></data>
+	<data name="Skill_1932_Name" xml:space="preserve"><value>护盾猛击</value></data>
+	<data name="Skill_1932_Desc" xml:space="preserve"><value>护盾猛击</value></data>
+	<data name="Skill_1933_Name" xml:space="preserve"><value>止战之锋</value></data>
+	<data name="Skill_1933_Desc" xml:space="preserve"><value>止战之锋</value></data>
+	<data name="Skill_1934_Name" xml:space="preserve"><value>格挡冲击</value></data>
+	<data name="Skill_1934_Desc" xml:space="preserve"><value>格挡冲击</value></data>
+	<data name="Skill_1935_Name" xml:space="preserve"><value>格挡冲击-怒击</value></data>
+	<data name="Skill_1935_Desc" xml:space="preserve"><value>格挡冲击-怒击</value></data>
+	<data name="Skill_1937_Name" xml:space="preserve"><value>岩怒之击</value></data>
+	<data name="Skill_1937_Desc" xml:space="preserve"><value>岩怒之击</value></data>
+	<data name="Skill_1939_Name" xml:space="preserve"><value>岩怒之击</value></data>
+	<data name="Skill_1939_Desc" xml:space="preserve"><value>岩怒之击</value></data>
+	<data name="Skill_1940_Name" xml:space="preserve"><value>怒爆</value></data>
+	<data name="Skill_1940_Desc" xml:space="preserve"><value>怒爆</value></data>
+	<data name="Skill_1942_Name" xml:space="preserve"><value>崩裂</value></data>
+	<data name="Skill_1942_Desc" xml:space="preserve"><value>崩裂</value></data>
+	<data name="Skill_1944_Name" xml:space="preserve"><value>怒爆</value></data>
+	<data name="Skill_1944_Desc" xml:space="preserve"><value>怒爆</value></data>
+	<data name="Skill_1999_Name" xml:space="preserve"><value>岩之力</value></data>
+	<data name="Skill_1999_Desc" xml:space="preserve"><value>岩之力</value></data>
+	<data name="Skill_2201_Name" xml:space="preserve"><value>弹无虚发</value></data>
+	<data name="Skill_2201_Desc" xml:space="preserve"><value>弹无虚发</value></data>
+	<data name="Skill_2209_Name" xml:space="preserve"><value>锐眼·光能巨箭</value></data>
+	<data name="Skill_2209_Desc" xml:space="preserve"><value>锐眼·光能巨箭</value></data>
+	<data name="Skill_2222_Name" xml:space="preserve"><value>二连矢</value></data>
+	<data name="Skill_2222_Desc" xml:space="preserve"><value>二连矢</value></data>
+	<data name="Skill_2224_Name" xml:space="preserve"><value>夺命射击-四连矢</value></data>
+	<data name="Skill_2224_Desc" xml:space="preserve"><value>夺命射击-四连矢</value></data>
+	<data name="Skill_2235_Name" xml:space="preserve"><value>威慑射击</value></data>
+	<data name="Skill_2235_Desc" xml:space="preserve"><value>威慑射击</value></data>
+	<data name="Skill_2239_Name" xml:space="preserve"><value>爆炸箭二段</value></data>
+	<data name="Skill_2239_Desc" xml:space="preserve"><value>爆炸箭二段</value></data>
+	<data name="Skill_2240_Name" xml:space="preserve"><value>天翔贯星击-强化怒涛射击</value></data>
+	<data name="Skill_2240_Desc" xml:space="preserve"><value>天翔贯星击-强化怒涛射击</value></data>
+	<data name="Skill_2241_Name" xml:space="preserve"><value>天界雄鹰</value></data>
+	<data name="Skill_2241_Desc" xml:space="preserve"><value>天界雄鹰</value></data>
+	<data name="Skill_2242_Name" xml:space="preserve"><value>群兽践踏</value></data>
+	<data name="Skill_2242_Desc" xml:space="preserve"><value>群兽践踏</value></data>
+	<data name="Skill_2290_Name" xml:space="preserve"><value>锐眼·光能巨箭-聚怪(天赋)</value></data>
+	<data name="Skill_2290_Desc" xml:space="preserve"><value>锐眼·光能巨箭-聚怪(天赋)</value></data>
+	<data name="Skill_2293_Name" xml:space="preserve"><value>天赋-光能裂痕</value></data>
+	<data name="Skill_2293_Desc" xml:space="preserve"><value>天赋-光能裂痕</value></data>
+	<data name="Skill_2296_Name" xml:space="preserve"><value>幻影雄鹰</value></data>
+	<data name="Skill_2296_Desc" xml:space="preserve"><value>幻影雄鹰</value></data>
+	<data name="Skill_2307_Name" xml:space="preserve"><value>愈合节拍</value></data>
+	<data name="Skill_2307_Desc" xml:space="preserve"><value>愈合节拍</value></data>
+	<data name="Skill_2308_Name" xml:space="preserve"><value>聚合乐章</value></data>
+	<data name="Skill_2308_Desc" xml:space="preserve"><value>聚合乐章</value></data>
+	<data name="Skill_2309_Name" xml:space="preserve"><value>烈焰狂想</value></data>
+	<data name="Skill_2309_Desc" xml:space="preserve"><value>烈焰狂想</value></data>
+	<data name="Skill_2310_Name" xml:space="preserve"><value>鸣奏·英勇乐章</value></data>
+	<data name="Skill_2310_Desc" xml:space="preserve"><value>鸣奏·英勇乐章</value></data>
+	<data name="Skill_2311_Name" xml:space="preserve"><value>鸣奏·愈合乐章</value></data>
+	<data name="Skill_2311_Desc" xml:space="preserve"><value>鸣奏·愈合乐章</value></data>
+	<data name="Skill_2314_Name" xml:space="preserve"><value>升格·劲爆全场</value></data>
+	<data name="Skill_2314_Desc" xml:space="preserve"><value>升格·劲爆全场</value></data>
+	<data name="Skill_2315_Name" xml:space="preserve"><value>安可</value></data>
+	<data name="Skill_2315_Desc" xml:space="preserve"><value>安可</value></data>
+	<data name="Skill_2316_Name" xml:space="preserve"><value>万众瞩目</value></data>
+	<data name="Skill_2316_Desc" xml:space="preserve"><value>万众瞩目</value></data>
+	<data name="Skill_2318_Name" xml:space="preserve"><value>完结！愈合乐章</value></data>
+	<data name="Skill_2318_Desc" xml:space="preserve"><value>完结！愈合乐章</value></data>
+	<data name="Skill_2319_Name" xml:space="preserve"><value>音浪潮涌</value></data>
+	<data name="Skill_2319_Desc" xml:space="preserve"><value>音浪潮涌</value></data>
+	<data name="Skill_2320_Name" xml:space="preserve"><value>音塔爆炎冲击</value></data>
+	<data name="Skill_2320_Desc" xml:space="preserve"><value>音塔爆炎冲击</value></data>
+	<data name="Skill_2329_Name" xml:space="preserve"><value>炎舞奏者</value></data>
+	<data name="Skill_2329_Desc" xml:space="preserve"><value>炎舞奏者</value></data>
+	<data name="Skill_2361_Name" xml:space="preserve"><value>愈合节拍copy</value></data>
+	<data name="Skill_2361_Desc" xml:space="preserve"><value>愈合节拍copy</value></data>
+	<data name="Skill_2362_Name" xml:space="preserve"><value>音波裁决</value></data>
+	<data name="Skill_2362_Desc" xml:space="preserve"><value>音波裁决</value></data>
+	<data name="Skill_2363_Name" xml:space="preserve"><value>激涌五重奏copy</value></data>
+	<data name="Skill_2363_Desc" xml:space="preserve"><value>激涌五重奏copy</value></data>
+	<data name="Skill_2364_Name" xml:space="preserve"><value>升格·劲爆全场copy</value></data>
+	<data name="Skill_2364_Desc" xml:space="preserve"><value>升格·劲爆全场copy</value></data>
+	<data name="Skill_2365_Name" xml:space="preserve"><value>升格·无限狂想copy</value></data>
+	<data name="Skill_2365_Desc" xml:space="preserve"><value>升格·无限狂想copy</value></data>
+	<data name="Skill_2399_Name" xml:space="preserve"><value>音响奶棍</value></data>
+	<data name="Skill_2399_Desc" xml:space="preserve"><value>音响奶棍</value></data>
+	<data name="Skill_2408_Name" xml:space="preserve"><value>投掷盾牌</value></data>
+	<data name="Skill_2408_Desc" xml:space="preserve"><value>投掷盾牌</value></data>
+	<data name="Skill_2409_Name" xml:space="preserve"><value>圣环</value></data>
+	<data name="Skill_2409_Desc" xml:space="preserve"><value>圣环</value></data>
+	<data name="Skill_2411_Name" xml:space="preserve"><value>灼热裁决</value></data>
+	<data name="Skill_2411_Desc" xml:space="preserve"><value>灼热裁决</value></data>
+	<data name="Skill_2414_Name" xml:space="preserve"><value>神圣壁垒</value></data>
+	<data name="Skill_2414_Desc" xml:space="preserve"><value>神圣壁垒</value></data>
+	<data name="Skill_2415_Name" xml:space="preserve"><value>圣光守卫</value></data>
+	<data name="Skill_2415_Desc" xml:space="preserve"><value>圣光守卫</value></data>
+	<data name="Skill_2419_Name" xml:space="preserve"><value>冷酷征伐</value></data>
+	<data name="Skill_2419_Desc" xml:space="preserve"><value>冷酷征伐</value></data>
+	<data name="Skill_2420_Name" xml:space="preserve"><value>光明决心</value></data>
+	<data name="Skill_2420_Desc" xml:space="preserve"><value>光明决心</value></data>
+	<data name="Skill_2425_Name" xml:space="preserve"><value>投掷盾牌</value></data>
+	<data name="Skill_2425_Desc" xml:space="preserve"><value>投掷盾牌</value></data>
+	<data name="Skill_3698_Name" xml:space="preserve"><value>风哥布林王(被动)</value></data>
+	<data name="Skill_3698_Desc" xml:space="preserve"><value>风哥布林王(被动)</value></data>
+	<data name="Skill_3901_Name" xml:space="preserve"><value>奥义！琉火咆哮(火魔)</value></data>
+	<data name="Skill_3901_Desc" xml:space="preserve"><value>奥义！琉火咆哮(火魔)</value></data>
+	<data name="Skill_3925_Name" xml:space="preserve"><value>绝技！无形冲击(巨魔)</value></data>
+	<data name="Skill_3925_Desc" xml:space="preserve"><value>绝技！无形冲击(巨魔)</value></data>
+	<data name="Skill_21418_Name" xml:space="preserve"><value>鹿之奔袭</value></data>
+	<data name="Skill_21418_Desc" xml:space="preserve"><value>鹿之奔袭</value></data>
+	<data name="Skill_27009_Name" xml:space="preserve"><value>冰箱BUFF</value></data>
+	<data name="Skill_27009_Desc" xml:space="preserve"><value>冰箱BUFF</value></data>
+	<data name="Skill_50036_Name" xml:space="preserve"><value>弱点打击</value></data>
+	<data name="Skill_50036_Desc" xml:space="preserve"><value>弱点打击</value></data>
+	<data name="Skill_50037_Name" xml:space="preserve"><value>格挡反击</value></data>
+	<data name="Skill_50037_Desc" xml:space="preserve"><value>格挡反击</value></data>
+	<data name="Skill_50049_Name" xml:space="preserve"><value>砂石斗篷（持续）</value></data>
+	<data name="Skill_50049_Desc" xml:space="preserve"><value>砂石斗篷（持续）</value></data>
+	<data name="Skill_50068_Name" xml:space="preserve"><value>格挡反击--强</value></data>
+	<data name="Skill_50068_Desc" xml:space="preserve"><value>格挡反击--强</value></data>
+	<data name="Skill_55235_Name" xml:space="preserve"><value>光意·四连矢（溅射伤害）</value></data>
+	<data name="Skill_55235_Desc" xml:space="preserve"><value>光意·四连矢（溅射伤害）</value></data>
+	<data name="Skill_55236_Name" xml:space="preserve"><value>强化特攻最后一击虚拟体</value></data>
+	<data name="Skill_55236_Desc" xml:space="preserve"><value>强化特攻最后一击虚拟体</value></data>
+	<data name="Skill_55238_Name" xml:space="preserve"><value>弓-大招引力</value></data>
+	<data name="Skill_55238_Desc" xml:space="preserve"><value>弓-大招引力</value></data>
+	<data name="Skill_55239_Name" xml:space="preserve"><value>光能凝滞定身BUFF</value></data>
+	<data name="Skill_55239_Desc" xml:space="preserve"><value>光能凝滞定身BUFF</value></data>
+	<data name="Skill_55240_Name" xml:space="preserve"><value>光能轰炸伤害区域BUFF</value></data>
+	<data name="Skill_55240_Desc" xml:space="preserve"><value>光能轰炸伤害区域BUFF</value></data>
+	<data name="Skill_55328_Name" xml:space="preserve"><value>万众瞩目激涌五重奏弹奏翻倍</value></data>
+	<data name="Skill_55328_Desc" xml:space="preserve"><value>万众瞩目激涌五重奏弹奏翻倍</value></data>
+	<data name="Skill_55335_Name" xml:space="preserve"><value>万众瞩目热情挥洒3阶段</value></data>
+	<data name="Skill_55335_Desc" xml:space="preserve"><value>万众瞩目热情挥洒3阶段</value></data>
+	<data name="Skill_55344_Name" xml:space="preserve"><value>升格·劲爆全场</value></data>
+	<data name="Skill_55344_Desc" xml:space="preserve"><value>升格·劲爆全场</value></data>
+	<data name="Skill_55417_Name" xml:space="preserve"><value>冷酷征伐</value></data>
+	<data name="Skill_55417_Desc" xml:space="preserve"><value>冷酷征伐</value></data>
+	<data name="Skill_55431_Name" xml:space="preserve"><value>冷酷征伐伤害buff</value></data>
+	<data name="Skill_55431_Desc" xml:space="preserve"><value>冷酷征伐伤害buff</value></data>
+	<data name="Skill_55432_Name" xml:space="preserve"><value>冷冷酷征伐伤害buff</value></data>
+	<data name="Skill_55432_Desc" xml:space="preserve"><value>冷冷酷征伐伤害buff</value></data>
+	<data name="Skill_100730_Name" xml:space="preserve"><value>哥布林弩手主动</value></data>
+	<data name="Skill_100730_Desc" xml:space="preserve"><value>哥布林弩手主动</value></data>
+	<data name="Skill_102640_Name" xml:space="preserve"><value>绝技！猪突猛进(威猛野猪)</value></data>
+	<data name="Skill_102640_Desc" xml:space="preserve"><value>绝技！猪突猛进(威猛野猪)</value></data>
+	<data name="Skill_101112_Name" xml:space="preserve"><value>宠物雄鹰快速回旋</value></data>
+	<data name="Skill_101112_Desc" xml:space="preserve"><value>宠物雄鹰快速回旋</value></data>
+	<data name="Skill_141104_Name" xml:space="preserve"><value>变异蜂主动a1</value></data>
+	<data name="Skill_141104_Desc" xml:space="preserve"><value>变异蜂主动a1</value></data>
+	<data name="Skill_149904_Name" xml:space="preserve"><value>蒂娜龙卷</value></data>
+	<data name="Skill_149904_Desc" xml:space="preserve"><value>蒂娜龙卷</value></data>
+	<data name="Skill_179904_Name" xml:space="preserve"><value>神影斩-最后一击</value></data>
+	<data name="Skill_179904_Desc" xml:space="preserve"><value>神影斩-最后一击</value></data>
+	<data name="Skill_199903_Name" xml:space="preserve"><value>巨岩轰击</value></data>
+	<data name="Skill_199903_Desc" xml:space="preserve"><value>巨岩轰击</value></data>
+	<data name="Skill_220105_Name" xml:space="preserve"><value>光追箭</value></data>
+	<data name="Skill_220105_Desc" xml:space="preserve"><value>光追箭</value></data>
+	<data name="Skill_220107_Name" xml:space="preserve"><value>魔法箭矢</value></data>
+	<data name="Skill_220107_Desc" xml:space="preserve"><value>魔法箭矢</value></data>
+	<data name="Skill_221101_Name" xml:space="preserve"><value>弹无虚发-红光反制</value></data>
+	<data name="Skill_221101_Desc" xml:space="preserve"><value>弹无虚发-红光反制</value></data>
+	<data name="Skill_391001_Name" xml:space="preserve"><value>绝技! 纷乱飞弹(虚蚀食人魔)1</value></data>
+	<data name="Skill_391001_Desc" xml:space="preserve"><value>绝技! 纷乱飞弹(虚蚀食人魔)1</value></data>
+	<data name="Skill_391002_Name" xml:space="preserve"><value>绝技! 纷乱飞弹(虚蚀食人魔)2</value></data>
+	<data name="Skill_391002_Desc" xml:space="preserve"><value>绝技! 纷乱飞弹(虚蚀食人魔)2</value></data>
+	<data name="Skill_391003_Name" xml:space="preserve"><value>绝技! 纷乱飞弹(虚蚀食人魔)3</value></data>
+	<data name="Skill_391003_Desc" xml:space="preserve"><value>绝技! 纷乱飞弹(虚蚀食人魔)3</value></data>
+	<data name="Skill_391004_Name" xml:space="preserve"><value>绝技! 纷乱飞弹(虚蚀食人魔)4</value></data>
+	<data name="Skill_391004_Desc" xml:space="preserve"><value>绝技! 纷乱飞弹(虚蚀食人魔)4</value></data>
+	<data name="Skill_391005_Name" xml:space="preserve"><value>绝技! 纷乱飞弹(虚蚀食人魔)5</value></data>
+	<data name="Skill_391005_Desc" xml:space="preserve"><value>绝技! 纷乱飞弹(虚蚀食人魔)5</value></data>
+	<data name="Skill_391401_Name" xml:space="preserve"><value>虚蚀脉冲</value></data>
+	<data name="Skill_391401_Desc" xml:space="preserve"><value>虚蚀脉冲</value></data>
+	<data name="Skill_701001_Name" xml:space="preserve"><value>虚蚀之影爆炸</value></data>
+	<data name="Skill_701001_Desc" xml:space="preserve"><value>虚蚀之影爆炸</value></data>
+	<data name="Skill_701002_Name" xml:space="preserve"><value>虚蚀波动爆炸</value></data>
+	<data name="Skill_701002_Desc" xml:space="preserve"><value>虚蚀波动爆炸</value></data>
+	<data name="Skill_1002440_Name" xml:space="preserve"><value>绝技！超会心(姆克兵长)</value></data>
+	<data name="Skill_1002440_Desc" xml:space="preserve"><value>绝技！超会心(姆克兵长)</value></data>
+	<data name="Skill_1002830_Name" xml:space="preserve"><value>奥义！冰霜震荡(冰魔)</value></data>
+	<data name="Skill_1002830_Desc" xml:space="preserve"><value>奥义！冰霜震荡(冰魔)</value></data>
+	<data name="Skill_1005940_Name" xml:space="preserve"><value>姆克狂战士-旋风冲锋</value></data>
+	<data name="Skill_1005940_Desc" xml:space="preserve"><value>姆克狂战士-旋风冲锋</value></data>
+	<data name="Skill_1007601_Name" xml:space="preserve"><value>变异蜂技能12</value></data>
+	<data name="Skill_1007601_Desc" xml:space="preserve"><value>变异蜂技能12</value></data>
+	<data name="Skill_1007602_Name" xml:space="preserve"><value>变异蜂技能3</value></data>
+	<data name="Skill_1007602_Desc" xml:space="preserve"><value>变异蜂技能3</value></data>
+	<data name="Skill_1007741_Name" xml:space="preserve"><value>剧毒蜂巢（初始）</value></data>
+	<data name="Skill_1007741_Desc" xml:space="preserve"><value>剧毒蜂巢（初始）</value></data>
+	<data name="Skill_1008040_Name" xml:space="preserve"><value>绝技! 雷光球(雷光野猪)</value></data>
+	<data name="Skill_1008040_Desc" xml:space="preserve"><value>绝技! 雷光球(雷光野猪)</value></data>
+	<data name="Skill_1008140_Name" xml:space="preserve"><value>奥义！地狱突刺(铁牙)</value></data>
+	<data name="Skill_1008140_Desc" xml:space="preserve"><value>奥义！地狱突刺(铁牙)</value></data>
+	<data name="Skill_1008540_Name" xml:space="preserve"><value>奥义！静默潮汐(蜥蜴人王)</value></data>
+	<data name="Skill_1008540_Desc" xml:space="preserve"><value>奥义！静默潮汐(蜥蜴人王)</value></data>
+	<data name="Skill_1010440_Name" xml:space="preserve"><value>绝技！强压之雷(蜥蜴人猎手)(主动)</value></data>
+	<data name="Skill_1010440_Desc" xml:space="preserve"><value>绝技！强压之雷(蜥蜴人猎手)(主动)</value></data>
+	<data name="Skill_1700824_Name" xml:space="preserve"><value>甩尾</value></data>
+	<data name="Skill_1700824_Desc" xml:space="preserve"><value>甩尾</value></data>
+	<data name="Skill_1700825_Name" xml:space="preserve"><value>狼突击</value></data>
+	<data name="Skill_1700825_Desc" xml:space="preserve"><value>狼突击</value></data>
+	<data name="Skill_1700826_Name" xml:space="preserve"><value>狂野召唤</value></data>
+	<data name="Skill_1700826_Desc" xml:space="preserve"><value>狂野召唤</value></data>
+	<data name="Skill_2001740_Name" xml:space="preserve"><value>绝技！瞬步奇袭（山贼斥候）</value></data>
+	<data name="Skill_2001740_Desc" xml:space="preserve"><value>绝技！瞬步奇袭（山贼斥候）</value></data>
+	<data name="Skill_2002853_Name" xml:space="preserve"><value>绝技！碎星陨落（火哥）</value></data>
+	<data name="Skill_2002853_Desc" xml:space="preserve"><value>绝技！碎星陨落（火哥）</value></data>
+	<data name="Skill_2031106_Name" xml:space="preserve"><value>幸运一击(手炮)</value></data>
+	<data name="Skill_2031106_Desc" xml:space="preserve"><value>幸运一击(手炮)</value></data>
+	<data name="Skill_2031107_Name" xml:space="preserve"><value>幸运一击(巨刃)</value></data>
+	<data name="Skill_2031107_Desc" xml:space="preserve"><value>幸运一击(巨刃)</value></data>
+	<data name="Skill_2031108_Name" xml:space="preserve"><value>幸运一击(仪刀)</value></data>
+	<data name="Skill_2031108_Desc" xml:space="preserve"><value>幸运一击(仪刀)</value></data>
+	<data name="Skill_2110012_Name" xml:space="preserve"><value>奥义！脉冲祝祷（姆克王）</value></data>
+	<data name="Skill_2110012_Desc" xml:space="preserve"><value>奥义！脉冲祝祷（姆克王）</value></data>
+	<data name="Skill_2110066_Name" xml:space="preserve"><value>绝技！大地之盾(山贼护卫队长)</value></data>
+	<data name="Skill_2110066_Desc" xml:space="preserve"><value>绝技！大地之盾(山贼护卫队长)</value></data>
+	<data name="Skill_2110083_Name" xml:space="preserve"><value>火魔治疗</value></data>
+	<data name="Skill_2110083_Desc" xml:space="preserve"><value>火魔治疗</value></data>
+	<data name="Skill_2110085_Name" xml:space="preserve"><value>雷电之种(奥尔维拉)</value></data>
+	<data name="Skill_2110085_Desc" xml:space="preserve"><value>雷电之种(奥尔维拉)</value></data>
+	<data name="Skill_2110090_Name" xml:space="preserve"><value>虚蚀食人魔</value></data>
+	<data name="Skill_2110090_Desc" xml:space="preserve"><value>虚蚀食人魔</value></data>
+	<data name="Skill_2110091_Name" xml:space="preserve"><value>虚蚀伤害</value></data>
+	<data name="Skill_2110091_Desc" xml:space="preserve"><value>虚蚀伤害</value></data>
+	<data name="Skill_2110096_Name" xml:space="preserve"><value>奥义！雷霆咆哮(金牙)(雷击)</value></data>
+	<data name="Skill_2110096_Desc" xml:space="preserve"><value>奥义！雷霆咆哮(金牙)(雷击)</value></data>
+	<data name="Skill_2110099_Name" xml:space="preserve"><value>剧毒蜂巢（持续）</value></data>
+	<data name="Skill_2110099_Desc" xml:space="preserve"><value>剧毒蜂巢（持续）</value></data>
+	<data name="Skill_2201070_Name" xml:space="preserve"><value>格挡减伤</value></data>
+	<data name="Skill_2201070_Desc" xml:space="preserve"><value>格挡减伤</value></data>
+	<data name="Skill_2201080_Name" xml:space="preserve"><value>格挡回复</value></data>
+	<data name="Skill_2201080_Desc" xml:space="preserve"><value>格挡回复</value></data>
+	<data name="Skill_2201172_Name" xml:space="preserve"><value>坚毅之息</value></data>
+	<data name="Skill_2201172_Desc" xml:space="preserve"><value>坚毅之息</value></data>
+	<data name="Skill_2201240_Name" xml:space="preserve"><value>护盾回声</value></data>
+	<data name="Skill_2201240_Desc" xml:space="preserve"><value>护盾回声</value></data>
+	<data name="Skill_2201362_Name" xml:space="preserve"><value>沙晶石震荡</value></data>
+	<data name="Skill_2201362_Desc" xml:space="preserve"><value>沙晶石震荡</value></data>
+	<data name="Skill_2201410_Name" xml:space="preserve"><value>砂石复苏</value></data>
+	<data name="Skill_2201410_Desc" xml:space="preserve"><value>砂石复苏</value></data>
+	<data name="Skill_2201493_Name" xml:space="preserve"><value>回复（岩盾）</value></data>
+	<data name="Skill_2201493_Desc" xml:space="preserve"><value>回复（岩盾）</value></data>
+	<data name="Skill_2201570_Name" xml:space="preserve"><value>岩护</value></data>
+	<data name="Skill_2201570_Desc" xml:space="preserve"><value>岩护</value></data>
+	<data name="Skill_2202120_Name" xml:space="preserve"><value>艾露娜护盾</value></data>
+	<data name="Skill_2202120_Desc" xml:space="preserve"><value>艾露娜护盾</value></data>
+	<data name="Skill_2202211_Name" xml:space="preserve"><value>绿意之爆发（治疗）</value></data>
+	<data name="Skill_2202211_Desc" xml:space="preserve"><value>绿意之爆发（治疗）</value></data>
+	<data name="Skill_2202262_Name" xml:space="preserve"><value>复苏光环回血BUFF</value></data>
+	<data name="Skill_2202262_Desc" xml:space="preserve"><value>复苏光环回血BUFF</value></data>
+	<data name="Skill_2202271_Name" xml:space="preserve"><value>天降圣光生效BUFF</value></data>
+	<data name="Skill_2202271_Desc" xml:space="preserve"><value>天降圣光生效BUFF</value></data>
+	<data name="Skill_2202291_Name" xml:space="preserve"><value>生命馈赠-治疗子buff</value></data>
+	<data name="Skill_2202291_Desc" xml:space="preserve"><value>生命馈赠-治疗子buff</value></data>
+	<data name="Skill_2002440_Name" xml:space="preserve"><value>奥义！雷霆天牢引（雷魔）</value></data>
+	<data name="Skill_2002440_Desc" xml:space="preserve"><value>奥义！雷霆天牢引（雷魔）</value></data>
+	<data name="Skill_2202581_Name" xml:space="preserve"><value>坍缩！boom~</value></data>
+	<data name="Skill_2202581_Desc" xml:space="preserve"><value>坍缩！boom~</value></data>
+	<data name="Skill_2202582_Name" xml:space="preserve"><value>坍缩！boom~</value></data>
+	<data name="Skill_2202582_Desc" xml:space="preserve"><value>坍缩！boom~</value></data>
+	<data name="Skill_2203091_Name" xml:space="preserve"><value>生命流失（扑咬引爆）</value></data>
+	<data name="Skill_2203091_Desc" xml:space="preserve"><value>生命流失（扑咬引爆）</value></data>
+	<data name="Skill_2203101_Name" xml:space="preserve"><value>生命流失</value></data>
+	<data name="Skill_2203101_Desc" xml:space="preserve"><value>生命流失</value></data>
+	<data name="Skill_2203102_Name" xml:space="preserve"><value>生命流失（协同攻击引爆）</value></data>
+	<data name="Skill_2203102_Desc" xml:space="preserve"><value>生命流失（协同攻击引爆）</value></data>
+	<data name="Skill_2203141_Name" xml:space="preserve"><value>生命流失（光追箭引爆）</value></data>
+	<data name="Skill_2203141_Desc" xml:space="preserve"><value>生命流失（光追箭引爆）</value></data>
+	<data name="Skill_2203302_Name" xml:space="preserve"><value>生命流失（扫尾引爆）</value></data>
+	<data name="Skill_2203302_Desc" xml:space="preserve"><value>生命流失（扫尾引爆）</value></data>
+	<data name="Skill_2203311_Name" xml:space="preserve"><value>爆炸箭矢（溅射）</value></data>
+	<data name="Skill_2203311_Desc" xml:space="preserve"><value>爆炸箭矢（溅射）</value></data>
+	<data name="Skill_2204320_Name" xml:space="preserve"><value>冰冷脉冲</value></data>
+	<data name="Skill_2204320_Desc" xml:space="preserve"><value>冰冷脉冲</value></data>
+	<data name="Skill_2406140_Name" xml:space="preserve"><value>获得护盾时造成aoe（套装）</value></data>
+	<data name="Skill_2406140_Desc" xml:space="preserve"><value>获得护盾时造成aoe（套装）</value></data>
+	<data name="Skill_2206240_Name" xml:space="preserve"><value>神圣光辉</value></data>
+	<data name="Skill_2206240_Desc" xml:space="preserve"><value>神圣光辉</value></data>
+	<data name="Skill_2207500_Name" xml:space="preserve"><value>极意万众瞩目</value></data>
+	<data name="Skill_2207500_Desc" xml:space="preserve"><value>极意万众瞩目</value></data>
+	<data name="Skill_2207660_Name" xml:space="preserve"><value>极意万众瞩目</value></data>
+	<data name="Skill_2207660_Desc" xml:space="preserve"><value>极意万众瞩目</value></data>
+	<data name="Skill_2207681_Name" xml:space="preserve"><value>螺旋演奏</value></data>
+	<data name="Skill_2207681_Desc" xml:space="preserve"><value>螺旋演奏</value></data>
+	<data name="Skill_2900540_Name" xml:space="preserve"><value>奥义！瞬即斩(奥尔维拉)</value></data>
+	<data name="Skill_2900540_Desc" xml:space="preserve"><value>奥义！瞬即斩(奥尔维拉)</value></data>
+	<data name="Skill_3001031_Name" xml:space="preserve"><value>虚蚀光环</value></data>
+	<data name="Skill_3001031_Desc" xml:space="preserve"><value>虚蚀光环</value></data>
+	<data name="Skill_3001170_Name" xml:space="preserve"><value>虚蚀波动回血</value></data>
+	<data name="Skill_3001170_Desc" xml:space="preserve"><value>虚蚀波动回血</value></data>
+	<data name="Skill_3081023_Name" xml:space="preserve"><value>绝技! 超重斩(黯影剑士队长)</value></data>
+	<data name="Skill_3081023_Desc" xml:space="preserve"><value>绝技! 超重斩(黯影剑士队长)</value></data>
+	<data name="Skill_3210021_Name" xml:space="preserve"><value>奥义！流星陨落(风哥)(主动)</value></data>
+	<data name="Skill_3210021_Desc" xml:space="preserve"><value>奥义！流星陨落(风哥)(主动)</value></data>
+	<data name="Skill_3210031_Name" xml:space="preserve"><value>雷魔被动</value></data>
+	<data name="Skill_3210031_Desc" xml:space="preserve"><value>雷魔被动</value></data>
+	<data name="Skill_3210051_Name" xml:space="preserve"><value>山贼被动</value></data>
+	<data name="Skill_3210051_Desc" xml:space="preserve"><value>山贼被动</value></data>
+	<data name="Skill_3210061_Name" xml:space="preserve"><value>姆克兵长被动</value></data>
+	<data name="Skill_3210061_Desc" xml:space="preserve"><value>姆克兵长被动</value></data>
+	<data name="Skill_3210092_Name" xml:space="preserve"><value>蜥蜴人王被动</value></data>
+	<data name="Skill_3210092_Desc" xml:space="preserve"><value>蜥蜴人王被动</value></data>
+	<data name="Skill_3210101_Name" xml:space="preserve"><value>姆克王-护盾</value></data>
+	<data name="Skill_3210101_Desc" xml:space="preserve"><value>姆克王-护盾</value></data>
+	<data name="Skill_3936001_Name" xml:space="preserve"><value>绝技！静默之水(蜥蜴人法师)</value></data>
+	<data name="Skill_3936001_Desc" xml:space="preserve"><value>绝技！静默之水(蜥蜴人法师)</value></data>
+	<data name="Skill_10040102_Name" xml:space="preserve"><value>剑盾哥布林-风刃斩共鸣</value></data>
+	<data name="Skill_10040102_Desc" xml:space="preserve"><value>剑盾哥布林-风刃斩共鸣</value></data>
+</root>
