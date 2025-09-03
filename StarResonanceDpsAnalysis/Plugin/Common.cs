@@ -2,6 +2,9 @@
 using Flurl.Http;
 using Newtonsoft.Json.Linq;
 using StarResonanceDpsAnalysis.Plugin.DamageStatistics;
+using System.Collections;
+using System.Diagnostics;
+using System.Globalization;
 using System.Security.Cryptography;
 
 
@@ -9,13 +12,53 @@ namespace StarResonanceDpsAnalysis.Plugin
 {
     public class Common
     {
-
-
-
         public static string FormatSeconds(double sec)
         {
             var ts = TimeSpan.FromSeconds(sec);
             return $"{(int)ts.TotalMinutes:D2}:{ts.Seconds:D2}";
+        }
+        // Need to convert playerstats to hold resource keys but i can't be bothered...
+        private static Dictionary<string, string> SubProfessionKeyValuesEN = new() {};
+        private static Dictionary<string, string> SubProfessionKeyValuesCN = new() { };
+
+        public static string GetTranslatedSubProfession(string sp) // i absolutely hate this method lol
+        {
+            var resourceManager = Properties.Strings.ResourceManager;
+            if (resourceManager == null)
+                return sp;
+
+            if (SubProfessionKeyValuesCN.Count == 0)
+            {
+                var resourceSetCN = resourceManager.GetResourceSet(new CultureInfo("zh"), true, true);
+                if (resourceSetCN != null)
+                {
+                    foreach (DictionaryEntry entry in resourceSetCN)
+                    {
+                        SubProfessionKeyValuesCN[entry.Value?.ToString() ?? string.Empty] = entry.Key?.ToString() ?? string.Empty;
+                    }
+                }
+            }
+            if (SubProfessionKeyValuesEN.Count == 0)
+            {
+                var resourceSetEN = resourceManager.GetResourceSet(new CultureInfo("en"), true, true);
+                if (resourceSetEN != null)
+                {
+                    foreach (DictionaryEntry entry in resourceSetEN)
+                    {
+                        SubProfessionKeyValuesEN[entry.Value?.ToString() ?? string.Empty] = entry.Key?.ToString() ?? string.Empty;
+                    }
+                }
+            }
+            string? translated = "";
+            if (SubProfessionKeyValuesEN.TryGetValue(sp, out string? key))
+            {
+                translated = resourceManager.GetString(key, Thread.CurrentThread.CurrentUICulture);
+            }
+            if (SubProfessionKeyValuesCN.TryGetValue(sp, out key))
+            {
+                translated = resourceManager.GetString(key, Thread.CurrentThread.CurrentUICulture);
+            }
+            return translated == null ? "" : translated;
         }
 
         public static string GetSubProfessionBySkillId(ulong skillId) =>

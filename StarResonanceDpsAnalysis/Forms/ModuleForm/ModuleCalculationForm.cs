@@ -599,7 +599,8 @@ namespace StarResonanceDpsAnalysis.Forms.ModuleForm
             select12.PrefixText = "";
 
             // Selects (dropdowns) - Text and Items
-            select1.Text = Properties.Strings.ModuleCalc_Select1;
+            select1.SelectedValue = Properties.Strings.ModuleCategory_All;
+            select1.Text = Properties.Strings.ModuleCategory_All;
             select1.Items.Clear();
             select1.Items.AddRange(new[]
             {
@@ -608,7 +609,6 @@ namespace StarResonanceDpsAnalysis.Forms.ModuleForm
                 Properties.Strings.ModuleCategory_Guardian,
                 Properties.Strings.ModuleCategory_All
             });
-            select1.SelectedValue = Properties.Strings.ModuleCategory_All;
 
             select2.Text = Properties.Strings.ModuleCalc_Select2;
             select2.Items.Clear();
@@ -637,7 +637,7 @@ namespace StarResonanceDpsAnalysis.Forms.ModuleForm
                 Properties.Strings.ModuleAttr_ExtremeDesperateGuardian
             });
 
-            select3.Text = Properties.Strings.ModuleCalc_Select3;
+            select3.Text = Properties.Strings.ModuleCalc_Select3_Item_SortByScore;
             select3.Items.Clear();
             select3.Items.AddRange(new[]
             {

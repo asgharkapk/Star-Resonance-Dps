@@ -179,7 +179,10 @@ namespace StarResonanceDpsAnalysis.Forms
             AppConfig.Language = languageSelect.SelectedValue.ToString();
 
             FormManager.dpsStatistics.ApplyLocalization();
-            FormManager.moduleCalculationForm.ApplyLocalization(); //has to be open TODO come back, already applies when constructor
+            if (FormManager.moduleCalculationForm != null)
+                FormManager.moduleCalculationForm.ApplyLocalization(); //has to be open TODO come back, already applies when constructor
+            if (FormManager.skillDetailForm != null)
+                FormManager.skillDetailForm.ApplyLocalization();
 
             this.Close();
         }

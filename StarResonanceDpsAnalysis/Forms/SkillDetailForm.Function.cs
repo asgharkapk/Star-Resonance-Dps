@@ -1,4 +1,5 @@
 ﻿using AntdUI;
+using StarResonanceDpsAnalysis.Core;
 using StarResonanceDpsAnalysis.Forms;
 using StarResonanceDpsAnalysis.Plugin;
 using StarResonanceDpsAnalysis.Plugin.DamageStatistics;
@@ -28,13 +29,13 @@ namespace StarResonanceDpsAnalysis.Control
 
             table_DpsDetailDataTable.Columns = new AntdUI.ColumnCollection
             {
-                new AntdUI.Column("Name","技能名"){},
-                new AntdUI.Column("Damage","伤害"),
-                new AntdUI.Column("TotalDps","DPS/秒"),
-                new AntdUI.Column("HitCount","命中次数"),
-                new AntdUI.Column("CritRate","暴击率"),
-                new AntdUI.Column("AvgPerHit","平均伤害"),
-                new AntdUI.Column("Percentage","百分比"),
+                new AntdUI.Column("Name", Properties.Strings.SkillDetail_SkillName), //技能名
+                new AntdUI.Column("Damage",Properties.Strings.SkillDetail_SkillDamage), //伤害
+                new AntdUI.Column("TotalDps",Properties.Strings.SkillDetail_TotalDps), // DPS/秒
+                new AntdUI.Column("HitCount",Properties.Strings.SkillDetail_HitCount), // 命中次数
+                new AntdUI.Column("CritRate",Properties.Strings.SkillDetail_CritRate), // 暴击率
+                new AntdUI.Column("AvgPerHit", Properties.Strings.SkillDetail_AvgPerHit), //平均伤害
+                new AntdUI.Column("Percentage",Properties.Strings.SkillDetail_Percentage), //百分比
             };
 
             // 绑定数据源：SkillTableDatas.SkillTable（外部维护的数据集合）
@@ -121,7 +122,7 @@ namespace StarResonanceDpsAnalysis.Control
                         ? StarResonanceDpsAnalysis.Core.SkillType.Heal
                         : StarResonanceDpsAnalysis.Core.SkillType.Damage;
 
-                    var temp = StatisticData._manager.GetPlayerSkillSummaries(uid, null, true, skillType);
+                    var temp = StatisticData._manager.GetPlayerSkillSummaries(uid, null, true, skillType); // TODO Here translate skills
                     skills = ToListOrEmpty(temp);
                     SortSkillsDesc(skills);
                 }
@@ -164,7 +165,8 @@ namespace StarResonanceDpsAnalysis.Control
                 {
                     var newRow = new SkillData(
                         item.SkillId,
-                        item.SkillName,
+                        // item.SkillName,
+                        EmbeddedSkillConfig.GetLocalizedSkillDefinition(item.SkillId.ToString()).Name,
                         null,
                         item.Total,
                         item.HitCount,
@@ -183,7 +185,8 @@ namespace StarResonanceDpsAnalysis.Control
                 else
                 {
                     existing.SkillId = item.SkillId;
-                    existing.Name = item.SkillName;
+                    // existing.Name = item.SkillName;
+                    existing.Name = EmbeddedSkillConfig.GetLocalizedSkillDefinition(item.SkillId.ToString()).Name;
                     existing.Damage = new CellText(item.Total.ToString()) { Font = AppConfig.ContentFont };
                     existing.HitCount = new CellText(item.HitCount.ToString()) { Font = AppConfig.ContentFont };
                     existing.CritRate = new CellText(critRateStr) { Font = AppConfig.ContentFont };
@@ -671,9 +674,9 @@ namespace StarResonanceDpsAnalysis.Control
                 if (normalRate < 0) normalRate = 0;
 
                 var chartData = new List<(string, double)>();
-                if (normalRate > 0) chartData.Add(("普通", normalRate));
-                if (critRate > 0) chartData.Add(("暴击", critRate));
-                if (luckyRate > 0) chartData.Add(("幸运", luckyRate));
+                if (normalRate > 0) chartData.Add(("Normal", normalRate)); // 普通
+                if (critRate > 0) chartData.Add(("Critical", critRate)); // 暴击
+                if (luckyRate > 0) chartData.Add(("Lucky", luckyRate)); // 幸运
 
                 _skillDistributionChart.SetData(chartData);
             }
@@ -744,7 +747,8 @@ namespace StarResonanceDpsAnalysis.Control
                 var chartData = new List<(string, double)>();
                 for (int i = 0; i < skills.Count; i++)
                 {
-                    chartData.Add((skills[i].SkillName, (double)skills[i].Total));
+                    string enName = EmbeddedSkillConfig.GetLocalizedSkillDefinition(skills[i].SkillId.ToString()).Name;
+                    chartData.Add((enName, (double)skills[i].Total));
                 }
                 _critLuckyChart.SetData(chartData);
             }
@@ -788,7 +792,8 @@ namespace StarResonanceDpsAnalysis.Control
 
                 var row = new SkillData(
                     s.SkillId,
-                    s.SkillName,
+                    EmbeddedSkillConfig.GetLocalizedSkillDefinition(s.SkillId.ToString()).Name,
+                //s.SkillName,
                     null,
                     s.Total,
                     s.HitCount,

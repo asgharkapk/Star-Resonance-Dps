@@ -78,6 +78,9 @@ namespace StarResonanceDpsAnalysis.Control
 
 
             ToggleTableView();
+
+            ApplyLocalization();
+
         }
 
         private int fixedWidth = 1911;//窗体宽度
@@ -86,7 +89,7 @@ namespace StarResonanceDpsAnalysis.Control
             FormGui.SetColorMode(this, AppConfig.IsLight);//设置窗体颜色
 
             isSelect = true;
-            select1.Items = new AntdUI.BaseCollection() { "按伤害排序", "按秒伤排序", "按命中次数排序", "按暴击率排序" };
+            select1.Items = new AntdUI.BaseCollection() { Strings.SkillDetail_Select1_Item_SortByDamage, Strings.SkillDetail_Select1_Item_SortByDpsTaken, Strings.SkillDetail_Select1_Item_SortByHitCount, Strings.SkillDetail_Select1_Item_SortByCritRate };
             select1.SelectedIndex = 0;
             isSelect = false;
 
@@ -123,6 +126,17 @@ namespace StarResonanceDpsAnalysis.Control
 
                 //Console.WriteLine($"初始化图表 - 分割器位置: {splitter1.SplitterDistance}, PaddingRight: {initialPadding}, 垂直线条: {initialGridLines}");
             }
+
+            ApplyLocalization();
+
+            EnsureTopMost();
+        }
+        private void EnsureTopMost()
+        {
+            TopMost = false;   // 先关再开，强制触发样式刷新
+            TopMost = true;
+            Activate();
+            // BringToFront();
         }
 
         /// <summary>
@@ -277,31 +291,31 @@ namespace StarResonanceDpsAnalysis.Control
         {
             select1.Items.Clear();
             isSelect = true;
-            label3.Text = "伤害信息";
-            label1.Text = "总伤害";
-            label2.Text = "秒伤";
-            label4.Text = "暴击率";
-            label5.Text = "幸运率";
+            label3.Text = Strings.SkillDetail_Label3;
+            label1.Text = Strings.SkillDetail_Label1_TotalDamage;
+            label2.Text = Strings.SkillDetail_Label2_DPS;
+            label4.Text = Strings.SkillDetail_Label4_Damage_Crit;
+            label5.Text = Strings.SkillDetail_Label5_Damage_Lucky;
             switch (e.Value)
             {
                 case 0:
-                    select1.Items = new AntdUI.BaseCollection() { "按伤害排序", "按秒伤排序", "按命中次数排序", "按暴击率排序" };
+                    select1.Items = new AntdUI.BaseCollection() { Strings.SkillDetail_Select1_Item_SortByDamage, Strings.SkillDetail_Select1_Item_SortByDps, Strings.SkillDetail_Select1_Item_SortByHitCount, Strings.SkillDetail_Select1_Item_SortByCritRate };
                     break;
                 case 1:
-                    select1.Items = new AntdUI.BaseCollection() { "按治疗量排序", "按HPS排序", "按命中次数排序", "按暴击率排序" };
-                    label3.Text = "治疗信息";
-                    label1.Text = "总治疗";
-                    label2.Text = "秒治疗";
-                    label4.Text = "暴击率";
-                    label5.Text = "幸运率";
+                    select1.Items = new AntdUI.BaseCollection() { Strings.SkillDetail_Select1_Item_SortByHealing, Strings.SkillDetail_Select1_Item_SortByHps, Strings.SkillDetail_Select1_Item_SortByHitCount_Healing, Strings.SkillDetail_Select1_Item_SortByCritRate_Healing };
+                    label3.Text = Strings.SkillDetail_Label3_HealingInfo;
+                    label1.Text = Strings.SkillDetail_Label1_TotalHealing;
+                    label2.Text = Strings.SkillDetail_Label2_HPS;
+                    label4.Text = Strings.SkillDetail_Label4_Healing_Crit;
+                    label5.Text = Strings.SkillDetail_Label5_Healing_Lucky;
                     break;
                 case 2:
-                    select1.Items = new AntdUI.BaseCollection() { "按承伤排序", "按秒承伤排序", "按受击次数排序", "按暴击率排序" };
-                    label3.Text = "承伤信息";
-                    label1.Text = "总承伤";
-                    label2.Text = "秒承伤";
-                    label4.Text = "最大承伤";
-                    label5.Text = "最小承伤";
+                    select1.Items = new AntdUI.BaseCollection() { Strings.SkillDetail_Select1_Item_SortByDamageTaken, Strings.SkillDetail_Select1_Item_SortByDpsTaken, Strings.SkillDetail_Select1_Item_SortByHitCount_Taken, Strings.SkillDetail_Select1_Item_SortByCritRate_Taken };
+                    label3.Text = Strings.SkillDetail_Label3_Damage_Taken_Info;
+                    label1.Text = Strings.SkillDetail_Label1_Total_Damage_Taken;
+                    label2.Text = Strings.SkillDetail_Label2_DPS_Taken;
+                    label4.Text = Strings.SkillDetail_Label4_Max_Damage_Taken;
+                    label5.Text = Strings.SkillDetail_Label5_Min_Damage_Taken;
                     break;
             }
 
@@ -368,9 +382,9 @@ namespace StarResonanceDpsAnalysis.Control
             NickNameText.Text = nickname;
             PowerText.Text = power.ToString();
             UidText.Text = Uid.ToString();
-            LevelLabel.Text = StatisticData._manager.GetAttrKV(Uid, "level")?.ToString()?? "";
-            Rank_levelLabel.Text = StatisticData._manager.GetAttrKV(Uid, "rank_level")?.ToString()??"";
-           
+            LevelLabel.Text = StatisticData._manager.GetAttrKV(Uid, "level")?.ToString() ?? "";
+            Rank_levelLabel.Text = StatisticData._manager.GetAttrKV(Uid, "rank_level")?.ToString() ?? "";
+
 
             object? resourceObj = Properties.Resources.ResourceManager.GetObject(profession + "10");
 
@@ -561,6 +575,71 @@ namespace StarResonanceDpsAnalysis.Control
             {
                 Console.WriteLine($"技能占比图表初始化失败: {ex.Message}");
             }
+        }
+        public void ApplyLocalization()
+        {
+            AntdUI.SegmentedItem segmentedItem1 = new AntdUI.SegmentedItem();
+            AntdUI.SegmentedItem segmentedItem2 = new AntdUI.SegmentedItem();
+            AntdUI.SegmentedItem segmentedItem3 = new AntdUI.SegmentedItem();
+
+            segmentedItem1.Text = Strings.Skill_Damage_Analysis;
+            segmentedItem2.Text = Strings.Skill_Healing_Analysis;
+            segmentedItem3.Text = Strings.Damage_Taken_Analysis;
+            segmented1.Items.Clear();
+            segmented1.Items.Add(segmentedItem1);
+            segmented1.Items.Add(segmentedItem2);
+            segmented1.Items.Add(segmentedItem3);
+
+            label3.Text = Strings.SkillDetail_Label3;
+            label2.Text = Strings.SkillDetail_Label2_DPS;
+            label4.Text = Strings.SkillDetail_Label4_Damage_Crit;
+            label5.Text = Strings.SkillDetail_Label5_Damage_Lucky;
+            NumberCriticalHitsText.Text = Strings.SkillDetail_Label4_Damage_Crit;
+            label19.Text = Strings.SkillDetail_Label19;
+
+            collapseItem1.Text = Strings.SkillDetail_Dps_Hps_DTps_real_time_graph;
+            collapseItem2.Text = Strings.SkillDetail_Skill_Distribution;
+            collapseItem3.Text = Strings.SkillDetail_Damage_Distribution;
+
+            collapse1.Items.Clear();
+            collapse1.Items.Add(collapseItem1);
+            collapse1.Items.Add(collapseItem2);
+            collapse1.Items.Add(collapseItem3);
+
+            PowerText.Prefix = Strings.SkillDetail_CombatPower;
+            Rank_levelLabel.Prefix = Strings.SkillDetail_Armband;
+
+            label17.Text = Strings.SkillDetail_Label17_Hits;
+
+            label6.Text = Strings.SkillDetail_Label6_NormalDamage; //普通伤害
+            label7.Text = Strings.SkillDetail_Label7_CritDamage; //暴击伤害
+            label14.Text = Strings.SkillDetail_Label14_LuckyHits; //幸运次数
+            label8.Text = Strings.SkillDetail_Label8_LuckyDamage; // 幸运伤害
+            label9.Text = Strings.SkillDetail_Label9_AvgDamage; //平均伤害
+            label13.Text = Strings.SkillDetail_Label13_HitsTaken; //挨打次数
+
+            table_DpsDetailDataTable.Columns.Clear();
+
+            table_DpsDetailDataTable.Columns = new AntdUI.ColumnCollection
+            {
+                new AntdUI.Column("Name", Properties.Strings.SkillDetail_SkillName), //技能名
+                new AntdUI.Column("Damage",Properties.Strings.SkillDetail_SkillDamage), //伤害
+                new AntdUI.Column("TotalDps",Properties.Strings.SkillDetail_TotalDps), // DPS/秒
+                new AntdUI.Column("HitCount",Properties.Strings.SkillDetail_HitCount), // 命中次数
+                new AntdUI.Column("CritRate",Properties.Strings.SkillDetail_CritRate), // 暴击率
+                new AntdUI.Column("AvgPerHit", Properties.Strings.SkillDetail_AvgPerHit), //平均伤害
+                new AntdUI.Column("Percentage",Properties.Strings.SkillDetail_Percentage), //百分比
+            };
+        }
+
+        private void collapse1_ExpandChanged(object sender, CollapseExpandEventArgs e)
+        {
+
+        }
+
+        private void LevelLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

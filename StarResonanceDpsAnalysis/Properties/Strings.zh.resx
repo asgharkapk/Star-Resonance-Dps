@@ -223,7 +223,7 @@
   <data name="NpcTakeDamageLabel" xml:space="preserve">
     <value>承伤</value>
   </data>
-  <data name="SettingsButtonLabel" xml:space="preserve">
+  <data name="Settings" xml:space="preserve">
     <value>基础设置</value>
   </data>
   <data name="ClearButtonLabel" xml:space="preserve">
@@ -627,5 +627,158 @@
   </data>
   <data name="ModuleCalc_AttrRanking" xml:space="preserve">
     <value>第一名搭配</value>
+  </data>
+  <data name="Skill_Damage_Analysis" xml:space="preserve">
+    <value>技能伤害分析</value>
+  </data>
+  <data name="Skill_Healing_Analysis" xml:space="preserve">
+    <value>技能治疗分析</value>
+  </data>
+  <data name="Damage_Taken_Analysis" xml:space="preserve">
+    <value>人物承伤分析</value>
+  </data>
+  <data name="SkillDetail_Label3" xml:space="preserve">
+    <value>伤害信息"</value>
+  </data>
+  <data name="SkillDetail_Label19" xml:space="preserve">
+    <value>伤害分布</value>
+  </data>
+  <data name="SkillDetail_Label1_TotalDamage" xml:space="preserve">
+    <value>总伤害</value>
+  </data>
+  <data name="SkillDetail_Label2_DPS" xml:space="preserve">
+    <value>秒伤</value>
+  </data>
+  <data name="SkillDetail_Label4_Damage_Crit" xml:space="preserve">
+    <value>暴击率</value>
+  </data>
+  <data name="SkillDetail_Label5_Damage_Lucky" xml:space="preserve">
+    <value>幸运率</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByDamage" xml:space="preserve">
+    <value>按伤害排序</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByDps" xml:space="preserve">
+    <value>按秒伤排序S</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByHitCount" xml:space="preserve">
+    <value>按命中次数排序</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByCritRate" xml:space="preserve">
+    <value>按暴击率排序</value>
+  </data>
+  <data name="SkillDetail_Label3_HealingInfo" xml:space="preserve">
+    <value>治疗信息</value>
+  </data>
+  <data name="SkillDetail_Label1_TotalHealing" xml:space="preserve">
+    <value>总治疗</value>
+  </data>
+  <data name="SkillDetail_Label2_HPS" xml:space="preserve">
+    <value>秒治疗</value>
+  </data>
+  <data name="SkillDetail_Label4_Healing_Crit" xml:space="preserve">
+    <value>暴击率</value>
+  </data>
+  <data name="SkillDetail_Label5_Healing_Lucky" xml:space="preserve">
+    <value>幸运率</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByHealing" xml:space="preserve">
+    <value>按治疗量排序</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByHps" xml:space="preserve">
+    <value>按HPS排序</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByHitCount_Healing" xml:space="preserve">
+    <value>按命中次数排序</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByCritRate_Healing" xml:space="preserve">
+    <value>按暴击率排序</value>
+  </data>
+  <data name="SkillDetail_Label3_Damage_Taken_Info" xml:space="preserve">
+    <value>承伤信息</value>
+  </data>
+  <data name="SkillDetail_Label1_Total_Damage_Taken" xml:space="preserve">
+    <value>总承伤</value>
+  </data>
+  <data name="SkillDetail_Label2_DPS_Taken" xml:space="preserve">
+    <value>秒承伤</value>
+  </data>
+  <data name="SkillDetail_Label4_Max_Damage_Taken" xml:space="preserve">
+    <value>最大承伤</value>
+  </data>
+  <data name="SkillDetail_Label5_Min_Damage_Taken" xml:space="preserve">
+    <value>最小承伤</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByDamageTaken" xml:space="preserve">
+    <value>按承伤排序</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByDpsTaken" xml:space="preserve">
+    <value>按秒承伤排序</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByHitCount_Taken" xml:space="preserve">
+    <value>按受击次数排序</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByCritRate_Taken" xml:space="preserve">
+    <value>按暴击率排序</value>
+  </data>
+  <data name="SkillDetail_NumberOfCritHits" xml:space="preserve">
+    <value>暴击次数</value>
+  </data>
+  <data name="SkillDetail_Dps/Hps/DTps real-time graph" xml:space="preserve">
+    <value>Dps/Hps/DTps实时曲线图"</value>
+  </data>
+  <data name="SkillDetail_Skill_Distribution" xml:space="preserve">
+    <value>伤害分布</value>
+  </data>
+  <data name="SkillDetail_Damage_Distribution" xml:space="preserve">
+    <value>伤害分布</value>
+  </data>
+  <data name="SkillDetail_CombatPower" xml:space="preserve">
+    <value>战力：</value>
+  </data>
+  <data name="SkillDetail_Armband" xml:space="preserve">
+    <value>臂章：</value>
+  </data>
+  <data name="SkillDetail_Label17_Hits" xml:space="preserve">
+    <value>命中次数</value>
+  </data>
+  <data name="SkillDetail_Label6_NormalDamage" xml:space="preserve">
+    <value>普通伤害</value>
+  </data>
+  <data name="SkillDetail_Label7_CritDamage" xml:space="preserve">
+    <value>暴击伤害</value>
+  </data>
+  <data name="SkillDetail_Label14_LuckyHits" xml:space="preserve">
+    <value>幸运次数</value>
+  </data>
+  <data name="SkillDetail_Label8_LuckyDamage" xml:space="preserve">
+    <value>幸运伤害</value>
+  </data>
+  <data name="SkillDetail_Label9_AvgDamage" xml:space="preserve">
+    <value>平均伤害</value>
+  </data>
+  <data name="SkillDetail_Label13_HitsTaken" xml:space="preserve">
+    <value>挨打次数</value>
+  </data>
+  <data name="SkillDetail_SkillName" xml:space="preserve">
+    <value>技能名</value>
+  </data>
+  <data name="SkillDetail_SkillDamage" xml:space="preserve">
+    <value>伤害</value>
+  </data>
+  <data name="SkillDetail_TotalDps" xml:space="preserve">
+    <value>DPS/秒</value>
+  </data>
+  <data name="SkillDetail_CritRate" xml:space="preserve">
+    <value>暴击率</value>
+  </data>
+  <data name="SkillDetail_AvgPerHit" xml:space="preserve">
+    <value>平均伤害</value>
+  </data>
+  <data name="SkillDetail_Percentage" xml:space="preserve">
+    <value>百分比</value>
+  </data>
+  <data name="SkillDetail_HitCount" xml:space="preserve">
+    <value>命中次数</value>
   </data>
 </root>

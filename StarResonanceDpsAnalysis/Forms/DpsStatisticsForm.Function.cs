@@ -12,6 +12,7 @@ using StarResonanceDpsAnalysis.Plugin.LaunchFunction;
 using StarResonanceDpsAnalysis.Properties;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing.Imaging;
 using System.Globalization;
 using System.Linq;
@@ -434,7 +435,7 @@ namespace StarResonanceDpsAnalysis.Forms
                 g.Clear(Color.Transparent);   // 完全透明
             return bmp;
         }
-        public static Dictionary<string, Bitmap> imgDict = new Dictionary<string, Bitmap>()
+        public static Dictionary<string, Bitmap> imgDict = new Dictionary<string, Bitmap>() // convert to resource key
         {
             { Properties.Strings.Profession_Unknown, EmptyBitmap() },
             { Properties.Strings.SubProfession_IceRay, new Bitmap(new MemoryStream(Resources.冰魔导师)) },
@@ -587,7 +588,7 @@ namespace StarResonanceDpsAnalysis.Forms
                                 : (p?.SubProfession is string sr && sr != Properties.Strings.Profession_Unknown && imgDict.ContainsKey(sr)) ? sr
                                 : Properties.Strings.Profession_Unknown;
 
-                    var profBmp = imgDict.TryGetValue(iconKey, out var bmp) ? bmp : imgDict[Properties.Strings.Profession_Unknown];
+                    var profBmp = imgDict.TryGetValue(iconKey, out var bmp) ? bmp : EmptyBitmap(); ;
 
                     var colorMap = Config.IsLight ? colorDict : blackColorDict;
 
@@ -612,9 +613,10 @@ namespace StarResonanceDpsAnalysis.Forms
                     string share = $"{Math.Round(p.Total / teamSum * 100d, 0, MidpointRounding.AwayFromZero)}%";
                     row[0].Image = profBmp;
                     // 只要子流派；没有子流派就用战力；否则只显示昵称
+                    string sp = Common.GetTranslatedSubProfession(p.SubProfession);
 
+                    row[1].Text = $"{p.Nickname}-{sp}({p.CombatPower})"; //TODO come back here, update subprofession when changing language
 
-                    row[1].Text = $"{p.Nickname}-{p.SubProfession}({p.CombatPower})";
 
                     row[2].Text = $"{totalFmt} ({perSec})";
                     row[3].Text = share;
@@ -720,7 +722,7 @@ namespace StarResonanceDpsAnalysis.Forms
                     string share = $"{Math.Round(p.TotalTaken / teamSum * 100d, 0, MidpointRounding.AwayFromZero)}%";
 
                     // 头像&颜色（沿用“未知”）
-                    var profBmp = imgDict.TryGetValue(Properties.Strings.Profession_Unknown, out var bmp) ? bmp : imgDict[Properties.Strings.Profession_Unknown];
+                    var profBmp = imgDict.TryGetValue(Properties.Strings.Profession_Unknown, out var bmp) ? bmp : EmptyBitmap();
                     var colorMap = Config.IsLight ? colorDict : blackColorDict;
                     var color = colorMap.TryGetValue(Properties.Strings.Profession_Unknown, out var c) ? c : ColorTranslator.FromHtml("#67AEF6");
 
@@ -820,7 +822,7 @@ namespace StarResonanceDpsAnalysis.Forms
                     string perSec = Common.FormatWithEnglishUnits(Math.Round(p.NpcOnlyDps, 1));
                     string share = $"{Math.Round(p.DamageToNpc / npcSum * 100d, 0, MidpointRounding.AwayFromZero)}%";
 
-                    var profBmp = imgDict.TryGetValue(p.Profession ?? Properties.Strings.Profession_Unknown, out var bmp) ? bmp : imgDict[Properties.Strings.Profession_Unknown];
+                    var profBmp = imgDict.TryGetValue(p.Profession ?? Properties.Strings.Profession_Unknown, out var bmp) ? bmp : EmptyBitmap();
                     var colorMap = Config.IsLight ? colorDict : blackColorDict;
                     var color = colorMap.TryGetValue(p.Profession ?? Properties.Strings.Profession_Unknown, out var c) ? c : ColorTranslator.FromHtml("#67AEF6");
 

@@ -118,1375 +118,1374 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Skill_1202_Name" xml:space="preserve">
-    <value>Rain Tide - Curving Bullet</value>
+    <value>雨打潮生-转弯子弹</value>
   </data>
   <data name="Skill_1203_Name" xml:space="preserve">
-    <value>Rain Tide - Final Strike</value>
+    <value>雨打潮生-最后一击</value>
   </data>
   <data name="Skill_1204_Name" xml:space="preserve">
-    <value>Rain Tide - Basic Attack Stage 1</value>
+    <value>雨打潮生-普攻1段</value>
   </data>
   <data name="Skill_1210_Name" xml:space="preserve">
-    <value>Water Vortex</value>
+    <value>水之涡流</value>
   </data>
   <data name="Skill_1211_Name" xml:space="preserve">
-    <value>Clearfall Orb</value>
+    <value>清滝绕珠</value>
   </data>
   <data name="Skill_1216_Name" xml:space="preserve">
-    <value>Enhanced Clearfall Orb</value>
+    <value>强化清滝绕珠</value>
   </data>
   <data name="Skill_1219_Name" xml:space="preserve">
-    <value>Ice Tornado</value>
+    <value>冰龙卷</value>
   </data>
   <data name="Skill_1222_Name" xml:space="preserve">
-    <value>Phantom Charge</value>
+    <value>幻影冲锋</value>
   </data>
   <data name="Skill_1223_Name" xml:space="preserve">
-    <value>Phantom Dash</value>
+    <value>幻影冲刺</value>
   </data>
   <data name="Skill_1238_Name" xml:space="preserve">
-    <value>Water Tornado - Passive</value>
+    <value>水龙卷-被动版</value>
   </data>
   <data name="Skill_1239_Name" xml:space="preserve">
-    <value>Meteor Storm</value>
+    <value>陨星风暴</value>
   </data>
   <data name="Skill_1240_Name" xml:space="preserve">
-    <value>Freezing Wind</value>
+    <value>冻结寒风</value>
   </data>
   <data name="Skill_1241_Name" xml:space="preserve">
-    <value>Frost Beam</value>
+    <value>寒冰射线</value>
   </data>
   <data name="Skill_1242_Name" xml:space="preserve">
-    <value>Frost Spear</value>
+    <value>冰霜之矛</value>
   </data>
   <data name="Skill_1243_Name" xml:space="preserve">
-    <value>Ice Infusion</value>
+    <value>冰之灌注</value>
   </data>
   <data name="Skill_1244_Name" xml:space="preserve">
-    <value>Blizzard</value>
+    <value>寒冰风暴</value>
   </data>
   <data name="Skill_1245_Name" xml:space="preserve">
-    <value>Ice Sanctuary</value>
+    <value>寒冰庇护</value>
   </data>
   <data name="Skill_1246_Name" xml:space="preserve">
-    <value>Tide Convergence - Water Tornado</value>
+    <value>浪潮汇聚-水龙卷</value>
   </data>
   <data name="Skill_1247_Name" xml:space="preserve">
-    <value>Talent Triggered Comet</value>
+    <value>天赋触发彗星</value>
   </data>
   <data name="Skill_1248_Name" xml:space="preserve">
-    <value>Absolute Cold: Snow Hymn</value>
+    <value>极寒·冰雪颂歌</value>
   </data>
   <data name="Skill_1249_Name" xml:space="preserve">
-    <value>Cooperative Crystal</value>
+    <value>协同冰晶</value>
   </data>
   <data name="Skill_1250_Name" xml:space="preserve">
-    <value>Water Vortex</value>
+    <value>水之涡流</value>
   </data>
   <data name="Skill_1251_Name" xml:space="preserve">
-    <value>Water Vortex</value>
+    <value>水之涡流</value>
   </data>
   <data name="Skill_1256_Name" xml:space="preserve">
-    <value>Tide Convergence - Water Tornado</value>
+    <value>浪潮汇聚-水龙卷</value>
   </data>
   <data name="Skill_1257_Name" xml:space="preserve">
-    <value>Blizzard</value>
+    <value>寒冰风暴</value>
   </data>
   <data name="Skill_1258_Name" xml:space="preserve">
-    <value>Talent - Crystal Fall</value>
+    <value>天赋-冰晶落</value>
   </data>
   <data name="Skill_1259_Name" xml:space="preserve">
-    <value>Frost Comet</value>
+    <value>冰霜彗星</value>
   </data>
   <data name="Skill_1261_Name" xml:space="preserve">
-    <value>Instant Blizzard</value>
+    <value>瞬发寒冰风暴</value>
   </data>
   <data name="Skill_1262_Name" xml:space="preserve">
-    <value>Meteor Storm</value>
+    <value>陨星风暴</value>
   </data>
   <data name="Skill_1263_Name" xml:space="preserve">
-    <value>Absolute Cold: Snow Hymn</value>
+    <value>极寒·冰雪颂歌</value>
   </data>
   <data name="Skill_1401_Name" xml:space="preserve">
-    <value>Wind Elegance Dance - Sweep</value>
+    <value>风华翔舞-扫</value>
   </data>
   <data name="Skill_1402_Name" xml:space="preserve">
-    <value>Wind Elegance Dance - Rush/Smash</value>
+    <value>风华翔舞-冲/砸</value>
   </data>
   <data name="Skill_1403_Name" xml:space="preserve">
-    <value>Wind Elegance Dance - Spinning Kick</value>
+    <value>风华翔舞-转踢</value>
   </data>
   <data name="Skill_1404_Name" xml:space="preserve">
-    <value>Wind Elegance Dance - Down Smash</value>
+    <value>风华翔舞-下砸</value>
   </data>
   <data name="Skill_1405_Name" xml:space="preserve">
-    <value>Gale Thrust</value>
+    <value>疾风刺</value>
   </data>
   <data name="Skill_1406_Name" xml:space="preserve">
-    <value>Wind Elegance Dance</value>
+    <value>风华翔舞</value>
   </data>
   <data name="Skill_1407_Name" xml:space="preserve">
-    <value>Wind God</value>
+    <value>风神</value>
   </data>
   <data name="Skill_1409_Name" xml:space="preserve">
-    <value>Wind God: Breaking-Formation Wind</value>
+    <value>风神·破阵之风</value>
   </data>
   <data name="Skill_1410_Name" xml:space="preserve">
-    <value>Wind God: Breaking-Formation Wind</value>
+    <value>风神·破阵之风</value>
   </data>
   <data name="Skill_1411_Name" xml:space="preserve">
-    <value>Charging Blade</value>
+    <value>疾驰锋刃</value>
   </data>
   <data name="Skill_1418_Name" xml:space="preserve">
-    <value>Gale Thrust</value>
+    <value>疾风刺</value>
   </data>
   <data name="Skill_1419_Name" xml:space="preserve">
-    <value>Soaring Return</value>
+    <value>翔返</value>
   </data>
   <data name="Skill_1420_Name" xml:space="preserve">
-    <value>Graceful Posture</value>
+    <value>风姿卓绝</value>
   </data>
   <data name="Skill_1421_Name" xml:space="preserve">
-    <value>Spiral Stab</value>
+    <value>螺旋击刺</value>
   </data>
   <data name="Skill_1422_Name" xml:space="preserve">
-    <value>Break Pursuit</value>
+    <value>破追</value>
   </data>
   <data name="Skill_1424_Name" xml:space="preserve">
-    <value>Moment</value>
+    <value>刹那</value>
   </data>
   <data name="Skill_1425_Name" xml:space="preserve">
-    <value>Bird Throw</value>
+    <value>飞鸟投</value>
   </data>
   <data name="Skill_1426_Name" xml:space="preserve">
-    <value>Wind God: Breaking-Formation Wind</value>
+    <value>风神·破阵之风</value>
   </data>
   <data name="Skill_1427_Name" xml:space="preserve">
-    <value>Break Pursuit</value>
+    <value>破追</value>
   </data>
   <data name="Skill_1431_Name" xml:space="preserve">
-    <value>Sharp Impact (Wind God)</value>
+    <value>锐利冲击(风神)</value>
   </data>
   <data name="Skill_1433_Name" xml:space="preserve">
-    <value>Ultimate: Storm Cut</value>
+    <value>极·岚切</value>
   </data>
   <data name="Skill_1434_Name" xml:space="preserve">
-    <value>Phantom Spiral</value>
+    <value>神影螺旋</value>
   </data>
   <data name="Skill_1435_Name" xml:space="preserve">
-    <value>Dragon Cannon</value>
+    <value>龙击炮</value>
   </data>
   <data name="Skill_1501_Name" xml:space="preserve">
-    <value>Vine Control - Stage 1</value>
+    <value>掌控藤蔓-1段</value>
   </data>
   <data name="Skill_1502_Name" xml:space="preserve">
-    <value>Vine Control - Stage 2</value>
+    <value>掌控藤蔓-2段</value>
   </data>
   <data name="Skill_1503_Name" xml:space="preserve">
-    <value>Vine Control - Stage 3</value>
+    <value>掌控藤蔓-3段</value>
   </data>
   <data name="Skill_1504_Name" xml:space="preserve">
-    <value>Vine Control - Stage 4</value>
+    <value>掌控藤蔓-4段</value>
   </data>
   <data name="Skill_1509_Name" xml:space="preserve">
-    <value>Hope Barrier</value>
+    <value>希望结界</value>
   </data>
   <data name="Skill_1517_Name" xml:space="preserve">
-    <value>Vine Control - Red Light Counter</value>
+    <value>掌控藤蔓-红光反制</value>
   </data>
   <data name="Skill_1518_Name" xml:space="preserve">
-    <value>Wild Bloom</value>
+    <value>狂野绽放</value>
   </data>
   <data name="Skill_1527_Name" xml:space="preserve">
-    <value>Floral Rejuvenation</value>
+    <value>花语回升</value>
   </data>
   <data name="Skill_1529_Name" xml:space="preserve">
-    <value>Blooming Charge</value>
+    <value>盛放注能</value>
   </data>
   <data name="Skill_1541_Name" xml:space="preserve">
-    <value>Wild Bloom</value>
+    <value>狂野绽放</value>
   </data>
   <data name="Skill_1550_Name" xml:space="preserve">
-    <value>Unbridled Seed Stage 3 (Meteor)</value>
+    <value>不羁之种3段(陨石)</value>
   </data>
   <data name="Skill_1551_Name" xml:space="preserve">
-    <value>Wild Seed</value>
+    <value>狂野之种</value>
   </data>
   <data name="Skill_1556_Name" xml:space="preserve">
-    <value>Floral Rejuvenation</value>
+    <value>花语回升</value>
   </data>
   <data name="Skill_1560_Name" xml:space="preserve">
-    <value>Regenerative Pulse - Spread Heal</value>
+    <value>再生脉冲-扩散治疗</value>
   </data>
   <data name="Skill_1561_Name" xml:space="preserve">
-    <value>Regenerative Pulse - Back-and-Forth Damage Heal</value>
+    <value>再生脉冲-来回伤害治疗</value>
   </data>
   <data name="Skill_1562_Name" xml:space="preserve">
-    <value>Regenerative Pulse - Spread Heal</value>
+    <value>再生脉冲-扩散治疗</value>
   </data>
   <data name="Skill_1701_Name" xml:space="preserve">
-    <value>Way of the Blade: Judgement</value>
+    <value>我流刀法·诛恶</value>
   </data>
   <data name="Skill_1702_Name" xml:space="preserve">
-    <value>Way of the Blade: Judgement 2</value>
+    <value>我流刀法·诛恶2</value>
   </data>
   <data name="Skill_1703_Name" xml:space="preserve">
-    <value>Way of the Blade: Judgement 3</value>
+    <value>我流刀法·诛恶3</value>
   </data>
   <data name="Skill_1704_Name" xml:space="preserve">
-    <value>Way of the Blade: Judgement 4</value>
+    <value>我流刀法·诛恶4</value>
   </data>
   <data name="Skill_1705_Name" xml:space="preserve">
-    <value>Overcharge</value>
+    <value>超高出力</value>
   </data>
   <data name="Skill_1711_Name" xml:space="preserve">
-    <value>Way of the Secret Blade</value>
+    <value>我流秘刀法</value>
   </data>
   <data name="Skill_1712_Name" xml:space="preserve">
-    <value>Way of the Secret Blade 2</value>
+    <value>我流秘刀法2</value>
   </data>
   <data name="Skill_1713_Name" xml:space="preserve">
-    <value>Ultimate: Great Destruction Combo</value>
+    <value>极诣·大破灭连斩</value>
   </data>
   <data name="Skill_1714_Name" xml:space="preserve">
-    <value>Iaijutsu Slash</value>
+    <value>居合斩</value>
   </data>
   <data name="Skill_1715_Name" xml:space="preserve">
-    <value>Moon Shadow</value>
+    <value>月影</value>
   </data>
   <data name="Skill_1716_Name" xml:space="preserve">
-    <value>Overcharge</value>
+    <value>超高出力</value>
   </data>
   <data name="Skill_1717_Name" xml:space="preserve">
-    <value>Flash</value>
+    <value>一闪</value>
   </data>
   <data name="Skill_1718_Name" xml:space="preserve">
-    <value>Thunderclap</value>
+    <value>飞雷神</value>
   </data>
   <data name="Skill_1719_Name" xml:space="preserve">
-    <value>Scythe Wheel</value>
+    <value>镰车</value>
   </data>
   <data name="Skill_1720_Name" xml:space="preserve">
-    <value>Mind's Eye</value>
+    <value>心眼</value>
   </data>
   <data name="Skill_1721_Name" xml:space="preserve">
-    <value>Secret Blade: One Form (Modified)</value>
+    <value>我流秘刀法·壹之型·改</value>
   </data>
   <data name="Skill_1722_Name" xml:space="preserve">
-    <value>Secret Blade: Two Form (Modified)</value>
+    <value>我流秘刀法·贰之型·改</value>
   </data>
   <data name="Skill_1724_Name" xml:space="preserve">
-    <value>Lightning Combo</value>
+    <value>霹雳连斩</value>
   </data>
   <data name="Skill_1725_Name" xml:space="preserve">
-    <value>Lightning Combo 2</value>
+    <value>霹雳连斩2</value>
   </data>
   <data name="Skill_1726_Name" xml:space="preserve">
-    <value>Lightning Combo 3</value>
+    <value>霹雳连斩3</value>
   </data>
   <data name="Skill_1728_Name" xml:space="preserve">
-    <value>Ultimate: Great Destruction Combo (Talent)</value>
+    <value>极诣·大破灭连斩(天赋)</value>
   </data>
   <data name="Skill_1730_Name" xml:space="preserve">
-    <value>Infinite Thunder Power</value>
+    <value>无穷雷霆之力</value>
   </data>
   <data name="Skill_1731_Name" xml:space="preserve">
-    <value>Thousand Thunder Flash Intent</value>
+    <value>千雷闪影之意</value>
   </data>
   <data name="Skill_1732_Name" xml:space="preserve">
-    <value>Thousand Thunder Flash Intent</value>
+    <value>千雷闪影之意</value>
   </data>
   <data name="Skill_1733_Name" xml:space="preserve">
-    <value>Thunder Scythe</value>
+    <value>雷霆之镰</value>
   </data>
   <data name="Skill_1734_Name" xml:space="preserve">
-    <value>Thunder Iaijutsu Slash</value>
+    <value>雷霆居合斩</value>
   </data>
   <data name="Skill_1735_Name" xml:space="preserve">
-    <value>Falling Dragon Flash</value>
+    <value>坠龙闪</value>
   </data>
   <data name="Skill_1736_Name" xml:space="preserve">
-    <value>Divine Shadow Slash</value>
+    <value>神影斩</value>
   </data>
   <data name="Skill_1737_Name" xml:space="preserve">
-    <value>Scythe of Divine Punishment</value>
+    <value>神罚之镰</value>
   </data>
   <data name="Skill_1738_Name" xml:space="preserve">
-    <value>Chaotic Slice</value>
+    <value>缭乱兜割</value>
   </data>
   <data name="Skill_1739_Name" xml:space="preserve">
-    <value>Perception Slash</value>
+    <value>看破斩</value>
   </data>
   <data name="Skill_1740_Name" xml:space="preserve">
-    <value>Thunder Scythe (on Lightning Rising Dragon Slash trigger)</value>
+    <value>雷霆之镰(触发霹雳升龙斩时)</value>
   </data>
   <data name="Skill_1741_Name" xml:space="preserve">
-    <value>Thunder Scythe</value>
+    <value>雷霆之镰</value>
   </data>
   <data name="Skill_1742_Name" xml:space="preserve">
-    <value>Lightning Rising Dragon Slash</value>
+    <value>霹雳升龙斩</value>
   </data>
   <data name="Skill_1901_Name" xml:space="preserve">
-    <value>Sword of War End 1 / Rock Bomb</value>
+    <value>止战之锋1/岩弹</value>
   </data>
   <data name="Skill_1902_Name" xml:space="preserve">
-    <value>Sword of War End 2 / Rock Bomb</value>
+    <value>止战之锋2/岩弹</value>
   </data>
   <data name="Skill_1903_Name" xml:space="preserve">
-    <value>Sword of War End 3</value>
+    <value>止战之锋3</value>
   </data>
   <data name="Skill_1904_Name" xml:space="preserve">
-    <value>Sword of War End 4</value>
+    <value>止战之锋4</value>
   </data>
   <data name="Skill_1905_Name" xml:space="preserve">
-    <value>Dragon-Slaying Form</value>
+    <value>斩龙式</value>
   </data>
   <data name="Skill_1906_Name" xml:space="preserve">
-    <value>Backward Slash</value>
+    <value>后撤斩</value>
   </data>
   <data name="Skill_1907_Name" xml:space="preserve">
-    <value>Rock Guard: Cracking Loop</value>
+    <value>岩御·崩裂回环</value>
   </data>
   <data name="Skill_1909_Name" xml:space="preserve">
-    <value>Sword of War End (Jump)</value>
+    <value>止战之锋（跳跃）</value>
   </data>
   <data name="Skill_1912_Name" xml:space="preserve">
-    <value>Sword of War End - Red Light Counter</value>
+    <value>止战之锋-红光反制</value>
   </data>
   <data name="Skill_1917_Name" xml:space="preserve">
-    <value>Giant Rock Impact</value>
+    <value>巨岩撞击</value>
   </data>
   <data name="Skill_1922_Name" xml:space="preserve">
-    <value>Shield Smash</value>
+    <value>护盾猛击</value>
   </data>
   <data name="Skill_1924_Name" xml:space="preserve">
-    <value>Star-Shatter Rush</value>
+    <value>碎星冲</value>
   </data>
   <data name="Skill_1925_Name" xml:space="preserve">
-    <value>Rage Burst</value>
+    <value>怒爆</value>
   </data>
   <data name="Skill_1926_Name" xml:space="preserve">
-    <value>Sandstone Grip</value>
+    <value>砂岩之握</value>
   </data>
   <data name="Skill_1927_Name" xml:space="preserve">
-    <value>Sandstone Cloak (Initial)</value>
+    <value>砂石斗篷（初始）</value>
   </data>
   <data name="Skill_1928_Name" xml:space="preserve">
-    <value>Stone Protection</value>
+    <value>岩之守护</value>
   </data>
   <data name="Skill_1929_Name" xml:space="preserve">
-    <value>Immovable Mountain</value>
+    <value>不动如山</value>
   </data>
   <data name="Skill_1930_Name" xml:space="preserve">
-    <value>Block Impact</value>
+    <value>格挡冲击</value>
   </data>
   <data name="Skill_1931_Name" xml:space="preserve">
-    <value>Block Impact</value>
+    <value>格挡冲击</value>
   </data>
   <data name="Skill_1932_Name" xml:space="preserve">
-    <value>Shield Smash</value>
+    <value>护盾猛击</value>
   </data>
   <data name="Skill_1933_Name" xml:space="preserve">
-    <value>Sword of War End</value>
+    <value>止战之锋</value>
   </data>
   <data name="Skill_1934_Name" xml:space="preserve">
-    <value>Block Impact</value>
+    <value>格挡冲击</value>
   </data>
   <data name="Skill_1935_Name" xml:space="preserve">
-    <value>Block Impact - Fury Strike</value>
+    <value>格挡冲击-怒击</value>
   </data>
   <data name="Skill_1936_Name" xml:space="preserve">
-    <value>Giant Rock Body</value>
+    <value>巨岩躯体</value>
   </data>
   <data name="Skill_1937_Name" xml:space="preserve">
-    <value>Rock Rage Strike</value>
+    <value>岩怒之击</value>
   </data>
   <data name="Skill_1938_Name" xml:space="preserve">
-    <value>Brave Bastion</value>
+    <value>勇者壁垒</value>
   </data>
   <data name="Skill_1939_Name" xml:space="preserve">
-    <value>Rock Rage Strike</value>
+    <value>岩怒之击</value>
   </data>
   <data name="Skill_1940_Name" xml:space="preserve">
-    <value>Rage Burst</value>
+    <value>怒爆</value>
   </data>
   <data name="Skill_1941_Name" xml:space="preserve">
-    <value>Star-Shatter Collapse</value>
+    <value>碎星崩裂</value>
   </data>
   <data name="Skill_1942_Name" xml:space="preserve">
-    <value>Collapse</value>
+    <value>崩裂</value>
   </data>
   <data name="Skill_1943_Name" xml:space="preserve">
-    <value>Giant Rock Bombardment</value>
+    <value>巨岩轰击</value>
   </data>
   <data name="Skill_1944_Name" xml:space="preserve">
-    <value>Rage Burst</value>
+    <value>怒爆</value>
   </data>
   <data name="Skill_1999_Name" xml:space="preserve">
-    <value>Power of Stone</value>
+    <value>岩之力</value>
   </data>
   <data name="Skill_2201_Name" xml:space="preserve">
-    <value>Deadeye</value>
+    <value>弹无虚发</value>
   </data>
   <data name="Skill_2209_Name" xml:space="preserve">
-    <value>Sharp Eye: Light-energy Giant Arrow</value>
+    <value>锐眼·光能巨箭</value>
   </data>
   <data name="Skill_2220_Name" xml:space="preserve">
-    <value>Storm Arrow</value>
+    <value>暴风箭矢</value>
   </data>
   <data name="Skill_2221_Name" xml:space="preserve">
-    <value>Storm Arrow SP</value>
+    <value>暴风箭矢SP</value>
   </data>
   <data name="Skill_2222_Name" xml:space="preserve">
-    <value>Double Shot</value>
+    <value>二连矢</value>
   </data>
   <data name="Skill_2224_Name" xml:space="preserve">
-    <value>Deadly Shot - Quad Shot</value>
+    <value>夺命射击-四连矢</value>
   </data>
   <data name="Skill_2230_Name" xml:space="preserve">
-    <value>Raging Shot</value>
+    <value>怒涛射击</value>
   </data>
   <data name="Skill_2231_Name" xml:space="preserve">
-    <value>Mental Focus</value>
+    <value>精神凝聚</value>
   </data>
   <data name="Skill_2232_Name" xml:space="preserve">
-    <value>Rain of Arrows</value>
+    <value>箭雨</value>
   </data>
   <data name="Skill_2233_Name" xml:space="preserve">
-    <value>Concentrated Shot</value>
+    <value>聚能射击</value>
   </data>
   <data name="Skill_2234_Name" xml:space="preserve">
-    <value>Light Bomb</value>
+    <value>光能轰炸</value>
   </data>
   <data name="Skill_2235_Name" xml:space="preserve">
-    <value>Intimidating Shot</value>
+    <value>威慑射击</value>
   </data>
   <data name="Skill_2237_Name" xml:space="preserve">
-    <value>Call of the Wild</value>
+    <value>狂野呼唤</value>
   </data>
   <data name="Skill_2238_Name" xml:space="preserve">
-    <value>Explosive Shot</value>
+    <value>爆炸射击</value>
   </data>
   <data name="Skill_2239_Name" xml:space="preserve">
-    <value>Explosive Arrow Phase 2</value>
+    <value>爆炸箭二段</value>
   </data>
   <data name="Skill_2240_Name" xml:space="preserve">
-    <value>Soaring Star Strike - Enhanced Raging Shot</value>
+    <value>天翔贯星击-强化怒涛射击</value>
   </data>
   <data name="Skill_2241_Name" xml:space="preserve">
-    <value>Celestial Eagle</value>
+    <value>天界雄鹰</value>
   </data>
   <data name="Skill_2242_Name" xml:space="preserve">
-    <value>Trampled Beasts</value>
+    <value>群兽践踏</value>
   </data>
   <data name="Skill_2288_Name" xml:space="preserve">
-    <value>Light Bomb</value>
+    <value>光能轰炸</value>
   </data>
   <data name="Skill_2289_Name" xml:space="preserve">
-    <value>Rain of Arrows</value>
+    <value>箭雨</value>
   </data>
   <data name="Skill_2290_Name" xml:space="preserve">
-    <value>Sharp Eyes - Light Giant Arrow - Focus Monsters (Talent)</value>
+    <value>锐眼·光能巨箭-聚怪(天赋)</value>
   </data>
   <data name="Skill_2291_Name" xml:space="preserve">
-    <value>Double Star Arrow</value>
+    <value>双星之矢</value>
   </data>
   <data name="Skill_2292_Name" xml:space="preserve">
-    <value>Phantom Wolf - Bite</value>
+    <value>幻影魔狼-扑咬</value>
   </data>
   <data name="Skill_2293_Name" xml:space="preserve">
-    <value>Talent - Light Rift</value>
+    <value>天赋-光能裂痕</value>
   </data>
   <data name="Skill_2294_Name" xml:space="preserve">
-    <value>Light Will - Quadruple Arrow</value>
+    <value>光意·四连矢</value>
   </data>
   <data name="Skill_2295_Name" xml:space="preserve">
-    <value>Sharp Eyes: Light Giant Arrow (Arrow Array Damage)</value>
+    <value>锐眼·光能巨箭（箭阵伤害）</value>
   </data>
   <data name="Skill_2296_Name" xml:space="preserve">
-    <value>Phantom Eagle</value>
+    <value>幻影雄鹰</value>
   </data>
   <data name="Skill_2301_Name" xml:space="preserve">
-    <value>String Plucking - 1st Stage</value>
+    <value>琴弦撩拨-1段</value>
   </data>
   <data name="Skill_2302_Name" xml:space="preserve">
-    <value>String Plucking - 2nd Stage</value>
+    <value>琴弦撩拨-2段</value>
   </data>
   <data name="Skill_2303_Name" xml:space="preserve">
-    <value>String Plucking - 3rd Stage</value>
+    <value>琴弦撩拨-3段</value>
   </data>
   <data name="Skill_2304_Name" xml:space="preserve">
-    <value>String Plucking - 4th Stage</value>
+    <value>琴弦撩拨-4段</value>
   </data>
   <data name="Skill_2306_Name" xml:space="preserve">
-    <value>Amplified Beat</value>
+    <value>增幅节拍</value>
   </data>
   <data name="Skill_2307_Name" xml:space="preserve">
-    <value>Healing Beat</value>
+    <value>愈合节拍</value>
   </data>
   <data name="Skill_2308_Name" xml:space="preserve">
-    <value>Gathering Movement</value>
+    <value>聚合乐章</value>
   </data>
   <data name="Skill_2309_Name" xml:space="preserve">
-    <value>Flame Fantasy</value>
+    <value>烈焰狂想</value>
   </data>
   <data name="Skill_2310_Name" xml:space="preserve">
-    <value>Singing: Heroic Movement</value>
+    <value>鸣奏·英勇乐章</value>
   </data>
   <data name="Skill_2311_Name" xml:space="preserve">
-    <value>Singing: Healing Movement</value>
+    <value>鸣奏·愈合乐章</value>
   </data>
   <data name="Skill_2312_Name" xml:space="preserve">
-    <value>Surging Quintet Damage</value>
+    <value>激涌五重奏伤害</value>
   </data>
   <data name="Skill_2313_Name" xml:space="preserve">
-    <value>Passionate Spread</value>
+    <value>热情挥洒</value>
   </data>
   <data name="Skill_2314_Name" xml:space="preserve">
-    <value>Level Up: Blast the Audience</value>
+    <value>升格·劲爆全场</value>
   </data>
   <data name="Skill_2315_Name" xml:space="preserve">
-    <value>Encore</value>
+    <value>安可</value>
   </data>
   <data name="Skill_2316_Name" xml:space="preserve">
-    <value>Attracting Attention</value>
+    <value>万众瞩目</value>
   </data>
   <data name="Skill_2317_Name" xml:space="preserve">
-    <value>Fierce Swing 1</value>
+    <value>猛烈挥击1</value>
   </data>
   <data name="Skill_2318_Name" xml:space="preserve">
-    <value>Complete! Healing Movement</value>
+    <value>完结！愈合乐章</value>
   </data>
   <data name="Skill_2319_Name" xml:space="preserve">
-    <value>Sonic Surge</value>
+    <value>音浪潮涌</value>
   </data>
   <data name="Skill_2320_Name" xml:space="preserve">
-    <value>Sound Tower Explosion</value>
+    <value>音塔爆炎冲击</value>
   </data>
   <data name="Skill_2321_Name" xml:space="preserve">
-    <value>String Tap 2</value>
+    <value>琴弦叩击2</value>
   </data>
   <data name="Skill_2322_Name" xml:space="preserve">
-    <value>String Tap 3</value>
+    <value>琴弦叩击3</value>
   </data>
   <data name="Skill_2323_Name" xml:space="preserve">
-    <value>String Tap 4</value>
+    <value>琴弦叩击4</value>
   </data>
   <data name="Skill_2324_Name" xml:space="preserve">
-    <value>String Tap 5</value>
+    <value>琴弦叩击5</value>
   </data>
   <data name="Skill_2329_Name" xml:space="preserve">
-    <value>Flame Dancer</value>
+    <value>炎舞奏者</value>
   </data>
   <data name="Skill_2330_Name" xml:space="preserve">
-    <value>Fire Pillar Impact - Flame Dancer Enhancement</value>
+    <value>火柱冲击-炎舞奏者强化</value>
   </data>
   <data name="Skill_2331_Name" xml:space="preserve">
-    <value>Sonic Flame</value>
+    <value>音浪烈焰</value>
   </data>
   <data name="Skill_2332_Name" xml:space="preserve">
-    <value>Excited Passion</value>
+    <value>激昂·热情挥洒</value>
   </data>
   <data name="Skill_2335_Name" xml:space="preserve">
-    <value>Upgraded - Infinite Fantasy</value>
+    <value>升格·无限狂想</value>
   </data>
   <data name="Skill_2336_Name" xml:space="preserve">
-    <value>Upgraded - Tour Song</value>
+    <value>升格·巡演曲</value>
   </data>
   <data name="Skill_2352_Name" xml:space="preserve">
-    <value>Healing Eagle</value>
+    <value>天界雄鹰</value>
   </data>
   <data name="Skill_2361_Name" xml:space="preserve">
-    <value>Healing Rhythm Copy</value>
+    <value>愈合节拍copy</value>
   </data>
   <data name="Skill_2362_Name" xml:space="preserve">
-    <value>Sonic Judgment</value>
+    <value>音波裁决</value>
   </data>
   <data name="Skill_2363_Name" xml:space="preserve">
-    <value>Surging Quintet Copy</value>
+    <value>激涌五重奏copy</value>
   </data>
   <data name="Skill_2364_Name" xml:space="preserve">
-    <value>Upgrade: Explosive Full-Time Explosion Copy</value>
+    <value>升格·劲爆全场copy</value>
   </data>
   <data name="Skill_2365_Name" xml:space="preserve">
-    <value>Upgrade: Infinite Fantasy Copy</value>
+    <value>升格·无限狂想copy</value>
   </data>
   <data name="Skill_2366_Name" xml:space="preserve">
-    <value>Upgrade: Tour Song Copy</value>
+    <value>升格·巡演曲copy</value>
   </data>
   <data name="Skill_2399_Name" xml:space="preserve">
-    <value>Sounding Milk Stick</value>
+    <value>音响奶棍</value>
   </data>
   <data name="Skill_2401_Name" xml:space="preserve">
-    <value>Sword of Justice - Stage 1</value>
+    <value>公正之剑-1段</value>
   </data>
   <data name="Skill_2402_Name" xml:space="preserve">
-    <value>Sword of Justice - Stage 2</value>
+    <value>公正之剑-2段</value>
   </data>
   <data name="Skill_2403_Name" xml:space="preserve">
-    <value>Sword of Justice - Stage 3</value>
+    <value>公正之剑-3段</value>
   </data>
   <data name="Skill_2404_Name" xml:space="preserve">
-    <value>Sword of Justice - Stage 4</value>
+    <value>公正之剑-4段</value>
   </data>
   <data name="Skill_2405_Name" xml:space="preserve">
-    <value>Heroic Shield Bash</value>
+    <value>英勇盾击</value>
   </data>
   <data name="Skill_2406_Name" xml:space="preserve">
-    <value>Vanguard Strike/Vanguard Pursuit</value>
+    <value>先锋打击/先锋追击</value>
   </data>
   <data name="Skill_2407_Name" xml:space="preserve">
-    <value>Awesome Power: Holy Light Infusion</value>
+    <value>凛威·圣光灌注</value>
   </data>
   <data name="Skill_2408_Name" xml:space="preserve">
-    <value>Throw Shield</value>
+    <value>投掷盾牌</value>
   </data>
   <data name="Skill_2409_Name" xml:space="preserve">
-    <value>Holy Ring</value>
+    <value>圣环</value>
   </data>
   <data name="Skill_2410_Name" xml:space="preserve">
-    <value>Judgment</value>
+    <value>裁决</value>
   </data>
   <data name="Skill_2411_Name" xml:space="preserve">
-    <value>Scorching Judgment</value>
+    <value>灼热裁决</value>
   </data>
   <data name="Skill_2412_Name" xml:space="preserve">
-    <value>Reckoning</value>
+    <value>清算</value>
   </data>
   <data name="Skill_2413_Name" xml:space="preserve">
-    <value>Scorching Reckoning</value>
+    <value>炽热清算</value>
   </data>
   <data name="Skill_2414_Name" xml:space="preserve">
-    <value>Holy Barrier</value>
+    <value>神圣壁垒</value>
   </data>
   <data name="Skill_2415_Name" xml:space="preserve">
-    <value>Guardian of the Light</value>
+    <value>圣光守卫</value>
   </data>
   <data name="Skill_2416_Name" xml:space="preserve">
-    <value>Conviction</value>
+    <value>断罪</value>
   </data>
   <data name="Skill_2417_Name" xml:space="preserve">
-    <value>Enhanced Conviction</value>
+    <value>强化断罪</value>
   </data>
   <data name="Skill_2419_Name" xml:space="preserve">
-    <value>Ruthless Crusade</value>
+    <value>冷酷征伐</value>
   </data>
   <data name="Skill_2420_Name" xml:space="preserve">
-    <value>Bright Resolve</value>
+    <value>光明决心</value>
   </data>
   <data name="Skill_2421_Name" xml:space="preserve">
-    <value>Holy Sword</value>
+    <value>圣剑</value>
   </data>
   <data name="Skill_2425_Name" xml:space="preserve">
-    <value>Throw Shield</value>
+    <value>投掷盾牌</value>
   </data>
   <data name="Skill_2450_Name" xml:space="preserve">
-    <value>Bright Blast</value>
+    <value>光明冲击</value>
   </data>
   <data name="Skill_2451_Name" xml:space="preserve">
-    <value>Judgment (Holy Trigger)</value>
+    <value>裁决(神圣触发)</value>
   </data>
   <data name="Skill_2452_Name" xml:space="preserve">
-    <value>Scorching Holy Sword of Judgment</value>
+    <value>灼热裁决圣剑</value>
   </data>
   <data name="Skill_3698_Name" xml:space="preserve">
-    <value>Wind Goblin King (Passive)</value>
+    <value>风哥布林王(被动)</value>
   </data>
   <data name="Skill_3901_Name" xml:space="preserve">
-    <value>Secret! Flame Roar (Fire Demon)</value>
+    <value>奥义！琉火咆哮(火魔)</value>
   </data>
   <data name="Skill_3925_Name" xml:space="preserve">
-    <value>Ultimate Skill! Invisible Impact (Troll)</value>
+    <value>绝技！无形冲击(巨魔)</value>
   </data>
   <data name="Skill_20301_Name" xml:space="preserve">
-    <value>Life Blossom</value>
+    <value>生命绽放</value>
   </data>
   <data name="Skill_21402_Name" xml:space="preserve">
-    <value>Wild Blossom</value>
+    <value>狂野绽放</value>
   </data>
   <data name="Skill_21404_Name" xml:space="preserve">
-    <value>Nourish</value>
+    <value>滋养</value>
   </data>
   <data name="Skill_21406_Name" xml:space="preserve">
-    <value>Forest Prayer</value>
+    <value>森之祈愿</value>
   </data>
   <data name="Skill_21414_Name" xml:space="preserve">
-    <value>Holy Barrier Lasts</value>
+    <value>希望结界持续</value>
   </data>
   <data name="Skill_21418_Name" xml:space="preserve">
-    <value>Deer Rush</value>
+    <value>鹿之奔袭</value>
   </data>
   <data name="Skill_21423_Name" xml:space="preserve">
-    <value>Symbiotic Mark</value>
+    <value>共生印记</value>
   </data>
   <data name="Skill_21424_Name" xml:space="preserve">
-    <value>Thorns</value>
+    <value>荆棘</value>
   </data>
   <data name="Skill_21427_Name" xml:space="preserve">
-    <value>Smite Healing Misses A1</value>
+    <value>惩击奶空A1段</value>
   </data>
   <data name="Skill_21428_Name" xml:space="preserve">
-    <value>Smite Healing Misses A2</value>
+    <value>惩击奶空A2段</value>
   </data>
   <data name="Skill_21429_Name" xml:space="preserve">
-    <value>Smite Healing Misses A3</value>
+    <value>惩击奶空A3段</value>
   </data>
   <data name="Skill_21430_Name" xml:space="preserve">
-    <value>Smite Healing Misses A4</value>
+    <value>惩击奶空A4段</value>
   </data>
   <data name="Skill_27009_Name" xml:space="preserve">
-    <value>Ice Buff</value>
+    <value>冰箱BUFF</value>
   </data>
   <data name="Skill_31901_Name" xml:space="preserve">
-    <value>Wind Ring of Courage</value>
+    <value>勇气风环</value>
   </data>
   <data name="Skill_44701_Name" xml:space="preserve">
-    <value>Moon Blade</value>
+    <value>月刃</value>
   </data>
   <data name="Skill_50033_Name" xml:space="preserve">
-    <value>Gather Monsters</value>
+    <value>聚怪</value>
   </data>
   <data name="Skill_50036_Name" xml:space="preserve">
-    <value>Weak Spot Strike</value>
+    <value>弱点打击</value>
   </data>
   <data name="Skill_50037_Name" xml:space="preserve">
-    <value>Block Counterattack</value>
+    <value>格挡反击</value>
   </data>
   <data name="Skill_50049_Name" xml:space="preserve">
-    <value>Sandstone Cloak (Persistent)</value>
+    <value>砂石斗篷（持续）</value>
   </data>
   <data name="Skill_50068_Name" xml:space="preserve">
-    <value>Block Counterattack - Strong</value>
+    <value>格挡反击--强</value>
   </data>
   <data name="Skill_55231_Name" xml:space="preserve">
-    <value>Explosive Arrow Buff Detonates</value>
+    <value>爆炸箭BUFF引爆</value>
   </data>
   <data name="Skill_55235_Name" xml:space="preserve">
-    <value>Light Will - Quadruple Arrow (Splash Damage)</value>
+    <value>光意·四连矢（溅射伤害）</value>
   </data>
   <data name="Skill_55236_Name" xml:space="preserve">
-    <value>Strengthened Special Attack Final Attack Avatar</value>
+    <value>强化特攻最后一击虚拟体</value>
   </data>
   <data name="Skill_55238_Name" xml:space="preserve">
-    <value>Bow - Ultimate Attraction</value>
+    <value>弓-大招引力</value>
   </data>
   <data name="Skill_55239_Name" xml:space="preserve">
-    <value>Light Stasis Immobilization Buff</value>
+    <value>光能凝滞定身BUFF</value>
   </data>
   <data name="Skill_55240_Name" xml:space="preserve">
-    <value>Light Bombardment Area-of-effect Buff</value>
+    <value>光能轰炸伤害区域BUFF</value>
   </data>
   <data name="Skill_55301_Name" xml:space="preserve">
-    <value>Flame Fantasy</value>
+    <value>烈焰狂想</value>
   </data>
   <data name="Skill_55302_Name" xml:space="preserve">
-    <value>Healing Rhythm</value>
+    <value>愈合节拍</value>
   </data>
   <data name="Skill_55304_Name" xml:space="preserve">
-    <value>Surging Quintet</value>
+    <value>激涌五重奏</value>
   </data>
   <data name="Skill_55311_Name" xml:space="preserve">
-    <value>Encore Transformation</value>
+    <value>安可曲转化</value>
   </data>
   <data name="Skill_55314_Name" xml:space="preserve">
-    <value>Encore</value>
+    <value>安可</value>
   </data>
   <data name="Skill_55328_Name" xml:space="preserve">
-    <value>Double Play of the Highly Anticipated Surge Quintet</value>
+    <value>万众瞩目激涌五重奏弹奏翻倍</value>
   </data>
   <data name="Skill_55335_Name" xml:space="preserve">
-    <value>Highly Anticipated Passionate Stage 3</value>
+    <value>万众瞩目热情挥洒3阶段</value>
   </data>
   <data name="Skill_55339_Name" xml:space="preserve">
-    <value>Upgrade - Tour Song</value>
+    <value>升格·巡演曲</value>
   </data>
   <data name="Skill_55341_Name" xml:space="preserve">
-    <value>Heroic Movement</value>
+    <value>英勇乐章</value>
   </data>
   <data name="Skill_55342_Name" xml:space="preserve">
-    <value>Healing Movement</value>
+    <value>愈合乐章</value>
   </data>
   <data name="Skill_55344_Name" xml:space="preserve">
-    <value>Upgrade: Blast the Field</value>
+    <value>升格·劲爆全场</value>
   </data>
   <data name="Skill_55346_Name" xml:space="preserve">
-    <value>Upgrade: Infinite Fantasy</value>
+    <value>升格·无限狂想</value>
   </data>
   <data name="Skill_55355_Name" xml:space="preserve">
-    <value>Ceasing Healing</value>
+    <value>休止的治愈</value>
   </data>
   <data name="Skill_55404_Name" xml:space="preserve">
-    <value>Holy Ring Buff</value>
+    <value>圣环BUFF</value>
   </data>
   <data name="Skill_55412_Name" xml:space="preserve">
-    <value>Ruthless Crusade</value>
+    <value>冷酷征伐</value>
   </data>
   <data name="Skill_55417_Name" xml:space="preserve">
-    <value>Ruthless Crusade</value>
+    <value>冷酷征伐</value>
   </data>
   <data name="Skill_55421_Name" xml:space="preserve">
-    <value>Judgment</value>
+    <value>裁决</value>
   </data>
   <data name="Skill_55431_Name" xml:space="preserve">
-    <value>Ruthless Crusade Damage Buff</value>
+    <value>冷酷征伐伤害buff</value>
   </data>
   <data name="Skill_55432_Name" xml:space="preserve">
-    <value>Cold and Ruthless Crusade Damage Buff</value>
+    <value>冷冷酷征伐伤害buff</value>
   </data>
   <data name="Skill_100730_Name" xml:space="preserve">
-    <value>Goblin Crossbowman Active</value>
+    <value>哥布林弩手主动</value>
   </data>
   <data name="Skill_102640_Name" xml:space="preserve">
-    <value>Special Skill! Hog Rush (Mighty Boar)</value>
+    <value>绝技！猪突猛进(威猛野猪)</value>
   </data>
   <data name="Skill_101112_Name" xml:space="preserve">
-    <value>Pet Eagle Quick Turn</value>
+    <value>宠物雄鹰快速回旋</value>
   </data>
   <data name="Skill_120201_Name" xml:space="preserve">
-    <value>Rain and Tide - Curved Bullet</value>
+    <value>雨打潮生-转弯子弹</value>
   </data>
   <data name="Skill_120301_Name" xml:space="preserve">
-    <value>Rain and Tide - Final Blow</value>
+    <value>雨打潮生-最后一击</value>
   </data>
   <data name="Skill_120401_Name" xml:space="preserve">
-    <value>Rain and Tide - Normal Attack Stage 1</value>
+    <value>雨打潮生-普攻1段</value>
   </data>
   <data name="Skill_120501_Name" xml:space="preserve">
-    <value>Rain and Tide</value>
+    <value>雨打潮生</value>
   </data>
   <data name="Skill_120901_Name" xml:space="preserve">
-    <value>Ice Spear Piercing</value>
+    <value>贯穿冰矛</value>
   </data>
   <data name="Skill_120902_Name" xml:space="preserve">
-    <value>Ice Spear</value>
+    <value>冰矛</value>
   </data>
   <data name="Skill_121302_Name" xml:space="preserve">
-    <value>Ice Arrow</value>
+    <value>冰箭</value>
   </data>
   <data name="Skill_121501_Name" xml:space="preserve">
-    <value>Kiyaki Roping Pearl</value>
+    <value>清滝绕珠</value>
   </data>
   <data name="Skill_140301_Name" xml:space="preserve">
-    <value>Divine Shadow Spiral</value>
+    <value>神影螺旋</value>
   </data>
   <data name="Skill_140401_Name" xml:space="preserve">
-    <value>Dragon Blast Cannon</value>
+    <value>龙击炮</value>
   </data>
   <data name="Skill_140501_Name" xml:space="preserve">
-    <value>Tornado</value>
+    <value>龙卷风</value>
   </data>
   <data name="Skill_141104_Name" xml:space="preserve">
-    <value>Mutant Bee Active A1</value>
+    <value>变异蜂主动a1</value>
   </data>
   <data name="Skill_149901_Name" xml:space="preserve">
-    <value>Wind Spiral/Spiral Detonation</value>
+    <value>风螺旋/螺旋引爆</value>
   </data>
   <data name="Skill_149902_Name" xml:space="preserve">
-    <value>Spear Piercing</value>
+    <value>长矛贯穿</value>
   </data>
   <data name="Skill_149904_Name" xml:space="preserve">
-    <value>Tina Tornado</value>
+    <value>蒂娜龙卷</value>
   </data>
   <data name="Skill_149905_Name" xml:space="preserve">
-    <value>Bird Throw</value>
+    <value>飞鸟投</value>
   </data>
   <data name="Skill_149906_Name" xml:space="preserve">
-    <value>Extreme Storm Cut</value>
+    <value>极·岚切</value>
   </data>
   <data name="Skill_149907_Name" xml:space="preserve">
-    <value>Sharp Impact (Wind God)</value>
+    <value>锐利冲击(风神)</value>
   </data>
   <data name="Skill_150101_Name" xml:space="preserve">
-    <value>Deer Rush</value>
+    <value>鹿之奔袭</value>
   </data>
   <data name="Skill_150103_Name" xml:space="preserve">
-    <value>Unruly Seed Stage 1</value>
+    <value>不羁之种1段</value>
   </data>
   <data name="Skill_150104_Name" xml:space="preserve">
-    <value>Unruly Seed Stage 2</value>
+    <value>不羁之种2段</value>
   </data>
   <data name="Skill_150106_Name" xml:space="preserve">
-    <value>Infusion (Left Hand)</value>
+    <value>灌注(左手)</value>
   </data>
   <data name="Skill_150107_Name" xml:space="preserve">
-    <value>Infusion (Right Hand)</value>
+    <value>灌注(右手)</value>
   </data>
   <data name="Skill_150110_Name" xml:space="preserve">
-    <value>Infusion (Double Infusion Extra)</value>
+    <value>灌注(双重灌注额外部分)</value>
   </data>
   <data name="Skill_155101_Name" xml:space="preserve">
-    <value>Raikiri</value>
+    <value>雷切</value>
   </data>
   <data name="Skill_155102_Name" xml:space="preserve">
-    <value>Raikiri - Final Attack</value>
+    <value>雷切-最后一击</value>
   </data>
   <data name="Skill_179906_Name" xml:space="preserve">
-    <value>Moon Blade Spin</value>
+    <value>月刃回旋</value>
   </data>
   <data name="Skill_179907_Name" xml:space="preserve">
-    <value>Blade Wind Realm</value>
+    <value>刃风界域</value>
   </data>
   <data name="Skill_179904_Name" xml:space="preserve">
-    <value>Divine Shadow Slash - Final Attack</value>
+    <value>神影斩-最后一击</value>
   </data>
   <data name="Skill_179908_Name" xml:space="preserve">
-    <value>Blade Intent Lightning Strike</value>
+    <value>刀意雷击</value>
   </data>
   <data name="Skill_199902_Name" xml:space="preserve">
-    <value>Earth Collapse and Mountain Destruction</value>
+    <value>地崩山摧</value>
   </data>
   <data name="Skill_199903_Name" xml:space="preserve">
-    <value>Giant Rock Bombardment</value>
+    <value>巨岩轰击</value>
   </data>
   <data name="Skill_220101_Name" xml:space="preserve">
-    <value>Every Shot Targets</value>
+    <value>弹无虚发</value>
   </data>
   <data name="Skill_220102_Name" xml:space="preserve">
-    <value>Raging Wave Shooting</value>
+    <value>怒涛射击</value>
   </data>
   <data name="Skill_220103_Name" xml:space="preserve">
-    <value>Unerring Hit - Final Blow</value>
+    <value>弹无虚发-最后一击</value>
   </data>
   <data name="Skill_220104_Name" xml:space="preserve">
-    <value>Double Arrow/Storm Arrow</value>
+    <value>二连矢/暴风箭矢</value>
   </data>
   <data name="Skill_220105_Name" xml:space="preserve">
-    <value>Light Pursuit Arrow</value>
+    <value>光追箭</value>
   </data>
   <data name="Skill_220106_Name" xml:space="preserve">
-    <value>Aerial Shot</value>
+    <value>空中射击</value>
   </data>
   <data name="Skill_220107_Name" xml:space="preserve">
-    <value>Magic Arrow</value>
+    <value>魔法箭矢</value>
   </data>
   <data name="Skill_220108_Name" xml:space="preserve">
-    <value>Explosive Arrow</value>
+    <value>爆炸箭矢</value>
   </data>
   <data name="Skill_220109_Name" xml:space="preserve">
-    <value>Intimidating Shot</value>
+    <value>威慑射击</value>
   </data>
   <data name="Skill_220110_Name" xml:space="preserve">
-    <value>Explosive Arrow</value>
+    <value>爆炸箭</value>
   </data>
   <data name="Skill_220111_Name" xml:space="preserve">
-    <value>Light Will - Quadruple Arrow</value>
+    <value>光意·四连矢</value>
   </data>
   <data name="Skill_220112_Name" xml:space="preserve">
-    <value>Light Rift</value>
+    <value>光能裂隙</value>
   </data>
   <data name="Skill_220113_Name" xml:space="preserve">
-    <value>Phantom Falcon</value>
+    <value>幻影猎鹰</value>
   </data>
   <data name="Skill_220203_Name" xml:space="preserve">
-    <value>Light Will - Quadruple Arrow</value>
+    <value>光意·四连矢</value>
   </data>
   <data name="Skill_220301_Name" xml:space="preserve">
-    <value>Sharp Eyes - Light Giant Arrow (Arrow Damage)</value>
+    <value>锐眼·光能巨箭（箭矢伤害）</value>
   </data>
   <data name="Skill_221101_Name" xml:space="preserve">
-    <value>Unerring Hit - Red Light Counter</value>
+    <value>弹无虚发-红光反制</value>
   </data>
   <data name="Skill_230101_Name" xml:space="preserve">
-    <value>Aggregate Melody Single Segment</value>
+    <value>聚合乐章单段</value>
   </data>
   <data name="Skill_230102_Name" xml:space="preserve">
-    <value>Aggregate Movement Section 2</value>
+    <value>聚合乐章二段</value>
   </data>
   <data name="Skill_230103_Name" xml:space="preserve">
-    <value>Aggregate Movement Section 3</value>
+    <value>聚合乐章三段</value>
   </data>
   <data name="Skill_230104_Name" xml:space="preserve">
-    <value>Aggregate Movement Section 4</value>
+    <value>聚合乐章四段</value>
   </data>
   <data name="Skill_230105_Name" xml:space="preserve">
-    <value>Flame Rhythm Stomping Damage</value>
+    <value>炎律狂踏伤害</value>
   </data>
   <data name="Skill_230106_Name" xml:space="preserve">
-    <value>Flame Note Damage</value>
+    <value>烈焰音符伤害</value>
   </data>
   <data name="Skill_230401_Name" xml:space="preserve">
-    <value>Encore Damage</value>
+    <value>安可伤害</value>
   </data>
   <data name="Skill_230501_Name" xml:space="preserve">
-    <value>Infinite Legato Encore Damage</value>
+    <value>无限连奏安可伤害</value>
   </data>
   <data name="Skill_231001_Name" xml:space="preserve">
-    <value>Flame Rhapsody Damage</value>
+    <value>烈焰狂想伤害</value>
   </data>
   <data name="Skill_240101_Name" xml:space="preserve">
-    <value>Throw Shield</value>
+    <value>投掷盾牌</value>
   </data>
   <data name="Skill_240102_Name" xml:space="preserve">
-    <value>Bright Resolve</value>
+    <value>光明决心</value>
   </data>
   <data name="Skill_391001_Name" xml:space="preserve">
-    <value>Special Skill! Chaos Missiles (Void Ogre) 1</value>
+    <value>绝技! 纷乱飞弹(虚蚀食人魔)1</value>
   </data>
   <data name="Skill_391002_Name" xml:space="preserve">
-    <value>Special Skill! Chaos Missiles (Void Ogre) 2</value>
+    <value>绝技! 纷乱飞弹(虚蚀食人魔)2</value>
   </data>
   <data name="Skill_391003_Name" xml:space="preserve">
-    <value>Special Skill! Chaos Missiles (Void Ogre) 3</value>
+    <value>绝技! 纷乱飞弹(虚蚀食人魔)3</value>
   </data>
   <data name="Skill_391004_Name" xml:space="preserve">
-    <value>Special Skill! Chaos Missiles (Void Ogre) 4</value>
+    <value>绝技! 纷乱飞弹(虚蚀食人魔)4</value>
   </data>
   <data name="Skill_391005_Name" xml:space="preserve">
-    <value>Special Skill! Chaos Missiles (Void Ogre) 5</value>
+    <value>绝技! 纷乱飞弹(虚蚀食人魔)5</value>
   </data>
   <data name="Skill_391006_Name" xml:space="preserve">
-    <value>Special Skill! Chaos Missiles (Void Ogre) 6</value>
+    <value>绝技! 纷乱飞弹(虚蚀食人魔)6</value>
   </data>
   <data name="Skill_391007_Name" xml:space="preserve">
-    <value>Goblin Crossbowman Passive</value>
+    <value>哥布林弩手被动</value>
   </data>
   <data name="Skill_391008_Name" xml:space="preserve">
-    <value>Mutant Bee Passive</value>
+    <value>变异蜂被动</value>
   </data>
   <data name="Skill_391301_Name" xml:space="preserve">
-    <value>Special Skill! Electromagnetic Bomb (Gunner)</value>
+    <value>绝技! 电磁爆弹(枪手)</value>
   </data>
   <data name="Skill_391401_Name" xml:space="preserve">
-    <value>Void Pulse</value>
+    <value>虚蚀脉冲</value>
   </data>
   <data name="Skill_683624_Name" xml:space="preserve">
-    <value>Continuous Health Regeneration BUFF</value>
+    <value>持续回复生命值BUFF</value>
   </data>
   <data name="Skill_700013_Name" xml:space="preserve">
-    <value>Dark Eclipse</value>
+    <value>暗蚀</value>
   </data>
   <data name="Skill_701001_Name" xml:space="preserve">
-    <value>Void Shadow Explosion</value>
+    <value>虚蚀之影爆炸</value>
   </data>
   <data name="Skill_701002_Name" xml:space="preserve">
-    <value>Void Wave Explosion</value>
+    <value>虚蚀波动爆炸</value>
   </data>
   <data name="Skill_1002440_Name" xml:space="preserve">
-    <value>Special Skill! Super Critical Hit (M'kor)</value>
+    <value>绝技！超会心(姆克兵长)</value>
   </data>
   <data name="Skill_1002830_Name" xml:space="preserve">
-    <value>Secret Skill! Frost Shock (Ice Devil)</value>
+    <value>奥义！冰霜震荡(冰魔)</value>
   </data>
   <data name="Skill_1005240_Name" xml:space="preserve">
-    <value>Special Skill! Hunting Slash (Sniper)</value>
+    <value>绝技! 追猎猛斩(尖兵)</value>
   </data>
   <data name="Skill_1005940_Name" xml:space="preserve">
-    <value>M'kor Berserker - Whirlwind Charge</value>
+    <value>姆克狂战士-旋风冲锋</value>
   </data>
   <data name="Skill_1006940_Name" xml:space="preserve">
-    <value>Secret Skill! Cocoon (Spider)</value>
+    <value>奥义! 茧房术(蜘蛛)</value>
   </data>
   <data name="Skill_1007601_Name" xml:space="preserve">
-    <value>Mutant Bee Skill 12</value>
+    <value>变异蜂技能12</value>
   </data>
   <data name="Skill_1007602_Name" xml:space="preserve">
-    <value>Mutant Bee Skill 3</value>
+    <value>变异蜂技能3</value>
   </data>
   <data name="Skill_1007741_Name" xml:space="preserve">
-    <value>Toxic Hive (Starting)</value>
+    <value>剧毒蜂巢（初始）</value>
   </data>
   <data name="Skill_1008040_Name" xml:space="preserve">
-    <value>Special Skill! Lightning Ball (Lightning Boar)</value>
+    <value>绝技! 雷光球(雷光野猪)</value>
   </data>
   <data name="Skill_1008140_Name" xml:space="preserve">
-    <value>Secret Skill! Hell Thrust (Iron Fang)</value>
+    <value>奥义！地狱突刺(铁牙)</value>
   </data>
   <data name="Skill_1008440_Name" xml:space="preserve">
-    <value>Secret Skill! Blue Wind Roar (Flying Fish)</value>
+    <value>奥义! 沧澜风啸(飞鱼)</value>
   </data>
   <data name="Skill_1008540_Name" xml:space="preserve">
-    <value>Secret Skill! Silent Tide (Lizardman King)</value>
+    <value>奥义！静默潮汐(蜥蜴人王)</value>
   </data>
   <data name="Skill_1008641_Name" xml:space="preserve">
-    <value>Special Skill! Whirlwind Strike (Little Wind Brother)</value>
+    <value>绝技！旋风打击(小风哥)</value>
   </data>
   <data name="Skill_1010440_Name" xml:space="preserve">
-    <value>Special Skill! Pressure Thunder (Lizardman Hunter) (Active)</value>
+    <value>绝技！强压之雷(蜥蜴人猎手)(主动)</value>
   </data>
   <data name="Skill_1700440_Name" xml:space="preserve">
-    <value>Secret Skill! Heavy Hammer Assault (Mutou)</value>
+    <value>奥义！重锤狂袭（姆头）</value>
   </data>
   <data name="Skill_1700820_Name" xml:space="preserve">
-    <value>Wolf Coordinated Attack</value>
+    <value>狼协同攻击</value>
   </data>
   <data name="Skill_1700824_Name" xml:space="preserve">
-    <value>Tail Drift</value>
+    <value>甩尾</value>
   </data>
   <data name="Skill_1700825_Name" xml:space="preserve">
-    <value>Wolf Assault</value>
+    <value>狼突击</value>
   </data>
   <data name="Skill_1700826_Name" xml:space="preserve">
-    <value>Wild Summon</value>
+    <value>狂野召唤</value>
   </data>
   <data name="Skill_1700827_Name" xml:space="preserve">
-    <value>Wolf Normal Attack</value>
+    <value>狼普攻</value>
   </data>
   <data name="Skill_2001740_Name" xml:space="preserve">
-    <value>Special Skill! Flash Strikes (Bandit Scout)</value>
+    <value>绝技！瞬步奇袭（山贼斥候）</value>
   </data>
   <data name="Skill_2002853_Name" xml:space="preserve">
-    <value>Special Skill! Falling Stars (Fire Brother)</value>
+    <value>绝技！碎星陨落（火哥）</value>
   </data>
   <data name="Skill_2031101_Name" xml:space="preserve">
-    <value>Lucky Strike (Tachi)</value>
+    <value>幸运一击(太刀)</value>
   </data>
   <data name="Skill_2031102_Name" xml:space="preserve">
-    <value>Lucky Strike (Frost Mage)</value>
+    <value>幸运一击(冰法)</value>
   </data>
   <data name="Skill_2031104_Name" xml:space="preserve">
-    <value>Lucky Strike (Lance)</value>
+    <value>幸运一击(长枪)</value>
   </data>
   <data name="Skill_2031105_Name" xml:space="preserve">
-    <value>Lucky Strike (Forest Language)</value>
+    <value>幸运一击(森语)</value>
   </data>
   <data name="Skill_2031106_Name" xml:space="preserve">
-    <value>Lucky Strike (Hand Cannon)</value>
+    <value>幸运一击(手炮)</value>
   </data>
   <data name="Skill_2031107_Name" xml:space="preserve">
-    <value>Lucky Strike (Great Blade)</value>
+    <value>幸运一击(巨刃)</value>
   </data>
   <data name="Skill_2031108_Name" xml:space="preserve">
-    <value>Lucky Strike (Ceremony Sword)</value>
+    <value>幸运一击(仪刀)</value>
   </data>
   <data name="Skill_2031109_Name" xml:space="preserve">
-    <value>Lucky Strike (Bow and Arrow)</value>
+    <value>幸运一击(弓箭)</value>
   </data>
   <data name="Skill_2031110_Name" xml:space="preserve">
-    <value>Lucky Strike (Sword and Shield)</value>
+    <value>幸运一击(剑盾)</value>
   </data>
   <data name="Skill_2031111_Name" xml:space="preserve">
-    <value>Lucky Strike (Guitar)</value>
+    <value>幸运一击(吉他)</value>
   </data>
   <data name="Skill_2110012_Name" xml:space="preserve">
-    <value>Ultimate! Pulse Blessing (King M'k)</value>
+    <value>奥义！脉冲祝祷（姆克王）</value>
   </data>
   <data name="Skill_2110062_Name" xml:space="preserve">
-    <value>Roaring Command (Goblin King Summons Greataxe Goblins)</value>
+    <value>怒吼指令(哥布林王召唤巨斧哥布林)</value>
   </data>
   <data name="Skill_2110066_Name" xml:space="preserve">
-    <value>Special Skill! Earth Shield (Bandit Guard Captain)</value>
+    <value>绝技！大地之盾(山贼护卫队长)</value>
   </data>
   <data name="Skill_2110071_Name" xml:space="preserve">
-    <value>Boar King's Chain Lightning Primary Buff</value>
+    <value>野猪王闪电链主Buff</value>
   </data>
   <data name="Skill_2110072_Name" xml:space="preserve">
-    <value>Boar King's Chain Lightning Variable A</value>
+    <value>野猪王闪电链衍生A</value>
   </data>
   <data name="Skill_2110073_Name" xml:space="preserve">
-    <value>Boar King's Chain Lightning Variable B</value>
+    <value>野猪王闪电链衍生B</value>
   </data>
   <data name="Skill_2110074_Name" xml:space="preserve">
-    <value>Boar King's Chain Lightning Variable C - Hit Effect</value>
+    <value>野猪王闪电链衍生C-命中效果</value>
   </data>
   <data name="Skill_2110083_Name" xml:space="preserve">
-    <value>Fire Healing</value>
+    <value>火魔治疗</value>
   </data>
   <data name="Skill_2110085_Name" xml:space="preserve">
-    <value>Thunder Seed (Olvera)</value>
+    <value>雷电之种(奥尔维拉)</value>
   </data>
   <data name="Skill_2110090_Name" xml:space="preserve">
-    <value>Void Ogre</value>
+    <value>虚蚀食人魔</value>
   </data>
   <data name="Skill_2110091_Name" xml:space="preserve">
-    <value>Void Damage Converted to Healing</value>
+    <value>虚蚀伤害转为治疗</value>
   </data>
   <data name="Skill_2110096_Name" xml:space="preserve">
-    <value>Ultimate! Thunder Roar (Gold Fang) (Thunder Strike)</value>
+    <value>奥义！雷霆咆哮(金牙)(雷击)</value>
   </data>
   <data name="Skill_2110099_Name" xml:space="preserve">
-    <value>Toxic Hive (Persistent)</value>
+    <value>剧毒蜂巢（持续）</value>
   </data>
   <data name="Skill_2201070_Name" xml:space="preserve">
-    <value>Block Damage Reduction</value>
+    <value>格挡减伤</value>
   </data>
   <data name="Skill_2201080_Name" xml:space="preserve">
-    <value>Block Recovery</value>
+    <value>格挡回复</value>
   </data>
   <data name="Skill_2201172_Name" xml:space="preserve">
-    <value>Breath of Fortitude</value>
+    <value>坚毅之息</value>
   </data>
   <data name="Skill_2201240_Name" xml:space="preserve">
-    <value>Shield Echo</value>
+    <value>护盾回声</value>
   </data>
   <data name="Skill_2201362_Name" xml:space="preserve">
-    <value>Sand Crystal Shock</value>
+    <value>沙晶石震荡</value>
   </data>
   <data name="Skill_2201410_Name" xml:space="preserve">
-    <value>Sandstone Revival</value>
+    <value>砂石复苏</value>
   </data>
   <data name="Skill_2201493_Name" xml:space="preserve">
-    <value>Recovery (Rock Shield)</value>
+    <value>回复（岩盾）</value>
   </data>
   <data name="Skill_2201570_Name" xml:space="preserve">
-    <value>Rock Shield</value>
+    <value>岩护</value>
   </data>
   <data name="Skill_2202091_Name" xml:space="preserve">
-    <value>Healing: Heal Link</value>
+    <value>治疗:治疗链接</value>
   </data>
   <data name="Skill_2202120_Name" xml:space="preserve">
-    <value>Eluna's Shield</value>
+    <value>艾露娜护盾</value>
   </data>
   <data name="Skill_2202211_Name" xml:space="preserve">
-    <value>Green Burst (Healing)</value>
+    <value>绿意之爆发（治疗）</value>
   </data>
   <data name="Skill_2202262_Name" xml:space="preserve">
-    <value>Recovery Aura Health Buff</value>
+    <value>复苏光环回血BUFF</value>
   </data>
   <data name="Skill_2202271_Name" xml:space="preserve">
-    <value>Holy Light from Heaven Activates Buff</value>
+    <value>天降圣光生效BUFF</value>
   </data>
   <data name="Skill_2202291_Name" xml:space="preserve">
-    <value>Life Gift - Healing Sub-Buff</value>
+    <value>生命馈赠-治疗子buff</value>
   </data>
   <data name="Skill_2202311_Name" xml:space="preserve">
-    <value>Healing: Nourishing Seed</value>
+    <value>治疗:滋养之种</value>
   </data>
   <data name="Skill_2002440_Name" xml:space="preserve">
-    <value>Secret! Thunder Prison Attack (Thunder Demon)</value>
+    <value>奥义！雷霆天牢引（雷魔）</value>
   </data>
   <data name="Skill_2202581_Name" xml:space="preserve">
-    <value>Collapse! Boom~</value>
+    <value>坍缩！boom~</value>
   </data>
   <data name="Skill_2202582_Name" xml:space="preserve">
-    <value>Collapse! Boom~</value>
+    <value>坍缩！boom~</value>
   </data>
   <data name="Skill_2203091_Name" xml:space="preserve">
-    <value>Life Drain (Bite Detonation)</value>
+    <value>生命流失（扑咬引爆）</value>
   </data>
   <data name="Skill_2203101_Name" xml:space="preserve">
-    <value>Life Drain</value>
+    <value>生命流失</value>
   </data>
   <data name="Skill_2203102_Name" xml:space="preserve">
-    <value>Life Drain (Coordinated Attack Detonation)</value>
+    <value>生命流失（协同攻击引爆）</value>
   </data>
   <data name="Skill_2203141_Name" xml:space="preserve">
-    <value>Life Drain (Ray Arrow Detonation)</value>
+    <value>生命流失（光追箭引爆）</value>
   </data>
   <data name="Skill_2203181_Name" xml:space="preserve">
-    <value>Lightning Shock</value>
+    <value>闪电冲击</value>
   </data>
   <data name="Skill_2203291_Name" xml:space="preserve">
-    <value>Falcon Strike</value>
+    <value>猎鹰出击</value>
   </data>
   <data name="Skill_2203302_Name" xml:space="preserve">
-    <value>Life Drain (Tail Sweep Detonation)</value>
+    <value>生命流失（扫尾引爆）</value>
   </data>
   <data name="Skill_2203311_Name" xml:space="preserve">
-    <value>Explosive Arrow (Splash)</value>
+    <value>爆炸箭矢（溅射）</value>
   </data>
   <data name="Skill_2203512_Name" xml:space="preserve">
-    <value>Trampled</value>
+    <value>践踏</value>
   </data>
   <data name="Skill_2203521_Name" xml:space="preserve">
-    <value>Implosion (Steel Beak Trigger)</value>
+    <value>内爆(钢制喙触发)</value>
   </data>
   <data name="Skill_2203621_Name" xml:space="preserve">
-    <value>Prism</value>
+    <value>光棱</value>
   </data>
   <data name="Skill_2203622_Name" xml:space="preserve">
-    <value>Prism Splash</value>
+    <value>光棱溅射</value>
   </data>
   <data name="Skill_2204081_Name" xml:space="preserve">
-    <value>Frostbolt Explosion</value>
+    <value>冰箭爆炸</value>
   </data>
   <data name="Skill_2204241_Name" xml:space="preserve">
-    <value>Frost Blast</value>
+    <value>冰霜冲击</value>
   </data>
   <data name="Skill_2204320_Name" xml:space="preserve">
-    <value>Icy Pulse</value>
+    <value>冰冷脉冲</value>
   </data>
   <data name="Skill_2205060_Name" xml:space="preserve">
-    <value>Fierce Strike</value>
+    <value>刚烈之击</value>
   </data>
   <data name="Skill_2205071_Name" xml:space="preserve">
-    <value>Rip</value>
+    <value>撕裂</value>
   </data>
   <data name="Skill_2205450_Name" xml:space="preserve">
-    <value>Wind Ring of Courage Lifesteal</value>
+    <value>勇气风环吸血</value>
   </data>
   <data name="Skill_2406140_Name" xml:space="preserve">
-    <value>Causes AoE when gaining a shield (Set)</value>
+    <value>获得护盾时造成aoe（套装）</value>
   </data>
   <data name="Skill_2206240_Name" xml:space="preserve">
-    <value>Holy Radiance</value>
+    <value>神圣光辉</value>
   </data>
   <data name="Skill_2206241_Name" xml:space="preserve">
-    <value>Holy Mark</value>
+    <value>神圣印记</value>
   </data>
   <data name="Skill_2206243_Name" xml:space="preserve">
-    <value>Holy Mark Damage</value>
+    <value>神圣印记伤害</value>
   </data>
   <data name="Skill_2206401_Name" xml:space="preserve">
-    <value>Holy Strike</value>
+    <value>神圣之击</value>
   </data>
   <data name="Skill_2206460_Name" xml:space="preserve">
-    <value>Shield Ward</value>
+    <value>盾击守护</value>
   </data>
   <data name="Skill_2206552_Name" xml:space="preserve">
-    <value>Core of Light</value>
+    <value>光明核心</value>
   </data>
   <data name="Skill_2207141_Name" xml:space="preserve">
-    <value>Musical Notes</value>
+    <value>音符</value>
   </data>
   <data name="Skill_2207151_Name" xml:space="preserve">
-    <value>Fiery Healing</value>
+    <value>炽焰治愈</value>
   </data>
   <data name="Skill_2207431_Name" xml:space="preserve">
-    <value>Flame Law Healing</value>
+    <value>炎律狂踏治疗</value>
   </data>
   <data name="Skill_2207500_Name" xml:space="preserve">
-    <value>Ultimate Attention</value>
+    <value>极意万众瞩目</value>
   </data>
   <data name="Skill_2207620_Name" xml:space="preserve">
-    <value>Energy Release</value>
+    <value>活力解放</value>
   </data>
   <data name="Skill_2207660_Name" xml:space="preserve">
-    <value>Ultimate Attention</value>
+    <value>极意万众瞩目</value>
   </data>
   <data name="Skill_2207681_Name" xml:space="preserve">
-    <value>Spiral Performance</value>
+    <value>螺旋演奏</value>
   </data>
   <data name="Skill_2900540_Name" xml:space="preserve">
-    <value>Ultimate! Instant Slash (Olvera)</value>
+    <value>奥义！瞬即斩(奥尔维拉)</value>
   </data>
   <data name="Skill_3001031_Name" xml:space="preserve">
-    <value>Void Aura</value>
+    <value>虚蚀光环</value>
   </data>
   <data name="Skill_3001170_Name" xml:space="preserve">
-    <value>Void Wave Health Recovery</value>
+    <value>虚蚀波动回血</value>
   </data>
   <data name="Skill_3081023_Name" xml:space="preserve">
-    <value>Special Skill! Super Heavy Slash (Shadow Swordsman Captain)</value>
+    <value>绝技! 超重斩(黯影剑士队长)</value>
   </data>
   <data name="Skill_3210021_Name" xml:space="preserve">
-    <value>Ultimate! Meteor Fall (Wind Brother) (Active)</value>
+    <value>奥义！流星陨落(风哥)(主动)</value>
   </data>
   <data name="Skill_3210031_Name" xml:space="preserve">
-    <value>Thunder Demon Passive</value>
+    <value>雷魔被动</value>
   </data>
   <data name="Skill_3210051_Name" xml:space="preserve">
-    <value>Bandit Passive</value>
+    <value>山贼被动</value>
   </data>
   <data name="Skill_3210061_Name" xml:space="preserve">
-    <value>Captain M'kor Passive</value>
+    <value>姆克兵长被动</value>
   </data>
   <data name="Skill_3210081_Name" xml:space="preserve">
-    <value>Lizardman Hunter Passive</value>
+    <value>蜥蜴人猎手被动</value>
   </data>
   <data name="Skill_3210092_Name" xml:space="preserve">
-    <value>Lizardman King Passive</value>
+    <value>蜥蜴人王被动</value>
   </data>
   <data name="Skill_3210101_Name" xml:space="preserve">
-    <value>King M'kor - Shield</value>
+    <value>姆克王-护盾</value>
   </data>
   <data name="Skill_3913001_Name" xml:space="preserve">
-    <value>Special Skill! Electromagnetic Bomb (Gunner)</value>
+    <value>绝技! 电磁爆弹(枪手)</value>
   </data>
   <data name="Skill_3936001_Name" xml:space="preserve">
-    <value>Special Skill! Silent Water (Lizardman Mage)</value>
+    <value>绝技！静默之水(蜥蜴人法师)</value>
   </data>
   <data name="Skill_10040102_Name" xml:space="preserve">
-    <value>Sword and Shield Goblin - Wind Blade Resonance</value>
+    <value>剑盾哥布林-风刃斩共鸣</value>
   </data>
-	
 </root>

@@ -216,7 +216,7 @@
   <data name="NpcTakeDamageLabel" xml:space="preserve">
     <value>Tanking</value>
   </data>
-  <data name="SettingsButtonLabel" xml:space="preserve">
+  <data name="Settings" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="ClearButtonLabel" xml:space="preserve">
@@ -556,49 +556,49 @@
     <value>Concerto</value>
   </data>
   <data name="SubProfession_IceSpear" xml:space="preserve">
-    <value>Ice Spear</value>
+    <value>Icicle</value>
   </data>
   <data name="SubProfession_Iai" xml:space="preserve">
     <value>Iai</value>
   </data>
   <data name="SubProfession_MoonBlade" xml:space="preserve">
-    <value>Moon Blade</value>
+    <value>Moonstrike</value>
   </data>
   <data name="SubProfession_EagleBow" xml:space="preserve">
-    <value>Eagle Bow</value>
+    <value>Falconry</value>
   </data>
   <data name="SubProfession_WolfBow" xml:space="preserve">
-    <value>Wolf Bow</value>
+    <value>Wildpack</value>
   </data>
   <data name="SubProfession_LightShield" xml:space="preserve">
-    <value>Light Shield</value>
+    <value>Shield</value>
   </data>
   <data name="SubProfession_RockShield" xml:space="preserve">
-    <value>Rock Shield</value>
+    <value>Earthfort</value>
   </data>
   <data name="SubProfession_Block" xml:space="preserve">
     <value>Block</value>
   </data>
   <data name="SubProfession_IceRay" xml:space="preserve">
-    <value>Ray</value>
+    <value>Frostbeam</value>
   </data>
   <data name="SubProfession_Lifebloom" xml:space="preserve">
-    <value>Healing</value>
+    <value>Lifebind</value>
   </data>
   <data name="SubProfession_Thornlash" xml:space="preserve">
-    <value>Penalty</value>
+    <value>Smite</value>
   </data>
   <data name="SubProfession_RagingSound" xml:space="preserve">
-    <value>Mad Sound</value>
+    <value>Dissonance</value>
   </data>
   <data name="SubProfession_Overdrive" xml:space="preserve">
-    <value>Heavy Armor</value>
+    <value>Vanguard</value>
   </data>
   <data name="SubProfession_Protection" xml:space="preserve">
-    <value>Shield</value>
+    <value>Recovery</value>
   </data>
   <data name="SubProfession_AirStyle" xml:space="preserve">
-    <value>Air Gun</value>
+    <value>Skyward</value>
   </data>
   <data name="Profession_Unknown" xml:space="preserve">
     <value>Unknown</value>
@@ -620,5 +620,158 @@
   </data>
   <data name="ModuleCalc_AttrRanking" xml:space="preserve">
     <value>Rank: </value>
+  </data>
+  <data name="Skill_Damage_Analysis" xml:space="preserve">
+    <value>Skill Damage Analysis</value>
+  </data>
+  <data name="Skill_Healing_Analysis" xml:space="preserve">
+    <value>Skill Healing Analysis</value>
+  </data>
+  <data name="Damage_Taken_Analysis" xml:space="preserve">
+    <value>Damage Taken Analysis</value>
+  </data>
+  <data name="SkillDetail_Label3" xml:space="preserve">
+    <value>Damage Summary</value>
+  </data>
+  <data name="SkillDetail_Label19" xml:space="preserve">
+    <value>Damage Distribution</value>
+  </data>
+  <data name="SkillDetail_Label1_TotalDamage" xml:space="preserve">
+    <value>Total Damage</value>
+  </data>
+  <data name="SkillDetail_Label2_DPS" xml:space="preserve">
+    <value>DPS</value>
+  </data>
+  <data name="SkillDetail_Label4_Damage_Crit" xml:space="preserve">
+    <value>Crit Rate</value>
+  </data>
+  <data name="SkillDetail_Label5_Damage_Lucky" xml:space="preserve">
+    <value>Lucky Rate</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByDamage" xml:space="preserve">
+    <value>Sort by Damage</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByDps" xml:space="preserve">
+    <value>Sort by DPS</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByHitCount" xml:space="preserve">
+    <value>Sort by Hit Count</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByCritRate" xml:space="preserve">
+    <value>Sort by Crit Rate</value>
+  </data>
+  <data name="SkillDetail_Label3_HealingInfo" xml:space="preserve">
+    <value>Healing Summary</value>
+  </data>
+  <data name="SkillDetail_Label1_TotalHealing" xml:space="preserve">
+    <value>Total Healing</value>
+  </data>
+  <data name="SkillDetail_Label2_HPS" xml:space="preserve">
+    <value>HPS</value>
+  </data>
+  <data name="SkillDetail_Label4_Healing_Crit" xml:space="preserve">
+    <value>Crit Rate</value>
+  </data>
+  <data name="SkillDetail_Label5_Healing_Lucky" xml:space="preserve">
+    <value>Lucky Rate</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByHealing" xml:space="preserve">
+    <value>Sort by Healing</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByHps" xml:space="preserve">
+    <value>Sort by HPS</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByHitCount_Healing" xml:space="preserve">
+    <value>Sort by Hit Count</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByCritRate_Healing" xml:space="preserve">
+    <value>Sort by Crit Rate</value>
+  </data>
+  <data name="SkillDetail_Label3_Damage_Taken_Info" xml:space="preserve">
+    <value>Damage Taken Summary</value>
+  </data>
+  <data name="SkillDetail_Label1_Total_Damage_Taken" xml:space="preserve">
+    <value>Total Damage Taken</value>
+  </data>
+  <data name="SkillDetail_Label2_DPS_Taken" xml:space="preserve">
+    <value>DPS Taken</value>
+  </data>
+  <data name="SkillDetail_Label4_Max_Damage_Taken" xml:space="preserve">
+    <value>Max Damage Taken</value>
+  </data>
+  <data name="SkillDetail_Label5_Min_Damage_Taken" xml:space="preserve">
+    <value>Min Damage Taken</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByDamageTaken" xml:space="preserve">
+    <value>Sort by Damage Taken</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByDpsTaken" xml:space="preserve">
+    <value>Sort by DPS Taken</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByHitCount_Taken" xml:space="preserve">
+    <value>Sort by Hit Count</value>
+  </data>
+  <data name="SkillDetail_Select1_Item_SortByCritRate_Taken" xml:space="preserve">
+    <value>Sort by Crit Rate</value>
+  </data>
+  <data name="SkillDetail_NumberOfCritHits" xml:space="preserve">
+    <value>Crit Hits</value>
+  </data>
+  <data name="SkillDetail_Dps/Hps/DTps real-time graph" xml:space="preserve">
+    <value>Dps/Hps/DTps real-time graph</value>
+  </data>
+  <data name="SkillDetail_Skill_Distribution" xml:space="preserve">
+    <value>Skill Distribution</value>
+  </data>
+  <data name="SkillDetail_Damage_Distribution" xml:space="preserve">
+    <value>Damage Distribution</value>
+  </data>
+  <data name="SkillDetail_CombatPower" xml:space="preserve">
+    <value>Ability Power: </value>
+  </data>
+  <data name="SkillDetail_Armband" xml:space="preserve">
+    <value>Armband: </value>
+  </data>
+  <data name="SkillDetail_Label17_Hits" xml:space="preserve">
+    <value>Hits</value>
+  </data>
+  <data name="SkillDetail_Label6_NormalDamage" xml:space="preserve">
+    <value>Normal Damage</value>
+  </data>
+  <data name="SkillDetail_Label7_CritDamage" xml:space="preserve">
+    <value>Crit Damage</value>
+  </data>
+  <data name="SkillDetail_Label14_LuckyHits" xml:space="preserve">
+    <value>Lucky Hits</value>
+  </data>
+  <data name="SkillDetail_Label8_LuckyDamage" xml:space="preserve">
+    <value>Lucky Damage</value>
+  </data>
+  <data name="SkillDetail_Label9_AvgDamage" xml:space="preserve">
+    <value>Avg Damage</value>
+  </data>
+  <data name="SkillDetail_Label13_HitsTaken" xml:space="preserve">
+    <value>Hits Taken</value>
+  </data>
+  <data name="SkillDetail_SkillName" xml:space="preserve">
+    <value>Skill Name</value>
+  </data>
+  <data name="SkillDetail_SkillDamage" xml:space="preserve">
+    <value>Damage</value>
+  </data>
+  <data name="SkillDetail_TotalDps" xml:space="preserve">
+    <value>Total DPS</value>
+  </data>
+  <data name="SkillDetail_CritRate" xml:space="preserve">
+    <value>Crit Rate</value>
+  </data>
+  <data name="SkillDetail_AvgPerHit" xml:space="preserve">
+    <value>Avg Per Hit</value>
+  </data>
+  <data name="SkillDetail_Percentage" xml:space="preserve">
+    <value>Total DMG %</value>
+  </data>
+  <data name="SkillDetail_HitCount" xml:space="preserve">
+    <value>Hit Count</value>
   </data>
 </root>

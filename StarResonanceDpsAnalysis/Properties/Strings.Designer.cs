@@ -79,6 +79,15 @@ namespace StarResonanceDpsAnalysis.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 人物承伤分析.
+        /// </summary>
+        internal static string Damage_Taken_Analysis {
+            get {
+                return ResourceManager.GetString("Damage_Taken_Analysis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 当前伤害.
         /// </summary>
         internal static string Header_Current_Damage {
@@ -1157,6 +1166,15 @@ namespace StarResonanceDpsAnalysis.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 基础设置.
+        /// </summary>
+        internal static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 鼠标穿透键：.
         /// </summary>
         internal static string Settings_Input1_Prefix {
@@ -1355,11 +1373,452 @@ namespace StarResonanceDpsAnalysis.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 基础设置.
+        ///   Looks up a localized string similar to 技能伤害分析.
         /// </summary>
-        internal static string SettingsButtonLabel {
+        internal static string Skill_Damage_Analysis {
             get {
-                return ResourceManager.GetString("SettingsButtonLabel", resourceCulture);
+                return ResourceManager.GetString("Skill_Damage_Analysis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 技能治疗分析.
+        /// </summary>
+        internal static string Skill_Healing_Analysis {
+            get {
+                return ResourceManager.GetString("Skill_Healing_Analysis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 臂章：.
+        /// </summary>
+        internal static string SkillDetail_Armband {
+            get {
+                return ResourceManager.GetString("SkillDetail_Armband", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 平均伤害.
+        /// </summary>
+        internal static string SkillDetail_AvgPerHit {
+            get {
+                return ResourceManager.GetString("SkillDetail_AvgPerHit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 战力：.
+        /// </summary>
+        internal static string SkillDetail_CombatPower {
+            get {
+                return ResourceManager.GetString("SkillDetail_CombatPower", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 暴击率.
+        /// </summary>
+        internal static string SkillDetail_CritRate {
+            get {
+                return ResourceManager.GetString("SkillDetail_CritRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 伤害分布.
+        /// </summary>
+        internal static string SkillDetail_Damage_Distribution {
+            get {
+                return ResourceManager.GetString("SkillDetail_Damage_Distribution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dps/Hps/DTps实时曲线图&quot;.
+        /// </summary>
+        internal static string SkillDetail_Dps_Hps_DTps_real_time_graph {
+            get {
+                return ResourceManager.GetString("SkillDetail_Dps/Hps/DTps real-time graph", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 命中次数.
+        /// </summary>
+        internal static string SkillDetail_HitCount {
+            get {
+                return ResourceManager.GetString("SkillDetail_HitCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 总承伤.
+        /// </summary>
+        internal static string SkillDetail_Label1_Total_Damage_Taken {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label1_Total_Damage_Taken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 总伤害.
+        /// </summary>
+        internal static string SkillDetail_Label1_TotalDamage {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label1_TotalDamage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 总治疗.
+        /// </summary>
+        internal static string SkillDetail_Label1_TotalHealing {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label1_TotalHealing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 挨打次数.
+        /// </summary>
+        internal static string SkillDetail_Label13_HitsTaken {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label13_HitsTaken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 幸运次数.
+        /// </summary>
+        internal static string SkillDetail_Label14_LuckyHits {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label14_LuckyHits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 命中次数.
+        /// </summary>
+        internal static string SkillDetail_Label17_Hits {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label17_Hits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 伤害分布.
+        /// </summary>
+        internal static string SkillDetail_Label19 {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label19", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 秒伤.
+        /// </summary>
+        internal static string SkillDetail_Label2_DPS {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label2_DPS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 秒承伤.
+        /// </summary>
+        internal static string SkillDetail_Label2_DPS_Taken {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label2_DPS_Taken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 秒治疗.
+        /// </summary>
+        internal static string SkillDetail_Label2_HPS {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label2_HPS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 伤害信息&quot;.
+        /// </summary>
+        internal static string SkillDetail_Label3 {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 承伤信息.
+        /// </summary>
+        internal static string SkillDetail_Label3_Damage_Taken_Info {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label3_Damage_Taken_Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 治疗信息.
+        /// </summary>
+        internal static string SkillDetail_Label3_HealingInfo {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label3_HealingInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 暴击率.
+        /// </summary>
+        internal static string SkillDetail_Label4_Damage_Crit {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label4_Damage_Crit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 暴击率.
+        /// </summary>
+        internal static string SkillDetail_Label4_Healing_Crit {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label4_Healing_Crit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 最大承伤.
+        /// </summary>
+        internal static string SkillDetail_Label4_Max_Damage_Taken {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label4_Max_Damage_Taken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 幸运率.
+        /// </summary>
+        internal static string SkillDetail_Label5_Damage_Lucky {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label5_Damage_Lucky", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 幸运率.
+        /// </summary>
+        internal static string SkillDetail_Label5_Healing_Lucky {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label5_Healing_Lucky", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 最小承伤.
+        /// </summary>
+        internal static string SkillDetail_Label5_Min_Damage_Taken {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label5_Min_Damage_Taken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 普通伤害.
+        /// </summary>
+        internal static string SkillDetail_Label6_NormalDamage {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label6_NormalDamage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 暴击伤害.
+        /// </summary>
+        internal static string SkillDetail_Label7_CritDamage {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label7_CritDamage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 幸运伤害.
+        /// </summary>
+        internal static string SkillDetail_Label8_LuckyDamage {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label8_LuckyDamage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 平均伤害.
+        /// </summary>
+        internal static string SkillDetail_Label9_AvgDamage {
+            get {
+                return ResourceManager.GetString("SkillDetail_Label9_AvgDamage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 暴击次数.
+        /// </summary>
+        internal static string SkillDetail_NumberOfCritHits {
+            get {
+                return ResourceManager.GetString("SkillDetail_NumberOfCritHits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 百分比.
+        /// </summary>
+        internal static string SkillDetail_Percentage {
+            get {
+                return ResourceManager.GetString("SkillDetail_Percentage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 按暴击率排序.
+        /// </summary>
+        internal static string SkillDetail_Select1_Item_SortByCritRate {
+            get {
+                return ResourceManager.GetString("SkillDetail_Select1_Item_SortByCritRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 按暴击率排序.
+        /// </summary>
+        internal static string SkillDetail_Select1_Item_SortByCritRate_Healing {
+            get {
+                return ResourceManager.GetString("SkillDetail_Select1_Item_SortByCritRate_Healing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 按暴击率排序.
+        /// </summary>
+        internal static string SkillDetail_Select1_Item_SortByCritRate_Taken {
+            get {
+                return ResourceManager.GetString("SkillDetail_Select1_Item_SortByCritRate_Taken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 按伤害排序.
+        /// </summary>
+        internal static string SkillDetail_Select1_Item_SortByDamage {
+            get {
+                return ResourceManager.GetString("SkillDetail_Select1_Item_SortByDamage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 按承伤排序.
+        /// </summary>
+        internal static string SkillDetail_Select1_Item_SortByDamageTaken {
+            get {
+                return ResourceManager.GetString("SkillDetail_Select1_Item_SortByDamageTaken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 按秒伤排序S.
+        /// </summary>
+        internal static string SkillDetail_Select1_Item_SortByDps {
+            get {
+                return ResourceManager.GetString("SkillDetail_Select1_Item_SortByDps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 按秒承伤排序.
+        /// </summary>
+        internal static string SkillDetail_Select1_Item_SortByDpsTaken {
+            get {
+                return ResourceManager.GetString("SkillDetail_Select1_Item_SortByDpsTaken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 按治疗量排序.
+        /// </summary>
+        internal static string SkillDetail_Select1_Item_SortByHealing {
+            get {
+                return ResourceManager.GetString("SkillDetail_Select1_Item_SortByHealing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 按命中次数排序.
+        /// </summary>
+        internal static string SkillDetail_Select1_Item_SortByHitCount {
+            get {
+                return ResourceManager.GetString("SkillDetail_Select1_Item_SortByHitCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 按命中次数排序.
+        /// </summary>
+        internal static string SkillDetail_Select1_Item_SortByHitCount_Healing {
+            get {
+                return ResourceManager.GetString("SkillDetail_Select1_Item_SortByHitCount_Healing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 按受击次数排序.
+        /// </summary>
+        internal static string SkillDetail_Select1_Item_SortByHitCount_Taken {
+            get {
+                return ResourceManager.GetString("SkillDetail_Select1_Item_SortByHitCount_Taken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 按HPS排序.
+        /// </summary>
+        internal static string SkillDetail_Select1_Item_SortByHps {
+            get {
+                return ResourceManager.GetString("SkillDetail_Select1_Item_SortByHps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 技能占比分布图.
+        /// </summary>
+        internal static string SkillDetail_Skill_Distribution {
+            get {
+                return ResourceManager.GetString("SkillDetail_Skill_Distribution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 伤害.
+        /// </summary>
+        internal static string SkillDetail_SkillDamage {
+            get {
+                return ResourceManager.GetString("SkillDetail_SkillDamage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 技能名.
+        /// </summary>
+        internal static string SkillDetail_SkillName {
+            get {
+                return ResourceManager.GetString("SkillDetail_SkillName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DPS/秒.
+        /// </summary>
+        internal static string SkillDetail_TotalDps {
+            get {
+                return ResourceManager.GetString("SkillDetail_TotalDps", resourceCulture);
             }
         }
         

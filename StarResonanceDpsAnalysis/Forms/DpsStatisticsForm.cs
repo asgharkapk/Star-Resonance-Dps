@@ -152,6 +152,8 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         private void button_AlwaysOnTop_Click(object sender, EventArgs e) // 置顶按钮点击事件
         {
             TopMost = !TopMost; // 简化切换
+            FormManager.skillDetailForm.TopMost = TopMost;
+
             button_AlwaysOnTop.Toggle = TopMost; // 同步按钮的视觉状态
         }
 
