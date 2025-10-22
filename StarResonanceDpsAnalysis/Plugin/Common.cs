@@ -71,7 +71,7 @@ namespace StarResonanceDpsAnalysis.Plugin
                 2306 => Properties.Strings.SubProfession_RagingSound,
                 120901 or 120902 => Properties.Strings.SubProfession_IceSpear,
                 1714 or 1734 => Properties.Strings.SubProfession_Iai,
-                44701 or 179906 => Properties.Strings.SubProfession_MoonBlade,
+                1715 or 1733 or 1742 => Properties.Strings.SubProfession_MoonBlade,
                 220112 or 2203622 or 220106 => Properties.Strings.SubProfession_EagleBow,
                 2292 or 1700820 or 1700825 or 1700827 => Properties.Strings.SubProfession_WolfBow,
                 1419 => Properties.Strings.SubProfession_AirStyle,

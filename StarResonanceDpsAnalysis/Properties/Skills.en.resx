@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Skill_1201_Name" xml:space="preserve">
+    <value>Raincall Surge</value>
+  </data>
   <data name="Skill_1202_Name" xml:space="preserve">
     <value>Rain Tide - Curving Bullet</value>
   </data>
@@ -127,10 +130,10 @@
     <value>Rain Tide - Basic Attack Stage 1</value>
   </data>
   <data name="Skill_1210_Name" xml:space="preserve">
-    <value>Water Vortex</value>
+    <value>Maelstrom</value>
   </data>
   <data name="Skill_1211_Name" xml:space="preserve">
-    <value>Clearfall Orb</value>
+    <value>Crystal Veil</value>
   </data>
   <data name="Skill_1216_Name" xml:space="preserve">
     <value>Enhanced Clearfall Orb</value>
@@ -139,43 +142,43 @@
     <value>Ice Tornado</value>
   </data>
   <data name="Skill_1222_Name" xml:space="preserve">
-    <value>Phantom Charge</value>
+    <value>Phantom Dash</value>
   </data>
   <data name="Skill_1223_Name" xml:space="preserve">
     <value>Phantom Dash</value>
   </data>
   <data name="Skill_1238_Name" xml:space="preserve">
-    <value>Water Tornado - Passive</value>
+    <value>Tidal Vortex - Passive Skill</value>
   </data>
   <data name="Skill_1239_Name" xml:space="preserve">
     <value>Meteor Storm</value>
   </data>
   <data name="Skill_1240_Name" xml:space="preserve">
-    <value>Freezing Wind</value>
+    <value>Frozen Gale</value>
   </data>
   <data name="Skill_1241_Name" xml:space="preserve">
-    <value>Frost Beam</value>
+    <value>Frostbeam</value>
   </data>
   <data name="Skill_1242_Name" xml:space="preserve">
-    <value>Frost Spear</value>
+    <value>Frost Lance</value>
   </data>
   <data name="Skill_1243_Name" xml:space="preserve">
-    <value>Ice Infusion</value>
+    <value>Permafrost</value>
   </data>
   <data name="Skill_1244_Name" xml:space="preserve">
     <value>Blizzard</value>
   </data>
   <data name="Skill_1245_Name" xml:space="preserve">
-    <value>Ice Sanctuary</value>
+    <value>Frost Shelter</value>
   </data>
   <data name="Skill_1246_Name" xml:space="preserve">
-    <value>Tide Convergence - Water Tornado</value>
+    <value>Tidepool</value>
   </data>
   <data name="Skill_1247_Name" xml:space="preserve">
     <value>Talent Triggered Comet</value>
   </data>
   <data name="Skill_1248_Name" xml:space="preserve">
-    <value>Absolute Cold: Snow Hymn</value>
+    <value>Glacier Hymn</value>
   </data>
   <data name="Skill_1249_Name" xml:space="preserve">
     <value>Cooperative Crystal</value>
@@ -202,22 +205,22 @@
     <value>Instant Blizzard</value>
   </data>
   <data name="Skill_1262_Name" xml:space="preserve">
-    <value>Meteor Storm</value>
+    <value>Ice Meteor Hologram</value>
   </data>
   <data name="Skill_1263_Name" xml:space="preserve">
-    <value>Absolute Cold: Snow Hymn</value>
+    <value>Staff Ultimate: Powerful Ice Meteor</value>
   </data>
   <data name="Skill_1401_Name" xml:space="preserve">
-    <value>Wind Elegance Dance - Sweep</value>
+    <value>Windborne Grace</value>
   </data>
   <data name="Skill_1402_Name" xml:space="preserve">
-    <value>Wind Elegance Dance - Rush/Smash</value>
+    <value>Normal Attack</value>
   </data>
   <data name="Skill_1403_Name" xml:space="preserve">
-    <value>Wind Elegance Dance - Spinning Kick</value>
+    <value>Normal Attack</value>
   </data>
   <data name="Skill_1404_Name" xml:space="preserve">
-    <value>Wind Elegance Dance - Down Smash</value>
+    <value>Normal Attack</value>
   </data>
   <data name="Skill_1405_Name" xml:space="preserve">
     <value>Gale Thrust</value>
@@ -226,58 +229,58 @@
     <value>Wind Elegance Dance</value>
   </data>
   <data name="Skill_1407_Name" xml:space="preserve">
-    <value>Wind God</value>
+    <value>Typhoon</value>
   </data>
   <data name="Skill_1409_Name" xml:space="preserve">
-    <value>Wind God: Breaking-Formation Wind</value>
+    <value>Typhoon Cleave</value>
   </data>
   <data name="Skill_1410_Name" xml:space="preserve">
-    <value>Wind God: Breaking-Formation Wind</value>
+    <value>Typhoon Cleave</value>
   </data>
   <data name="Skill_1411_Name" xml:space="preserve">
-    <value>Charging Blade</value>
+    <value>Swift Blade</value>
   </data>
   <data name="Skill_1418_Name" xml:space="preserve">
     <value>Gale Thrust</value>
   </data>
   <data name="Skill_1419_Name" xml:space="preserve">
-    <value>Soaring Return</value>
+    <value>Skyfall</value>
   </data>
   <data name="Skill_1420_Name" xml:space="preserve">
-    <value>Graceful Posture</value>
+    <value>Galeform</value>
   </data>
   <data name="Skill_1421_Name" xml:space="preserve">
-    <value>Spiral Stab</value>
+    <value>Spiral Thrust</value>
   </data>
   <data name="Skill_1422_Name" xml:space="preserve">
-    <value>Break Pursuit</value>
+    <value>Breach Pursuit</value>
   </data>
   <data name="Skill_1424_Name" xml:space="preserve">
-    <value>Moment</value>
+    <value>Instant Edge</value>
   </data>
   <data name="Skill_1425_Name" xml:space="preserve">
-    <value>Bird Throw</value>
+    <value>Falcon Toss</value>
   </data>
   <data name="Skill_1426_Name" xml:space="preserve">
-    <value>Wind God: Breaking-Formation Wind</value>
+    <value>Typhoon Cleave</value>
   </data>
   <data name="Skill_1427_Name" xml:space="preserve">
-    <value>Break Pursuit</value>
+    <value>Breach Pursuit</value>
   </data>
   <data name="Skill_1431_Name" xml:space="preserve">
-    <value>Sharp Impact (Wind God)</value>
+    <value>Sharp Impact</value>
   </data>
   <data name="Skill_1433_Name" xml:space="preserve">
-    <value>Ultimate: Storm Cut</value>
+    <value>Falcon Strike</value>
   </data>
   <data name="Skill_1434_Name" xml:space="preserve">
-    <value>Phantom Spiral</value>
+    <value>Vortex Strike</value>
   </data>
   <data name="Skill_1435_Name" xml:space="preserve">
-    <value>Dragon Cannon</value>
+    <value>Drake Cannon</value>
   </data>
   <data name="Skill_1501_Name" xml:space="preserve">
-    <value>Vine Control - Stage 1</value>
+    <value>Vines' Embrace</value>
   </data>
   <data name="Skill_1502_Name" xml:space="preserve">
     <value>Vine Control - Stage 2</value>
@@ -289,7 +292,7 @@
     <value>Vine Control - Stage 4</value>
   </data>
   <data name="Skill_1509_Name" xml:space="preserve">
-    <value>Hope Barrier</value>
+    <value>Divine Circle Bloom</value>
   </data>
   <data name="Skill_1517_Name" xml:space="preserve">
     <value>Vine Control - Red Light Counter</value>
@@ -298,34 +301,34 @@
     <value>Wild Bloom</value>
   </data>
   <data name="Skill_1527_Name" xml:space="preserve">
-    <value>Floral Rejuvenation</value>
+    <value>Bloomheal</value>
   </data>
   <data name="Skill_1529_Name" xml:space="preserve">
-    <value>Blooming Charge</value>
+    <value>Blossom Charge</value>
   </data>
   <data name="Skill_1541_Name" xml:space="preserve">
     <value>Wild Bloom</value>
   </data>
   <data name="Skill_1550_Name" xml:space="preserve">
-    <value>Unbridled Seed Stage 3 (Meteor)</value>
+    <value>Seed Meteor</value>
   </data>
   <data name="Skill_1551_Name" xml:space="preserve">
     <value>Wild Seed</value>
   </data>
   <data name="Skill_1556_Name" xml:space="preserve">
-    <value>Floral Rejuvenation</value>
+    <value>Flourish Seed</value>
   </data>
   <data name="Skill_1560_Name" xml:space="preserve">
-    <value>Regenerative Pulse - Spread Heal</value>
+    <value>Healing Ring (Spreads once, heals once)</value>
   </data>
   <data name="Skill_1561_Name" xml:space="preserve">
-    <value>Regenerative Pulse - Back-and-Forth Damage Heal</value>
+    <value>Healing Ring (Damages and heals back and forth)</value>
   </data>
   <data name="Skill_1562_Name" xml:space="preserve">
-    <value>Regenerative Pulse - Spread Heal</value>
+    <value>Healing Ring (Spreads once, heals once)</value>
   </data>
   <data name="Skill_1701_Name" xml:space="preserve">
-    <value>Way of the Blade: Judgement</value>
+    <value>Judgment Cut</value>
   </data>
   <data name="Skill_1702_Name" xml:space="preserve">
     <value>Way of the Blade: Judgement 2</value>
@@ -337,97 +340,97 @@
     <value>Way of the Blade: Judgement 4</value>
   </data>
   <data name="Skill_1705_Name" xml:space="preserve">
-    <value>Overcharge</value>
+    <value>Overdrive</value>
   </data>
   <data name="Skill_1711_Name" xml:space="preserve">
-    <value>Way of the Secret Blade</value>
+    <value>Blade Technique</value>
   </data>
   <data name="Skill_1712_Name" xml:space="preserve">
-    <value>Way of the Secret Blade 2</value>
+    <value>Blade Technique</value>
   </data>
   <data name="Skill_1713_Name" xml:space="preserve">
-    <value>Ultimate: Great Destruction Combo</value>
+    <value>Oblivion Combo</value>
   </data>
   <data name="Skill_1714_Name" xml:space="preserve">
-    <value>Iaijutsu Slash</value>
+    <value>Iaido Slash</value>
   </data>
   <data name="Skill_1715_Name" xml:space="preserve">
-    <value>Moon Shadow</value>
+    <value>Moonstrike</value>
   </data>
   <data name="Skill_1716_Name" xml:space="preserve">
-    <value>Overcharge</value>
+    <value>Overdrive</value>
   </data>
   <data name="Skill_1717_Name" xml:space="preserve">
-    <value>Flash</value>
+    <value>Flash strike</value>
   </data>
   <data name="Skill_1718_Name" xml:space="preserve">
-    <value>Thunderclap</value>
+    <value>Raijin Dash</value>
   </data>
   <data name="Skill_1719_Name" xml:space="preserve">
     <value>Scythe Wheel</value>
   </data>
   <data name="Skill_1720_Name" xml:space="preserve">
-    <value>Mind's Eye</value>
+    <value>True Sight</value>
   </data>
   <data name="Skill_1721_Name" xml:space="preserve">
-    <value>Secret Blade: One Form (Modified)</value>
+    <value>Judgment Cut I</value>
   </data>
   <data name="Skill_1722_Name" xml:space="preserve">
-    <value>Secret Blade: Two Form (Modified)</value>
+    <value>Judgment Cut II</value>
   </data>
   <data name="Skill_1724_Name" xml:space="preserve">
-    <value>Lightning Combo</value>
+    <value>Thundercut</value>
   </data>
   <data name="Skill_1725_Name" xml:space="preserve">
-    <value>Lightning Combo 2</value>
+    <value>Thundercut</value>
   </data>
   <data name="Skill_1726_Name" xml:space="preserve">
-    <value>Lightning Combo 3</value>
+    <value>Thundercut</value>
   </data>
   <data name="Skill_1728_Name" xml:space="preserve">
-    <value>Ultimate: Great Destruction Combo (Talent)</value>
+    <value>Oblivion Combo</value>
   </data>
   <data name="Skill_1730_Name" xml:space="preserve">
-    <value>Infinite Thunder Power</value>
+    <value>Volt Surge</value>
   </data>
   <data name="Skill_1731_Name" xml:space="preserve">
-    <value>Thousand Thunder Flash Intent</value>
+    <value>Stormflash</value>
   </data>
   <data name="Skill_1732_Name" xml:space="preserve">
-    <value>Thousand Thunder Flash Intent</value>
+    <value>Olvera Triggers Stormflash</value>
   </data>
   <data name="Skill_1733_Name" xml:space="preserve">
-    <value>Thunder Scythe</value>
+    <value>Storm Scythe</value>
   </data>
   <data name="Skill_1734_Name" xml:space="preserve">
-    <value>Thunder Iaijutsu Slash</value>
+    <value>Thunder Iaido Slash</value>
   </data>
   <data name="Skill_1735_Name" xml:space="preserve">
-    <value>Falling Dragon Flash</value>
+    <value>Dragonhammer</value>
   </data>
   <data name="Skill_1736_Name" xml:space="preserve">
-    <value>Divine Shadow Slash</value>
+    <value>Raijin Dash Slash</value>
   </data>
   <data name="Skill_1737_Name" xml:space="preserve">
-    <value>Scythe of Divine Punishment</value>
+    <value>Divine Sickle</value>
   </data>
   <data name="Skill_1738_Name" xml:space="preserve">
-    <value>Chaotic Slice</value>
+    <value>Chaos Breaker</value>
   </data>
   <data name="Skill_1739_Name" xml:space="preserve">
-    <value>Perception Slash</value>
+    <value>Piercing Slash</value>
   </data>
   <data name="Skill_1740_Name" xml:space="preserve">
-    <value>Thunder Scythe (on Lightning Rising Dragon Slash trigger)</value>
+    <value>Storm Scythe</value>
   </data>
   <data name="Skill_1741_Name" xml:space="preserve">
-    <value>Thunder Scythe</value>
+    <value>Storm Scythe</value>
   </data>
   <data name="Skill_1742_Name" xml:space="preserve">
-    <value>Lightning Rising Dragon Slash</value>
+    <value>Thundercut - Thundercleave</value>
   </data>
   <data name="Skill_1901_Name" xml:space="preserve">
-    <value>Sword of War End 1 / Rock Bomb</value>
+    <value>Halberd's Edge</value>
   </data>
   <data name="Skill_1902_Name" xml:space="preserve">
     <value>Sword of War End 2 / Rock Bomb</value>
@@ -439,13 +442,13 @@
     <value>Sword of War End 4</value>
   </data>
   <data name="Skill_1905_Name" xml:space="preserve">
-    <value>Dragon-Slaying Form</value>
+    <value>Dragon Slash</value>
   </data>
   <data name="Skill_1906_Name" xml:space="preserve">
-    <value>Backward Slash</value>
+    <value>Backstep Sweep</value>
   </data>
   <data name="Skill_1907_Name" xml:space="preserve">
-    <value>Rock Guard: Cracking Loop</value>
+    <value>Tectonic Ring</value>
   </data>
   <data name="Skill_1909_Name" xml:space="preserve">
     <value>Sword of War End (Jump)</value>
@@ -454,130 +457,130 @@
     <value>Sword of War End - Red Light Counter</value>
   </data>
   <data name="Skill_1917_Name" xml:space="preserve">
-    <value>Giant Rock Impact</value>
+    <value>Titan Charge</value>
   </data>
   <data name="Skill_1922_Name" xml:space="preserve">
-    <value>Shield Smash</value>
+    <value>Shield Bash</value>
   </data>
   <data name="Skill_1924_Name" xml:space="preserve">
-    <value>Star-Shatter Rush</value>
+    <value>Star Shatter</value>
   </data>
   <data name="Skill_1925_Name" xml:space="preserve">
     <value>Rage Burst</value>
   </data>
   <data name="Skill_1926_Name" xml:space="preserve">
-    <value>Sandstone Grip</value>
+    <value>Sandgrip</value>
   </data>
   <data name="Skill_1927_Name" xml:space="preserve">
-    <value>Sandstone Cloak (Initial)</value>
+    <value>Sandshroud</value>
   </data>
   <data name="Skill_1928_Name" xml:space="preserve">
-    <value>Stone Protection</value>
+    <value>Jerrad Earh Guard</value>
   </data>
   <data name="Skill_1929_Name" xml:space="preserve">
-    <value>Immovable Mountain</value>
+    <value>Unyielding Defense</value>
   </data>
   <data name="Skill_1930_Name" xml:space="preserve">
-    <value>Block Impact</value>
+    <value>Countercrush</value>
   </data>
   <data name="Skill_1931_Name" xml:space="preserve">
-    <value>Block Impact</value>
+    <value>Countercrush</value>
   </data>
   <data name="Skill_1932_Name" xml:space="preserve">
-    <value>Shield Smash</value>
+    <value>Shield Bash</value>
   </data>
   <data name="Skill_1933_Name" xml:space="preserve">
-    <value>Sword of War End</value>
+    <value>Halberd's Edge</value>
   </data>
   <data name="Skill_1934_Name" xml:space="preserve">
-    <value>Block Impact</value>
+    <value>Countercrush</value>
   </data>
   <data name="Skill_1935_Name" xml:space="preserve">
-    <value>Block Impact - Fury Strike</value>
+    <value>Countercrush</value>
   </data>
   <data name="Skill_1936_Name" xml:space="preserve">
-    <value>Giant Rock Body</value>
+    <value>Stoneform</value>
   </data>
   <data name="Skill_1937_Name" xml:space="preserve">
-    <value>Rock Rage Strike</value>
+    <value>Granite Fury</value>
   </data>
   <data name="Skill_1938_Name" xml:space="preserve">
     <value>Brave Bastion</value>
   </data>
   <data name="Skill_1939_Name" xml:space="preserve">
-    <value>Rock Rage Strike</value>
+    <value>Granite Fury</value>
   </data>
   <data name="Skill_1940_Name" xml:space="preserve">
     <value>Rage Burst</value>
   </data>
   <data name="Skill_1941_Name" xml:space="preserve">
-    <value>Star-Shatter Collapse</value>
+    <value>Starfall</value>
   </data>
   <data name="Skill_1942_Name" xml:space="preserve">
-    <value>Collapse</value>
+    <value>Rupture</value>
   </data>
   <data name="Skill_1943_Name" xml:space="preserve">
-    <value>Giant Rock Bombardment</value>
+    <value>Stone Fist</value>
   </data>
   <data name="Skill_1944_Name" xml:space="preserve">
     <value>Rage Burst</value>
   </data>
   <data name="Skill_1999_Name" xml:space="preserve">
-    <value>Power of Stone</value>
+    <value>Power of Rock</value>
   </data>
   <data name="Skill_2201_Name" xml:space="preserve">
-    <value>Deadeye</value>
+    <value>Bullseye</value>
   </data>
   <data name="Skill_2209_Name" xml:space="preserve">
-    <value>Sharp Eye: Light-energy Giant Arrow</value>
+    <value>Luminary Bolt</value>
   </data>
   <data name="Skill_2220_Name" xml:space="preserve">
     <value>Storm Arrow</value>
   </data>
   <data name="Skill_2221_Name" xml:space="preserve">
-    <value>Storm Arrow SP</value>
+    <value>Storm Arrow</value>
   </data>
   <data name="Skill_2222_Name" xml:space="preserve">
-    <value>Double Shot</value>
+    <value>Double Arrow</value>
   </data>
   <data name="Skill_2224_Name" xml:space="preserve">
-    <value>Deadly Shot - Quad Shot</value>
+    <value>Lethal Shot</value>
   </data>
   <data name="Skill_2230_Name" xml:space="preserve">
-    <value>Raging Shot</value>
+    <value>Torrent Volley</value>
   </data>
   <data name="Skill_2231_Name" xml:space="preserve">
-    <value>Mental Focus</value>
+    <value>Focus</value>
   </data>
   <data name="Skill_2232_Name" xml:space="preserve">
-    <value>Rain of Arrows</value>
+    <value>Arrow Rain</value>
   </data>
   <data name="Skill_2233_Name" xml:space="preserve">
-    <value>Concentrated Shot</value>
+    <value>Powerdraw</value>
   </data>
   <data name="Skill_2234_Name" xml:space="preserve">
-    <value>Light Bomb</value>
+    <value>Radiance Barrage</value>
   </data>
   <data name="Skill_2235_Name" xml:space="preserve">
-    <value>Intimidating Shot</value>
+    <value>Deter Shot</value>
   </data>
   <data name="Skill_2237_Name" xml:space="preserve">
-    <value>Call of the Wild</value>
+    <value>Wildcall</value>
   </data>
   <data name="Skill_2238_Name" xml:space="preserve">
-    <value>Explosive Shot</value>
+    <value>Blast Shot</value>
   </data>
   <data name="Skill_2239_Name" xml:space="preserve">
-    <value>Explosive Arrow Phase 2</value>
+    <value>Explosive Arrow II</value>
   </data>
   <data name="Skill_2240_Name" xml:space="preserve">
-    <value>Soaring Star Strike - Enhanced Raging Shot</value>
+    <value>Sky Piercing Star Strike</value>
   </data>
   <data name="Skill_2241_Name" xml:space="preserve">
     <value>Celestial Eagle</value>
   </data>
   <data name="Skill_2242_Name" xml:space="preserve">
-    <value>Trampled Beasts</value>
+    <value>Beast Stampede</value>
   </data>
   <data name="Skill_2288_Name" xml:space="preserve">
     <value>Light Bomb</value>
@@ -592,31 +595,31 @@
     <value>Double Star Arrow</value>
   </data>
   <data name="Skill_2292_Name" xml:space="preserve">
-    <value>Phantom Wolf - Bite</value>
+    <value>Phantom Direwolves</value>
   </data>
   <data name="Skill_2293_Name" xml:space="preserve">
-    <value>Talent - Light Rift</value>
+    <value>Talent: Photon Crack</value>
   </data>
   <data name="Skill_2294_Name" xml:space="preserve">
-    <value>Light Will - Quadruple Arrow</value>
+    <value>Lethal Shot</value>
   </data>
   <data name="Skill_2295_Name" xml:space="preserve">
-    <value>Sharp Eyes: Light Giant Arrow (Arrow Array Damage)</value>
+    <value>Ultimate - Gravity Gathering Orb</value>
   </data>
   <data name="Skill_2296_Name" xml:space="preserve">
     <value>Phantom Eagle</value>
   </data>
   <data name="Skill_2301_Name" xml:space="preserve">
-    <value>String Plucking - 1st Stage</value>
+    <value>Resonant Strings</value>
   </data>
   <data name="Skill_2302_Name" xml:space="preserve">
-    <value>String Plucking - 2nd Stage</value>
+    <value>Beat Performer ATK_01</value>
   </data>
   <data name="Skill_2303_Name" xml:space="preserve">
-    <value>String Plucking - 3rd Stage</value>
+    <value>Beat Performer ATK_03</value>
   </data>
   <data name="Skill_2304_Name" xml:space="preserve">
-    <value>String Plucking - 4th Stage</value>
+    <value>Beat Performer ATK_04</value>
   </data>
   <data name="Skill_2306_Name" xml:space="preserve">
     <value>Amplified Beat</value>
@@ -625,55 +628,55 @@
     <value>Healing Beat</value>
   </data>
   <data name="Skill_2308_Name" xml:space="preserve">
-    <value>Gathering Movement</value>
+    <value>Harmonic Anthem</value>
   </data>
   <data name="Skill_2309_Name" xml:space="preserve">
-    <value>Flame Fantasy</value>
+    <value>Rhapsody of Flame</value>
   </data>
   <data name="Skill_2310_Name" xml:space="preserve">
-    <value>Singing: Heroic Movement</value>
+    <value>Heroic Melody</value>
   </data>
   <data name="Skill_2311_Name" xml:space="preserve">
-    <value>Singing: Healing Movement</value>
+    <value>Healing Melody</value>
   </data>
   <data name="Skill_2312_Name" xml:space="preserve">
-    <value>Surging Quintet Damage</value>
+    <value>Fivefold Crescendo</value>
   </data>
   <data name="Skill_2313_Name" xml:space="preserve">
-    <value>Passionate Spread</value>
+    <value>Passion Burst</value>
   </data>
   <data name="Skill_2314_Name" xml:space="preserve">
-    <value>Level Up: Blast the Audience</value>
+    <value>Rock the Stage</value>
   </data>
   <data name="Skill_2315_Name" xml:space="preserve">
     <value>Encore</value>
   </data>
   <data name="Skill_2316_Name" xml:space="preserve">
-    <value>Attracting Attention</value>
+    <value>Center Stage</value>
   </data>
   <data name="Skill_2317_Name" xml:space="preserve">
-    <value>Fierce Swing 1</value>
+    <value>Fierce Strike</value>
   </data>
   <data name="Skill_2318_Name" xml:space="preserve">
-    <value>Complete! Healing Movement</value>
+    <value>Finale! Healing Movement</value>
   </data>
   <data name="Skill_2319_Name" xml:space="preserve">
-    <value>Sonic Surge</value>
+    <value>Sound Wave Surge</value>
   </data>
   <data name="Skill_2320_Name" xml:space="preserve">
-    <value>Sound Tower Explosion</value>
+    <value>Flame Blast</value>
   </data>
   <data name="Skill_2321_Name" xml:space="preserve">
-    <value>String Tap 2</value>
+    <value>String Strike</value>
   </data>
   <data name="Skill_2322_Name" xml:space="preserve">
-    <value>String Tap 3</value>
+    <value>Beat Performer ATK_02a</value>
   </data>
   <data name="Skill_2323_Name" xml:space="preserve">
-    <value>String Tap 4</value>
+    <value>Beat Performer ATK_03a</value>
   </data>
   <data name="Skill_2324_Name" xml:space="preserve">
-    <value>String Tap 5</value>
+    <value>Beat Performer ATK_04a</value>
   </data>
   <data name="Skill_2329_Name" xml:space="preserve">
     <value>Flame Dancer</value>
@@ -685,40 +688,40 @@
     <value>Sonic Flame</value>
   </data>
   <data name="Skill_2332_Name" xml:space="preserve">
-    <value>Excited Passion</value>
+    <value>Passion Fury</value>
   </data>
   <data name="Skill_2335_Name" xml:space="preserve">
-    <value>Upgraded - Infinite Fantasy</value>
+    <value>Infinite Rhapsody</value>
   </data>
   <data name="Skill_2336_Name" xml:space="preserve">
-    <value>Upgraded - Tour Song</value>
+    <value>Concert Circuit</value>
   </data>
   <data name="Skill_2352_Name" xml:space="preserve">
-    <value>Healing Eagle</value>
+    <value>Celestial Eagle - Eagle</value>
   </data>
   <data name="Skill_2361_Name" xml:space="preserve">
-    <value>Healing Rhythm Copy</value>
+    <value>Healing Beat copy</value>
   </data>
   <data name="Skill_2362_Name" xml:space="preserve">
-    <value>Sonic Judgment</value>
+    <value>Healing Beat copy</value>
   </data>
   <data name="Skill_2363_Name" xml:space="preserve">
-    <value>Surging Quintet Copy</value>
+    <value>Healing Beat copy</value>
   </data>
   <data name="Skill_2364_Name" xml:space="preserve">
-    <value>Upgrade: Explosive Full-Time Explosion Copy</value>
+    <value>Rock the Stage copy</value>
   </data>
   <data name="Skill_2365_Name" xml:space="preserve">
-    <value>Upgrade: Infinite Fantasy Copy</value>
+    <value>Infinite Rhapsody copy</value>
   </data>
   <data name="Skill_2366_Name" xml:space="preserve">
-    <value>Upgrade: Tour Song Copy</value>
+    <value>Concert Circuit copy</value>
   </data>
   <data name="Skill_2399_Name" xml:space="preserve">
-    <value>Sounding Milk Stick</value>
+    <value>Sound Healing Staff</value>
   </data>
   <data name="Skill_2401_Name" xml:space="preserve">
-    <value>Sword of Justice - Stage 1</value>
+    <value>Blade of Justice</value>
   </data>
   <data name="Skill_2402_Name" xml:space="preserve">
     <value>Sword of Justice - Stage 2</value>
@@ -730,19 +733,19 @@
     <value>Sword of Justice - Stage 4</value>
   </data>
   <data name="Skill_2405_Name" xml:space="preserve">
-    <value>Heroic Shield Bash</value>
+    <value>Valor Bash</value>
   </data>
   <data name="Skill_2406_Name" xml:space="preserve">
-    <value>Vanguard Strike/Vanguard Pursuit</value>
+    <value>Vanguard Strike</value>
   </data>
   <data name="Skill_2407_Name" xml:space="preserve">
-    <value>Awesome Power: Holy Light Infusion</value>
+    <value>Radiant Infusion</value>
   </data>
   <data name="Skill_2408_Name" xml:space="preserve">
-    <value>Throw Shield</value>
+    <value>Shield Toss</value>
   </data>
   <data name="Skill_2409_Name" xml:space="preserve">
-    <value>Holy Ring</value>
+    <value>Divine Circle</value>
   </data>
   <data name="Skill_2410_Name" xml:space="preserve">
     <value>Judgment</value>
@@ -754,31 +757,31 @@
     <value>Reckoning</value>
   </data>
   <data name="Skill_2413_Name" xml:space="preserve">
-    <value>Scorching Reckoning</value>
+    <value>Inferno Reckon</value>
   </data>
   <data name="Skill_2414_Name" xml:space="preserve">
     <value>Holy Barrier</value>
   </data>
   <data name="Skill_2415_Name" xml:space="preserve">
-    <value>Guardian of the Light</value>
+    <value>Aegis Ward</value>
   </data>
   <data name="Skill_2416_Name" xml:space="preserve">
-    <value>Conviction</value>
+    <value>Condemn</value>
   </data>
   <data name="Skill_2417_Name" xml:space="preserve">
-    <value>Enhanced Conviction</value>
+    <value>Enhanced Condemn</value>
   </data>
   <data name="Skill_2419_Name" xml:space="preserve">
-    <value>Ruthless Crusade</value>
+    <value>Zeal Crusade</value>
   </data>
   <data name="Skill_2420_Name" xml:space="preserve">
-    <value>Bright Resolve</value>
+    <value>Radiance</value>
   </data>
   <data name="Skill_2421_Name" xml:space="preserve">
-    <value>Holy Sword</value>
+    <value>Sacred Blade</value>
   </data>
   <data name="Skill_2425_Name" xml:space="preserve">
-    <value>Throw Shield</value>
+    <value>Shield Toss</value>
   </data>
   <data name="Skill_2450_Name" xml:space="preserve">
     <value>Bright Blast</value>
@@ -787,16 +790,16 @@
     <value>Judgment (Holy Trigger)</value>
   </data>
   <data name="Skill_2452_Name" xml:space="preserve">
-    <value>Scorching Holy Sword of Judgment</value>
+    <value>Scorching Judgment Sacred Blade</value>
   </data>
   <data name="Skill_3698_Name" xml:space="preserve">
     <value>Wind Goblin King (Passive)</value>
   </data>
   <data name="Skill_3901_Name" xml:space="preserve">
-    <value>Secret! Flame Roar (Fire Demon)</value>
+    <value>Arcane! Flame Roar</value>
   </data>
   <data name="Skill_3925_Name" xml:space="preserve">
-    <value>Ultimate Skill! Invisible Impact (Troll)</value>
+    <value>Stunt! Invisible Impact</value>
   </data>
   <data name="Skill_20301_Name" xml:space="preserve">
     <value>Life Blossom</value>
@@ -937,10 +940,10 @@
     <value>Goblin Crossbowman Active</value>
   </data>
   <data name="Skill_102640_Name" xml:space="preserve">
-    <value>Special Skill! Hog Rush (Mighty Boar)</value>
+    <value>Stunt! Boarrier Rush</value>
   </data>
   <data name="Skill_101112_Name" xml:space="preserve">
-    <value>Pet Eagle Quick Turn</value>
+    <value>Companion Eagle Quick Spin</value>
   </data>
   <data name="Skill_120201_Name" xml:space="preserve">
     <value>Rain and Tide - Curved Bullet</value>
@@ -1015,10 +1018,10 @@
     <value>Infusion (Double Infusion Extra)</value>
   </data>
   <data name="Skill_155101_Name" xml:space="preserve">
-    <value>Raikiri</value>
+    <value>Thundercut - Iai</value>
   </data>
   <data name="Skill_155102_Name" xml:space="preserve">
-    <value>Raikiri - Final Attack</value>
+    <value>Thundercut - Final Attack</value>
   </data>
   <data name="Skill_179906_Name" xml:space="preserve">
     <value>Moon Blade Spin</value>
@@ -1030,13 +1033,13 @@
     <value>Divine Shadow Slash - Final Attack</value>
   </data>
   <data name="Skill_179908_Name" xml:space="preserve">
-    <value>Blade Intent Lightning Strike</value>
+    <value>Thunder Strike</value>
   </data>
   <data name="Skill_199902_Name" xml:space="preserve">
-    <value>Earth Collapse and Mountain Destruction</value>
+    <value>Rage Burst Stone</value>
   </data>
   <data name="Skill_199903_Name" xml:space="preserve">
-    <value>Giant Rock Bombardment</value>
+    <value>Stone Fist</value>
   </data>
   <data name="Skill_220101_Name" xml:space="preserve">
     <value>Every Shot Targets</value>
@@ -1162,49 +1165,49 @@
     <value>Void Wave Explosion</value>
   </data>
   <data name="Skill_1002440_Name" xml:space="preserve">
-    <value>Special Skill! Super Critical Hit (M'kor)</value>
+    <value>Stunt! Super Critical</value>
   </data>
   <data name="Skill_1002830_Name" xml:space="preserve">
-    <value>Secret Skill! Frost Shock (Ice Devil)</value>
+    <value>Arcane! Frostquake</value>
   </data>
   <data name="Skill_1005240_Name" xml:space="preserve">
-    <value>Special Skill! Hunting Slash (Sniper)</value>
+    <value>Stunt! Predator Slash</value>
   </data>
   <data name="Skill_1005940_Name" xml:space="preserve">
-    <value>M'kor Berserker - Whirlwind Charge</value>
+    <value>Muku Vanguard - Whirlwind Charge</value>
   </data>
   <data name="Skill_1006940_Name" xml:space="preserve">
-    <value>Secret Skill! Cocoon (Spider)</value>
+    <value>Arcane! Cocoon Tech</value>
   </data>
   <data name="Skill_1007601_Name" xml:space="preserve">
-    <value>Mutant Bee Skill 12</value>
+    <value>Void Bzzar Basic Attack</value>
   </data>
   <data name="Skill_1007602_Name" xml:space="preserve">
-    <value>Mutant Bee Skill 3</value>
+    <value>Void Bzzar - Big Explosion</value>
   </data>
   <data name="Skill_1007741_Name" xml:space="preserve">
-    <value>Toxic Hive (Starting)</value>
+    <value>Arcane! Poison Explosion Avatar</value>
   </data>
   <data name="Skill_1008040_Name" xml:space="preserve">
-    <value>Special Skill! Lightning Ball (Lightning Boar)</value>
+    <value>Stunt! Thunder Ball</value>
   </data>
   <data name="Skill_1008140_Name" xml:space="preserve">
-    <value>Secret Skill! Hell Thrust (Iron Fang)</value>
+    <value>Ultimate - Hell Stab</value>
   </data>
   <data name="Skill_1008440_Name" xml:space="preserve">
-    <value>Secret Skill! Blue Wind Roar (Flying Fish)</value>
+    <value>Arcane! Azure Gale</value>
   </data>
   <data name="Skill_1008540_Name" xml:space="preserve">
-    <value>Secret Skill! Silent Tide (Lizardman King)</value>
+    <value>Arcane! Silent Tide</value>
   </data>
   <data name="Skill_1008641_Name" xml:space="preserve">
-    <value>Special Skill! Whirlwind Strike (Little Wind Brother)</value>
+    <value>Stunt! Whirlwind Strike</value>
   </data>
   <data name="Skill_1010440_Name" xml:space="preserve">
-    <value>Special Skill! Pressure Thunder (Lizardman Hunter) (Active)</value>
+    <value>Stunt! Thunder Suppress</value>
   </data>
   <data name="Skill_1700440_Name" xml:space="preserve">
-    <value>Secret Skill! Heavy Hammer Assault (Mutou)</value>
+    <value>Arcane! Furious Hammer</value>
   </data>
   <data name="Skill_1700820_Name" xml:space="preserve">
     <value>Wolf Coordinated Attack</value>
@@ -1213,49 +1216,49 @@
     <value>Tail Drift</value>
   </data>
   <data name="Skill_1700825_Name" xml:space="preserve">
-    <value>Wolf Assault</value>
+    <value>Companion - Foxen Pounce</value>
   </data>
   <data name="Skill_1700826_Name" xml:space="preserve">
-    <value>Wild Summon</value>
+    <value>Companion - Powerful Pounce</value>
   </data>
   <data name="Skill_1700827_Name" xml:space="preserve">
-    <value>Wolf Normal Attack</value>
+    <value>Companion - Basic Attack</value>
   </data>
   <data name="Skill_2001740_Name" xml:space="preserve">
-    <value>Special Skill! Flash Strikes (Bandit Scout)</value>
+    <value>Stunt! Blink Ambush</value>
   </data>
   <data name="Skill_2002853_Name" xml:space="preserve">
     <value>Special Skill! Falling Stars (Fire Brother)</value>
   </data>
   <data name="Skill_2031101_Name" xml:space="preserve">
-    <value>Lucky Strike (Tachi)</value>
+    <value>Lucky Strike (Stormblade)</value>
   </data>
   <data name="Skill_2031102_Name" xml:space="preserve">
     <value>Lucky Strike (Frost Mage)</value>
   </data>
   <data name="Skill_2031104_Name" xml:space="preserve">
-    <value>Lucky Strike (Lance)</value>
+    <value>Lucky Strike (Wind Knight)</value>
   </data>
   <data name="Skill_2031105_Name" xml:space="preserve">
-    <value>Lucky Strike (Forest Language)</value>
+    <value>Lucky Strike (Verdant Oracle)</value>
   </data>
   <data name="Skill_2031106_Name" xml:space="preserve">
     <value>Lucky Strike (Hand Cannon)</value>
   </data>
   <data name="Skill_2031107_Name" xml:space="preserve">
-    <value>Lucky Strike (Great Blade)</value>
+    <value>Lucky Strike (Heavy Guardian)</value>
   </data>
   <data name="Skill_2031108_Name" xml:space="preserve">
     <value>Lucky Strike (Ceremony Sword)</value>
   </data>
   <data name="Skill_2031109_Name" xml:space="preserve">
-    <value>Lucky Strike (Bow and Arrow)</value>
+    <value>Lucky Strike (Marksman)</value>
   </data>
   <data name="Skill_2031110_Name" xml:space="preserve">
-    <value>Lucky Strike (Sword and Shield)</value>
+    <value>Lucky Strike (Shield Knight)</value>
   </data>
   <data name="Skill_2031111_Name" xml:space="preserve">
-    <value>Lucky Strike (Guitar)</value>
+    <value>Lucky Strike (Beat Performer)</value>
   </data>
   <data name="Skill_2110012_Name" xml:space="preserve">
     <value>Ultimate! Pulse Blessing (King M'k)</value>
@@ -1342,7 +1345,7 @@
     <value>Healing: Nourishing Seed</value>
   </data>
   <data name="Skill_2002440_Name" xml:space="preserve">
-    <value>Secret! Thunder Prison Attack (Thunder Demon)</value>
+    <value>Arcane! Thunderfall Grasp</value>
   </data>
   <data name="Skill_2202581_Name" xml:space="preserve">
     <value>Collapse! Boom~</value>
@@ -1447,7 +1450,7 @@
     <value>Spiral Performance</value>
   </data>
   <data name="Skill_2900540_Name" xml:space="preserve">
-    <value>Ultimate! Instant Slash (Olvera)</value>
+    <value>Arcane! Flash Execution</value>
   </data>
   <data name="Skill_3001031_Name" xml:space="preserve">
     <value>Void Aura</value>
@@ -1456,7 +1459,7 @@
     <value>Void Wave Health Recovery</value>
   </data>
   <data name="Skill_3081023_Name" xml:space="preserve">
-    <value>Special Skill! Super Heavy Slash (Shadow Swordsman Captain)</value>
+    <value>Stunt! Heavy Slash</value>
   </data>
   <data name="Skill_3210021_Name" xml:space="preserve">
     <value>Ultimate! Meteor Fall (Wind Brother) (Active)</value>
@@ -1483,10 +1486,9 @@
     <value>Special Skill! Electromagnetic Bomb (Gunner)</value>
   </data>
   <data name="Skill_3936001_Name" xml:space="preserve">
-    <value>Special Skill! Silent Water (Lizardman Mage)</value>
+    <value>Murloc Mage Silence Pool</value>
   </data>
   <data name="Skill_10040102_Name" xml:space="preserve">
     <value>Sword and Shield Goblin - Wind Blade Resonance</value>
   </data>
-	
 </root>
