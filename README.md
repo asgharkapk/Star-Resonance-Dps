@@ -1,40 +1,70 @@
-A fork of https://github.com/anying1073/StarResonanceDps
+# Star Resonance DPS Analysis Tool (Fork)
 
-I just translated it and fixed some bugs.
-The owners are working on another release soon that will include translations.
+A fork of [StarResonanceDps](https://github.com/anying1073/StarResonanceDps).
 
-# 星痕共鸣DPS统计工具
+This fork includes translations and several bug fixes. The original authors are planning a new release soon, which may include official translations.
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-brightgreen.svg)](https://www.gnu.org/licenses/agpl-3.0.txt)
 
-本项目关键数据抓取与分析部分基于 [StarResonanceDamageCounter](https://github.com/dmlgzs/StarResonanceDamageCounter) 项目移植而来，感谢原作者对于本项目的帮助。
+---
 
-该工具无需修改游戏客户端，不违反游戏服务条款。该工具旨在帮助玩家更好地理解战斗数据，减少无效提升，提升游戏体验。使用该工具前，请确保不会将数据结果用于战力歧视等破坏游戏社区环境的行为。
+## About
 
-## 🚀 快速开始
+This tool is a DPS (damage-per-second) analysis and statistics tool for **Star Resonance**.  
 
-### 前置要求
+The core data collection and analysis features are ported from [StarResonanceDamageCounter](https://github.com/dmlgzs/StarResonanceDamageCounter). We thank the original author for their contributions.
 
-- .NET 8.0
+**Important:** This tool does **not** modify the game client and does **not** violate the game’s terms of service. Its purpose is to help players better understand combat data, optimize gameplay, and reduce ineffective grinding.  
 
-## 📄 许可证
-
-[![AGPLv3](https://www.gnu.org/graphics/agplv3-with-text-162x68.png)](LICENSE)
-
-本项目采用 [GNU AFFERO GENERAL PUBLIC LICENSE version 3](LICENSE) 许可证。
-
-使用本项目即表示您同意遵守该许可证的条款。
-
-不欢迎某些不遵守本许可证的人。不欢迎某些修改或翻译了开源代码却做闭源、开源一更新闭源就跟进的人。
-
-## 👥 贡献
-
-欢迎提交 Issue 和 Pull Request 来改进项目！
-
-## ⭐ 支持
-
-如果这个项目对您有帮助，请给它一个 Star ⭐
+Please use this tool responsibly. Do **not** use its results for unfair discrimination or other actions that harm the game community.
 
 ---
 
-**免责声明**：本工具仅用于游戏数据分析学习目的，不得用于任何违反游戏服务条款的行为。使用者需自行承担相关风险。项目开发者不对任何他人使用本工具的恶意战力歧视行为负责。请在使用前确保遵守游戏社区的相关规定和道德标准。
+## 🚀 Quick Start
+
+### Requirements
+
+- [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+
+### Installation & Usage
+
+1. Clone or download this repository.
+2. Open the project in your preferred .NET IDE.
+3. Build and run the application.
+4. Follow the in-app instructions to analyze combat data.
+
+---
+
+## 📄 License
+
+This project is licensed under the [GNU Affero General Public License v3 (AGPLv3)](LICENSE).  
+
+[![AGPLv3](https://www.gnu.org/graphics/agplv3-with-text-162x68.png)](LICENSE)
+
+By using this tool, you agree to comply with the terms of this license.  
+
+**Note:** We do not support users who violate the license, or those who take open-source code, modify or translate it, and then make it closed-source immediately after an update.
+
+---
+
+## 👥 Contributing
+
+Contributions are welcome!  
+
+- Submit **issues** for bugs or feature requests.
+- Open **pull requests** for improvements, fixes, or enhancements.
+
+---
+
+## ⭐ Support
+
+If this project helps you, please give it a **Star ⭐** on GitHub.
+
+---
+
+## ⚠️ Disclaimer
+
+This tool is intended **only for learning and analyzing game data**.  
+It must **not** be used for any actions that violate the game's terms of service.  
+
+Users assume all responsibility for their use of this tool. The developers are **not responsible** for any malicious or unfair behavior, such as power discrimination or harassment in the game. Please ensure your usage complies with the game's community rules and ethical standards.
