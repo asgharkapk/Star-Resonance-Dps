@@ -10,8 +10,9 @@ namespace StarResonanceDpsAnalysis.Plugin
         {
             BorderlessForm.AutoHandDpi = AutoHandDpi; //自动处理DPi
 
-            BorderlessForm.Radius = 6; //圆角
-            BorderlessForm.Shadow = 10; //阴影大小
+            // Compact Theme Settings
+            BorderlessForm.Radius = 3;         // was 6 → tighter corners
+            BorderlessForm.Shadow = 4;         // was 10 → thinner shadow
             BorderlessForm.BorderWidth = 0; //边框宽度
             BorderlessForm.UseDwm = false; //关闭系统窗口预览
             //BorderlessForm.Opacity = AppConfig.Transparency / 100;

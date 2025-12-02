@@ -197,7 +197,8 @@ namespace StarResonanceDpsAnalysis.Control
                 AutoSize = true,
                 BackColor = Color.Transparent,
                 BorderStyle = BorderStyle.None,
-                Margin = new Padding(0, 0, 0, 15) // 增加底部间距来替代分隔线的视觉分割效果
+                // CHANGED: Reduced bottom margin from 15 to 5 for compact look
+                Margin = new Padding(0, 0, 0, 5) // 增加底部间距来替代分隔线的视觉分割效果 //Increasing the bottom spacing to replace the visual segmentation effect of the dividing line
             };
 
             // 启用双缓冲优化滑动显示
@@ -220,7 +221,8 @@ namespace StarResonanceDpsAnalysis.Control
             var titleLabel = new System.Windows.Forms.Label
             {
                 Text = groupTitle,
-                Font = new Font("Microsoft YaHei UI", 9.5F, FontStyle.Bold),
+                // CHANGED: Reduced font size from 9.5F to 8.5F
+                Font = new Font("Microsoft YaHei UI", 8.5F, FontStyle.Bold),
                 ForeColor = AppConfig.IsLight ? Color.FromArgb(51, 51, 51) : Color.FromArgb(220, 220, 220),
                 AutoSize = true,
                 Location = new Point(0, currentY),
@@ -229,13 +231,17 @@ namespace StarResonanceDpsAnalysis.Control
                 UseCompatibleTextRendering = false // 使用新的文本渲染
             };
             groupContainer.Controls.Add(titleLabel);
-            currentY += titleLabel.Height + 6;
+            // CHANGED: Reduced vertical gap after title from 6 to 4
+            currentY += titleLabel.Height + 4;
 
             // 创建选项区域 - 使用更紧凑的布局
-            var optionsPanel = CreateCompactOptionsGrid(itemKeys, panelWidth - 15);
-            optionsPanel.Location = new Point(15, currentY);
+            // CHANGED: Reduced indentation calculation from 15 to 10
+            var optionsPanel = CreateCompactOptionsGrid(itemKeys, panelWidth - 10);
+            // CHANGED: Reduced Left Location (indentation) from 15 to 10
+            optionsPanel.Location = new Point(10, currentY);
             groupContainer.Controls.Add(optionsPanel);
-            currentY += optionsPanel.Height + 8;
+            // CHANGED: Reduced bottom gap from 8 to 4
+            currentY += optionsPanel.Height + 4;
 
             // 移除分隔线 - 这是导致卡顿的主要原因
             // 使用底部间距来替代分隔线的视觉效果

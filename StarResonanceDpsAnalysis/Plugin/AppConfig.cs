@@ -35,23 +35,23 @@ namespace StarResonanceDpsAnalysis.Plugin
         {
             get
             {
-                int height = 50;
+                int height = 30;
                 switch(dpi)
                 {
                     case 1:
-                        height = 35;
+                        height = 26;
                         break;
                     case (float)1.25:
-                        height = 45;
+                        height = 30;
                         break;
                     case (float)1.5:
-                        height = 45;
+                        height = 32;
                         break;
                     case (float)1.75:
-                        height = 45;
+                        height = 34;
                         break;
                     case 2:
-                        height = 45;
+                        height = 36;
                         break;
                 
                 }
@@ -59,42 +59,42 @@ namespace StarResonanceDpsAnalysis.Plugin
                 return height;
             }
         }
-        public static Size ProgressBarImageSize = new Size(25, 25);
+        public static Size ProgressBarImageSize = new Size(18, 18);
         public static RenderContent.ContentOffset ProgressBarImage
         {
             get
             {
-                int x = 64;
+                int x = 48;
                 if(dpi==1)
                 {
-                    x = 55;
+                    x = 40;
                 }
 
                 return new RenderContent.ContentOffset { X = x, Y = 0 };
             }
         }
-        public static RenderContent.ContentOffset ProgressBarNmae = new RenderContent.ContentOffset { X = 88, Y = 1 };
+        public static RenderContent.ContentOffset ProgressBarNmae = new RenderContent.ContentOffset { X = 70, Y = 1 };
         public static RenderContent.ContentOffset ProgressBarHarm
         {
             get
             {
-                int x = ProgressBarProportion.X - 50;
+                int x = ProgressBarProportion.X - 25;
                 switch(dpi)
                 {
                     case 1:
-                        x = -35;
+                        x = -22;
                         break;
                     case (float)1.25:
-                        x = -40;
+                        x = -28;
                         break;
                     case (float)1.5:
-                        x = ProgressBarProportion.X - 45;
+                        x = ProgressBarProportion.X - 30;
                         break;
                     case (float)1.75:
-                        x = ProgressBarProportion.X - 55;
+                        x = ProgressBarProportion.X - 38;
                         break;
                     case 2:
-                        x = ProgressBarProportion.X - 60;
+                        x = ProgressBarProportion.X - 42;
                         break;
                 }
                 if(dpi==1)
@@ -105,14 +105,14 @@ namespace StarResonanceDpsAnalysis.Plugin
                 return new RenderContent.ContentOffset { X = x, Y = 0 };
             }
         }
-        public static RenderContent.ContentOffset ProgressBarProportion = new RenderContent.ContentOffset { X = -6, Y = 0 };
+        public static RenderContent.ContentOffset ProgressBarProportion = new RenderContent.ContentOffset { X = -10, Y = 0 };
         #region 字体
         /// <summary>
         /// 进度条字体
         /// </summary>
         public static Font ProgressBarFont
         {
-            get => HandledResources.GetHarmonyOS_SansFont(9);
+            get => HandledResources.GetHarmonyOS_SansFont(8);
         }
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace StarResonanceDpsAnalysis.Plugin
         public static Font DigitalFont
         {
 
-            get => HandledResources.GetHarmonyOS_SansFont(9);
+            get => HandledResources.GetHarmonyOS_SansFont(8);
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace StarResonanceDpsAnalysis.Plugin
         /// </summary>
         public static Font SaoFont
         {
-            get => HandledResources.GetSAOWelcomeTTFont(10);
+            get => HandledResources.GetSAOWelcomeTTFont(9);
         }
 
 
@@ -138,7 +138,7 @@ namespace StarResonanceDpsAnalysis.Plugin
         /// </summary>
         public static Font TitleFont
         {
-            get => HandledResources.GetSAOWelcomeTTFont(12);
+            get => HandledResources.GetSAOWelcomeTTFont(10);
         }
 
         /// <summary>
@@ -146,12 +146,12 @@ namespace StarResonanceDpsAnalysis.Plugin
         /// </summary>
         public static Font HeaderFont
         {
-            get => HandledResources.GetAliMaMaShuHeiTiFont(10);
+            get => HandledResources.GetAliMaMaShuHeiTiFont(9);
         }
 
         public static Font BoldHarmonyFont
         {
-            get => HandledResources.GetHarmonyOS_SansBoldFont(9);
+            get => HandledResources.GetHarmonyOS_SansBoldFont(8);
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace StarResonanceDpsAnalysis.Plugin
         /// </summary>
         public static Font ContentFont
         {
-            get => HandledResources.GetHarmonyOS_SansFont(9);
+            get => HandledResources.GetHarmonyOS_SansFont(8);
         }
 
         #endregion
