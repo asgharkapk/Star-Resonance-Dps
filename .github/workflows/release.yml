@@ -36,7 +36,12 @@ jobs:
       - name: Generate commit log
         run: |
           echo "### Commits in this release" > release_body.md
-          git log --pretty=format:"- %h %s (%an)" $(git describe --tags --abbrev=0 --tags --match "v*")..HEAD >> release_body.md
+          PREV_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          if [ -z "$PREV_TAG" ]; then
+            echo "- Initial release" >> release_body.md
+          else
+            git log --pretty=format:"- %h %s (%an)" $PREV_TAG..HEAD >> release_body.md
+          fi
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
