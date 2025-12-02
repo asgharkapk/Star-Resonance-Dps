@@ -39,9 +39,13 @@ jobs:
         shell: pwsh
         run: |
           "### Commits in this release" | Out-File -FilePath release_body.md -Encoding utf8
-      
-          $prev = git describe --tags --abbrev=0 2>$null || $LASTEXITCODE = 0
-      
+          
+          # Try to get previous tag without failing the workflow
+          $prev = git describe --tags --abbrev=0 2>$null
+          if ($LASTEXITCODE -ne 0) {
+              $prev = $null
+          }
+          
           if (-not $prev) {
               "- Initial release" | Out-File -FilePath release_body.md -Append -Encoding utf8
           }
