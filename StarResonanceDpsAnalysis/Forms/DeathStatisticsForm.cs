@@ -43,14 +43,14 @@ namespace StarResonanceDpsAnalysis.Forms
 
 
             table_DpsDetailDataTable.Columns = new AntdUI.ColumnCollection
-            {   new("", "序号")
+            {   new("Serial Number", "Serial Number")
                 {
 
                     Render = (value, record, rowIndex) => rowIndex + 1,
                     Fixed = true
                 },
-                new AntdUI.Column("NickName","玩家昵称"){ Fixed = true},
-                new AntdUI.Column("TotalDeathCount","死亡次数"){ Fixed = true},
+                new AntdUI.Column("NickName","NickName"){ Fixed = true},
+                new AntdUI.Column("TotalDeathCount","TotalDeathCount"){ Fixed = true},
 
 
             };
