@@ -610,7 +610,8 @@ namespace StarResonanceDpsAnalysis.Forms
                         DictList[p.Uid] = row;
                     }
 
-                    string share = $"{Math.Round(p.Total / teamSum * 100d, 0, MidpointRounding.AwayFromZero)}%";
+                    int thedeathCount = StarResonanceDpsAnalysis.GetPlayerDeathCount(p.Uid);
+                    string share = $"💀{thedeathCount}";
                     row[0].Image = profBmp;
                     // 只要子流派；没有子流派就用战力；否则只显示昵称
                     string sp = Common.GetTranslatedSubProfession(p.SubProfession);
