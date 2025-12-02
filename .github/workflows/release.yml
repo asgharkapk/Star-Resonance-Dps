@@ -43,12 +43,19 @@ jobs:
       - name: Generate commit log
         run: |
           echo "### Commits in this release" > release_body.md
-          PREV_TAG=$(git describe --tags --abbrev=0 --match "v*" 2>/dev/null || echo "")
-          if [ -z "$PREV_TAG" ]; then
+
+          # Get previous tag (if exists)
+          $PREV_TAG = git describe --tags --abbrev=0 --match "v*" 2>$null
+
+          if (-not $PREV_TAG) {
+            Write-Host "No previous tag found → Initial release"
             echo "- Initial release" >> release_body.md
-          else
-            git log --pretty=format:"- %h %s (%an)" $PREV_TAG..HEAD >> release_body.md
-          fi
+          }
+          else {
+            Write-Host "Previous tag: $PREV_TAG"
+            git log --pretty=format:"- %h %s (%an)" "$PREV_TAG..HEAD" >> release_body.md
+          }
+        shell: pwsh
           
       - name: Create Release
         uses: softprops/action-gh-release@v1
