@@ -33,10 +33,16 @@ jobs:
           $Version = "v${{ github.run_number }}"
           Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-$Version.zip"
 
+      - name: Generate commit log
+        run: |
+          echo "### Commits in this release" > release_body.md
+          git log --pretty=format:"- %h %s (%an)" $(git describe --tags --abbrev=0 --tags --match "v*")..HEAD >> release_body.md
+
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ github.run_number }}
           name: Release v${{ github.run_number }}
           files: ./Star-Resonance-Dps-v${{ github.run_number }}.zip
+          body_path: release_body.md
           generate_release_notes: true
