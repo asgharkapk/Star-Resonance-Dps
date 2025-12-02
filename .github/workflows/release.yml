@@ -35,10 +35,20 @@ jobs:
           $Version = "v${{ github.run_number }}"
           Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-$Version.zip"
 
+      - name: Fetch full history
+        run: |
+          git fetch --unshallow || true
+          git fetch --tags
+      
       - name: Generate commit log
         run: |
           echo "### Commits in this release" > release_body.md
-          git log --pretty=format:"- %h %s (%an)" $(git describe --tags --abbrev=0 --tags)..HEAD >> release_body.md
+          PREV_TAG=$(git describe --tags --abbrev=0 --match "v*" 2>/dev/null || echo "")
+          if [ -z "$PREV_TAG" ]; then
+            echo "- Initial release" >> release_body.md
+          else
+            git log --pretty=format:"- %h %s (%an)" $PREV_TAG..HEAD >> release_body.md
+          fi
           
       - name: Create Release
         uses: softprops/action-gh-release@v1
