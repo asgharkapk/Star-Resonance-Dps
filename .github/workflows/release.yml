@@ -2,6 +2,8 @@ name: Auto Release
 
 on:
   push:
+      branches:
+      - en_translation   # Trigger on push to en_translation
   workflow_dispatch: # Allows you to run this manually from the Actions tab
 
 jobs:
@@ -33,15 +35,20 @@ jobs:
           $Version = "v${{ github.run_number }}"
           Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-$Version.zip"
 
-      - name: Generate commit log
+      - name: Generate Release Body (PowerShell)
+        shell: pwsh
         run: |
-          echo "### Commits in this release" > release_body.md
-          PREV_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-          if [ -z "$PREV_TAG" ]; then
-            echo "- Initial release" >> release_body.md
-          else
-            git log --pretty=format:"- %h %s (%an)" $PREV_TAG..HEAD >> release_body.md
-          fi
+          "### Commits in this release" | Out-File -FilePath release_body.md -Encoding utf8
+      
+          $prev = git describe --tags --abbrev=0 2>$null
+      
+          if (-not $prev) {
+              "- Initial release" | Out-File -FilePath release_body.md -Append -Encoding utf8
+          }
+          else {
+              git log --pretty=format:"- %h %s (%an)" "$prev..HEAD" |
+                  Out-File -FilePath release_body.md -Append -Encoding utf8
+          }
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
