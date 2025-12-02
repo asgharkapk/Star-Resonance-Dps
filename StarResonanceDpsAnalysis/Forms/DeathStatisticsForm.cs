@@ -107,12 +107,12 @@ namespace StarResonanceDpsAnalysis.Forms
             if (totalRow != null)
             {
                 totalRow.TotalDeathCount = totalDeaths;
-                totalRow.NickName = "总计";
+                totalRow.NickName = "total";
             }
             else
             {
                 DeathStatisticsTableDatas.DeathStatisticsTable
-                    .Add(new DeathStatisticsTable(0, "总计", totalDeaths));
+                    .Add(new DeathStatisticsTable(0, "total", totalDeaths));
             }
         }
 
