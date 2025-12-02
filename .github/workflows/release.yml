@@ -35,37 +35,11 @@ jobs:
           $Version = "v${{ github.run_number }}"
           Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-$Version.zip"
 
-      - name: Generate Release Body (PowerShell)
-        shell: pwsh
+      - name: Generate commit log
         run: |
-          $ErrorActionPreference = "SilentlyContinue"
-          $PSNativeCommandUseErrorActionPreference = $true
-        
-          "### Commits in this release" | Out-File -FilePath release_body.md -Encoding utf8
-        
-          # ---- SAFE GET PREVIOUS TAG ----
-          $prev = $null
-          try {
-              $prev = git describe --tags --abbrev=0 2>$null
-          }
-          catch {
-              $prev = $null
-          }
-        
-          # ---- WRITE RELEASE BODY ----
-          if (-not $prev) {
-              "- Initial release" | Out-File -FilePath release_body.md -Append -Encoding utf8
-          }
-          else {
-              try {
-                  git log --pretty=format:"- %h %s (%an)" "$prev..HEAD" 2>$null |
-                      Out-File -FilePath release_body.md -Append -Encoding utf8
-              }
-              catch {
-                  "- Failed to load commit list" | Out-File -FilePath release_body.md -Append -Encoding utf8
-              }
-          }
-
+          echo "### Commits in this release" > release_body.md
+          git log --pretty=format:"- %h %s (%an)" $(git describe --tags --abbrev=0 --tags)..HEAD >> release_body.md
+          
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
