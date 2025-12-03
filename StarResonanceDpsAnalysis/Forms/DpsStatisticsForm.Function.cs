@@ -44,7 +44,7 @@ namespace StarResonanceDpsAnalysis.Forms
             if (AppConfig.GetConfigExists())
             {
                 AppConfig.ClearPicture = AppConfig.GetValue("UserConfig", "ClearPicture", "1").ToInt();
-                AppConfig.NickName = AppConfig.GetValue("UserConfig", "NickName", "未知");
+                AppConfig.NickName = AppConfig.GetValue("UserConfig", "NickName", "unknown");
                 AppConfig.Uid = (ulong)AppConfig.GetValue("UserConfig", "Uid", "0").ToInt();
                 AppConfig.Profession = AppConfig.GetValue("UserConfig", "Profession", Properties.Strings.Profession_Unknown);
                 AppConfig.CombatPower = AppConfig.GetValue("UserConfig", "CombatPower", "0").ToInt();
@@ -611,7 +611,7 @@ namespace StarResonanceDpsAnalysis.Forms
                     }
 
                     int thedeathCount = FullRecord.GetPlayerDeathCount(checked((ulong)p.Uid));
-                    string share = $"💀{thedeathCount}";
+                    string share = $"💀{thedeathCount}"; //(like a Label, TextBox, or Button) doesn’t support emojis
                     row[0].Image = profBmp;
                     // 只要子流派；没有子流派就用战力；否则只显示昵称
                     string sp = Common.GetTranslatedSubProfession(p.SubProfession);

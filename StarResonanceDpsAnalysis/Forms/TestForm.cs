@@ -44,12 +44,12 @@ namespace StarResonanceDpsAnalysis.Forms
             sortedProgressBarList1.OrderCallback = (i) => $"{i:d2}";
             sortedProgressBarList1.OrderColor = Color.Fuchsia;
             sortedProgressBarList1.OrderFont = new Font("平方韶华体", 24f, FontStyle.Bold, GraphicsUnit.Pixel);
-            sortedProgressBarList1.OrderImages =
-            [
-                new Bitmap(new MemoryStream(Resources.皇冠)),
-                new Bitmap(new MemoryStream(Resources.皇冠白))
-            ];
-            sortedProgressBarList1.OrderImageOffset = new RenderContent.ContentOffset { X = 10, Y = 0 };
+            sortedProgressBarList1.OrderImages = null;
+        //    [
+        //        new Bitmap(new MemoryStream(Resources.皇冠)),
+        //        new Bitmap(new MemoryStream(Resources.皇冠白))
+         //   ];
+            sortedProgressBarList1.OrderImageOffset = new RenderContent.ContentOffset { X = 0, Y = 0 };
             //sortedProgressBarList1.OrderImageRenderSize = new Size(32, 32);
 
             numericUpDown1.Minimum = -1;
@@ -92,7 +92,7 @@ namespace StarResonanceDpsAnalysis.Forms
                             {
                                 Type = RenderContent.ContentType.Text,
                                 Align = RenderContent.ContentAlign.MiddleRight,
-                                Offset = new RenderContent.ContentOffset { X = -90, Y = 4 },
+                                Offset = new RenderContent.ContentOffset { X = -85, Y = 4 },
                                 Text = $"3.0万(1.4w)",
                                 ForeColor = Color.Black,
                                 Font = new Font("Microsoft YaHei UI", 16f, FontStyle.Regular, GraphicsUnit.Pixel),
@@ -104,7 +104,8 @@ namespace StarResonanceDpsAnalysis.Forms
                                 Offset = new RenderContent.ContentOffset { X = 0, Y = 0 },
                                 Text = $"{numericUpDown2.Value:f2}%",
                                 ForeColor = Color.Black,
-                                Font = new Font("黑体", 24f, FontStyle.Regular, GraphicsUnit.Pixel),
+                                Font = new Font("Segoe UI Emoji", 24f, FontStyle.Regular, GraphicsUnit.Pixel), // supports emoji
+                                //BackColor = Color.FromArgb(128, 128, 128, 128) // transparent gray (A=128, R=128, G=128, B=128)
                             },
                         ],
                     });
