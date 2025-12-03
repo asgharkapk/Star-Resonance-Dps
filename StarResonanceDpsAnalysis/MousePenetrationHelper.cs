@@ -13,7 +13,7 @@ namespace StarResonanceDpsAnalysis
         private const int WS_THICKFRAME = 0x00040000; // WS_SIZEBOX
         private const int WS_EX_LAYERED = 0x00080000;
         private const int WS_EX_TRANSPARENT = 0x00000020;
-
+        private const uint LWA_COLORKEY = 0x00000001;
         private const int LWA_ALPHA = 0x2;
 
         [DllImport("user32.dll", EntryPoint = "GetWindowLong")]
