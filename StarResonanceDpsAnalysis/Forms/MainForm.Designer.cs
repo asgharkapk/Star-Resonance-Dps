@@ -45,7 +45,7 @@
             pageHeader_MainHeader.DividerShow = true;
             pageHeader_MainHeader.DividerThickness = 2F;
             pageHeader_MainHeader.Dock = DockStyle.Top;
-            pageHeader_MainHeader.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            pageHeader_MainHeader.Font = new Font("Alimama ShuHeiTi", 8F, FontStyle.Bold, GraphicsUnit.Point, 134);
             pageHeader_MainHeader.Icon = (Image)resources.GetObject("pageHeader_MainHeader.Icon");
             pageHeader_MainHeader.Location = new Point(0, 0);
             pageHeader_MainHeader.Margin = new Padding(2, 2, 2, 2);
@@ -112,7 +112,7 @@
             // 
             label_ThankHelpFromTip_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label_ThankHelpFromTip_2.AutoSize = true;
-            label_ThankHelpFromTip_2.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_ThankHelpFromTip_2.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_ThankHelpFromTip_2.Location = new Point(334, 401);
             label_ThankHelpFromTip_2.Margin = new Padding(0);
             label_ThankHelpFromTip_2.Name = "label_ThankHelpFromTip_2";
@@ -124,7 +124,7 @@
             // 
             linkLabel_NodeJsProject.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             linkLabel_NodeJsProject.AutoSize = true;
-            linkLabel_NodeJsProject.Font = new Font("HarmonyOS Sans SC", 9F);
+            linkLabel_NodeJsProject.Font = new Font("HarmonyOS Sans SC", 8F);
             linkLabel_NodeJsProject.Location = new Point(78, 401);
             linkLabel_NodeJsProject.Margin = new Padding(0);
             linkLabel_NodeJsProject.Name = "linkLabel_NodeJsProject";
@@ -138,7 +138,7 @@
             // 
             label_ThankHelpFromTip_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label_ThankHelpFromTip_1.AutoSize = true;
-            label_ThankHelpFromTip_1.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_ThankHelpFromTip_1.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_ThankHelpFromTip_1.Location = new Point(15, 401);
             label_ThankHelpFromTip_1.Margin = new Padding(4, 0, 0, 0);
             label_ThankHelpFromTip_1.Name = "label_ThankHelpFromTip_1";
@@ -150,11 +150,11 @@
             // 
             label_Copyright.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label_Copyright.AutoSize = true;
-            label_Copyright.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_Copyright.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_Copyright.Location = new Point(15, 424);
             label_Copyright.Margin = new Padding(4, 0, 4, 0);
             label_Copyright.Name = "label_Copyright";
-            label_Copyright.Size = new Size(407, 40);
+            label_Copyright.Size = new Size(600, 55); // widen + increase height
             label_Copyright.TabIndex = 21;
             label_Copyright.Text = "Copyright (C) 2025 anying1073/StarResonanceDps Team\r\nPowered by .NET 8, Licensed under the GNU AGPL v3.";
             // 
@@ -162,7 +162,7 @@
             // 
             linkLabel_QQGroup.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             linkLabel_QQGroup.AutoSize = true;
-            linkLabel_QQGroup.Font = new Font("HarmonyOS Sans SC", 9F);
+            linkLabel_QQGroup.Font = new Font("HarmonyOS Sans SC", 8F);
             linkLabel_QQGroup.Location = new Point(521, 382);
             linkLabel_QQGroup.Margin = new Padding(0);
             linkLabel_QQGroup.Name = "linkLabel_QQGroup";
@@ -176,19 +176,23 @@
             // 
             label_OpenSourceTip_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label_OpenSourceTip_2.AutoSize = true;
-            label_OpenSourceTip_2.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_OpenSourceTip_2.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_OpenSourceTip_2.Location = new Point(129, 382);
             label_OpenSourceTip_2.Margin = new Padding(0);
             label_OpenSourceTip_2.Name = "label_OpenSourceTip_2";
-            label_OpenSourceTip_2.Size = new Size(429, 20);
-            label_OpenSourceTip_2.TabIndex = 19;
+            //label_OpenSourceTip_2.Size = new Size(429, 20);
+            //label_OpenSourceTip_2.TabIndex = 19;
+
+            label_OpenSourceTip_2.MaximumSize = new Size(700, 0);
+            label_OpenSourceTip_2.AutoSize = true;
+
             label_OpenSourceTip_2.Text = "This is an open-source project. If you encounter any problems while using it, or if you want to find game partners, please join the group:";
             // 
             // label_OpenSourceTip_1
             // 
             label_OpenSourceTip_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label_OpenSourceTip_1.AutoSize = true;
-            label_OpenSourceTip_1.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_OpenSourceTip_1.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_OpenSourceTip_1.Location = new Point(15, 382);
             label_OpenSourceTip_1.Margin = new Padding(4, 0, 0, 0);
             label_OpenSourceTip_1.Name = "label_OpenSourceTip_1";
@@ -200,7 +204,7 @@
             // 
             linkLabel_GitHub.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             linkLabel_GitHub.AutoSize = true;
-            linkLabel_GitHub.Font = new Font("HarmonyOS Sans SC", 9F);
+            linkLabel_GitHub.Font = new Font("HarmonyOS Sans SC", 8F);
             linkLabel_GitHub.Location = new Point(78, 382);
             linkLabel_GitHub.Margin = new Padding(0);
             linkLabel_GitHub.Name = "linkLabel_GitHub";
@@ -213,23 +217,31 @@
             // label_SelfIntroduce
             // 
             label_SelfIntroduce.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label_SelfIntroduce.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_SelfIntroduce.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_SelfIntroduce.Location = new Point(113, 78);
             label_SelfIntroduce.Margin = new Padding(4, 0, 4, 0);
             label_SelfIntroduce.Name = "label_SelfIntroduce";
-            label_SelfIntroduce.Size = new Size(695, 58);
-            label_SelfIntroduce.TabIndex = 16;
+            //label_SelfIntroduce.Size = new Size(695, 58);
+            //label_SelfIntroduce.TabIndex = 16;
+
+            label_SelfIntroduce.MaximumSize = new Size(700, 0);
+            label_SelfIntroduce.AutoSize = true;
+
             label_SelfIntroduce.Text = "A combat data statistics tool designed specifically for players of *Star Resonance*. This tool requires no modification to the game client and does not violate the game's terms of service. It aims to help players better understand combat data, reduce ineffective boosts, and improve the gaming experience. Before using this tool, please ensure that the data results will not be used for actions that discriminate against players based on combat power or otherwise damage the game's community environment.";
             // 
             // label_NowVersionDevelopers
             // 
             label_NowVersionDevelopers.AutoSize = true;
-            label_NowVersionDevelopers.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_NowVersionDevelopers.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_NowVersionDevelopers.Location = new Point(15, 266);
             label_NowVersionDevelopers.Margin = new Padding(4, 0, 4, 0);
             label_NowVersionDevelopers.Name = "label_NowVersionDevelopers";
-            label_NowVersionDevelopers.Size = new Size(264, 80);
-            label_NowVersionDevelopers.TabIndex = 15;
+            //label_NowVersionDevelopers.Size = new Size(264, 80);
+            //label_NowVersionDevelopers.TabIndex = 15;
+
+            label_NowVersionDevelopers.MaximumSize = new Size(700, 0);
+            label_NowVersionDevelopers.AutoSize = true;
+
             label_NowVersionDevelopers.Text = "Amazing Cat Box (anying1073: Project Initiator)\r\nLu Shi (Rocy-June)\r\nQinglan Sect Wang Teng\r\nTranslated by DannyDog";
             // 
             // label_NowVersionDevelopersTip
@@ -245,7 +257,7 @@
             // label_NowVersionNumber
             // 
             label_NowVersionNumber.AutoSize = true;
-            label_NowVersionNumber.Font = new Font("HarmonyOS Sans SC", 9F);
+            label_NowVersionNumber.Font = new Font("HarmonyOS Sans SC", 8F);
             label_NowVersionNumber.Location = new Point(15, 192);
             label_NowVersionNumber.Margin = new Padding(4, 0, 4, 0);
             label_NowVersionNumber.Name = "label_NowVersionNumber";

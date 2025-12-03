@@ -162,9 +162,9 @@
             segmented1.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             segmented1.Full = true;
             segmented1.IconGap = 0F;
-            segmentedItem1.Text = "技能伤害分析";
-            segmentedItem2.Text = "技能治疗分析";
-            segmentedItem3.Text = "人物承伤分析";
+            segmentedItem1.Text = "Skill Damage Analysis";
+            segmentedItem2.Text = "Skill Healing Analysis";
+            segmentedItem3.Text = "Character Injury Analysis";
             segmented1.Items.Add(segmentedItem1);
             segmented1.Items.Add(segmentedItem2);
             segmented1.Items.Add(segmentedItem3);
@@ -187,7 +187,7 @@
             NickNameText.Name = "NickNameText";
             NickNameText.Size = new Size(132, 38);
             NickNameText.TabIndex = 17;
-            NickNameText.Text = "惊奇猫猫盒";
+            NickNameText.Text = "Amazing Cat Box";
             // 
             // divider1
             // 
@@ -297,7 +297,7 @@
             label5.Name = "label5";
             label5.Size = new Size(52, 38);
             label5.TabIndex = 24;
-            label5.Text = "幸运率";
+            label5.Text = "Luck rate";
             // 
             // NumberCriticalHitsText
             // 
@@ -310,7 +310,7 @@
             NumberCriticalHitsText.Name = "NumberCriticalHitsText";
             NumberCriticalHitsText.Size = new Size(63, 38);
             NumberCriticalHitsText.TabIndex = 22;
-            NumberCriticalHitsText.Text = "暴击次数";
+            NumberCriticalHitsText.Text = "Critical Hit Count";
             // 
             // NumberHitsLabel
             // 
@@ -335,7 +335,7 @@
             label2.Name = "label2";
             label2.Size = new Size(52, 38);
             label2.TabIndex = 24;
-            label2.Text = "秒伤";
+            label2.Text = "DPS";
             // 
             // TotalDamageText
             // 
@@ -360,7 +360,7 @@
             label17.Name = "label17";
             label17.Size = new Size(66, 38);
             label17.TabIndex = 22;
-            label17.Text = "命中次数";
+            label17.Text = "Number of hits";
             // 
             // label4
             // 
@@ -373,7 +373,7 @@
             label4.Name = "label4";
             label4.Size = new Size(52, 38);
             label4.TabIndex = 22;
-            label4.Text = "暴击率";
+            label4.Text = "Critical Hit Rate";
             // 
             // label1
             // 
@@ -385,7 +385,7 @@
             label1.Name = "label1";
             label1.Size = new Size(52, 38);
             label1.TabIndex = 22;
-            label1.Text = "总伤害";
+            label1.Text = "Total damage";
             // 
             // label3
             // 
@@ -398,7 +398,7 @@
             label3.Name = "label3";
             label3.Size = new Size(132, 25);
             label3.TabIndex = 22;
-            label3.Text = "伤害信息";
+            label3.Text = "Damage information";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -452,7 +452,7 @@
             label13.Name = "label13";
             label13.Size = new Size(66, 38);
             label13.TabIndex = 26;
-            label13.Text = "挨打次数";
+            label13.Text = "Number of times beaten";
             // 
             // AvgDamageText
             // 
@@ -504,7 +504,7 @@
             label14.Name = "label14";
             label14.Size = new Size(66, 38);
             label14.TabIndex = 24;
-            label14.Text = "幸运次数";
+            label14.Text = "Lucky number";
             // 
             // LuckyDamageText
             // 
@@ -531,7 +531,7 @@
             label9.Name = "label9";
             label9.Size = new Size(63, 38);
             label9.TabIndex = 24;
-            label9.Text = "平均伤害";
+            label9.Text = "Average damage";
             // 
             // label7
             // 
@@ -543,7 +543,7 @@
             label7.Name = "label7";
             label7.Size = new Size(66, 38);
             label7.TabIndex = 24;
-            label7.Text = "暴击伤害";
+            label7.Text = "Critical hit damage";
             // 
             // NormalDamageText
             // 
@@ -569,7 +569,7 @@
             label8.Name = "label8";
             label8.Size = new Size(63, 38);
             label8.TabIndex = 22;
-            label8.Text = "幸运伤害";
+            label8.Text = "Lucky Damage";
             // 
             // label6
             // 
@@ -581,7 +581,7 @@
             label6.Name = "label6";
             label6.Size = new Size(66, 38);
             label6.TabIndex = 22;
-            label6.Text = "普通伤害";
+            label6.Text = "Normal damage";
             // 
             // divider2
             // 
@@ -609,7 +609,7 @@
             label19.Name = "label19";
             label19.Size = new Size(132, 25);
             label19.TabIndex = 22;
-            label19.Text = "伤害分布";
+            label19.Text = "Damage distribution";
             label19.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // timer1
@@ -637,7 +637,7 @@
             PowerText.Location = new Point(263, 28);
             PowerText.Margin = new Padding(2);
             PowerText.Name = "PowerText";
-            PowerText.Prefix = "战力：";
+            PowerText.Prefix = "Combat strength:";
             PowerText.Size = new Size(174, 38);
             PowerText.TabIndex = 24;
             PowerText.Text = "123";
@@ -684,7 +684,7 @@
             Rank_levelLabel.Location = new Point(570, 28);
             Rank_levelLabel.Margin = new Padding(2);
             Rank_levelLabel.Name = "Rank_levelLabel";
-            Rank_levelLabel.Prefix = "臂章：";
+            Rank_levelLabel.Prefix = "armband:";
             Rank_levelLabel.Size = new Size(122, 38);
             Rank_levelLabel.TabIndex = 28;
             Rank_levelLabel.Text = "0";
@@ -696,7 +696,7 @@
             LevelLabel.Location = new Point(441, 28);
             LevelLabel.Margin = new Padding(2);
             LevelLabel.Name = "LevelLabel";
-            LevelLabel.Prefix = "等级：";
+            LevelLabel.Prefix = "grade:";
             LevelLabel.Size = new Size(109, 38);
             LevelLabel.TabIndex = 27;
             LevelLabel.Text = "0";
@@ -810,7 +810,7 @@
             collapseItem1.Name = "collapseItem1";
             collapseItem1.Size = new Size(299, 250);
             collapseItem1.TabIndex = 0;
-            collapseItem1.Text = "Dps/Hps/DTps实时曲线图";
+            collapseItem1.Text = "Dps/Hps/DTps real-time curve";
             // 
             // collapseItem2
             // 
@@ -820,7 +820,7 @@
             collapseItem2.Name = "collapseItem2";
             collapseItem2.Size = new Size(299, 250);
             collapseItem2.TabIndex = 1;
-            collapseItem2.Text = "技能占比分布图";
+            collapseItem2.Text = "Skill distribution chart";
             // 
             // collapseItem3
             // 
@@ -831,7 +831,7 @@
             collapseItem3.Name = "collapseItem3";
             collapseItem3.Size = new Size(299, 250);
             collapseItem3.TabIndex = 2;
-            collapseItem3.Text = "伤害分布";
+            collapseItem3.Text = "Damage distribution";
             // 
             // splitter2
             // 
@@ -866,10 +866,10 @@
             label10.Location = new Point(0, 765);
             label10.Margin = new Padding(2);
             label10.Name = "label10";
-            label10.Prefix = "温馨提示：";
+            label10.Prefix = "Kind tips:";
             label10.Size = new Size(932, 38);
             label10.TabIndex = 25;
-            label10.Text = "快照模式下曲线图 占比图 分布图将失效";
+            label10.Text = "In snapshot mode, the curve chart, percentage chart, and distribution chart will be invalid.";
             label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // SkillDetailForm
@@ -889,7 +889,7 @@
             Name = "SkillDetailForm";
             Opacity = 0.95D;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "技能详情";
+            Text = "Skill Details";
             Load += SkillDetailForm_Load;
             ForeColorChanged += SkillDetailForm_ForeColorChanged;
             pageHeader1.ResumeLayout(false);
