@@ -1,8 +1,11 @@
 # Star Resonance DPS Analysis Tool (Fork)
 
-A fork of [StarResonanceDps](https://github.com/anying1073/StarResonanceDps).
+A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceDps) which is fork of [anying1073/StarResonanceDps](https://github.com/anying1073/StarResonanceDps) that is ported from [anying1073/StarResonanceDps](https://github.com/anying1073/StarResonanceDps)
 
-This fork includes translations and several bug fixes. The original authors are planning a new release soon, which may include official translations.
+**This fork includes:**
+- **more en translations**
+- **fully transparent background in light theme**
+- **compact theme in [compact branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/compact)**
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-brightgreen.svg)](https://www.gnu.org/licenses/agpl-3.0.txt)
 
@@ -22,6 +25,14 @@ Please use this tool responsibly. Do **not** use its results for unfair discrimi
 
 ## 🚀 Quick Start
 
+### Requirements
+- [Npcap](https://npcap.com/dist/npcap-1.85.exe)
+
+### Installation & Usage
+
+1. **Download** the latest release.
+2. **Unzip** the downloaded file.
+3. **Run** the `.exe` file to start the application.
 ### Requirements
 
 - [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
