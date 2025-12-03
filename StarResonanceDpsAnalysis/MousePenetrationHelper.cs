@@ -67,10 +67,17 @@ namespace StarResonanceDpsAnalysis
         public static void UpdateOpacityPercent(IntPtr hWnd, double opacityPercent)
         {
             if (hWnd == IntPtr.Zero || !IsWindow(hWnd)) return;
+
             EnsureLayered(hWnd);
 
             byte alpha = AlphaFromOpacityPercent(opacityPercent);
-            SetLayeredWindowAttributes(hWnd, 0, alpha, LWA_ALPHA);
+
+            // your transparency key color:
+            Color keyColor = Color.FromArgb(0, 0, 80); //light mode background
+            uint key = (uint)(keyColor.R | (keyColor.G << 8) | (keyColor.B << 16));
+
+            // Preserve both alpha + color key
+            SetLayeredWindowAttributes(hWnd, key, alpha, LWA_ALPHA | LWA_COLORKEY);
         }
 
         /// <summary>
