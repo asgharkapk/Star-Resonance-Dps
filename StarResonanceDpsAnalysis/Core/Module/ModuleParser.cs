@@ -113,10 +113,10 @@ namespace StarResonanceDpsAnalysis.Core.Module
                         {
                             int partId = modParts[i];
 
-                            // 属性中文名，如果没找到就标记未知属性
+                            // 属性中文名，如果没找到就标记unknown属性
                             string attrName = ModuleMaps.MODULE_ATTR_NAME_BY_ID(partId); //.TryGetValue(partId, out var name)
                                 //? name
-                                //: $"未知属性({partId})";
+                                //: $"unknown属性({partId})";
 
                             int attrValue = init_link_nums[i];
               

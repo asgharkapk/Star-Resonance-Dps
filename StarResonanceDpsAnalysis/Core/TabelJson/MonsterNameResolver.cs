@@ -55,7 +55,7 @@ namespace StarResonanceDpsAnalysis.Core.TabelJson
         }
 
         public string GetName(int id) =>
-            _id2Name.TryGetValue(id, out var name) ? name : $"未知怪物({id})";
+            _id2Name.TryGetValue(id, out var name) ? name : $"Unknown monster({id})";
     }
 
 }

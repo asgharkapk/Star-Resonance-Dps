@@ -138,8 +138,8 @@ public static class Blueprotobuf
                     // 忽略废弃的End group类型
                     break;
                 default:
-                    // 遇到未知wireType，需要跳过整个字段值
-                    // 对于未知类型，我们尝试按Length-delimited格式处理（最常见的可变长度格式）
+                    // 遇到unknownwireType，需要跳过整个字段值
+                    // 对于unknown类型，我们尝试按Length-delimited格式处理（最常见的可变长度格式）
                     try
                     {
                         // 尝试按Length-delimited格式读取长度并跳过

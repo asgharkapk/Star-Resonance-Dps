@@ -323,7 +323,7 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
         public ulong Id { get; init; }
 
         /// <summary>技能名称（可从资源/协议注入）。</summary>
-        public string Name { get; init; } = "未知技能";
+        public string Name { get; init; } = "Unknown skills";
 
         /// <summary>流派/元素系（可选）。</summary>
         public string School { get; init; } = "";
@@ -332,7 +332,7 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
         public string IconPath { get; init; } = "";
 
         // 新增
-        /// <summary>技能类型（伤害/治疗/未知等，来自 Core.SkillType）。</summary>
+        /// <summary>技能类型（伤害/治疗/unknown等，来自 Core.SkillType）。</summary>
         public Core.SkillType Type { get; init; } =
             Core.SkillType.Unknown;
 
@@ -412,8 +412,8 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
         /// <summary>技能ID（唯一标识技能，可用于数据库关联）。</summary>
         public ulong SkillId { get; init; }
 
-        /// <summary>技能名称（默认值为“未知技能”）。</summary>
-        public string SkillName { get; init; } = "未知技能";
+        /// <summary>技能名称（默认值为“unknown技能”）。</summary>
+        public string SkillName { get; init; } = "Unknown skills";
 
         /// <summary>技能总伤害或总治疗（取决于来源集合）。</summary>
         public ulong Total { get; init; }
@@ -464,7 +464,7 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
         public ulong SkillId { get; init; }
 
         /// <summary>技能名称。</summary>
-        public string SkillName { get; init; } = "未知技能";
+        public string SkillName { get; init; } = "Unknown skills";
 
         /// <summary>全队该技能的总量（伤害合计）。</summary>
         public ulong Total { get; init; }
@@ -492,7 +492,7 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
         public ulong Uid { get; }
 
         /// <summary>玩家昵称。</summary>
-        public string Nickname { get; set; } = "未知";
+        public string Nickname { get; set; } = "unknown";
 
         /// <summary>战力。</summary>
         public int CombatPower { get; set; } = 0;
@@ -1092,7 +1092,7 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
         // 放在 PlayerDataManager 类内部任意位置（方法区）
         private void UpsertCacheProfile(ulong uid) // ★ 新增
         {
-            // 统一从 PlayerData 拿最新三件套，保证写入完整字段（避免把未知覆盖成默认值）
+            // 统一从 PlayerData 拿最新三件套，保证写入完整字段（避免把unknown覆盖成默认值）
             var p = GetOrCreate(uid);
             _userCache.UpsertIfChanged(new UserProfile
             {
@@ -1727,7 +1727,7 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
             }
 
             // 没有 PlayerData，则用缓存字典
-            string nickname = _nicknameRequestedUids.TryGetValue(uid, out var name) ? name : "未知";
+            string nickname = _nicknameRequestedUids.TryGetValue(uid, out var name) ? name : "unknown";
             int combatPower = _combatPowerByUid.TryGetValue(uid, out var power) ? power : 0;
             string profession = _professionByUid.TryGetValue(uid, out var prof) ? prof : Properties.Strings.Profession_Unknown;
 
@@ -1748,7 +1748,7 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
         GetPlayerFullStats(ulong uid)
         {
             if (!_players.TryGetValue(uid, out var p))
-                return (uid, "未知", 0, Properties.Strings.Profession_Unknown, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null);
+                return (uid, "unknown", 0, Properties.Strings.Profession_Unknown, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null);
 
             var dmg = p.DamageStats;
             var heal = p.HealingStats;
@@ -1981,7 +1981,7 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
             public ulong NpcId { get; }
 
             /// <summary>NPC 名称（可选）。</summary>
-            public string Name { get; private set; } = "未知NPC";
+            public string Name { get; private set; } = "unknownNPC";
 
             /// <summary>NPC 承伤聚合（总承伤/实时/峰值/极值等）。</summary>
             public StatisticData TakenStats { get; } = new();
@@ -2311,7 +2311,7 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
         /// <summary>UI 标签（例如：结束时间）。</summary>
         public string Label { get; init; } = "";
 
-        /// <summary>战斗开始时间（若未知则为 EndedAt）。</summary>
+        /// <summary>战斗开始时间（若unknown则为 EndedAt）。</summary>
         public DateTime StartedAt { get; init; }
 
         /// <summary>战斗结束/快照时间。</summary>
@@ -2343,13 +2343,13 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
         public ulong Uid { get; init; }
 
         /// <summary>昵称。</summary>
-        public string Nickname { get; init; } = "未知";
+        public string Nickname { get; init; } = "unknown";
 
         /// <summary>战力。</summary>
         public int CombatPower { get; init; }
 
         /// <summary>职业。</summary>
-        public string Profession { get; init; } = "未知";
+        public string Profession { get; init; } = "unknown";
 
         public string? SubProfession { get; init; }
 

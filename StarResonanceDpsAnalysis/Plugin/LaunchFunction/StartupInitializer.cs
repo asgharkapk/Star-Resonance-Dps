@@ -21,9 +21,9 @@ namespace StarResonanceDpsAnalysis.Plugin.LaunchFunction
         {
             if (AppConfig.GetConfigExists())
             {
-                AppConfig.NickName = AppConfig.GetValue("UserConfig", "NickName", "未知昵称");
+                AppConfig.NickName = AppConfig.GetValue("UserConfig", "NickName", "unknown昵称");
                 AppConfig.Uid = (ulong)AppConfig.GetValue("UserConfig", "Uid", "0").ToInt();
-                AppConfig.Profession = AppConfig.GetValue("UserConfig", "Profession", "未知职业");
+                AppConfig.Profession = AppConfig.GetValue("UserConfig", "Profession", "unknown职业");
                 AppConfig.CombatPower = AppConfig.GetValue("UserConfig", "CombatPower", "0").ToInt();
                 StatisticData._manager.SetNickname(AppConfig.Uid, AppConfig.NickName);
                 StatisticData._manager.SetProfession(AppConfig.Uid, AppConfig.Profession);

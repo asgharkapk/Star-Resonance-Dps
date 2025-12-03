@@ -190,7 +190,7 @@ namespace StarResonanceDpsAnalysis.Core
                 case (int)EDamageProperty.Dark:
                     return "🌑暗";
                 case (int)EDamageProperty.Count:
-                    return "❓？"; // 未知/保留
+                    return "❓？"; // unknown/保留
                 default:
                     return "⚔️物";
             }
@@ -407,7 +407,7 @@ namespace StarResonanceDpsAnalysis.Core
             //            }
             //        default:
             //            {
-            //                // 未知属性静默，可选 debug
+            //                // unknown属性静默，可选 debug
             //                // this.logger.Debug($"Found unknown attrId {attr.Id} for E{enemyUid} {Convert.ToBase64String(attr.RawData)}");
             //                break;
             //            }

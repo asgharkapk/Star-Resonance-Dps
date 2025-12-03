@@ -877,7 +877,7 @@
         private sealed class NpcAcc
         {
             public ulong NpcId { get; }
-            public string Name { get; set; } = "未知NPC";
+            public string Name { get; set; } = "unknownNPC";
             public StatAcc Taken { get; } = new();                       // NPC 总承伤
             public Dictionary<ulong, StatAcc> DamageByPlayer { get; } = new(); // 玩家→该NPC 的聚合
 
@@ -960,7 +960,7 @@
         public static (ulong Total, double PerSec, ulong MaxHit, ulong MinHit, DateTime? LastTime, string Name)
             GetNpcOverview(ulong npcId)
         {
-            if (!_npcs.TryGetValue(npcId, out var n)) return (0, 0, 0, 0, null, "未知NPC");
+            if (!_npcs.TryGetValue(npcId, out var n)) return (0, 0, 0, 0, null, "unknownNPC");
             var s = n.Taken;
             var secs = s.ActiveSeconds > 0 ? s.ActiveSeconds : 0;
             var per = secs > 0 ? R2(s.Total / secs) : 0;
@@ -998,9 +998,9 @@
                 {
                     var uid = kv.Key;
                     var s = kv.Value;
-                    var nick = baseInfo.TryGetValue(uid, out var bi) ? bi.Nick : "未知";
+                    var nick = baseInfo.TryGetValue(uid, out var bi) ? bi.Nick : "unknown";
                     var power = baseInfo.TryGetValue(uid, out bi) ? bi.Power : 0;
-                    var prof = baseInfo.TryGetValue(uid, out bi) ? bi.Prof : "未知";
+                    var prof = baseInfo.TryGetValue(uid, out bi) ? bi.Prof : "unknown";
 
                     var playerDps = GetPlayerDps(uid); // 全程DPS（伤害侧）
                     var npcOnlyDps = s.ActiveSeconds > 0 ? R2(s.Total / s.ActiveSeconds) : 0;
@@ -1146,7 +1146,7 @@
 
                         // 拿昵称：用 playersSnap 的快照映射一次
                         var p = playersSnap.FirstOrDefault(pp => pp.Uid == uid);
-                        var nick = p != null ? p.Nickname : "未知";
+                        var nick = p != null ? p.Nickname : "unknown";
 
                         return (uid, nick, ns.Total, npcOnlyDps);
                     })
@@ -1429,9 +1429,9 @@
         private sealed class PlayerAcc
         {
             public ulong Uid { get; }
-            public string Nickname { get; set; } = "未知";
+            public string Nickname { get; set; } = "unknown";
             public int CombatPower { get; set; }
-            public string Profession { get; set; } = "未知";
+            public string Profession { get; set; } = "unknown";
             public string? SubProfession { get; set; }//子职业
             public StatAcc Damage { get; } = new();
             public StatAcc Healing { get; } = new();
@@ -1505,7 +1505,7 @@
     public sealed class FullSessionNpc
     {
         public ulong NpcId { get; init; }
-        public string Name { get; init; } = "未知NPC";
+        public string Name { get; init; } = "unknownNPC";
         public ulong TotalTaken { get; init; }
         public double TakenPerSec { get; init; }
         public ulong MaxSingleHit { get; init; }

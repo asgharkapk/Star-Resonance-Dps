@@ -227,20 +227,20 @@ namespace StarResonanceDpsAnalysis.Forms
 
                     /*  4~9 治疗相关（部分字段快照未提供 → 用 0 占位） */
                     /*  4 */ p.TotalHealing,
-                    /*  5 */ p.HealingCritical,          // HealingCritical (未知)
-                    /*  6 */ p.HealingLucky,          // HealingLucky (未知)
-                    /*  7 */ p.HealingCritLucky,          // HealingCritLucky (未知)
-                    /*  8 */ p.HealingRealtime,          // RealtimeHps (未知)
-                    /*  9 */ p.HealingRealtimeMax,          // MaxInstantHps (未知)
+                    /*  5 */ p.HealingCritical,          // HealingCritical (unknown)
+                    /*  6 */ p.HealingLucky,          // HealingLucky (unknown)
+                    /*  7 */ p.HealingCritLucky,          // HealingCritLucky (unknown)
+                    /*  8 */ p.HealingRealtime,          // RealtimeHps (unknown)
+                    /*  9 */ p.HealingRealtimeMax,          // MaxInstantHps (unknown)
 
                     /* 10 职业 */
                     /* 10 */ p.Profession,
 
                     /* 11~14 伤害相关（部分字段快照未提供 → 用 0 占位） */
                     /* 11 */ p.TotalDamage,
-                    /* 12 */ p.CriticalDamage,          // CriticalDamage (未知)
-                    /* 13 */ p.LuckyDamage,          // LuckyDamage (未知)
-                    /* 14 */ p.CriticalDamage,          // CritLuckyDamage (未知)
+                    /* 12 */ p.CriticalDamage,          // CriticalDamage (unknown)
+                    /* 13 */ p.LuckyDamage,          // LuckyDamage (unknown)
+                    /* 14 */ p.CriticalDamage,          // CritLuckyDamage (unknown)
 
                     /* 15~16 = 比率（%）（快照未提供玩家层聚合 → 用 0 占位） */
                     /* 15 */ p.CritRate,          // CritRate

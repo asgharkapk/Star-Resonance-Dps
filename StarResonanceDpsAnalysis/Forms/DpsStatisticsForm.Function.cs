@@ -605,7 +605,7 @@ namespace StarResonanceDpsAnalysis.Forms
                             new() { Type = RenderContent.ContentType.Image, Align = RenderContent.ContentAlign.MiddleLeft, Offset =AppConfig.ProgressBarImage, Image = profBmp, ImageRenderSize = AppConfig.ProgressBarImageSize },
                             new() { Type = RenderContent.ContentType.Text, Align = RenderContent.ContentAlign.MiddleLeft, Offset =AppConfig.ProgressBarNmae, ForeColor = AppConfig.colorText, Font = AppConfig.ProgressBarFont},
                             new() { Type = RenderContent.ContentType.Text, Align = RenderContent.ContentAlign.MiddleRight, Offset = AppConfig.ProgressBarHarm, ForeColor = AppConfig.colorText, Font = AppConfig.ProgressBarFont },
-                            new() { Type = RenderContent.ContentType.Text, Align = RenderContent.ContentAlign.MiddleRight, Offset =AppConfig.ProgressBarProportion,  ForeColor = AppConfig.colorText, Font = new Font("Segoe UI Emoji", 24f, FontStyle.Regular, GraphicsUnit.Pixel) },// supports emoji
+                            new() { Type = RenderContent.ContentType.Text, Align = RenderContent.ContentAlign.MiddleRight, Offset =AppConfig.ProgressBarProportion,  ForeColor = AppConfig.colorText, Font = new Font("Segoe UI Emoji", 8f, FontStyle.Regular, GraphicsUnit.Pixel) },// supports emoji
                         ];
                         DictList[p.Uid] = row;
                     }
@@ -722,7 +722,7 @@ namespace StarResonanceDpsAnalysis.Forms
                     string perSec = Common.FormatWithEnglishUnits(Math.Round(p.TakenPerSec, 1));
                     string share = $"{Math.Round(p.TotalTaken / teamSum * 100d, 0, MidpointRounding.AwayFromZero)}%";
 
-                    // 头像&颜色（沿用“未知”）
+                    // 头像&颜色（沿用“unknown”）
                     var profBmp = imgDict.TryGetValue(Properties.Strings.Profession_Unknown, out var bmp) ? bmp : EmptyBitmap();
                     var colorMap = Config.IsLight ? colorDict : blackColorDict;
                     var color = colorMap.TryGetValue(Properties.Strings.Profession_Unknown, out var c) ? c : ColorTranslator.FromHtml("#67AEF6");

@@ -154,7 +154,7 @@
             // select1
             // 
             select1.Font = new Font("阿里妈妈数黑体", 8F, FontStyle.Bold);
-            select1.Items.AddRange(new object[] { "神射手", "神盾骑士", "雷影剑士", "冰魔导师", "青岚骑士", "森语者", "巨刃守护者", "灵魂乐手", "未知职业" });
+            select1.Items.AddRange(new object[] { "神射手", "神盾骑士", "雷影剑士", "冰魔导师", "青岚骑士", "森语者", "巨刃守护者", "灵魂乐手", "Unknown profession" });
             select1.List = true;
             select1.Location = new Point(72, 304);
             select1.Name = "select1";

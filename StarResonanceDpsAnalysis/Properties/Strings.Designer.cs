@@ -1139,7 +1139,7 @@ namespace StarResonanceDpsAnalysis.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 未知.
+        ///   Looks up a localized string similar to unknown.
         /// </summary>
         internal static string Profession_Unknown {
             get {

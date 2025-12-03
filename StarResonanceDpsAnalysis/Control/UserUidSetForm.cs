@@ -37,7 +37,7 @@ namespace StarResonanceDpsAnalysis.Control
             try
             {
                 // 加载昵称设置
-                string savedNickname = AppConfig.GetValue("UserConfig", "NickName", "未知昵称");
+                string savedNickname = AppConfig.GetValue("UserConfig", "NickName", "Unknown");
                 input2.Text = savedNickname;
 
                 // 安全地加载UID设置
@@ -45,17 +45,17 @@ namespace StarResonanceDpsAnalysis.Control
                 if (ulong.TryParse(savedUidStr, out ulong savedUid))
                 {
                     inputNumber1.Value = savedUid;
-                    Console.WriteLine($"已加载保存的设置 - UID: {savedUid}, 昵称: {savedNickname}");
+                    Console.WriteLine($"Saved settings have been loaded - UID: {savedUid}, Nick name: {savedNickname}");
                 }
                 else
                 {
                     inputNumber1.Value = 0;
-                    Console.WriteLine($"UID配置格式错误: {savedUidStr}，已重置为0");
+                    Console.WriteLine($"UID configuration format error: {savedUidStr},It has been reset to 0.");
 
                     // 修复损坏的配置
                     AppConfig.SetValue("UserConfig", "Uid", "0");
                 }
-                select1.SelectedValue = AppConfig.GetValue("UserConfig", "Profession", "未知职业");
+                select1.SelectedValue = AppConfig.GetValue("UserConfig", "Profession", "Unknown profession");
 
 
 
@@ -65,11 +65,11 @@ namespace StarResonanceDpsAnalysis.Control
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"加载用户设置时出错: {ex.Message}");
+                Console.WriteLine($"Error loading user settings: {ex.Message}");
 
                 // 出错时设置默认值
                 inputNumber1.Value = 0;
-                input2.Text = "未知昵称";
+                input2.Text = "Unknown nickname";
             }
         }
 
@@ -137,8 +137,8 @@ namespace StarResonanceDpsAnalysis.Control
 
             // 获取原始配置值用于比较
             string oldUidStr = AppConfig.GetValue("UserConfig", "Uid", "0");
-            string oldNickname = AppConfig.GetValue("UserConfig", "NickName", "未知昵称");
-            string oldProfession = AppConfig.GetValue("UserConfig", "Profession", "未知职业");
+            string oldNickname = AppConfig.GetValue("UserConfig", "NickName", "Unknown nickname");
+            string oldProfession = AppConfig.GetValue("UserConfig", "Profession", "Unknown profession");
 
 
             bool uidChanged = !ulong.TryParse(oldUidStr, out ulong oldUid) || oldUid != newUid;

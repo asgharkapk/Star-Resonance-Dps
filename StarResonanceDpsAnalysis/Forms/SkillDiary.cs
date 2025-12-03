@@ -162,7 +162,7 @@ namespace StarResonanceDpsAnalysis
                     }
                     else
                     {
-                        // 其他未知片段：保持默认色
+                        // 其他unknown片段：保持默认色
                         Write(part);
                     }
                 }

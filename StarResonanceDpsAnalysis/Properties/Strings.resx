@@ -682,7 +682,7 @@
     <value>空枪</value>
   </data>
   <data name="Profession_Unknown" xml:space="preserve">
-    <value>未知</value>
+    <value>unknown</value>
   </data>
   <data name="ModuleCalc_TotalScore" xml:space="preserve">
     <value>综合评分: </value>

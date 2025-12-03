@@ -64,37 +64,37 @@ namespace StarResonanceDpsAnalysis.Plugin
         {
             get
             {
-                int x = 48;
+                int x = 16;// shifted left by 32
                 if(dpi==1)
                 {
-                    x = 40;
+                    x = 8;// shifted left by 32
                 }
 
                 return new RenderContent.ContentOffset { X = x, Y = 0 };
             }
         }
-        public static RenderContent.ContentOffset ProgressBarNmae = new RenderContent.ContentOffset { X = 70, Y = 1 };
+        public static RenderContent.ContentOffset ProgressBarNmae = new RenderContent.ContentOffset { X = 70 -32, Y = 1 };// shift left by 32
         public static RenderContent.ContentOffset ProgressBarHarm
         {
             get
             {
-                int x = ProgressBarProportion.X - 25;
+                int x = ProgressBarProportion.X - 25 -32;// shift left by 32
                 switch(dpi)
                 {
                     case 1:
-                        x = -22;
+                        x = -22 -32;// shift left by 32
                         break;
                     case (float)1.25:
-                        x = -28;
+                        x = -28 -32;// shift left by 32
                         break;
                     case (float)1.5:
-                        x = ProgressBarProportion.X - 30;
+                        x = ProgressBarProportion.X - 30 -32;// shift left by 32
                         break;
                     case (float)1.75:
-                        x = ProgressBarProportion.X - 38;
+                        x = ProgressBarProportion.X - 38 -32;// shift left by 32
                         break;
                     case 2:
-                        x = ProgressBarProportion.X - 42;
+                        x = ProgressBarProportion.X - 42 -32;// shift left by 32
                         break;
                 }
                 if(dpi==1)
