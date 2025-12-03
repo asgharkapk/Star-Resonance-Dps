@@ -306,15 +306,15 @@ namespace StarResonanceDpsAnalysis.Forms
         {
             // # 启动与初始化事件：界面样式与渲染设置（仅 UI 外观，不涉及数据）
             // ======= 单个进度条（textProgressBar1）的外观设置 =======
-            sortedProgressBarList1.OrderImageOffset = new RenderContent.ContentOffset { X = 6, Y = 0 };
+            sortedProgressBarList1.OrderImageOffset = new RenderContent.ContentOffset { X = 0, Y = 0 };
             sortedProgressBarList1.OrderImageRenderSize = new Size(22, 22);
-            sortedProgressBarList1.OrderOffset = new RenderContent.ContentOffset { X = 32, Y = 0 };
+            sortedProgressBarList1.OrderOffset = new RenderContent.ContentOffset { X = 6, Y = 0 };
             sortedProgressBarList1.OrderCallback = (i) => $"{i:d2}.";
-            sortedProgressBarList1.OrderImages =
-            [
-                new Bitmap(new MemoryStream(Resources.皇冠)),
-                           
-            ];
+            sortedProgressBarList1.OrderImages = null;
+        //    [
+        //        new Bitmap(new MemoryStream(Resources.皇冠)),
+        //                   
+        //    ];
 
 
             if (Config.IsLight)
@@ -605,7 +605,7 @@ namespace StarResonanceDpsAnalysis.Forms
                             new() { Type = RenderContent.ContentType.Image, Align = RenderContent.ContentAlign.MiddleLeft, Offset =AppConfig.ProgressBarImage, Image = profBmp, ImageRenderSize = AppConfig.ProgressBarImageSize },
                             new() { Type = RenderContent.ContentType.Text, Align = RenderContent.ContentAlign.MiddleLeft, Offset =AppConfig.ProgressBarNmae, ForeColor = AppConfig.colorText, Font = AppConfig.ProgressBarFont},
                             new() { Type = RenderContent.ContentType.Text, Align = RenderContent.ContentAlign.MiddleRight, Offset = AppConfig.ProgressBarHarm, ForeColor = AppConfig.colorText, Font = AppConfig.ProgressBarFont },
-                            new() { Type = RenderContent.ContentType.Text, Align = RenderContent.ContentAlign.MiddleRight, Offset =AppConfig.ProgressBarProportion,  ForeColor = AppConfig.colorText, Font = AppConfig.ProgressBarFont },
+                            new() { Type = RenderContent.ContentType.Text, Align = RenderContent.ContentAlign.MiddleRight, Offset =AppConfig.ProgressBarProportion,  ForeColor = AppConfig.colorText, Font = new Font("Segoe UI Emoji", 24f, FontStyle.Regular, GraphicsUnit.Pixel) },// supports emoji
                         ];
                         DictList[p.Uid] = row;
                     }

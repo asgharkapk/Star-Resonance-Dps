@@ -92,7 +92,7 @@ namespace StarResonanceDpsAnalysis.Forms
                             {
                                 Type = RenderContent.ContentType.Text,
                                 Align = RenderContent.ContentAlign.MiddleRight,
-                                Offset = new RenderContent.ContentOffset { X = -85, Y = 4 },
+                                Offset = new RenderContent.ContentOffset { X = -70, Y = 4 },
                                 Text = $"3.0万(1.4w)",
                                 ForeColor = Color.Black,
                                 Font = new Font("Microsoft YaHei UI", 16f, FontStyle.Regular, GraphicsUnit.Pixel),
