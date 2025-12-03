@@ -481,11 +481,15 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
 
             if (Config.IsLight)
             {
-                sortedProgressBarList1.BackColor = Color.Transparent;
+                this.BackColor = Color.Magenta;
+                this.TransparencyKey = Color.Magenta;
+
+                sortedProgressBarList1.BackColor = Color.Magenta;
+                panel1.Back = Color.Magenta; //bottom
+                panel2.Back = Color.Magenta; //top
+                
                 AppConfig.colorText = Color.Black;
                 sortedProgressBarList1.OrderColor = Color.Black;
-                panel1.Back = Color.Transparent; //bottom
-                panel2.Back = Color.Transparent; //top
 
                 TotalDamageButton.Icon = Common.BytesToImage(Properties.Resources.伤害);
                 TotalTreatmentButton.Icon = Common.BytesToImage(Properties.Resources.治疗);
