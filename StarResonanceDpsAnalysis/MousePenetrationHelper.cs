@@ -114,8 +114,10 @@ namespace StarResonanceDpsAnalysis
                 if (_backupStyle.HasValue) { style = _backupStyle.Value; _backupStyle = null; }
                 SetWindowLongPtr(hWnd, GWL_STYLE, new IntPtr(style));
 
-                // 恢复为完全不透明
-                SetLayeredWindowAttributes(hWnd, 0, 255, LWA_ALPHA);
+                // 恢复透明键 + alpha
+                Color keyColor = Color.FromArgb(0, 0, 80);
+                uint key = (uint)(keyColor.R | (keyColor.G << 8) | (keyColor.B << 16));
+                SetLayeredWindowAttributes(hWnd, key, 255, LWA_COLORKEY | LWA_ALPHA);
             }
         }
 

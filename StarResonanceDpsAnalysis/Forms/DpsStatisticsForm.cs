@@ -490,9 +490,12 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 panel1.Shadow = 0;
                 panel2.Shadow = 0;
 
-                var neonGreen = Color.FromArgb(57, 255, 20);  // #39FF14
-                AppConfig.colorText = neonGreen;
-                sortedProgressBarList1.OrderColor = neonGreen;
+                var thetextcolor = Color.White;  // #39FF14
+                AppConfig.colorText = thetextcolor;
+                sortedProgressBarList1.OrderColor = thetextcolor;
+                BattleTimeText.ForeColor = thetextcolor;
+                label1.ForeColor = thetextcolor;
+                label2.ForeColor = thetextcolor;
 
                 TotalDamageButton.Icon = Common.BytesToImage(Properties.Resources.伤害);
                 TotalTreatmentButton.Icon = Common.BytesToImage(Properties.Resources.治疗);
