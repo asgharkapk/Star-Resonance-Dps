@@ -222,7 +222,7 @@ namespace StarResonanceDpsAnalysis.Forms
             label2.TabIndex = 20;
             label2.Text = "";
             label2.TextAlign = ContentAlignment.MiddleRight;
-            label2.Margin = new Padding(0, 0, 5, 0); // 20px from right edge
+            label2.Margin = new Padding(0, 0, 8, 0); // 20px from right edge
             // 
             // BattleTimeText
             // 
