@@ -232,6 +232,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             var duration = StatisticData._manager.GetFormattedCombatDuration();
             if (FormManager.showTotal) duration = FullRecord.GetEffectiveDurationString();
             BattleTimeText.Text = duration;
+            BattleTimeText.Margin = new Padding(10);
         }
 
 
