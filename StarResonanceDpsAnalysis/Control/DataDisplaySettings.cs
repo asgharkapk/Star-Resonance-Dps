@@ -128,7 +128,7 @@ namespace StarResonanceDpsAnalysis.Control
             {
                 Width = flowPanel1.ClientSize.Width - 20,
                 AutoSize = true,
-                Margin = new Padding(0, 5, 0, 5),
+                Margin = new Padding(0, 5, 0, 15),
                 BackColor = Color.Transparent
             };
 
@@ -222,7 +222,7 @@ namespace StarResonanceDpsAnalysis.Control
             {
                 Text = groupTitle,
                 // CHANGED: Reduced font size from 9.5F to 8.5F
-                Font = new Font("Microsoft YaHei UI", 8.5F, FontStyle.Bold),
+                Font = new Font("Microsoft YaHei UI", 9.5F, FontStyle.Bold),
                 ForeColor = AppConfig.IsLight ? Color.FromArgb(51, 51, 51) : Color.FromArgb(220, 220, 220),
                 AutoSize = true,
                 Location = new Point(0, currentY),
@@ -232,16 +232,16 @@ namespace StarResonanceDpsAnalysis.Control
             };
             groupContainer.Controls.Add(titleLabel);
             // CHANGED: Reduced vertical gap after title from 6 to 4
-            currentY += titleLabel.Height + 4;
+            currentY += titleLabel.Height + 6;
 
             // 创建选项区域 - 使用更紧凑的布局
             // CHANGED: Reduced indentation calculation from 15 to 10
-            var optionsPanel = CreateCompactOptionsGrid(itemKeys, panelWidth - 10);
+            var optionsPanel = CreateCompactOptionsGrid(itemKeys, panelWidth - 15);
             // CHANGED: Reduced Left Location (indentation) from 15 to 10
-            optionsPanel.Location = new Point(10, currentY);
+            optionsPanel.Location = new Point(15, currentY);
             groupContainer.Controls.Add(optionsPanel);
             // CHANGED: Reduced bottom gap from 8 to 4
-            currentY += optionsPanel.Height + 4;
+            currentY += optionsPanel.Height + 8;
 
             // 移除分隔线 - 这是导致卡顿的主要原因
             // 使用底部间距来替代分隔线的视觉效果
