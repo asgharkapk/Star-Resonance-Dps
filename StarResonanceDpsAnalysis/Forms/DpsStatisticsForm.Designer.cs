@@ -216,9 +216,9 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             label2.Dock = DockStyle.Right;
             label2.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label2.Location = new Point(394, 3);
+            label2.Location = new Point(200, 3);
             label2.Name = "label2";
-            label2.Size = new Size(133, 31);
+            label2.Size = new Size(300, 31);
             label2.TabIndex = 20;
             label2.Text = "";
             label2.TextAlign = ContentAlignment.MiddleRight;
@@ -238,9 +238,9 @@ namespace StarResonanceDpsAnalysis.Forms
             // label1
             // 
             label1.Dock = DockStyle.None;
-            label1.Font = new Font("Segoe UI Emoji", 12f, FontStyle.Bold, GraphicsUnit.Pixel);
-            //label1.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label1.Location = new Point(2, 3);
+            //label1.Font = new Font("Segoe UI Emoji", 12f, FontStyle.Bold, GraphicsUnit.Pixel);
+            label1.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            label1.Location = new Point(0, 3);
             //label1.Margin = new Padding(4);
             label1.Name = "label1";
             label1.Size = new Size(38, 31);
