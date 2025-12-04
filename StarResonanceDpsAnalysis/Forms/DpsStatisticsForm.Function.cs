@@ -655,9 +655,8 @@ namespace StarResonanceDpsAnalysis.Forms
 
                     if (p.Uid == (long)AppConfig.Uid)
                     {
-                        label1.Font = new Font("Segoe UI Emoji", 10f, FontStyle.Regular, GraphicsUnit.Pixel);
                         label1.Text = $" [👥{i + 1}]";
-                        label2.Text = $"{totalFmt} ({perSec})";
+                        label2.Text = $"{totalFmt} ({perSec})    ";
                     }
 
                     // 复用旧的 ProgressBarData，避免 UI 抖动；没有则新建
