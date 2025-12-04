@@ -65,6 +65,11 @@ namespace StarResonanceDpsAnalysis.Forms
             pageHeader1.Controls.Add(PilingModeCheckbox);
             pageHeader1.Controls.Add(button_ThemeSwitch);
             pageHeader1.Controls.Add(button2);
+
+            pageHeader1.Controls.Add(label2);
+            pageHeader1.Controls.Add(BattleTimeText);
+            pageHeader1.Controls.Add(label1);
+
             pageHeader1.Controls.Add(button3);
             pageHeader1.Controls.Add(button_AlwaysOnTop);
             pageHeader1.Controls.Add(button1);
@@ -199,9 +204,9 @@ namespace StarResonanceDpsAnalysis.Forms
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(BattleTimeText);
-            panel1.Controls.Add(label1);
+            //panel1.Controls.Add(label2);
+            //panel1.Controls.Add(BattleTimeText);
+            //panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 408);
             panel1.Name = "panel1";
