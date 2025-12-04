@@ -62,21 +62,19 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             pageHeader1.BackColor = Color.FromArgb(178, 178, 178);
             pageHeader1.ColorScheme = TAMode.Dark;
-            
-            pageHeader1.Controls.Add(button3);
 
-            pageHeader1.Controls.Add(label2);
+            pageHeader1.Controls.Add(BattleTimeText); // timer [docked left]
+            pageHeader1.Controls.Add(label1); // player counter [docked left]
+            pageHeader1.Controls.Add(button3); // current - overal switch [docked left]
 
-            pageHeader1.Controls.Add(button2);
+            pageHeader1.Controls.Add(label2); // damage(dps) [docked right]
+            pageHeader1.Controls.Add(PilingModeCheckbox); //bechmark checkbox [docked right]
+            pageHeader1.Controls.Add(button2); // minimize [docked right]
+            pageHeader1.Controls.Add(button_ThemeSwitch); // dark/light [docked right]
+            pageHeader1.Controls.Add(button_AlwaysOnTop); // [docked right]
+            pageHeader1.Controls.Add(button1); // refresh [docked right] 
+            pageHeader1.Controls.Add(button_Settings); // docked right
 
-            pageHeader1.Controls.Add(BattleTimeText);
-            pageHeader1.Controls.Add(label1);
-
-            pageHeader1.Controls.Add(PilingModeCheckbox);
-            pageHeader1.Controls.Add(button_ThemeSwitch);
-            pageHeader1.Controls.Add(button_AlwaysOnTop);
-            pageHeader1.Controls.Add(button1);
-            pageHeader1.Controls.Add(button_Settings);
             pageHeader1.DividerShow = true;
             pageHeader1.DividerThickness = 2F;
             pageHeader1.Dock = DockStyle.Top;
@@ -249,7 +247,7 @@ namespace StarResonanceDpsAnalysis.Forms
             //label1.Location = new Point(0, 3);
             //label1.Margin = new Padding(2);
             label1.Name = "label1";
-            label1.Size = new Size(42, 35);
+            label1.Size = new Size(46, 35);
             label1.TabIndex = 19;
             label1.Text = "";
             // 
