@@ -64,7 +64,7 @@ namespace StarResonanceDpsAnalysis.Plugin
         {
             get
             {
-                int x = 64 -32 +6 +6 +2 -6;// shifted left by 32
+                int x = 64 -32 +6 +6 +2 -6 -6;// shifted left by 32
                 if(dpi==1)
                 {
                     x = 55 -32 +6 +6 +2 -6;// shifted left by 32
