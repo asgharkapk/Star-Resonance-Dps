@@ -218,7 +218,7 @@ namespace StarResonanceDpsAnalysis.Forms
             label2.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             label2.Location = new Point(200, 3);
             label2.Name = "label2";
-            label2.Size = new Size(300, 31);
+            label2.Size = new Size(200, 31);
             label2.TabIndex = 20;
             label2.Text = "";
             label2.TextAlign = ContentAlignment.MiddleRight;
@@ -229,7 +229,7 @@ namespace StarResonanceDpsAnalysis.Forms
             BattleTimeText.Dock = DockStyle.None;
             BattleTimeText.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             BattleTimeText.Location = new Point(60, 3);//38
-            //BattleTimeText.Margin = new Padding(10);
+            BattleTimeText.Margin = new Padding(10);
             BattleTimeText.Name = "BattleTimeText";
             BattleTimeText.Size = new Size(98, 31);
             BattleTimeText.TabIndex = 18;
