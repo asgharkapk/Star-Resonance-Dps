@@ -45,7 +45,7 @@ jobs:
           echo "### Commits in this release" > release_body.md
 
           # Get previous tag (if exists)
-          $PREV_TAG = git describe --tags --abbrev=0 --match "v*" 2>$null
+          $PREV_TAG = git describe --tags --abbrev=0 --match "nv*" 2>$null
 
           if (-not $PREV_TAG) {
             Write-Host "No previous tag found → Initial release"
@@ -60,8 +60,8 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: n.v.${{ github.run_number }}
-          name: Release v.${{ github.run_number }}.n
+          tag_name: nv${{ github.run_number }}
+          name: Release v.${{ github.run_number }}.normal
           files: ./Star-Resonance-Dps-normal-v${{ github.run_number }}.zip
           body_path: release_body.md
           generate_release_notes: true
