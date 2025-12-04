@@ -219,7 +219,7 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             // label2
             // 
-            //label2.Dock = DockStyle.None;
+            label2.Dock = DockStyle.Left;
             label2.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             //label2.Location = new Point(394, 3);
             label2.Name = "label2";
@@ -241,7 +241,7 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             // label1
             // 
-            //label1.Dock = DockStyle.Left;
+            label1.Dock = DockStyle.Left;
             label1.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             //label1.Location = new Point(0, 3);
             //label1.Margin = new Padding(2);
