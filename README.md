@@ -5,8 +5,8 @@ A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceD
 **This fork includes:**
 - **more en translations**
 - **fully transparent background in light theme**
-- **not compact theme in [normal branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/normal)**
-- **beta test branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/monster)**
+- **not compact theme in [normal branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/nOrMaL)**
+- **beta test branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/mOnStEr)**
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-brightgreen.svg)](https://www.gnu.org/licenses/agpl-3.0.txt)
 
