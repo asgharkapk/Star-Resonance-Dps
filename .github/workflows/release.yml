@@ -33,7 +33,7 @@ jobs:
         shell: pwsh
         run: |
           $Version = "v${{ github.run_number }}"
-          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-$Version.zip"
+          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-normal-$Version.zip"
 
       - name: Fetch full history
         run: |
