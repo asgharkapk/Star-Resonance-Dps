@@ -41,21 +41,20 @@ jobs:
           git fetch --tags
       
       - name: Generate commit log
+        shell: pwsh
         run: |
           echo "### Commits in this release" > release_body.md
-
-          # Get previous tag (if exists)
-          $PREV_TAG = git describe --tags --abbrev=0 --match "v*" 2>$null
-
-          if (-not $PREV_TAG) {
-            Write-Host "No previous tag found → Initial release"
-            echo "- Initial release" >> release_body.md
+          $branchType = "normal"
+          $prevTag = git describe --tags --abbrev=0 --match "*-$branchType" 2>$null | Out-String
+          $prevTag = $prevTag.Trim()
+      
+          if ([string]::IsNullOrEmpty($prevTag)) {
+              Write-Host "No previous tag found → Initial release"
+              Add-Content release_body.md "- Initial release"
+          } else {
+              Write-Host "Previous tag: $prevTag"
+              git log --pretty=format:"- %h %s (%an)" "$prevTag..HEAD" >> release_body.md
           }
-          else {
-            Write-Host "Previous tag: $PREV_TAG"
-            git log --pretty=format:"- %h %s (%an)" "$PREV_TAG..HEAD" >> release_body.md
-          }
-        shell: pwsh
           
       - name: Create Release
         uses: softprops/action-gh-release@v1
