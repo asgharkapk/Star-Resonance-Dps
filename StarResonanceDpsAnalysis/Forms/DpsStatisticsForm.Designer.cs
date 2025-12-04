@@ -246,7 +246,7 @@ namespace StarResonanceDpsAnalysis.Forms
             label1.Size = new Size(38, 31);
             label1.TabIndex = 19;
             label1.Text = "";
-            label1.AutoSize = true;
+            //label1.AutoSize = true;
             // 
             // timer_RefreshRunningTime
             // 
