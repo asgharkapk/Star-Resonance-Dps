@@ -45,7 +45,7 @@ jobs:
         run: |
           echo "### Commits in this release" > release_body.md
           $branchType = "normal"
-          $prevTag = git describe --tags --abbrev=0 --match "*-$branchType" 2>$null | Out-String
+          $prevTag = git describe --tags --abbrev=0 --match "v*" 2>$null | Out-String
           $prevTag = $prevTag.Trim()
       
           if ([string]::IsNullOrEmpty($prevTag)) {
