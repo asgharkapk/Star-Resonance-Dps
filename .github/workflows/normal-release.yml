@@ -39,27 +39,11 @@ jobs:
         run: |
           git fetch --unshallow || true
           git fetch --tags
-      
-      - name: Generate commit log
-        shell: pwsh
-        run: |
-          echo "### Commits in this release" > release_body.md
-          $prevTag = git tag --list "*normal" --sort=-creatordate | Select-Object -First 1
-          $prevTag = $prevTag.Trim()
-      
-          if ([string]::IsNullOrEmpty($prevTag)) {
-              Write-Host "No previous tag found → Initial release"
-              Add-Content release_body.md "- Initial release"
-          } else {
-              Write-Host "Previous tag: $prevTag"
-              git log --pretty=format:"- %h %s (%an)" "$prevTag..HEAD" >> release_body.md
-          }
-          
+                
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ github.run_number }}-normal
           name: Release v${{ github.run_number }}-normal
           files: ./Star-Resonance-Dps-normal-v${{ github.run_number }}.zip
-          body_path: release_body.md
           generate_release_notes: true
