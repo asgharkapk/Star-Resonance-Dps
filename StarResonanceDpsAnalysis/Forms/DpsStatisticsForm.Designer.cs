@@ -219,21 +219,21 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             // label2
             // 
-            label2.Dock = DockStyle.Right;
+            //label2.Dock = DockStyle.None;
             label2.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label2.Location = new Point(394, 3);
+            //label2.Location = new Point(394, 3);
             label2.Name = "label2";
             label2.Size = new Size(133, 31);
             label2.TabIndex = 20;
             label2.Text = "";
-            label2.TextAlign = ContentAlignment.MiddleRight;
+            //label2.TextAlign = ContentAlignment.MiddleRight;
             // 
             // BattleTimeText
             // 
             BattleTimeText.Dock = DockStyle.Left;
             BattleTimeText.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            BattleTimeText.Location = new Point(60, 3);
-            BattleTimeText.Margin = new Padding(2);
+            //BattleTimeText.Location = new Point(60, 3);
+            //BattleTimeText.Margin = new Padding(2);
             BattleTimeText.Name = "BattleTimeText";
             BattleTimeText.Size = new Size(98, 31);
             BattleTimeText.TabIndex = 18;
@@ -241,10 +241,10 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             // label1
             // 
-            label1.Dock = DockStyle.Left;
+            //label1.Dock = DockStyle.Left;
             label1.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label1.Location = new Point(0, 3);
-            label1.Margin = new Padding(2);
+            //label1.Location = new Point(0, 3);
+            //label1.Margin = new Padding(2);
             label1.Name = "label1";
             label1.Size = new Size(38, 31);
             label1.TabIndex = 19;
