@@ -589,7 +589,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             pageHeader1.Font = AppConfig.SaoFont;
             pageHeader1.SubFont = AppConfig.ContentFont;
             PilingModeCheckbox.Font = AppConfig.ContentFont;
-            label2.Font = label1.Font = AppConfig.ContentFont;
+            //label2.Font = label1.Font = AppConfig.ContentFont;
 
             TotalDamageButton.Font = AppConfig.BoldHarmonyFont;
             TotalTreatmentButton.Font = AppConfig.BoldHarmonyFont;

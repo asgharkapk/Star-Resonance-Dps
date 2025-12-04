@@ -62,15 +62,18 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             pageHeader1.BackColor = Color.FromArgb(178, 178, 178);
             pageHeader1.ColorScheme = TAMode.Dark;
-            pageHeader1.Controls.Add(PilingModeCheckbox);
-            pageHeader1.Controls.Add(button_ThemeSwitch);
-            pageHeader1.Controls.Add(button2);
+            
+            pageHeader1.Controls.Add(button3);
 
             pageHeader1.Controls.Add(label2);
+
+            pageHeader1.Controls.Add(button2);
+
             pageHeader1.Controls.Add(BattleTimeText);
             pageHeader1.Controls.Add(label1);
 
-            pageHeader1.Controls.Add(button3);
+            pageHeader1.Controls.Add(PilingModeCheckbox);
+            pageHeader1.Controls.Add(button_ThemeSwitch);
             pageHeader1.Controls.Add(button_AlwaysOnTop);
             pageHeader1.Controls.Add(button1);
             pageHeader1.Controls.Add(button_Settings);
@@ -219,7 +222,7 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             // label2
             // 
-            label2.Dock = DockStyle.Left;
+            label2.Dock = DockStyle.Right;
             label2.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             //label2.Location = new Point(394, 3);
             label2.Name = "label2";
@@ -246,7 +249,7 @@ namespace StarResonanceDpsAnalysis.Forms
             //label1.Location = new Point(0, 3);
             //label1.Margin = new Padding(2);
             label1.Name = "label1";
-            label1.Size = new Size(38, 31);
+            label1.Size = new Size(42, 35);
             label1.TabIndex = 19;
             label1.Text = "";
             // 
