@@ -45,7 +45,7 @@ jobs:
           echo "### Commits in this release" > release_body.md
 
           # Get previous tag (if exists)
-          $PREV_TAG = git describe --tags --abbrev=0 --match "n.v*" 2>$null
+          $PREV_TAG = git describe --tags --abbrev=0 --match "n.v.*" 2>$null || $null
 
           if (-not $PREV_TAG) {
             Write-Host "No previous tag found → Initial release"
