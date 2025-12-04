@@ -61,7 +61,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: c.v.${{ github.run_number }}
-          name: Release v${{ github.run_number }}
+          name: Release c.v.${{ github.run_number }}
           files: ./Star-Resonance-Dps-compact-v${{ github.run_number }}.zip
           body_path: release_body.md
           generate_release_notes: true
