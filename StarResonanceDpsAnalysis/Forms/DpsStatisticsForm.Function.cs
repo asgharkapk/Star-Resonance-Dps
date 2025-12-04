@@ -649,8 +649,9 @@ namespace StarResonanceDpsAnalysis.Forms
 
                     //row[1].Text = $"{p.Nickname}-{sp}({p.CombatPower})"; //TODO come back here, update subprofession when changing language
                     //row[1].Text = $"[{sp}]{p.Nickname}-({p.CombatPower})";
-                    row[1].Text = $"[{sp}]{p.Nickname}({p.CombatPower})";
+                    //row[1].Text = $"[{sp}]{p.Nickname}({p.CombatPower})";
                     //row[1].Text = $"[{sp}]{p.Nickname} ({p.CombatPower})";
+                    row[1].Text = $"[{sp}]-{p.Nickname}-({p.CombatPower})";
 
                     row[2].Text = $"{totalFmt} ({perSec})";
                     row[3].Text = share;
