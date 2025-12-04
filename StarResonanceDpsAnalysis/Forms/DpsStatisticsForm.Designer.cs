@@ -366,7 +366,7 @@ namespace StarResonanceDpsAnalysis.Forms
             ClientSize = new Size(527, 442);
             Controls.Add(sortedProgressBarList1);
             Controls.Add(panel2);
-            Controls.Add(panel1);
+            //Controls.Add(panel1);
             Controls.Add(pageHeader1);
             Font = new Font("HarmonyOS Sans SC", 8F);
             Icon = (Icon)resources.GetObject("$this.Icon");
