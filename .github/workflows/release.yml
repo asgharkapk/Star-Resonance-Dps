@@ -3,7 +3,7 @@ name: Auto Release
 on:
   push:
       branches:
-      - en_translation   # Trigger on push to en_translation
+      - cOmPaCt   # Trigger on push to en_translation
   workflow_dispatch: # Allows you to run this manually from the Actions tab
 
 jobs:
@@ -33,7 +33,7 @@ jobs:
         shell: pwsh
         run: |
           $Version = "v${{ github.run_number }}"
-          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-$Version.zip"
+          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-compact-$Version.zip"
 
       - name: Fetch full history
         run: |
@@ -62,6 +62,6 @@ jobs:
         with:
           tag_name: v${{ github.run_number }}
           name: Release v${{ github.run_number }}
-          files: ./Star-Resonance-Dps-v${{ github.run_number }}.zip
+          files: ./Star-Resonance-Dps-compact-v${{ github.run_number }}.zip
           body_path: release_body.md
           generate_release_notes: true
