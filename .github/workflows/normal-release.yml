@@ -3,7 +3,7 @@ name: normal Auto Release
 on:
   push:
       branches:
-      - nOrMaL   # Trigger on push to en_translation
+      - normal   # Trigger on push to normal
   workflow_dispatch: # Allows you to run this manually from the Actions tab
 
 jobs:
@@ -16,6 +16,9 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0     # fetch full history
+          fetch-tags: true   # required to get all tags
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -44,7 +47,8 @@ jobs:
         shell: pwsh
         run: |
           echo "### Commits in this release" > release_body.md
-          $prevTag = git tag --list "*normal" --sort=-creatordate | Select-Object -First 1
+          $branchType = "normal"
+          $prevTag = git describe --tags --abbrev=0 --match "*-$branchType" 2>$null | Out-String
           $prevTag = $prevTag.Trim()
       
           if ([string]::IsNullOrEmpty($prevTag)) {
