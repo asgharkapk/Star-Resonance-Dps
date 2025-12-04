@@ -222,14 +222,14 @@ namespace StarResonanceDpsAnalysis.Forms
             label2.TabIndex = 20;
             label2.Text = "";
             label2.TextAlign = ContentAlignment.MiddleRight;
-            label2.Margin = new Padding(0, 0, 8, 0); // 20px from right edge
+            label2.Margin = new Padding(0, 0, 20, 0); // px from right edge
             // 
             // BattleTimeText
             // 
             BattleTimeText.Dock = DockStyle.Left;
             BattleTimeText.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             BattleTimeText.Location = new Point(38, 3);
-            BattleTimeText.Margin = new Padding(5);
+            BattleTimeText.Margin = new Padding(15);
             BattleTimeText.Name = "BattleTimeText";
             BattleTimeText.Size = new Size(98, 31);
             BattleTimeText.TabIndex = 18;
