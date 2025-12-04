@@ -227,7 +227,7 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             BattleTimeText.Dock = DockStyle.Left;
             BattleTimeText.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            BattleTimeText.Location = new Point(38, 3);
+            BattleTimeText.Location = new Point(60, 3);
             BattleTimeText.Margin = new Padding(2);
             BattleTimeText.Name = "BattleTimeText";
             BattleTimeText.Size = new Size(98, 31);
