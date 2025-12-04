@@ -44,7 +44,7 @@ jobs:
         shell: pwsh
         run: |
           echo "### Commits in this release" > release_body.md
-          $prevTag = git describe --tags --abbrev=0 --match "*-normal" 2>$null | Out-String
+          $prevTag = git tag --list "*normal" --sort=-creatordate | Select-Object -First 1
           $prevTag = $prevTag.Trim()
       
           if ([string]::IsNullOrEmpty($prevTag)) {
