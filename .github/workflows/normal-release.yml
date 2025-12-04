@@ -44,7 +44,8 @@ jobs:
         shell: pwsh
         run: |
           echo "### Commits in this release" > release_body.md
-          $prevTag = git describe --tags --abbrev=0 --match "*-normal" 2>$null | Out-String
+          branchType = "normal"
+          $prevTag = git describe --tags --abbrev=0 --match "v.*-$branchType" 2>$null | Out-String
           $prevTag = $prevTag.Trim()
       
           if ([string]::IsNullOrEmpty($prevTag)) {
