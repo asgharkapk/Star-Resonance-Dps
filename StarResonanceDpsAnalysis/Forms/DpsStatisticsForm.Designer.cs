@@ -228,6 +228,7 @@ namespace StarResonanceDpsAnalysis.Forms
             label2.TabIndex = 20;
             label2.Text = "";
             //label2.TextAlign = ContentAlignment.MiddleRight;
+            label2.MouseDown += HeaderPanel_MouseDown;
             // 
             // BattleTimeText
             // 
@@ -239,6 +240,7 @@ namespace StarResonanceDpsAnalysis.Forms
             BattleTimeText.Size = new Size(98, 31);
             BattleTimeText.TabIndex = 18;
             BattleTimeText.Text = "00:00";
+            BattleTimeText.MouseDown += HeaderPanel_MouseDown;
             // 
             // label1
             // 
@@ -250,6 +252,7 @@ namespace StarResonanceDpsAnalysis.Forms
             label1.Size = new Size(50, 36);
             label1.TabIndex = 19;
             label1.Text = "";
+            label1.MouseDown += HeaderPanel_MouseDown;
             // 
             // timer_RefreshRunningTime
             // 
