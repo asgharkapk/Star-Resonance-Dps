@@ -659,7 +659,7 @@ namespace StarResonanceDpsAnalysis.Forms
                     if (p.Uid == (long)AppConfig.Uid)
                     {
                         label1.Font = new Font("Segoe UI Emoji", 12f, FontStyle.Regular, GraphicsUnit.Pixel);
-                        label1.Text = $" [👥{i + 1}]";
+                        label1.Text = $" [👑{i + 1}]";
                         label2.Text = $"{totalFmt} ({perSec})";
                     }
 
