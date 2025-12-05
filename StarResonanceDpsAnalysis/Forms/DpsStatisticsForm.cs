@@ -385,6 +385,15 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         {
             ToolTip(button2, Properties.Strings.Tooltip_Minimize);
         }
+        
+        private void HeaderPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                FormManager.ReleaseCapture();
+                FormManager.SendMessage(this.Handle, FormManager.WM_NCLBUTTONDOWN, FormManager.HTCAPTION, 0);
+            }
+        }
 
         // # 按钮提示气泡（单次/全程切换）
         private void button3_MouseEnter(object sender, EventArgs e) // 鼠标进入“单次/全程切换”按钮时显示提示
