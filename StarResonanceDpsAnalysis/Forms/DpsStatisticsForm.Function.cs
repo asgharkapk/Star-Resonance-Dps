@@ -651,7 +651,8 @@ namespace StarResonanceDpsAnalysis.Forms
                     //row[1].Text = $"[{sp}]{p.Nickname}-({p.CombatPower})";
                     //row[1].Text = $"[{sp}]{p.Nickname}({p.CombatPower})";
                     //row[1].Text = $"[{sp}]{p.Nickname} ({p.CombatPower})";
-                    row[1].Text = $"[{sp}]-{p.Nickname}-({p.CombatPower})";
+                    //row[1].Text = $"[{sp}]-{p.Nickname}-({p.CombatPower})";
+                    row[1].Text = $"[{sp}]{p.Nickname}({p.CombatPower})";
 
                     row[2].Text = $"{totalFmt} ({perSec})";
                     row[3].Text = share;
