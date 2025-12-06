@@ -434,30 +434,37 @@ namespace StarResonanceDpsAnalysis.Forms
                 { Properties.Strings.Profession_Unknown, ColorTranslator.FromHtml("#67AEF6") },
 
                 { Properties.Strings.Profession_Marksman, ColorTranslator.FromHtml("#8e8b47") },
-                { Properties.Strings.Profession_FrostMage, ColorTranslator.FromHtml("#79779c") },
-                { Properties.Strings.Profession_HeavyGuardian, ColorTranslator.FromHtml("#537758") },
-                { Properties.Strings.Profession_Stormblade, ColorTranslator.FromHtml("#70629c") },
-                { Properties.Strings.Profession_SoulMusician, ColorTranslator.FromHtml("#9c5353") },
-                { Properties.Strings.Profession_WindKnight, ColorTranslator.FromHtml("#799a9c") },
-                { Properties.Strings.Profession_VerdantOracle, ColorTranslator.FromHtml("#639c70") },
-                { Properties.Strings.Profession_AegisKnight, ColorTranslator.FromHtml("#9c9b75") },
-
-                { Properties.Strings.SubProfession_IceRay, ColorTranslator.FromHtml("#8e8b47") },
-                { Properties.Strings.SubProfession_Concerto, ColorTranslator.FromHtml("#9c5353") },
-                { Properties.Strings.SubProfession_Lifebloom, ColorTranslator.FromHtml("#639c70") },
-                { Properties.Strings.SubProfession_Thornlash, ColorTranslator.FromHtml("#639c70") },
-                { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#9c5353") },
-                { Properties.Strings.SubProfession_IceSpear, ColorTranslator.FromHtml("#79779c") },
-                { Properties.Strings.SubProfession_Iai, ColorTranslator.FromHtml("#70629c") },
-                { Properties.Strings.SubProfession_MoonBlade, ColorTranslator.FromHtml("#70629c") },
                 { Properties.Strings.SubProfession_EagleBow, ColorTranslator.FromHtml("#8e8b47") },
                 { Properties.Strings.SubProfession_WolfBow, ColorTranslator.FromHtml("#8e8b47") },
-                { Properties.Strings.SubProfession_AirStyle, ColorTranslator.FromHtml("#799a9c") },
-                { Properties.Strings.SubProfession_Overdrive, ColorTranslator.FromHtml("#799a9c") },
-                { Properties.Strings.SubProfession_Protection, ColorTranslator.FromHtml("#9c9b75") },
-                { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#9c9b75") },
+
+                { Properties.Strings.Profession_FrostMage, ColorTranslator.FromHtml("#79779c") },
+                { Properties.Strings.SubProfession_IceRay, ColorTranslator.FromHtml("#8e8b47") },
+                { Properties.Strings.SubProfession_IceSpear, ColorTranslator.FromHtml("#79779c") },
+
+                { Properties.Strings.Profession_HeavyGuardian, ColorTranslator.FromHtml("#537758") },
                 { Properties.Strings.SubProfession_RockShield, ColorTranslator.FromHtml("#537758") },
                 { Properties.Strings.SubProfession_Block, ColorTranslator.FromHtml("#537758") },
+
+                { Properties.Strings.Profession_Stormblade, ColorTranslator.FromHtml("#70629c") },
+                { Properties.Strings.SubProfession_Iai, ColorTranslator.FromHtml("#70629c") }, //Stormblade Iaido Slash
+                { Properties.Strings.SubProfession_MoonBlade, ColorTranslator.FromHtml("#70629c") }, //Stormblade Moonstrike
+
+                { Properties.Strings.Profession_SoulMusician, ColorTranslator.FromHtml("#9c5353") },
+                { Properties.Strings.SubProfession_Concerto, ColorTranslator.FromHtml("#9c5353") },
+                { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#9c5353") },
+
+                { Properties.Strings.Profession_WindKnight, ColorTranslator.FromHtml("#799a9c") },
+                { Properties.Strings.SubProfession_AirStyle, ColorTranslator.FromHtml("#799a9c") },
+                { Properties.Strings.SubProfession_Overdrive, ColorTranslator.FromHtml("#799a9c") },
+
+                { Properties.Strings.Profession_VerdantOracle, ColorTranslator.FromHtml("#639c70") },
+                { Properties.Strings.SubProfession_Lifebloom, ColorTranslator.FromHtml("#639c70") },
+                { Properties.Strings.SubProfession_Thornlash, ColorTranslator.FromHtml("#639c70") },
+
+                { Properties.Strings.Profession_AegisKnight, ColorTranslator.FromHtml("#9c9b75") },
+                { Properties.Strings.SubProfession_Protection, ColorTranslator.FromHtml("#9c9b75") },
+                { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#9c9b75") },
+
         };
         static Bitmap EmptyBitmap(int w = 1, int h = 1)
         {
