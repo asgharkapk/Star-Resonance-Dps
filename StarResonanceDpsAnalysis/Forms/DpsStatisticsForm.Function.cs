@@ -535,7 +535,7 @@ namespace StarResonanceDpsAnalysis.Forms
 
             // WIND KNIGHT (Lime Green)
             { Properties.Strings.Profession_WindKnight, ColorTranslator.FromHtml("#78C17F") },
-            { Properties.Strings.SubProfession_AirStyle, ColorTranslator.FromHtml("#8FD897") },
+            { Properties.Strings.SubProfession_AirStyle, ColorTranslator.FromHtml("#7FCF85") },
             { Properties.Strings.SubProfession_Overdrive, ColorTranslator.FromHtml("#5FAE63") },
 
             // Healer icon: #83C49A (fore color)
