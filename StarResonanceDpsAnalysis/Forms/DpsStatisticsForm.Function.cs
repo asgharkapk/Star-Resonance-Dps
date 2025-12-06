@@ -427,7 +427,7 @@ namespace StarResonanceDpsAnalysis.Forms
                 { Properties.Strings.SubProfession_RockShield, ColorTranslator.FromHtml("#537758") },
                 { Properties.Strings.SubProfession_Block, ColorTranslator.FromHtml("#537758") },
         };
-
+/*
         // 黑窗体
         Dictionary<string, Color> blackColorDict = new Dictionary<string, Color>()
         {
@@ -466,6 +466,93 @@ namespace StarResonanceDpsAnalysis.Forms
                 { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#9c9b75") },
 
         };
+*/
+/*
+        // 黑窗体 - improved high-contrast palette
+        Dictionary<string, Color> blackColorDict = new Dictionary<string, Color>()
+        {
+                { Properties.Strings.Profession_Unknown, ColorTranslator.FromHtml("#4A90E2") },
+
+                { Properties.Strings.Profession_Marksman, ColorTranslator.FromHtml("#A8A23A") },
+                { Properties.Strings.SubProfession_EagleBow, ColorTranslator.FromHtml("#A8A23A") },
+                { Properties.Strings.SubProfession_WolfBow, ColorTranslator.FromHtml("#A8A23A") },
+
+                { Properties.Strings.Profession_FrostMage, ColorTranslator.FromHtml("#8A88C5") },
+                { Properties.Strings.SubProfession_IceRay, ColorTranslator.FromHtml("#8A88C5") },
+                { Properties.Strings.SubProfession_IceSpear, ColorTranslator.FromHtml("#8A88C5") },
+
+                { Properties.Strings.Profession_HeavyGuardian, ColorTranslator.FromHtml("#5E8C65") },
+                { Properties.Strings.SubProfession_RockShield, ColorTranslator.FromHtml("#5E8C65") },
+                { Properties.Strings.SubProfession_Block, ColorTranslator.FromHtml("#5E8C65") },
+
+                { Properties.Strings.Profession_Stormblade, ColorTranslator.FromHtml("#8C78D2") },
+                { Properties.Strings.SubProfession_Iai, ColorTranslator.FromHtml("#8C78D2") },
+                { Properties.Strings.SubProfession_MoonBlade, ColorTranslator.FromHtml("#8C78D2") },
+
+                { Properties.Strings.Profession_SoulMusician, ColorTranslator.FromHtml("#C16363") },
+                { Properties.Strings.SubProfession_Concerto, ColorTranslator.FromHtml("#C16363") },
+                { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#C16363") },
+
+                { Properties.Strings.Profession_WindKnight, ColorTranslator.FromHtml("#7FB4B7") },
+                { Properties.Strings.SubProfession_AirStyle, ColorTranslator.FromHtml("#7FB4B7") },
+                { Properties.Strings.SubProfession_Overdrive, ColorTranslator.FromHtml("#7FB4B7") },
+
+                { Properties.Strings.Profession_VerdantOracle, ColorTranslator.FromHtml("#75C488") },
+                { Properties.Strings.SubProfession_Lifebloom, ColorTranslator.FromHtml("#75C488") },
+                { Properties.Strings.SubProfession_Thornlash, ColorTranslator.FromHtml("#75C488") },
+
+                { Properties.Strings.Profession_AegisKnight, ColorTranslator.FromHtml("#C1BD8E") },
+                { Properties.Strings.SubProfession_Protection, ColorTranslator.FromHtml("#C1BD8E") },
+                { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#C1BD8E") },
+        };
+*/
+        // 黑窗体 - Profession colors + slightly different sub shades
+        Dictionary<string, Color> blackColorDict = new Dictionary<string, Color>()
+        {
+            // Unknown
+            { Properties.Strings.Profession_Unknown, ColorTranslator.FromHtml("#4A90E2") },
+
+            // MARKSMAN (Yellow-Olive)
+            { Properties.Strings.SubProfession_EagleBow, ColorTranslator.FromHtml("#B5AE42") }, // slightly lighter
+            { Properties.Strings.SubProfession_WolfBow, ColorTranslator.FromHtml("#968F33") },  // slightly darker
+            { Properties.Strings.Profession_Marksman, ColorTranslator.FromHtml("#A8A23A") },
+
+            // FROST MAGE (Ice Purple-Blue)
+            { Properties.Strings.SubProfession_IceRay, ColorTranslator.FromHtml("#9B99D4") },   // lighter cooler
+            { Properties.Strings.SubProfession_IceSpear, ColorTranslator.FromHtml("#7B79B3") }, // darker
+            { Properties.Strings.Profession_FrostMage, ColorTranslator.FromHtml("#8A88C5") },
+
+            // HEAVY GUARDIAN (Steel Green)
+            { Properties.Strings.SubProfession_RockShield, ColorTranslator.FromHtml("#6E9E75") }, // lighter green
+            { Properties.Strings.SubProfession_Block, ColorTranslator.FromHtml("#4E7A54") },      // deeper green
+            { Properties.Strings.Profession_HeavyGuardian, ColorTranslator.FromHtml("#5E8C65") },
+
+            // STORMBLADE (Violet Steel)
+            { Properties.Strings.SubProfession_Iai, ColorTranslator.FromHtml("#9C87E1") },         // lighter purple
+            { Properties.Strings.SubProfession_MoonBlade, ColorTranslator.FromHtml("#7C69C2") },    // deeper tone
+            { Properties.Strings.Profession_Stormblade, ColorTranslator.FromHtml("#8C78D2") },
+
+            // SOUL MUSICIAN (Soft Red)
+            { Properties.Strings.SubProfession_Concerto, ColorTranslator.FromHtml("#CF7272") },     // lighter red
+            { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#B25555") },   // darker red
+            { Properties.Strings.Profession_SoulMusician, ColorTranslator.FromHtml("#C16363") },
+
+            // WIND KNIGHT (Teal Wind)
+            { Properties.Strings.SubProfession_AirStyle, ColorTranslator.FromHtml("#8CC2C5") },      // lighter teal
+            { Properties.Strings.SubProfession_Overdrive, ColorTranslator.FromHtml("#71A2A5") },     // deeper teal
+            { Properties.Strings.Profession_WindKnight, ColorTranslator.FromHtml("#7FB4B7") },
+
+            // VERDANT ORACLE (Nature Green)
+            { Properties.Strings.SubProfession_Lifebloom, ColorTranslator.FromHtml("#85D399") },     // brighter green
+            { Properties.Strings.SubProfession_Thornlash, ColorTranslator.FromHtml("#66B377") },     // deeper/darker
+            { Properties.Strings.Profession_VerdantOracle, ColorTranslator.FromHtml("#75C488") },
+
+            // AEGIS KNIGHT (Light Gold-Khaki)
+            { Properties.Strings.SubProfession_Protection, ColorTranslator.FromHtml("#D0CB9B") },     // brighter gold
+            { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#B2AD80") },    // darker gold
+            { Properties.Strings.Profession_AegisKnight, ColorTranslator.FromHtml("#C1BD8E") },
+        };
+
         static Bitmap EmptyBitmap(int w = 1, int h = 1)
         {
             var bmp = new Bitmap(w, h, PixelFormat.Format32bppArgb);
@@ -622,16 +709,16 @@ namespace StarResonanceDpsAnalysis.Forms
                     string totalFmt = Common.FormatWithEnglishUnits(p.Total);
                     string perSec = Common.FormatWithEnglishUnits(Math.Round(p.PerSecond, 1));
 
-                    var iconKey = (p?.Profession is string pr && pr != Properties.Strings.Profession_Unknown && imgDict.ContainsKey(pr)) ? pr
-                                : (p?.SubProfession is string sr && sr != Properties.Strings.Profession_Unknown && imgDict.ContainsKey(sr)) ? sr
+                    var iconKey = (p?.SubProfession is string sr && sr != Properties.Strings.Profession_Unknown && imgDict.ContainsKey(sr)) ? sr
+                                : (p?.Profession is string pr && pr != Properties.Strings.Profession_Unknown && imgDict.ContainsKey(pr)) ? pr
                                 : Properties.Strings.Profession_Unknown;
 
                     var profBmp = imgDict.TryGetValue(iconKey, out var bmp) ? bmp : EmptyBitmap(); ;
 
                     var colorMap = Config.IsLight ? colorDict : blackColorDict;
 
-                    var colorKey = (p?.Profession is string pr2 && pr2 != Properties.Strings.Profession_Unknown && colorMap.ContainsKey(pr2)) ? pr2
-                                 : (p?.SubProfession is string sr2 && sr2 != Properties.Strings.Profession_Unknown && colorMap.ContainsKey(sr2)) ? sr2
+                    var colorKey = (p?.SubProfession is string sr2 && sr2 != Properties.Strings.Profession_Unknown && colorMap.ContainsKey(sr2)) ? sr2
+                                 : (p?.Profession is string pr2 && pr2 != Properties.Strings.Profession_Unknown && colorMap.ContainsKey(pr2)) ? pr2
                                  : Properties.Strings.Profession_Unknown;
 
                     var color = colorMap.TryGetValue(colorKey, out var c) ? c : ColorTranslator.FromHtml("#67AEF6");
@@ -655,7 +742,7 @@ namespace StarResonanceDpsAnalysis.Forms
                     // 只要子流派；没有子流派就用战力；否则只显示昵称
                     string sp = Common.GetTranslatedSubProfession(p.SubProfession);
 
-                    row[1].Text = $"{p.Nickname}-{sp}({p.CombatPower})"; //TODO come back here, update subprofession when changing language
+                    row[1].Text = $"{sp} ({p.CombatPower}) {p.Nickname}"; //TODO come back here, update subprofession when changing language
 
 
                     row[2].Text = $"{totalFmt} ({perSec})";
