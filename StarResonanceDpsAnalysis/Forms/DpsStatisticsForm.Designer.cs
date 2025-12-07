@@ -241,20 +241,21 @@ namespace StarResonanceDpsAnalysis.Forms
             //SortToggleButton = new AntdUI.Button();
             SortToggleButton.Name = "SortToggleButton";
             SortToggleButton.Text = "Sort[Σ]"; // default
-            SortToggleButton.Font = new Font("Segoe UI Emoji", 11F, FontStyle.Bold);
-            SortToggleButton.Size = new Size(95, 35);
+            SortToggleButton.Font = new Font("Segoe UI Emoji", 10f, FontStyle.Regular, GraphicsUnit.Pixel);
+            SortToggleButton.Size = new Size(70, 32);
             SortToggleButton.Radius = 6;
-            SortToggleButton.Ghost = false;
+            SortToggleButton.Ghost = true;
             SortToggleButton.Location = new Point(BattleTimeText.Right + 6, 3);
             SortToggleButton.Click += SortToggleButton_Click;
-            SortToggleButton.ForeColor = Color.White; 
-            SortToggleButton.BackColor = Color.FromArgb(50, 150, 250);
+            //SortToggleButton.ForeColor = Color.White; 
+            //SortToggleButton.BackColor = Color.FromArgb(50, 150, 250);
             //
             // label1
             // 
             label1.Dock = DockStyle.None;
             //label1.Font = new Font("Segoe UI Emoji", 12f, FontStyle.Bold, GraphicsUnit.Pixel);
-            label1.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            label1.Font = new Font("Segoe UI Emoji", 10f, FontStyle.Regular, GraphicsUnit.Pixel);
+            //label1.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             label1.Location = new Point(0, 3);
             label1.Margin = new Padding(4);
             label1.Name = "label1";
