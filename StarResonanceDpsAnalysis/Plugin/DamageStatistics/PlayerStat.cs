@@ -2415,13 +2415,13 @@ namespace StarResonanceDpsAnalysis.Plugin.DamageStatistics
         /// 只在玩家产生治疗的区间累加；用于计算 TotalHps = TotalHealing / ActiveSecondsHealing。
         /// </summary>
         public double ActiveSecondsHealing { get; init; }
-
+/*
         /// <summary>
         /// 承伤统计的“有效作战时长”（秒）。
         /// 只在玩家实际承伤的时间累加；用于计算 TotalTps = TakenDamage / ActiveSecondsTaken。
         /// </summary>
         public double ActiveSecondsTaken { get; init; }
-
+*/
         /// <summary>
         /// 全程累计的“暴击治疗”总量（单位：点）。
         /// 由治疗事件聚合得到，仅计入暴击标记的治疗。

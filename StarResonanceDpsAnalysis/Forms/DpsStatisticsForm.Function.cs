@@ -1151,7 +1151,8 @@ namespace StarResonanceDpsAnalysis.Forms
                             break;
                         case MetricType.Taken:
                             total = p.TakenDamage;
-                            ps = p.Tps; // now ActiveSecondsTaken used → no more flicker // use computed TPS like DPS/HPS to prevent flicker
+                            //ps = p.Tps; // now ActiveSecondsTaken used → no more flicker // use computed TPS like DPS/HPS to prevent flicker
+                            ps = total / sessionSecs;
                             break;
                         default: // Damage
                             total = p.TotalDamage;
