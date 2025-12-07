@@ -580,7 +580,7 @@
                 // 各自有效分母（回退到会话时长以兜底）
                 var secsDmg = p.ActiveSecondsDamage > 0 ? p.ActiveSecondsDamage : snap.Duration.TotalSeconds;
                 var secsHeal = p.ActiveSecondsHealing > 0 ? p.ActiveSecondsHealing : snap.Duration.TotalSeconds;
-                double secsTaken = p.ActiveSecondsTaken > 0 ? p.ActiveSecondsTaken : snap.Duration.TotalSeconds;
+                var secsTaken = p.ActiveSecondsTaken > 0 ? p.ActiveSecondsTaken : snap.Duration.TotalSeconds;
 
                 // includeZero 过滤逻辑保持不变
                 if (!includeZero && p.TotalDamage == 0 && p.TotalHealing == 0 && p.TakenDamage == 0)
