@@ -497,6 +497,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 BattleTimeText.ForeColor = thetextcolor;
                 label1.ForeColor = thetextcolor;
                 label2.ForeColor = thetextcolor;
+                SortToggleButton.ForeColor = thetextcolor;
 
                 TotalDamageButton.Icon = Common.BytesToImage(Properties.Resources.伤害);
                 TotalTreatmentButton.Icon = Common.BytesToImage(Properties.Resources.治疗);
@@ -590,7 +591,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             pageHeader1.Font = AppConfig.SaoFont;
             pageHeader1.SubFont = AppConfig.ContentFont;
             PilingModeCheckbox.Font = AppConfig.ContentFont;
-            label2.Font = label1.Font = AppConfig.ContentFont;
+            //label2.Font = label1.Font = AppConfig.ContentFont;
 
             TotalDamageButton.Font = AppConfig.BoldHarmonyFont;
             TotalTreatmentButton.Font = AppConfig.BoldHarmonyFont;
