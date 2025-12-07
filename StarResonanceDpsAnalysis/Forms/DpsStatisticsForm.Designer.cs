@@ -43,6 +43,7 @@ namespace StarResonanceDpsAnalysis.Forms
             panel1 = new AntdUI.Panel();
             label2 = new AntdUI.Label();
             BattleTimeText = new AntdUI.Label();
+            SortToggleButton = new AntdUI.Button();
             label1 = new AntdUI.Label();
             timer_RefreshRunningTime = new System.Windows.Forms.Timer(components);
             timer1 = new System.Windows.Forms.Timer(components);
@@ -201,6 +202,7 @@ namespace StarResonanceDpsAnalysis.Forms
             panel1.BackColor = Color.Transparent;
             panel1.Controls.Add(label2);
             panel1.Controls.Add(BattleTimeText);
+            panel1.Controls.Add(SortToggleButton);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 408);
@@ -235,6 +237,17 @@ namespace StarResonanceDpsAnalysis.Forms
             BattleTimeText.TabIndex = 18;
             BattleTimeText.Text = "00:00";
             // 
+            // SortToggleButton
+            //SortToggleButton = new AntdUI.Button();
+            SortToggleButton.Name = "SortToggleButton";
+            SortToggleButton.Text = "Sort[Σ]"; // default
+            SortToggleButton.Font = new Font("Segoe UI Emoji", 11F, FontStyle.Bold);
+            SortToggleButton.Size = new Size(70, 26);
+            SortToggleButton.Radius = 6;
+            SortToggleButton.Ghost = true;
+            SortToggleButton.Location = new Point(BattleTimeText.Right + 6, BattleTimeText.Top + 3);
+            SortToggleButton.Click += SortToggleButton_Click;
+            //
             // label1
             // 
             label1.Dock = DockStyle.None;
@@ -412,5 +425,6 @@ namespace StarResonanceDpsAnalysis.Forms
         private AntdUI.Button NpcTakeDamageButton;
         private AntdUI.Button button_ThemeSwitch;
         private AntdUI.TooltipComponent tooltip;
+        private AntdUI.Button SortToggleButton;
     }
 }

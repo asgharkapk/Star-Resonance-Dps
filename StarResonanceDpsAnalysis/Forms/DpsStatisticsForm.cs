@@ -794,5 +794,21 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         {
 
         }
+        
+        private void SortToggleButton_Click(object sender, EventArgs e)
+        {
+            SortByDps = !SortByDps;
+            SortToggleButton.Text = SortByDps ? "Sort[⚡]" : "Sort[Σ]";
+
+            var source = FormManager.showTotal ? SourceType.FullRecord : SourceType.Current;
+            RefreshDpsTable(source, FormManager.currentIndex switch
+            {
+                1 => MetricType.Healing,
+                2 => MetricType.Taken,
+                3 => MetricType.NpcTaken,
+                _ => MetricType.Damage
+            });
+        }
+
     }
 }
