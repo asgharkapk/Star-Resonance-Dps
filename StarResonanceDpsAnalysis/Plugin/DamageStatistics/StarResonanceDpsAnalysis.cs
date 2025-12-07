@@ -595,8 +595,8 @@
                     TotalHealing: p.TotalHealing,
                     TakenDamage: p.TakenDamage,
                     Dps: secsDmg > 0 ? R2(p.TotalDamage / secsDmg) : 0,
-                    Hps: secsHeal > 0 ? R2(p.TotalHealing / secsHeal) : 0
-                    Tps: secsTaken > 0 ? R2((double)p.TakenDamage / secsTaken) : 0 // new line
+                    Hps: secsHeal > 0 ? R2(p.TotalHealing / secsHeal) : 0,
+                    Tps: secsTaken > 0 ? R2(p.TakenDamage / secsTaken) : 0
                 ));
             }
 
@@ -1101,10 +1101,12 @@
                     // 按各自“有效活跃秒数”计算的全程每秒（保持你原口径）
                     TotalDps = p.Damage.ActiveSeconds > 0 ? R2(p.Damage.Total / p.Damage.ActiveSeconds) : 0,
                     TotalHps = p.Healing.ActiveSeconds > 0 ? R2(p.Healing.Total / p.Healing.ActiveSeconds) : 0,
+                    TotalTps = p.TakenDamage > 0 && p.ActiveSecondsTaken > 0 ? R2(p.TakenDamage / p.ActiveSecondsTaken) : 0, // NEW
 
                     LastRecordTime = null, // 如需，可在写入路径维护最后时间
                     ActiveSecondsDamage = p.Damage.ActiveSeconds,
                     ActiveSecondsHealing = p.Healing.ActiveSeconds,
+                    ActiveSecondsTaken = p.ActiveSecondsTaken, // NEW
 
                     // 逐技能列表
                     DamageSkills = damageSkills,
