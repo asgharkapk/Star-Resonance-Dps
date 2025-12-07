@@ -109,18 +109,18 @@
             // 
             select2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             select2.DropDownTextAlign = AntdUI.TAlign.Top;
-            select2.Items.AddRange(new object[] { "按伤害排序", "按治疗排序", "按承伤排序" });
+            select2.Items.AddRange(new object[] { "Sort by damage", "Sorted by treatment", "Sorted by injury" });
             select2.List = true;
             select2.Location = new Point(881, 34);
             select2.Name = "select2";
             select2.Placement = AntdUI.TAlignFrom.Top;
             select2.Radius = 3;
             select2.SelectedIndex = 0;
-            select2.SelectedValue = "按伤害排序";
+            select2.SelectedValue = "Sort by damage";
             select2.SelectionStart = 5;
             select2.Size = new Size(237, 47);
             select2.TabIndex = 29;
-            select2.Text = "按伤害排序";
+            select2.Text = "Sort by damage";
             select2.SelectedIndexChanged += select2_SelectedIndexChanged;
             // 
             // button1
@@ -186,8 +186,8 @@
             segmented1.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             segmented1.Full = true;
             segmented1.IconGap = 0F;
-            segmentedItem1.Text = "单次伤害记录";
-            segmentedItem2.Text = "全程伤害记录";
+            segmentedItem1.Text = "Single damage record";
+            segmentedItem2.Text = "Full damage record";
             segmented1.Items.Add(segmentedItem1);
             segmented1.Items.Add(segmentedItem2);
             segmented1.Location = new Point(9, 9);
@@ -273,7 +273,7 @@
             label5.Name = "label5";
             label5.Size = new Size(123, 45);
             label5.TabIndex = 26;
-            label5.Text = "团队总承伤";
+            label5.Text = "Team total injury";
             // 
             // label2
             // 
@@ -285,7 +285,7 @@
             label2.Name = "label2";
             label2.Size = new Size(115, 45);
             label2.TabIndex = 24;
-            label2.Text = "团队总治疗";
+            label2.Text = "Team overall treatment";
             // 
             // label3
             // 
@@ -296,7 +296,7 @@
             label3.Name = "label3";
             label3.Size = new Size(114, 45);
             label3.TabIndex = 22;
-            label3.Text = "团队总伤害";
+            label3.Text = "Total Team Damage";
             // 
             // label6
             // 
@@ -308,7 +308,7 @@
             label6.Name = "label6";
             label6.Size = new Size(271, 30);
             label6.TabIndex = 22;
-            label6.Text = "团队信息";
+            label6.Text = "Team Information";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // TeamTotalDamageLabel

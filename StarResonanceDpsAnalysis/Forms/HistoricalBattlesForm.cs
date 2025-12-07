@@ -106,7 +106,7 @@ namespace StarResonanceDpsAnalysis.Forms
             public override string ToString()
             {
                 var s = Snapshot;
-                return $"[全程] {s.StartedAt:MM-dd HH:mm:ss} ~ {s.EndedAt:HH:mm:ss}（{s.Duration:hh\\:mm\\:ss}）";
+                return $"[Full process] {s.StartedAt:MM-dd HH:mm:ss} ~ {s.EndedAt:HH:mm:ss}（{s.Duration:hh\\:mm\\:ss}）";
             }
         }
 
@@ -135,7 +135,7 @@ namespace StarResonanceDpsAnalysis.Forms
         {
             DpsTableDatas.DpsTable.Clear(); // 清空旧数据
             var sb = new StringBuilder();
-            sb.AppendLine($"[快照] {snap.StartedAt:MM-dd HH:mm:ss} ~ {snap.EndedAt:HH:mm:ss}  时长: {snap.Duration}");
+            sb.AppendLine($"[Snapshot] {snap.StartedAt:MM-dd HH:mm:ss} ~ {snap.EndedAt:HH:mm:ss}  Duration: {snap.Duration}");
             TeamTotalDamageLabel.Text =Common.FormatWithEnglishUnits(snap.TeamTotalDamage.ToString());
             TeamTotalHealingLabel.Text = Common.FormatWithEnglishUnits(snap.TeamTotalHealing.ToString());
             TeamTotalTakenDamageLabel.Text = Common.FormatWithEnglishUnits(snap.TeamTotalTakenDamage.ToString());
@@ -205,7 +205,7 @@ namespace StarResonanceDpsAnalysis.Forms
         {
             DpsTableDatas.DpsTable.Clear(); // 清空旧数据
             var sb = new StringBuilder();
-            sb.AppendLine($"[全程快照] {snap.StartedAt:MM-dd HH:mm:ss} ~ {snap.EndedAt:HH:mm:ss}  时长: {snap.Duration}");
+            sb.AppendLine($"[Full snapshot] {snap.StartedAt:MM-dd HH:mm:ss} ~ {snap.EndedAt:HH:mm:ss}  Duration: {snap.Duration}");
             TeamTotalDamageLabel.Text = Common.FormatWithEnglishUnits(snap.TeamTotalDamage.ToString());
             TeamTotalHealingLabel.Text = Common.FormatWithEnglishUnits(snap.TeamTotalHealing.ToString());
             TeamTotalTakenDamageLabel.Text = Common.FormatWithEnglishUnits( snap.TeamTotalTakenDamage.ToString());
@@ -419,8 +419,8 @@ namespace StarResonanceDpsAnalysis.Forms
             var val = select2?.SelectedValue?.ToString();
             _sortMode = val switch
             {
-                "按治疗排序" => SortMode.ByHealing,
-                "按承伤排序" => SortMode.ByTaken,
+                "Sorted by treatment" => SortMode.ByHealing,
+                "Sorted by injury" => SortMode.ByTaken,
                 _ => SortMode.ByDamage
             };
 
