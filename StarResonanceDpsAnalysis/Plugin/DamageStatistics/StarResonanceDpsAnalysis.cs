@@ -406,6 +406,7 @@
                 ulong TakenDamage,
                 double Dps,   // 全程秒伤（只算伤害）
                 double Hps    // 全程秒疗
+                double Tps     // <-- add this
             );
 
         // ======================================================================
@@ -595,6 +596,7 @@
                     TakenDamage: p.TakenDamage,
                     Dps: secsDmg > 0 ? R2(p.TotalDamage / secsDmg) : 0,
                     Hps: secsHeal > 0 ? R2(p.TotalHealing / secsHeal) : 0
+                    Tps: secsTaken > 0 ? R2((double)p.TakenDamage / secsTaken) : 0 // new line
                 ));
             }
 

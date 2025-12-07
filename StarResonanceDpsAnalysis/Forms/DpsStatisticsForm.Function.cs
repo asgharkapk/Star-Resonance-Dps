@@ -1151,7 +1151,7 @@ namespace StarResonanceDpsAnalysis.Forms
                             break;
                         case MetricType.Taken:
                             total = p.TakenDamage;
-                            ps = total / sessionSecs;
+                            ps = p.Tps; // use computed TPS like DPS/HPS to prevent flicker
                             break;
                         default: // Damage
                             total = p.TotalDamage;

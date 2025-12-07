@@ -245,7 +245,7 @@ namespace StarResonanceDpsAnalysis.Forms
             SortToggleButton.Size = new Size(70, 32);
             SortToggleButton.Radius = 6;
             SortToggleButton.Ghost = true;
-            SortToggleButton.Location = new Point(BattleTimeText.Right + 10, 0);
+            SortToggleButton.Location = new Point(BattleTimeText.Right + 12, 0);
             SortToggleButton.Click += SortToggleButton_Click;
             //SortToggleButton.ForeColor = Color.White; 
             //SortToggleButton.BackColor = Color.FromArgb(50, 150, 250);
