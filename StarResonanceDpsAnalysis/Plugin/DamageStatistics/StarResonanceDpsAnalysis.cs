@@ -405,7 +405,7 @@
                 ulong TotalHealing,
                 ulong TakenDamage,
                 double Dps,   // 全程秒伤（只算伤害）
-                double Hps    // 全程秒疗
+                double Hps,    // 全程秒疗
                 double Tps     // <-- add this
             );
 
