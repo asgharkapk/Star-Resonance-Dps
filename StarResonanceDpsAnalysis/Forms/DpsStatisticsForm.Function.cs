@@ -715,7 +715,6 @@ namespace StarResonanceDpsAnalysis.Forms
                 {
                     var p = ordered[i];
 
-
                     float ratio = (float)(p.Total / top);
                     if (!float.IsFinite(ratio)) ratio = 0f;
                     ratio = Math.Clamp(ratio, 0f, 1f);
@@ -770,6 +769,7 @@ namespace StarResonanceDpsAnalysis.Forms
                     }
 
                     // 复用旧的 ProgressBarData，避免 UI 抖动；没有则新建
+                    double orderKey = SortByDps ? p.PerSecond : p.Total;
                     if (!byId.TryGetValue(p.Uid, out var pb))
                     {
                         pb = new ProgressBarData
@@ -779,6 +779,7 @@ namespace StarResonanceDpsAnalysis.Forms
                             ProgressBarCornerRadius = 3,
                             ProgressBarValue = ratio,
                             ProgressBarColor = color,
+                            OrderValue = orderKey   // <-- set ordering key here
                         };
                     }
                     else
@@ -786,6 +787,7 @@ namespace StarResonanceDpsAnalysis.Forms
                         pb.ContentList = row;      // 保底同步
                         pb.ProgressBarValue = ratio;
                         pb.ProgressBarColor = color;
+                        pb.OrderValue = orderKey; // <-- update ordering key
                     }
 
                     next.Add(pb);
