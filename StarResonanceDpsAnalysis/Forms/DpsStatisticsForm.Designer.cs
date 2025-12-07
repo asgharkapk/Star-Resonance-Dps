@@ -242,9 +242,9 @@ namespace StarResonanceDpsAnalysis.Forms
             SortToggleButton.Name = "SortToggleButton";
             SortToggleButton.Text = "Sort[Σ]"; // default
             SortToggleButton.Font = new Font("Segoe UI Emoji", 11F, FontStyle.Bold);
-            SortToggleButton.Size = new Size(100, 31);
+            SortToggleButton.Size = new Size(100, 100);
             SortToggleButton.Radius = 6;
-            SortToggleButton.Ghost = true;
+            //SortToggleButton.Ghost = true;
             SortToggleButton.Location = new Point(BattleTimeText.Right + 6, 3);
             SortToggleButton.Click += SortToggleButton_Click;
             SortToggleButton.ForeColor = Color.White; 
