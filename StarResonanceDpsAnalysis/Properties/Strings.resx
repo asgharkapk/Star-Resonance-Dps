@@ -210,8 +210,8 @@
     <comment>DPS Damage Statistics Table</comment>
   </data>
   <data name="Header_DpsStatistics_Subtitle" xml:space="preserve">
-    <value>Current damage</value>
-    <comment>Current Damage</comment>
+    <value>Current</value>
+    <comment>Current</comment>
   </data>
   <data name="TotalDamageLabel" xml:space="preserve">
     <value>Total Damage</value>

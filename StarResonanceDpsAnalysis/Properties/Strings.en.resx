@@ -202,7 +202,7 @@
     <value>DPS Damage Statistics Table</value>
   </data>
   <data name="Header_DpsStatistics_Subtitle" xml:space="preserve">
-    <value>Current Damage</value>
+    <value>Current</value>
   </data>
   <data name="TotalDamageLabel" xml:space="preserve">
     <value>DPS</value>
