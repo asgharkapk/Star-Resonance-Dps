@@ -287,13 +287,15 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             // panel2
             // 
+            FlowLayoutPanel panel2 = new FlowLayoutPanel();
+            panel2.FlowDirection = FlowDirection.LeftToRight;
+            panel2.Dock = DockStyle.Top;
             panel2.BackColor = Color.Transparent;
             panel2.Controls.Add(NpcTakeDamageButton);
             panel2.Controls.Add(AlwaysInjuredButton);
             panel2.Controls.Add(TotalTreatmentButton);
             panel2.Controls.Add(TotalDamageButton);
             panel2.Controls.Add(SortToggleButton);
-            panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 25);
             panel2.Name = "panel2";
             panel2.Shadow = 3;
@@ -326,12 +328,12 @@ namespace StarResonanceDpsAnalysis.Forms
             NpcTakeDamageButton.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 134);
             NpcTakeDamageButton.Icon = (Image)resources.GetObject("NpcTakeDamageButton.Icon");
             NpcTakeDamageButton.IconRatio = 0.7F;
-            NpcTakeDamageButton.Location = new Point(AlwaysInjuredButton.Right + 6, 5);
             NpcTakeDamageButton.Name = "NpcTakeDamageButton";
             NpcTakeDamageButton.Radius = 3;
             NpcTakeDamageButton.Size = new Size(70, 30);
             NpcTakeDamageButton.TabIndex = 4;
             NpcTakeDamageButton.Text = "承伤";
+            //NpcTakeDamageButton.Location = new Point(AlwaysInjuredButton.Right + 6, 5);
             NpcTakeDamageButton.Click += DamageType_Click;
             // 
             // AlwaysInjuredButton
@@ -341,13 +343,13 @@ namespace StarResonanceDpsAnalysis.Forms
             AlwaysInjuredButton.DefaultBorderColor = Color.Wheat;
             AlwaysInjuredButton.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 134);
             AlwaysInjuredButton.Icon = (Image)resources.GetObject("AlwaysInjuredButton.Icon");
-            AlwaysInjuredButton.Location = new Point(TotalTreatmentButton.Right + 6, 5);
             AlwaysInjuredButton.Margin = new Padding(4);
             AlwaysInjuredButton.Name = "AlwaysInjuredButton";
             AlwaysInjuredButton.Radius = 3;
             AlwaysInjuredButton.Size = new Size(70, 30);
             AlwaysInjuredButton.TabIndex = 3;
             AlwaysInjuredButton.Text = "总承伤";
+            //AlwaysInjuredButton.Location = new Point(TotalTreatmentButton.Right + 6, 5);
             AlwaysInjuredButton.Click += DamageType_Click;
             // 
             // TotalTreatmentButton
@@ -356,13 +358,13 @@ namespace StarResonanceDpsAnalysis.Forms
             TotalTreatmentButton.DefaultBack = Color.FromArgb(247, 247, 247);
             TotalTreatmentButton.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 134);
             TotalTreatmentButton.Icon = (Image)resources.GetObject("TotalTreatmentButton.Icon");
-            TotalTreatmentButton.Location = new Point(TotalDamageButton.Right + 6, 5);
             TotalTreatmentButton.Margin = new Padding(4);
             TotalTreatmentButton.Name = "TotalTreatmentButton";
             TotalTreatmentButton.Radius = 3;
             TotalTreatmentButton.Size = new Size(70, 30);
             TotalTreatmentButton.TabIndex = 2;
             TotalTreatmentButton.Text = "总治疗";
+            //TotalTreatmentButton.Location = new Point(TotalDamageButton.Right + 6, 5);
             TotalTreatmentButton.Click += DamageType_Click;
             // 
             // TotalDamageButton
@@ -371,7 +373,7 @@ namespace StarResonanceDpsAnalysis.Forms
             TotalDamageButton.DefaultBack = Color.FromArgb(223, 223, 223);
             TotalDamageButton.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 134);
             TotalDamageButton.Icon = (Image)resources.GetObject("TotalDamageButton.Icon");
-            TotalDamageButton.Location = new Point(20, 5);
+            //TotalDamageButton.Location = new Point(20, 5);
             TotalDamageButton.Name = "TotalDamageButton";
             TotalDamageButton.Radius = 3;
             TotalDamageButton.Size = new Size(60, 30);
