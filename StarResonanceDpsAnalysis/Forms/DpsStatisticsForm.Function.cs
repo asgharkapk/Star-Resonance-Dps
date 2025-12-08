@@ -570,6 +570,8 @@ namespace StarResonanceDpsAnalysis.Forms
             public string SubProfession;
         }
 
+        private static bool SortByDps = false; // true = ⚡ , false = Σ
+
         public void RefreshDpsTable(SourceType source, MetricType metric)
         {
             // # UI 刷新事件：根据指定数据源（单次/全程）与指标（伤害/治疗/承伤）对进度条列表进行重建与绑定
@@ -591,7 +593,9 @@ namespace StarResonanceDpsAnalysis.Forms
                 return;
             }
 
-            var ordered = uiList.OrderByDescending(x => x.Total).ToList();
+            var ordered = SortByDps
+                ? uiList.OrderByDescending(x => x.PerSecond).ToList()   // ⚡ DPS
+                : uiList.OrderByDescending(x => x.Total).ToList();      // Σ Total
 
             double teamSum = uiList.Sum(x => (double)x.Total);
             if (teamSum <= 0d) teamSum = 1d;
@@ -683,6 +687,7 @@ namespace StarResonanceDpsAnalysis.Forms
                     }
 
                     // 复用旧的 ProgressBarData，避免 UI 抖动；没有则新建
+                    double orderKey = SortByDps ? p.PerSecond : p.Total;
                     if (!byId.TryGetValue(p.Uid, out var pb))
                     {
                         pb = new ProgressBarData
@@ -692,6 +697,7 @@ namespace StarResonanceDpsAnalysis.Forms
                             ProgressBarCornerRadius = 3,
                             ProgressBarValue = ratio,
                             ProgressBarColor = color,
+                            OrderValue = orderKey   // <-- set ordering key here
                         };
                     }
                     else
@@ -699,6 +705,7 @@ namespace StarResonanceDpsAnalysis.Forms
                         pb.ContentList = row;      // 保底同步
                         pb.ProgressBarValue = ratio;
                         pb.ProgressBarColor = color;
+                        pb.OrderValue = orderKey; // <-- update ordering key
                     }
 
                     next.Add(pb);

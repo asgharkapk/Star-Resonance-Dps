@@ -241,7 +241,7 @@ namespace StarResonanceDpsAnalysis.Control
             // 这里会删除ToIndex = -1, TODO
             var tmpIndex = 0;
             _animatingInfoBuffer = [.. _animatingInfoBuffer
-                .OrderByDescending(e => e.Data.ProgressBarValue)
+                .OrderByDescending(e => (e.Data.OrderValue.HasValue ? e.Data.OrderValue.Value : e.Data.ProgressBarValue))
                 .Select(e =>
                 {
                     if (e.ToIndex == -1) return e;
@@ -373,6 +373,7 @@ namespace StarResonanceDpsAnalysis.Control
     {
         public long ID { get; set; }
         public double ProgressBarValue { get; set; }
+        public double? OrderValue { get; set; }   // <-- new: null means "use ProgressBarValue"
         public Color ProgressBarColor { get; set; } = Color.FromArgb(0x56, 0x9C, 0xD6);
         public int ProgressBarCornerRadius { get; set; }
         public List<RenderContent>? ContentList { get; set; }

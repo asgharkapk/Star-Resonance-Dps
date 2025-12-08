@@ -520,6 +520,8 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
 
                 AppConfig.colorText = thetextcolor;
                 sortedProgressBarList1.OrderColor = thetextcolor;
+                
+                SortToggleButton.ForeColor = thetextcolor;
 
                 foreach (var lbl in headerLabels)
                     lbl.ForeColor = thetextcolor;
@@ -831,10 +833,10 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         {
             var buttons = new (AntdUI.Button button, string text, string iconResource, Color defaultBack, Point location)[]
             {
-                (TotalDamageButton, "总伤害", "TotalDamageButton.Icon", Color.FromArgb(223,223,223), new Point(38, 8)),
-                (TotalTreatmentButton, "总治疗", "TotalTreatmentButton.Icon", Color.FromArgb(247,247,247), new Point(148, 8)),
-                (AlwaysInjuredButton, "总承伤", "AlwaysInjuredButton.Icon", Color.FromArgb(247,247,247), new Point(262, 8)),
-                (NpcTakeDamageButton, "承伤", "NpcTakeDamageButton.Icon", Color.FromArgb(247,247,247), new Point(372, 8))
+                (TotalDamageButton, "总伤害", "TotalDamageButton.Icon", Color.FromArgb(223,223,223), new Point(20, 8)),
+                (TotalTreatmentButton, "总治疗", "TotalTreatmentButton.Icon", Color.FromArgb(247,247,247), new Point(88, 5)),
+                (AlwaysInjuredButton, "总承伤", "AlwaysInjuredButton.Icon", Color.FromArgb(247,247,247), new Point(202, 5)),
+                (NpcTakeDamageButton, "承伤", "NpcTakeDamageButton.Icon", Color.FromArgb(247,247,247), new Point(312, 5))
             };
 
             foreach (var (btn, text, iconRes, defaultBack, loc) in buttons)
@@ -842,15 +844,30 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 //btn.Anchor = AnchorStyles.Top;
                 //btn.DefaultBack = defaultBack;
                 //btn.DefaultBorderColor = Color.Wheat;
-                btn.Font = new Font("Microsoft Sans Serif", 7F, FontStyle.Bold, GraphicsUnit.Point, 134);
+                btn.Font = new Font("Microsoft Sans Serif", 6F, FontStyle.Bold, GraphicsUnit.Point, 134);
                 //btn.Icon = (Image)resources.GetObject(iconRes);
                 btn.IconRatio = 0.7F;
                 btn.Location = loc;
                 btn.Radius = 3;
-                btn.Size = new Size(80, 30);
+                btn.Size = new Size(60, 25);
                 //btn.Text = text;
                 //btn.Click += DamageType_Click;
             }
+        }
+
+        private void SortToggleButton_Click(object sender, EventArgs e)
+        {
+            SortByDps = !SortByDps;
+            SortToggleButton.Text = SortByDps ? "Sort[⚡]" : "Sort[Σ]";
+
+            var source = FormManager.showTotal ? SourceType.FullRecord : SourceType.Current;
+            RefreshDpsTable(source, FormManager.currentIndex switch
+            {
+                1 => MetricType.Healing,
+                2 => MetricType.Taken,
+                3 => MetricType.NpcTaken,
+                _ => MetricType.Damage
+            });
         }
 
     }

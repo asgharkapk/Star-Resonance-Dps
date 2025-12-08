@@ -43,6 +43,7 @@ namespace StarResonanceDpsAnalysis.Forms
             panel1 = new AntdUI.Panel();
             label2 = new AntdUI.Label();
             BattleTimeText = new AntdUI.Label();
+            SortToggleButton = new AntdUI.Button();
             label1 = new AntdUI.Label();
             timer_RefreshRunningTime = new System.Windows.Forms.Timer(components);
             timer1 = new System.Windows.Forms.Timer(components);
@@ -63,6 +64,7 @@ namespace StarResonanceDpsAnalysis.Forms
             pageHeader1.BackColor = Color.Transparent;
             pageHeader1.ColorScheme = TAMode.Dark;
 
+            panel1.Controls.Add(SortToggleButton);
             pageHeader1.Controls.Add(BattleTimeText); // timer [docked left]
             pageHeader1.Controls.Add(label1); // player counter [docked left]
             pageHeader1.Controls.Add(button3); // current - overal switch [docked left]
@@ -91,7 +93,7 @@ namespace StarResonanceDpsAnalysis.Forms
             pageHeader1.SubGap = 0;
             pageHeader1.SubText = "当前伤害";
             pageHeader1.TabIndex = 16;
-            pageHeader1.Text = "";
+            pageHeader1.Text = " ";
             // 
             // PilingModeCheckbox
             // 
@@ -242,6 +244,19 @@ namespace StarResonanceDpsAnalysis.Forms
             BattleTimeText.Text = "00:00";
             BattleTimeText.MouseDown += HeaderPanel_MouseDown;
             // 
+            // SortToggleButton
+            //SortToggleButton = new AntdUI.Button();
+            SortToggleButton.Name = "SortToggleButton";
+            SortToggleButton.Text = "Sort[Σ]"; // default
+            SortToggleButton.Font = new Font("Segoe UI Emoji", 10f, FontStyle.Regular, GraphicsUnit.Pixel);
+            SortToggleButton.Size = new Size(70, 32);
+            SortToggleButton.Radius = 6;
+            SortToggleButton.Ghost = true;
+            SortToggleButton.Location = new Point(BattleTimeText.Right + 12, 0);
+            SortToggleButton.Click += SortToggleButton_Click;
+            //SortToggleButton.ForeColor = Color.White; 
+            //SortToggleButton.BackColor = Color.FromArgb(50, 150, 250);
+            //
             // label1
             // 
             label1.Dock = DockStyle.Left;
@@ -418,5 +433,6 @@ namespace StarResonanceDpsAnalysis.Forms
         private AntdUI.Button NpcTakeDamageButton;
         private AntdUI.Button button_ThemeSwitch;
         private AntdUI.TooltipComponent tooltip;
+        private AntdUI.Button SortToggleButton;
     }
 }
