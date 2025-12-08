@@ -839,15 +839,15 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
 
             foreach (var (btn, text, iconRes, defaultBack, loc) in buttons)
             {
-                btn.Anchor = AnchorStyles.Top;
+                //btn.Anchor = AnchorStyles.Top;
                 //btn.DefaultBack = defaultBack;
                 //btn.DefaultBorderColor = Color.Wheat;
-                btn.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+                btn.Font = new Font("Microsoft Sans Serif", 7F, FontStyle.Bold, GraphicsUnit.Point, 134);
                 //btn.Icon = (Image)resources.GetObject(iconRes);
-                btn.IconRatio = 0.8F;
+                btn.IconRatio = 0.7F;
                 btn.Location = loc;
                 btn.Radius = 3;
-                btn.Size = new Size(112, 38);
+                btn.Size = new Size(80, 30);
                 //btn.Text = text;
                 //btn.Click += DamageType_Click;
             }
