@@ -42,7 +42,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             // 构造函数开始
             InitializeComponent(); // 初始化设计器生成的控件与布局
 
-            InitializeDamageButtons(); // Now initialize them compactly
+            //InitializeDamageButtons(); // Now initialize them compactly
 
             Text = FormManager.APP_NAME;
 
@@ -625,11 +625,12 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             pageHeader1.SubFont = AppConfig.ContentFont;
             PilingModeCheckbox.Font = AppConfig.ContentFont;
             //label2.Font = label1.Font = AppConfig.ContentFont;
-
+/*
             TotalDamageButton.Font = AppConfig.BoldHarmonyFont;
             TotalTreatmentButton.Font = AppConfig.BoldHarmonyFont;
             AlwaysInjuredButton.Font = AppConfig.BoldHarmonyFont;
             NpcTakeDamageButton.Font = AppConfig.BoldHarmonyFont;
+            */
         }
 
         private void SetStartupPositionAndSize()
@@ -828,7 +829,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         {
 
         }
-
+/*
         private void InitializeDamageButtons()
         {
             var buttons = new (AntdUI.Button button, string text, string iconResource, Color defaultBack, Point location)[]
@@ -854,7 +855,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 //btn.Click += DamageType_Click;
             }
         }
-
+*/
         private void SortToggleButton_Click(object sender, EventArgs e)
         {
             SortByDps = !SortByDps;
