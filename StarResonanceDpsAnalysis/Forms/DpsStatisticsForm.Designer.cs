@@ -312,10 +312,10 @@ namespace StarResonanceDpsAnalysis.Forms
             SortToggleButton.Name = "SortToggleButton";
             SortToggleButton.Text = "Sort[Σ]"; // default
             SortToggleButton.Font = new Font("Segoe UI Emoji", 8f, FontStyle.Regular, GraphicsUnit.Pixel);
-            SortToggleButton.Size = new Size(80, 35);
+            SortToggleButton.Size = new Size(80, 32);
             SortToggleButton.Location = new Point(335, 5);
             SortToggleButton.Radius = 3;
-            SortToggleButton.Ghost = false;
+            SortToggleButton.Ghost = true;
             SortToggleButton.Click += SortToggleButton_Click;
             //SortToggleButton.ForeColor = Color.White; 
             SortToggleButton.BackColor = Color.FromArgb(50, 150, 250);
@@ -331,7 +331,7 @@ namespace StarResonanceDpsAnalysis.Forms
             NpcTakeDamageButton.Name = "NpcTakeDamageButton";
             NpcTakeDamageButton.Radius = 3;
             NpcTakeDamageButton.Size = new Size(80, 35);
-            NpcTakeDamageButton.Location = new Point(255, 5);
+            NpcTakeDamageButton.Location = new Point(275, 5);
             NpcTakeDamageButton.TabIndex = 4;
             NpcTakeDamageButton.Text = "NPCTANKING";
             NpcTakeDamageButton.Click += DamageType_Click;
@@ -362,7 +362,7 @@ namespace StarResonanceDpsAnalysis.Forms
             TotalTreatmentButton.Name = "TotalTreatmentButton";
             TotalTreatmentButton.Radius = 3;
             TotalTreatmentButton.Size = new Size(80, 35);
-            TotalTreatmentButton.Location = new Point(95, 5);
+            TotalTreatmentButton.Location = new Point(105, 5);
             TotalTreatmentButton.TabIndex = 2;
             TotalTreatmentButton.Text = "HEALING";
             TotalTreatmentButton.Click += DamageType_Click;
@@ -376,7 +376,7 @@ namespace StarResonanceDpsAnalysis.Forms
             TotalDamageButton.Name = "TotalDamageButton";
             TotalDamageButton.Radius = 3;
             TotalDamageButton.Size = new Size(60, 35);
-            TotalDamageButton.Location = new Point(35, 5);
+            TotalDamageButton.Location = new Point(45, 5);
             TotalDamageButton.TabIndex = 1;
             TotalDamageButton.Text = "DPS";
             TotalDamageButton.Click += DamageType_Click;
