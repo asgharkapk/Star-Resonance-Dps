@@ -42,6 +42,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             // 构造函数开始
             InitializeComponent(); // 初始化设计器生成的控件与布局
 
+            InitializeDamageButtons(); // Now initialize them compactly
 
             Text = FormManager.APP_NAME;
 
@@ -486,90 +487,113 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         // 主题切换
         private void DpsStatisticsForm_ForeColorChanged(object sender, EventArgs e)
         {
-            List<Button> buttonList = new List<Button>() { TotalDamageButton, TotalTreatmentButton, AlwaysInjuredButton, NpcTakeDamageButton };
+            // All main buttons
+            List<Button> buttonList = new List<Button>()
+            {
+                TotalDamageButton,
+                TotalTreatmentButton,
+                AlwaysInjuredButton,
+                NpcTakeDamageButton
+            };
+
+            // Header child labels
+            List<Label> headerLabels = new List<Label>()
+            {
+                BattleTimeText,
+                label1,
+                label2
+            };
 
             if (Config.IsLight)
             {
-                //this.BackColor = Color.FromArgb(0, 0, 80);
-                this.TransparencyKey = Color.FromArgb(0, 0, 80);
+                var thetextcolor = Color.White;  // #39FF14
+                // Light mode background
+                Color themeBack = Color.FromArgb(0, 0, 80);
+                this.TransparencyKey = themeBack;
 
-                sortedProgressBarList1.BackColor = Color.FromArgb(0, 0, 80);
-                panel1.Back = Color.FromArgb(0, 0, 80); //bottom
-                panel2.Back = Color.FromArgb(0, 0, 80); //top
+                sortedProgressBarList1.BackColor = themeBack;
+                // Panels
+                panel1.Back = themeBack;
                 panel1.Shadow = 0;
+                panel2.Back = themeBack;
                 panel2.Shadow = 0;
 
-                var thetextcolor = Color.White;  // #39FF14
                 AppConfig.colorText = thetextcolor;
                 sortedProgressBarList1.OrderColor = thetextcolor;
-                BattleTimeText.ForeColor = thetextcolor;
-                label1.ForeColor = thetextcolor;
-                label2.ForeColor = thetextcolor;
 
+                foreach (var lbl in headerLabels)
+                    lbl.ForeColor = thetextcolor;
+
+                // Header
+                pageHeader1.BackColor = themeBack;
+                pageHeader1.ForeColor = thetextcolor;
+
+                // Buttons icons
                 TotalDamageButton.Icon = Common.BytesToImage(Properties.Resources.伤害);
                 TotalTreatmentButton.Icon = Common.BytesToImage(Properties.Resources.治疗);
                 AlwaysInjuredButton.Icon = Common.BytesToImage(Properties.Resources.承伤);
                 NpcTakeDamageButton.Icon = Common.BytesToImage(Properties.Resources.Npc);
+                // Button backgrounds
                 Color colorWhite = Color.FromArgb(223, 223, 223);
-                foreach (var item in buttonList)
+                foreach (var btn in buttonList)
                 {
-                    item.DefaultBack = Color.FromArgb(247, 247, 247);
-                    if (item.Name == "TotalDamageButton" && FormManager.currentIndex == 0)
-                    {
-                        item.DefaultBack = colorWhite;
-                    }
-                    if (item.Name == "TotalTreatmentButton" && FormManager.currentIndex == 1)
-                    {
-                        item.DefaultBack = colorWhite;
-                    }
-                    if (item.Name == "AlwaysInjuredButton" && FormManager.currentIndex == 2)
-                    {
-                        item.DefaultBack = colorWhite;
-                    }
-                    if (item.Name == "NpcTakeDamageButton" && FormManager.currentIndex == 3)
-                    {
-                        item.DefaultBack = colorWhite;
-                    }
+                    btn.DefaultBack = Color.FromArgb(247, 247, 247);
+                }
 
+                // Highlight current index button
+                switch (FormManager.currentIndex)
+                {
+                    case 0: TotalDamageButton.DefaultBack = colorWhite; break;
+                    case 1: TotalTreatmentButton.DefaultBack = colorWhite; break;
+                    case 2: AlwaysInjuredButton.DefaultBack = colorWhite; break;
+                    case 3: NpcTakeDamageButton.DefaultBack = colorWhite; break;
                 }
 
             }
             else
             {
-                sortedProgressBarList1.BackColor = ColorTranslator.FromHtml("#252527");
-                panel1.Back = ColorTranslator.FromHtml("#252527");
-                panel2.Back = ColorTranslator.FromHtml("#252527");
+                // Dark mode background
+                Color themeBack = ColorTranslator.FromHtml("#252527");
+
+                // Progress bar
+                sortedProgressBarList1.BackColor = themeBack;
+                sortedProgressBarList1.OrderColor = Color.White;
+
+                // Panels
+                panel1.Back = themeBack;
+                panel2.Back = themeBack;
 
                 AppConfig.colorText = Color.White;
-                sortedProgressBarList1.OrderColor = Color.White;
+
+                // Header
+                pageHeader1.BackColor = themeBack;
+                pageHeader1.ForeColor = Color.White;
+
+                foreach (var lbl in headerLabels)
+                    lbl.ForeColor = Color.White;
+
+                // Buttons icons
                 TotalDamageButton.Icon = Common.BytesToImage(Properties.Resources.伤害白色);
                 TotalTreatmentButton.Icon = Common.BytesToImage(Properties.Resources.治疗白色);
                 AlwaysInjuredButton.Icon = Common.BytesToImage(Properties.Resources.承伤白色);
                 NpcTakeDamageButton.Icon = Common.BytesToImage(Properties.Resources.NpcWhite);
-                Color colorBack = Color.FromArgb(60, 60, 60);
-                foreach (var item in buttonList)
-                {
-                    item.DefaultBack = Color.FromArgb(27, 27, 27);
-                    if (item.Name == "TotalDamageButton" && FormManager.currentIndex == 0)
-                    {
-                        item.DefaultBack = colorBack;
-                    }
-                    if (item.Name == "TotalTreatmentButton" && FormManager.currentIndex == 1)
-                    {
-                        item.DefaultBack = colorBack;
-                    }
-                    if (item.Name == "AlwaysInjuredButton" && FormManager.currentIndex == 2)
-                    {
-                        item.DefaultBack = colorBack;
-                    }
-                    if (item.Name == "NpcTakeDamageButton" && FormManager.currentIndex == 3)
-                    {
-                        item.DefaultBack = colorBack;
-                    }
 
+                // Button backgrounds
+                Color colorBack = Color.FromArgb(60, 60, 60);
+                foreach (var btn in buttonList)
+                {
+                    btn.DefaultBack = Color.FromArgb(27, 27, 27);
+                }
+                // Highlight current index button
+                switch (FormManager.currentIndex)
+                {
+                    case 0: TotalDamageButton.DefaultBack = colorBack; break;
+                    case 1: TotalTreatmentButton.DefaultBack = colorBack; break;
+                    case 2: AlwaysInjuredButton.DefaultBack = colorBack; break;
+                    case 3: NpcTakeDamageButton.DefaultBack = colorBack; break;
                 }
             }
-
+            // Update text colors for progress bar list
             SetSortedProgressBarListForeColor();
         }
 
@@ -802,5 +826,32 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         {
 
         }
+
+        private void InitializeDamageButtons()
+        {
+            var buttons = new (AntdUI.Button button, string text, string iconResource, Color defaultBack, Point location)[]
+            {
+                (TotalDamageButton, "总伤害", "TotalDamageButton.Icon", Color.FromArgb(223,223,223), new Point(38, 8)),
+                (TotalTreatmentButton, "总治疗", "TotalTreatmentButton.Icon", Color.FromArgb(247,247,247), new Point(148, 8)),
+                (AlwaysInjuredButton, "总承伤", "AlwaysInjuredButton.Icon", Color.FromArgb(247,247,247), new Point(262, 8)),
+                (NpcTakeDamageButton, "承伤", "NpcTakeDamageButton.Icon", Color.FromArgb(247,247,247), new Point(372, 8))
+            };
+
+            foreach (var (btn, text, iconRes, defaultBack, loc) in buttons)
+            {
+                btn.Anchor = AnchorStyles.Top;
+                //btn.DefaultBack = defaultBack;
+                //btn.DefaultBorderColor = Color.Wheat;
+                btn.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+                //btn.Icon = (Image)resources.GetObject(iconRes);
+                btn.IconRatio = 0.8F;
+                btn.Location = loc;
+                btn.Radius = 3;
+                btn.Size = new Size(112, 38);
+                //btn.Text = text;
+                //btn.Click += DamageType_Click;
+            }
+        }
+
     }
 }

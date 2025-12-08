@@ -118,28 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Header_FullRecord_Healing" xml:space="preserve">
-    <value>Overall Healing</value>
+    <value>Overall</value>
   </data>
   <data name="Header_FullRecord_Taken" xml:space="preserve">
-    <value>Overall Damage Taken</value>
+    <value>Overall</value>
   </data>
   <data name="Header_FullRecord_NpcTaken" xml:space="preserve">
-    <value>Overall · NPC Damage Taken</value>
+    <value>Overall</value>
   </data>
   <data name="Header_FullRecord_Damage" xml:space="preserve">
-    <value>Overall Damage</value>
+    <value>Overall</value>
   </data>
   <data name="Header_Current_Healing" xml:space="preserve">
-    <value>Current Healing</value>
+    <value>Current</value>
   </data>
   <data name="Header_Current_Taken" xml:space="preserve">
-    <value>Current Damage Taken</value>
+    <value>Current</value>
   </data>
   <data name="Header_Current_NpcTaken" xml:space="preserve">
-    <value>Current · NPC Damage Taken</value>
+    <value>Current</value>
   </data>
   <data name="Header_Current_Damage" xml:space="preserve">
-    <value>Current Damage</value>
+    <value>Current</value>
   </data>
   <data name="Header_NpcAttackers_FullRecord" xml:space="preserve">
     <value>Overall · NPC Attackers Ranking (NPC:{0})</value>
