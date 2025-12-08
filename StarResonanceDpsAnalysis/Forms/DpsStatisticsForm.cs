@@ -497,7 +497,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             };
 
             // Header child labels
-            List<Label> headerLabels = new List<Label>()
+            List<AntdUI.Label> headerLabels = new List<AntdUI.Label>()
             {
                 BattleTimeText,
                 label1,
