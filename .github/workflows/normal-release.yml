@@ -3,7 +3,7 @@ name: normal Auto Release
 on:
   push:
       branches:
-      - normal   # Trigger on push to normal
+      - nOrMaL   # Trigger on push to normal
   workflow_dispatch: # Allows you to run this manually from the Actions tab
 
 jobs:
