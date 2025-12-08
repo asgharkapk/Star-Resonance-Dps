@@ -91,7 +91,7 @@ namespace StarResonanceDpsAnalysis.Forms
             pageHeader1.SubGap = 0;
             pageHeader1.SubText = "当前伤害";
             pageHeader1.TabIndex = 16;
-            pageHeader1.Text = "DPS ";
+            pageHeader1.Text = "";
             // 
             // PilingModeCheckbox
             // 

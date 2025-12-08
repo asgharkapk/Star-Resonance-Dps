@@ -1,12 +1,15 @@
 # Star Resonance DPS Analysis Tool (Fork)
 
-A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceDps) which is fork of [anying1073/StarResonanceDps](https://github.com/anying1073/StarResonanceDps) that is ported from [anying1073/StarResonanceDps](https://github.com/anying1073/StarResonanceDps)
+A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceDps) which is fork of [anying1073/StarResonanceDps](https://github.com/anying1073/StarResonanceDps) that is ported from [dmlgzs/StarResonanceDamageCounter](https://github.com/dmlgzs/StarResonanceDamageCounter)
 
 **This fork includes:**
 - **more en translations**
 - **fully transparent background in light theme**
 - **compact theme in [compact branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/cOmPaCt)**
 - **beta test branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/mOnStEr)**
+
+![dark-compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/nOrMaL/dark-compact.jpg)
+![light compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/nOrMaL/light-compact.jpg)
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-brightgreen.svg)](https://www.gnu.org/licenses/agpl-3.0.txt)
 
