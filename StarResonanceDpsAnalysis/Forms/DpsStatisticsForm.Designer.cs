@@ -313,9 +313,9 @@ namespace StarResonanceDpsAnalysis.Forms
             SortToggleButton.Text = "Sort[Σ]"; // default
             SortToggleButton.Font = new Font("Segoe UI Emoji", 8f, FontStyle.Regular, GraphicsUnit.Pixel);
             SortToggleButton.Size = new Size(80, 30);
+            SortToggleButton.Location = new Point(150, 5);
             SortToggleButton.Radius = 3;
             SortToggleButton.Ghost = false;
-            SortToggleButton.Location = new Point(NpcTakeDamageButton.Right + 6, 0);
             SortToggleButton.Click += SortToggleButton_Click;
             //SortToggleButton.ForeColor = Color.White; 
             SortToggleButton.BackColor = Color.FromArgb(50, 150, 250);
@@ -331,9 +331,9 @@ namespace StarResonanceDpsAnalysis.Forms
             NpcTakeDamageButton.Name = "NpcTakeDamageButton";
             NpcTakeDamageButton.Radius = 3;
             NpcTakeDamageButton.Size = new Size(70, 30);
+            NpcTakeDamageButton.Location = new Point(200, 5);
             NpcTakeDamageButton.TabIndex = 4;
             NpcTakeDamageButton.Text = "承伤";
-            NpcTakeDamageButton.Location = new Point(AlwaysInjuredButton.Right + 6, 5);
             NpcTakeDamageButton.Click += DamageType_Click;
             // 
             // AlwaysInjuredButton
@@ -347,9 +347,9 @@ namespace StarResonanceDpsAnalysis.Forms
             AlwaysInjuredButton.Name = "AlwaysInjuredButton";
             AlwaysInjuredButton.Radius = 3;
             AlwaysInjuredButton.Size = new Size(70, 30);
+            AlwaysInjuredButton.Location = new Point(120, 5);
             AlwaysInjuredButton.TabIndex = 3;
             AlwaysInjuredButton.Text = "总承伤";
-            AlwaysInjuredButton.Location = new Point(TotalTreatmentButton.Right + 6, 5);
             AlwaysInjuredButton.Click += DamageType_Click;
             // 
             // TotalTreatmentButton
@@ -362,9 +362,9 @@ namespace StarResonanceDpsAnalysis.Forms
             TotalTreatmentButton.Name = "TotalTreatmentButton";
             TotalTreatmentButton.Radius = 3;
             TotalTreatmentButton.Size = new Size(70, 30);
+            TotalTreatmentButton.Location = new Point(80, 5);
             TotalTreatmentButton.TabIndex = 2;
             TotalTreatmentButton.Text = "总治疗";
-            TotalTreatmentButton.Location = new Point(TotalDamageButton.Right + 6, 5);
             TotalTreatmentButton.Click += DamageType_Click;
             // 
             // TotalDamageButton
@@ -373,10 +373,10 @@ namespace StarResonanceDpsAnalysis.Forms
             TotalDamageButton.DefaultBack = Color.FromArgb(223, 223, 223);
             TotalDamageButton.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 134);
             TotalDamageButton.Icon = (Image)resources.GetObject("TotalDamageButton.Icon");
-            TotalDamageButton.Location = new Point(20, 5);
             TotalDamageButton.Name = "TotalDamageButton";
             TotalDamageButton.Radius = 3;
             TotalDamageButton.Size = new Size(60, 30);
+            TotalDamageButton.Location = new Point(20, 5);
             TotalDamageButton.TabIndex = 1;
             TotalDamageButton.Text = "总伤害";
             TotalDamageButton.Click += DamageType_Click;
