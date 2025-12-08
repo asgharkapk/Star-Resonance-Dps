@@ -6,220 +6,245 @@ namespace StarResonanceDpsAnalysis.Forms
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && components != null)
-                components.Dispose();
+            if (disposing)
+                components?.Dispose();
             base.Dispose(disposing);
         }
 
-        // ─────────────────────────────────────────────────────────────
-        // redesigned initialize
-        // ─────────────────────────────────────────────────────────────
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources =
-                new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 
-            // ─────────────────────────────────────────────────────────
-            // Controls
-            // ─────────────────────────────────────────────────────────
-            pageHeader = new AntdUI.PageHeader();
-            buttonTheme = new AntdUI.Button();
-            layoutPanel = new TableLayoutPanel();
-            pictureIcon = new PictureBox();
-            labelName = new Label();
-            labelVersionTip = new Label();
-            labelVersion = new Label();
-            labelDevTip = new Label();
-            labelDevelopers = new Label();
-            labelIntro = new Label();
-            separator = new Label();
-            labelOpen1 = new Label();
-            linkGitHub = new LinkLabel();
-            labelOpen2 = new Label();
-            linkQQ = new LinkLabel();
-            labelThanks1 = new Label();
-            linkNodeJs = new LinkLabel();
-            labelThanks2 = new Label();
-            labelCopyright = new Label();
+            components = new System.ComponentModel.Container();
 
-            SuspendLayout();
+            // === HEADER ===
+            pageHeader_MainHeader = new AntdUI.PageHeader
+            {
+                Dock = DockStyle.Top,
+                Height = 40,
+                DividerShow = true,
+                DividerThickness = 2f,
+                Font = new Font("Alimama ShuHeiTi", 10f, FontStyle.Bold),
+                Icon = (Image)resources.GetObject("pageHeader_MainHeader.Icon"),
+                Text = "Don't check my DPS",
+                ShowButton = true
+            };
 
-            // ─────────────────────────────────────────────────────────
-            // PageHeader (TOP bar)
-            // ─────────────────────────────────────────────────────────
-            pageHeader.Dock = DockStyle.Top;
-            pageHeader.Height = 40;
-            pageHeader.DividerShow = true;
-            pageHeader.Text = "Don't check my DPS";
-            pageHeader.Icon = (Image)resources.GetObject("pageHeader_MainHeader.Icon");
-            pageHeader.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold);
-            pageHeader.ShowButton = true;
+            button_ThemeSwitch = new AntdUI.Button
+            {
+                Dock = DockStyle.Right,
+                Width = 40,
+                Ghost = true,
+                IconSvg = resources.GetString("button_ThemeSwitch.IconSvg"),
+                ToggleIconSvg = "MoonOutlined"
+            };
+            button_ThemeSwitch.Click += button_ThemeSwitch_Click;
 
-            // Theme switch button
-            buttonTheme.Dock = DockStyle.Right;
-            buttonTheme.Size = new Size(40, 40);
-            buttonTheme.Ghost = true;
-            buttonTheme.IconSvg = resources.GetString("button_ThemeSwitch.IconSvg");
-            buttonTheme.ToggleIconSvg = "MoonOutlined";
-            buttonTheme.Click += button_ThemeSwitch_Click;
-            pageHeader.Controls.Add(buttonTheme);
+            pageHeader_MainHeader.Controls.Add(button_ThemeSwitch);
 
-            // ─────────────────────────────────────────────────────────
-            // Main layout container
-            // ─────────────────────────────────────────────────────────
-            layoutPanel.Dock = DockStyle.Fill;
-            layoutPanel.BackColor = Color.Transparent;
-            layoutPanel.Padding = new Padding(20);
-            layoutPanel.ColumnCount = 2;
-            layoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120));
-            layoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-            layoutPanel.RowCount = 12;
+            // === MAIN LAYOUT (AUTO) ===
+            var layout = new TableLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                ColumnCount = 1,
+                RowCount = 1,
+                Padding = new Padding(20),
+                AutoScroll = true
+            };
 
-            for (int i = 0; i < 12; i++)
-                layoutPanel.RowStyles.Add(new RowStyle());
+            // === ABOUT GROUP ===
+            groupBox_About = new GroupBox
+            {
+                Dock = DockStyle.Top,
+                AutoSize = true,
+                Font = new Font("HarmonyOS Sans SC", 12f, FontStyle.Bold),
+                Text = "About",
+                Padding = new Padding(20)
+            };
 
-            // ─────────────────────────────────────────────────────────
-            // App Icon
-            // ─────────────────────────────────────────────────────────
-            pictureIcon.Size = new Size(90, 90);
-            pictureIcon.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureIcon.Anchor = AnchorStyles.Left | AnchorStyles.Top;
+            // inner layout
+            var aboutLayout = new TableLayoutPanel
+            {
+                Dock = DockStyle.Top,
+                ColumnCount = 2,
+                AutoSize = true
+            };
+            aboutLayout.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+            aboutLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f));
+            aboutLayout.RowStyles.Clear();
 
-            // ─────────────────────────────────────────────────────────
-            // Text sections
-            // ─────────────────────────────────────────────────────────
-            labelName.Text = "Don't check my DPS";
-            labelName.Font = new Font("HarmonyOS Sans SC", 12F, FontStyle.Bold);
+            pictureBox_AppIcon = new PictureBox
+            {
+                Size = new Size(92, 92),
+                SizeMode = PictureBoxSizeMode.Zoom,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left
+            };
 
-            labelVersionTip.Text = "Current version:";
-            labelVersionTip.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Bold);
+            aboutLayout.Controls.Add(pictureBox_AppIcon, 0, 0);
+            aboutLayout.SetRowSpan(pictureBox_AppIcon, 2);
 
-            labelVersion.Text = "-.-.-";
-            labelVersion.Font = new Font("HarmonyOS Sans SC", 9F);
+            label_AppName = NewLabelBold("Don't check my DPS");
+            aboutLayout.Controls.Add(label_AppName, 1, 0);
 
-            labelDevTip.Text = "Current version developers:";
-            labelDevTip.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Bold);
+            label_SelfIntroduce = NewLabelWrap(
+                "A combat data statistics tool designed for *Star Resonance*. " +
+                "This tool requires no modification to the game client and does not violate the game's terms. " +
+                "Its purpose is to help players understand combat data and improve performance responsibly.");
+            aboutLayout.Controls.Add(label_SelfIntroduce, 1, 1);
 
-            labelDevelopers.Text =
+            // === VERSION ===
+            label_NowVersionTip = NewLabelBold("Current version number:");
+            label_NowVersionNumber = NewLabel("-.-.-");
+
+            aboutLayout.Controls.Add(label_NowVersionTip, 0, 2);
+            aboutLayout.Controls.Add(label_NowVersionNumber, 1, 2);
+
+            // === DEVELOPERS ===
+            label_NowVersionDevelopersTip = NewLabelBold("Current version developers:");
+            label_NowVersionDevelopers = NewLabelWrap(
                 "Amazing Cat Box (anying1073: Project Initiator)\r\n" +
                 "Lu Shi (Rocy-June)\r\n" +
                 "Qinglan Sect Wang Teng\r\n" +
-                "Translated by DannyDog";
-            labelDevelopers.Font = new Font("HarmonyOS Sans SC", 9F);
+                "Translated by DannyDog");
 
-            labelIntro.Text =
-                "A combat statistics tool for *Star Resonance*. No modification to the game " +
-                "client, compliant with game ToS. Helps players understand combat data, " +
-                "reduce ineffective boosts, and improve experience.";
-            labelIntro.Font = new Font("HarmonyOS Sans SC", 9F);
-            labelIntro.MaximumSize = new Size(700, 0);
-            labelIntro.AutoSize = true;
+            aboutLayout.Controls.Add(label_NowVersionDevelopersTip, 0, 3);
+            aboutLayout.Controls.Add(label_NowVersionDevelopers, 1, 3);
 
-            separator.Height = 1;
-            separator.BackColor = Color.Silver;
-            separator.Dock = DockStyle.Fill;
-            separator.Margin = new Padding(0, 10, 0, 10);
+            // === OPEN SOURCE & GROUP ===
+            var openSourcePanel = new FlowLayoutPanel
+            {
+                FlowDirection = FlowDirection.LeftToRight,
+                Dock = DockStyle.Top,
+                AutoSize = true
+            };
 
-            labelOpen1.Text = "This project is open-source on";
-            labelOpen1.Font = new Font("HarmonyOS Sans SC", 8F);
+            label_OpenSourceTip_1 = NewLabel("This project was");
+            linkLabel_GitHub = NewLink("GitHub", linkLabel_GitHub_LinkClicked);
+            label_OpenSourceTip_2 = NewLabelWrap(
+                "This is an open-source project. If you encounter issues or want teammates, join group:");
+            linkLabel_QQGroup = NewLink("678150498", linkLabel_QQGroup_LinkClicked);
 
-            linkGitHub.Text = "GitHub";
-            linkGitHub.Font = new Font("HarmonyOS Sans SC", 8F);
-            linkGitHub.LinkClicked += linkLabel_GitHub_LinkClicked;
+            openSourcePanel.Controls.Add(label_OpenSourceTip_1);
+            openSourcePanel.Controls.Add(linkLabel_GitHub);
+            openSourcePanel.Controls.Add(label_OpenSourceTip_2);
+            openSourcePanel.Controls.Add(linkLabel_QQGroup);
 
-            labelOpen2.Text = "Join our group:";
-            labelOpen2.Font = new Font("HarmonyOS Sans SC", 8F);
+            aboutLayout.Controls.Add(openSourcePanel, 0, 4);
+            aboutLayout.SetColumnSpan(openSourcePanel, 2);
 
-            linkQQ.Text = "678150498";
-            linkQQ.Font = new Font("HarmonyOS Sans SC", 8F);
-            linkQQ.LinkClicked += linkLabel_QQGroup_LinkClicked;
+            // === THANKS ===
+            var thanksPanel = new FlowLayoutPanel
+            {
+                FlowDirection = FlowDirection.LeftToRight,
+                Dock = DockStyle.Top,
+                AutoSize = true
+            };
 
-            labelThanks1.Text = "Thanks to:";
-            labelThanks1.Font = new Font("HarmonyOS Sans SC", 8F);
+            label_ThankHelpFromTip_1 = NewLabel("Thank you.");
+            linkLabel_NodeJsProject = NewLink(
+                "dmlgzs/StarResonanceDamageCounter", linkLabel_NodeJsProject_LinkClicked);
+            label_ThankHelpFromTip_2 = NewLabel("for support and contributions.");
 
-            linkNodeJs.Text = "dmlgzs/StarResonanceDamageCounter";
-            linkNodeJs.Font = new Font("HarmonyOS Sans SC", 8F);
-            linkNodeJs.LinkClicked += linkLabel_NodeJsProject_LinkClicked;
+            thanksPanel.Controls.Add(label_ThankHelpFromTip_1);
+            thanksPanel.Controls.Add(linkLabel_NodeJsProject);
+            thanksPanel.Controls.Add(label_ThankHelpFromTip_2);
 
-            labelThanks2.Text = "for related support.";
-            labelThanks2.Font = new Font("HarmonyOS Sans SC", 8F);
+            aboutLayout.Controls.Add(thanksPanel, 0, 5);
+            aboutLayout.SetColumnSpan(thanksPanel, 2);
 
-            labelCopyright.Text =
-                "Copyright (C) 2025 StarResonanceDps Team\r\n" +
-                "Powered by .NET 8 | Licensed under AGPL-3.0";
-            labelCopyright.Font = new Font("HarmonyOS Sans SC", 8F);
+            // === COPYRIGHT ===
+            label_Copyright = NewLabelWrap(
+                "Copyright (C) 2025 anying1073/StarResonanceDps Team\r\n" +
+                "Powered by .NET 8, Licensed under AGPL v3.");
 
-            // ─────────────────────────────────────────────────────────
-            // Add controls to grid
-            // ─────────────────────────────────────────────────────────
-            layoutPanel.Controls.Add(pictureIcon,                  0, 0);
-            layoutPanel.SetRowSpan(pictureIcon, 3);
+            aboutLayout.Controls.Add(label_Copyright, 0, 6);
+            aboutLayout.SetColumnSpan(label_Copyright, 2);
 
-            layoutPanel.Controls.Add(labelName,                    1, 0);
-            layoutPanel.Controls.Add(labelVersionTip,              1, 1);
-            layoutPanel.Controls.Add(labelVersion,                 1, 2);
+            groupBox_About.Controls.Add(aboutLayout);
+            layout.Controls.Add(groupBox_About);
 
-            layoutPanel.Controls.Add(labelDevTip,                  1, 3);
-            layoutPanel.Controls.Add(labelDevelopers,              1, 4);
-
-            layoutPanel.Controls.Add(labelIntro,                   1, 5);
-            layoutPanel.Controls.Add(separator,                    1, 6);
-
-            layoutPanel.Controls.Add(labelOpen1,                   1, 7);
-            layoutPanel.Controls.Add(linkGitHub,                   1, 8);
-
-            layoutPanel.Controls.Add(labelOpen2,                   1, 9);
-            layoutPanel.Controls.Add(linkQQ,                       1, 10);
-
-            layoutPanel.Controls.Add(labelThanks1,                 1, 11);
-            layoutPanel.Controls.Add(linkNodeJs,                   1, 12);
-            layoutPanel.Controls.Add(labelThanks2,                 1, 13);
-
-            layoutPanel.Controls.Add(labelCopyright,               1, 14);
-
-            // ─────────────────────────────────────────────────────────
-            // Add to form
-            // ─────────────────────────────────────────────────────────
-            Controls.Add(layoutPanel);
-            Controls.Add(pageHeader);
-
-            // ─────────────────────────────────────────────────────────
-            // MainForm settings
-            // ─────────────────────────────────────────────────────────
+            // === MAIN FORM ===
+            SuspendLayout();
             BackColor = Color.White;
             ForeColor = Color.Black;
-            Mode = AntdUI.TAMode.Dark;
-            Dark = true;
-            MaximizeBox = false;
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "DPS Statistics Tool";
-            Icon = (Icon)resources.GetObject("$this.Icon");
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(8F, 20F);
             ClientSize = new Size(900, 600);
+
+            Controls.Add(layout);
+            Controls.Add(pageHeader_MainHeader);
+
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            StartPosition = FormStartPosition.CenterScreen;
+            MaximizeBox = false;
+            Name = "MainForm";
+            Text = "DPS Statistics Tool";
 
             ResumeLayout(false);
         }
 
-        // ─────────────────────────────────────────────────────────────
-        // fields
-        // ─────────────────────────────────────────────────────────────
-        private AntdUI.PageHeader pageHeader;
-        private AntdUI.Button buttonTheme;
-        private TableLayoutPanel layoutPanel;
-        private PictureBox pictureIcon;
-        private Label labelName;
-        private Label labelVersionTip;
-        private Label labelVersion;
-        private Label labelDevTip;
-        private Label labelDevelopers;
-        private Label labelIntro;
-        private Label separator;
-        private Label labelOpen1;
-        private LinkLabel linkGitHub;
-        private Label labelOpen2;
-        private LinkLabel linkQQ;
-        private Label labelThanks1;
-        private LinkLabel linkNodeJs;
-        private Label labelThanks2;
-        private Label labelCopyright;
+        // === Helper Builders ===
+        private Label NewLabel(string text) =>
+            new Label
+            {
+                Text = text,
+                AutoSize = true,
+                Font = new Font("HarmonyOS Sans SC", 8f)
+            };
+
+        private Label NewLabelBold(string text) =>
+            new Label
+            {
+                Text = text,
+                AutoSize = true,
+                Font = new Font("HarmonyOS Sans SC", 9f, FontStyle.Bold)
+            };
+
+        private Label NewLabelWrap(string text) =>
+            new Label
+            {
+                Text = text,
+                AutoSize = true,
+                MaximumSize = new Size(600, 0),
+                Font = new Font("HarmonyOS Sans SC", 8f)
+            };
+
+        private LinkLabel NewLink(string text, LinkLabelLinkClickedEventHandler handler)
+        {
+            var link = new LinkLabel
+            {
+                Text = text,
+                AutoSize = true,
+                Font = new Font("HarmonyOS Sans SC", 8f),
+            };
+            link.LinkClicked += handler;
+            return link;
+        }
+
+        private AntdUI.PageHeader pageHeader_MainHeader;
+        private AntdUI.Button button_ThemeSwitch;
+        private PictureBox pictureBox_AppIcon;
+        private GroupBox groupBox_About;
+
+        private Label label_AppName;
+        private Label label_NowVersionTip;
+        private Label label_NowVersionNumber;
+
+        private Label label_NowVersionDevelopersTip;
+        private Label label_NowVersionDevelopers;
+
+        private Label label_SelfIntroduce;
+
+        private Label label_OpenSourceTip_1;
+        private Label label_OpenSourceTip_2;
+        private LinkLabel linkLabel_GitHub;
+
+        private LinkLabel linkLabel_QQGroup;
+
+        private Label label_ThankHelpFromTip_1;
+        private LinkLabel linkLabel_NodeJsProject;
+        private Label label_ThankHelpFromTip_2;
+
+        private Label label_Copyright;
     }
 }
