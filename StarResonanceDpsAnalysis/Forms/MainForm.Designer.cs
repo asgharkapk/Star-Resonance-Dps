@@ -82,7 +82,12 @@
             // 
             // groupBox_About
             // 
-            groupBox_About.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox_About.AutoSize = true;
+            groupBox_About.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+
+            groupBox_About.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+            //groupBox_About.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBox_About.Controls.Add(label_ThankHelpFromTip_2);
             groupBox_About.Controls.Add(linkLabel_NodeJsProject);
             groupBox_About.Controls.Add(label_ThankHelpFromTip_1);
@@ -107,6 +112,10 @@
             groupBox_About.TabIndex = 11;
             groupBox_About.TabStop = false;
             groupBox_About.Text = "about";
+
+            label_Copyright.MaximumSize = new Size(700, 0);
+            label_Copyright.AutoSize = true;
+
             // 
             // label_ThankHelpFromTip_2
             // 
@@ -119,6 +128,10 @@
             label_ThankHelpFromTip_2.Size = new Size(204, 20);
             label_ThankHelpFromTip_2.TabIndex = 24;
             label_ThankHelpFromTip_2.Text = "The project's help and support for this project";
+
+            label_ThankHelpFromTip_2.MaximumSize = new Size(700, 0);
+            label_ThankHelpFromTip_2.AutoSize = true;
+
             // 
             // linkLabel_NodeJsProject
             // 
@@ -145,6 +158,10 @@
             label_ThankHelpFromTip_1.Size = new Size(69, 20);
             label_ThankHelpFromTip_1.TabIndex = 22;
             label_ThankHelpFromTip_1.Text = "Thank you.";
+
+            label_ThankHelpFromTip_1.MaximumSize = new Size(700, 0);
+            label_ThankHelpFromTip_1.AutoSize = true;
+
             // 
             // label_Copyright
             // 
@@ -302,6 +319,11 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "DPS 统计工具";
             ForeColorChanged += MainForm_ForeColorChanged;
+
+            // --- Auto resize MainForm height to fit all content ---
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+
             pageHeader_MainHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox_AppIcon).EndInit();
             groupBox_About.ResumeLayout(false);
