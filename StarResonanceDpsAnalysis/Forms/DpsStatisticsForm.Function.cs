@@ -370,54 +370,55 @@ namespace StarResonanceDpsAnalysis.Forms
             // background colors:
 
             // Unknown
-            { Properties.Strings.Profession_Unknown, ColorTranslator.FromHtml("#BFBFBF") }, // #67AEF6 #4A90E2 #A0A0A0 #404040 #808080 #BFBFBF #A8A8A8
+            { Properties.Strings.Profession_Unknown, ColorTranslator.FromHtml("#D3D3D3") },
 
             // DPS icon: #DB7575 (fore color)
             // background colors:
             // range dps:
-            // MARKSMAN (Purple)
-            { Properties.Strings.Profession_Marksman, ColorTranslator.FromHtml("#7B6FA5") },
-            { Properties.Strings.SubProfession_EagleBow, ColorTranslator.FromHtml("#8C7FC2") },
-            { Properties.Strings.SubProfession_WolfBow, ColorTranslator.FromHtml("#695E90") },
+            // MARKSMAN
+            { Properties.Strings.Profession_Marksman, ColorTranslator.FromHtml("#CBAACB") },
+            { Properties.Strings.SubProfession_EagleBow, ColorTranslator.FromHtml("#CBAACB") },
+            { Properties.Strings.SubProfession_WolfBow, ColorTranslator.FromHtml("#CBAACB") },
 
-            // FROST MAGE (Blue)
-            { Properties.Strings.Profession_FrostMage, ColorTranslator.FromHtml("#5A7FBF") },
-            { Properties.Strings.SubProfession_IceRay, ColorTranslator.FromHtml("#6A8FD4") },
-            { Properties.Strings.SubProfession_IceSpear, ColorTranslator.FromHtml("#4970A3") },
+            // FROST MAGE
+            { Properties.Strings.Profession_FrostMage, ColorTranslator.FromHtml("#A2CFFE") },
+            { Properties.Strings.SubProfession_IceRay, ColorTranslator.FromHtml("#A2CFFE") },
+            { Properties.Strings.SubProfession_IceSpear, ColorTranslator.FromHtml("#A2CFFE") },
+
             // melee dps:
-            // STORMBLADE (Green)
-            { Properties.Strings.Profession_Stormblade, ColorTranslator.FromHtml("#6FA57B") },
-            { Properties.Strings.SubProfession_Iai, ColorTranslator.FromHtml("#81B38F") },
-            { Properties.Strings.SubProfession_MoonBlade, ColorTranslator.FromHtml("#5E8E66") },
+            // STORMBLADE
+            { Properties.Strings.Profession_Stormblade, ColorTranslator.FromHtml("#B5EAD7") },
+            { Properties.Strings.SubProfession_Iai, ColorTranslator.FromHtml("#B5EAD7") },
+            { Properties.Strings.SubProfession_MoonBlade, ColorTranslator.FromHtml("#B5EAD7") },
 
-            // WIND KNIGHT (Lime Green)
-            { Properties.Strings.Profession_WindKnight, ColorTranslator.FromHtml("#78C17F") },
-            { Properties.Strings.SubProfession_AirStyle, ColorTranslator.FromHtml("#7FCF85") },
-            { Properties.Strings.SubProfession_Overdrive, ColorTranslator.FromHtml("#5FAE63") },
+            // WIND KNIGHT
+            { Properties.Strings.Profession_WindKnight, ColorTranslator.FromHtml("#C7E9B0") },
+            { Properties.Strings.SubProfession_AirStyle, ColorTranslator.FromHtml("#C7E9B0") },
+            { Properties.Strings.SubProfession_Overdrive, ColorTranslator.FromHtml("#C7E9B0") },
 
             // Healer icon: #83C49A (fore color)
             // background colors:
-            // VERDANT ORACLE (Pink)
-            { Properties.Strings.Profession_VerdantOracle, ColorTranslator.FromHtml("#D88CA0") },
-            { Properties.Strings.SubProfession_Lifebloom, ColorTranslator.FromHtml("#E39DB0") },
-            { Properties.Strings.SubProfession_Thornlash, ColorTranslator.FromHtml("#C4798F") },
+            // VERDANT ORACLE
+            { Properties.Strings.Profession_VerdantOracle, ColorTranslator.FromHtml("#FFB7B2") },
+            { Properties.Strings.SubProfession_Lifebloom, ColorTranslator.FromHtml("#FFB7B2") },
+            { Properties.Strings.SubProfession_Thornlash, ColorTranslator.FromHtml("#FFB7B2") },
 
-            // SOUL MUSICIAN (Red)
-            { Properties.Strings.Profession_SoulMusician, ColorTranslator.FromHtml("#D97575") },
-            { Properties.Strings.SubProfession_Concerto, ColorTranslator.FromHtml("#E58888") },
-            { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#C46060") },
+            // SOUL MUSICIAN
+            { Properties.Strings.Profession_SoulMusician, ColorTranslator.FromHtml("#FFDAC1") },
+            { Properties.Strings.SubProfession_Concerto, ColorTranslator.FromHtml("#FFDAC1") },
+            { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#FFDAC1") },
 
             // Tank icon: #68A6CD (fore color)
             // background colors:
             // HEAVY GUARDIAN
-            { Properties.Strings.Profession_HeavyGuardian, ColorTranslator.FromHtml("#D9C25F") },
-            { Properties.Strings.SubProfession_RockShield, ColorTranslator.FromHtml("#E3D377") },
-            { Properties.Strings.SubProfession_Block, ColorTranslator.FromHtml("#C4B34A") },
+            { Properties.Strings.Profession_HeavyGuardian, ColorTranslator.FromHtml("#FFF5BA") },
+            { Properties.Strings.SubProfession_RockShield, ColorTranslator.FromHtml("#FFF5BA") },
+            { Properties.Strings.SubProfession_Block, ColorTranslator.FromHtml("#FFF5BA") },
 
             // AEGIS KNIGHT
-            { Properties.Strings.Profession_AegisKnight, ColorTranslator.FromHtml("#F0D47A") },
-            { Properties.Strings.SubProfession_Protection, ColorTranslator.FromHtml("#FFDFA0") },
-            { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#D1B351") },
+            { Properties.Strings.Profession_AegisKnight, ColorTranslator.FromHtml("#E2F0CB") },
+            { Properties.Strings.SubProfession_Protection, ColorTranslator.FromHtml("#E2F0CB") },
+            { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#E2F0CB") },
         };
 
         // 黑窗体
@@ -427,54 +428,55 @@ namespace StarResonanceDpsAnalysis.Forms
             // background colors:
 
             // Unknown
-            { Properties.Strings.Profession_Unknown, ColorTranslator.FromHtml("#BFBFBF") }, // #67AEF6 #4A90E2 #A0A0A0 #404040 #808080 #BFBFBF #A8A8A8
+            { Properties.Strings.Profession_Unknown, ColorTranslator.FromHtml("#6B6B6B") },
 
             // DPS icon: #DB7575 (fore color)
             // background colors:
             // range dps:
-            // MARKSMAN (Purple)
-            { Properties.Strings.Profession_Marksman, ColorTranslator.FromHtml("#7B6FA5") },
-            { Properties.Strings.SubProfession_EagleBow, ColorTranslator.FromHtml("#8C7FC2") },
-            { Properties.Strings.SubProfession_WolfBow, ColorTranslator.FromHtml("#695E90") },
+            // MARKSMAN
+            { Properties.Strings.Profession_Marksman, ColorTranslator.FromHtml("#FEFACD") },
+            { Properties.Strings.SubProfession_EagleBow, ColorTranslator.FromHtml("#FEFACD") },
+            { Properties.Strings.SubProfession_WolfBow, ColorTranslator.FromHtml("#FEFACD") },
 
-            // FROST MAGE (Blue)
-            { Properties.Strings.Profession_FrostMage, ColorTranslator.FromHtml("#5A7FBF") },
-            { Properties.Strings.SubProfession_IceRay, ColorTranslator.FromHtml("#6A8FD4") },
-            { Properties.Strings.SubProfession_IceSpear, ColorTranslator.FromHtml("#4970A3") },
+            // FROST MAGE
+            { Properties.Strings.Profession_FrostMage, ColorTranslator.FromHtml("#A2DFFE") },
+            { Properties.Strings.SubProfession_IceRay, ColorTranslator.FromHtml("#A2DFFE") },
+            { Properties.Strings.SubProfession_IceSpear, ColorTranslator.FromHtml("#A2DFFE") },
+
             // melee dps:
-            // STORMBLADE (Green)
-            { Properties.Strings.Profession_Stormblade, ColorTranslator.FromHtml("#6FA57B") },
-            { Properties.Strings.SubProfession_Iai, ColorTranslator.FromHtml("#81B38F") },
-            { Properties.Strings.SubProfession_MoonBlade, ColorTranslator.FromHtml("#5E8E66") },
+            // STORMBLADE
+            { Properties.Strings.Profession_Stormblade, ColorTranslator.FromHtml("#D2B3FF") },
+            { Properties.Strings.SubProfession_Iai, ColorTranslator.FromHtml("#D2B3FF") },
+            { Properties.Strings.SubProfession_MoonBlade, ColorTranslator.FromHtml("#D2B3FF") },
 
-            // WIND KNIGHT (Lime Green)
-            { Properties.Strings.Profession_WindKnight, ColorTranslator.FromHtml("#78C17F") },
-            { Properties.Strings.SubProfession_AirStyle, ColorTranslator.FromHtml("#7FCF85") },
-            { Properties.Strings.SubProfession_Overdrive, ColorTranslator.FromHtml("#5FAE63") },
+            // WIND KNIGHT
+            { Properties.Strings.Profession_WindKnight, ColorTranslator.FromHtml("#76EFC6") },
+            { Properties.Strings.SubProfession_AirStyle, ColorTranslator.FromHtml("#76EFC6") },
+            { Properties.Strings.SubProfession_Overdrive, ColorTranslator.FromHtml("#76EFC6") },
 
             // Healer icon: #83C49A (fore color)
             // background colors:
-            // VERDANT ORACLE (Pink)
-            { Properties.Strings.Profession_VerdantOracle, ColorTranslator.FromHtml("#D88CA0") },
-            { Properties.Strings.SubProfession_Lifebloom, ColorTranslator.FromHtml("#E39DB0") },
-            { Properties.Strings.SubProfession_Thornlash, ColorTranslator.FromHtml("#C4798F") },
+            // VERDANT ORACLE
+            { Properties.Strings.Profession_VerdantOracle, ColorTranslator.FromHtml("#77DD77") },
+            { Properties.Strings.SubProfession_Lifebloom, ColorTranslator.FromHtml("#77DD77") },
+            { Properties.Strings.SubProfession_Thornlash, ColorTranslator.FromHtml("#77DD77") },
 
-            // SOUL MUSICIAN (Red)
-            { Properties.Strings.Profession_SoulMusician, ColorTranslator.FromHtml("#D97575") },
-            { Properties.Strings.SubProfession_Concerto, ColorTranslator.FromHtml("#E58888") },
-            { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#C46060") },
+            // SOUL MUSICIAN
+            { Properties.Strings.Profession_SoulMusician, ColorTranslator.FromHtml("#FE6347") },
+            { Properties.Strings.SubProfession_Concerto, ColorTranslator.FromHtml("#FE6347") },
+            { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#FE6347") },
 
             // Tank icon: #68A6CD (fore color)
             // background colors:
             // HEAVY GUARDIAN
-            { Properties.Strings.Profession_HeavyGuardian, ColorTranslator.FromHtml("#D9C25F") },
-            { Properties.Strings.SubProfession_RockShield, ColorTranslator.FromHtml("#E3D377") },
-            { Properties.Strings.SubProfession_Block, ColorTranslator.FromHtml("#C4B34A") },
+            { Properties.Strings.Profession_HeavyGuardian, ColorTranslator.FromHtml("#8B8C7A") },
+            { Properties.Strings.SubProfession_RockShield, ColorTranslator.FromHtml("#8B8C7A") },
+            { Properties.Strings.SubProfession_Block, ColorTranslator.FromHtml("#8B8C7A") },
 
             // AEGIS KNIGHT
-            { Properties.Strings.Profession_AegisKnight, ColorTranslator.FromHtml("#F0D47A") },
-            { Properties.Strings.SubProfession_Protection, ColorTranslator.FromHtml("#FFDFA0") },
-            { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#D1B351") },
+            { Properties.Strings.Profession_AegisKnight, ColorTranslator.FromHtml("#F0E78C") },
+            { Properties.Strings.SubProfession_Protection, ColorTranslator.FromHtml("#F0E78C") },
+            { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#F0E78C") },
         };
         
         static Bitmap EmptyBitmap(int w = 1, int h = 1)
