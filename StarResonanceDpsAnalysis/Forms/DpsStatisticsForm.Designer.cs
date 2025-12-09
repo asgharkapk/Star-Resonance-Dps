@@ -61,7 +61,7 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             // pageHeader1
             // 
-            pageHeader1.BackColor = Color.Transparent;
+            pageHeader1.BackColor = FromArgb(178, 178, 178);
             pageHeader1.ColorScheme = TAMode.Dark;
 
             pageHeader1.Controls.Add(BattleTimeText); // timer [docked left]
