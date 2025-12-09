@@ -4,204 +4,203 @@ namespace StarResonanceDpsAnalysis.Forms
 {
     partial class DpsStatisticsForm
     {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
+            {
                 components.Dispose();
+            }
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DpsStatisticsForm));
+            System.ComponentModel.ComponentResourceManager resources =
+                new System.ComponentModel.ComponentResourceManager(typeof(DpsStatisticsForm));
 
-            // ===== Page Header =====
-            pageHeader1 = new PageHeader
-            {
-                BackColor = Color.Transparent,
-                ColorScheme = TAMode.Dark,
-                DividerShow = true,
-                DividerThickness = 2F,
-                Dock = DockStyle.Top,
-                Font = new Font("SAO Welcome TT", 9F, FontStyle.Bold),
-                ForeColor = Color.White,
-                Location = new Point(0, 0),
-                MaximizeBox = false,
-                MinimizeBox = false,
-                Mode = TAMode.Dark,
-                Name = "pageHeader1",
-                Size = new Size(527, 25),
-                SubFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold),
-                SubGap = 0,
-                SubText = "当前伤害",
-                TabIndex = 16,
-                Text = " "
-            };
+            pageHeader1 = new PageHeader();
+            PilingModeCheckbox = new Checkbox();
+            button_ThemeSwitch = new AntdUI.Button();
+            button2 = new AntdUI.Button();
+            button3 = new AntdUI.Button();
+            button_AlwaysOnTop = new AntdUI.Button();
+            button1 = new AntdUI.Button();
+            button_Settings = new AntdUI.Button();
 
-            // Left side labels & buttons
-            label1 = new AntdUI.Label { Dock = DockStyle.Left, Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold), Size = new Size(50, 36), MouseDown += HeaderPanel_MouseDown };
-            BattleTimeText = new AntdUI.Label { Dock = DockStyle.Left, Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold), Size = new Size(98, 31), Text = "00:00", MouseDown += HeaderPanel_MouseDown };
-            button3 = new AntdUI.Button { Dock = DockStyle.Left, Ghost = true, Icon = Properties.Resources.handoff_normal, IconHover = Properties.Resources.handoff_hover, IconRatio = 0.8F, Size = new Size(23, 25) };
-            button3.Click += button3_Click;
-            button3.MouseEnter += button3_MouseEnter;
+            panel1 = new AntdUI.Panel();
+            label2 = new AntdUI.Label();
+            BattleTimeText = new AntdUI.Label();
+            SortToggleButton = new AntdUI.Button();
+            label1 = new AntdUI.Label();
 
-            // Right side controls
-            PilingModeCheckbox = new Checkbox
-            {
-                AutoSizeMode = TAutoSize.Width,
-                BackColor = Color.Transparent,
-                Dock = DockStyle.Right,
-                Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold),
-                ForeColor = Color.White,
-                Size = new Size(100, 25),
-                Text = "打桩模式",
-                TextAlign = ContentAlignment.MiddleCenter,
-                Visible = false
-            };
-            PilingModeCheckbox.CheckedChanged += PilingModeCheckbox_CheckedChanged;
-
-            button_Settings = new Button
-            {
-                BackColor = Color.Transparent,
-                Dock = DockStyle.Right,
-                Ghost = true,
-                Icon = Properties.Resources.setting_hover,
-                IconRatio = 1F,
-                Size = new Size(27, 25)
-            };
-            button_Settings.Click += button_Settings_Click;
-
-            button1 = new Button { Dock = DockStyle.Right, Ghost = true, IconRatio = 0.8F, Size = new Size(20, 25) };
-            button1.Click += button1_Click;
-            button1.MouseEnter += button1_MouseEnter;
-
-            button_AlwaysOnTop = new Button { Dock = DockStyle.Right, Ghost = true, IconRatio = 0.8F, Size = new Size(22, 25) };
-            button_AlwaysOnTop.Click += button_AlwaysOnTop_Click;
-            button_AlwaysOnTop.MouseEnter += button_AlwaysOnTop_MouseEnter;
-
-            button2 = new Button { Dock = DockStyle.Right, Ghost = true, IconRatio = 0.8F, Size = new Size(20, 25), IconSvg = resources.GetString("button2.IconSvg") };
-            button2.Click += button2_Click_1;
-            button2.MouseEnter += button2_MouseEnter;
-
-            button_ThemeSwitch = new Button { Dock = DockStyle.Right, Ghost = true, IconRatio = 0.8F, IconSvg = "SunOutlined", ToggleIconSvg = "MoonOutlined", Size = new Size(33, 25) };
-            button_ThemeSwitch.Click += button_ThemeSwitch_Click;
-            button_ThemeSwitch.MouseEnter += button_ThemeSwitch_MouseEnter;
-
-            label2 = new Label { Dock = DockStyle.Right, Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold), Size = new Size(133, 31) };
-            label2.MouseDown += HeaderPanel_MouseDown;
-
-            pageHeader1.Controls.AddRange(new Control[] { BattleTimeText, label1, button3, label2, PilingModeCheckbox, button2, button_ThemeSwitch, button_AlwaysOnTop, button1, button_Settings });
-
-            // ===== Bottom Panel =====
-            panel1 = new Panel
-            {
-                BackColor = Color.Transparent,
-                Dock = DockStyle.Bottom,
-                Radius = 3,
-                Shadow = 3,
-                ShadowAlign = TAlignMini.Top,
-                Size = new Size(527, 34)
-            };
-
-            // ===== Buttons Panel =====
-            panel2 = new Panel
-            {
-                Dock = DockStyle.Top,
-                BackColor = Color.Transparent,
-                Shadow = 3,
-                ShadowAlign = TAlignMini.Bottom,
-                Size = new Size(527, 55)
-            };
-
-            // Damage type buttons
-            TotalDamageButton = CreateButton("DPS", 60, 35, DamageType_Click, (Image)resources.GetObject("TotalDamageButton.Icon"));
-            TotalTreatmentButton = CreateButton("HEALING", 80, 35, DamageType_Click, (Image)resources.GetObject("TotalTreatmentButton.Icon"));
-            AlwaysInjuredButton = CreateButton("TANKING", 80, 35, DamageType_Click, (Image)resources.GetObject("AlwaysInjuredButton.Icon"));
-            NpcTakeDamageButton = CreateButton("NPCTANKING", 80, 35, DamageType_Click, (Image)resources.GetObject("NpcTakeDamageButton.Icon"));
-
-            SortToggleButton = new Button
-            {
-                Text = "Sort[Σ]",
-                Size = new Size(80, 32),
-                Font = new Font("Segoe UI Emoji", 10f, FontStyle.Regular, GraphicsUnit.Pixel),
-                Radius = 3,
-                Ghost = true,
-                BackColor = Color.FromArgb(50, 150, 250)
-            };
-            SortToggleButton.Click += SortToggleButton_Click;
-
-            panel2.Controls.AddRange(new Control[] { TotalDamageButton, TotalTreatmentButton, AlwaysInjuredButton, NpcTakeDamageButton, SortToggleButton });
-
-            // ===== Sorted Progress Bar =====
-            sortedProgressBarList1 = new Control.SortedProgressBarList
-            {
-                AnimationQuality = Effects.Enum.Quality.Medium,
-                BackColor = Color.WhiteSmoke,
-                Dock = DockStyle.Fill,
-                OrderColor = Color.Black,
-                OrderFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold),
-                ScrollBarWidth = 8
-            };
-            sortedProgressBarList1.Load += sortedProgressBarList1_Load;
-
-            // ===== Timers =====
-            timer_RefreshRunningTime = new System.Windows.Forms.Timer(components) { Enabled = true, Interval = 10 };
-            timer_RefreshRunningTime.Tick += timer_RefreshRunningTime_Tick;
-
+            timer_RefreshRunningTime = new System.Windows.Forms.Timer(components);
             timer1 = new System.Windows.Forms.Timer(components);
-            timer1.Tick += timer1_Tick;
 
-            // ===== Form =====
+            sortedProgressBarList1 = new StarResonanceDpsAnalysis.Control.SortedProgressBarList();
+            panel2 = new AntdUI.Panel();
+
+            NpcTakeDamageButton = new AntdUI.Button();
+            AlwaysInjuredButton = new AntdUI.Button();
+            TotalTreatmentButton = new AntdUI.Button();
+            TotalDamageButton = new AntdUI.Button();
+
+            tooltip = new TooltipComponent();
+
+            pageHeader1.SuspendLayout();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            SuspendLayout();
+
+            // =====================================================================
+            // PAGE HEADER (TOP BAR)
+            // =====================================================================
+
+            pageHeader1.BackColor = Color.Transparent;
+            pageHeader1.ColorScheme = TAMode.Dark;
+            pageHeader1.Dock = DockStyle.Top;
+            pageHeader1.Size = new Size(527, 32);                     // ↑ taller & cleaner
+            pageHeader1.Padding = new Padding(6, 3, 6, 3);            // ↑ breathing space
+            pageHeader1.DividerThickness = 2F;
+            pageHeader1.Name = "pageHeader1";
+
+            // LEFT → BattleTime, PlayerCount, Switch Button
+            pageHeader1.Controls.Add(BattleTimeText);
+            pageHeader1.Controls.Add(label1);
+            pageHeader1.Controls.Add(button3);
+
+            // RIGHT → DPS label, checkbox, icons
+            pageHeader1.Controls.Add(label2);
+            pageHeader1.Controls.Add(PilingModeCheckbox);
+            pageHeader1.Controls.Add(button2);
+            pageHeader1.Controls.Add(button_ThemeSwitch);
+            pageHeader1.Controls.Add(button_AlwaysOnTop);
+            pageHeader1.Controls.Add(button1);
+            pageHeader1.Controls.Add(button_Settings);
+
+            // Button sizing improvements
+            Size headerBtnSmall = new Size(26, 26);
+            Size headerBtnNormal = new Size(30, 26);
+
+            button_Settings.Size = headerBtnNormal;
+            button1.Size = headerBtnSmall;
+            button_AlwaysOnTop.Size = headerBtnSmall;
+            button2.Size = headerBtnSmall;
+            button_ThemeSwitch.Size = headerBtnSmall;
+            button3.Size = headerBtnSmall;
+
+            // Checkbox
+            PilingModeCheckbox.Size = new Size(110, 26);
+            PilingModeCheckbox.Margin = new Padding(0, 0, 6, 0);
+
+            BattleTimeText.Size = new Size(90, 26);
+            label1.Size = new Size(55, 26);
+            label2.Size = new Size(140, 26);
+
+            // =====================================================================
+            // PANEL2 (Mode Buttons Row)
+            // =====================================================================
+
+            panel2.Dock = DockStyle.Top;
+            panel2.BackColor = Color.Transparent;
+            panel2.Size = new Size(527, 50);                    // ↑ cleaner compact panel
+            panel2.Padding = new Padding(10, 8, 10, 4);         // ↑ symmetric padding
+            panel2.Shadow = 3;
+            panel2.ShadowAlign = TAlignMini.Bottom;
+
+            int modeBtnW = 90;
+            int modeBtnH = 34;
+
+            TotalDamageButton.Size = new Size(modeBtnW - 20, modeBtnH);
+            TotalDamageButton.Location = new Point(10, 8);
+
+            TotalTreatmentButton.Size = new Size(modeBtnW, modeBtnH);
+            TotalTreatmentButton.Location = new Point(75, 8);
+
+            AlwaysInjuredButton.Size = new Size(modeBtnW, modeBtnH);
+            AlwaysInjuredButton.Location = new Point(170, 8);
+
+            NpcTakeDamageButton.Size = new Size(modeBtnW + 10, modeBtnH);
+            NpcTakeDamageButton.Location = new Point(265, 8);
+
+            SortToggleButton.Size = new Size(90, 34);
+            SortToggleButton.Location = new Point(365, 8);
+
+            panel2.Controls.Add(NpcTakeDamageButton);
+            panel2.Controls.Add(AlwaysInjuredButton);
+            panel2.Controls.Add(TotalTreatmentButton);
+            panel2.Controls.Add(TotalDamageButton);
+            panel2.Controls.Add(SortToggleButton);
+
+            // =====================================================================
+            // DPS LIST AREA (sortedProgressBarList1)
+            // =====================================================================
+
+            sortedProgressBarList1.Dock = DockStyle.Fill;
+            sortedProgressBarList1.Margin = new Padding(10, 10, 10, 10);
+            sortedProgressBarList1.BackColor = Color.WhiteSmoke;
+
+            // =====================================================================
+            // FINAL FORM SETTINGS
+            // =====================================================================
+
             AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            BackColor = Color.White;
-            BorderWidth = 0;
-            ClientSize = new Size(527, 442);
+            ClientSize = new Size(527, 450);                       // ↑ improved space
             Controls.Add(sortedProgressBarList1);
             Controls.Add(panel2);
             Controls.Add(pageHeader1);
-            Font = new Font("HarmonyOS Sans SC", 8F);
-            Icon = (Icon)resources.GetObject("$this.Icon");
+
             Name = "DpsStatisticsForm";
             Radius = 3;
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "别查我DPS";
-            FormClosing += DpsStatisticsForm_FormClosing;
+
             Load += DpsStatistics_Load;
             Shown += DpsStatisticsForm_Shown;
-            ForeColorChanged += DpsStatisticsForm_ForeColorChanged;
-        }
+            FormClosing += DpsStatisticsForm_FormClosing;
 
-        private Button CreateButton(string text, int width, int height, EventHandler clickHandler, Image icon = null)
-        {
-            var btn = new Button
-            {
-                Text = text,
-                Size = new Size(width, height),
-                Radius = 3,
-                Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold),
-                Icon = icon,
-                IconRatio = 0.7F,
-                Ghost = true
-            };
-            btn.Click += clickHandler;
-            return btn;
+            pageHeader1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
 
-        private PageHeader pageHeader1;
-        private Button button_Settings, button1, button_AlwaysOnTop, button3, button2, button_ThemeSwitch, SortToggleButton;
-        private Checkbox PilingModeCheckbox;
-        private Panel panel1, panel2;
-        private Label BattleTimeText, label1, label2;
-        private System.Windows.Forms.Timer timer_RefreshRunningTime, timer1;
+        private AntdUI.PageHeader pageHeader1;
+        private AntdUI.Button button_Settings;
+        private AntdUI.Button button1;
+        private AntdUI.Button button_AlwaysOnTop;
+        private AntdUI.Button button3;
+        private AntdUI.Button button2;
+        private AntdUI.Checkbox PilingModeCheckbox;
+        private AntdUI.Panel panel1;
+        private AntdUI.Label BattleTimeText;
+        private System.Windows.Forms.Timer timer_RefreshRunningTime;
+        private System.Windows.Forms.Timer timer1;
         private Control.SortedProgressBarList sortedProgressBarList1;
-        private Button TotalDamageButton, TotalTreatmentButton, AlwaysInjuredButton, NpcTakeDamageButton;
+        private AntdUI.Label label1;
+        private AntdUI.Label label2;
+        private AntdUI.Panel panel2;
+        private AntdUI.Button TotalDamageButton;
+        private AntdUI.Button TotalTreatmentButton;
+        private AntdUI.Button AlwaysInjuredButton;
+        private AntdUI.Button NpcTakeDamageButton;
+        private AntdUI.Button button_ThemeSwitch;
+        private AntdUI.TooltipComponent tooltip;
+        private AntdUI.Button SortToggleButton;
     }
 }
