@@ -51,7 +51,7 @@ namespace StarResonanceDpsAnalysis.Forms
             timer_RefreshRunningTime = new System.Windows.Forms.Timer(components);
             timer1 = new System.Windows.Forms.Timer(components);
 
-            sortedProgressBarList1 = new StarResonanceDpsAnalysis.Control.SortedProgressBarList();
+            sortedProgressBarList1 = new Control.SortedProgressBarList();
             panel2 = new AntdUI.Panel();
 
             NpcTakeDamageButton = new AntdUI.Button();
