@@ -493,7 +493,8 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 TotalDamageButton,
                 TotalTreatmentButton,
                 AlwaysInjuredButton,
-                NpcTakeDamageButton
+                NpcTakeDamageButton,
+                SortToggleButton
             };
 
             // Header child labels
@@ -521,7 +522,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 AppConfig.colorText = thetextcolor;
                 sortedProgressBarList1.OrderColor = thetextcolor;
                 
-                SortToggleButton.ForeColor = thetextcolor;
+                //SortToggleButton.ForeColor = thetextcolor;
 /*
                 foreach (var lbl in headerLabels)
                     lbl.ForeColor = thetextcolor;
@@ -541,6 +542,8 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 {
                     btn.DefaultBack = Color.FromArgb(247, 247, 247);
                 }
+               
+                SortToggleButton.ForeColor = Color.FromArgb(0, 0, 0);
 
                 // Highlight current index button
                 switch (FormManager.currentIndex)
@@ -586,6 +589,9 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 {
                     btn.DefaultBack = Color.FromArgb(27, 27, 27);
                 }
+
+                SortToggleButton.ForeColor = Color.FromArgb(255,255,255);
+
                 // Highlight current index button
                 switch (FormManager.currentIndex)
                 {
@@ -723,7 +729,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         {
             ExitNpcDetailMode(); // 退出详情模式
             Button button = (Button)sender;
-            List<Button> buttonList = new List<Button>() { TotalDamageButton, TotalTreatmentButton, AlwaysInjuredButton, NpcTakeDamageButton };
+            List<Button> buttonList = new List<Button>() { TotalDamageButton, TotalTreatmentButton, AlwaysInjuredButton, NpcTakeDamageButton, SortToggleButton };
             Color colorBack = Color.FromArgb(60, 60, 60);
             Color colorWhite = Color.FromArgb(223, 223, 223);
             foreach (Button btn in buttonList)
