@@ -222,11 +222,11 @@ namespace StarResonanceDpsAnalysis.Forms
             // label2
             // 
             label2.Dock = DockStyle.Right;
-            label2.Font = new Font("Alimama ShuHeiTi", 8F, FontStyle.Regular, GraphicsUnit.Point, 134);
+            label2.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
             //label2.Location = new Point(394, 3);
             label2.Name = "label2";
             label2.Size = new Size(133, 31);
-            label2.TabIndex = 20;
+            //label2.TabIndex = 20;
             label2.Text = "";
             //label2.TextAlign = ContentAlignment.MiddleRight;
             label2.MouseDown += HeaderPanel_MouseDown;
