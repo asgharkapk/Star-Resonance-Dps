@@ -305,20 +305,20 @@ namespace StarResonanceDpsAnalysis.Forms
             panel2.Text = "panel2";
             // 
             // SortToggleButton
-            //SortToggleButton = new AntdUI.Button();
+            //
             SortToggleButton.Anchor = AnchorStyles.Top;
             SortToggleButton.DefaultBack = Color.FromArgb(247, 247, 247);
             SortToggleButton.DefaultBorderColor = Color.Wheat;
-            SortToggleButton.Name = "SortToggleButton";
-            SortToggleButton.Text = "Sort[Σ]"; // default
             SortToggleButton.Font = new Font("Segoe UI Emoji", 10f, FontStyle.Regular, GraphicsUnit.Pixel);
+            SortToggleButton.Name = "SortToggleButton";
+            SortToggleButton.Radius = 3;
             SortToggleButton.Size = new Size(80, 32);
             SortToggleButton.Location = new Point(345, 5);
-            SortToggleButton.Radius = 3;
-            SortToggleButton.Ghost = true;
+            SortToggleButton.Text = "Sort[Σ]"; // default
             SortToggleButton.Click += SortToggleButton_Click;
+            //SortToggleButton.Ghost = true;
             //SortToggleButton.ForeColor = Color.White; 
-            SortToggleButton.BackColor = Color.FromArgb(50, 150, 250);
+            //SortToggleButton.BackColor = Color.FromArgb(50, 150, 250);
             //
             // NpcTakeDamageButton
             // 
