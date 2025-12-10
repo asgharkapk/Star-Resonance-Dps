@@ -865,7 +865,8 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         private void SortToggleButton_Click(object sender, EventArgs e)
         {
             SortByDps = !SortByDps;
-            SortToggleButton.Text = SortByDps ? "Sort[⚡]" : "Sort[Σ]";
+            //SortToggleButton.Text = SortByDps ? "/s Mode" : "∑ Mode";
+            SortToggleButton.Text = SortByDps ? "Sorting⚡" : "Sorting ∑";
 
             var source = FormManager.showTotal ? SourceType.FullRecord : SourceType.Current;
             RefreshDpsTable(source, FormManager.currentIndex switch

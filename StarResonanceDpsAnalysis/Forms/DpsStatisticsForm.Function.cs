@@ -599,8 +599,8 @@ namespace StarResonanceDpsAnalysis.Forms
             }
 
             var ordered = SortByDps
-                ? uiList.OrderByDescending(x => x.PerSecond).ToList()   // ⚡ DPS
-                : uiList.OrderByDescending(x => x.Total).ToList();      // Σ Total
+                ? uiList.OrderByDescending(x => x.PerSecond).ToList()   // ⚡ DPS   //SortByDps == true     //sortning by per sec
+                : uiList.OrderByDescending(x => x.Total).ToList();      // Σ Total  //SortByDps == false    //sorting by total
 
             double teamSum = uiList.Sum(x => (double)x.Total);
             if (teamSum <= 0d) teamSum = 1d;
