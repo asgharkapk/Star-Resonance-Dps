@@ -120,7 +120,7 @@ namespace StarResonanceDpsAnalysis.Forms
             button_ThemeSwitch.Location = new Point(405, 0);
             button_ThemeSwitch.Margin = new Padding(2);
             button_ThemeSwitch.Name = "button_ThemeSwitch";
-            button_ThemeSwitch.Size = new Size(33, 25);
+            button_ThemeSwitch.Size = new Size(28, 25);
             button_ThemeSwitch.TabIndex = 21;
             button_ThemeSwitch.ToggleIconSvg = "MoonOutlined";
             button_ThemeSwitch.Click += button_ThemeSwitch_Click;
@@ -222,7 +222,7 @@ namespace StarResonanceDpsAnalysis.Forms
             // label2
             // 
             label2.Dock = DockStyle.Right;
-            label2.Font = new Font("Alimama ShuHeiTi", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            label2.Font = new Font("Alimama ShuHeiTi", 8F, FontStyle.Regular, GraphicsUnit.Point, 134);
             //label2.Location = new Point(394, 3);
             label2.Name = "label2";
             label2.Size = new Size(133, 31);
@@ -238,7 +238,7 @@ namespace StarResonanceDpsAnalysis.Forms
             //BattleTimeText.Location = new Point(60, 3);
             //BattleTimeText.Margin = new Padding(2);
             BattleTimeText.Name = "BattleTimeText";
-            BattleTimeText.Size = new Size(98, 31);
+            BattleTimeText.Size = new Size(70, 31);
             BattleTimeText.TabIndex = 18;
             BattleTimeText.Text = "00:00";
             BattleTimeText.MouseDown += HeaderPanel_MouseDown;
