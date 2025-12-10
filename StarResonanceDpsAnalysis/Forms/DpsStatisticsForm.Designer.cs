@@ -70,8 +70,8 @@ namespace StarResonanceDpsAnalysis.Forms
 
             pageHeader1.Controls.Add(label2); // damage(dps) [docked right]
             pageHeader1.Controls.Add(PilingModeCheckbox); //bechmark checkbox [docked right]
-            pageHeader1.Controls.Add(button2); // minimize [docked right]
             pageHeader1.Controls.Add(button_ThemeSwitch); // dark/light [docked right]
+            pageHeader1.Controls.Add(button2); // minimize [docked right]
             pageHeader1.Controls.Add(button_AlwaysOnTop); // [docked right]
             pageHeader1.Controls.Add(button1); // refresh [docked right] 
             pageHeader1.Controls.Add(button_Settings); // docked right
