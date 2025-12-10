@@ -300,7 +300,7 @@ namespace StarResonanceDpsAnalysis.Forms
             panel2.Name = "panel2";
             panel2.Shadow = 3;
             panel2.ShadowAlign = TAlignMini.Bottom;
-            panel2.Size = new Size(527, 55);
+            panel2.Size = new Size(527, 45);
             panel2.TabIndex = 21;
             panel2.Text = "panel2";
             // 
