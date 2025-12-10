@@ -370,55 +370,54 @@ namespace StarResonanceDpsAnalysis.Forms
             // background colors:
 
             // Unknown
-            { Properties.Strings.Profession_Unknown, ColorTranslator.FromHtml("#D3D3D3") },
+            { Properties.Strings.Profession_Unknown,        ColorTranslator.FromHtml("#BFBFBF") }, // #67AEF6 #4A90E2 #A0A0A0 #404040 #808080 #BFBFBF #A8A8A8
 
             // DPS icon: #DB7575 (fore color)
             // background colors:
             // range dps:
-            // MARKSMAN
-            { Properties.Strings.Profession_Marksman, ColorTranslator.FromHtml("#CBAACB") },
-            { Properties.Strings.SubProfession_EagleBow, ColorTranslator.FromHtml("#CBAACB") },
-            { Properties.Strings.SubProfession_WolfBow, ColorTranslator.FromHtml("#CBAACB") },
+            // MARKSMAN (Purple)
+            { Properties.Strings.Profession_Marksman,       ColorTranslator.FromHtml("#7B6FA5") },
+            { Properties.Strings.SubProfession_EagleBow,    ColorTranslator.FromHtml("#8C7FC2") },
+            { Properties.Strings.SubProfession_WolfBow,     ColorTranslator.FromHtml("#695E90") },
 
-            // FROST MAGE
-            { Properties.Strings.Profession_FrostMage, ColorTranslator.FromHtml("#A2CFFE") },
-            { Properties.Strings.SubProfession_IceRay, ColorTranslator.FromHtml("#A2CFFE") },
-            { Properties.Strings.SubProfession_IceSpear, ColorTranslator.FromHtml("#A2CFFE") },
-
+            // FROST MAGE (Blue)
+            { Properties.Strings.Profession_FrostMage,      ColorTranslator.FromHtml("#5A7FBF") },
+            { Properties.Strings.SubProfession_IceRay,      ColorTranslator.FromHtml("#6A8FD4") },
+            { Properties.Strings.SubProfession_IceSpear,    ColorTranslator.FromHtml("#4970A3") },
             // melee dps:
-            // STORMBLADE
-            { Properties.Strings.Profession_Stormblade, ColorTranslator.FromHtml("#B5EAD7") },
-            { Properties.Strings.SubProfession_Iai, ColorTranslator.FromHtml("#B5EAD7") },
-            { Properties.Strings.SubProfession_MoonBlade, ColorTranslator.FromHtml("#B5EAD7") },
+            // STORMBLADE (Green)
+            { Properties.Strings.Profession_Stormblade,     ColorTranslator.FromHtml("#6FA57B") },
+            { Properties.Strings.SubProfession_Iai,         ColorTranslator.FromHtml("#81B38F") },
+            { Properties.Strings.SubProfession_MoonBlade,   ColorTranslator.FromHtml("#5E8E66") },
 
-            // WIND KNIGHT
-            { Properties.Strings.Profession_WindKnight, ColorTranslator.FromHtml("#C7E9B0") },
-            { Properties.Strings.SubProfession_AirStyle, ColorTranslator.FromHtml("#C7E9B0") },
-            { Properties.Strings.SubProfession_Overdrive, ColorTranslator.FromHtml("#C7E9B0") },
+            // WIND KNIGHT (Lime Green)
+            { Properties.Strings.Profession_WindKnight,     ColorTranslator.FromHtml("#78C17F") },
+            { Properties.Strings.SubProfession_AirStyle,    ColorTranslator.FromHtml("#7FCF85") },
+            { Properties.Strings.SubProfession_Overdrive,   ColorTranslator.FromHtml("#5FAE63") },
 
             // Healer icon: #83C49A (fore color)
             // background colors:
-            // VERDANT ORACLE
-            { Properties.Strings.Profession_VerdantOracle, ColorTranslator.FromHtml("#FFB7B2") },
-            { Properties.Strings.SubProfession_Lifebloom, ColorTranslator.FromHtml("#FFB7B2") },
-            { Properties.Strings.SubProfession_Thornlash, ColorTranslator.FromHtml("#FFB7B2") },
+            // VERDANT ORACLE (Pink)
+            { Properties.Strings.Profession_VerdantOracle,  ColorTranslator.FromHtml("#D88CA0") },
+            { Properties.Strings.SubProfession_Lifebloom,   ColorTranslator.FromHtml("#E39DB0") },
+            { Properties.Strings.SubProfession_Thornlash,   ColorTranslator.FromHtml("#C4798F") },
 
-            // SOUL MUSICIAN
-            { Properties.Strings.Profession_SoulMusician, ColorTranslator.FromHtml("#FFDAC1") },
-            { Properties.Strings.SubProfession_Concerto, ColorTranslator.FromHtml("#FFDAC1") },
-            { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#FFDAC1") },
+            // SOUL MUSICIAN (Red)
+            { Properties.Strings.Profession_SoulMusician,   ColorTranslator.FromHtml("#D97575") },
+            { Properties.Strings.SubProfession_Concerto,    ColorTranslator.FromHtml("#E58888") },
+            { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#C46060") },
 
             // Tank icon: #68A6CD (fore color)
             // background colors:
             // HEAVY GUARDIAN
-            { Properties.Strings.Profession_HeavyGuardian, ColorTranslator.FromHtml("#FFF5BA") },
-            { Properties.Strings.SubProfession_RockShield, ColorTranslator.FromHtml("#FFF5BA") },
-            { Properties.Strings.SubProfession_Block, ColorTranslator.FromHtml("#FFF5BA") },
+            { Properties.Strings.Profession_HeavyGuardian,  ColorTranslator.FromHtml("#D9C25F") },
+            { Properties.Strings.SubProfession_RockShield,  ColorTranslator.FromHtml("#E3D377") },
+            { Properties.Strings.SubProfession_Block,       ColorTranslator.FromHtml("#C4B34A") },
 
             // AEGIS KNIGHT
-            { Properties.Strings.Profession_AegisKnight, ColorTranslator.FromHtml("#E2F0CB") },
-            { Properties.Strings.SubProfession_Protection, ColorTranslator.FromHtml("#E2F0CB") },
-            { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#E2F0CB") },
+            { Properties.Strings.Profession_AegisKnight,    ColorTranslator.FromHtml("#F0D47A") },
+            { Properties.Strings.SubProfession_Protection,  ColorTranslator.FromHtml("#FFDFA0") },
+            { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#D1B351") },
         };
 
         // 黑窗体
@@ -436,8 +435,8 @@ namespace StarResonanceDpsAnalysis.Forms
             // range dps:
             // MARKSMAN (Royal Purple)
             { Properties.Strings.Profession_Marksman,       ColorTranslator.FromHtml("#6A0DAD") },
-            { Properties.Strings.SubProfession_EagleBow,    ColorTranslator.FromHtml("#7631B5") },   // lighter purple
-            { Properties.Strings.SubProfession_WolfBow,     ColorTranslator.FromHtml("#5C0C98") },   // darker purple
+            { Properties.Strings.SubProfession_EagleBow,    ColorTranslator.FromHtml("#7631B5") }, // lighter purple
+            { Properties.Strings.SubProfession_WolfBow,     ColorTranslator.FromHtml("#5C0C98") }, // darker purple
 
             // FROST MAGE (Deep Blue)
             { Properties.Strings.Profession_FrostMage,      ColorTranslator.FromHtml("#1E3A8A") },
@@ -492,27 +491,27 @@ namespace StarResonanceDpsAnalysis.Forms
         public static Dictionary<string, Bitmap> imgDict = new Dictionary<string, Bitmap>() // convert to resource key
         {
             { Properties.Strings.Profession_Unknown, EmptyBitmap() },
-            { Properties.Strings.SubProfession_IceRay, new Bitmap(new MemoryStream(Resources.冰魔导师)) },
-            { Properties.Strings.Profession_FrostMage, new Bitmap(new MemoryStream(Resources.冰魔导师)) },
-            { Properties.Strings.Profession_HeavyGuardian, new Bitmap(new MemoryStream(Resources.巨刃守护者)) },
-            { Properties.Strings.Profession_VerdantOracle, new Bitmap(new MemoryStream(Resources.森语者)) },
-            { Properties.Strings.Profession_SoulMusician, new Bitmap(new MemoryStream(Resources.灵魂乐手)) },
-            { Properties.Strings.Profession_Marksman, new Bitmap(new MemoryStream(Resources.神射手)) },
-            { Properties.Strings.Profession_Stormblade, new Bitmap(new MemoryStream(Resources.雷影剑士)) },
-            { Properties.Strings.Profession_WindKnight, new Bitmap(new MemoryStream(Resources.青岚骑士)) },
-            { Properties.Strings.Profession_AegisKnight, new Bitmap(new MemoryStream(Resources.神盾骑士)) },
-            { Properties.Strings.SubProfession_Concerto, new Bitmap(new MemoryStream(Resources.灵魂乐手)) },
-            { Properties.Strings.SubProfession_MoonBlade, new Bitmap(new MemoryStream(Resources.雷影剑士)) },
-            { Properties.Strings.SubProfession_EagleBow, new Bitmap(new MemoryStream(Resources.神射手)) },
-            { Properties.Strings.SubProfession_WolfBow, new Bitmap(new MemoryStream(Resources.神射手)) },
-            { Properties.Strings.SubProfession_AirStyle, new Bitmap(new MemoryStream(Resources.青岚骑士)) },
-            { Properties.Strings.SubProfession_Overdrive, new Bitmap(new MemoryStream(Resources.青岚骑士)) },
-            { Properties.Strings.SubProfession_Protection, new Bitmap(new MemoryStream(Resources.神盾骑士)) },
-            { Properties.Strings.SubProfession_LightShield, new Bitmap(new MemoryStream(Resources.神盾骑士)) },
-            { Properties.Strings.SubProfession_RockShield, new Bitmap(new MemoryStream(Resources.巨刃守护者)) },
-            { Properties.Strings.SubProfession_Block, new Bitmap(new MemoryStream(Resources.巨刃守护者)) },
-            { Properties.Strings.SubProfession_Lifebloom, new Bitmap(new MemoryStream(Resources.森语者)) },
-            { Properties.Strings.SubProfession_Thornlash, new Bitmap(new MemoryStream(Resources.森语者)) },
+            { Properties.Strings.SubProfession_IceRay,      new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },
+            { Properties.Strings.Profession_FrostMage,      new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },
+            { Properties.Strings.Profession_HeavyGuardian,  new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },
+            { Properties.Strings.Profession_VerdantOracle,  new Bitmap(new MemoryStream(Resources.森语者)       ) },
+            { Properties.Strings.Profession_SoulMusician,   new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },
+            { Properties.Strings.Profession_Marksman,       new Bitmap(new MemoryStream(Resources.神射手)       ) },
+            { Properties.Strings.Profession_Stormblade,     new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },
+            { Properties.Strings.Profession_WindKnight,     new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
+            { Properties.Strings.Profession_AegisKnight,    new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
+            { Properties.Strings.SubProfession_Concerto,    new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },
+            { Properties.Strings.SubProfession_MoonBlade,   new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },
+            { Properties.Strings.SubProfession_EagleBow,    new Bitmap(new MemoryStream(Resources.神射手)       ) },
+            { Properties.Strings.SubProfession_WolfBow,     new Bitmap(new MemoryStream(Resources.神射手)       ) },
+            { Properties.Strings.SubProfession_AirStyle,    new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
+            { Properties.Strings.SubProfession_Overdrive,   new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
+            { Properties.Strings.SubProfession_Protection,  new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
+            { Properties.Strings.SubProfession_LightShield, new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
+            { Properties.Strings.SubProfession_RockShield,  new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },
+            { Properties.Strings.SubProfession_Block,       new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },
+            { Properties.Strings.SubProfession_Lifebloom,   new Bitmap(new MemoryStream(Resources.森语者)       ) },
+            { Properties.Strings.SubProfession_Thornlash,   new Bitmap(new MemoryStream(Resources.森语者)       ) },
         };
 
 
