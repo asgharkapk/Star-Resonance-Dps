@@ -523,14 +523,14 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 sortedProgressBarList1.OrderColor = thetextcolor;
                 
                 //SortToggleButton.ForeColor = thetextcolor;
-/*
+
                 foreach (var lbl in headerLabels)
                     lbl.ForeColor = thetextcolor;
 
                 // Header
                 pageHeader1.BackColor = themeBack;
                 pageHeader1.ForeColor = thetextcolor;
-*/
+
                 // Buttons icons
                 TotalDamageButton.Icon = Common.BytesToImage(Properties.Resources.伤害);
                 TotalTreatmentButton.Icon = Common.BytesToImage(Properties.Resources.治疗);
@@ -569,14 +569,14 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 panel2.Back = themeBack;
 
                 AppConfig.colorText = Color.White;
-/*
+
                 // Header
                 pageHeader1.BackColor = themeBack;
                 pageHeader1.ForeColor = Color.White;
 
                 foreach (var lbl in headerLabels)
                     lbl.ForeColor = Color.White;
-*/
+
                 // Buttons icons
                 TotalDamageButton.Icon = Common.BytesToImage(Properties.Resources.伤害白色);
                 TotalTreatmentButton.Icon = Common.BytesToImage(Properties.Resources.治疗白色);
