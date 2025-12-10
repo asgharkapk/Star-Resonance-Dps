@@ -233,20 +233,22 @@ namespace StarResonanceDpsAnalysis.Forms
             BattleTimeText.Location = new Point(60, 3);//38
             BattleTimeText.Margin = new Padding(10);
             BattleTimeText.Name = "BattleTimeText";
-            BattleTimeText.Size = new Size(50, 31);//98
+            BattleTimeText.Size = new Size(70, 31);//98
             BattleTimeText.TabIndex = 18;
             BattleTimeText.Text = "00:00";
             // 
             // SortToggleButton
-            //SortToggleButton = new AntdUI.Button();
-            SortToggleButton.Name = "SortToggleButton";
-            SortToggleButton.Text = "Sort[Σ]"; // default
+            //
+            SortToggleButton.DefaultBack = Color.FromArgb(247, 247, 247);
+            SortToggleButton.DefaultBorderColor = Color.Wheat;
             SortToggleButton.Font = new Font("Segoe UI Emoji", 10f, FontStyle.Regular, GraphicsUnit.Pixel);
-            SortToggleButton.Size = new Size(70, 32);
+            SortToggleButton.Name = "SortToggleButton";
             SortToggleButton.Radius = 6;
-            SortToggleButton.Ghost = true;
+            SortToggleButton.Size = new Size(80, 32);
             SortToggleButton.Location = new Point(BattleTimeText.Right + 12, 0);
+            SortToggleButton.Text = "Sorting ∑"; // default == false == sorting by total
             SortToggleButton.Click += SortToggleButton_Click;
+            //SortToggleButton.Ghost = true;
             //SortToggleButton.ForeColor = Color.White; 
             //SortToggleButton.BackColor = Color.FromArgb(50, 150, 250);
             //

@@ -497,6 +497,8 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 BattleTimeText.ForeColor = thetextcolor;
                 label1.ForeColor = thetextcolor;
                 label2.ForeColor = thetextcolor;
+
+                SortToggleButton.DefaultBack = Color.FromArgb(0, 0, 80);
                 SortToggleButton.ForeColor = thetextcolor;
 
                 TotalDamageButton.Icon = Common.BytesToImage(Properties.Resources.伤害);
@@ -532,6 +534,9 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 sortedProgressBarList1.BackColor = ColorTranslator.FromHtml("#252527");
                 panel1.Back = ColorTranslator.FromHtml("#252527");
                 panel2.Back = ColorTranslator.FromHtml("#252527");
+
+                SortToggleButton.DefaultBack = Color.FromArgb(27, 27, 27);
+                SortToggleButton.ForeColor = Color.White;
 
                 AppConfig.colorText = Color.White;
                 sortedProgressBarList1.OrderColor = Color.White;
@@ -799,7 +804,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         private void SortToggleButton_Click(object sender, EventArgs e)
         {
             SortByDps = !SortByDps;
-            SortToggleButton.Text = SortByDps ? "Sort[⚡]" : "Sort[Σ]";
+            SortToggleButton.Text = SortByDps ? "Sorting⚡" : "Sorting ∑";
 
             var source = FormManager.showTotal ? SourceType.FullRecord : SourceType.Current;
             RefreshDpsTable(source, FormManager.currentIndex switch
