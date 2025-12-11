@@ -1,12 +1,12 @@
-# Star Resonance DPS Analysis Tool (Fork)
+# ابزار تحلیل DPS بازی Star Resonance (فورک)
 
-A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceDps) which is fork of [anying1073/StarResonanceDps](https://github.com/anying1073/StarResonanceDps) that is ported from [dmlgzs/StarResonanceDamageCounter](https://github.com/dmlgzs/StarResonanceDamageCounter)
+یک فورک از [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceDps) که خود فورکی از [anying1073/StarResonanceDps](https://github.com/anying1073/StarResonanceDps) است و از [dmlgzs/StarResonanceDamageCounter](https://github.com/dmlgzs/StarResonanceDamageCounter) منتقل شده است.
 
-**This fork includes:**
-- **more en translations**
-- **fully transparent background in light theme**
-- **not compact theme in [normal branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/nOrMaL)**
-- **beta test branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/mOnStEr)**
+**این فورک شامل:**
+- **ترجمه‌های بیشتر به انگلیسی**
+- **پس‌زمینه کاملاً شفاف در تم روشن**
+- **تم غیر فشرده در [شاخه نرمال](https://github.com/asgharkapk/Star-Resonance-Dps/tree/nOrMaL)**
+- **شاخه تست بتا: [شاخه هیولا](https://github.com/asgharkapk/Star-Resonance-Dps/tree/mOnStEr)**
 
 ![dark-compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/cOmPaCt/dark-compact.jpg)
 ![light compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/cOmPaCt/light-compact.jpg)
@@ -15,71 +15,72 @@ A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceD
 
 ---
 
-## About
+## درباره
 
-This tool is a DPS (damage-per-second) analysis and statistics tool for **Star Resonance**.  
+این ابزار یک ابزار تحلیل و آمار DPS (تعداد آسیب در ثانیه) برای **Star Resonance** است.  
 
-The core data collection and analysis features are ported from [StarResonanceDamageCounter](https://github.com/dmlgzs/StarResonanceDamageCounter). We thank the original author for their contributions.
+ویژگی‌های اصلی جمع‌آوری و تحلیل داده‌ها از [StarResonanceDamageCounter](https://github.com/dmlgzs/StarResonanceDamageCounter) منتقل شده‌اند. ما از نویسنده اصلی برای مشارکت‌هایشان تشکر می‌کنیم.
 
-**Important:** This tool does **not** modify the game client and does **not** violate the game’s terms of service. Its purpose is to help players better understand combat data, optimize gameplay, and reduce ineffective grinding.  
+**مهم:** این ابزار **کلاینت بازی را تغییر نمی‌دهد** و **مخالف قوانین بازی نیست**. هدف آن کمک به بازیکنان برای درک بهتر داده‌های نبرد، بهینه‌سازی گیم‌پلی و کاهش grind غیر مؤثر است.  
 
-Please use this tool responsibly. Do **not** use its results for unfair discrimination or other actions that harm the game community.
+لطفاً از این ابزار به‌صورت مسئولانه استفاده کنید. نتایج آن را برای تبعیض ناعادلانه یا دیگر اقدامات مخرب علیه جامعه بازی به کار نبرید.
 
 ---
 
-## 🚀 Quick Start
+## 🚀 شروع سریع
 
-### Requirements
+### پیش‌نیازها
 - [Npcap](https://npcap.com/dist/npcap-1.85.exe)
 
-### Installation & Usage
+### نصب و استفاده
 
-1. **Download** the latest release.
-2. **Unzip** the downloaded file.
-3. **Run** the `.exe` file to start the application.
-### Requirements
+1. **دانلود** آخرین نسخه.
+2. **اکسترکت** فایل دانلود شده.
+3. **اجرای** فایل `.exe` برای شروع برنامه.
+
+### پیش‌نیازها
 
 - [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 
-### Installation & Usage
+### نصب و استفاده
 
-1. Clone or download this repository.
-2. Open the project in your preferred .NET IDE.
-3. Build and run the application.
-4. Follow the in-app instructions to analyze combat data.
+1. این مخزن را کلون یا دانلود کنید.
+2. پروژه را در IDE دلخواه .NET خود باز کنید.
+3. پروژه را بیلد و اجرا کنید.
+4. دستورالعمل‌های داخل برنامه را برای تحلیل داده‌های نبرد دنبال کنید.
 
 ---
 
-## 📄 License
+## 📄 مجوز
 
-This project is licensed under the [GNU Affero General Public License v3 (AGPLv3)](LICENSE).  
+این پروژه تحت [مجوز عمومی Affero نسخه 3 (AGPLv3)](LICENSE) منتشر شده است.  
 
 [![AGPLv3](https://www.gnu.org/graphics/agplv3-with-text-162x68.png)](LICENSE)
 
-By using this tool, you agree to comply with the terms of this license.  
+با استفاده از این ابزار، شما موافقت می‌کنید که از شرایط این مجوز پیروی کنید.  
 
-**Note:** We do not support users who violate the license, or those who take open-source code, modify or translate it, and then make it closed-source immediately after an update.
-
----
-
-## 👥 Contributing
-
-Contributions are welcome!  
-
-- Submit **issues** for bugs or feature requests.
-- Open **pull requests** for improvements, fixes, or enhancements.
+**توجه:** ما از کاربرانی که مجوز را نقض کنند، یا افرادی که کد متن‌باز را گرفته، تغییر داده یا ترجمه کرده و سپس آن را بلافاصله به صورت بسته منتشر کنند، پشتیبانی نمی‌کنیم.
 
 ---
 
-## ⭐ Support
+## 👥 مشارکت
 
-If this project helps you, please give it a **Star ⭐** on GitHub.
+مشارکت خوش‌آمد است!  
+
+- **ایجاد issue** برای باگ‌ها یا درخواست ویژگی‌ها.
+- **ایجاد pull request** برای بهبود، اصلاح یا افزودن قابلیت‌ها.
 
 ---
 
-## ⚠️ Disclaimer
+## ⭐ حمایت
 
-This tool is intended **only for learning and analyzing game data**.  
-It must **not** be used for any actions that violate the game's terms of service.  
+اگر این پروژه برایتان مفید است، لطفاً به آن در GitHub **ستاره ⭐** بدهید.
 
-Users assume all responsibility for their use of this tool. The developers are **not responsible** for any malicious or unfair behavior, such as power discrimination or harassment in the game. Please ensure your usage complies with the game's community rules and ethical standards.
+---
+
+## ⚠️ سلب مسئولیت
+
+این ابزار فقط برای **یادگیری و تحلیل داده‌های بازی** طراحی شده است.  
+نباید برای هیچ اقدامی که قوانین بازی را نقض کند، استفاده شود.  
+
+کاربران مسئولیت کامل استفاده از این ابزار را بر عهده دارند. توسعه‌دهندگان **مسئول رفتار مخرب یا ناعادلانه** مانند تبعیض قدرت یا اذیت و آزار در بازی نیستند. لطفاً اطمینان حاصل کنید که استفاده شما با قوانین جامعه بازی و استانداردهای اخلاقی مطابقت دارد.
