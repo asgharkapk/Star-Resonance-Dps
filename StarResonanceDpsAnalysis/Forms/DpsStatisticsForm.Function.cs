@@ -576,7 +576,38 @@ namespace StarResonanceDpsAnalysis.Forms
         }
 
         private static bool SortByDps = false; // true = ⚡ , false = Σ
-
+/// <summary>
+/// Refreshes the DPS/progress bar table based on the specified data source and metric.
+/// </summary>
+/// <param name="source">
+/// The source of data to use when refreshing the table. Can be either:
+/// <list type="bullet">
+/// <item><description><see cref="SourceType.Current"/> — only the current session.</description></item>
+/// <item><description><see cref="SourceType.FullRecord"/> — the full record for all sessions.</description></item>
+/// </list>
+/// </param>
+/// <param name="metric">
+/// The metric used to populate the table. Can be damage, healing, or received damage,
+/// corresponding to <see cref="MetricType"/> values.
+/// </param>
+/// <remarks>
+/// <para>
+/// The method performs the following steps:
+/// </para>
+/// <list type="number">
+/// <item><description>Checks if a table clearing operation is already in progress and exits if so.</description></item>
+/// <item><description>Validates the currently visible view matches the requested source.</description></item>
+/// <item><description>Builds a list of UI rows with non-zero totals.</description></item>
+/// <item><description>Sorts the rows by per-second value (DPS) or total value based on <c>SortByDps</c>.</description></item>
+/// <item><description>Computes ratios and prepares progress bar data, including icons, colors, and text formatting.</description></item>
+/// <item><description>Updates existing rows in <c>DictList</c> or adds new ones, ensuring thread safety and minimal UI flicker.</description></item>
+/// <item><description>Removes any obsolete rows and binds the final list to the UI component <c>sortedProgressBarList1</c>.</description></item>
+/// </list>
+/// <para>
+/// This method ensures smooth UI updates by reusing existing <c>ProgressBarData</c> objects whenever possible
+/// and performing thread-safe updates via <c>Invoke</c> or <c>BeginInvoke</c>.
+/// </para>
+/// </remarks>
         public void RefreshDpsTable(SourceType source, MetricType metric)
         {
             // # UI 刷新事件：根据指定数据源（单次/全程）与指标（伤害/治疗/承伤）对进度条列表进行重建与绑定
@@ -739,6 +770,31 @@ namespace StarResonanceDpsAnalysis.Forms
         #region NPC承伤以及玩家对指定NPC造成的伤害排名
         #region 全程
         /// <summary>刷新：NPC承伤总览（全程 FullRecord）</summary>
+/// <summary>
+/// Refreshes the NPC overview table in the UI, showing the total damage taken by each NPC.
+/// </summary>
+/// <remarks>
+/// <para>
+/// The method performs the following steps:
+/// </para>
+/// <list type="number">
+/// <item><description>Checks if a table clearing operation is in progress and exits if so.</description></item>
+/// <item><description>Builds a list of NPC rows based on the currently visible view:
+/// <list type="bullet">
+/// <item><description>If <c>FormManager.showTotal</c> is true, builds the full-record overview.</description></item>
+/// <item><description>Otherwise, builds the current-session overview.</description></item>
+/// </list>
+/// </description></item>
+/// <item><description>Clears the UI if the list is empty.</description></item>
+/// <item><description>Orders NPCs descending by total damage taken and calculates ratios, percentages, and formatting for display.</description></item>
+/// <item><description>Uses <c>DictList</c> to manage row content, reusing existing rows where possible for smooth UI updates.</description></item>
+/// <item><description>Updates <c>ProgressBarData</c> objects with images, colors, progress bar values, and text content.</description></item>
+/// <item><description>Removes obsolete rows from <c>DictList</c> and updates the bound list <c>sortedProgressBarList1.Data</c> in a thread-safe way.</description></item>
+/// </list>
+/// <para>
+/// Thread safety is ensured using a lock on <c>_dataLock</c> and proper <c>Invoke/BeginInvoke</c> calls for UI updates.
+/// </para>
+/// </remarks>
         public void RefreshNpcOverview()
         {
             if (Interlocked.CompareExchange(ref _isClearing, 0, 0) == 1) return;
@@ -841,8 +897,33 @@ namespace StarResonanceDpsAnalysis.Forms
             }
         }
 
-
         /// <summary>刷新：某个NPC的攻击者排名（全程 FullRecord）</summary>
+/// <summary>
+/// Refreshes the attacker overview table for a specific NPC, showing which players have attacked the NPC and their contributions.
+/// </summary>
+/// <param name="npcId">The unique ID of the NPC whose attackers are being displayed.</param>
+/// <remarks>
+/// <para>
+/// The method performs the following steps:
+/// </para>
+/// <list type="number">
+/// <item><description>Checks if a table clearing operation is currently in progress and exits if so.</description></item>
+/// <item><description>Builds a list of attacker rows for the given NPC based on the currently visible view:
+/// <list type="bullet">
+/// <item><description>If <c>FormManager.showTotal</c> is true, builds the full-record overview.</description></item>
+/// <item><description>Otherwise, builds the current-session overview.</description></item>
+/// </list>
+/// </description></item>
+/// <item><description>Clears the UI if the list of attackers is empty.</description></item>
+/// <item><description>Orders attackers descending by damage dealt to the NPC, computes ratios, percentages, and formats values for display.</description></item>
+/// <item><description>Uses <c>DictList</c> to manage row content, reusing existing rows where possible to minimize UI flicker.</description></item>
+/// <item><description>Updates <c>ProgressBarData</c> objects with images, colors, progress bar values, and text content showing player nickname, subprofession, combat power, total damage, DPS, and contribution percentage.</description></item>
+/// <item><description>Removes obsolete rows from <c>DictList</c> and updates the bound list <c>sortedProgressBarList1.Data</c> in a thread-safe manner using <c>Invoke/BeginInvoke</c>.</description></item>
+/// </list>
+/// <para>
+/// Thread safety is ensured via locking on <c>_dataLock</c> and proper use of <c>Interlocked.CompareExchange</c> to avoid conflicts during UI updates.
+/// </para>
+/// </remarks>
         public void RefreshNpcAttackers(ulong npcId)
         {
             if (Interlocked.CompareExchange(ref _isClearing, 0, 0) == 1) return;
