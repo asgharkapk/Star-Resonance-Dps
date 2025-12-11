@@ -199,76 +199,76 @@
     <value>Benchmark is 3 minutes. Please read the following instructions:\n   1. Only your own data is recorded\n   2. Use the solo wooden dummy in the Guild Association\n   3. Ensure the combat timer is at 00:00\n   4. Uncheck and recheck the box to reset\n   5. Abnormal data will be deleted\n</value>
   </data>
   <data name="Header_DpsStatistics_Title" xml:space="preserve">
-    <value>DPS Damage Statistics Table</value>
+    <value>جدول آمار دمیج DPS</value>
   </data>
   <data name="Header_DpsStatistics_Subtitle" xml:space="preserve">
-    <value>Current Damage</value>
+    <value>آسیب فعلی</value>
   </data>
   <data name="TotalDamageLabel" xml:space="preserve">
     <value>DPS</value>
   </data>
   <data name="TotalTreatmentLabel" xml:space="preserve">
-    <value>Healing</value>
+    <value>درمان</value>
   </data>
   <data name="AlwaysInjuredLabel" xml:space="preserve">
-    <value>Tanking</value>
+    <value>تانکینگ</value>
   </data>
   <data name="NpcTakeDamageLabel" xml:space="preserve">
-    <value>Tanking</value>
+    <value>تانکینگ</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>تنظیمات</value>
   </data>
   <data name="ClearButtonLabel" xml:space="preserve">
-    <value>Clear</value>
+    <value>پاک کردن</value>
   </data>
   <data name="Tooltip_AlwaysOnTop" xml:space="preserve">
-    <value>Always On Top</value>
+    <value>همیشه در بالا</value>
   </data>
   <data name="SwitchModeButtonLabel" xml:space="preserve">
-    <value>Switch Mode</value>
+    <value>تغییر حالت</value>
   </data>
   <data name="Tooltip_Minimize" xml:space="preserve">
-    <value>Minimize</value>
+    <value>کوچک‌کردن</value>
   </data>
   <data name="Tooltip_SwitchTheme" xml:space="preserve">
-    <value>Theme</value>
+    <value>تم</value>
   </data>
   <data name="PilingModeCheckboxLabel" xml:space="preserve">
-    <value>Benchmark</value>
+    <value>بنچمارک</value>
   </data>
   <data name="Profession_Stormblade" xml:space="preserve">
-    <value>Stormblade</value>
+    <value>استورم‌بلید</value>
   </data>
   <data name="Profession_FrostMage" xml:space="preserve">
-    <value>FrostMage</value>
+    <value>فراست‌مج</value>
   </data>
   <data name="Profession_PurifyingAxe" xml:space="preserve">
-    <value>Purifying Evilfire Axe</value>
+    <value>تبر پالایندهٔ آتش شر</value>
   </data>
   <data name="Profession_WindKnight" xml:space="preserve">
-    <value>Wind Knight</value>
+    <value>شوالیهٔ باد</value>
   </data>
   <data name="Profession_VerdantOracle" xml:space="preserve">
-    <value>Verdant Oracle</value>
+    <value>اوراکل سبز</value>
   </data>
   <data name="Profession_HeavyGuardian" xml:space="preserve">
-    <value>HeavyGuardian</value>
+    <value>نگهبان سنگین</value>
   </data>
   <data name="Profession_Marksman" xml:space="preserve">
-    <value>Marksman</value>
+    <value>نشانه‌گیر</value>
   </data>
   <data name="Profession_AegisKnight" xml:space="preserve">
-    <value>AegisKnight</value>
+    <value>شوالیهٔ ایجیس</value>
   </data>
   <data name="Profession_ThunderHandCannon" xml:space="preserve">
-    <value>Thunder Flash Hand Cannon</value>
+    <value>تفنگ دستی فلش رعد</value>
   </data>
   <data name="Profession_DarkSpiritDance" xml:space="preserve">
-    <value>Dark Spirit Dance Ritual Blade</value>
+    <value>تیغهٔ آیین رقص روح تاریک</value>
   </data>
   <data name="Profession_SoulMusician" xml:space="preserve">
-    <value>Soul Musician</value>
+    <value>موسیقیدان روح</value>
   </data>
   <data name="ModuleName_BasicAttack" xml:space="preserve">
     <value>Basic Attack</value>
