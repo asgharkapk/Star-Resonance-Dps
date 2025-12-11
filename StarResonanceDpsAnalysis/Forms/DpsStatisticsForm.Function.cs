@@ -366,117 +366,199 @@ namespace StarResonanceDpsAnalysis.Forms
 
         Dictionary<string, Color> colorDict = new Dictionary<string, Color>()
         {
-            // Text: Color.White (fore color)
-            // background colors:
+            // Foreground text color always White
+            // DPS icon:       #DB7575
+            // Healer icon:    #83C49A
+            // Tank icon:      #68A6CD
 
-            // Unknown
-            { Properties.Strings.Profession_Unknown, ColorTranslator.FromHtml("#808080") }, 
+            // --------------------------------------
+            // UNKNOWN
+            // --------------------------------------
+            { Properties.Strings.Profession_Unknown,        ColorTranslator.FromHtml("#808080") },
 
-            // DPS icon: #DB7575 (fore color)
-            // background colors:
-            // range dps:
-            // MARKSMAN (Magenta)
-            { Properties.Strings.Profession_Marksman, ColorTranslator.FromHtml("#FF00FF") },
-            { Properties.Strings.SubProfession_EagleBow, ColorTranslator.FromHtml("#FF00FF") },
-            { Properties.Strings.SubProfession_WolfBow, ColorTranslator.FromHtml("#FF00FF") },
+            // ===================================================================================================
+            // RANGE DPS
+            // ===================================================================================================
 
-            // FROST MAGE (Cyan)
-            { Properties.Strings.Profession_FrostMage, ColorTranslator.FromHtml("#00FFFF") },
-            { Properties.Strings.SubProfession_IceRay, ColorTranslator.FromHtml("#00FFFF") },
-            { Properties.Strings.SubProfession_IceSpear, ColorTranslator.FromHtml("#00FFFF") },
+            // --------------------------------------
+            // MARKSMAN — Base: Magenta (#FF00FF)
+            // Sub-professions are slightly shifted in hue to avoid all being identical
+            // --------------------------------------
+            { Properties.Strings.Profession_Marksman,       ColorTranslator.FromHtml("#FF00FF") }, // main
 
-            // melee dps:
-            // STORMBLADE (Neon Green)
-            { Properties.Strings.Profession_Stormblade, ColorTranslator.FromHtml("#39FF14") },
-            { Properties.Strings.SubProfession_Iai, ColorTranslator.FromHtml("#39FF14") },
-            { Properties.Strings.SubProfession_MoonBlade, ColorTranslator.FromHtml("#39FF14") },
+            { Properties.Strings.SubProfession_EagleBow,    ColorTranslator.FromHtml("#FF33FF") }, // brighter magenta
+            { Properties.Strings.SubProfession_WolfBow,     ColorTranslator.FromHtml("#CC00CC") }, // darker magenta
 
-            // WIND KNIGHT (Lime)
-            { Properties.Strings.Profession_WindKnight, ColorTranslator.FromHtml("#ADFF2F") },
-            { Properties.Strings.SubProfession_AirStyle, ColorTranslator.FromHtml("#ADFF2F") },
-            { Properties.Strings.SubProfession_Overdrive, ColorTranslator.FromHtml("#ADFF2F") },
+            // --------------------------------------
+            // FROST MAGE — Base: Cyan (#00FFFF)
+            // --------------------------------------
+            { Properties.Strings.Profession_FrostMage,      ColorTranslator.FromHtml("#00FFFF") },
 
-            // Healer icon: #83C49A (fore color)
-            // background colors:
-            // VERDANT ORACLE (Neon Pink)
-            { Properties.Strings.Profession_VerdantOracle, ColorTranslator.FromHtml("#FF6EC7") },
-            { Properties.Strings.SubProfession_Lifebloom, ColorTranslator.FromHtml("#FF6EC7") },
-            { Properties.Strings.SubProfession_Thornlash, ColorTranslator.FromHtml("#FF6EC7") },
+            { Properties.Strings.SubProfession_IceRay,      ColorTranslator.FromHtml("#33FFFF") }, // light cyan
+            { Properties.Strings.SubProfession_IceSpear,    ColorTranslator.FromHtml("#00CCCC") }, // deep cyan
 
-            // SOUL MUSICIAN (Neon Red)
-            { Properties.Strings.Profession_SoulMusician, ColorTranslator.FromHtml("#FF3131") },
-            { Properties.Strings.SubProfession_Concerto, ColorTranslator.FromHtml("#FF3131") },
-            { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#FF3131") },
+            // ===================================================================================================
+            // MELEE DPS
+            // ===================================================================================================
 
-            // Tank icon: #68A6CD (fore color)
-            // background colors:
-            // HEAVY GUARDIAN (Gold)
-            { Properties.Strings.Profession_HeavyGuardian, ColorTranslator.FromHtml("#FFD700") },
-            { Properties.Strings.SubProfession_RockShield, ColorTranslator.FromHtml("#FFD700") },
-            { Properties.Strings.SubProfession_Block, ColorTranslator.FromHtml("#FFD700") },
+            // --------------------------------------
+            // STORMBLADE — Base: Neon Green (#39FF14)
+            // --------------------------------------
+            { Properties.Strings.Profession_Stormblade,     ColorTranslator.FromHtml("#39FF14") },
 
-            // AEGIS KNIGHT (Bright Yellow)
-            { Properties.Strings.Profession_AegisKnight, ColorTranslator.FromHtml("#FFFF00") },
-            { Properties.Strings.SubProfession_Protection, ColorTranslator.FromHtml("#FFFF00") },
-            { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#FFFF00") },
+            { Properties.Strings.SubProfession_Iai,         ColorTranslator.FromHtml("#5CFF40") }, // softer neon green
+            { Properties.Strings.SubProfession_MoonBlade,   ColorTranslator.FromHtml("#28CC0F") }, // darker neon green
+
+            // --------------------------------------
+            // WIND KNIGHT — Base: Lime (#ADFF2F)
+            // --------------------------------------
+            { Properties.Strings.Profession_WindKnight,     ColorTranslator.FromHtml("#ADFF2F") },
+
+            { Properties.Strings.SubProfession_AirStyle,    ColorTranslator.FromHtml("#C4FF63") }, // pastel lime
+            { Properties.Strings.SubProfession_Overdrive,   ColorTranslator.FromHtml("#8BD92A") }, // deeper lime
+
+            // ===================================================================================================
+            // HEALERS
+            // ===================================================================================================
+
+            // --------------------------------------
+            // VERDANT ORACLE — Base: Neon Pink (#FF6EC7)
+            // --------------------------------------
+            { Properties.Strings.Profession_VerdantOracle,  ColorTranslator.FromHtml("#FF6EC7") },
+
+            { Properties.Strings.SubProfession_Lifebloom,   ColorTranslator.FromHtml("#FF8BD5") }, // lighter pink
+            { Properties.Strings.SubProfession_Thornlash,   ColorTranslator.FromHtml("#E257B3") }, // darker pink
+
+            // --------------------------------------
+            // SOUL MUSICIAN — Base: Neon Red (#FF3131)
+            // --------------------------------------
+            { Properties.Strings.Profession_SoulMusician,   ColorTranslator.FromHtml("#FF3131") },
+
+            { Properties.Strings.SubProfession_Concerto,    ColorTranslator.FromHtml("#FF5A5A") }, // bright red
+            { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#CC2525") }, // deep red
+
+            // ===================================================================================================
+            // TANKS
+            // ===================================================================================================
+
+            // --------------------------------------
+            // HEAVY GUARDIAN — Base: Gold (#FFD700)
+            // --------------------------------------
+            { Properties.Strings.Profession_HeavyGuardian,  ColorTranslator.FromHtml("#FFD700") },
+
+            { Properties.Strings.SubProfession_RockShield,  ColorTranslator.FromHtml("#FFE44D") }, // lighter gold
+            { Properties.Strings.SubProfession_Block,       ColorTranslator.FromHtml("#CCAC00") }, // darker gold
+
+            // --------------------------------------
+            // AEGIS KNIGHT — Base: Bright Yellow (#FFFF00)
+            // --------------------------------------
+            { Properties.Strings.Profession_AegisKnight,    ColorTranslator.FromHtml("#FFFF00") },
+
+            { Properties.Strings.SubProfession_Protection,  ColorTranslator.FromHtml("#FFFF4D") }, // pastel yellow
+            { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#CCCC00") }, // darker yellow
         };
 
         // 黑窗体 - Profession colors + slightly different sub shades
         Dictionary<string, Color> blackColorDict = new Dictionary<string, Color>()
         {
             // Text: Color.White (fore color)
-            // background colors:
+            // Background colors for each profession & sub-profession
 
-            // Unknown
-            { Properties.Strings.Profession_Unknown, ColorTranslator.FromHtml("#404040") },
+            // ===================================================================================================
+            // UNKNOWN
+            // ===================================================================================================
+            { Properties.Strings.Profession_Unknown,        ColorTranslator.FromHtml("#404040") },
 
-            // DPS icon: #DB7575 (fore color)
-            // background colors:
-            // range dps:
-            // MARKSMAN (Royal Purple)
-            { Properties.Strings.Profession_Marksman, ColorTranslator.FromHtml("#6A0DAD") },
-            { Properties.Strings.SubProfession_EagleBow, ColorTranslator.FromHtml("#6A0DAD") },
-            { Properties.Strings.SubProfession_WolfBow, ColorTranslator.FromHtml("#6A0DAD") },
+            // ===================================================================================================
+            // RANGE DPS
+            // DPS icon: #DB7575
+            // ===================================================================================================
 
-            // FROST MAGE (Deep Blue)
-            { Properties.Strings.Profession_FrostMage, ColorTranslator.FromHtml("#1E3A8A") },
-            { Properties.Strings.SubProfession_IceRay, ColorTranslator.FromHtml("#1E3A8A") },
-            { Properties.Strings.SubProfession_IceSpear, ColorTranslator.FromHtml("#1E3A8A") },
+            // --------------------------------------
+            // MARKSMAN — Base: Royal Purple (#6A0DAD)
+            // Sub-professions: slight light/dark variations of the same purple
+            // --------------------------------------
+            { Properties.Strings.Profession_Marksman,       ColorTranslator.FromHtml("#6A0DAD") }, // base
 
-            // melee dps:
-            // STORMBLADE (Forest Green)
-            { Properties.Strings.Profession_Stormblade, ColorTranslator.FromHtml("#14532D") },
-            { Properties.Strings.SubProfession_Iai, ColorTranslator.FromHtml("#14532D") },
-            { Properties.Strings.SubProfession_MoonBlade, ColorTranslator.FromHtml("#14532D") },
+            { Properties.Strings.SubProfession_EagleBow,    ColorTranslator.FromHtml("#7C20C2") }, // lighter purple
+            { Properties.Strings.SubProfession_WolfBow,     ColorTranslator.FromHtml("#5A0A96") }, // darker purple
 
-            // WIND KNIGHT (Olive Green)
-            { Properties.Strings.Profession_WindKnight, ColorTranslator.FromHtml("#3F6212") },
-            { Properties.Strings.SubProfession_AirStyle, ColorTranslator.FromHtml("#3F6212") },
-            { Properties.Strings.SubProfession_Overdrive, ColorTranslator.FromHtml("#3F6212") },
+            // --------------------------------------
+            // FROST MAGE — Base: Deep Blue (#1E3A8A)
+            // Sub-professions: cool blue variants
+            // --------------------------------------
+            { Properties.Strings.Profession_FrostMage,      ColorTranslator.FromHtml("#1E3A8A") },
 
-            // Healer icon: #83C49A (fore color)
-            // background colors:
-            // VERDANT ORACLE (Wine Red)
-            { Properties.Strings.Profession_VerdantOracle, ColorTranslator.FromHtml("#7F1D1D") },
-            { Properties.Strings.SubProfession_Lifebloom, ColorTranslator.FromHtml("#7F1D1D") },
-            { Properties.Strings.SubProfession_Thornlash, ColorTranslator.FromHtml("#7F1D1D") },
+            { Properties.Strings.SubProfession_IceRay,      ColorTranslator.FromHtml("#2B4EB3") }, // brighter blue
+            { Properties.Strings.SubProfession_IceSpear,    ColorTranslator.FromHtml("#162C6B") }, // deeper blue
 
-            // SOUL MUSICIAN (Brick Red)
-            { Properties.Strings.Profession_SoulMusician, ColorTranslator.FromHtml("#991B1B") },
-            { Properties.Strings.SubProfession_Concerto, ColorTranslator.FromHtml("#991B1B") },
-            { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#991B1B") },
+            // ===================================================================================================
+            // MELEE DPS
+            // ===================================================================================================
 
-            // Tank icon: #68A6CD (fore color)
-            // background colors:
-            // HEAVY GUARDIAN (Bronze)
-            { Properties.Strings.Profession_HeavyGuardian, ColorTranslator.FromHtml("#B45309") },
-            { Properties.Strings.SubProfession_RockShield, ColorTranslator.FromHtml("#B45309") },
-            { Properties.Strings.SubProfession_Block, ColorTranslator.FromHtml("#B45309") },
+            // --------------------------------------
+            // STORMBLADE — Base: Forest Green (#14532D)
+            // Sub-professions: slight bright/dark green shifts
+            // --------------------------------------
+            { Properties.Strings.Profession_Stormblade,     ColorTranslator.FromHtml("#14532D") },
 
-            // AEGIS KNIGHT (Goldenrod)
-            { Properties.Strings.Profession_AegisKnight, ColorTranslator.FromHtml("#CA8A04") },
-            { Properties.Strings.SubProfession_Protection, ColorTranslator.FromHtml("#CA8A04") },
-            { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#CA8A04") },
+            { Properties.Strings.SubProfession_Iai,         ColorTranslator.FromHtml("#1A6A3B") }, // lighter green
+            { Properties.Strings.SubProfession_MoonBlade,   ColorTranslator.FromHtml("#0F3F22") }, // darker forest green
+
+            // --------------------------------------
+            // WIND KNIGHT — Base: Olive Green (#3F6212)
+            // Sub-professions: warm olive variations
+            // --------------------------------------
+            { Properties.Strings.Profession_WindKnight,     ColorTranslator.FromHtml("#3F6212") },
+
+            { Properties.Strings.SubProfession_AirStyle,    ColorTranslator.FromHtml("#507A17") }, // lighter olive
+            { Properties.Strings.SubProfession_Overdrive,   ColorTranslator.FromHtml("#30490D") }, // darker olive
+
+            // ===================================================================================================
+            // HEALERS
+            // Healer icon: #83C49A
+            // ===================================================================================================
+
+            // --------------------------------------
+            // VERDANT ORACLE — Base: Wine Red (#7F1D1D)
+            // Sub-professions: softer/darker versions of wine red
+            // --------------------------------------
+            { Properties.Strings.Profession_VerdantOracle,  ColorTranslator.FromHtml("#7F1D1D") },
+
+            { Properties.Strings.SubProfession_Lifebloom,   ColorTranslator.FromHtml("#962323") }, // brighter wine red
+            { Properties.Strings.SubProfession_Thornlash,   ColorTranslator.FromHtml("#671717") }, // darker wine red
+
+            // --------------------------------------
+            // SOUL MUSICIAN — Base: Brick Red (#991B1B)
+            // Sub-professions: warm red variants
+            // --------------------------------------
+            { Properties.Strings.Profession_SoulMusician,   ColorTranslator.FromHtml("#991B1B") },
+
+            { Properties.Strings.SubProfession_Concerto,    ColorTranslator.FromHtml("#B32222") }, // bright brick red
+            { Properties.Strings.SubProfession_RagingSound, ColorTranslator.FromHtml("#7A1616") }, // deeper brick red
+
+            // ===================================================================================================
+            // TANKS
+            // Tank icon: #68A6CD
+            // ===================================================================================================
+
+            // --------------------------------------
+            // HEAVY GUARDIAN — Base: Bronze (#B45309)
+            // Sub-professions: warm bronze variants
+            // --------------------------------------
+            { Properties.Strings.Profession_HeavyGuardian,  ColorTranslator.FromHtml("#B45309") },
+
+            { Properties.Strings.SubProfession_RockShield,  ColorTranslator.FromHtml("#CC640B") }, // lighter bronze
+            { Properties.Strings.SubProfession_Block,       ColorTranslator.FromHtml("#8F4407") }, // darker bronze
+
+            // --------------------------------------
+            // AEGIS KNIGHT — Base: Goldenrod (#CA8A04)
+            // Sub-professions: gold tone variations
+            // --------------------------------------
+            { Properties.Strings.Profession_AegisKnight,    ColorTranslator.FromHtml("#CA8A04") },
+
+            { Properties.Strings.SubProfession_Protection,  ColorTranslator.FromHtml("#E5A308") }, // lighter gold
+            { Properties.Strings.SubProfession_LightShield, ColorTranslator.FromHtml("#A57203") }, // darker gold
         };
 
         static Bitmap EmptyBitmap(int w = 1, int h = 1)
