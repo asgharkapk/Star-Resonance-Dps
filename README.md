@@ -7,6 +7,7 @@ A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceD
 - **fully transparent background in light theme**
 - **compact theme in [compact branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/cOmPaCt)**
 - **beta test branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/mOnStEr)**
+- **فارسی branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/فارسی)**
 
 ![dark-compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/nOrMaL/dark-compact.jpg)
 ![light compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/nOrMaL/light-compact.jpg)
