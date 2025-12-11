@@ -1,4 +1,4 @@
-name: compact Auto Release
+name: فارسی Auto Release
 
 on:
   push:
@@ -33,12 +33,12 @@ jobs:
         shell: pwsh
         run: |
           $Version = "v${{ github.run_number }}"
-          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-compact-$Version.zip"
+          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-فارسی-$Version.zip"
                 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ github.run_number }}-compact
           name: Release v${{ github.run_number }}-compact
-          files: ./Star-Resonance-Dps-compact-v${{ github.run_number }}.zip
+          files: ./Star-Resonance-Dps-فارسی-v${{ github.run_number }}.zip
           generate_release_notes: true
