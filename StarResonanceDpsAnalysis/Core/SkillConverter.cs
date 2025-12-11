@@ -23,36 +23,36 @@ namespace StarResonanceDpsAnalysis.Core
 
     public sealed class SkillDefinition
     {
-        public string Name { get; set; } = "";
-        public SkillType Type { get; set; } = SkillType.Unknown;
-        public ElementType Element { get; set; } = ElementType.Unknown;
-        public string Description { get; set; } = "";
-        public string NameKey { get; set; } = "";
-        public string DescriptionKey { get; set; } = "";
+        public string Name              { get; set; }  = "";
+        public SkillType Type           { get; set; }  = SkillType.Unknown;
+        public ElementType Element      { get; set; }  = ElementType.Unknown;
+        public string Description       { get; set; }  = "";
+        public string NameKey           { get; set; }  = "";
+        public string DescriptionKey    { get; set; }  = "";
     }
 
     public sealed class ElementInfo
     {
-        public string Color { get; set; } = "#FFFFFF";
-        public string Icon { get; set; } = "";
+        public string Color { get; set; }   = "#FFFFFF";
+        public string Icon  { get; set; }   = "";
     }
 
     public static class EmbeddedSkillConfig
     {
-        public static readonly string Version = "2.0.1";      // ← 更新
-        public static readonly string LastUpdated = "2025-01-20"; // ← 更新
+        public static readonly string Version       = "2.0.1";      // ← 更新
+        public static readonly string LastUpdated   = "2025-01-20"; // ← 更新
 
         // 与 skill_config.json 的 elements 完全一致
         public static readonly Dictionary<ElementType, ElementInfo> Elements = new()
         {
-            [ElementType.Fire] = new ElementInfo { Color = "#ff6b6b", Icon = "🔥" },
-            [ElementType.Ice] = new ElementInfo { Color = "#74c0fc", Icon = "❄️" },
-            [ElementType.Thunder] = new ElementInfo { Color = "#ffd43b", Icon = "⚡" },
-            [ElementType.Earth] = new ElementInfo { Color = "#8ce99a", Icon = "🍀" }, // ← 图标从🌍改为🍀
-            [ElementType.Wind] = new ElementInfo { Color = "#91a7ff", Icon = "💨" },
-            [ElementType.Light] = new ElementInfo { Color = "#fff3bf", Icon = "✨" },
-            [ElementType.Dark] = new ElementInfo { Color = "#9775fa", Icon = "🌙" },
-            [ElementType.Physics] = new ElementInfo { Color = "#91a7ff", Icon = "⚔️" }  // ← 新增
+            [ElementType.Fire]      = new ElementInfo { Color = "#ff6b6b", Icon = "🔥" },
+            [ElementType.Ice]       = new ElementInfo { Color = "#74c0fc", Icon = "❄️" },
+            [ElementType.Thunder]   = new ElementInfo { Color = "#ffd43b", Icon = "⚡" },
+            [ElementType.Earth]     = new ElementInfo { Color = "#8ce99a", Icon = "🍀" }, // ← 图标从🌍改为🍀
+            [ElementType.Wind]      = new ElementInfo { Color = "#91a7ff", Icon = "💨" },
+            [ElementType.Light]     = new ElementInfo { Color = "#fff3bf", Icon = "✨" },
+            [ElementType.Dark]      = new ElementInfo { Color = "#9775fa", Icon = "🌙" },
+            [ElementType.Physics]   = new ElementInfo { Color = "#91a7ff", Icon = "⚔️" }  // ← 新增
         };
 
         public static SkillDefinition GetLocalizedSkillDefinition(string id)
@@ -62,12 +62,12 @@ namespace StarResonanceDpsAnalysis.Core
 
             return new SkillDefinition
             {
-                NameKey = def.NameKey,
-                DescriptionKey = def.DescriptionKey,
-                Type = def.Type,
-                Element = def.Element,
-                Name = Properties.Skills.ResourceManager.GetString(def.NameKey) ?? def.NameKey,
-                Description = Properties.Skills.ResourceManager.GetString(def.DescriptionKey) ?? def.DescriptionKey
+                NameKey             = def.NameKey,
+                DescriptionKey      = def.DescriptionKey,
+                Type                = def.Type,
+                Element             = def.Element,
+                Name                = Properties.Skills.ResourceManager.GetString(def.NameKey)          ?? def.NameKey,
+                Description         = Properties.Skills.ResourceManager.GetString(def.DescriptionKey)   ?? def.DescriptionKey
             };
         }
 
