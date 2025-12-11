@@ -1,17 +1,20 @@
-name: compact Auto Release
+name: cOmPaCt Auto Release
 
 on:
   push:
       branches:
-      - cOmPaCt   # Trigger on push to en_translation
-  workflow_dispatch: # Allows you to run this manually from the Actions tab
+        - cOmPaCt
+  workflow_dispatch:
 
 jobs:
   build-and-release:
     runs-on: windows-latest
     
+    env:
+      VERSION: v${{ github.run_number }}-cOmPaCt
+
     permissions:
-      contents: write # Required to create the release and tag
+      contents: write
 
     steps:
       - name: Checkout Code
@@ -20,47 +23,23 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.x' # Ensure this matches your project (6.x, 7.x, or 8.x)
+          dotnet-version: 8.x
 
       - name: Restore Dependencies
         run: dotnet restore
 
       - name: Build and Publish
-        # Builds for Windows 64-bit
         run: dotnet publish -c Release -r win-x64 --self-contained false -o ./publish
 
       - name: Zip Build Output
         shell: pwsh
         run: |
-          $Version = "v${{ github.run_number }}"
-          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-compact-$Version.zip"
+          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-$env:VERSION.zip"
 
-      - name: Fetch full history
-        run: |
-          git fetch --unshallow || true
-          git fetch --tags
-      
-      - name: Generate commit log
-        shell: pwsh
-        run: |
-          echo "### Commits in this release" > release_body.md
-          $branchType = "compact"
-          $prevTag = git describe --tags --abbrev=0 --match "*-$branchType" 2>$null | Out-String
-          $prevTag = $prevTag.Trim()
-      
-          if ([string]::IsNullOrEmpty($prevTag)) {
-              Write-Host "No previous tag found → Initial release"
-              Add-Content release_body.md "- Initial release"
-          } else {
-              Write-Host "Previous tag: $prevTag"
-              git log --pretty=format:"- %h %s (%an)" "$prevTag..HEAD" >> release_body.md
-          }
-          
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v${{ github.run_number }}-compact
-          name: Release v${{ github.run_number }}-compact
-          files: ./Star-Resonance-Dps-compact-v${{ github.run_number }}.zip
-          body_path: release_body.md
+          tag_name: ${{ env.VERSION }}
+          name: Release ${{ env.VERSION }}
+          files: ./Star-Resonance-Dps-${{ env.VERSION }}.zip
           generate_release_notes: true
