@@ -12,28 +12,28 @@ namespace StarResonanceDpsAnalysis.Core
     {
         private class PendingEntry
         {
-            public long StartTick;      // ★ 新增：窗口开始时刻
-            public long LastTick;       // 上次记录的时间戳
-            public int Count;           // 当前窗口累计次数
-            public ulong TotalDamage;   // 当前窗口累计伤害
-            public int CritCount;       // ★ 新增：窗口内累计暴击次数
-            public int LuckyCount;      // ★ 新增：窗口内累计幸运次数
+            public long StartTick;      // ★ Added: start time of the window
+            public long LastTick;       // Last recorded timestamp
+            public int Count;           // Accumulated count in the current window
+            public ulong TotalDamage;   // Accumulated damage in the current window
+            public int CritCount;       // ★ Added: accumulated critical hits in the window
+            public int LuckyCount;      // ★ Added: accumulated lucky hits in the window
         }
 
-        // 只按 (玩家, 技能ID) 合并，不处理变体
+        // Merge only by (player, skill ID), variants are not handled
         private static readonly ConcurrentDictionary<(ulong Uid, ulong SkillId, bool Treat), PendingEntry> _pending = new();
 
-        // 窗口阈值（ms）：窗口内只累计，不输出；出现 >WindowMs 的间隔才“自然断开”
+        // Window threshold (ms): only accumulate in window, do not output; interval > WindowMs will "naturally break"
         private const int WindowMs = 700;
 
-        // 最长憋单段（ms）：即使一直“不断段”，达到这个时长也强制写出
+        // Maximum hold duration (ms): even if it never "breaks", force output after this duration
         private const int MaxHoldMs = 1000;
 
         private static double TicksPerMs => Stopwatch.Frequency / 1000.0;
 
         /// <summary>
-        /// 记录一次“技能命中”，用于技能日记合并。
-        /// 返回 (shouldWrite, countToOutput, damageToOutput) 表示是否需要将“上一段”写出。
+        /// Record a "skill hit" for skill diary merging.
+        /// Returns (shouldWrite, countToOutput, damageToOutput) indicating whether to write the "previous segment".
         /// </summary>
         public static (bool shouldWrite, int countToOutput, ulong damageToOutput, int critToOutput, int luckyToOutput)
       Register(ulong uid, ulong skillId, ulong damage, bool isCrit, bool isLucky, bool treat)
@@ -41,7 +41,7 @@ namespace StarResonanceDpsAnalysis.Core
             long now = Stopwatch.GetTimestamp();
             long windowTicks = (long)(WindowMs * TicksPerMs);
             long holdTicks = (long)(MaxHoldMs * TicksPerMs);
-            var key = (uid, skillId, treat);   // ★ 关键
+            var key = (uid, skillId, treat);   // ★ Key
 
             var entry = _pending.GetOrAdd(key, _ => new PendingEntry
             {
@@ -79,13 +79,13 @@ namespace StarResonanceDpsAnalysis.Core
                     return (false, 0, 0, 0, 0);
                 }
 
-                // 需要写出上一段
+                // Need to write out the previous segment
                 int outCount = entry.Count;
                 ulong outDmg = entry.TotalDamage;
                 int outCrit = entry.CritCount;
                 int outLucky = entry.LuckyCount;
 
-                // 当前一下作为新段首
+                // Current hit becomes the start of a new segment
                 entry.Count = 1;
                 entry.TotalDamage = damage;
                 entry.CritCount = isCrit ? 1 : 0;
@@ -99,28 +99,28 @@ namespace StarResonanceDpsAnalysis.Core
 
 
         /// <summary>
-        /// 在“命中事件”里调用：按 (uid, skillId) 合并多段，并在窗口断开时写日记。
-        /// - 仅当 skillDiary 窗口存在、且是“我自己”的事件（uid == AppConfig.Uid）才记录；
-        /// - 使用 SkillDiaryGate.Register 进行窗口合并；
-        /// - 窗口断开时写出一行（单段或“技能 * 次数”），带上伤害信息。
+        /// Called on "hit events": merge multiple segments by (uid, skillId) and write diary when window breaks.
+        /// - Only records if the skillDiary window exists and it's "my own" event (uid == AppConfig.Uid);
+        /// - Uses SkillDiaryGate.Register for window merging;
+        /// - Writes a line when the window breaks (single segment or "skill * count") with damage info.
         /// </summary>
-        /// <param name="uid">本次命中所属玩家 UID</param>
-        /// <param name="skillId">技能 ID（不做变体合并）</param>
-        /// <param name="damage">本次命中的伤害值（用于累计到窗口总伤害，以及单段时显示）</param>
-        /// <param name="iscrit">是否暴击</param>
-        /// <param name="isLucky">是否幸运</param>
-        /// <param name="treat">是否疗伤</param>
+        /// <param name="uid">UID of the player for this hit</param>
+        /// <param name="skillId">Skill ID (variants not merged)</param>
+        /// <param name="damage">Damage of this hit (for window accumulation and single segment display)</param>
+        /// <param name="iscrit">Whether it's a critical hit</param>
+        /// <param name="isLucky">Whether it's a lucky hit</param>
+        /// <param name="treat">Whether it's healing</param>
         public static void OnHit(ulong uid, ulong skillId, ulong damage, bool iscrit, bool isLucky, bool treat = false)
         {
-            // 1) 只处理本人的
+            // 1) Only process own hits
             if (uid != AppConfig.Uid) return;
 
-            // 2) 拿一个局部快照，避免检查之后被别的线程置空
+            // 2) Take a local snapshot to avoid nulling by other threads after check
             var form = FormManager.skillDiary;
             if (form == null || form.IsDisposed || !form.IsHandleCreated) return;
 
             var (shouldWrite, count, totalDamage, critCount, luckyCount) =
-                SkillDiaryGate.Register(uid, skillId, damage, iscrit, isLucky, treat); // ★ 传 treat
+                SkillDiaryGate.Register(uid, skillId, damage, iscrit, isLucky, treat); // ★ pass treat
 
             if (!shouldWrite || count <= 0) return;
 
@@ -132,28 +132,28 @@ namespace StarResonanceDpsAnalysis.Core
             string line;
             if (count > 1)
             {
-                // 多段
+                // Multiple segments
                 var parts = new List<string>
             {
                 $"{name}",
-                $"{(treat ? "治疗" : "伤害")}:{totalDamage}",
-                $"释放次数:{count}"
+                $"{(treat ? "Healing" : "Damage")}:{totalDamage}",
+                $"Cast count:{count}"
             };
-                if (critCount > 0) parts.Add($"暴击:{critCount}");
-                if (luckyCount > 0) parts.Add($"幸运:{luckyCount}");
+                if (critCount > 0) parts.Add($"Critical:{critCount}");
+                if (luckyCount > 0) parts.Add($"Lucky:{luckyCount}");
 
                 line = $"[{duration}] " + string.Join(" | ", parts);
             }
             else
             {
-                // 单段
+                // Single segment
                 var parts = new List<string>
                 {
                     $"{name}",
-                    $"{(treat ? "治疗" : "伤害")}:{damage}"
+                    $"{(treat ? "Healing" : "Damage")}:{damage}"
                 };
-                if (iscrit) parts.Add("暴击");
-                if (isLucky) parts.Add("幸运");
+                if (iscrit) parts.Add("Critical");
+                if (isLucky) parts.Add("Lucky");
 
                 line = $"[{duration}] " + string.Join(" | ", parts);
             }
@@ -166,8 +166,8 @@ namespace StarResonanceDpsAnalysis.Core
 
 
         /// <summary>
-        /// 定期冲刷：把“超过 WindowMs 没继续”的段落写出（避免一直等不到下一击）。
-        /// 建议在你的 1s 定时器里调用。
+        /// Periodic flush: write segments that have "not continued beyond WindowMs" (avoid waiting indefinitely for next hit).
+        /// Recommended to call in your 1s timer.
         /// </summary>
         public static IEnumerable<(ulong Uid, ulong SkillId, int Count, ulong Damage)>
             DrainStalePending()
@@ -186,15 +186,15 @@ namespace StarResonanceDpsAnalysis.Core
                         var outDmg = entry.TotalDamage;
                         entry.Count = 0;
                         entry.TotalDamage = 0;
-                        // 注意：不重置 Start/Last，这个条目会在下次 Register 时复用
+                        // Note: do not reset Start/Last, this entry will be reused on next Register
                         yield return (kv.Key.Uid, kv.Key.SkillId, outCount, outDmg);
                     }
                 }
             }
         }
         /// <summary>
-        /// 清场/结束战斗时调用：把所有仍在窗口里的段落一次性吐出（然后再由调用方写入日记）。
-        /// 返回后，这些段落会被清零，但不会删除字典项；如需彻底清空，请再调用 Reset()。
+        /// Called on clear/end of combat: flush all segments still in window at once (then caller writes to diary).
+        /// After return, these segments are cleared but dictionary entries are not deleted; to fully clear, call Reset().
         /// </summary>
         public static IEnumerable<(ulong Uid, ulong SkillId, int Count, ulong Damage)>
             DrainAllPending()
@@ -217,13 +217,11 @@ namespace StarResonanceDpsAnalysis.Core
         }
 
         /// <summary>
-        /// 彻底清空内部缓存（会丢弃尚未写出的段落）。
-        /// 一般应在先 DrainAllPending() 冲刷后，再调用 Reset()。
+        /// Completely clear internal cache (discard segments not yet written).
+        /// Usually call Reset() after DrainAllPending().
         /// </summary>
         public static void Reset() => _pending.Clear();
 
 
     }
 }
-
-      
