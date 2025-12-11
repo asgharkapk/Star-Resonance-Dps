@@ -84,9 +84,9 @@ namespace StarResonanceDpsAnalysis.Forms
             pageHeader1.Size = new Size(527, 25);
             pageHeader1.SubFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             pageHeader1.SubGap = 0;
-            pageHeader1.SubText = "当前伤害";
+            pageHeader1.SubText = "دمیج فعلی";
             pageHeader1.TabIndex = 16;
-            pageHeader1.Text = "تست ";
+            pageHeader1.Text = "آ.ب.ث ";
             // 
             // PilingModeCheckbox
             // 
@@ -99,7 +99,7 @@ namespace StarResonanceDpsAnalysis.Forms
             PilingModeCheckbox.Name = "PilingModeCheckbox";
             PilingModeCheckbox.Size = new Size(100, 25);
             PilingModeCheckbox.TabIndex = 17;
-            PilingModeCheckbox.Text = "打桩模式";
+            PilingModeCheckbox.Text = "حالت تست";
             PilingModeCheckbox.TextAlign = ContentAlignment.MiddleCenter;
             PilingModeCheckbox.Visible = false;
             PilingModeCheckbox.CheckedChanged += PilingModeCheckbox_CheckedChanged;
@@ -246,7 +246,7 @@ namespace StarResonanceDpsAnalysis.Forms
             SortToggleButton.Radius = 6;
             SortToggleButton.Size = new Size(80, 32);
             SortToggleButton.Location = new Point(BattleTimeText.Right + 12, 0);
-            SortToggleButton.Text = "Sorting ∑"; // default == false == sorting by total
+            SortToggleButton.Text = "∑ براساس"; // default == false == sorting by total
             SortToggleButton.Click += SortToggleButton_Click;
             //SortToggleButton.Ghost = true;
             //SortToggleButton.ForeColor = Color.White; 
@@ -304,7 +304,7 @@ namespace StarResonanceDpsAnalysis.Forms
             panel2.Controls.Add(TotalTreatmentButton);
             panel2.Controls.Add(TotalDamageButton);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 25);
+            panel2.Location = new Point(0, 20);
             panel2.Name = "panel2";
             panel2.Shadow = 3;
             panel2.ShadowAlign = TAlignMini.Bottom;
@@ -325,7 +325,7 @@ namespace StarResonanceDpsAnalysis.Forms
             NpcTakeDamageButton.Radius = 3;
             NpcTakeDamageButton.Size = new Size(112, 38);
             NpcTakeDamageButton.TabIndex = 4;
-            NpcTakeDamageButton.Text = "承伤";
+            NpcTakeDamageButton.Text = "دمیج دریافتی";
             NpcTakeDamageButton.Click += DamageType_Click;
             // 
             // AlwaysInjuredButton
@@ -356,7 +356,7 @@ namespace StarResonanceDpsAnalysis.Forms
             TotalTreatmentButton.Radius = 3;
             TotalTreatmentButton.Size = new Size(112, 38);
             TotalTreatmentButton.TabIndex = 2;
-            TotalTreatmentButton.Text = "总治疗";
+            TotalTreatmentButton.Text = "کل هیل";
             TotalTreatmentButton.Click += DamageType_Click;
             // 
             // TotalDamageButton
@@ -370,7 +370,7 @@ namespace StarResonanceDpsAnalysis.Forms
             TotalDamageButton.Radius = 3;
             TotalDamageButton.Size = new Size(112, 38);
             TotalDamageButton.TabIndex = 1;
-            TotalDamageButton.Text = "总伤害";
+            TotalDamageButton.Text = "دمیج کل";
             TotalDamageButton.Click += DamageType_Click;
             // 
             // tooltip

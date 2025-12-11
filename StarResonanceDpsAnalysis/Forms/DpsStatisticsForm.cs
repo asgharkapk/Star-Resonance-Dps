@@ -783,17 +783,17 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         public void ApplyLocalization()
         {
             // Page header
-            // pageHeader1.Text = Properties.Strings.Header_DpsStatistics_Title;
-            pageHeader1.SubText = Properties.Strings.Header_DpsStatistics_Subtitle;
+            // pageHeader1.Text         = Properties.Strings.Header_DpsStatistics_Title;
+            pageHeader1.SubText         = Properties.Strings.Header_DpsStatistics_Subtitle;
 
             // Buttons
-            TotalDamageButton.Text = Properties.Strings.TotalDamageLabel;
-            TotalTreatmentButton.Text = Properties.Strings.TotalTreatmentLabel;
-            AlwaysInjuredButton.Text = Properties.Strings.AlwaysInjuredLabel;
-            NpcTakeDamageButton.Text = Properties.Strings.NpcTakeDamageLabel;
+            TotalDamageButton.Text      = Properties.Strings.TotalDamageLabel;
+            TotalTreatmentButton.Text   = Properties.Strings.TotalTreatmentLabel;
+            AlwaysInjuredButton.Text    = Properties.Strings.AlwaysInjuredLabel;
+            NpcTakeDamageButton.Text    = Properties.Strings.NpcTakeDamageLabel;
 
             // Checkbox
-            PilingModeCheckbox.Text = Properties.Strings.PilingModeCheckboxLabel;
+            PilingModeCheckbox.Text     = Properties.Strings.PilingModeCheckboxLabel;
         }
 
         private void sortedProgressBarList1_Load(object sender, EventArgs e)

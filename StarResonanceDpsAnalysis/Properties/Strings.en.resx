@@ -118,67 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Header_FullRecord_Healing" xml:space="preserve">
-    <value>Overall Healing</value>
+    <value>درمان کل</value>
   </data>
   <data name="Header_FullRecord_Taken" xml:space="preserve">
-    <value>Overall Damage Taken</value>
+    <value>آسیب دریافتی کل</value>
   </data>
   <data name="Header_FullRecord_NpcTaken" xml:space="preserve">
-    <value>Overall · NPC Damage Taken</value>
+    <value>آسیب دریافتی کل · NPC</value>
   </data>
   <data name="Header_FullRecord_Damage" xml:space="preserve">
-    <value>Overall Damage</value>
+    <value>آسیب کل</value>
   </data>
   <data name="Header_Current_Healing" xml:space="preserve">
-    <value>Current Healing</value>
+    <value>درمان فعلی</value>
   </data>
   <data name="Header_Current_Taken" xml:space="preserve">
-    <value>Current Damage Taken</value>
+    <value>آسیب دریافتی فعلی</value>
   </data>
   <data name="Header_Current_NpcTaken" xml:space="preserve">
-    <value>Current · NPC Damage Taken</value>
+    <value>آسیب دریافتی فعلی · NPC</value>
   </data>
   <data name="Header_Current_Damage" xml:space="preserve">
-    <value>Current Damage</value>
+    <value>آسیب فعلی</value>
   </data>
   <data name="Header_NpcAttackers_FullRecord" xml:space="preserve">
-    <value>Overall · NPC Attackers Ranking (NPC:{0})</value>
+    <value>رتبه‌بندی حملات NPC کل (NPC:{0})</value>
   </data>
   <data name="Header_NpcAttackers_Current" xml:space="preserve">
-    <value>Current · NPC Attackers Ranking (NPC:{0})</value>
+    <value>رتبه‌بندی حملات NPC فعلی (NPC:{0})</value>
   </data>
   <data name="Menu_HistoricalBattles" xml:space="preserve">
-    <value>Battle History</value>
+    <value>تاریخچه نبرد</value>
   </data>
   <data name="Menu_Settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>تنظیمات</value>
   </data>
   <data name="Menu_MainForm" xml:space="preserve">
-    <value>About</value>
+    <value>درباره</value>
   </data>
   <data name="Menu_ModuleConfig" xml:space="preserve">
-    <value>Module Optimizer</value>
+    <value>بهینه‌ساز ماژول</value>
   </data>
   <data name="Menu_DeathStatistics" xml:space="preserve">
-    <value>Death Statistics</value>
+    <value>آمار مرگ</value>
   </data>
   <data name="Menu_SkillDiary" xml:space="preserve">
-    <value>Skill Diary</value>
+    <value>دفترچه مهارت</value>
   </data>
   <data name="Menu_DamageReference" xml:space="preserve">
-    <value>Damage Reference</value>
+    <value>مرجع آسیب</value>
   </data>
   <data name="Menu_PilingMode" xml:space="preserve">
-    <value>DPS Benchmark</value>
+    <value>حالت دمیج تست</value>
   </data>
   <data name="Menu_Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>خروج</value>
   </data>
   <data name="Tooltip_ClearData" xml:space="preserve">
-    <value>Clear Current Data</value>
+    <value>پاک‌سازی داده‌های فعلی</value>
   </data>
   <data name="Tooltip_SwitchSingleTotal" xml:space="preserve">
-    <value>Click to switch: Current/Overall Statistics</value>
+    <value>کلیک برای تغییر: آمار فعلی/کل</value>
   </data>
   <data name="Msg_UidNotFound" xml:space="preserve">
     <value>Could not find player UID，Please re-enter the Guild Association</value>
@@ -469,139 +469,139 @@
     <value>Exclude  :</value>
   </data>
   <data name="ModuleCalc_InputNumber1_Prefix" xml:space="preserve">
-    <value>Level:</value>
+    <value>سطح:</value>
   </data>
   <data name="ModuleCalc_InputNumber2_Prefix" xml:space="preserve">
-    <value>Level:</value>
+    <value>سطح:</value>
   </data>
   <data name="ModuleCalc_InputNumber3_Prefix" xml:space="preserve">
-    <value>Level:</value>
+    <value>سطح:</value>
   </data>
   <data name="ModuleCalc_InputNumber4_Prefix" xml:space="preserve">
-    <value>Level:</value>
+    <value>سطح:</value>
   </data>
   <data name="ModuleCalc_InputNumber5_Prefix" xml:space="preserve">
-    <value>Level:</value>
+    <value>سطح:</value>
   </data>
   <data name="Notice_ChangeMaps" xml:space="preserve">
-    <value>Please re-enter the map and try again</value>
+    <value>لطفاً دوباره وارد نقشه شوید و دوباره تلاش کنید</value>
   </data>
   <data name="Settings_Title" xml:space="preserve">
-    <value>Basic Setup</value>
+    <value>تنظیمات پایه</value>
   </data>
   <data name="Settings_Label1" xml:space="preserve">
-    <value>General</value>
+    <value>عمومی</value>
   </data>
   <data name="Settings_Label2" xml:space="preserve">
-    <value>Network Settings</value>
+    <value>تنظیمات شبکه</value>
   </data>
   <data name="Settings_Label3" xml:space="preserve">
-    <value>Keybinds</value>
+    <value>کلیدها</value>
   </data>
   <data name="Settings_Label4" xml:space="preserve">
-    <value>Combat Settings</value>
+    <value>تنظیمات مبارزه</value>
   </data>
   <data name="Settings_Label5" xml:space="preserve">
-    <value>Clear current data on map change</value>
+    <value>پاک‌سازی داده‌های فعلی هنگام تغییر نقشه</value>
   </data>
   <data name="Settings_Label6" xml:space="preserve">
-    <value>*Delete key clears keybind</value>
+    <value>*کلید Delete کلیدهای اختصاصی را پاک می‌کند</value>
   </data>
   <data name="Settings_Label7" xml:space="preserve">
-    <value>*Set manually in case of error</value>
+    <value>*در صورت خطا به صورت دستی تنظیم کنید</value>
   </data>
   <data name="Settings_Label8" xml:space="preserve">
-    <value>*Clears current and not overall data</value>
+    <value>*فقط داده‌های فعلی را پاک می‌کند، نه همه داده‌ها</value>
   </data>
   <data name="Settings_Label9" xml:space="preserve">
-    <value>Transparency</value>
+    <value>شفافیت</value>
   </data>
   <data name="Settings_Label10" xml:space="preserve">
-    <value>Damage Display Type</value>
+    <value>نوع نمایش آسیب</value>
   </data>
   <data name="Settings_Select2" xml:space="preserve">
-    <value>Damage Display</value>
+    <value>نمایش آسیب</value>
   </data>
   <data name="Settings_LanguageSelect" xml:space="preserve">
-    <value>Language</value>
+    <value>زبان</value>
   </data>
   <data name="Settings_Input1_Prefix" xml:space="preserve">
-    <value>Clickthrough Key:</value>
+    <value>کلید عبور کلیک:</value>
   </data>
   <data name="Settings_Input2_Prefix" xml:space="preserve">
-    <value>Transparency Key:</value>
+    <value>کلید شفافیت:</value>
   </data>
   <data name="Settings_Input3_Prefix" xml:space="preserve">
-    <value>Window Toggle Key:</value>
+    <value>کلید تغییر وضعیت پنجره:</value>
   </data>
   <data name="Settings_Input4_Prefix" xml:space="preserve">
-    <value>Clear Data Key:</value>
+    <value>دکمهٔ حذف داده‌ها:</value>
   </data>
   <data name="Settings_Input5_Prefix" xml:space="preserve">
-    <value>Clear History Key:</value>
+    <value>دکمهٔ حذف سابقه:</value>
   </data>
   <data name="Settings_InputNumber2_Prefix" xml:space="preserve">
-    <value>Delay:</value>
+    <value>تاخیر:</value>
   </data>
   <data name="Settings_InterfaceComboBox_Prefix" xml:space="preserve">
-    <value>Network Device:</value>
+    <value>دستگاه شبکه:</value>
   </data>
   <data name="Settings_Label11" xml:space="preserve">
-    <value>Clear data when out of combat timer</value>
+    <value>داده‌ها پس از پایان تایمر خارج از مبارزه پاک شوند</value>
   </data>
   <data name="Settings_InputNumber2_Suffix" xml:space="preserve">
     <value>(s)</value>
   </data>
   <data name="SubProfession_Concerto" xml:space="preserve">
-    <value>Concerto</value>
+    <value>کنسرتو</value>
   </data>
   <data name="SubProfession_IceSpear" xml:space="preserve">
-    <value>Icicle</value>
+    <value>شمش یخ</value>
   </data>
   <data name="SubProfession_Iai" xml:space="preserve">
-    <value>Iaido</value>
+    <value>ایایدو</value>
   </data>
   <data name="SubProfession_MoonBlade" xml:space="preserve">
-    <value>Moonstrike</value>
+    <value>ماه‌کوب</value>
   </data>
   <data name="SubProfession_EagleBow" xml:space="preserve">
-    <value>Falconry</value>
+    <value>بازداری</value>
   </data>
   <data name="SubProfession_WolfBow" xml:space="preserve">
-    <value>Wildpack</value>
+    <value>گرگ‌جمع</value>
   </data>
   <data name="SubProfession_LightShield" xml:space="preserve">
-    <value>Shield</value>
+    <value>سپر</value>
   </data>
   <data name="SubProfession_RockShield" xml:space="preserve">
-    <value>Earthfort</value>
+    <value>قلعه زمین</value>
   </data>
   <data name="SubProfession_Block" xml:space="preserve">
-    <value>Block</value>
+    <value>دفاع</value>
   </data>
   <data name="SubProfession_IceRay" xml:space="preserve">
-    <value>Frostbeam</value>
+    <value>اشعهٔ یخ</value>
   </data>
   <data name="SubProfession_Lifebloom" xml:space="preserve">
-    <value>Lifebind</value>
+    <value>پیوند</value>
   </data>
   <data name="SubProfession_Thornlash" xml:space="preserve">
-    <value>Smite</value>
+    <value>کیفر</value>
   </data>
   <data name="SubProfession_RagingSound" xml:space="preserve">
-    <value>Dissonance</value>
+    <value>ناسازوارگی</value>
   </data>
   <data name="SubProfession_Overdrive" xml:space="preserve">
-    <value>Vanguard</value>
+    <value>پیشتاز</value>
   </data>
   <data name="SubProfession_Protection" xml:space="preserve">
-    <value>Recovery</value>
+    <value>ریکاوری</value>
   </data>
   <data name="SubProfession_AirStyle" xml:space="preserve">
-    <value>Skyward</value>
+    <value>آسمان‌رو</value>
   </data>
   <data name="Profession_Unknown" xml:space="preserve">
-    <value>Unknown</value>
+    <value>نامعلوم</value>
   </data>
   <data name="ModuleCalc_TotalScore" xml:space="preserve">
     <value>Ability Score Total: </value>
