@@ -753,7 +753,7 @@ namespace StarResonanceDpsAnalysis.Forms
                     // 只要子流派；没有子流派就用战力；否则只显示昵称
                     string sp       = Common.GetTranslatedSubProfession(p.SubProfession);
 
-                    row[1].Text     = $"{sp} ({p.CombatPower}) {p.Nickname}"; //TODO come back here, update subprofession when changing language
+                    row[1].Text     = $"{sp}  {p.CombatPower}  {p.Nickname}"; //TODO come back here, update subprofession when changing language
 
 
                     row[2].Text     = $"{totalFmt} ({perSec})";
