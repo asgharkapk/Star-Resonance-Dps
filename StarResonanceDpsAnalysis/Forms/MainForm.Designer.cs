@@ -52,7 +52,7 @@
             pageHeader_MainHeader.MaximizeBox = false;
             pageHeader_MainHeader.Name = "pageHeader_MainHeader";
             pageHeader_MainHeader.ShowButton = true;
-            pageHeader_MainHeader.Size = new Size(866, 35);
+            pageHeader_MainHeader.Size = new Size(866, 55);
             pageHeader_MainHeader.SubText = "";
             pageHeader_MainHeader.TabIndex = 8;
             pageHeader_MainHeader.Text = "Don't check my DPS";
@@ -65,7 +65,7 @@
             button_ThemeSwitch.Location = new Point(710, 0);
             button_ThemeSwitch.Margin = new Padding(2, 2, 2, 2);
             button_ThemeSwitch.Name = "button_ThemeSwitch";
-            button_ThemeSwitch.Size = new Size(36, 35);
+            button_ThemeSwitch.Size = new Size(36, 55);
             button_ThemeSwitch.TabIndex = 0;
             button_ThemeSwitch.ToggleIconSvg = "MoonOutlined";
             button_ThemeSwitch.Click += button_ThemeSwitch_Click;
@@ -75,7 +75,7 @@
             pictureBox_AppIcon.Location = new Point(15, 41);
             pictureBox_AppIcon.Margin = new Padding(4, 3, 4, 3);
             pictureBox_AppIcon.Name = "pictureBox_AppIcon";
-            pictureBox_AppIcon.Size = new Size(92, 94);
+            pictureBox_AppIcon.Size = new Size(92, 125);
             pictureBox_AppIcon.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox_AppIcon.TabIndex = 10;
             pictureBox_AppIcon.TabStop = false;
@@ -103,7 +103,7 @@
             groupBox_About.Margin = new Padding(12, 12, 12, 12);
             groupBox_About.Name = "groupBox_About";
             groupBox_About.Padding = new Padding(12, 12, 12, 12);
-            groupBox_About.Size = new Size(823, 480);
+            groupBox_About.Size = new Size(823, 520);
             groupBox_About.TabIndex = 11;
             groupBox_About.TabStop = false;
             groupBox_About.Text = "about";
@@ -116,7 +116,7 @@
             label_ThankHelpFromTip_2.Location = new Point(334, 401);
             label_ThankHelpFromTip_2.Margin = new Padding(0);
             label_ThankHelpFromTip_2.Name = "label_ThankHelpFromTip_2";
-            label_ThankHelpFromTip_2.Size = new Size(204, 20);
+            label_ThankHelpFromTip_2.Size = new Size(204, 40);
             label_ThankHelpFromTip_2.TabIndex = 24;
             label_ThankHelpFromTip_2.Text = "The project's help and support for this project";
             // 
@@ -142,7 +142,7 @@
             label_ThankHelpFromTip_1.Location = new Point(15, 401);
             label_ThankHelpFromTip_1.Margin = new Padding(4, 0, 0, 0);
             label_ThankHelpFromTip_1.Name = "label_ThankHelpFromTip_1";
-            label_ThankHelpFromTip_1.Size = new Size(69, 20);
+            label_ThankHelpFromTip_1.Size = new Size(69, 40);
             label_ThankHelpFromTip_1.TabIndex = 22;
             label_ThankHelpFromTip_1.Text = "Thank you.";
             // 
@@ -154,7 +154,7 @@
             label_Copyright.Location = new Point(15, 424);
             label_Copyright.Margin = new Padding(4, 0, 4, 0);
             label_Copyright.Name = "label_Copyright";
-            label_Copyright.Size = new Size(600, 55); // widen + increase height
+            label_Copyright.Size = new Size(600, 75); // widen + increase height
             label_Copyright.TabIndex = 21;
             label_Copyright.Text = "Copyright (C) 2025 anying1073/StarResonanceDps Team\r\nPowered by .NET 8, Licensed under the GNU AGPL v3.";
             // 
@@ -166,7 +166,7 @@
             linkLabel_QQGroup.Location = new Point(521, 382);
             linkLabel_QQGroup.Margin = new Padding(0);
             linkLabel_QQGroup.Name = "linkLabel_QQGroup";
-            linkLabel_QQGroup.Size = new Size(90, 20);
+            linkLabel_QQGroup.Size = new Size(90, 40);
             linkLabel_QQGroup.TabIndex = 20;
             linkLabel_QQGroup.TabStop = true;
             linkLabel_QQGroup.Text = "678150498";
@@ -180,7 +180,7 @@
             label_OpenSourceTip_2.Location = new Point(129, 382);
             label_OpenSourceTip_2.Margin = new Padding(0);
             label_OpenSourceTip_2.Name = "label_OpenSourceTip_2";
-            //label_OpenSourceTip_2.Size = new Size(429, 20);
+            //label_OpenSourceTip_2.Size = new Size(429, 40);
             //label_OpenSourceTip_2.TabIndex = 19;
 
             label_OpenSourceTip_2.MaximumSize = new Size(700, 0);
@@ -196,7 +196,7 @@
             label_OpenSourceTip_1.Location = new Point(15, 382);
             label_OpenSourceTip_1.Margin = new Padding(4, 0, 0, 0);
             label_OpenSourceTip_1.Name = "label_OpenSourceTip_1";
-            label_OpenSourceTip_1.Size = new Size(69, 20);
+            label_OpenSourceTip_1.Size = new Size(69, 40);
             label_OpenSourceTip_1.TabIndex = 18;
             label_OpenSourceTip_1.Text = "This project was";
             // 
@@ -208,7 +208,7 @@
             linkLabel_GitHub.Location = new Point(78, 382);
             linkLabel_GitHub.Margin = new Padding(0);
             linkLabel_GitHub.Name = "linkLabel_GitHub";
-            linkLabel_GitHub.Size = new Size(58, 20);
+            linkLabel_GitHub.Size = new Size(58, 40);
             linkLabel_GitHub.TabIndex = 17;
             linkLabel_GitHub.TabStop = true;
             linkLabel_GitHub.Text = "GitHub";
@@ -221,7 +221,7 @@
             label_SelfIntroduce.Location = new Point(113, 78);
             label_SelfIntroduce.Margin = new Padding(4, 0, 4, 0);
             label_SelfIntroduce.Name = "label_SelfIntroduce";
-            //label_SelfIntroduce.Size = new Size(695, 58);
+            //label_SelfIntroduce.Size = new Size(695, 75);
             //label_SelfIntroduce.TabIndex = 16;
 
             label_SelfIntroduce.MaximumSize = new Size(700, 0);
@@ -250,7 +250,7 @@
             label_NowVersionDevelopersTip.Location = new Point(15, 232);
             label_NowVersionDevelopersTip.Margin = new Padding(4, 0, 4, 12);
             label_NowVersionDevelopersTip.Name = "label_NowVersionDevelopersTip";
-            label_NowVersionDevelopersTip.Size = new Size(352, 26);
+            label_NowVersionDevelopersTip.Size = new Size(352, 45);
             label_NowVersionDevelopersTip.TabIndex = 14;
             label_NowVersionDevelopersTip.Text = "Current version developers (in no particular order):";
             // 
@@ -261,7 +261,7 @@
             label_NowVersionNumber.Location = new Point(15, 192);
             label_NowVersionNumber.Margin = new Padding(4, 0, 4, 0);
             label_NowVersionNumber.Name = "label_NowVersionNumber";
-            label_NowVersionNumber.Size = new Size(36, 20);
+            label_NowVersionNumber.Size = new Size(36, 40);
             label_NowVersionNumber.TabIndex = 13;
             label_NowVersionNumber.Text = "-.-.-";
             // 
@@ -271,7 +271,7 @@
             label_NowVersionTip.Location = new Point(15, 155);
             label_NowVersionTip.Margin = new Padding(4, 0, 4, 12);
             label_NowVersionTip.Name = "label_NowVersionTip";
-            label_NowVersionTip.Size = new Size(132, 26);
+            label_NowVersionTip.Size = new Size(132, 40);
             label_NowVersionTip.TabIndex = 12;
             label_NowVersionTip.Text = "Current version number:";
             // 
@@ -281,7 +281,7 @@
             label_AppName.Location = new Point(113, 41);
             label_AppName.Margin = new Padding(4, 0, 4, 12);
             label_AppName.Name = "label_AppName";
-            label_AppName.Size = new Size(112, 26);
+            label_AppName.Size = new Size(112, 45);
             label_AppName.TabIndex = 11;
             label_AppName.Text = "Don't check my DPS";
             // 
