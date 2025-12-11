@@ -3,7 +3,7 @@ name: compact Auto Release
 on:
   push:
       branches:
-      - cOmPaCt   # Trigger on push to en_translation
+      - فارسی   # Trigger on push to en_translation
   workflow_dispatch: # Allows you to run this manually from the Actions tab
 
 jobs:
@@ -34,33 +34,11 @@ jobs:
         run: |
           $Version = "v${{ github.run_number }}"
           Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-compact-$Version.zip"
-
-      - name: Fetch full history
-        run: |
-          git fetch --unshallow || true
-          git fetch --tags
-      
-      - name: Generate commit log
-        shell: pwsh
-        run: |
-          echo "### Commits in this release" > release_body.md
-          $branchType = "compact"
-          $prevTag = git describe --tags --abbrev=0 --match "*-$branchType" 2>$null | Out-String
-          $prevTag = $prevTag.Trim()
-      
-          if ([string]::IsNullOrEmpty($prevTag)) {
-              Write-Host "No previous tag found → Initial release"
-              Add-Content release_body.md "- Initial release"
-          } else {
-              Write-Host "Previous tag: $prevTag"
-              git log --pretty=format:"- %h %s (%an)" "$prevTag..HEAD" >> release_body.md
-          }
-          
+                
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ github.run_number }}-compact
           name: Release v${{ github.run_number }}-compact
           files: ./Star-Resonance-Dps-compact-v${{ github.run_number }}.zip
-          body_path: release_body.md
           generate_release_notes: true
