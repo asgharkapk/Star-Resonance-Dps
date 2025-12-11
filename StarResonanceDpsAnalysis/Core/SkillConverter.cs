@@ -1134,19 +1134,19 @@ namespace StarResonanceDpsAnalysis.Core
             }
         }
 
-        public static bool TryGet(string id, out SkillDefinition def) => SkillsByString.TryGetValue(id, out def!);
-        public static bool TryGet(int id, out SkillDefinition def) => SkillsByInt.TryGetValue(id, out def!);
+        public static bool TryGet(string id, out SkillDefinition def)   => SkillsByString.TryGetValue(id, out def!);
+        public static bool TryGet(int id, out SkillDefinition def)      => SkillsByInt.TryGetValue(id, out def!);
 
-        public static string GetName(string id) => TryGet(id, out var d) ? d.Name : id;
-        public static string GetName(int id) => TryGet(id, out var d) ? d.Name : id.ToString();
+        public static string GetName(string id)     => TryGet(id, out var d) ? d.Name : id;
+        public static string GetName(int id)        => TryGet(id, out var d) ? d.Name : id.ToString();
 
-        public static SkillType GetTypeOf(string id) => TryGet(id, out var d) ? d.Type : SkillType.Unknown;
-        public static SkillType GetTypeOf(int id) => TryGet(id, out var d) ? d.Type : SkillType.Unknown;
+        public static SkillType GetTypeOf(string id)    => TryGet(id, out var d) ? d.Type : SkillType.Unknown;
+        public static SkillType GetTypeOf(int id)       => TryGet(id, out var d) ? d.Type : SkillType.Unknown;
 
-        public static ElementType GetElementOf(string id) => TryGet(id, out var d) ? d.Element : ElementType.Unknown;
-        public static ElementType GetElementOf(int id) => TryGet(id, out var d) ? d.Element : ElementType.Unknown;
+        public static ElementType GetElementOf(string id)   => TryGet(id, out var d) ? d.Element : ElementType.Unknown;
+        public static ElementType GetElementOf(int id)      => TryGet(id, out var d) ? d.Element : ElementType.Unknown;
 
-        public static IReadOnlyDictionary<string, SkillDefinition> AllByString => SkillsByString;
-        public static IReadOnlyDictionary<int, SkillDefinition> AllByInt => SkillsByInt;
+        public static IReadOnlyDictionary<string, SkillDefinition>  AllByString  => SkillsByString;
+        public static IReadOnlyDictionary<int, SkillDefinition>     AllByInt     => SkillsByInt;
     }
 }
