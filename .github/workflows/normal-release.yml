@@ -1,4 +1,4 @@
-name: normal Auto Release
+name: nOrMaL Auto Release
 
 on:
   push:
@@ -10,6 +10,9 @@ jobs:
   build-and-release:
     runs-on: windows-latest
     
+    env:
+      VERSION: v${{ github.run_number }}-nOrMaL   # <<< Store version ONCE
+
     permissions:
       contents: write # Required to create the release and tag
 
@@ -32,18 +35,12 @@ jobs:
       - name: Zip Build Output
         shell: pwsh
         run: |
-          $Version = "v${{ github.run_number }}"
-          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-normal-$Version.zip"
-
-      - name: Fetch full history
-        run: |
-          git fetch --unshallow || true
-          git fetch --tags
+          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-$env:VERSION.zip"
                 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v${{ github.run_number }}-normal
-          name: Release v${{ github.run_number }}-normal
-          files: ./Star-Resonance-Dps-normal-v${{ github.run_number }}.zip
+          tag_name: ${{ env.VERSION }}
+          name: Release ${{ env.VERSION }}
+          files: ./Star-Resonance-Dps-${{ env.VERSION }}.zip
           generate_release_notes: true
