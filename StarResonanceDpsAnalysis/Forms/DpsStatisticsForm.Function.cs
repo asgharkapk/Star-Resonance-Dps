@@ -43,11 +43,11 @@ namespace StarResonanceDpsAnalysis.Forms
             // # 启动与初始化事件：首次运行初始化表头配置 & 绑定本机身份信息
             if (AppConfig.GetConfigExists())
             {
-                AppConfig.ClearPicture = AppConfig.GetValue("UserConfig", "ClearPicture", "1").ToInt();
-                AppConfig.NickName = AppConfig.GetValue("UserConfig", "NickName", "unknown");
-                AppConfig.Uid = (ulong)AppConfig.GetValue("UserConfig", "Uid", "0").ToInt();
-                AppConfig.Profession = AppConfig.GetValue("UserConfig", "Profession", Properties.Strings.Profession_Unknown);
-                AppConfig.CombatPower = AppConfig.GetValue("UserConfig", "CombatPower", "0").ToInt();
+                AppConfig.ClearPicture  = AppConfig.GetValue("UserConfig", "ClearPicture", "1").ToInt();
+                AppConfig.NickName      = AppConfig.GetValue("UserConfig", "NickName", "unknown");
+                AppConfig.Uid           = (ulong)AppConfig.GetValue("UserConfig", "Uid", "0").ToInt();
+                AppConfig.Profession    = AppConfig.GetValue("UserConfig", "Profession", Properties.Strings.Profession_Unknown);
+                AppConfig.CombatPower   = AppConfig.GetValue("UserConfig", "CombatPower", "0").ToInt();
 
                 // 写入本地统计缓存（用于 UI 初始显示）
                 StatisticData._manager.SetNickname(AppConfig.Uid, AppConfig.NickName);
@@ -161,10 +161,10 @@ namespace StarResonanceDpsAnalysis.Forms
             // # 步骤 4：打开并启动设备监听 —— 绑定回调、设置过滤器
             SelectedDevice.Open(new DeviceConfiguration
             {
-                Mode = DeviceModes.Promiscuous,
-                Immediate = true,
+                Mode        = DeviceModes.Promiscuous,
+                Immediate   = true,
                 ReadTimeout = 1000,
-                BufferSize = 1024 * 1024 * 4
+                BufferSize  = 1024 * 1024 * 4
             });
             SelectedDevice.Filter = "ip and tcp";
             SelectedDevice.OnPacketArrival += new PacketArrivalEventHandler(Device_OnPacketArrival);
@@ -306,11 +306,11 @@ namespace StarResonanceDpsAnalysis.Forms
         {
             // # 启动与初始化事件：界面样式与渲染设置（仅 UI 外观，不涉及数据）
             // ======= 单个进度条（textProgressBar1）的外观设置 =======
-            sortedProgressBarList1.OrderImageOffset = new RenderContent.ContentOffset { X = 0, Y = 0 };
+            sortedProgressBarList1.OrderImageOffset     = new RenderContent.ContentOffset { X = 0, Y = 0 };
             sortedProgressBarList1.OrderImageRenderSize = new Size(22, 22);
-            sortedProgressBarList1.OrderOffset = new RenderContent.ContentOffset { X = 6, Y = 0 };
-            sortedProgressBarList1.OrderCallback = (i) => $"{i:d2}.";
-            sortedProgressBarList1.OrderImages = null;
+            sortedProgressBarList1.OrderOffset          = new RenderContent.ContentOffset { X = 6, Y = 0 };
+            sortedProgressBarList1.OrderCallback        = (i) => $"{i:d2}.";
+            sortedProgressBarList1.OrderImages          = null;
         //    [
         //        new Bitmap(new MemoryStream(Resources.皇冠)),
         //                   
@@ -571,27 +571,27 @@ namespace StarResonanceDpsAnalysis.Forms
         public static Dictionary<string, Bitmap> imgDict = new Dictionary<string, Bitmap>() // convert to resource key
         {
             { Properties.Strings.Profession_Unknown, EmptyBitmap() },
-            { Properties.Strings.SubProfession_IceRay, new Bitmap(new MemoryStream(Resources.冰魔导师)) },
-            { Properties.Strings.Profession_FrostMage, new Bitmap(new MemoryStream(Resources.冰魔导师)) },
-            { Properties.Strings.Profession_HeavyGuardian, new Bitmap(new MemoryStream(Resources.巨刃守护者)) },
-            { Properties.Strings.Profession_VerdantOracle, new Bitmap(new MemoryStream(Resources.森语者)) },
-            { Properties.Strings.Profession_SoulMusician, new Bitmap(new MemoryStream(Resources.灵魂乐手)) },
-            { Properties.Strings.Profession_Marksman, new Bitmap(new MemoryStream(Resources.神射手)) },
-            { Properties.Strings.Profession_Stormblade, new Bitmap(new MemoryStream(Resources.雷影剑士)) },
-            { Properties.Strings.Profession_WindKnight, new Bitmap(new MemoryStream(Resources.青岚骑士)) },
-            { Properties.Strings.Profession_AegisKnight, new Bitmap(new MemoryStream(Resources.神盾骑士)) },
-            { Properties.Strings.SubProfession_Concerto, new Bitmap(new MemoryStream(Resources.灵魂乐手)) },
-            { Properties.Strings.SubProfession_MoonBlade, new Bitmap(new MemoryStream(Resources.雷影剑士)) },
-            { Properties.Strings.SubProfession_EagleBow, new Bitmap(new MemoryStream(Resources.神射手)) },
-            { Properties.Strings.SubProfession_WolfBow, new Bitmap(new MemoryStream(Resources.神射手)) },
-            { Properties.Strings.SubProfession_AirStyle, new Bitmap(new MemoryStream(Resources.青岚骑士)) },
-            { Properties.Strings.SubProfession_Overdrive, new Bitmap(new MemoryStream(Resources.青岚骑士)) },
-            { Properties.Strings.SubProfession_Protection, new Bitmap(new MemoryStream(Resources.神盾骑士)) },
-            { Properties.Strings.SubProfession_LightShield, new Bitmap(new MemoryStream(Resources.神盾骑士)) },
-            { Properties.Strings.SubProfession_RockShield, new Bitmap(new MemoryStream(Resources.巨刃守护者)) },
-            { Properties.Strings.SubProfession_Block, new Bitmap(new MemoryStream(Resources.巨刃守护者)) },
-            { Properties.Strings.SubProfession_Lifebloom, new Bitmap(new MemoryStream(Resources.森语者)) },
-            { Properties.Strings.SubProfession_Thornlash, new Bitmap(new MemoryStream(Resources.森语者)) },
+            { Properties.Strings.SubProfession_IceRay,      new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },
+            { Properties.Strings.Profession_FrostMage,      new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },
+            { Properties.Strings.Profession_HeavyGuardian,  new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },
+            { Properties.Strings.Profession_VerdantOracle,  new Bitmap(new MemoryStream(Resources.森语者)       ) },
+            { Properties.Strings.Profession_SoulMusician,   new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },
+            { Properties.Strings.Profession_Marksman,       new Bitmap(new MemoryStream(Resources.神射手)       ) },
+            { Properties.Strings.Profession_Stormblade,     new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },
+            { Properties.Strings.Profession_WindKnight,     new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
+            { Properties.Strings.Profession_AegisKnight,    new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
+            { Properties.Strings.SubProfession_Concerto,    new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },
+            { Properties.Strings.SubProfession_MoonBlade,   new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },
+            { Properties.Strings.SubProfession_EagleBow,    new Bitmap(new MemoryStream(Resources.神射手)       ) },
+            { Properties.Strings.SubProfession_WolfBow,     new Bitmap(new MemoryStream(Resources.神射手)       ) },
+            { Properties.Strings.SubProfession_AirStyle,    new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
+            { Properties.Strings.SubProfession_Overdrive,   new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
+            { Properties.Strings.SubProfession_Protection,  new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
+            { Properties.Strings.SubProfession_LightShield, new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
+            { Properties.Strings.SubProfession_RockShield,  new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },
+            { Properties.Strings.SubProfession_Block,       new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },
+            { Properties.Strings.SubProfession_Lifebloom,   new Bitmap(new MemoryStream(Resources.森语者)       ) },
+            { Properties.Strings.SubProfession_Thornlash,   new Bitmap(new MemoryStream(Resources.森语者)       ) },
         };
 
 
@@ -625,33 +625,33 @@ namespace StarResonanceDpsAnalysis.Forms
         // NPC总览行：一个NPC一行
         private class NpcRow
         {
-            public long NpcId;
-            public string Name;
-            public ulong TotalTaken;
-            public double TakenPerSec;
+            public long     NpcId;
+            public string   Name;
+            public ulong    TotalTaken;
+            public double   TakenPerSec;
         }
         // 对某个NPC的攻击者行（仍然是玩家行，样式复用）
         private class NpcAttackerRow
         {
-            public long Uid;
-            public string Nickname;
-            public int CombatPower;
-            public string Profession;
-            public string SubProfession;
-            public ulong DamageToNpc;
-            public double PlayerDps;   // 玩家全程DPS（信息项）
-            public double NpcOnlyDps;  // 该玩家对这个NPC的专属DPS（进度条主要依据）
+            public long     Uid;
+            public string   Nickname;
+            public int      CombatPower;
+            public string   Profession;
+            public string   SubProfession;
+            public ulong    DamageToNpc;
+            public double   PlayerDps;   // 玩家全程DPS（信息项）
+            public double   NpcOnlyDps;  // 该玩家对这个NPC的专属DPS（进度条主要依据）
         }
 
         private class UiRow
         {
-            public long Uid;
-            public string Nickname;
-            public int CombatPower;
-            public string Profession;
-            public ulong Total;
-            public double PerSecond;
-            public string SubProfession;
+            public long     Uid;
+            public string   Nickname;
+            public int      CombatPower;
+            public string   Profession;
+            public ulong    Total;
+            public double   PerSecond;
+            public string   SubProfession;
         }
 
         private static bool SortByDps = false; // true = ⚡ , false = Σ
@@ -718,21 +718,21 @@ namespace StarResonanceDpsAnalysis.Forms
                     ratio = Math.Clamp(ratio, 0f, 1f);
 
                     string totalFmt = Common.FormatWithEnglishUnits(p.Total);
-                    string perSec = Common.FormatWithEnglishUnits(Math.Round(p.PerSecond, 1));
+                    string perSec   = Common.FormatWithEnglishUnits(Math.Round(p.PerSecond, 1));
 
-                    var iconKey = (p?.SubProfession is string sr && sr != Properties.Strings.Profession_Unknown && imgDict.ContainsKey(sr)) ? sr
-                                : (p?.Profession is string pr && pr != Properties.Strings.Profession_Unknown && imgDict.ContainsKey(pr)) ? pr
-                                : Properties.Strings.Profession_Unknown;
+                    var iconKey     = (p?.SubProfession is string sr && sr  != Properties.Strings.Profession_Unknown && imgDict.ContainsKey(sr)) ? sr
+                                    : (p?.Profession is string pr && pr     != Properties.Strings.Profession_Unknown && imgDict.ContainsKey(pr)) ? pr
+                                    : Properties.Strings.Profession_Unknown;
 
-                    var profBmp = imgDict.TryGetValue(iconKey, out var bmp) ? bmp : EmptyBitmap(); ;
+                    var profBmp     = imgDict.TryGetValue(iconKey, out var bmp) ? bmp : EmptyBitmap(); ;
 
-                    var colorMap = Config.IsLight ? colorDict : blackColorDict;
+                    var colorMap    = Config.IsLight ? colorDict : blackColorDict;
 
-                    var colorKey = (p?.SubProfession is string sr2 && sr2 != Properties.Strings.Profession_Unknown && colorMap.ContainsKey(sr2)) ? sr2
-                                 : (p?.Profession is string pr2 && pr2 != Properties.Strings.Profession_Unknown && colorMap.ContainsKey(pr2)) ? pr2
-                                 : Properties.Strings.Profession_Unknown;
+                    var colorKey    = (p?.SubProfession is string sr2 && sr2    != Properties.Strings.Profession_Unknown && colorMap.ContainsKey(sr2)) ? sr2
+                                    : (p?.Profession is string pr2 && pr2       != Properties.Strings.Profession_Unknown && colorMap.ContainsKey(pr2)) ? pr2
+                                    : Properties.Strings.Profession_Unknown;
 
-                    var color = colorMap.TryGetValue(colorKey, out var c) ? c : ColorTranslator.FromHtml("#BFBFBF");
+                    var color       = colorMap.TryGetValue(colorKey, out var c) ? c : ColorTranslator.FromHtml("#BFBFBF");
 
                     // 渲染行内容：DictList 也只在锁内改
                     if (!DictList.TryGetValue(p.Uid, out var row))
@@ -746,18 +746,18 @@ namespace StarResonanceDpsAnalysis.Forms
                         DictList[p.Uid] = row;
                     }
 
-                    int thedeathCount = FullRecord.GetPlayerDeathCount(checked((ulong)p.Uid));
-                    string share = $"💀{thedeathCount}"; //(like a Label, TextBox, or Button) doesn’t support emojis
+                    int thedeathCount   = FullRecord.GetPlayerDeathCount(checked((ulong)p.Uid));
+                    string share        = $"💀{thedeathCount}"; //(like a Label, TextBox, or Button) doesn’t support emojis
                     
-                    row[0].Image = profBmp;
+                    row[0].Image    = profBmp;
                     // 只要子流派；没有子流派就用战力；否则只显示昵称
-                    string sp = Common.GetTranslatedSubProfession(p.SubProfession);
+                    string sp       = Common.GetTranslatedSubProfession(p.SubProfession);
 
-                    row[1].Text = $"{sp} ({p.CombatPower}) {p.Nickname}"; //TODO come back here, update subprofession when changing language
+                    row[1].Text     = $"{sp} ({p.CombatPower}) {p.Nickname}"; //TODO come back here, update subprofession when changing language
 
 
-                    row[2].Text = $"{totalFmt} ({perSec})";
-                    row[3].Text = share;
+                    row[2].Text     = $"{totalFmt} ({perSec})";
+                    row[3].Text     = share;
 
                     if (p.Uid == (long)AppConfig.Uid)
                     {
@@ -773,19 +773,19 @@ namespace StarResonanceDpsAnalysis.Forms
                         pb = new ProgressBarData
                         {
                             ID = p.Uid,
-                            ContentList = row,
+                            ContentList             = row,
                             ProgressBarCornerRadius = 3,
-                            ProgressBarValue = ratio,
-                            ProgressBarColor = color,
-                            OrderValue = orderKey   // <-- set ordering key here
+                            ProgressBarValue        = ratio,
+                            ProgressBarColor        = color,
+                            OrderValue              = orderKey   // <-- set ordering key here
                         };
                     }
                     else
                     {
-                        pb.ContentList = row;      // 保底同步
+                        pb.ContentList      = row;      // 保底同步
                         pb.ProgressBarValue = ratio;
                         pb.ProgressBarColor = color;
-                        pb.OrderValue = orderKey; // <-- update ordering key
+                        pb.OrderValue       = orderKey; // <-- update ordering key
                     }
 
                     next.Add(pb);
@@ -844,10 +844,10 @@ namespace StarResonanceDpsAnalysis.Forms
             {
                 if (_isClearing == 1) return;
 
-                var snapshot = list.GroupBy(pb => pb.ID).Select(g => g.Last()).ToList();
-                var present = new HashSet<long>(ordered.Select(x => x.NpcId));
-                var toRemove = snapshot.Where(pb => !present.Contains(pb.ID)).Select(pb => pb.ID).ToList();
-                var byId = snapshot.ToDictionary(pb => pb.ID, pb => pb);
+                var snapshot    = list.GroupBy(pb => pb.ID).Select(g => g.Last()).ToList();
+                var present     = new HashSet<long>(ordered.Select(x => x.NpcId));
+                var toRemove    = snapshot.Where(pb => !present.Contains(pb.ID)).Select(pb => pb.ID).ToList();
+                var byId        = snapshot.ToDictionary(pb => pb.ID, pb => pb);
 
                 var next = new List<ProgressBarData>(present.Count);
 
@@ -860,13 +860,13 @@ namespace StarResonanceDpsAnalysis.Forms
                     ratio = Math.Clamp(ratio, 0f, 1f);
 
                     string totalFmt = Common.FormatWithEnglishUnits(p.TotalTaken);
-                    string perSec = Common.FormatWithEnglishUnits(Math.Round(p.TakenPerSec, 1));
-                    string share = $"{Math.Round(p.TotalTaken / teamSum * 100d, 0, MidpointRounding.AwayFromZero)}%";
+                    string perSec   = Common.FormatWithEnglishUnits(Math.Round(p.TakenPerSec, 1));
+                    string share    = $"{Math.Round(p.TotalTaken / teamSum * 100d, 0, MidpointRounding.AwayFromZero)}%";
 
                     // 头像&颜色（沿用“unknown”）
-                    var profBmp = imgDict.TryGetValue(Properties.Strings.Profession_Unknown, out var bmp) ? bmp : EmptyBitmap();
-                    var colorMap = Config.IsLight ? colorDict : blackColorDict;
-                    var color = colorMap.TryGetValue(Properties.Strings.Profession_Unknown, out var c) ? c : ColorTranslator.FromHtml("#67AEF6");
+                    var profBmp     = imgDict.TryGetValue(Properties.Strings.Profession_Unknown, out var bmp) ? bmp : EmptyBitmap();
+                    var colorMap    = Config.IsLight ? colorDict : blackColorDict;
+                    var color       = colorMap.TryGetValue(Properties.Strings.Profession_Unknown, out var c) ? c : ColorTranslator.FromHtml("#67AEF6");
 
                     if (!DictList.TryGetValue(p.NpcId, out var row))
                     {
@@ -879,25 +879,25 @@ namespace StarResonanceDpsAnalysis.Forms
                         DictList[p.NpcId] = row;
                     }
 
-                    row[0].Image = profBmp;
-                    row[1].Text = p.Name;
-                    row[2].Text = $"{totalFmt}({perSec})";
-                    row[3].Text = share;
+                    row[0].Image    = profBmp;
+                    row[1].Text     = p.Name;
+                    row[2].Text     = $"{totalFmt}({perSec})";
+                    row[3].Text     = share;
 
                     if (!byId.TryGetValue(p.NpcId, out var pb))
                     {
                         pb = new ProgressBarData
                         {
-                            ID = p.NpcId,
-                            ContentList = row,
+                            ID                      = p.NpcId,
+                            ContentList             = row,
                             ProgressBarCornerRadius = 3,
-                            ProgressBarValue = ratio,
-                            ProgressBarColor = color,
+                            ProgressBarValue        = ratio,
+                            ProgressBarColor        = color,
                         };
                     }
                     else
                     {
-                        pb.ContentList = row;
+                        pb.ContentList      = row;
                         pb.ProgressBarValue = ratio;
                         pb.ProgressBarColor = color;
                     }
@@ -945,10 +945,10 @@ namespace StarResonanceDpsAnalysis.Forms
             {
                 if (_isClearing == 1) return;
 
-                var snapshot = list.GroupBy(pb => pb.ID).Select(g => g.Last()).ToList();
-                var present = new HashSet<long>(ordered.Select(x => x.Uid));
-                var toRemove = snapshot.Where(pb => !present.Contains(pb.ID)).Select(pb => pb.ID).ToList();
-                var byId = snapshot.ToDictionary(pb => pb.ID, pb => pb);
+                var snapshot    = list.GroupBy(pb => pb.ID).Select(g => g.Last()).ToList();
+                var present     = new HashSet<long>(ordered.Select(x => x.Uid));
+                var toRemove    = snapshot.Where(pb => !present.Contains(pb.ID)).Select(pb => pb.ID).ToList();
+                var byId        = snapshot.ToDictionary(pb => pb.ID, pb => pb);
 
                 var next = new List<ProgressBarData>(present.Count);
 
@@ -961,12 +961,12 @@ namespace StarResonanceDpsAnalysis.Forms
                     ratio = Math.Clamp(ratio, 0f, 1f);
 
                     string totalFmt = Common.FormatWithEnglishUnits(p.DamageToNpc);
-                    string perSec = Common.FormatWithEnglishUnits(Math.Round(p.NpcOnlyDps, 1));
-                    string share = $"{Math.Round(p.DamageToNpc / npcSum * 100d, 0, MidpointRounding.AwayFromZero)}%";
+                    string perSec   = Common.FormatWithEnglishUnits(Math.Round(p.NpcOnlyDps, 1));
+                    string share    = $"{Math.Round(p.DamageToNpc / npcSum * 100d, 0, MidpointRounding.AwayFromZero)}%";
 
-                    var profBmp = imgDict.TryGetValue(p.Profession ?? Properties.Strings.Profession_Unknown, out var bmp) ? bmp : EmptyBitmap();
-                    var colorMap = Config.IsLight ? colorDict : blackColorDict;
-                    var color = colorMap.TryGetValue(p.Profession ?? Properties.Strings.Profession_Unknown, out var c) ? c : ColorTranslator.FromHtml("#67AEF6");
+                    var profBmp     = imgDict.TryGetValue(p.Profession ?? Properties.Strings.Profession_Unknown, out var bmp) ? bmp : EmptyBitmap();
+                    var colorMap    = Config.IsLight ? colorDict : blackColorDict;
+                    var color       = colorMap.TryGetValue(p.Profession ?? Properties.Strings.Profession_Unknown, out var c) ? c : ColorTranslator.FromHtml("#67AEF6");
 
                     if (!DictList.TryGetValue(p.Uid, out var row))
                     {
@@ -979,25 +979,25 @@ namespace StarResonanceDpsAnalysis.Forms
                         DictList[p.Uid] = row;
                     }
 
-                    row[0].Image = profBmp;
-                    row[1].Text = $"{p.Nickname}-{p.SubProfession}({p.CombatPower})";
-                    row[2].Text = $"{totalFmt}({perSec})";
-                    row[3].Text = share;
+                    row[0].Image    = profBmp;
+                    row[1].Text     = $"{p.Nickname}-{p.SubProfession}({p.CombatPower})";
+                    row[2].Text     = $"{totalFmt}({perSec})";
+                    row[3].Text     = share;
 
                     if (!byId.TryGetValue(p.Uid, out var pb))
                     {
                         pb = new ProgressBarData
                         {
-                            ID = p.Uid,
-                            ContentList = row,
+                            ID                      = p.Uid,
+                            ContentList             = row,
                             ProgressBarCornerRadius = 3,
-                            ProgressBarValue = ratio,
-                            ProgressBarColor = color,
+                            ProgressBarValue        = ratio,
+                            ProgressBarColor        = color,
                         };
                     }
                     else
                     {
-                        pb.ContentList = row;
+                        pb.ContentList      = row;
                         pb.ProgressBarValue = ratio;
                         pb.ProgressBarColor = color;
                     }
@@ -1039,9 +1039,9 @@ namespace StarResonanceDpsAnalysis.Forms
 
                 list.Add(new NpcRow
                 {
-                    NpcId = (long)id,
-                    Name = name,
-                    TotalTaken = ov.TotalTaken,
+                    NpcId       = (long)id,
+                    Name        = name,
+                    TotalTaken  = ov.TotalTaken,
                     TakenPerSec = perSec
                 });
             }
@@ -1067,13 +1067,13 @@ namespace StarResonanceDpsAnalysis.Forms
                 rows.Add(new NpcAttackerRow
                 {
                     Uid = (long)t.Uid,
-                    Nickname = t.Nickname,
-                    CombatPower = t.CombatPower,
-                    Profession = t.Profession,
-                    SubProfession = StatisticData._manager.GetOrCreate(t.Uid).SubProfession ?? "",
-                    DamageToNpc = t.DamageToNpc,
-                    PlayerDps = t.TotalDps,
-                    NpcOnlyDps = npcOnlyDps
+                    Nickname        = t.Nickname,
+                    CombatPower     = t.CombatPower,
+                    Profession      = t.Profession,
+                    SubProfession   = StatisticData._manager.GetOrCreate(t.Uid).SubProfession ?? "",
+                    DamageToNpc     = t.DamageToNpc,
+                    PlayerDps       = t.TotalDps,
+                    NpcOnlyDps      = npcOnlyDps
                 });
             }
 
@@ -1103,28 +1103,28 @@ namespace StarResonanceDpsAnalysis.Forms
                     switch (metric)
                     {
                         case MetricType.Healing:
-                            total = p.HealingStats.Total;
-                            ps = p.HealingStats.GetTotalPerSecond();
+                            total   = p.HealingStats.Total;
+                            ps      = p.HealingStats.GetTotalPerSecond();
                             break;
                         case MetricType.Taken:
-                            total = p.TakenStats.Total;
-                            ps = p.TakenStats.GetTotalPerSecond();
+                            total   = p.TakenStats.Total;
+                            ps      = p.TakenStats.GetTotalPerSecond();
                             break;
                         default: // Damage
-                            total = p.DamageStats.Total;
-                            ps = p.DamageStats.GetTotalPerSecond();
+                            total   = p.DamageStats.Total;
+                            ps      = p.DamageStats.GetTotalPerSecond();
                             break;
                     }
 
                     return new UiRow
                     {
-                        Uid = (long)p.Uid,
-                        Nickname = p.Nickname,
-                        CombatPower = p.CombatPower,
-                        Profession = p.Profession,
-                        SubProfession = p.SubProfession ?? Properties.Strings.Profession_Unknown,
-                        Total = total,
-                        PerSecond = ps
+                        Uid             = (long)p.Uid,
+                        Nickname        = p.Nickname,
+                        CombatPower     = p.CombatPower,
+                        Profession      = p.Profession,
+                        SubProfession   = p.SubProfession ?? Properties.Strings.Profession_Unknown,
+                        Total           = total,
+                        PerSecond       = ps
                     };
                 }).ToList();
             }
@@ -1144,29 +1144,29 @@ namespace StarResonanceDpsAnalysis.Forms
                     switch (metric)
                     {
                         case MetricType.Healing:
-                            total = p.TotalHealing;
-                            ps = p.Hps;
+                            total   = p.TotalHealing;
+                            ps      = p.Hps;
                             break;
                         case MetricType.Taken:
-                            total = p.TakenDamage;
-                            ps = p.Tps; // now ActiveSecondsTaken used → no more flicker // use computed TPS like DPS/HPS to prevent flicker
-                            //ps = total / sessionSecs;
+                            total   = p.TakenDamage;
+                            ps      = p.Tps; // now ActiveSecondsTaken used → no more flicker // use computed TPS like DPS/HPS to prevent flicker
+                            //ps    = total / sessionSecs;
                             break;
                         default: // Damage
-                            total = p.TotalDamage;
-                            ps = p.Dps;
+                            total   = p.TotalDamage;
+                            ps      = p.Dps;
                             break;
                     }
 
                     return new UiRow
                     {
-                        Uid = (long)p.Uid,
-                        Nickname = p.Nickname,
-                        CombatPower = p.CombatPower,
-                        Profession = p.Profession,
-                        SubProfession = p.SubProfession ?? "",
-                        Total = total,
-                        PerSecond = ps
+                        Uid             = (long)p.Uid,
+                        Nickname        = p.Nickname,
+                        CombatPower     = p.CombatPower,
+                        Profession      = p.Profession,
+                        SubProfession   = p.SubProfession ?? "",
+                        Total           = total,
+                        PerSecond       = ps
                     };
                 }).ToList();
             }
@@ -1182,9 +1182,9 @@ namespace StarResonanceDpsAnalysis.Forms
             var list = snap.Npcs.Values
                 .Select(n => new NpcRow
                 {
-                    NpcId = (long)n.NpcId,
-                    Name = n.Name ?? $"NPC[{n.NpcId}]",
-                    TotalTaken = n.TotalTaken,
+                    NpcId       = (long)n.NpcId,
+                    Name        = n.Name ?? $"NPC[{n.NpcId}]",
+                    TotalTaken  = n.TotalTaken,
                     TakenPerSec = n.TakenPerSec
                 })
                 .Where(r => r.TotalTaken > 0)
@@ -1204,14 +1204,14 @@ namespace StarResonanceDpsAnalysis.Forms
             // 将 FullRecord 返回项映射到 UI 行
             var rows = top.Select(t => new NpcAttackerRow
             {
-                Uid = (long)t.Uid,
-                Nickname = t.Nickname,
-                CombatPower = t.CombatPower,
-                Profession = t.Profession,
-                SubProfession = StatisticData._manager.GetOrCreate(t.Uid).SubProfession ?? "",
-                DamageToNpc = t.DamageToNpc,
-                PlayerDps = t.PlayerDps,
-                NpcOnlyDps = t.NpcOnlyDps
+                Uid             = (long)t.Uid,
+                Nickname        = t.Nickname,
+                CombatPower     = t.CombatPower,
+                Profession      = t.Profession,
+                SubProfession   = StatisticData._manager.GetOrCreate(t.Uid).SubProfession ?? "",
+                DamageToNpc     = t.DamageToNpc,
+                PlayerDps       = t.PlayerDps,
+                NpcOnlyDps      = t.NpcOnlyDps
             })
             .Where(r => r.DamageToNpc > 0)
             .OrderByDescending(r => r.DamageToNpc)
