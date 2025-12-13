@@ -43,11 +43,11 @@ namespace StarResonanceDpsAnalysis.Forms
             // # Startup & initialization events: initialize table header configuration on first run & bind local identity information
             if (AppConfig.GetConfigExists())
             {
-                AppConfig.ClearPicture  = AppConfig.GetValue("UserConfig", "ClearPicture", "1").ToInt();
-                AppConfig.NickName      = AppConfig.GetValue("UserConfig", "NickName", "unknown");
-                AppConfig.Uid           = (ulong)AppConfig.GetValue("UserConfig", "Uid", "0").ToInt();
-                AppConfig.Profession    = AppConfig.GetValue("UserConfig", "Profession", Properties.Strings.Profession_Unknown);
-                AppConfig.CombatPower   = AppConfig.GetValue("UserConfig", "CombatPower", "0").ToInt();
+                AppConfig.ClearPicture  = AppConfig.GetValue(       "UserConfig", "ClearPicture",   "1").ToInt();
+                AppConfig.NickName      = AppConfig.GetValue(       "UserConfig", "NickName",       "unknown");
+                AppConfig.Uid           = (ulong)AppConfig.GetValue("UserConfig", "Uid",            "0").ToInt();
+                AppConfig.Profession    = AppConfig.GetValue(       "UserConfig", "Profession",     Properties.Strings.Profession_Unknown);
+                AppConfig.CombatPower   = AppConfig.GetValue(       "UserConfig", "CombatPower",    "0").ToInt();
 
                 // 写入本地统计缓存（用于 UI 初始显示）
                 StatisticData._manager.SetNickname(AppConfig.Uid, AppConfig.NickName);
