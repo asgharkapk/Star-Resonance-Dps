@@ -320,7 +320,7 @@ namespace StarResonanceDpsAnalysis.Forms
             NpcTakeDamageButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             NpcTakeDamageButton.Icon = (Image)resources.GetObject("NpcTakeDamageButton.Icon");
             NpcTakeDamageButton.IconRatio = 0.8F;
-            NpcTakeDamageButton.Location = new Point(372, 8);
+            NpcTakeDamageButton.Location = new Point(372, 0);
             NpcTakeDamageButton.Name = "NpcTakeDamageButton";
             NpcTakeDamageButton.Radius = 3;
             NpcTakeDamageButton.Size = new Size(112, 38);
@@ -335,7 +335,7 @@ namespace StarResonanceDpsAnalysis.Forms
             AlwaysInjuredButton.DefaultBorderColor = Color.Wheat;
             AlwaysInjuredButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             AlwaysInjuredButton.Icon = (Image)resources.GetObject("AlwaysInjuredButton.Icon");
-            AlwaysInjuredButton.Location = new Point(262, 8);
+            AlwaysInjuredButton.Location = new Point(262, 0);
             AlwaysInjuredButton.Margin = new Padding(4);
             AlwaysInjuredButton.Name = "AlwaysInjuredButton";
             AlwaysInjuredButton.Radius = 3;
@@ -350,7 +350,7 @@ namespace StarResonanceDpsAnalysis.Forms
             TotalTreatmentButton.DefaultBack = Color.FromArgb(247, 247, 247);
             TotalTreatmentButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             TotalTreatmentButton.Icon = (Image)resources.GetObject("TotalTreatmentButton.Icon");
-            TotalTreatmentButton.Location = new Point(148, 8);
+            TotalTreatmentButton.Location = new Point(148, 0);
             TotalTreatmentButton.Margin = new Padding(4);
             TotalTreatmentButton.Name = "TotalTreatmentButton";
             TotalTreatmentButton.Radius = 3;
@@ -365,7 +365,7 @@ namespace StarResonanceDpsAnalysis.Forms
             TotalDamageButton.DefaultBack = Color.FromArgb(223, 223, 223);
             TotalDamageButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
             TotalDamageButton.Icon = (Image)resources.GetObject("TotalDamageButton.Icon");
-            TotalDamageButton.Location = new Point(38, 8);
+            TotalDamageButton.Location = new Point(38, 0);
             TotalDamageButton.Name = "TotalDamageButton";
             TotalDamageButton.Radius = 3;
             TotalDamageButton.Size = new Size(112, 38);
