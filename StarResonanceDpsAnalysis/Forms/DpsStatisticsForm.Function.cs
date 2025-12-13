@@ -247,6 +247,9 @@ namespace StarResonanceDpsAnalysis.Forms
                 ChartVisualizationService.ClearFullHistory();
             }
 
+            // --- 新增：重置玩家死亡统计 ---
+            FullRecord.ResetAllPlayerDeathCounts();
+
             ListClear();
 
             // 仅清空当次曲线历史，保留全程曲线（满足“全程伤害从伤害开始记录到F9刷新”）
