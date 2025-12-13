@@ -5,6 +5,12 @@ A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceD
 **This fork includes:**
 - **more en translations**
 - **fully transparent background in light theme**
+- **Theme changes**
+- **Adde sorting by per second or total switch**
+- **Fixed minor bugs**
+- **Added automatica GitHub Actions Release**
+- **Changed proportion % to death counter**
+- **removed useless empty space before progress bars**
 - **not compact theme in [normal branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/nOrMaL)**
 - **beta test branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/mOnStEr)**
 - **فارسی branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/فارسی)**
