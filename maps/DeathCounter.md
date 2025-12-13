@@ -297,6 +297,220 @@ ONLY reset when session data is cleared
 ---
 ---
 
+## 1) **Death counting sources**
+
+```
+Player combat event
+   |
+   v
+RecordTakenDamage(...)
+   |
+   |-- if isDead → StatAcc.CountDead++
+   |
+   |-- Accumulate hpLessen/damage (for stats)
+```
+
+```
+NPC combat event
+   |
+   v
+RecordNpcTakenDamage(...)
+   |
+   |-- if isDead → NPC.Taken.CountDead++
+```
+
+**Key points:**
+
+* Player deaths are stored **per skill** in `p.TakenSkills[skillId].CountDead`.
+* NPC deaths are stored **per NPC** in `n.Taken.CountDead`.
+* `isMiss` events are counted separately via `CountMiss`.
+* Death counts are **session-wide**, not per fight.
+
+---
+
+## 2) **Aggregation (read-only queries)**
+
+```
+GetPlayerDeathCount(uid)
+   |
+   v
+Sum over p.TakenSkills[*].CountDead
+```
+
+```
+GetTeamDeathCount()
+   |
+   v
+foreach player:
+    foreach skill:
+        sum += CountDead
+```
+
+```
+GetPlayerDeathBreakdownBySkill(uid)
+   |
+   v
+foreach skill in p.TakenSkills:
+    if CountDead > 0 → add to list
+   |
+   v
+return sorted descending
+```
+
+**Usage in UI:**
+
+```
+DeathStatisticsForm.LoadInformation()
+   |
+   v
+FullRecord.GetAllPlayerDeathCounts()
+   |
+   v
+DeathStatisticsTable (BindingList)
+   |
+   v
+AntdUI Table
+```
+
+```
+DPS Form (sorted progress bars)
+   |
+   v
+FullRecord.GetPlayerDeathCount(uid)
+   |
+   v
+💀{CountDead} label in progress bar row
+```
+
+---
+
+## 3) **Session lifecycle**
+
+```
+FullRecord.Start()
+   |
+   v
+IsRecording = true
+StartedAt = now (if first time)
+EndedAt = null
+```
+
+```
+FullRecord.Stop()
+   |
+   v
+if IsRecording → StopInternal(auto=false)
+   |
+   v
+TakeSnapshot() → add to _sessionHistory
+   |
+   v
+Clear _players, _npcs, TeamRealtimeDps = 0
+StartedAt = null
+EndedAt = null
+```
+
+```
+FullRecord.Reset()
+   |
+   v
+StopInternal(auto=false) (if has data)
+Clear _players, _npcs, TeamRealtimeDps = 0
+StartedAt = now
+EndedAt = null
+IsRecording = true
+(preserveHistory optional)
+```
+
+```
+ClearSessionHistory()
+   |
+   v
+_sessionHistory.Clear()
+```
+
+**Notes:**
+
+* Death counts are cleared **only on Stop() or Reset()**.
+* Fast snapshots are stored in `_sessionHistory` before clearing.
+* Between Start() and Stop()/Reset(), death counts accumulate across all fights.
+
+---
+
+## 4) **Effective session time**
+
+```
+SessionSeconds()
+   |
+   v
+if not started → 0
+if recording → now - StartedAt
+if stopped → EndedAt - StartedAt
+```
+
+* Used for **TeamRealtimeDps**, but **does not affect CountDead**.
+
+---
+
+## 5) **End-to-end ASCII diagram**
+
+```
+[Combat Event]
+      |
+      v
++-------------------+
+| RecordTakenDamage |
++-------------------+
+      |
+      |-- isDead? --> StatAcc.CountDead++
+      |
+      |-- Accumulate hpLessen/damage
+      v
++-------------------+
+| PlayerAcc / TakenSkills |
++-------------------+
+      |
+      v
+[FullRecord aggregation]
+      |
+      +-- GetPlayerDeathCount(uid)
+      +-- GetTeamDeathCount()
+      +-- GetAllPlayerDeathCounts()
+      |
+      v
+UI Layer
+  - DeathStatisticsForm
+  - DPS ProgressBars (💀 icon)
+```
+
+```
+Session control
+  Start()  -----------------+
+                             |
+                             v
+                     IsRecording = true
+                             |
+Stop() / Reset() -------------+
+                             |
+                             v
+                   TakeSnapshot() → _sessionHistory
+                   Clear _players/_npcs
+                   Reset IsRecording/StartedAt/EndedAt
+```
+
+---
+
+✅ **Key takeaways**
+
+1. Death counting is **per skill** per player (StatAcc.CountDead).
+2. Aggregation sums these counts to give player/team totals.
+3. Data persists **for the whole recording session**, cleared only by `Stop()` or `Reset()`.
+4. Snapshots preserve historical totals.
+5. NPC death counting is separate (`n.Taken.CountDead`) and does **not affect player stats**.
+
+---
+---
+
 # 1) Definitions (important to be explicit)
 
 ```
