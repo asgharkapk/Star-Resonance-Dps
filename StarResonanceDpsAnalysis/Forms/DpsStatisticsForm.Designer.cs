@@ -65,13 +65,15 @@ namespace StarResonanceDpsAnalysis.Forms
             pageHeader1.ForeColor = Color.White;
 
             pageHeader1.ColorScheme = TAMode.Dark;
-            pageHeader1.Controls.Add(PilingModeCheckbox);
-            pageHeader1.Controls.Add(button_ThemeSwitch);
-            pageHeader1.Controls.Add(button2);
-            pageHeader1.Controls.Add(button3);
-            pageHeader1.Controls.Add(button_AlwaysOnTop);
-            pageHeader1.Controls.Add(button1);
-            pageHeader1.Controls.Add(button_Settings);
+
+            pageHeader1.Controls.Add(PilingModeCheckbox); //bechmark checkbox [docked right]
+            pageHeader1.Controls.Add(button_ThemeSwitch); // dark/light [docked right]
+            pageHeader1.Controls.Add(button2); // minimize [docked right]
+            pageHeader1.Controls.Add(button3); // current - overal switch [docked left]
+            pageHeader1.Controls.Add(button_AlwaysOnTop); // [docked right]
+            pageHeader1.Controls.Add(button1); // refresh [docked right] 
+            pageHeader1.Controls.Add(button_Settings); // docked right
+
             pageHeader1.DividerShow = true;
             pageHeader1.DividerThickness = 2F;
             pageHeader1.Dock = DockStyle.Top;
@@ -201,10 +203,12 @@ namespace StarResonanceDpsAnalysis.Forms
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(BattleTimeText);
+
+            panel1.Controls.Add(label2); // damage(dps) [docked right]
+            panel1.Controls.Add(BattleTimeText); // timer [docked left]
             panel1.Controls.Add(SortToggleButton);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label1); // player counter [docked left]
+            
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 408);
             panel1.Name = "panel1";
