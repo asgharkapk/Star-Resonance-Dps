@@ -248,7 +248,7 @@ namespace StarResonanceDpsAnalysis.Forms
             }
 
             // --- 新增：重置玩家死亡统计 ---
-            ResetAllPlayerDeathCounts();
+            FullRecord.ResetAllPlayerDeathCounts();
 
             ListClear();
 
@@ -299,26 +299,7 @@ namespace StarResonanceDpsAnalysis.Forms
                 Volatile.Write(ref _isClearing, 0);
             }
         }
-        
-        /// <summary>
-        /// 重置所有玩家的死亡计数（CountDead）
-        /// </summary>
-        private void ResetAllPlayerDeathCounts()
-        {
-            // 使用 StarResonanceDpsAnalysis 的 _sync 锁，确保线程安全
-            lock (StarResonanceDpsAnalysis.Plugin.DamageStatistics.StarResonanceDpsAnalysis._sync)
-            {
-                foreach (var player in StarResonanceDpsAnalysis.Plugin.DamageStatistics.StarResonanceDpsAnalysis._players.Values)
-                {
-                    foreach (var skill in player.TakenSkills.Values)
-                    {
-                        skill.CountDead = 0;
-                    }
-                }
-            }
-        }
-        // This will reset **all players’ death counters** for all skills.
-        
+                
         #endregion
         #endregion
         #endregion

@@ -1487,6 +1487,25 @@
             public int CountDead;       // 击杀次数（承伤）
         }
         #endregion
+
+
+        /// <summary>
+        /// 重置所有玩家的死亡计数（CountDead）
+        /// </summary>
+        private void ResetAllPlayerDeathCounts()
+        {
+            // 使用 StarResonanceDpsAnalysis 的 _sync 锁，确保线程安全
+            lock (_sync) // _sync is private but accessible here
+            {
+                foreach (var p in _players.Values)
+                {
+                    foreach (var s in p.TakenSkills.Values)
+                        s.CountDead = 0;
+                }
+            }
+        }
+        // This will reset **all players’ death counters** for all skills.
+
     }
 
     // ======================================================================
