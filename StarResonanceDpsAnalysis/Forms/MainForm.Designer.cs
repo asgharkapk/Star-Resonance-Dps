@@ -45,7 +45,7 @@
             pageHeader_MainHeader.DividerShow = true;
             pageHeader_MainHeader.DividerThickness = 2F;
             pageHeader_MainHeader.Dock = DockStyle.Top;
-            pageHeader_MainHeader.Font = new Font("Alimama ShuHeiTi", 8F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            pageHeader_MainHeader.Font = new Font("Alimama ShuHeiTi", 6F, FontStyle.Bold, GraphicsUnit.Point, 134);
             pageHeader_MainHeader.Icon = (Image)resources.GetObject("pageHeader_MainHeader.Icon");
             pageHeader_MainHeader.Location = new Point(0, 0);
             pageHeader_MainHeader.Margin = new Padding(2, 2, 2, 2);
@@ -98,7 +98,7 @@
             groupBox_About.Controls.Add(label_NowVersionTip);
             groupBox_About.Controls.Add(label_AppName);
             groupBox_About.Controls.Add(pictureBox_AppIcon);
-            groupBox_About.Font = new Font("HarmonyOS Sans SC", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            groupBox_About.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Bold, GraphicsUnit.Point, 134);
             groupBox_About.Location = new Point(22, 49);
             groupBox_About.Margin = new Padding(12, 12, 12, 12);
             groupBox_About.Name = "groupBox_About";
@@ -112,7 +112,7 @@
             // 
             label_ThankHelpFromTip_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label_ThankHelpFromTip_2.AutoSize = true;
-            label_ThankHelpFromTip_2.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_ThankHelpFromTip_2.Font = new Font("HarmonyOS Sans SC", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_ThankHelpFromTip_2.Location = new Point(334, 401);
             label_ThankHelpFromTip_2.Margin = new Padding(0);
             label_ThankHelpFromTip_2.Name = "label_ThankHelpFromTip_2";
@@ -124,7 +124,7 @@
             // 
             linkLabel_NodeJsProject.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             linkLabel_NodeJsProject.AutoSize = true;
-            linkLabel_NodeJsProject.Font = new Font("HarmonyOS Sans SC", 8F);
+            linkLabel_NodeJsProject.Font = new Font("HarmonyOS Sans SC", 6F);
             linkLabel_NodeJsProject.Location = new Point(78, 401);
             linkLabel_NodeJsProject.Margin = new Padding(0);
             linkLabel_NodeJsProject.Name = "linkLabel_NodeJsProject";
@@ -138,7 +138,7 @@
             // 
             label_ThankHelpFromTip_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label_ThankHelpFromTip_1.AutoSize = true;
-            label_ThankHelpFromTip_1.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_ThankHelpFromTip_1.Font = new Font("HarmonyOS Sans SC", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_ThankHelpFromTip_1.Location = new Point(15, 401);
             label_ThankHelpFromTip_1.Margin = new Padding(4, 0, 0, 0);
             label_ThankHelpFromTip_1.Name = "label_ThankHelpFromTip_1";
@@ -150,7 +150,7 @@
             // 
             label_Copyright.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label_Copyright.AutoSize = true;
-            label_Copyright.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_Copyright.Font = new Font("HarmonyOS Sans SC", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_Copyright.Location = new Point(15, 424);
             label_Copyright.Margin = new Padding(4, 0, 4, 0);
             label_Copyright.Name = "label_Copyright";
@@ -162,7 +162,7 @@
             // 
             linkLabel_QQGroup.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             linkLabel_QQGroup.AutoSize = true;
-            linkLabel_QQGroup.Font = new Font("HarmonyOS Sans SC", 8F);
+            linkLabel_QQGroup.Font = new Font("HarmonyOS Sans SC", 6F);
             linkLabel_QQGroup.Location = new Point(521, 382);
             linkLabel_QQGroup.Margin = new Padding(0);
             linkLabel_QQGroup.Name = "linkLabel_QQGroup";
@@ -176,7 +176,7 @@
             // 
             label_OpenSourceTip_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label_OpenSourceTip_2.AutoSize = true;
-            label_OpenSourceTip_2.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_OpenSourceTip_2.Font = new Font("HarmonyOS Sans SC", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_OpenSourceTip_2.Location = new Point(129, 382);
             label_OpenSourceTip_2.Margin = new Padding(0);
             label_OpenSourceTip_2.Name = "label_OpenSourceTip_2";
@@ -192,7 +192,7 @@
             // 
             label_OpenSourceTip_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label_OpenSourceTip_1.AutoSize = true;
-            label_OpenSourceTip_1.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_OpenSourceTip_1.Font = new Font("HarmonyOS Sans SC", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_OpenSourceTip_1.Location = new Point(15, 382);
             label_OpenSourceTip_1.Margin = new Padding(4, 0, 0, 0);
             label_OpenSourceTip_1.Name = "label_OpenSourceTip_1";
@@ -204,7 +204,7 @@
             // 
             linkLabel_GitHub.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             linkLabel_GitHub.AutoSize = true;
-            linkLabel_GitHub.Font = new Font("HarmonyOS Sans SC", 8F);
+            linkLabel_GitHub.Font = new Font("HarmonyOS Sans SC", 6F);
             linkLabel_GitHub.Location = new Point(78, 382);
             linkLabel_GitHub.Margin = new Padding(0);
             linkLabel_GitHub.Name = "linkLabel_GitHub";
@@ -217,7 +217,7 @@
             // label_SelfIntroduce
             // 
             label_SelfIntroduce.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label_SelfIntroduce.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_SelfIntroduce.Font = new Font("HarmonyOS Sans SC", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_SelfIntroduce.Location = new Point(113, 78);
             label_SelfIntroduce.Margin = new Padding(4, 0, 4, 0);
             label_SelfIntroduce.Name = "label_SelfIntroduce";
@@ -232,7 +232,7 @@
             // label_NowVersionDevelopers
             // 
             label_NowVersionDevelopers.AutoSize = true;
-            label_NowVersionDevelopers.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_NowVersionDevelopers.Font = new Font("HarmonyOS Sans SC", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_NowVersionDevelopers.Location = new Point(15, 266);
             label_NowVersionDevelopers.Margin = new Padding(4, 0, 4, 0);
             label_NowVersionDevelopers.Name = "label_NowVersionDevelopers";
@@ -257,7 +257,7 @@
             // label_NowVersionNumber
             // 
             label_NowVersionNumber.AutoSize = true;
-            label_NowVersionNumber.Font = new Font("HarmonyOS Sans SC", 8F);
+            label_NowVersionNumber.Font = new Font("HarmonyOS Sans SC", 6F);
             label_NowVersionNumber.Location = new Point(15, 192);
             label_NowVersionNumber.Margin = new Padding(4, 0, 4, 0);
             label_NowVersionNumber.Name = "label_NowVersionNumber";
