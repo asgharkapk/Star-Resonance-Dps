@@ -23,24 +23,24 @@ namespace StarResonanceDpsAnalysis.Forms
 {
     public partial class DpsStatisticsForm
     {
-        // # 导航
-        // # 本文件主要职责：
-        // #   1) 启动/停止网络抓包的生命周期管理（StartCapture/StopCapture）。
-        // #   2) 清空/重置统计数据与图表（HandleClearData/ListClear）。
-        // #   3) 初始化用户与控件样式（InitTableColumnsConfigAtFirstRun/SetStyle）。
-        // #   4) 处理数据包到达事件，将原始数据交给 PacketAnalyzer（Device_OnPacketArrival）。
-        // #   5) 构建并刷新 DPS/治疗/承伤的 UI 列表（RefreshDpsTable/BuildUiRows）。
-        // # 事件分类索引：
-        // #   * [启动与初始化事件] InitTableColumnsConfigAtFirstRun / LoadNetworkDevices / SetStyle
-        // #   * [抓包事件] StartCapture / StopCapture / Device_OnPacketArrival
-        // #   * [清理与复位事件] HandleClearData / ListClear
-        // #   * [UI 刷新事件] RefreshDpsTable / BuildUiRows
-        // #   * [线程安全与状态] _dataLock / _isClearing / IsCaptureStarted / SelectedDevice
+        // # Navigation
+        // # Main responsibilities of this file:
+        // #   1) Manage the lifecycle of network packet capturing (StartCapture / StopCapture).
+        // #   2) Clear/reset statistical data and charts (HandleClearData / ListClear).
+        // #   3) Initialize user settings and control styles (InitTableColumnsConfigAtFirstRun / SetStyle).
+        // #   4) Handle packet arrival events and pass raw data to PacketAnalyzer (Device_OnPacketArrival).
+        // #   5) Build and refresh the DPS / Healing / Damage Taken UI lists (RefreshDpsTable / BuildUiRows).
+        // # Event category index:
+        // #   * [Startup & Initialization] InitTableColumnsConfigAtFirstRun / LoadNetworkDevices / SetStyle
+        // #   * [Packet Capture] StartCapture / StopCapture / Device_OnPacketArrival
+        // #   * [Cleanup & Reset] HandleClearData / ListClear
+        // #   * [UI Refresh] RefreshDpsTable / BuildUiRows
+        // #   * [Thread Safety & State] _dataLock / _isClearing / IsCaptureStarted / SelectedDevice
 
-        #region 加载 网卡 启动设备/初始化 统计数据/ 启动 抓包/停止抓包/清空数据/ 关闭 事件
+        #region Load network adapters / Start device / Initialize statistics data / Start packet capture / Stop packet capture / Clear data / Close events
         private void InitTableColumnsConfigAtFirstRun()
         {
-            // # 启动与初始化事件：首次运行初始化表头配置 & 绑定本机身份信息
+            // # Startup & initialization events: initialize table header configuration on first run & bind local identity information
             if (AppConfig.GetConfigExists())
             {
                 AppConfig.ClearPicture  = AppConfig.GetValue("UserConfig", "ClearPicture", "1").ToInt();
@@ -66,7 +66,7 @@ namespace StarResonanceDpsAnalysis.Forms
             }
         }
 
-        #region —— 抓包设备/统计 —— 
+        #region —— Packet Capture Device / Statistics ——
 
         public static ICaptureDevice? SelectedDevice { get; set; } = null; // # 抓包设备：程序选中的网卡设备（可能为null，依据设置初始化）
 
@@ -121,7 +121,7 @@ namespace StarResonanceDpsAnalysis.Forms
                 Console.WriteLine($"数据包到达后进行处理时发生异常 {ex.Message}\r\n{ex.StackTrace}");
             }
         }
-        #region StartCapture() 抓包：开始/停止/事件/统计
+        #region StartCapture() Packet capture: start / stop / events / statistics
         /// <summary>
         /// 是否开始抓包
         /// </summary>
@@ -230,7 +230,7 @@ namespace StarResonanceDpsAnalysis.Forms
             StartupInitializer.RefreshNetworkCardSettingTip();
         }
 
-        #region HandleClearData() 响应清空数据
+        #region HandleClearData() Respond to clear data
 
         public void HandleClearData(bool ClearPicture = false)
         {
@@ -814,8 +814,8 @@ namespace StarResonanceDpsAnalysis.Forms
                 else Bind();
             }
         }
-        #region NPC承伤以及玩家对指定NPC造成的伤害排名
-        #region 全程
+        #region NPC damage taken and player damage ranking against a specific NPC
+        #region Full record (entire session)
         /// <summary>刷新：NPC承伤总览（全程 FullRecord）</summary>
         public void RefreshNpcOverview()
         {
@@ -1020,7 +1020,7 @@ namespace StarResonanceDpsAnalysis.Forms
         }
 
         #endregion
-        #region 单场
+        #region Single battle
         /// <summary>构建：NPC承伤总览（当前 Current）</summary>
         private List<NpcRow> BuildNpcOverviewRows_Current()
         {
