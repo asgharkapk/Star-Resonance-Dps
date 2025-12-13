@@ -1492,7 +1492,7 @@
         /// <summary>
         /// 重置所有玩家的死亡计数（CountDead）
         /// </summary>
-        private void ResetAllPlayerDeathCounts()
+        public static void ResetAllPlayerDeathCounts()
         {
             // 使用 StarResonanceDpsAnalysis 的 _sync 锁，确保线程安全
             lock (_sync) // _sync is private but accessible here
