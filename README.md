@@ -3,8 +3,24 @@
 A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceDps) which is fork of [anying1073/StarResonanceDps](https://github.com/anying1073/StarResonanceDps) that is ported from [dmlgzs/StarResonanceDamageCounter](https://github.com/dmlgzs/StarResonanceDamageCounter)
 
 **This fork includes:**
+
 - **more en translations**
-- **fully transparent background in light theme**
+
+- **Theme changes**
+    - **more compact theme**
+    - **changed progressbar colors**
+    - **fully transparent background in light theme**
+    - **removed useless empty space before progress bars**
+    - **Changed proportion % in progressbars to death counter**
+
+- **New Features**
+    - **Adde sorting by per second or total switch**
+    - **Added automatica GitHub Actions Release**
+
+- **Fixed minor bugs**
+    - **fixed always using class not subclass for progress bar color and icon**
+    - **reset death count with reset button**
+
 - **compact theme in [compact branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/cOmPaCt)**
 - **beta test branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/mOnStEr)**
 - **فارسی branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/فارسی)**
