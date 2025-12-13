@@ -12,28 +12,28 @@ namespace StarResonanceDpsAnalysis.Core
     {
         private class PendingEntry
         {
-            public long StartTick;      // ★ Added: start time of the window
-            public long LastTick;       // Last recorded timestamp
-            public int Count;           // Accumulated count in the current window
-            public ulong TotalDamage;   // Accumulated damage in the current window
-            public int CritCount;       // ★ Added: accumulated critical hits in the window
-            public int LuckyCount;      // ★ Added: accumulated lucky hits in the window
+            public long StartTick;      // ★ جدید: زمان شروع پنجره
+            public long LastTick;       // آخرین زمان ثبت شده
+            public int Count;           // تعداد تجمعی در پنجره فعلی
+            public ulong TotalDamage;   // مجموع آسیب در پنجره فعلی
+            public int CritCount;       // ★ جدید: تعداد ضربه بحرانی تجمعی در پنجره
+            public int LuckyCount;      // ★ جدید: تعداد خوش‌شانسی تجمعی در پنجره
         }
 
-        // Merge only by (player, skill ID), variants are not handled
+        // فقط بر اساس (بازیکن، شناسه مهارت) ترکیب می‌شود، تغییرات را پردازش نمی‌کند
         private static readonly ConcurrentDictionary<(ulong Uid, ulong SkillId, bool Treat), PendingEntry> _pending = new();
 
-        // Window threshold (ms): only accumulate in window, do not output; interval > WindowMs will "naturally break"
+        // آستانه پنجره (میلی‌ثانیه): فقط تجمعی است و خروجی نمی‌دهد؛ اگر فاصله >WindowMs باشد "قطع طبیعی" رخ می‌دهد
         private const int WindowMs = 700;
 
-        // Maximum hold duration (ms): even if it never "breaks", force output after this duration
+        // حداکثر طول نگه‌داری تک‌مرحله‌ای (میلی‌ثانیه): حتی اگر پیوسته باشد، پس از این مدت اجباری نوشته می‌شود
         private const int MaxHoldMs = 1000;
 
         private static double TicksPerMs => Stopwatch.Frequency / 1000.0;
 
         /// <summary>
-        /// Record a "skill hit" for skill diary merging.
-        /// Returns (shouldWrite, countToOutput, damageToOutput) indicating whether to write the "previous segment".
+        /// ثبت یک "اصابت مهارت" برای ترکیب در دفترچه مهارت.
+        /// بازگشت (shouldWrite, countToOutput, damageToOutput) برای مشخص کردن نیاز به نوشتن "مرحله قبل".
         /// </summary>
         public static (bool shouldWrite, int countToOutput, ulong damageToOutput, int critToOutput, int luckyToOutput)
       Register(ulong uid, ulong skillId, ulong damage, bool isCrit, bool isLucky, bool treat)
@@ -41,7 +41,7 @@ namespace StarResonanceDpsAnalysis.Core
             long now = Stopwatch.GetTimestamp();
             long windowTicks = (long)(WindowMs * TicksPerMs);
             long holdTicks = (long)(MaxHoldMs * TicksPerMs);
-            var key = (uid, skillId, treat);   // ★ Key
+            var key = (uid, skillId, treat);   // ★ کلیدی
 
             var entry = _pending.GetOrAdd(key, _ => new PendingEntry
             {
@@ -79,13 +79,13 @@ namespace StarResonanceDpsAnalysis.Core
                     return (false, 0, 0, 0, 0);
                 }
 
-                // Need to write out the previous segment
+                // نیاز به نوشتن مرحله قبل
                 int outCount = entry.Count;
                 ulong outDmg = entry.TotalDamage;
                 int outCrit = entry.CritCount;
                 int outLucky = entry.LuckyCount;
 
-                // Current hit becomes the start of a new segment
+                // مرحله جدید به عنوان سر جدید
                 entry.Count = 1;
                 entry.TotalDamage = damage;
                 entry.CritCount = isCrit ? 1 : 0;
@@ -99,61 +99,61 @@ namespace StarResonanceDpsAnalysis.Core
 
 
         /// <summary>
-        /// Called on "hit events": merge multiple segments by (uid, skillId) and write diary when window breaks.
-        /// - Only records if the skillDiary window exists and it's "my own" event (uid == AppConfig.Uid);
-        /// - Uses SkillDiaryGate.Register for window merging;
-        /// - Writes a line when the window breaks (single segment or "skill * count") with damage info.
+        /// فراخوانی در "رویداد اصابت": ترکیب چند مرحله بر اساس (uid, skillId) و نوشتن دفترچه هنگام قطع پنجره.
+        /// - فقط وقتی پنجره skillDiary وجود دارد و رویداد "خودم" است (uid == AppConfig.Uid) ثبت می‌شود؛
+        /// - از SkillDiaryGate.Register برای ترکیب پنجره استفاده شود؛
+        /// - هنگام قطع پنجره، یک خط نوشته می‌شود (تک‌مرحله‌ای یا "مهارت * تعداد") همراه با اطلاعات آسیب.
         /// </summary>
-        /// <param name="uid">UID of the player for this hit</param>
-        /// <param name="skillId">Skill ID (variants not merged)</param>
-        /// <param name="damage">Damage of this hit (for window accumulation and single segment display)</param>
-        /// <param name="iscrit">Whether it's a critical hit</param>
-        /// <param name="isLucky">Whether it's a lucky hit</param>
-        /// <param name="treat">Whether it's healing</param>
+        /// <param name="uid">UID بازیکن مرتبط با این اصابت</param>
+        /// <param name="skillId">شناسه مهارت (تغییرات ترکیب نمی‌شوند)</param>
+        /// <param name="damage">مقدار آسیب این اصابت (برای جمع به مجموع پنجره و نمایش تک‌مرحله‌ای)</param>
+        /// <param name="iscrit">آیا ضربه بحرانی است</param>
+        /// <param name="isLucky">آیا خوش‌شانسی است</param>
+        /// <param name="treat">آیا درمان است</param>
         public static void OnHit(ulong uid, ulong skillId, ulong damage, bool iscrit, bool isLucky, bool treat = false)
         {
-            // 1) Only process own hits
+            // 1) فقط شخص خود را پردازش می‌کند
             if (uid != AppConfig.Uid) return;
 
-            // 2) Take a local snapshot to avoid nulling by other threads after check
+            // 2) گرفتن یک عکس فوری محلی برای جلوگیری از پاک شدن توسط نخ دیگر
             var form = FormManager.skillDiary;
             if (form == null || form.IsDisposed || !form.IsHandleCreated) return;
 
             var (shouldWrite, count, totalDamage, critCount, luckyCount) =
-                SkillDiaryGate.Register(uid, skillId, damage, iscrit, isLucky, treat); // ★ pass treat
+                SkillDiaryGate.Register(uid, skillId, damage, iscrit, isLucky, treat); // ★ انتقال treat
 
             if (!shouldWrite || count <= 0) return;
 
             var duration = StatisticData._manager.GetFormattedCombatDuration();
             if (FormManager.showTotal) duration = FullRecord.GetEffectiveDurationString();
 
-            var name = EmbeddedSkillConfig.GetName(skillId.ToString());
+            var name = EmbeddedSkillConfig.GetLocalizedSkillDefinition(skillId.ToString()).Name;
 
             string line;
             if (count > 1)
             {
-                // Multiple segments
+                // چند مرحله‌ای
                 var parts = new List<string>
             {
                 $"{name}",
-                $"{(treat ? "Healing" : "Damage")}:{totalDamage}",
-                $"Cast count:{count}"
+                $"{(treat ? "درمان" : "آسیب")}:{totalDamage}",
+                $"تعداد اجرای مهارت:{count}"
             };
-                if (critCount > 0) parts.Add($"Critical:{critCount}");
-                if (luckyCount > 0) parts.Add($"Lucky:{luckyCount}");
+                if (critCount > 0) parts.Add($"ضربه بحرانی:{critCount}");
+                if (luckyCount > 0) parts.Add($"خوش‌شانسی:{luckyCount}");
 
                 line = $"[{duration}] " + string.Join(" | ", parts);
             }
             else
             {
-                // Single segment
+                // تک مرحله
                 var parts = new List<string>
                 {
                     $"{name}",
-                    $"{(treat ? "Healing" : "Damage")}:{damage}"
+                    $"{(treat ? "درمان" : "آسیب")}:{damage}"
                 };
-                if (iscrit) parts.Add("Critical");
-                if (isLucky) parts.Add("Lucky");
+                if (iscrit) parts.Add("ضربه بحرانی");
+                if (isLucky) parts.Add("خوش‌شانسی");
 
                 line = $"[{duration}] " + string.Join(" | ", parts);
             }
@@ -166,8 +166,8 @@ namespace StarResonanceDpsAnalysis.Core
 
 
         /// <summary>
-        /// Periodic flush: write segments that have "not continued beyond WindowMs" (avoid waiting indefinitely for next hit).
-        /// Recommended to call in your 1s timer.
+        /// پاکسازی منظم: نوشتن مراحل "فراتر از WindowMs بدون ادامه" (برای جلوگیری از انتظار همیشگی برای ضربه بعدی).
+        /// پیشنهاد می‌شود در تایمر ۱ ثانیه‌ای شما فراخوانی شود.
         /// </summary>
         public static IEnumerable<(ulong Uid, ulong SkillId, int Count, ulong Damage)>
             DrainStalePending()
@@ -186,15 +186,15 @@ namespace StarResonanceDpsAnalysis.Core
                         var outDmg = entry.TotalDamage;
                         entry.Count = 0;
                         entry.TotalDamage = 0;
-                        // Note: do not reset Start/Last, this entry will be reused on next Register
+                        // توجه: Start/Last بازنشانی نمی‌شوند، این مورد در Register بعدی دوباره استفاده می‌شود
                         yield return (kv.Key.Uid, kv.Key.SkillId, outCount, outDmg);
                     }
                 }
             }
         }
         /// <summary>
-        /// Called on clear/end of combat: flush all segments still in window at once (then caller writes to diary).
-        /// After return, these segments are cleared but dictionary entries are not deleted; to fully clear, call Reset().
+        /// فراخوانی هنگام پاکسازی/پایان نبرد: نوشتن یکجا تمام مراحل موجود در پنجره (سپس توسط فراخواننده در دفترچه ثبت شود).
+        /// پس از بازگشت، این مراحل صفر می‌شوند اما موارد دیکشنری حذف نمی‌شوند؛ برای پاکسازی کامل، دوباره Reset() را فراخوانی کنید.
         /// </summary>
         public static IEnumerable<(ulong Uid, ulong SkillId, int Count, ulong Damage)>
             DrainAllPending()
@@ -217,11 +217,13 @@ namespace StarResonanceDpsAnalysis.Core
         }
 
         /// <summary>
-        /// Completely clear internal cache (discard segments not yet written).
-        /// Usually call Reset() after DrainAllPending().
+        /// پاکسازی کامل حافظه داخلی (مراحل ثبت نشده دور ریخته می‌شوند).
+        /// معمولاً پس از DrainAllPending() و تخلیه، Reset() فراخوانی می‌شود.
         /// </summary>
         public static void Reset() => _pending.Clear();
 
 
     }
 }
+
+    
