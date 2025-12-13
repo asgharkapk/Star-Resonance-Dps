@@ -61,7 +61,9 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             // pageHeader1
             // 
-            pageHeader1.BackColor = Color.FromArgb(178, 178, 178);
+            pageHeader1.BackColor = Color.FromArgb(139, 37, 130);
+            pageHeader1.ForeColor = Color.White;
+
             pageHeader1.ColorScheme = TAMode.Dark;
             pageHeader1.Controls.Add(PilingModeCheckbox);
             pageHeader1.Controls.Add(button_ThemeSwitch);
@@ -74,7 +76,6 @@ namespace StarResonanceDpsAnalysis.Forms
             pageHeader1.DividerThickness = 2F;
             pageHeader1.Dock = DockStyle.Top;
             pageHeader1.Font = new Font("SAO Welcome TT", 8.999999F, FontStyle.Bold);
-            pageHeader1.ForeColor = Color.White;
             pageHeader1.Location = new Point(0, 0);
             pageHeader1.Margin = new Padding(2);
             pageHeader1.MaximizeBox = false;
@@ -86,7 +87,7 @@ namespace StarResonanceDpsAnalysis.Forms
             pageHeader1.SubGap = 0;
             pageHeader1.SubText = "当前伤害";
             pageHeader1.TabIndex = 16;
-            pageHeader1.Text = "تست ";
+            pageHeader1.Text = "B.P.S.R - D.P.S Analyzer: ";
             // 
             // PilingModeCheckbox
             // 
