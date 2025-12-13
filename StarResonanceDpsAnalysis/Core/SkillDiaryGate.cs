@@ -12,10 +12,10 @@ namespace StarResonanceDpsAnalysis.Core
     {
         private class PendingEntry
         {
-            public long StartTick;      // ★ Added: start time of the window
-            public long LastTick;       // Last recorded timestamp
-            public int Count;           // Accumulated count in the current window
-            public ulong TotalDamage;   // Accumulated damage in the current window
+            public long StartTick;      // ★ Added: window start timestamp
+            public long LastTick;       // Timestamp of the last record
+            public int Count;           // Accumulated count within the current window
+            public ulong TotalDamage;   // Accumulated damage within the current window
             public int CritCount;       // ★ Added: accumulated critical hits in the window
             public int LuckyCount;      // ★ Added: accumulated lucky hits in the window
         }
@@ -23,17 +23,20 @@ namespace StarResonanceDpsAnalysis.Core
         // Merge only by (player, skill ID), variants are not handled
         private static readonly ConcurrentDictionary<(ulong Uid, ulong SkillId, bool Treat), PendingEntry> _pending = new();
 
-        // Window threshold (ms): only accumulate in window, do not output; interval > WindowMs will "naturally break"
+        // Window threshold (ms): only accumulate within the window, no output;
+        // a gap > WindowMs causes a “natural break”
         private const int WindowMs = 700;
 
-        // Maximum hold duration (ms): even if it never "breaks", force output after this duration
+        // Maximum hold duration (ms): even if it never “breaks”,
+        // force output when this duration is reached
         private const int MaxHoldMs = 1000;
 
         private static double TicksPerMs => Stopwatch.Frequency / 1000.0;
 
         /// <summary>
-        /// Record a "skill hit" for skill diary merging.
-        /// Returns (shouldWrite, countToOutput, damageToOutput) indicating whether to write the "previous segment".
+        /// Record one “skill hit” for skill diary merging.
+        /// Returns (shouldWrite, countToOutput, damageToOutput),
+        /// indicating whether the “previous segment” should be written out.
         /// </summary>
         public static (bool shouldWrite, int countToOutput, ulong damageToOutput, int critToOutput, int luckyToOutput)
       Register(ulong uid, ulong skillId, ulong damage, bool isCrit, bool isLucky, bool treat)
@@ -85,7 +88,7 @@ namespace StarResonanceDpsAnalysis.Core
                 int outCrit = entry.CritCount;
                 int outLucky = entry.LuckyCount;
 
-                // Current hit becomes the start of a new segment
+                // Treat the current hit as the start of a new segment
                 entry.Count = 1;
                 entry.TotalDamage = damage;
                 entry.CritCount = isCrit ? 1 : 0;
@@ -99,35 +102,36 @@ namespace StarResonanceDpsAnalysis.Core
 
 
         /// <summary>
-        /// Called on "hit events": merge multiple segments by (uid, skillId) and write diary when window breaks.
-        /// - Only records if the skillDiary window exists and it's "my own" event (uid == AppConfig.Uid);
+        /// Called in the “hit event”: merge multiple segments by (uid, skillId),
+        /// and write to the diary when the window breaks.
+        /// - Only records when the skill diary window exists and it is “my own” event (uid == AppConfig.Uid);
         /// - Uses SkillDiaryGate.Register for window merging;
-        /// - Writes a line when the window breaks (single segment or "skill * count") with damage info.
+        /// - Writes one line when the window breaks (single segment or “skill * count”), including damage info.
         /// </summary>
         /// <param name="uid">UID of the player for this hit</param>
-        /// <param name="skillId">Skill ID (variants not merged)</param>
-        /// <param name="damage">Damage of this hit (for window accumulation and single segment display)</param>
-        /// <param name="iscrit">Whether it's a critical hit</param>
-        /// <param name="isLucky">Whether it's a lucky hit</param>
-        /// <param name="treat">Whether it's healing</param>
+        /// <param name="skillId">Skill ID (no variant merging)</param>
+        /// <param name="damage">Damage value of this hit (used for window accumulation and single-segment display)</param>
+        /// <param name="iscrit">Whether it is a critical hit</param>
+        /// <param name="isLucky">Whether it is a lucky hit</param>
+        /// <param name="treat">Whether it is healing</param>
         public static void OnHit(ulong uid, ulong skillId, ulong damage, bool iscrit, bool isLucky, bool treat = false)
         {
-            // 1) Only process own hits
+            // 1) Only process my own events
             if (uid != AppConfig.Uid) return;
 
-            // 2) Take a local snapshot to avoid nulling by other threads after check
+            // 2) Take a local snapshot to avoid it being nulled by another thread after checking
             var form = FormManager.skillDiary;
             if (form == null || form.IsDisposed || !form.IsHandleCreated) return;
 
             var (shouldWrite, count, totalDamage, critCount, luckyCount) =
-                SkillDiaryGate.Register(uid, skillId, damage, iscrit, isLucky, treat); // ★ pass treat
+                SkillDiaryGate.Register(uid, skillId, damage, iscrit, isLucky, treat); // ★ Pass treat
 
             if (!shouldWrite || count <= 0) return;
 
             var duration = StatisticData._manager.GetFormattedCombatDuration();
             if (FormManager.showTotal) duration = FullRecord.GetEffectiveDurationString();
 
-            var name = EmbeddedSkillConfig.GetName(skillId.ToString());
+            var name = EmbeddedSkillConfig.GetLocalizedSkillDefinition(skillId.ToString()).Name;
 
             string line;
             if (count > 1)
@@ -137,7 +141,7 @@ namespace StarResonanceDpsAnalysis.Core
             {
                 $"{name}",
                 $"{(treat ? "Healing" : "Damage")}:{totalDamage}",
-                $"Cast count:{count}"
+                $"Casts:{count}"
             };
                 if (critCount > 0) parts.Add($"Critical:{critCount}");
                 if (luckyCount > 0) parts.Add($"Lucky:{luckyCount}");
@@ -166,8 +170,9 @@ namespace StarResonanceDpsAnalysis.Core
 
 
         /// <summary>
-        /// Periodic flush: write segments that have "not continued beyond WindowMs" (avoid waiting indefinitely for next hit).
-        /// Recommended to call in your 1s timer.
+        /// Periodic flush: write out segments that have not continued for longer than WindowMs
+        /// (to avoid waiting forever for the next hit).
+        /// Recommended to call from your 1s timer.
         /// </summary>
         public static IEnumerable<(ulong Uid, ulong SkillId, int Count, ulong Damage)>
             DrainStalePending()
@@ -186,15 +191,18 @@ namespace StarResonanceDpsAnalysis.Core
                         var outDmg = entry.TotalDamage;
                         entry.Count = 0;
                         entry.TotalDamage = 0;
-                        // Note: do not reset Start/Last, this entry will be reused on next Register
+                        // Note: Start/Last are not reset; this entry will be reused on the next Register call
                         yield return (kv.Key.Uid, kv.Key.SkillId, outCount, outDmg);
                     }
                 }
             }
         }
         /// <summary>
-        /// Called on clear/end of combat: flush all segments still in window at once (then caller writes to diary).
-        /// After return, these segments are cleared but dictionary entries are not deleted; to fully clear, call Reset().
+        /// Called when clearing the field / ending combat:
+        /// flush all segments still in the window at once
+        /// (then the caller writes them into the diary).
+        /// After returning, these segments are cleared but dictionary entries are not removed;
+        /// call Reset() if a full clear is needed.
         /// </summary>
         public static IEnumerable<(ulong Uid, ulong SkillId, int Count, ulong Damage)>
             DrainAllPending()
@@ -217,8 +225,8 @@ namespace StarResonanceDpsAnalysis.Core
         }
 
         /// <summary>
-        /// Completely clear internal cache (discard segments not yet written).
-        /// Usually call Reset() after DrainAllPending().
+        /// Completely clear internal cache (unwritten segments will be discarded).
+        /// Generally, call DrainAllPending() to flush first, then call Reset().
         /// </summary>
         public static void Reset() => _pending.Clear();
 
