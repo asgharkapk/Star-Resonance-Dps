@@ -7,7 +7,7 @@ A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceD
 - **more en translations**
 
 - **Theme changes**
-    - **more compact theme**
+    - **removed panel2 and moved it to pageheader1**
     - **changed progressbar colors**
     - **fully transparent background in light theme**
     - **removed useless empty space before progress bars**
@@ -20,6 +20,7 @@ A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceD
 - **Fixed minor bugs**
     - **fixed always using class not subclass for progress bar color and icon**
     - **reset death count with reset button**
+    - **translate skills in skill diary**
 
 - **compact theme in [compact branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/cOmPaCt)**
 - **beta test branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/mOnStEr)**
