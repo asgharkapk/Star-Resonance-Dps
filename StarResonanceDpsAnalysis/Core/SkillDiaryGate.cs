@@ -131,7 +131,7 @@ namespace StarResonanceDpsAnalysis.Core
             var duration = StatisticData._manager.GetFormattedCombatDuration();
             if (FormManager.showTotal) duration = FullRecord.GetEffectiveDurationString();
 
-            var name = EmbeddedSkillConfig.GetName(skillId.ToString());
+            var name = EmbeddedSkillConfig.GetLocalizedSkillDefinition(skillId.ToString()).Name;
 
             string line;
             if (count > 1)
