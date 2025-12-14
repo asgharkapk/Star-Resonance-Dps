@@ -19,6 +19,15 @@ jobs:
         with:
           fetch-depth: 0   # مورد نیاز برای تگ‌گذاری
 
+      - name: Fetch all branches
+        shell: bash
+        run: |
+          echo "::group::Fetching branches"
+          git fetch --all --prune
+          echo "::notice::Remote branches:"
+          git branch -r
+          echo "::endgroup::"
+
       - name: تعیین نسخه بر اساس تاریخ و زمان
         id: set_version
         shell: pwsh
