@@ -27,7 +27,8 @@ jobs:
           $dt = Get-Date -Format "yyyyMMdd-HHmmss"
           $version = "v$dt-nOrMaL"
           echo "VERSION=$version" >> $GITHUB_ENV
-          echo "version=$version" >> $GITHUB_OUTPUT
+          # Use Out-File to reliably set step output on Windows
+          "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
 
       - name: Create Tag
         shell: pwsh
@@ -51,14 +52,13 @@ jobs:
       - name: Zip Build Output
         shell: pwsh
         run: |
-          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-v${{ env.VERSION }}.zip"
+          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-v$env:VERSION.zip"
 
       - name: Create Release
-        id: gh_release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.set_version.outputs.version }}
-          name: BPSR DPS Details Release v${{ steps.set_version.outputs.version }}
+          name: BPSR DPS Details Release ${{ steps.set_version.outputs.version }}
           files: ./Star-Resonance-Dps-v${{ steps.set_version.outputs.version }}.zip
           generate_release_notes: true
 
