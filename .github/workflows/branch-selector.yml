@@ -79,7 +79,9 @@ jobs:
       run: |
         Write-Host "::group::Committing to main branch"
 
-        git checkout main
+        Write-Host "::notice::Checking out main from origin"
+        git fetch origin main
+        git checkout -B main origin/main
 
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
