@@ -205,16 +205,16 @@
     <value>آسیب فعلی</value>
   </data>
   <data name="TotalDamageLabel" xml:space="preserve">
-    <value>DPS</value>
+    <value>زدن</value>
   </data>
   <data name="TotalTreatmentLabel" xml:space="preserve">
     <value>درمان</value>
   </data>
   <data name="AlwaysInjuredLabel" xml:space="preserve">
-    <value>تانکینگ</value>
+    <value>خوردن</value>
   </data>
   <data name="NpcTakeDamageLabel" xml:space="preserve">
-    <value>تانکینگ</value>
+    <value>خوردن</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>تنظیمات</value>
