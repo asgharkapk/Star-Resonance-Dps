@@ -117,47 +117,47 @@ namespace StarResonanceDpsAnalysis
                 }
                 else
                 {
-                    // 匹配“伤害:12345” 或 “治疗:54321”
-                    var kv = Regex.Match(part, @"^(?<k>伤害|治疗)\s*:\s*(?<v>\d+)$");
+                    // 匹配“Dmg:12345” 或 “Heal:54321”
+                    var kv = Regex.Match(part, @"^(?<k>Heal|Dmg)\s*:\s*(?<v>\d+)$");
                     if (kv.Success)
                     {
                         string k = kv.Groups["k"].Value;
                         string v = kv.Groups["v"].Value; // 保留完整数字（不做 K/M 简化）
 
-                        if (k == "伤害")
+                        if (k == "Dmg")
                             Write($"{k}:{v}", colorDmg, FontStyle.Regular);
                         else
                             Write($"{k}:{v}", colorHeal, FontStyle.Regular);
                     }
-                    else if (part.StartsWith("释放次数:") || part.StartsWith("次数:"))
+                    else if (part.StartsWith("Casts:") || part.StartsWith("次数:"))
                     {
                         Write(part, colorCount, FontStyle.Regular);
                     }
-                    else if (part.StartsWith("暴击"))
+                    else if (part.StartsWith("Crit"))
                     {
-                        // 支持 “暴击” 或 “暴击:3”
-                        var n = Regex.Match(part, @"^暴击(?::\s*(?<n>\d+))?$");
+                        // 支持 “Crit” 或 “Crit:3”
+                        var n = Regex.Match(part, @"^Crit(?::\s*(?<n>\d+))?$");
                         if (n.Success)
                         {
-                            string label = n.Groups["n"].Success ? $"暴击 ×{n.Groups["n"].Value}" : "暴击";
+                            string label = n.Groups["n"].Success ? $"Crit ×{n.Groups["n"].Value}" : "Crit";
                             Badge(label, badgeCritBack, badgeCritFore, bold: true);
                         }
                         else
                         {
-                            Badge("暴击", badgeCritBack, badgeCritFore, bold: true);
+                            Badge("Crit", badgeCritBack, badgeCritFore, bold: true);
                         }
                     }
-                    else if (part.StartsWith("幸运"))
+                    else if (part.StartsWith("Luck"))
                     {
-                        var n = Regex.Match(part, @"^幸运(?::\s*(?<n>\d+))?$");
+                        var n = Regex.Match(part, @"^Luck(?::\s*(?<n>\d+))?$");
                         if (n.Success)
                         {
-                            string label = n.Groups["n"].Success ? $"幸运 ×{n.Groups["n"].Value}" : "幸运";
+                            string label = n.Groups["n"].Success ? $"Luck ×{n.Groups["n"].Value}" : "Luck";
                             Badge(label, badgeLuckyBack, badgeLuckyFore, bold: true);
                         }
                         else
                         {
-                            Badge("幸运", badgeLuckyBack, badgeLuckyFore, bold: true);
+                            Badge("Luck", badgeLuckyBack, badgeLuckyFore, bold: true);
                         }
                     }
                     else
@@ -176,8 +176,6 @@ namespace StarResonanceDpsAnalysis
             richTextBox1.SelectionStart = richTextBox1.Text.Length;
             richTextBox1.ScrollToCaret();
         }
-
-
 
         private void SkillDiary_Load(object sender, EventArgs e)
         {
