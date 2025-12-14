@@ -5,7 +5,7 @@
 **Release Notes:** See release page for full notes.
 
 ## Last Commits
-- 21b038f n-release by asgharkapk
+- dcd6d51 release log by asgharkapk
 
 ## Installation
 1. Download the [zip file](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download//Star-Resonance-Dps-.zip)
