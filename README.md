@@ -113,22 +113,22 @@ This release was created automatically via GitHub Actions.
 
 ## فارسی
 
-# Latest Release - v20251214-135416-فارسی
+# آخرین ریلیز - v20251214-140320-فارسی
 
-**Release Tag:** [v20251214-135416-فارسی](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251214-135416-فارسی)
-**File Name:** [Star-Resonance-Dps-v20251214-135416-فارسی.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251214-135416-فارسی/Star-Resonance-Dps-v20251214-135416-فارسی.zip)
-**Release Notes:** See release page for full notes.
+**تگ ریلیز:** [v20251214-140320-فارسی](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251214-140320-فارسی)
+**نام فایل:** [Star-Resonance-Dps-v20251214-140320-فارسی.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251214-140320-فارسی/Star-Resonance-Dps-v20251214-140320-فارسی.zip)
+**یادداشت‌های ریلیز:** برای مشاهده کامل یادداشت‌ها به صفحه ریلیز مراجعه کنید.
 
-## Last Commits
-- 2ff92a7 release persina by asgharkapk - 662f608 pageHeader1 color by asgharkapk - 07cf885 skills translate by asgharkapk - 97d912c skill diary + skill gate by asgharkapk - 8d73f1e skill gate and skill converter by asgharkapk
+## آخرین کامیت‌ها
+- 5905d12 more fa translate توسط asgharkapk - 545345b به‌روزرسانی latest-release.md برای v20251214-140019-فارسی توسط asgharkapk - ba52102 persian release توسط asgharkapk - f1c3b79 Update latest-release.md for v20251214-135416-فارسی توسط asgharkapk - 2ff92a7 release persina توسط asgharkapk
 
-## Installation
-1. Download the [zip file](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251214-135416-فارسی/Star-Resonance-Dps-v20251214-135416-فارسی.zip)
-2. Extract contents
-3. Run Star-Resonance-Dps.exe (Windows)
+## نصب
+1. دانلود [فایل zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251214-140320-فارسی/Star-Resonance-Dps-v20251214-140320-فارسی.zip)
+2. استخراج محتویات
+3. اجرای Star-Resonance-Dps.exe (ویندوز)
 
-## Action
-This release was created automatically via GitHub Actions.
+## اکشن
+این ریلیز به صورت خودکار توسط GitHub Actions ایجاد شده است.
 ---
 ## 📄 License
 
