@@ -52,7 +52,7 @@ jobs:
       - name: Zip Build Output
         shell: pwsh
         run: |
-          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-v$env:VERSION.zip"
+          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-$env:VERSION.zip"
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
@@ -65,15 +65,15 @@ jobs:
       - name: Generate latest-release.md
         shell: pwsh
         run: |
-          $release_url = "https://github.com/${{ env.REPO }}/releases/tag/${{ env.VERSION }}"
-          $zip_url = "https://github.com/${{ env.REPO }}/releases/download/${{ env.VERSION }}/Star-Resonance-Dps-v${{ env.VERSION }}.zip"
+          $release_url = "https://github.com/$($env:REPO)/releases/tag/$($env:VERSION)"
+          $zip_url = "https://github.com/$($env:REPO)/releases/download/$($env:VERSION)/Star-Resonance-Dps-$($env:VERSION).zip"
           $commits = git log -n 5 --pretty=format:'- %h %s by %an'  # last 5 commits
 
           $lines = @(
             "# Latest Release - $($env:VERSION)"
             ""
             "**Release Tag:** [$($env:VERSION)]($release_url)"
-            "**File Name:** [Star-Resonance-Dps-v$($env:VERSION).zip]($zip_url)"
+            "**File Name:** [Star-Resonance-Dps-$($env:VERSION).zip]($zip_url)"
             "**Release Notes:** See release page for full notes."
             ""
             "## Last Commits"
@@ -93,6 +93,6 @@ jobs:
       - name: Commit latest-release.md
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Update latest-release.md for ${{ env.VERSION }}"
+          commit_message: "Update latest-release.md for ${{ steps.set_version.outputs.version }}"
           file_pattern: latest-release.md
           branch: nOrMaL
