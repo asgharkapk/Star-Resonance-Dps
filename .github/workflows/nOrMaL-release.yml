@@ -59,7 +59,7 @@ jobs:
         with:
           tag_name: ${{ steps.set_version.outputs.version }}
           name: BPSR DPS Details Release ${{ steps.set_version.outputs.version }}
-          files: ./Star-Resonance-Dps-v${{ steps.set_version.outputs.version }}.zip
+          files: ./Star-Resonance-Dps-${{ steps.set_version.outputs.version }}.zip
           generate_release_notes: true
 
       - name: Generate latest-release.md
