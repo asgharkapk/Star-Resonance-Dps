@@ -1,4 +1,4 @@
-name: nOrMaL Auto Release
+name: Auto Release nOrMaL
 
 on:
   push:
