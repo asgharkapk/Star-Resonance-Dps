@@ -1,14 +1,14 @@
-# آخرین ریلیز - v20251214-150110-فارسی
+# آخرین ریلیز - v20251214-150404-فارسی
 
-**تگ ریلیز:** [v20251214-150110-فارسی](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251214-150110-فارسی)
-**نام فایل:** [Star-Resonance-Dps-v20251214-150110-فارسی.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251214-150110-فارسی/Star-Resonance-Dps-v20251214-150110-فارسی.zip)
+**تگ ریلیز:** [v20251214-150404-فارسی](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251214-150404-فارسی)
+**نام فایل:** [Star-Resonance-Dps-v20251214-150404-فارسی.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251214-150404-فارسی/Star-Resonance-Dps-v20251214-150404-فارسی.zip)
 **یادداشت‌های ریلیز:** برای مشاهده کامل یادداشت‌ها به صفحه ریلیز مراجعه کنید.
 
 ## آخرین کامیت‌ها
-- a169e20 fa relese yml توسط asgharkapk - ce7b3d8 به‌روزرسانی latest-release.md برای v20251214-145239-فارسی توسط asgharkapk - ca9bfea fa release توسط asgharkapk - ef538f5 persian release توسط asgharkapk - c884913 به‌روزرسانی latest-release.md برای v20251214-140320-فارسی توسط asgharkapk
+- d67a6a5 fa release توسط asgharkapk - 01ecd2a به‌روزرسانی latest-release.md برای v20251214-150110-فارسی توسط asgharkapk - a169e20 fa relese yml توسط asgharkapk - ce7b3d8 به‌روزرسانی latest-release.md برای v20251214-145239-فارسی توسط asgharkapk - ca9bfea fa release توسط asgharkapk
 
 ## نصب
-1. دانلود [فایل zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251214-150110-فارسی/Star-Resonance-Dps-v20251214-150110-فارسی.zip)
+1. دانلود [فایل zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251214-150404-فارسی/Star-Resonance-Dps-v20251214-150404-فارسی.zip)
 2. استخراج محتویات
 3. اجرای Star-Resonance-Dps.exe (ویندوز)
 
