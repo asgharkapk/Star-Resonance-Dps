@@ -11,9 +11,7 @@ jobs:
     runs-on: windows-latest
     
     env:
-      VERSION: v${{ github.run_number }}-nOrMaL   # <<< Store version ONCE
       REPO: ${{ github.repository }}
-      ZIP_FILE: Star-Resonance-Dps-${{ github.run_number }}-nOrMaL.zip
 
     permissions:
       contents: write # Required to create the release and tag
@@ -22,10 +20,19 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Set Version by DateTime
+        id: set_version
+        shell: pwsh
+        run: |
+          $dt = Get-Date -Format "yyyyMMdd-HHmmss"
+          Write-Output "VERSION=v$dt-nOrMaL"
+          echo "VERSION=v$dt-nOrMaL" | Out-File -FilePath version.txt -Encoding ascii
+          echo "VERSION=v$dt-nOrMaL" >> $GITHUB_ENV
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.x' # Ensure this matches your project (6.x, 7.x, or 8.x)
+          dotnet-version: '8.x'
 
       - name: Restore Dependencies
         run: dotnet restore
@@ -36,29 +43,29 @@ jobs:
       - name: Zip Build Output
         shell: pwsh
         run: |
-          Compress-Archive -Path ./publish/* -DestinationPath "./${{ env.ZIP_FILE }}"
+          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-${{ env.VERSION }}.zip"
 
       - name: Create Release
         id: gh_release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ env.VERSION }}
-          name: Release ${{ env.VERSION }}
-          files: ./${{ env.ZIP_FILE }}
+          name: BPSR DPS Details Release ${{ env.VERSION }}
+          files: ./Star-Resonance-Dps-${{ env.VERSION }}.zip
           generate_release_notes: true
 
       - name: Generate latest-release.md
         shell: pwsh
         run: |
           $release_url = "https://github.com/${{ env.REPO }}/releases/tag/${{ env.VERSION }}"
-          $zip_url = "https://github.com/${{ env.REPO }}/releases/download/${{ env.VERSION }}/${{ env.ZIP_FILE }}"
+          $zip_url = "https://github.com/${{ env.REPO }}/releases/download/${{ env.VERSION }}/Star-Resonance-Dps-${{ env.VERSION }}.zip"
           $commits = git log -n 5 --pretty=format:'- %h %s by %an'  # last 5 commits
 
           $lines = @(
             "# Latest Release - $($env:VERSION)"
             ""
             "**Release Tag:** [$($env:VERSION)]($release_url)"
-            "**File Name:** [$($env:ZIP_FILE)]($zip_url)"
+            "**File Name:** [Star-Resonance-Dps-$($env:VERSION).zip]($zip_url)"
             "**Release Notes:** See release page for full notes."
             ""
             "## Last Commits"
@@ -74,7 +81,7 @@ jobs:
           )
 
           $lines | Out-File -FilePath latest-release.md -Encoding UTF8
-          
+
       - name: Commit latest-release.md
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
