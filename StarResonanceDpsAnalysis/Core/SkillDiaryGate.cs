@@ -140,11 +140,11 @@ namespace StarResonanceDpsAnalysis.Core
                 var parts = new List<string>
             {
                 $"{name}",
-                $"{(treat ? "Healing" : "Damage")}:{totalDamage}",
+                $"{(treat ? "Heal" : "Dmg")}:{totalDamage}",
                 $"Casts:{count}"
             };
-                if (critCount > 0) parts.Add($"Critical:{critCount}");
-                if (luckyCount > 0) parts.Add($"Lucky:{luckyCount}");
+                if (critCount > 0) parts.Add($"Crit:{critCount}");
+                if (luckyCount > 0) parts.Add($"Luck:{luckyCount}");
 
                 line = $"[{duration}] " + string.Join(" | ", parts);
             }
@@ -154,10 +154,10 @@ namespace StarResonanceDpsAnalysis.Core
                 var parts = new List<string>
                 {
                     $"{name}",
-                    $"{(treat ? "Healing" : "Damage")}:{damage}"
+                    $"{(treat ? "Heal" : "Dmg")}:{damage}"
                 };
-                if (iscrit) parts.Add("Critical");
-                if (isLucky) parts.Add("Lucky");
+                if (iscrit) parts.Add("Crit");
+                if (isLucky) parts.Add("Luck");
 
                 line = $"[{duration}] " + string.Join(" | ", parts);
             }
