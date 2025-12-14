@@ -11,46 +11,86 @@ jobs:
     permissions:
       contents: write
 
-    ### 1. Checkout with full history
     steps:
+    ### 1. Checkout with full history
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0   # full history
-      
-      ### 2. Fetch the other branches
+        fetch-depth: 0
+
+    ### 2. Fetch all branches
     - name: Fetch all branches
-      run: git fetch --all    
+      run: |
+        echo "::group::Fetching branches"
+        git fetch --all
+        echo "::notice::Branches fetched"
+        git branch -r
+        echo "::endgroup::"
 
     ### 3. Collect the latest-release.md files
     - name: Collect release notes
       shell: bash
       run: |
+        echo "::group::Collecting release notes"
         mkdir -p releases
 
-        git show origin/cOmPaCt:latest-release.md > releases/cOmPaCt.md || echo "_No release yet_" > releases/cOmPaCt.md
-        git show origin/nOrMaL:latest-release.md > releases/nOrMaL.md
-        git show origin/mOnStEr:latest-release.md > releases/mOnStEr.md
-        git show origin/فارسی:latest-release.md > releases/فارسی.md
+        declare -A branches=(
+          ["cOmPaCt"]="origin/cOmPaCt"
+          ["nOrMaL"]="origin/nOrMaL"
+          ["mOnStEr"]="origin/mOnStEr"
+          ["فارسی"]="origin/فارسی"
+        )
+
+        for name in "${!branches[@]}"; do
+          ref="${branches[$name]}"
+          out="releases/$name.md"
+
+          if git show "$ref:latest-release.md" > "$out" 2>/dev/null; then
+            echo "::notice::✔ Collected latest-release.md from $ref"
+          else
+            echo "_No release yet_" > "$out"
+            echo "::warning::✖ latest-release.md missing on $ref"
+          fi
+        done
+
+        echo "::notice::Collected $(ls releases | wc -l) release files"
+        echo "::endgroup::"
 
     ### 4. Merge them into a summary
     - name: Create summary file
       shell: bash
       run: |
+        echo "::group::Creating summary file"
+
         echo "# Branches Release Summary" > branches-release-summary.md
+
         for f in releases/*.md; do
+          echo "::notice::Merging $(basename "$f")"
           echo -e "\n## $(basename "$f" .md)\n" >> branches-release-summary.md
           cat "$f" >> branches-release-summary.md
         done
 
+        echo "::notice::Summary file size: $(wc -l < branches-release-summary.md) lines"
+        echo "::endgroup::"
+
     ### 5. Commit to main
     - name: Commit summary to main
       run: |
+        echo "::group::Committing to main branch"
+
         git checkout main
-        mv branches-release-summary.md .
+
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
-        git add branches-release-summary.md
-        git commit -m "Update branches release summary"
-        git push origin main
 
+        git add branches-release-summary.md
+
+        if git diff --cached --quiet; then
+          echo "::notice::No changes detected, skipping commit"
+        else
+          git commit -m "Update branches release summary"
+          git push origin main
+          echo "::notice::Summary committed and pushed to main"
+        fi
+
+        echo "::endgroup::"
