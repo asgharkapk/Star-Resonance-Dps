@@ -109,13 +109,13 @@
             table_DpsDetailDataTable.Dock = DockStyle.Fill;
             table_DpsDetailDataTable.EmptyImage = Properties.Resources.cancel_hover;
             table_DpsDetailDataTable.FixedHeader = false;
-            table_DpsDetailDataTable.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            table_DpsDetailDataTable.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             table_DpsDetailDataTable.Gap = 8;
             table_DpsDetailDataTable.Gaps = new Size(8, 8);
             table_DpsDetailDataTable.Location = new Point(0, 0);
             table_DpsDetailDataTable.Margin = new Padding(2);
             table_DpsDetailDataTable.Name = "table_DpsDetailDataTable";
-            table_DpsDetailDataTable.RowHeight = 40;
+            table_DpsDetailDataTable.RowHeight = 32;
             table_DpsDetailDataTable.RowSelectedBg = Color.FromArgb(174, 212, 251);
             table_DpsDetailDataTable.Size = new Size(932, 765);
             table_DpsDetailDataTable.TabIndex = 14;
@@ -143,7 +143,7 @@
             TitleText.BackColor = Color.Transparent;
             TitleText.ColorScheme = AntdUI.TAMode.Dark;
             TitleText.Dock = DockStyle.Fill;
-            TitleText.Font = new Font("SAO Welcome TT", 12F, FontStyle.Bold);
+            TitleText.Font = new Font("SAO Welcome TT", 10F, FontStyle.Bold);
             TitleText.Location = new Point(0, 0);
             TitleText.Margin = new Padding(2);
             TitleText.Name = "TitleText";
@@ -159,7 +159,7 @@
             segmented1.BarPosition = AntdUI.TAlignMini.Bottom;
             segmented1.BarSize = 0F;
             segmented1.Dock = DockStyle.Fill;
-            segmented1.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            segmented1.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Bold, GraphicsUnit.Point, 134);
             segmented1.Full = true;
             segmented1.IconGap = 0F;
             segmentedItem1.Text = "Skill Damage Analysis";
@@ -173,7 +173,7 @@
             segmented1.Name = "segmented1";
             segmented1.Round = true;
             segmented1.SelectIndex = 0;
-            segmented1.Size = new Size(347, 40);
+            segmented1.Size = new Size(347, 36);
             segmented1.TabIndex = 16;
             segmented1.Text = "segmented1";
             segmented1.SelectIndexChanged += segmented1_SelectIndexChanged;
@@ -181,7 +181,7 @@
             // NickNameText
             // 
             NickNameText.BackColor = Color.Transparent;
-            NickNameText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            NickNameText.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, 134);
             NickNameText.Location = new Point(20, 28);
             NickNameText.Margin = new Padding(2);
             NickNameText.Name = "NickNameText";
@@ -236,7 +236,7 @@
             LuckyRate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             LuckyRate.BackColor = Color.Transparent;
             LuckyRate.ColorScheme = AntdUI.TAMode.Dark;
-            LuckyRate.Font = new Font("SAO Welcome TT", 10.499999F);
+            LuckyRate.Font = new Font("SAO Welcome TT", 9F);
             LuckyRate.Location = new Point(350, 102);
             LuckyRate.Margin = new Padding(2);
             LuckyRate.Name = "LuckyRate";
@@ -249,7 +249,7 @@
             // 
             TotalDpsText.BackColor = Color.Transparent;
             TotalDpsText.ColorScheme = AntdUI.TAMode.Dark;
-            TotalDpsText.Font = new Font("SAO Welcome TT", 10.499999F);
+            TotalDpsText.Font = new Font("SAO Welcome TT", 9F);
             TotalDpsText.Location = new Point(137, 102);
             TotalDpsText.Margin = new Padding(2);
             TotalDpsText.Name = "TotalDpsText";
@@ -263,7 +263,7 @@
             NumberCriticalHitsLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             NumberCriticalHitsLabel.BackColor = Color.Transparent;
             NumberCriticalHitsLabel.ColorScheme = AntdUI.TAMode.Dark;
-            NumberCriticalHitsLabel.Font = new Font("SAO Welcome TT", 10.499999F);
+            NumberCriticalHitsLabel.Font = new Font("SAO Welcome TT", 9F);
             NumberCriticalHitsLabel.Location = new Point(362, 144);
             NumberCriticalHitsLabel.Margin = new Padding(2);
             NumberCriticalHitsLabel.Name = "NumberCriticalHitsLabel";
@@ -277,7 +277,7 @@
             CritRateText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             CritRateText.BackColor = Color.Transparent;
             CritRateText.ColorScheme = AntdUI.TAMode.Dark;
-            CritRateText.Font = new Font("SAO Welcome TT", 10.499999F);
+            CritRateText.Font = new Font("SAO Welcome TT", 9F);
             CritRateText.Location = new Point(350, 61);
             CritRateText.Margin = new Padding(2);
             CritRateText.Name = "CritRateText";
@@ -291,7 +291,7 @@
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label5.BackColor = Color.Transparent;
             label5.ColorScheme = AntdUI.TAMode.Dark;
-            label5.Font = new Font("HarmonyOS Sans SC", 9F);
+            label5.Font = new Font("HarmonyOS Sans SC", 8F);
             label5.Location = new Point(239, 96);
             label5.Margin = new Padding(2);
             label5.Name = "label5";
@@ -304,7 +304,7 @@
             NumberCriticalHitsText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             NumberCriticalHitsText.BackColor = Color.Transparent;
             NumberCriticalHitsText.ColorScheme = AntdUI.TAMode.Dark;
-            NumberCriticalHitsText.Font = new Font("HarmonyOS Sans SC", 9F);
+            NumberCriticalHitsText.Font = new Font("HarmonyOS Sans SC", 8F);
             NumberCriticalHitsText.Location = new Point(239, 138);
             NumberCriticalHitsText.Margin = new Padding(2);
             NumberCriticalHitsText.Name = "NumberCriticalHitsText";
@@ -316,7 +316,7 @@
             // 
             NumberHitsLabel.BackColor = Color.Transparent;
             NumberHitsLabel.ColorScheme = AntdUI.TAMode.Dark;
-            NumberHitsLabel.Font = new Font("SAO Welcome TT", 10.499999F);
+            NumberHitsLabel.Font = new Font("SAO Welcome TT", 9F);
             NumberHitsLabel.Location = new Point(150, 144);
             NumberHitsLabel.Margin = new Padding(2);
             NumberHitsLabel.Name = "NumberHitsLabel";
@@ -329,7 +329,7 @@
             // 
             label2.BackColor = Color.Transparent;
             label2.ColorScheme = AntdUI.TAMode.Dark;
-            label2.Font = new Font("HarmonyOS Sans SC", 9F);
+            label2.Font = new Font("HarmonyOS Sans SC", 8F);
             label2.Location = new Point(15, 97);
             label2.Margin = new Padding(2);
             label2.Name = "label2";
@@ -341,7 +341,7 @@
             // 
             TotalDamageText.BackColor = Color.Transparent;
             TotalDamageText.ColorScheme = AntdUI.TAMode.Dark;
-            TotalDamageText.Font = new Font("SAO Welcome TT", 10.499999F);
+            TotalDamageText.Font = new Font("SAO Welcome TT", 9F);
             TotalDamageText.Location = new Point(137, 61);
             TotalDamageText.Margin = new Padding(2);
             TotalDamageText.Name = "TotalDamageText";
@@ -354,7 +354,7 @@
             // 
             label17.BackColor = Color.Transparent;
             label17.ColorScheme = AntdUI.TAMode.Dark;
-            label17.Font = new Font("HarmonyOS Sans SC", 9F);
+            label17.Font = new Font("HarmonyOS Sans SC", 8F);
             label17.Location = new Point(15, 138);
             label17.Margin = new Padding(2);
             label17.Name = "label17";
@@ -367,7 +367,7 @@
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.BackColor = Color.Transparent;
             label4.ColorScheme = AntdUI.TAMode.Dark;
-            label4.Font = new Font("HarmonyOS Sans SC", 9F);
+            label4.Font = new Font("HarmonyOS Sans SC", 8F);
             label4.Location = new Point(239, 55);
             label4.Margin = new Padding(2);
             label4.Name = "label4";
@@ -379,7 +379,7 @@
             // 
             label1.BackColor = Color.Transparent;
             label1.ColorScheme = AntdUI.TAMode.Dark;
-            label1.Font = new Font("HarmonyOS Sans SC", 9F);
+            label1.Font = new Font("HarmonyOS Sans SC", 8F);
             label1.Location = new Point(15, 55);
             label1.Margin = new Padding(2);
             label1.Name = "label1";
@@ -392,7 +392,7 @@
             label3.Anchor = AnchorStyles.Top;
             label3.BackColor = Color.Transparent;
             label3.ColorScheme = AntdUI.TAMode.Dark;
-            label3.Font = new Font("Microsoft Sans Serif", 10.999999F, FontStyle.Bold);
+            label3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label3.Location = new Point(159, 18);
             label3.Margin = new Padding(2);
             label3.Name = "label3";
@@ -432,7 +432,7 @@
             BeatenLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BeatenLabel.BackColor = Color.Transparent;
             BeatenLabel.ColorScheme = AntdUI.TAMode.Dark;
-            BeatenLabel.Font = new Font("SAO Welcome TT", 10.499999F);
+            BeatenLabel.Font = new Font("SAO Welcome TT", 9F);
             BeatenLabel.Location = new Point(350, 144);
             BeatenLabel.Margin = new Padding(2);
             BeatenLabel.Name = "BeatenLabel";
@@ -446,7 +446,7 @@
             label13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label13.BackColor = Color.Transparent;
             label13.ColorScheme = AntdUI.TAMode.Dark;
-            label13.Font = new Font("HarmonyOS Sans SC", 9F);
+            label13.Font = new Font("HarmonyOS Sans SC", 8F);
             label13.Location = new Point(239, 138);
             label13.Margin = new Padding(2);
             label13.Name = "label13";
@@ -459,7 +459,7 @@
             AvgDamageText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             AvgDamageText.BackColor = Color.Transparent;
             AvgDamageText.ColorScheme = AntdUI.TAMode.Dark;
-            AvgDamageText.Font = new Font("SAO Welcome TT", 10.499999F);
+            AvgDamageText.Font = new Font("SAO Welcome TT", 9F);
             AvgDamageText.Location = new Point(350, 102);
             AvgDamageText.Margin = new Padding(2);
             AvgDamageText.Name = "AvgDamageText";
@@ -485,7 +485,7 @@
             // 
             CritDamageText.BackColor = Color.Transparent;
             CritDamageText.ColorScheme = AntdUI.TAMode.Dark;
-            CritDamageText.Font = new Font("SAO Welcome TT", 10.499999F);
+            CritDamageText.Font = new Font("SAO Welcome TT", 9F);
             CritDamageText.Location = new Point(137, 102);
             CritDamageText.Margin = new Padding(2);
             CritDamageText.Name = "CritDamageText";
@@ -498,7 +498,7 @@
             // 
             label14.BackColor = Color.Transparent;
             label14.ColorScheme = AntdUI.TAMode.Dark;
-            label14.Font = new Font("HarmonyOS Sans SC", 9F);
+            label14.Font = new Font("HarmonyOS Sans SC", 8F);
             label14.Location = new Point(16, 138);
             label14.Margin = new Padding(2);
             label14.Name = "label14";
@@ -511,7 +511,7 @@
             LuckyDamageText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             LuckyDamageText.BackColor = Color.Transparent;
             LuckyDamageText.ColorScheme = AntdUI.TAMode.Dark;
-            LuckyDamageText.Font = new Font("SAO Welcome TT", 10.499999F);
+            LuckyDamageText.Font = new Font("SAO Welcome TT", 9F);
             LuckyDamageText.Location = new Point(350, 61);
             LuckyDamageText.Margin = new Padding(2);
             LuckyDamageText.Name = "LuckyDamageText";
@@ -525,7 +525,7 @@
             label9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label9.BackColor = Color.Transparent;
             label9.ColorScheme = AntdUI.TAMode.Dark;
-            label9.Font = new Font("HarmonyOS Sans SC", 9F);
+            label9.Font = new Font("HarmonyOS Sans SC", 8F);
             label9.Location = new Point(239, 96);
             label9.Margin = new Padding(2);
             label9.Name = "label9";
@@ -537,7 +537,7 @@
             // 
             label7.BackColor = Color.Transparent;
             label7.ColorScheme = AntdUI.TAMode.Dark;
-            label7.Font = new Font("HarmonyOS Sans SC", 9F);
+            label7.Font = new Font("HarmonyOS Sans SC", 8F);
             label7.Location = new Point(16, 96);
             label7.Margin = new Padding(2);
             label7.Name = "label7";
@@ -549,7 +549,7 @@
             // 
             NormalDamageText.BackColor = Color.Transparent;
             NormalDamageText.ColorScheme = AntdUI.TAMode.Dark;
-            NormalDamageText.Font = new Font("SAO Welcome TT", 10.499999F);
+            NormalDamageText.Font = new Font("SAO Welcome TT", 9F);
             NormalDamageText.Location = new Point(137, 61);
             NormalDamageText.Margin = new Padding(2);
             NormalDamageText.Name = "NormalDamageText";
@@ -563,7 +563,7 @@
             label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label8.BackColor = Color.Transparent;
             label8.ColorScheme = AntdUI.TAMode.Dark;
-            label8.Font = new Font("HarmonyOS Sans SC", 9F);
+            label8.Font = new Font("HarmonyOS Sans SC", 8F);
             label8.Location = new Point(239, 55);
             label8.Margin = new Padding(2);
             label8.Name = "label8";
@@ -575,7 +575,7 @@
             // 
             label6.BackColor = Color.Transparent;
             label6.ColorScheme = AntdUI.TAMode.Dark;
-            label6.Font = new Font("HarmonyOS Sans SC", 9F);
+            label6.Font = new Font("HarmonyOS Sans SC", 8F);
             label6.Location = new Point(16, 55);
             label6.Margin = new Padding(2);
             label6.Name = "label6";
@@ -603,7 +603,7 @@
             label19.Anchor = AnchorStyles.Top;
             label19.BackColor = Color.Transparent;
             label19.ColorScheme = AntdUI.TAMode.Dark;
-            label19.Font = new Font("Microsoft Sans Serif", 10.999999F, FontStyle.Bold);
+            label19.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label19.Location = new Point(159, 18);
             label19.Margin = new Padding(2);
             label19.Name = "label19";
@@ -621,7 +621,7 @@
             // UidText
             // 
             UidText.BackColor = Color.Transparent;
-            UidText.Font = new Font("HarmonyOS Sans SC", 9F);
+            UidText.Font = new Font("HarmonyOS Sans SC", 8F);
             UidText.Location = new Point(155, 28);
             UidText.Margin = new Padding(2);
             UidText.Name = "UidText";
@@ -633,7 +633,7 @@
             // PowerText
             // 
             PowerText.BackColor = Color.Transparent;
-            PowerText.Font = new Font("HarmonyOS Sans SC", 9F);
+            PowerText.Font = new Font("HarmonyOS Sans SC", 8F);
             PowerText.Location = new Point(263, 28);
             PowerText.Margin = new Padding(2);
             PowerText.Name = "PowerText";
@@ -680,7 +680,7 @@
             // Rank_levelLabel
             // 
             Rank_levelLabel.BackColor = Color.Transparent;
-            Rank_levelLabel.Font = new Font("HarmonyOS Sans SC", 9F);
+            Rank_levelLabel.Font = new Font("HarmonyOS Sans SC", 8F);
             Rank_levelLabel.Location = new Point(570, 28);
             Rank_levelLabel.Margin = new Padding(2);
             Rank_levelLabel.Name = "Rank_levelLabel";
@@ -692,7 +692,7 @@
             // LevelLabel
             // 
             LevelLabel.BackColor = Color.Transparent;
-            LevelLabel.Font = new Font("HarmonyOS Sans SC", 9F);
+            LevelLabel.Font = new Font("HarmonyOS Sans SC", 8F);
             LevelLabel.Location = new Point(441, 28);
             LevelLabel.Margin = new Padding(2);
             LevelLabel.Name = "LevelLabel";
@@ -787,8 +787,8 @@
             // collapse1
             // 
             collapse1.Dock = DockStyle.Fill;
-            collapse1.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Bold);
-            collapse1.FontExpand = new Font("HarmonyOS Sans SC", 9F, FontStyle.Bold);
+            collapse1.Font = new Font("HarmonyOS Sans SC", 8F, FontStyle.Bold);
+            collapse1.FontExpand = new Font("HarmonyOS Sans SC", 8F, FontStyle.Bold);
             collapse1.ForeColor = Color.FromArgb(103, 174, 246);
             collapse1.Items.Add(collapseItem1);
             collapse1.Items.Add(collapseItem2);
@@ -804,7 +804,7 @@
             // collapseItem1
             // 
             collapseItem1.Expand = true;
-            collapseItem1.Font = new Font("HarmonyOS Sans SC", 10F, FontStyle.Bold);
+            collapseItem1.Font = new Font("HarmonyOS Sans SC", 9F, FontStyle.Bold);
             collapseItem1.Location = new Point(22, 72);
             collapseItem1.Margin = new Padding(2);
             collapseItem1.Name = "collapseItem1";
@@ -862,7 +862,7 @@
             // 
             label10.BackColor = Color.Transparent;
             label10.Dock = DockStyle.Bottom;
-            label10.Font = new Font("HarmonyOS Sans SC", 9F);
+            label10.Font = new Font("HarmonyOS Sans SC", 8F);
             label10.Location = new Point(0, 765);
             label10.Margin = new Padding(2);
             label10.Name = "label10";
