@@ -1,43 +1,43 @@
-name: فارسی Auto Release
+name: فارسی انتشار خودکار
 
 on:
   push:
     branches:
-      - فارسی   # Trigger on push to فارسی
-  workflow_dispatch: # Allows manual trigger
+      - فارسی   # فعال شدن هنگام push به شاخه فارسی
+  workflow_dispatch: # اجازه اجرای دستی
 
 jobs:
   build-and-release:
     runs-on: windows-latest
 
     permissions:
-      contents: write # Required to create release and tag
+      contents: write # مورد نیاز برای ایجاد ریلیز و تگ
 
     steps:
-      - name: Checkout Code
+      - name: بررسی کد (Checkout Code)
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # Required for tagging
+          fetch-depth: 0   # مورد نیاز برای تگ‌گذاری
 
-      - name: Set Version by DateTime
+      - name: تعیین نسخه بر اساس تاریخ و زمان
         id: set_version
         shell: pwsh
         run: |
-          Write-Host "Setting version based on current date and time..."
+          Write-Host "تعیین نسخه بر اساس تاریخ و زمان فعلی..."
           $dt = Get-Date -Format "yyyyMMdd-HHmmss"
           $version = "v$dt-فارسی"
-          Write-Host "Generated version: $version"
+          Write-Host "نسخه تولید شده: $version"
           
-          # Export as environment variable for this job
+          # صادر کردن به عنوان متغیر محیطی برای این Job
           echo "VERSION=$version" >> $GITHUB_ENV
           
-          # Set step output for referencing later
+          # تعیین خروجی مرحله برای ارجاع بعدی
           "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8
 
-      - name: Create Tag
+      - name: ایجاد تگ
         shell: pwsh
         run: |
-          Write-Host "Configuring Git user..."
+          Write-Host "پیکربندی کاربر Git..."
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
@@ -45,33 +45,33 @@ jobs:
           git fetch --tags
 
           $tag = '${{ steps.set_version.outputs.version }}'
-          Write-Host "Creating Git tag $tag..."
+          Write-Host "ایجاد تگ Git $tag..."
           git tag $tag
-          Write-Host "Pushing Git tag $tag to origin..."
+          Write-Host "ارسال تگ Git $tag به origin..."
           git push origin $tag
-          Write-Host "Tag pushed successfully."
+          Write-Host "تگ با موفقیت ارسال شد."
 
-      - name: Setup .NET
+      - name: نصب .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.x'
 
-      - name: Restore Dependencies
+      - name: بازگردانی وابستگی‌ها
         run: dotnet restore
 
-      - name: Build and Publish
+      - name: ساخت و انتشار
         run: dotnet publish -c Release -r win-x64 --self-contained false -o ./publish
 
-      - name: Zip Build Output
+      - name: فشرده‌سازی خروجی ساخت
         shell: pwsh
         run: |
           $version = '${{ steps.set_version.outputs.version }}'
           $zipPath = "./Star-Resonance-Dps-$version.zip"
-          Write-Host "Zipping build output to $zipPath..."
+          Write-Host "فشرده‌سازی خروجی ساخت در $zipPath..."
           Compress-Archive -Path ./publish/* -DestinationPath $zipPath
-          Write-Host "Zip created: $zipPath"
+          Write-Host "فایل zip ایجاد شد: $zipPath"
 
-      - name: Create Release
+      - name: ایجاد ریلیز
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.set_version.outputs.version }}
@@ -81,14 +81,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Log Release Creation
+      - name: ثبت لاگ ایجاد ریلیز
         shell: pwsh
         run: |
           $version = '${{ steps.set_version.outputs.version }}'
-          Write-Host "Release creation requested for tag: $version"
-          Write-Host "Release file: Star-Resonance-Dps-$version.zip"
+          Write-Host "درخواست ایجاد ریلیز برای تگ: $version"
+          Write-Host "فایل ریلیز: Star-Resonance-Dps-$version.zip"
 
-      - name: Generate latest-release.md
+      - name: تولید فایل latest-release.md
         shell: pwsh
         run: |
           $version = '${{ steps.set_version.outputs.version }}'
@@ -96,40 +96,40 @@ jobs:
           $release_url = "https://github.com/$repo/releases/tag/$version"
           $zip_url = "https://github.com/$repo/releases/download/$version/Star-Resonance-Dps-$version.zip"
 
-          $commits = git log -n 5 --pretty=format:'- %h %s by %an'
+          $commits = git log -n 5 --pretty=format:'- %h %s توسط %an'
 
           $lines = @(
-            "# Latest Release - $version"
+            "# آخرین ریلیز - $version"
             ""
-            "**Release Tag:** [$version]($release_url)"
-            "**File Name:** [Star-Resonance-Dps-$version.zip]($zip_url)"
-            "**Release Notes:** See release page for full notes."
+            "**تگ ریلیز:** [$version]($release_url)"
+            "**نام فایل:** [Star-Resonance-Dps-$version.zip]($zip_url)"
+            "**یادداشت‌های ریلیز:** برای مشاهده کامل یادداشت‌ها به صفحه ریلیز مراجعه کنید."
             ""
-            "## Last Commits"
+            "## آخرین کامیت‌ها"
             "$commits"
             ""
-            "## Installation"
-            "1. Download the [zip file]($zip_url)"
-            "2. Extract contents"
-            "3. Run `Star-Resonance-Dps.exe` (Windows)"
+            "## نصب"
+            "1. دانلود [فایل zip]($zip_url)"
+            "2. استخراج محتویات"
+            "3. اجرای `Star-Resonance-Dps.exe` (ویندوز)"
             ""
-            "## Action"
-            "This release was created automatically via GitHub Actions."
+            "## اکشن"
+            "این ریلیز به صورت خودکار توسط GitHub Actions ایجاد شده است."
           )
 
           $lines | Out-File -FilePath latest-release.md -Encoding UTF8
-          Write-Host "latest-release.md generated successfully"
+          Write-Host "latest-release.md با موفقیت تولید شد"
 
-      - name: Commit latest-release.md
+      - name: کامیت کردن latest-release.md
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Update latest-release.md for ${{ steps.set_version.outputs.version }}"
+          commit_message: "به‌روزرسانی latest-release.md برای ${{ steps.set_version.outputs.version }}"
           file_pattern: latest-release.md
           branch: فارسی
 
-      - name: Log Commit
+      - name: ثبت لاگ کامیت
         shell: pwsh
         run: |
           $version = '${{ steps.set_version.outputs.version }}'
-          Write-Host "latest-release.md committed to branch فارسی"
-          Write-Host "Commit message: Update latest-release.md for $version"
+          Write-Host "latest-release.md به شاخه فارسی کامیت شد"
+          Write-Host "پیام کامیت: به‌روزرسانی latest-release.md برای $version"
