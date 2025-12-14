@@ -29,6 +29,14 @@ jobs:
           echo "VERSION=$version" >> $GITHUB_ENV
           echo "version=$version" >> $GITHUB_OUTPUT
 
+      - name: Create Tag
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag $env:VERSION
+          git push origin $env:VERSION
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
@@ -50,7 +58,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.set_version.outputs.version }}
-          name: BPSR DPS Details Release ${{ steps.set_version.outputs.version }}
+          name: BPSR DPS Details Release v${{ steps.set_version.outputs.version }}
           files: ./Star-Resonance-Dps-v${{ steps.set_version.outputs.version }}.zip
           generate_release_notes: true
 
