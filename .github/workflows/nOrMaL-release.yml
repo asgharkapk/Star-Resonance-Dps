@@ -28,8 +28,12 @@ jobs:
           $dt = Get-Date -Format "yyyyMMdd-HHmmss"
           $version = "v$dt-nOrMaL"
           Write-Host "Generated version: $version"
+          
+          # Set environment variable for later steps
           echo "VERSION=$version" >> $GITHUB_ENV
-          "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          
+          # Set step output properly
+          "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8
 
       - name: Create Tag
         shell: pwsh
@@ -69,12 +73,13 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.set_version.outputs.version }}
-          name: Release ${{ steps.set_version.outputs.version }}
-          files: ./Star-Resonance-Dps-${{ steps.set_version.outputs.version }}.zip
+          tag_name: $env:VERSION
+          name: Release $env:VERSION
+          files: ./Star-Resonance-Dps-$env:VERSION.zip
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
         # Logging wrapper
         # softprops/action-gh-release doesn't have verbose mode, so we wrap in a logging step
 
