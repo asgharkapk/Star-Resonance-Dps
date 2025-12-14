@@ -73,10 +73,11 @@ jobs:
         echo "::notice::Summary file size: $(wc -l < branches-release-summary.md) lines"
         echo "::endgroup::"
 
-    ### 5. Commit to main
+    ### 5. Commit summary to main
     - name: Commit summary to main
+      shell: pwsh
       run: |
-        echo "::group::Committing to main branch"
+        Write-Host "::group::Committing to main branch"
 
         git checkout main
 
@@ -85,12 +86,14 @@ jobs:
 
         git add branches-release-summary.md
 
-        if git diff --cached --quiet; then
-          echo "::notice::No changes detected, skipping commit"
-        else
+        git diff --cached --quiet
+        if ($LASTEXITCODE -eq 0) {
+          Write-Host "::notice::No changes detected, skipping commit"
+        }
+        else {
           git commit -m "Update branches release summary"
           git push origin main
-          echo "::notice::Summary committed and pushed to main"
-        fi
+          Write-Host "::notice::Summary committed and pushed to main"
+        }
 
-        echo "::endgroup::"
+        Write-Host "::endgroup::"
