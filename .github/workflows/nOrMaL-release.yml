@@ -9,7 +9,7 @@ on:
 jobs:
   build-and-release:
     runs-on: windows-latest
-    
+
     env:
       REPO: ${{ github.repository }}
 
@@ -24,19 +24,24 @@ jobs:
         id: set_version
         shell: pwsh
         run: |
+          Write-Host "Setting version based on current date and time..."
           $dt = Get-Date -Format "yyyyMMdd-HHmmss"
           $version = "v$dt-nOrMaL"
+          Write-Host "Generated version: $version"
           echo "VERSION=$version" >> $GITHUB_ENV
-          # Use Out-File to reliably set step output on Windows
           "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
 
       - name: Create Tag
         shell: pwsh
         run: |
+          Write-Host "Configuring Git user..."
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          Write-Host "Creating Git tag $env:VERSION..."
           git tag $env:VERSION
+          Write-Host "Pushing Git tag $env:VERSION to origin..."
           git push origin $env:VERSION
+          Write-Host "Tag pushed successfully."
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -44,30 +49,51 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Restore Dependencies
-        run: dotnet restore
+        run: |
+          Write-Host "Restoring .NET dependencies..."
+          dotnet restore
 
       - name: Build and Publish
-        run: dotnet publish -c Release -r win-x64 --self-contained false -o ./publish
+        run: |
+          Write-Host "Building and publishing project..."
+          dotnet publish -c Release -r win-x64 --self-contained false -o ./publish
+          Write-Host "Build and publish complete."
 
       - name: Zip Build Output
         shell: pwsh
         run: |
+          Write-Host "Zipping build output..."
           Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-$env:VERSION.zip"
+          Write-Host "Zip created: Star-Resonance-Dps-$env:VERSION.zip"
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.set_version.outputs.version }}
-          name: BPSR DPS Details Release ${{ steps.set_version.outputs.version }}
+          name: Release ${{ steps.set_version.outputs.version }}
           files: ./Star-Resonance-Dps-${{ steps.set_version.outputs.version }}.zip
           generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Logging wrapper
+        # softprops/action-gh-release doesn't have verbose mode, so we wrap in a logging step
+      - name: Log Release Creation
+        shell: pwsh
+        run: |
+          Write-Host "Release creation requested for tag: $(${{ steps.set_version.outputs.version }})"
+          Write-Host "Release file: Star-Resonance-Dps-$(${{ steps.set_version.outputs.version }}).zip"
+          Write-Host "Check GitHub Actions logs to verify release creation."
 
       - name: Generate latest-release.md
         shell: pwsh
         run: |
+          Write-Host "Generating latest-release.md..."
           $release_url = "https://github.com/$($env:REPO)/releases/tag/$($env:VERSION)"
           $zip_url = "https://github.com/$($env:REPO)/releases/download/$($env:VERSION)/Star-Resonance-Dps-$($env:VERSION).zip"
-          $commits = git log -n 5 --pretty=format:'- %h %s by %an'  # last 5 commits
+
+          Write-Host "Fetching last 5 commits..."
+          $commits = git log -n 5 --pretty=format:'- %h %s by %an'
+          Write-Host $commits
 
           $lines = @(
             "# Latest Release - $($env:VERSION)"
@@ -89,6 +115,8 @@ jobs:
           )
 
           $lines | Out-File -FilePath latest-release.md -Encoding UTF8
+          Write-Host "latest-release.md generated successfully:"
+          Get-Content latest-release.md | ForEach-Object { Write-Host $_ }
 
       - name: Commit latest-release.md
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -96,3 +124,9 @@ jobs:
           commit_message: "Update latest-release.md for ${{ steps.set_version.outputs.version }}"
           file_pattern: latest-release.md
           branch: nOrMaL
+        # Add log
+      - name: Log Commit
+        shell: pwsh
+        run: |
+          Write-Host "latest-release.md committed to branch nOrMaL"
+          Write-Host "Commit message: Update latest-release.md for $($env:VERSION)"
