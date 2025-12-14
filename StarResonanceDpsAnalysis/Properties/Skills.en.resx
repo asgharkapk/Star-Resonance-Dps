@@ -118,85 +118,85 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Skill_1201_Name" xml:space="preserve">
-    <value>Raincall Surge</value>
+    <value>هجومِ باران‌خوان</value>
   </data>
   <data name="Skill_1202_Name" xml:space="preserve">
-    <value>Rain Tide - Curving Bullet</value>
+    <value>مدِ باران – گلولهٔ منحنی</value>
   </data>
   <data name="Skill_1203_Name" xml:space="preserve">
-    <value>Rain Tide - Final Strike</value>
+    <value>موج باران – ضربهٔ نهایی</value>
   </data>
   <data name="Skill_1204_Name" xml:space="preserve">
-    <value>Rain Tide - Basic Attack Stage 1</value>
+    <value>جزرومد باران – حملهٔ پایه ۱</value>
   </data>
   <data name="Skill_1210_Name" xml:space="preserve">
-    <value>Maelstrom</value>
+    <value>گرداب</value>
   </data>
   <data name="Skill_1211_Name" xml:space="preserve">
-    <value>Crystal Veil</value>
+    <value>نقاب کریستالی</value>
   </data>
   <data name="Skill_1216_Name" xml:space="preserve">
-    <value>Enhanced Clearfall Orb</value>
+    <value>گوی شفاف تقویت‌شده</value>
   </data>
   <data name="Skill_1219_Name" xml:space="preserve">
-    <value>Ice Tornado</value>
+    <value>توفان یخ</value>
   </data>
   <data name="Skill_1222_Name" xml:space="preserve">
-    <value>Phantom Dash</value>
+    <value>جهش شبح</value>
   </data>
   <data name="Skill_1223_Name" xml:space="preserve">
-    <value>Phantom Dash</value>
+    <value>جهش شبح</value>
   </data>
   <data name="Skill_1238_Name" xml:space="preserve">
-    <value>Tidal Vortex - Passive Skill</value>
+    <value>گرداب جزر و مد – توانایی غیرفعال</value>
   </data>
   <data name="Skill_1239_Name" xml:space="preserve">
-    <value>Meteor Storm</value>
+    <value>باران شهابی</value>
   </data>
   <data name="Skill_1240_Name" xml:space="preserve">
-    <value>Frozen Gale</value>
+    <value>نسیم منجمد</value>
   </data>
   <data name="Skill_1241_Name" xml:space="preserve">
-    <value>Frostbeam</value>
+    <value>اشعهٔ منجمد</value>
   </data>
   <data name="Skill_1242_Name" xml:space="preserve">
-    <value>Frost Lance</value>
+    <value>نیزهٔ منجمد</value>
   </data>
   <data name="Skill_1243_Name" xml:space="preserve">
-    <value>Permafrost</value>
+    <value>زمین منجمد</value>
   </data>
   <data name="Skill_1244_Name" xml:space="preserve">
-    <value>Blizzard</value>
+    <value>برف‌کوبی</value>
   </data>
   <data name="Skill_1245_Name" xml:space="preserve">
-    <value>Frost Shelter</value>
+    <value>پناهگاه منجمد</value>
   </data>
   <data name="Skill_1246_Name" xml:space="preserve">
-    <value>Tidepool</value>
+    <value>گودال جزر و مد</value>
   </data>
   <data name="Skill_1247_Name" xml:space="preserve">
-    <value>Talent Triggered Comet</value>
+    <value>دنباله‌دار مهارتی</value>
   </data>
   <data name="Skill_1248_Name" xml:space="preserve">
-    <value>Glacier Hymn</value>
+    <value>سرود یخی</value>
   </data>
   <data name="Skill_1249_Name" xml:space="preserve">
-    <value>Cooperative Crystal</value>
+    <value>کریستال مشارکتی</value>
   </data>
   <data name="Skill_1250_Name" xml:space="preserve">
-    <value>Water Vortex</value>
+    <value>گرداب</value>
   </data>
   <data name="Skill_1251_Name" xml:space="preserve">
-    <value>Water Vortex</value>
+    <value>گرداب</value>
   </data>
   <data name="Skill_1256_Name" xml:space="preserve">
-    <value>Tide Convergence - Water Tornado</value>
+    <value>همگرایی جزرومد – توفان آب</value>
   </data>
   <data name="Skill_1257_Name" xml:space="preserve">
-    <value>Blizzard</value>
+    <value>توفان برفی</value>
   </data>
   <data name="Skill_1258_Name" xml:space="preserve">
-    <value>Talent - Crystal Fall</value>
+    <value>مهارت – ریزش کریستال</value>
   </data>
   <data name="Skill_1259_Name" xml:space="preserve">
     <value>Frost Comet</value>
