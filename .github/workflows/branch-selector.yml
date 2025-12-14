@@ -105,6 +105,32 @@ jobs:
 
         echo "::endgroup::"
 
+    ### 4.5 Build README.md from parts + summary
+    - name: Build README.md
+      shell: bash
+      run: |
+        echo "::group::Building README.md"
+
+        for f in README.part1 branches-release-summary.md README.part2; do
+          if [ ! -f "$f" ]; then
+            echo "::error::Missing required file: $f"
+            exit 1
+          fi
+        done
+
+        cat README.part1 \
+            branches-release-summary.md \
+            README.part2 > README.md
+
+        lines=$(wc -l < README.md)
+        size=$(wc -c < README.md)
+
+        echo "::notice::README.md generated ($lines lines, $size bytes)"
+        echo "::notice::Preview (first 20 lines):"
+        head -n 20 README.md
+
+        echo "::endgroup::"
+
     ### 5. Commit summary to current branch
     - name: Commit summary to current branch
       shell: pwsh
@@ -121,7 +147,7 @@ jobs:
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
 
-        git add branches-release-summary.md
+        git add branches-release-summary.md README.md
 
         Write-Host "::notice::Git status:"
         git status --short
