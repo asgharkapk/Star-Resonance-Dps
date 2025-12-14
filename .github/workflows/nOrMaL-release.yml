@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # ✅ Required for tagging
 
       - name: Set Version by DateTime
         id: set_version
@@ -41,6 +43,10 @@ jobs:
           Write-Host "Configuring Git user..."
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git fetch --prune --unshallow
+          git fetch --tags
+
           Write-Host "Creating Git tag $env:VERSION..."
           git tag $env:VERSION
           Write-Host "Pushing Git tag $env:VERSION to origin..."
