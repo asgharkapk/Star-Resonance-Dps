@@ -12,6 +12,19 @@ jobs:
       contents: write
 
     steps:
+    ### 0. Environment diagnostics
+    - name: Environment diagnostics
+      shell: bash
+      run: |
+        echo "::group::Environment diagnostics"
+        echo "::notice::Runner: $RUNNER_OS"
+        echo "::notice::Repository: $GITHUB_REPOSITORY"
+        echo "::notice::Actor: $GITHUB_ACTOR"
+        echo "::notice::Ref: $GITHUB_REF"
+        echo "::notice::SHA: $GITHUB_SHA"
+        git --version
+        echo "::endgroup::"
+
     ### 1. Checkout with full history
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -20,10 +33,11 @@ jobs:
 
     ### 2. Fetch all branches
     - name: Fetch all branches
+      shell: bash
       run: |
         echo "::group::Fetching branches"
-        git fetch --all
-        echo "::notice::Branches fetched"
+        git fetch --all --prune
+        echo "::notice::Remote branches:"
         git branch -r
         echo "::endgroup::"
 
@@ -45,15 +59,25 @@ jobs:
           ref="${branches[$name]}"
           out="releases/$name.md"
 
-          if git show "$ref:latest-release.md" > "$out" 2>/dev/null; then
-            echo "::notice::✔ Collected latest-release.md from $ref"
+          echo "::notice::Processing $ref"
+
+          if git rev-parse --verify "$ref" >/dev/null 2>&1; then
+            if git show "$ref:latest-release.md" > "$out" 2>/dev/null; then
+              lines=$(wc -l < "$out")
+              size=$(wc -c < "$out")
+              echo "::notice::✔ Found latest-release.md on $ref ($lines lines, $size bytes)"
+            else
+              echo "_No release yet_" > "$out"
+              echo "::warning::✖ latest-release.md missing on $ref"
+            fi
           else
-            echo "_No release yet_" > "$out"
-            echo "::warning::✖ latest-release.md missing on $ref"
+            echo "_Branch not found_" > "$out"
+            echo "::error::✖ Branch $ref does not exist"
           fi
         done
 
-        echo "::notice::Collected $(ls releases | wc -l) release files"
+        echo "::notice::Release files created:"
+        ls -lh releases
         echo "::endgroup::"
 
     ### 4. Merge them into a summary
@@ -65,12 +89,20 @@ jobs:
         echo "# Branches Release Summary" > branches-release-summary.md
 
         for f in releases/*.md; do
-          echo "::notice::Merging $(basename "$f")"
-          echo -e "\n## $(basename "$f" .md)\n" >> branches-release-summary.md
+          name=$(basename "$f" .md)
+          lines=$(wc -l < "$f")
+          echo "::notice::Merging $name ($lines lines)"
+
+          echo -e "\n## $name\n" >> branches-release-summary.md
           cat "$f" >> branches-release-summary.md
         done
 
-        echo "::notice::Summary file size: $(wc -l < branches-release-summary.md) lines"
+        total_lines=$(wc -l < branches-release-summary.md)
+        echo "::notice::Final summary size: $total_lines lines"
+
+        echo "::notice::Preview (first 20 lines):"
+        head -n 20 branches-release-summary.md
+
         echo "::endgroup::"
 
     ### 5. Commit summary to main
@@ -79,23 +111,33 @@ jobs:
       run: |
         Write-Host "::group::Committing to main branch"
 
-        Write-Host "::notice::Checking out main from origin"
+        Write-Host "::notice::Fetching and resetting main from origin"
         git fetch origin main
         git checkout -B main origin/main
+
+        Write-Host "::notice::Current HEAD:"
+        git --no-pager log -1 --oneline
 
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
 
         git add branches-release-summary.md
 
+        Write-Host "::notice::Git status:"
+        git status --short
+
         git diff --cached --quiet
         if ($LASTEXITCODE -eq 0) {
           Write-Host "::notice::No changes detected, skipping commit"
         }
         else {
+          Write-Host "::notice::Committing changes"
           git commit -m "Update branches release summary"
+
+          Write-Host "::notice::Pushing to origin/main"
           git push origin main
-          Write-Host "::notice::Summary committed and pushed to main"
+
+          Write-Host "::notice::Push completed successfully"
         }
 
         Write-Host "::endgroup::"
