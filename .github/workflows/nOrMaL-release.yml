@@ -54,26 +54,26 @@ jobs:
           $zip_url = "https://github.com/${{ env.REPO }}/releases/download/${{ env.VERSION }}/${{ env.ZIP_FILE }}"
           $commits = git log -n 5 --pretty=format:'- %h %s by %an'  # last 5 commits
 
-          $content = @"
-# Latest Release - $($env:VERSION)
+          $lines = @(
+            "# Latest Release - $($env:VERSION)"
+            ""
+            "**Release Tag:** [$($env:VERSION)]($release_url)"
+            "**File Name:** [$($env:ZIP_FILE)]($zip_url)"
+            "**Release Notes:** See release page for full notes."
+            ""
+            "## Last Commits"
+            "$commits"
+            ""
+            "## Installation"
+            "1. Download the [zip file]($zip_url)"
+            "2. Extract contents"
+            "3. Run `Star-Resonance-Dps.exe` (Windows)"
+            ""
+            "## Action"
+            "This release was created automatically via GitHub Actions."
+          )
 
-**Release Tag:** [$($env:VERSION)]($release_url)  
-**File Name:** [$($env:ZIP_FILE)]($zip_url)  
-**Release Notes:** See release page for full notes.  
-
-## Last Commits
-$commits
-
-## Installation
-1. Download the [zip file]($zip_url)
-2. Extract contents
-3. Run `Star-Resonance-Dps.exe` (Windows)  
-
-## Action
-This release was created automatically via GitHub Actions.
-"@
-
-          $content | Out-File -FilePath latest-release.md -Encoding UTF8
+          $lines | Out-File -FilePath latest-release.md -Encoding UTF8
           
       - name: Commit latest-release.md
         uses: stefanzweifel/git-auto-commit-action@v4
