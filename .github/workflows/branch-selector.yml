@@ -3,7 +3,7 @@ name: SELECTOR Auto README
 on:
   push:
     branches:
-      - '**'   # '**' matches all branches
+      - BRANCH_SELECTOR
   workflow_dispatch:
 
 jobs:
@@ -14,11 +14,6 @@ jobs:
       contents: write
 
     steps:
-    ### 0.5 Wait for 2 minutes to allow other workflows to finish
-    - name: Wait 2 minutes
-      run: sleep 120
-      shell: bash
-
     ### 0. Environment diagnostics
     - name: Environment diagnostics
       shell: bash
