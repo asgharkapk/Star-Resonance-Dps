@@ -1,0 +1,171 @@
+name: SELECTOR Auto README
+
+on:
+  push:
+    branches:
+      - BRANCH_SELECTOR
+  workflow_dispatch:
+
+jobs:
+  build-and-release:
+    runs-on: windows-latest
+    
+    permissions:
+      contents: write
+
+    steps:
+    ### 0. Environment diagnostics
+    - name: Environment diagnostics
+      shell: bash
+      run: |
+        echo "::group::Environment diagnostics"
+        echo "::notice::Runner: $RUNNER_OS"
+        echo "::notice::Repository: $GITHUB_REPOSITORY"
+        echo "::notice::Actor: $GITHUB_ACTOR"
+        echo "::notice::Ref: $GITHUB_REF"
+        echo "::notice::SHA: $GITHUB_SHA"
+        git --version
+        echo "::endgroup::"
+
+    ### 1. Checkout with full history
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    ### 2. Fetch all branches
+    - name: Fetch all branches
+      shell: bash
+      run: |
+        echo "::group::Fetching branches"
+        git fetch --all --prune
+        echo "::notice::Remote branches:"
+        git branch -r
+        echo "::endgroup::"
+
+    ### 3. Collect the latest-release.md files
+    - name: Collect release notes
+      shell: bash
+      run: |
+        echo "::group::Collecting release notes"
+        mkdir -p releases
+
+        declare -A branches=(
+          ["cOmPaCt"]="origin/cOmPaCt"
+          ["nOrMaL"]="origin/nOrMaL"
+          ["mOnStEr"]="origin/mOnStEr"
+          ["فارسی"]="origin/فارسی"
+        )
+
+        for name in "${!branches[@]}"; do
+          ref="${branches[$name]}"
+          out="releases/$name.md"
+
+          echo "::notice::Processing $ref"
+
+          if git rev-parse --verify "$ref" >/dev/null 2>&1; then
+            if git show "$ref:latest-release.md" > "$out" 2>/dev/null; then
+              lines=$(wc -l < "$out")
+              size=$(wc -c < "$out")
+              echo "::notice::✔ Found latest-release.md on $ref ($lines lines, $size bytes)"
+            else
+              echo "_No release yet_" > "$out"
+              echo "::warning::✖ latest-release.md missing on $ref"
+            fi
+          else
+            echo "_Branch not found_" > "$out"
+            echo "::error::✖ Branch $ref does not exist"
+          fi
+        done
+
+        echo "::notice::Release files created:"
+        ls -lh releases
+        echo "::endgroup::"
+
+    ### 4. Merge them into a summary
+    - name: Create summary file
+      shell: bash
+      run: |
+        echo "::group::Creating summary file"
+
+        echo "# Branches Release Summary" > branches-release-summary.md
+
+        for f in releases/*.md; do
+          name=$(basename "$f" .md)
+          lines=$(wc -l < "$f")
+          echo "::notice::Merging $name ($lines lines)"
+
+          echo -e "\n## $name\n" >> branches-release-summary.md
+          cat "$f" >> branches-release-summary.md
+        done
+
+        total_lines=$(wc -l < branches-release-summary.md)
+        echo "::notice::Final summary size: $total_lines lines"
+
+        echo "::notice::Preview (first 20 lines):"
+        head -n 20 branches-release-summary.md
+
+        echo "::endgroup::"
+
+    ### 4.5 Build README.md from parts + summary
+    - name: Build README.md
+      shell: bash
+      run: |
+        echo "::group::Building README.md"
+
+        for f in README.part1 branches-release-summary.md README.part2; do
+          if [ ! -f "$f" ]; then
+            echo "::error::Missing required file: $f"
+            exit 1
+          fi
+        done
+
+        cat README.part1 \
+            branches-release-summary.md \
+            README.part2 > README.md
+
+        lines=$(wc -l < README.md)
+        size=$(wc -c < README.md)
+
+        echo "::notice::README.md generated ($lines lines, $size bytes)"
+        echo "::notice::Preview (first 20 lines):"
+        head -n 20 README.md
+
+        echo "::endgroup::"
+
+    ### 5. Commit summary to current branch
+    - name: Commit summary to current branch
+      shell: pwsh
+      run: |
+        Write-Host "::group::Committing to current branch"
+
+        # Detect current branch
+        $branch = git rev-parse --abbrev-ref HEAD
+        Write-Host "::notice::Current branch: $branch"
+
+        Write-Host "::notice::Current HEAD:"
+        git --no-pager log -1 --oneline
+
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+
+        git add branches-release-summary.md README.md
+
+        Write-Host "::notice::Git status:"
+        git status --short
+
+        git diff --cached --quiet
+        if ($LASTEXITCODE -eq 0) {
+          Write-Host "::notice::No changes detected, skipping commit"
+        }
+        else {
+          Write-Host "::notice::Committing changes"
+          git commit -m "Update branches release summary"
+
+          Write-Host "::notice::Pushing to origin/$branch"
+          git push origin $branch
+
+          Write-Host "::notice::Push completed successfully"
+        }
+
+        Write-Host "::endgroup::"
