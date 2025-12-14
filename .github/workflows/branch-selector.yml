@@ -24,20 +24,23 @@ jobs:
 
     ### 3. Collect the latest-release.md files
     - name: Collect release notes
+      shell: bash
       run: |
-        mkdir releases
-        git show cOmPaCt:latest-release.md > releases/branch1.md
-        git show nOrMaL:latest-release.md > releases/branch2.md
-        git show mOnStEr:latest-release.md > releases/branch3.md
-        git show فارسی:latest-release.md > releases/branch4.md
+        mkdir -p releases
+
+        git show origin/cOmPaCt:latest-release.md > releases/cOmPaCt.md || echo "_No release yet_" > releases/cOmPaCt.md
+        git show origin/nOrMaL:latest-release.md > releases/nOrMaL.md
+        git show origin/mOnStEr:latest-release.md > releases/mOnStEr.md
+        git show origin/فارسی:latest-release.md > releases/فارسی.md
 
     ### 4. Merge them into a summary
     - name: Create summary file
+      shell: bash
       run: |
         echo "# Branches Release Summary" > branches-release-summary.md
         for f in releases/*.md; do
-          echo -e "\n## $(basename $f .md)\n" >> branches-release-summary.md
-          cat $f >> branches-release-summary.md
+          echo -e "\n## $(basename "$f" .md)\n" >> branches-release-summary.md
+          cat "$f" >> branches-release-summary.md
         done
 
     ### 5. Commit to main
