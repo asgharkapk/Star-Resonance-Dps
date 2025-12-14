@@ -2,6 +2,8 @@ name: SELECTOR Auto README
 
 on:
   push:
+    branches:
+      - '**'   # '**' matches all branches
   workflow_dispatch:
 
 jobs:
