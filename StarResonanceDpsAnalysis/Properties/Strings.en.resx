@@ -205,7 +205,7 @@
     <value>Current</value>
   </data>
   <data name="TotalDamageLabel" xml:space="preserve">
-    <value>DPS</value>
+    <value>Damage</value>
   </data>
   <data name="TotalTreatmentLabel" xml:space="preserve">
     <value>Healing</value>
