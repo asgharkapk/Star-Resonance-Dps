@@ -7,7 +7,6 @@ A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceD
 - **more en translations**
 
 - **Theme changes**
-    - **more compact theme**
     - **changed progressbar colors**
     - **fully transparent background in light theme**
     - **removed useless empty space before progress bars**
@@ -20,13 +19,15 @@ A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceD
 - **Fixed minor bugs**
     - **fixed always using class not subclass for progress bar color and icon**
     - **reset death count with reset button**
+    - **skill diary translation**
 
+- **compact theme in [compact branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/cOmPaCt)**
 - **not compact theme in [normal branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/nOrMaL)**
 - **beta test branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/mOnStEr)**
-- **فارسی branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/فارسی)**
+- **فارسی branch: [فارسی branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/فارسی)**
 
-![dark-compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/cOmPaCt/dark-compact.jpg)
-![light compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/cOmPaCt/light-compact.jpg)
+![dark-compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/BRANCH_SELECTOR/dark-compact.jpg)
+![light compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/BRANCH_SELECTOR/light-compact.jpg)
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-brightgreen.svg)](https://www.gnu.org/licenses/agpl-3.0.txt)
 
