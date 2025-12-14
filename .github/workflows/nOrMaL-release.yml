@@ -25,9 +25,9 @@ jobs:
         shell: pwsh
         run: |
           $dt = Get-Date -Format "yyyyMMdd-HHmmss"
-          Write-Output "VERSION=v$dt-nOrMaL"
-          echo "VERSION=v$dt-nOrMaL" | Out-File -FilePath version.txt -Encoding ascii
-          echo "VERSION=v$dt-nOrMaL" >> $GITHUB_ENV
+          $version = "v$dt-nOrMaL"
+          echo "VERSION=$version" >> $GITHUB_ENV
+          echo "version=$version" >> $GITHUB_OUTPUT
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -43,29 +43,29 @@ jobs:
       - name: Zip Build Output
         shell: pwsh
         run: |
-          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-${{ env.VERSION }}.zip"
+          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-v${{ env.VERSION }}.zip"
 
       - name: Create Release
         id: gh_release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ env.VERSION }}
-          name: BPSR DPS Details Release ${{ env.VERSION }}
-          files: ./Star-Resonance-Dps-${{ env.VERSION }}.zip
+          tag_name: ${{ steps.set_version.outputs.version }}
+          name: BPSR DPS Details Release ${{ steps.set_version.outputs.version }}
+          files: ./Star-Resonance-Dps-v${{ steps.set_version.outputs.version }}.zip
           generate_release_notes: true
 
       - name: Generate latest-release.md
         shell: pwsh
         run: |
           $release_url = "https://github.com/${{ env.REPO }}/releases/tag/${{ env.VERSION }}"
-          $zip_url = "https://github.com/${{ env.REPO }}/releases/download/${{ env.VERSION }}/Star-Resonance-Dps-${{ env.VERSION }}.zip"
+          $zip_url = "https://github.com/${{ env.REPO }}/releases/download/${{ env.VERSION }}/Star-Resonance-Dps-v${{ env.VERSION }}.zip"
           $commits = git log -n 5 --pretty=format:'- %h %s by %an'  # last 5 commits
 
           $lines = @(
             "# Latest Release - $($env:VERSION)"
             ""
             "**Release Tag:** [$($env:VERSION)]($release_url)"
-            "**File Name:** [Star-Resonance-Dps-$($env:VERSION).zip]($zip_url)"
+            "**File Name:** [Star-Resonance-Dps-v$($env:VERSION).zip]($zip_url)"
             "**Release Notes:** See release page for full notes."
             ""
             "## Last Commits"
