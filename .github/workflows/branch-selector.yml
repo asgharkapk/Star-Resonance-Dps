@@ -105,15 +105,15 @@ jobs:
 
         echo "::endgroup::"
 
-    ### 5. Commit summary to main
-    - name: Commit summary to main
+    ### 5. Commit summary to current branch
+    - name: Commit summary to current branch
       shell: pwsh
       run: |
-        Write-Host "::group::Committing to main branch"
+        Write-Host "::group::Committing to current branch"
 
-        Write-Host "::notice::Fetching and resetting main from origin"
-        git fetch origin main
-        git checkout -B main origin/main
+        # Detect current branch
+        $branch = git rev-parse --abbrev-ref HEAD
+        Write-Host "::notice::Current branch: $branch"
 
         Write-Host "::notice::Current HEAD:"
         git --no-pager log -1 --oneline
@@ -134,8 +134,8 @@ jobs:
           Write-Host "::notice::Committing changes"
           git commit -m "Update branches release summary"
 
-          Write-Host "::notice::Pushing to origin/main"
-          git push origin main
+          Write-Host "::notice::Pushing to origin/$branch"
+          git push origin $branch
 
           Write-Host "::notice::Push completed successfully"
         }
