@@ -77,11 +77,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # Logging wrapper
         # softprops/action-gh-release doesn't have verbose mode, so we wrap in a logging step
+
       - name: Log Release Creation
         shell: pwsh
         run: |
-          Write-Host "Release creation requested for tag: $(${{ steps.set_version.outputs.version }})"
-          Write-Host "Release file: Star-Resonance-Dps-$(${{ steps.set_version.outputs.version }}).zip"
+          Write-Host "Release creation requested for tag: $env:VERSION"
+          Write-Host "Release file: Star-Resonance-Dps-$env:VERSION.zip"
           Write-Host "Check GitHub Actions logs to verify release creation."
 
       - name: Generate latest-release.md
