@@ -117,47 +117,47 @@ namespace StarResonanceDpsAnalysis
                 }
                 else
                 {
-                    // 匹配“伤害:12345” 或 “治疗:54321”
-                    var kv = Regex.Match(part, @"^(?<k>伤害|治疗)\s*:\s*(?<v>\d+)$");
+                    // 匹配“آسیب:12345” 或 “درمان:54321”
+                    var kv = Regex.Match(part, @"^(?<k>آسیب|درمان)\s*:\s*(?<v>\d+)$");
                     if (kv.Success)
                     {
                         string k = kv.Groups["k"].Value;
                         string v = kv.Groups["v"].Value; // 保留完整数字（不做 K/M 简化）
 
-                        if (k == "伤害")
+                        if (k == "آسیب")
                             Write($"{k}:{v}", colorDmg, FontStyle.Regular);
                         else
                             Write($"{k}:{v}", colorHeal, FontStyle.Regular);
                     }
-                    else if (part.StartsWith("释放次数:") || part.StartsWith("次数:"))
+                    else if (part.StartsWith("تعداد:") || part.StartsWith("次数:"))
                     {
                         Write(part, colorCount, FontStyle.Regular);
                     }
-                    else if (part.StartsWith("暴击"))
+                    else if (part.StartsWith("بحرانی"))
                     {
-                        // 支持 “暴击” 或 “暴击:3”
-                        var n = Regex.Match(part, @"^暴击(?::\s*(?<n>\d+))?$");
+                        // 支持 “بحرانی” 或 “بحرانی:3”
+                        var n = Regex.Match(part, @"^بحرانی(?::\s*(?<n>\d+))?$");
                         if (n.Success)
                         {
-                            string label = n.Groups["n"].Success ? $"暴击 ×{n.Groups["n"].Value}" : "暴击";
+                            string label = n.Groups["n"].Success ? $"بحرانی ×{n.Groups["n"].Value}" : "بحرانی";
                             Badge(label, badgeCritBack, badgeCritFore, bold: true);
                         }
                         else
                         {
-                            Badge("暴击", badgeCritBack, badgeCritFore, bold: true);
+                            Badge("بحرانی", badgeCritBack, badgeCritFore, bold: true);
                         }
                     }
-                    else if (part.StartsWith("幸运"))
+                    else if (part.StartsWith("خوش‌شانسی"))
                     {
-                        var n = Regex.Match(part, @"^幸运(?::\s*(?<n>\d+))?$");
+                        var n = Regex.Match(part, @"^خوش‌شانسی(?::\s*(?<n>\d+))?$");
                         if (n.Success)
                         {
-                            string label = n.Groups["n"].Success ? $"幸运 ×{n.Groups["n"].Value}" : "幸运";
+                            string label = n.Groups["n"].Success ? $"خوش‌شانسی ×{n.Groups["n"].Value}" : "خوش‌شانسی";
                             Badge(label, badgeLuckyBack, badgeLuckyFore, bold: true);
                         }
                         else
                         {
-                            Badge("幸运", badgeLuckyBack, badgeLuckyFore, bold: true);
+                            Badge("خوش‌شانسی", badgeLuckyBack, badgeLuckyFore, bold: true);
                         }
                     }
                     else

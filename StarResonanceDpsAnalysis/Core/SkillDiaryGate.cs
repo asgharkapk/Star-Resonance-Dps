@@ -16,7 +16,7 @@ namespace StarResonanceDpsAnalysis.Core
             public long LastTick;       // آخرین زمان ثبت شده
             public int Count;           // تعداد تجمعی در پنجره فعلی
             public ulong TotalDamage;   // مجموع آسیب در پنجره فعلی
-            public int CritCount;       // ★ جدید: تعداد ضربه بحرانی تجمعی در پنجره
+            public int CritCount;       // ★ جدید: تعداد بحرانی تجمعی در پنجره
             public int LuckyCount;      // ★ جدید: تعداد خوش‌شانسی تجمعی در پنجره
         }
 
@@ -107,7 +107,7 @@ namespace StarResonanceDpsAnalysis.Core
         /// <param name="uid">UID بازیکن مرتبط با این اصابت</param>
         /// <param name="skillId">شناسه مهارت (تغییرات ترکیب نمی‌شوند)</param>
         /// <param name="damage">مقدار آسیب این اصابت (برای جمع به مجموع پنجره و نمایش تک‌مرحله‌ای)</param>
-        /// <param name="iscrit">آیا ضربه بحرانی است</param>
+        /// <param name="iscrit">آیا بحرانی است</param>
         /// <param name="isLucky">آیا خوش‌شانسی است</param>
         /// <param name="treat">آیا درمان است</param>
         public static void OnHit(ulong uid, ulong skillId, ulong damage, bool iscrit, bool isLucky, bool treat = false)
@@ -139,7 +139,7 @@ namespace StarResonanceDpsAnalysis.Core
                 $"{(treat ? "درمان" : "آسیب")}:{totalDamage}",
                 $"تعداد اجرای مهارت:{count}"
             };
-                if (critCount > 0) parts.Add($"ضربه بحرانی:{critCount}");
+                if (critCount > 0) parts.Add($"بحرانی:{critCount}");
                 if (luckyCount > 0) parts.Add($"خوش‌شانسی:{luckyCount}");
 
                 line = $"[{duration}] " + string.Join(" | ", parts);
@@ -152,7 +152,7 @@ namespace StarResonanceDpsAnalysis.Core
                     $"{name}",
                     $"{(treat ? "درمان" : "آسیب")}:{damage}"
                 };
-                if (iscrit) parts.Add("ضربه بحرانی");
+                if (iscrit) parts.Add("بحرانی");
                 if (isLucky) parts.Add("خوش‌شانسی");
 
                 line = $"[{duration}] " + string.Join(" | ", parts);
