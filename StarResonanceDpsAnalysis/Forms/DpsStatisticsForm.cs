@@ -160,12 +160,12 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             if (TopMost)
             {
                 button_AlwaysOnTop.IconSvg =
-                    resources.GetString("button_AlwaysOnTop.ToggleIconSvg");
+                    Properties.Resources.button_AlwaysOnTop_ToggleIconSvg;
             }
             else
             {
                 button_AlwaysOnTop.IconSvg =
-                    resources.GetString("button_AlwaysOnTop.IconSvg");
+                    Properties.Resources.button_AlwaysOnTop_IconSvg;
             }
         }  
 
