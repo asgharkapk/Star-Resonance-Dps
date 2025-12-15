@@ -61,8 +61,8 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             // pageHeader1
             // 
-            pageHeader1.BackColor = Color.FromArgb(251, 237, 208);
-            pageHeader1.ForeColor = Color.Black;
+            pageHeader1.BackColor = Color.FromArgb(0, 0, 0);
+            pageHeader1.ForeColor = Color.FromArgb(255, 255, 255);
 
             pageHeader1.ColorScheme = TAMode.Dark;
             pageHeader1.Controls.Add(PilingModeCheckbox);
