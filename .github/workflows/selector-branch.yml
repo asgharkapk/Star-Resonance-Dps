@@ -1,9 +1,7 @@
 name: SELECTOR Auto README
 
 on:
-  push:
-    branches:
-      - BRANCH_SELECTOR
+  release:
   workflow_dispatch:
 
 jobs:
