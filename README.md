@@ -86,14 +86,14 @@ _No release yet_
 
 ## nOrMaL
 
-# Latest Release - v20251215-082831-nOrMaL
+# Latest Release - v20251215-140646-nOrMaL
 
-**Release Tag:** [v20251215-082831-nOrMaL](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251215-082831-nOrMaL)
-**File Name:** [Star-Resonance-Dps-v20251215-082831-nOrMaL.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251215-082831-nOrMaL/Star-Resonance-Dps-v20251215-082831-nOrMaL.zip)
+**Release Tag:** [v20251215-140646-nOrMaL](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251215-140646-nOrMaL)
+**File Name:** [Star-Resonance-Dps-v20251215-140646-nOrMaL.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251215-140646-nOrMaL/Star-Resonance-Dps-v20251215-140646-nOrMaL.zip)
 **Release Notes:** See release page for full notes.
 
 ## Last Commits
-- 38785c1 button_AlwaysOnTop.Invalidate by asgharkapk on 2025-12-15 - b227904 Update latest-release.md for v20251215-065551-nOrMaL by asgharkapk on 2025-12-15 - b97ce6b release normal by asgharkapk on 2025-12-15 - 4902447 Update latest-release.md for v20251215-064714-nOrMaL by asgharkapk on 2025-12-15 - 91ca283 button size by asgharkapk on 2025-12-15
+- c47a60d button_AlwaysOnTop_Click by asgharkapk on 2025-12-15 - 5ce537c Properties.Resources.button_AlwaysOnTop_ToggleIconSvg by asgharkapk on 2025-12-15 - 322af41 button_Settings.IconSvg = resources.GetString("button_Settings.IconSvg"); by asgharkapk on 2025-12-15 - 297a8a4 button_AlwaysOnTop.Toggle + button_Settings.IconSvg by asgharkapk on 2025-12-15 - 4d7f156 Update latest-release.md for v20251215-082831-nOrMaL by asgharkapk on 2025-12-15
 
 
 ## فارسی
