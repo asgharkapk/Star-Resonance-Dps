@@ -96,7 +96,7 @@ jobs:
           $release_url = "https://github.com/$repo/releases/tag/$version"
           $zip_url = "https://github.com/$repo/releases/download/$version/Star-Resonance-Dps-$version.zip"
 
-          $commits = git log -n 5 --pretty=format:'- %h %s by %an'
+          $commits = git log -n 5 --pretty=format:'- %h %s by %an on %ad' --date=short
 
           $lines = @(
             "# Latest Release - $version"
