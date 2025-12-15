@@ -331,7 +331,7 @@ namespace StarResonanceDpsAnalysis.Forms
             NpcTakeDamageButton.IconRatio = 0.7F;
             NpcTakeDamageButton.Name = "NpcTakeDamageButton";
             NpcTakeDamageButton.Radius = 3;
-            NpcTakeDamageButton.Size = new Size(80, 35);
+            NpcTakeDamageButton.Size = new Size(85, 35);
             NpcTakeDamageButton.Location = new Point(38+17+60+80+77+20, 5);
             NpcTakeDamageButton.TabIndex = 4;
             NpcTakeDamageButton.Text = "NPCTANKING";
@@ -347,7 +347,7 @@ namespace StarResonanceDpsAnalysis.Forms
             AlwaysInjuredButton.Margin = new Padding(4);
             AlwaysInjuredButton.Name = "AlwaysInjuredButton";
             AlwaysInjuredButton.Radius = 3;
-            AlwaysInjuredButton.Size = new Size(80, 35);
+            AlwaysInjuredButton.Size = new Size(85, 35);
             AlwaysInjuredButton.Location = new Point(38+17+60+80+20, 5);
             AlwaysInjuredButton.TabIndex = 3;
             AlwaysInjuredButton.Text = "TANKING";
@@ -362,7 +362,7 @@ namespace StarResonanceDpsAnalysis.Forms
             TotalTreatmentButton.Margin = new Padding(4);
             TotalTreatmentButton.Name = "TotalTreatmentButton";
             TotalTreatmentButton.Radius = 3;
-            TotalTreatmentButton.Size = new Size(80, 35);
+            TotalTreatmentButton.Size = new Size(85, 35);
             TotalTreatmentButton.Location = new Point(38+17+60+20, 5);
             TotalTreatmentButton.TabIndex = 2;
             TotalTreatmentButton.Text = "HEALING";
@@ -376,7 +376,7 @@ namespace StarResonanceDpsAnalysis.Forms
             TotalDamageButton.Icon = (Image)resources.GetObject("TotalDamageButton.Icon");
             TotalDamageButton.Name = "TotalDamageButton";
             TotalDamageButton.Radius = 3;
-            TotalDamageButton.Size = new Size(80, 35);
+            TotalDamageButton.Size = new Size(85, 35);
             TotalDamageButton.Location = new Point(38+17, 5);
             TotalDamageButton.TabIndex = 1;
             TotalDamageButton.Text = "DPS";
