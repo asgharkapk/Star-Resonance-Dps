@@ -156,7 +156,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             FormManager.skillDetailForm.TopMost = TopMost;
 
             button_AlwaysOnTop.Toggle = TopMost; // Update button state     // 同步按钮的视觉状态
-
+/*
             if (TopMost)
             {
                 button_AlwaysOnTop.IconSvg =
@@ -166,7 +166,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             {
                 button_AlwaysOnTop.IconSvg =
                     Properties.Resources.button_AlwaysOnTop_IconSvg;
-            }
+            }*/
         }  
 
         #region 切换显示类型（支持单次/全程伤害） // 折叠：视图标签与切换逻辑
