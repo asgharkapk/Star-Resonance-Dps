@@ -150,13 +150,14 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         }
 
         // # 顶部：置顶窗口按钮
-        private void button_AlwaysOnTop_Click(object sender, EventArgs e) // 置顶按钮点击事件
+        private void button_AlwaysOnTop_Click(object sender, EventArgs e)   // 置顶按钮点击事件
         {
-            TopMost = !TopMost; // 简化切换
+            TopMost = !TopMost; // Toggle form's TopMost        // 简化切换
             FormManager.skillDetailForm.TopMost = TopMost;
 
-            button_AlwaysOnTop.Toggle = TopMost; // 同步按钮的视觉状态
-        }
+            button_AlwaysOnTop.Toggle = TopMost; // Update button state     // 同步按钮的视觉状态
+            button_AlwaysOnTop.Invalidate();     // Force redraw to update icon
+        }  
 
         #region 切换显示类型（支持单次/全程伤害） // 折叠：视图标签与切换逻辑
 
