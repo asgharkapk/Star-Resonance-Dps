@@ -19,22 +19,13 @@ jobs:
         with:
           fetch-depth: 0   # مورد نیاز برای تگ‌گذاری
 
-      - name: Fetch all branches
-        shell: bash
-        run: |
-          echo "::group::Fetching branches"
-          git fetch --all --prune
-          echo "::notice::Remote branches:"
-          git branch -r
-          echo "::endgroup::"
-
       - name: تعیین نسخه بر اساس تاریخ و زمان
         id: set_version
         shell: pwsh
         run: |
           Write-Host "تعیین نسخه بر اساس تاریخ و زمان فعلی..."
           $dt = Get-Date -Format "yyyyMMdd-HHmmss"
-          $version = "v$dt"
+          $version = "v$dt-Farsi"
           Write-Host "نسخه تولید شده: $version"
           
           # صادر کردن به عنوان متغیر محیطی برای این Job
@@ -75,7 +66,7 @@ jobs:
         shell: pwsh
         run: |
           $version = '${{ steps.set_version.outputs.version }}'
-          $zipPath = "./Star-Resonance-Dps-$version-Farsi.zip"
+          $zipPath = "./Star-Resonance-Dps-$version.zip"
           Write-Host "فشرده‌سازی خروجی ساخت در $zipPath..."
           Compress-Archive -Path ./publish/* -DestinationPath $zipPath
           Write-Host "فایل zip ایجاد شد: $zipPath"
@@ -83,9 +74,9 @@ jobs:
       - name: ایجاد ریلیز
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.set_version.outputs.version }}-Farsi
-          name: Release ${{ steps.set_version.outputs.version }}-فارسی
-          files: ./Star-Resonance-Dps-${{ steps.set_version.outputs.version }}-Farsi.zip
+          tag_name: ${{ steps.set_version.outputs.version }}
+          name: Release ${{ steps.set_version.outputs.version }}
+          files: ./Star-Resonance-Dps-${{ steps.set_version.outputs.version }}.zip
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -95,7 +86,7 @@ jobs:
         run: |
           $version = '${{ steps.set_version.outputs.version }}'
           Write-Host "درخواست ایجاد ریلیز برای تگ: $version"
-          Write-Host "فایل ریلیز: Star-Resonance-Dps-$version-Farsi.zip"
+          Write-Host "فایل ریلیز: Star-Resonance-Dps-$version.zip"
 
       - name: تولید فایل latest-release.md
         shell: pwsh
@@ -103,7 +94,7 @@ jobs:
           $version = '${{ steps.set_version.outputs.version }}'
           $repo = '${{ github.repository }}'
           $release_url = "https://github.com/$repo/releases/tag/$version"
-          $zip_url = "https://github.com/$repo/releases/download/$version/Star-Resonance-Dps-$version-Farsi.zip"
+          $zip_url = "https://github.com/$repo/releases/download/$version/Star-Resonance-Dps-$version.zip"
 
           $commits = git log -n 5 --pretty=format:'- %h %s توسط %an'
 
@@ -111,7 +102,7 @@ jobs:
             "# آخرین ریلیز - $version"
             ""
             "**تگ ریلیز:** [$version]($release_url)"
-            "**نام فایل:** [Star-Resonance-Dps-$version-Farsi.zip]($zip_url)"
+            "**نام فایل:** [Star-Resonance-Dps-$version.zip]($zip_url)"
             "**یادداشت‌های ریلیز:** برای مشاهده کامل یادداشت‌ها به صفحه ریلیز مراجعه کنید."
             ""
             "## آخرین کامیت‌ها"
