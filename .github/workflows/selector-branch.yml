@@ -2,6 +2,12 @@ name: SELECTOR Auto README
 
 on:
   release:
+    types:
+      - published
+      - created
+      - edited
+      - prereleased
+      - released
   workflow_dispatch:
 
 jobs:
