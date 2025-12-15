@@ -133,3 +133,14 @@ jobs:
           $version = '${{ steps.set_version.outputs.version }}'
           Write-Host "latest-release.md committed to branch nOrMaL"
           Write-Host "Commit message: Update latest-release.md for $version"
+
+      - name: Notify branch_selector
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: branch-release-updated
+          client-payload: |
+            {
+              "branch": "${{ github.ref_name }}"
+            }
+
