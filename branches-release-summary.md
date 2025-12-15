@@ -25,38 +25,24 @@ _No release yet_
 
 ## nOrMaL
 
-# Latest Release - v20251214-134443-nOrMaL
+# Latest Release - v20251215-052359-nOrMaL
 
-**Release Tag:** [v20251214-134443-nOrMaL](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251214-134443-nOrMaL)
-**File Name:** [Star-Resonance-Dps-v20251214-134443-nOrMaL.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251214-134443-nOrMaL/Star-Resonance-Dps-v20251214-134443-nOrMaL.zip)
+**Release Tag:** [v20251215-052359-nOrMaL](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251215-052359-nOrMaL)
+**File Name:** [Star-Resonance-Dps-v20251215-052359-nOrMaL.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251215-052359-nOrMaL/Star-Resonance-Dps-v20251215-052359-nOrMaL.zip)
 **Release Notes:** See release page for full notes.
 
 ## Last Commits
-- ba87b4d n-release by asgharkapk - cf5565d Update latest-release.md for v20251214-122125-nOrMaL by asgharkapk - 2a84702 changed DPS tab name by asgharkapk - a265729 Update latest-release.md for v20251214-090607-nOrMaL by asgharkapk - 14a1a81 n release by asgharkapk
+- 95f382b Auto Release nOrMaL by asgharkapk - 4204d46 Update latest-release.md for v20251215-050959-nOrMaL by asgharkapk - d3718c2 Auto Release nOrMaL by asgharkapk - a0e8ac2 Update latest-release.md for v20251214-134443-nOrMaL by asgharkapk - ba87b4d n-release by asgharkapk
 
-## Installation
-1. Download the [zip file](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251214-134443-nOrMaL/Star-Resonance-Dps-v20251214-134443-nOrMaL.zip)
-2. Extract contents
-3. Run Star-Resonance-Dps.exe (Windows)
-
-## Action
-This release was created automatically via GitHub Actions.
 
 ## فارسی
 
-# آخرین ریلیز - v20251214-152632-فارسی
+# آخرین ریلیز - v20251215-050414-Farsi
 
-**تگ ریلیز:** [v20251214-152632-فارسی](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251214-152632-فارسی)
-**نام فایل:** [Star-Resonance-Dps-v20251214-152632-فارسی.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251214-152632-فارسی/Star-Resonance-Dps-v20251214-152632-فارسی.zip)
+**تگ ریلیز:** [v20251215-050414-Farsi](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251215-050414-Farsi)
+**نام فایل:** [Star-Resonance-Dps-v20251215-050414-Farsi.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251215-050414-Farsi/Star-Resonance-Dps-v20251215-050414-Farsi.zip)
 **یادداشت‌های ریلیز:** برای مشاهده کامل یادداشت‌ها به صفحه ریلیز مراجعه کنید.
 
 ## آخرین کامیت‌ها
-- 4a1050f fa releses توسط asgharkapk - 05b3970 به‌روزرسانی latest-release.md برای v20251214-151656-فارسی توسط asgharkapk - 0b9b39d relese persian توسط asgharkapk - 09c8c66 به‌روزرسانی latest-release.md برای v20251214-151136-فارسی توسط asgharkapk - 818019a the fa release توسط asgharkapk
+- 2aec3da pageHeader1.BackColor توسط asgharkapk - acdccff به‌روزرسانی latest-release.md برای v20251215-045922-Farsi توسط asgharkapk - afe901b farsi release توسط asgharkapk - 7d39a19 به‌روزرسانی latest-release.md برای v20251215-044916 توسط asgharkapk - d4e3d93 farsi release توسط asgharkapk
 
-## نصب
-1. دانلود [فایل zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251214-152632-فارسی/Star-Resonance-Dps-v20251214-152632-فارسی.zip)
-2. استخراج محتویات
-3. اجرای Star-Resonance-Dps.exe (ویندوز)
-
-## اکشن
-این ریلیز به صورت خودکار توسط GitHub Actions ایجاد شده است.
