@@ -4,8 +4,6 @@ using System.Security.Cryptography.Xml;
 using System.Threading.Tasks; // 引用异步任务支持（Task/async/await）
 using System.Windows.Forms;
 
-using System.Resources
-
 using AntdUI; // 引用 AntdUI 组件库（第三方 UI 控件/样式）
 using StarResonanceDpsAnalysis.Control; // 引用项目内的 UI 控制/辅助类命名空间
 using StarResonanceDpsAnalysis.Effects;
