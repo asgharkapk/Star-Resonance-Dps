@@ -107,15 +107,15 @@ jobs:
             ""
             "## Last Commits"
             "$commits"
-            ""
-            "## Installation"
-            "1. Download the [zip file]($zip_url)"
-            "2. Extract contents"
-            "3. Run `Star-Resonance-Dps.exe` (Windows)"
-            ""
-            "## Action"
-            "This release was created automatically via GitHub Actions."
-          )
+            "")
+          #            "## Installation"
+          #            "1. Download the [zip file]($zip_url)"
+          #            "2. Extract contents"
+          #            "3. Run `Star-Resonance-Dps.exe` (Windows)"
+          #            ""
+          #            "## Action"
+          #            "This release was created automatically via GitHub Actions."
+          #          )
 
           $lines | Out-File -FilePath latest-release.md -Encoding UTF8
           Write-Host "latest-release.md generated successfully"
@@ -133,3 +133,13 @@ jobs:
           $version = '${{ steps.set_version.outputs.version }}'
           Write-Host "latest-release.md committed to branch cOmPaCt"
           Write-Host "Commit message: Update latest-release.md for $version"
+
+      - name: Notify branch_selector
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: branch-release-updated
+          client-payload: |
+            {
+              "branch": "${{ github.ref_name }}"
+            }
