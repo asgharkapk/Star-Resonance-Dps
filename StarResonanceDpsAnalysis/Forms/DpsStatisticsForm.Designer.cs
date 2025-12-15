@@ -194,9 +194,10 @@ namespace StarResonanceDpsAnalysis.Forms
             button_Settings.DefaultBack = Color.Transparent;
             button_Settings.Dock = DockStyle.Right;
             button_Settings.Ghost = true;
-            button_Settings.Icon = Properties.Resources.setting_hover;
+            //button_Settings.Icon = Properties.Resources.setting_hover;
             button_Settings.IconRatio = 1F;
-            button_Settings.IconSvg = "";
+            button_Settings.IconSvg = set_up;
+            //button_Settings.IconSvg = "";
             button_Settings.Location = new Point(500, 0);
             button_Settings.Name = "button_Settings";
             button_Settings.Size = new Size(27, 25);
