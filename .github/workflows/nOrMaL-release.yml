@@ -107,15 +107,15 @@ jobs:
             ""
             "## Last Commits"
             "$commits"
-            ""
-            "## Installation"
-            "1. Download the [zip file]($zip_url)"
-            "2. Extract contents"
-            "3. Run `Star-Resonance-Dps.exe` (Windows)"
-            ""
-            "## Action"
-            "This release was created automatically via GitHub Actions."
-          )
+            "")
+          #            "## Installation"
+          #            "1. Download the [zip file]($zip_url)"
+          #            "2. Extract contents"
+          #            "3. Run `Star-Resonance-Dps.exe` (Windows)"
+          #            ""
+          #            "## Action"
+          #            "This release was created automatically via GitHub Actions."
+          #          )
 
           $lines | Out-File -FilePath latest-release.md -Encoding UTF8
           Write-Host "latest-release.md generated successfully"
