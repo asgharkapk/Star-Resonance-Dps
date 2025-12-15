@@ -1,13 +1,11 @@
 name: SELECTOR Auto README
 
 on:
-  release:
-    types:
-      - published
-      - created
-      - edited
-      - prereleased
+  push:
+    branches: [branch_selector]
   workflow_dispatch:
+  repository_dispatch:
+    types: [branch-release-updated]
 
 jobs:
   build-and-release:
