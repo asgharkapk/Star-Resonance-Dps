@@ -4,6 +4,8 @@ using System.Security.Cryptography.Xml;
 using System.Threading.Tasks; // 引用异步任务支持（Task/async/await）
 using System.Windows.Forms;
 
+using System.Resources
+
 using AntdUI; // 引用 AntdUI 组件库（第三方 UI 控件/样式）
 using StarResonanceDpsAnalysis.Control; // 引用项目内的 UI 控制/辅助类命名空间
 using StarResonanceDpsAnalysis.Effects;
@@ -156,17 +158,17 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             FormManager.skillDetailForm.TopMost = TopMost;
 
             button_AlwaysOnTop.Toggle = TopMost; // Update button state     // 同步按钮的视觉状态
-/*
+
+            var rm = new ResourceManager(typeof(DpsStatisticsForm));
+
             if (TopMost)
             {
-                button_AlwaysOnTop.IconSvg =
-                    Properties.Resources.button_AlwaysOnTop_ToggleIconSvg;
+                button_AlwaysOnTop.IconSvg = rm.GetString("button_AlwaysOnTop.ToggleIconSvg");
             }
             else
             {
-                button_AlwaysOnTop.IconSvg =
-                    Properties.Resources.button_AlwaysOnTop_IconSvg;
-            }*/
+                button_AlwaysOnTop.IconSvg = rm.GetString("button_AlwaysOnTop.IconSvg");
+            }
         }  
 
         #region 切换显示类型（支持单次/全程伤害） // 折叠：视图标签与切换逻辑
