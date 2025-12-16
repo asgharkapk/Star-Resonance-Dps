@@ -162,7 +162,6 @@ namespace StarResonanceDpsAnalysis.Forms
             button_AlwaysOnTop.Dock = DockStyle.Right;
             button_AlwaysOnTop.Ghost = true;
 
-            button_AlwaysOnTop.Toggleable = true; // enable toggle mode
             button_AlwaysOnTop.IconSvg = resources.GetString("button_AlwaysOnTop.IconSvg");
             button_AlwaysOnTop.ToggleIconSvg = resources.GetString("button_AlwaysOnTop.ToggleIconSvg");
             button_AlwaysOnTop.Toggle = TopMost; // default state
