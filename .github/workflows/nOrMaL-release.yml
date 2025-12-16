@@ -25,7 +25,7 @@ jobs:
         run: |
           Write-Host "Setting version based on current date and time..."
           $dt = Get-Date -Format "yyyyMMdd-HHmmss"
-          $version = "v$dt-nOrMaL"
+          $version = "v$dt-nOrMaL-r${{ github.run_number }}"
           Write-Host "Generated version: $version"
           
           # Export as environment variable for this job
