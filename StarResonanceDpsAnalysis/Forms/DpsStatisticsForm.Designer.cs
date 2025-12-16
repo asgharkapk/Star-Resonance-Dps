@@ -164,7 +164,7 @@ namespace StarResonanceDpsAnalysis.Forms
 
             button_AlwaysOnTop.IconSvg = resources.GetString("button_AlwaysOnTop.IconSvg");
             button_AlwaysOnTop.ToggleIconSvg = resources.GetString("button_AlwaysOnTop.ToggleIconSvg");
-            button_AlwaysOnTop.Toggle = false; // default state
+            button_AlwaysOnTop.Toggle = TopMost; // default state
             
             button_AlwaysOnTop.IconRatio = 0.8F;
             button_AlwaysOnTop.Location = new Point(458, 0);
