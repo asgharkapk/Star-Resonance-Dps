@@ -144,6 +144,7 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             // button3
             // 
+            button3.ColorScheme = TAMode.Dark;
             button3.Dock = DockStyle.Left;
             button3.Ghost = true;
             //button3.Icon = Properties.Resources.handoff_normal;
