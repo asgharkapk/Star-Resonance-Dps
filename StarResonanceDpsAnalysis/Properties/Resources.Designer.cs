@@ -350,7 +350,18 @@ namespace StarResonanceDpsAnalysis.Properties {
                 return ResourceManager.GetString("set_up", resourceCulture);
             }
         }
-        
+
+        internal static string button_AlwaysOnTop_PinOn {
+            get {
+                return ResourceManager.GetString("button_AlwaysOnTop_PinOn", resourceCulture);
+            }
+        }
+        internal static string button_AlwaysOnTop_PinOff {
+            get {
+                return ResourceManager.GetString("button_AlwaysOnTop_PinOff", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
