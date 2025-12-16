@@ -146,7 +146,8 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             button3.Dock = DockStyle.Left;
             button3.Ghost = true;
-            button3.Icon = Properties.Resources.handoff_normal;
+            //button3.Icon = Properties.Resources.handoff_normal;
+            button3.IconSvg = resources.GetString("button3.IconSvg");
             button3.IconHover = Properties.Resources.handoff_hover;
             button3.IconRatio = 0.8F;
             button3.Location = new Point(227, 0);
