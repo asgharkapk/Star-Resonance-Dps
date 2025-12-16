@@ -724,6 +724,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             Activate();
             BringToFront();
             button_AlwaysOnTop.Toggle = TopMost; // 同步你的按钮状态
+            button_AlwaysOnTop.Invalidate();
         }
 
         private void DamageType_Click(object sender, EventArgs e)
