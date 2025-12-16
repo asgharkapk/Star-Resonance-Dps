@@ -1,9 +1,9 @@
-# Latest Release - v20251216-070708-nOrMaL-r36
+# Latest Release - v20251216-072721-nOrMaL-r39
 
-**Release Tag:** [v20251216-070708-nOrMaL-r36](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251216-070708-nOrMaL-r36)
-**File Name:** [Star-Resonance-Dps-v20251216-070708-nOrMaL-r36.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251216-070708-nOrMaL-r36/Star-Resonance-Dps-v20251216-070708-nOrMaL-r36.zip)
+**Release Tag:** [v20251216-072721-nOrMaL-r39](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251216-072721-nOrMaL-r39)
+**File Name:** [Star-Resonance-Dps-v20251216-072721-nOrMaL-r39.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251216-072721-nOrMaL-r39/Star-Resonance-Dps-v20251216-072721-nOrMaL-r39.zip)
 **Release Notes:** See release page for full notes.
 
 ## Last Commits
-- 0333c95 button_AlwaysOnTop.Invalidate by asgharkapk on 2025-12-16 - 8f53d9c Update latest-release.md for v20251216-070125-nOrMaL-r35 by asgharkapk on 2025-12-16 - 8efc8e9 button_AlwaysOnTop.Invalidate by asgharkapk on 2025-12-16 - 3bf47ca button_AlwaysOnTop.IsToggle by asgharkapk on 2025-12-16 - 00a7f57 Update latest-release.md for v20251216-052409-nOrMaL-r33 by asgharkapk on 2025-12-16
+- 2ba439f button_AlwaysOnTop_Click by asgharkapk on 2025-12-16 - c01ac83 button_Settings.IconSvg by asgharkapk on 2025-12-16 - 7bbce47 button_AlwaysOnTop_Click by asgharkapk on 2025-12-16 - 3fa3b22 Update latest-release.md for v20251216-070708-nOrMaL-r36 by asgharkapk on 2025-12-16 - 0333c95 button_AlwaysOnTop.Invalidate by asgharkapk on 2025-12-16
 
