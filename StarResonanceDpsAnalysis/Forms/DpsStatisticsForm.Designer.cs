@@ -193,10 +193,10 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             // button_Settings
             // 
-            button_Settings.BackActive = Color.Transparent;
-            button_Settings.BackColor = Color.Transparent;
+            //button_Settings.BackActive = Color.Transparent;
+            //button_Settings.BackColor = Color.Transparent;
             button_Settings.ColorScheme = TAMode.Dark;
-            button_Settings.DefaultBack = Color.Transparent;
+            //button_Settings.DefaultBack = Color.Transparent;
             button_Settings.Dock = DockStyle.Right;
             button_Settings.Ghost = true;
             //button_Settings.Icon = Properties.Resources.setting_hover;
