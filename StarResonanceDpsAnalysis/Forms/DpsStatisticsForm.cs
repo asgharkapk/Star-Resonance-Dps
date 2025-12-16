@@ -152,11 +152,11 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         private void UpdateAlwaysOnTopButton()
         {
             button_AlwaysOnTop.Toggle = TopMost;
-
+/*
             button_AlwaysOnTop.IconSvg = TopMost
                 ? Resources.button_AlwaysOnTop_PinOn
                 : Resources.button_AlwaysOnTop_PinOff;
-
+*/
             button_AlwaysOnTop.Invalidate();
         }
 
