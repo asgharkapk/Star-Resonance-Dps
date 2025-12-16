@@ -86,14 +86,14 @@ _No release yet_
 
 ## nOrMaL
 
-# Latest Release - v20251216-072721-nOrMaL-r39
+# Latest Release - v20251216-134757-nOrMaL-r41
 
-**Release Tag:** [v20251216-072721-nOrMaL-r39](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251216-072721-nOrMaL-r39)
-**File Name:** [Star-Resonance-Dps-v20251216-072721-nOrMaL-r39.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251216-072721-nOrMaL-r39/Star-Resonance-Dps-v20251216-072721-nOrMaL-r39.zip)
+**Release Tag:** [v20251216-134757-nOrMaL-r41](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251216-134757-nOrMaL-r41)
+**File Name:** [Star-Resonance-Dps-v20251216-134757-nOrMaL-r41.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251216-134757-nOrMaL-r41/Star-Resonance-Dps-v20251216-134757-nOrMaL-r41.zip)
 **Release Notes:** See release page for full notes.
 
 ## Last Commits
-- 2ba439f button_AlwaysOnTop_Click by asgharkapk on 2025-12-16 - c01ac83 button_Settings.IconSvg by asgharkapk on 2025-12-16 - 7bbce47 button_AlwaysOnTop_Click by asgharkapk on 2025-12-16 - 3fa3b22 Update latest-release.md for v20251216-070708-nOrMaL-r36 by asgharkapk on 2025-12-16 - 0333c95 button_AlwaysOnTop.Invalidate by asgharkapk on 2025-12-16
+- 0eef696 internal static string button_AlwaysOnTop_PinOff by asgharkapk on 2025-12-16 - a7f193a UpdateAlwaysOnTopButton by asgharkapk on 2025-12-16 - 4d316a4 Update latest-release.md for v20251216-072721-nOrMaL-r39 by asgharkapk on 2025-12-16 - 2ba439f button_AlwaysOnTop_Click by asgharkapk on 2025-12-16 - c01ac83 button_Settings.IconSvg by asgharkapk on 2025-12-16
 
 
 ## فارسی
@@ -106,6 +106,9 @@ _No release yet_
 
 ## آخرین کامیت‌ها
 - 81fccea farsi release توسط asgharkapk - 598e87e به‌روزرسانی latest-release.md برای v20251215-052752-Farsi توسط asgharkapk - 32b89f2 farsi release توسط asgharkapk - c5356e3 به‌روزرسانی latest-release.md برای v20251215-050414-Farsi توسط asgharkapk - 2aec3da pageHeader1.BackColor توسط asgharkapk
+
+
+# https://github.com/asgharkapk/Star-Resonance-Dps/blob/BRANCH_SELECTOR/TODO.md
 
 ---
 ## 📄 License
