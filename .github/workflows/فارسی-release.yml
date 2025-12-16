@@ -25,7 +25,7 @@ jobs:
         run: |
           Write-Host "تعیین نسخه بر اساس تاریخ و زمان فعلی..."
           $dt = Get-Date -Format "yyyyMMdd-HHmmss"
-          $version = "v$dt-Farsi"
+          $version = "v$dt-Farsi-r${{ github.run_number }}"
           Write-Host "نسخه تولید شده: $version"
           
           # صادر کردن به عنوان متغیر محیطی برای این Job
