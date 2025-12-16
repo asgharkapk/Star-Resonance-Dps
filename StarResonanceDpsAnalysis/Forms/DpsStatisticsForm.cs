@@ -156,6 +156,13 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             FormManager.skillDetailForm.TopMost = TopMost;
 
             button_AlwaysOnTop.Toggle = TopMost; // Update button state     // 同步按钮的视觉状态
+            
+            // Apply the correct SVG based on TopMost
+            if (TopMost)
+                button_AlwaysOnTop.IconSvg = Properties.Resources.button_AlwaysOnTop_ToggleIconSvg;
+            else
+                button_AlwaysOnTop.IconSvg = Properties.Resources.button_AlwaysOnTop_IconSvg;
+
             button_AlwaysOnTop.Invalidate();
         }  
 
