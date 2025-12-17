@@ -14,7 +14,6 @@ using StarResonanceDpsAnalysis.Plugin.LaunchFunction; // 引用启动相关功�
 using StarResonanceDpsAnalysis.Properties; // 引用资源（图标/本地化字符串等）
 
 using static StarResonanceDpsAnalysis.Control.SkillDetailForm;
-using System.Security.Cryptography.Xml;
 using Button = AntdUI.Button;
 using DocumentFormat.OpenXml.Office2010.Excel;
 using Color = System.Drawing.Color;
@@ -42,6 +41,8 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             // 构造函数开始
             InitializeComponent(); // 初始化设计器生成的控件与布局
 
+            UpdateWindowSizeDebug();
+            SizeChanged += (_, __) => UpdateWindowSizeDebug();
 
             Text = FormManager.APP_NAME;
 
@@ -818,10 +819,10 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
 
         private static readonly (string Name, Size Size)[] WindowSizePresets =
         {
-            ("Compact", new Size(420, 360)),
-            ("Default", new Size(527, 442)),
-            ("Wide",    new Size(680, 442)),
-            ("Tall",    new Size(527, 600)),
+            ("5man", new Size(420, 360)),
+            ("12man", new Size(527, 442)),
+            ("20man",    new Size(680, 442)),
+            ("collapse",    new Size(527, 600)),
         };
         private void button_WindowSize_Click(object sender, EventArgs e)
         {
@@ -851,10 +852,18 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             Bounds = new Rectangle(x, y, targetSize.Width, targetSize.Height);
 
             ResumeLayout();
+
+            UpdateWindowSizeDebug();
         }
         private void button_WindowSize_MouseEnter(object sender, EventArgs e)
         {
             ToolTip(button_WindowSize, "Window size presets");
+        }
+
+        private void UpdateWindowSizeDebug()
+        {
+            if (label_WindowSizeDebug == null) return;
+            label_WindowSizeDebug.Text = $"W:{Width} H:{Height} | C:{ClientSize.Width}×{ClientSize.Height}";
         }
 
     }

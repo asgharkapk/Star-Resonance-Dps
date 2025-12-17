@@ -45,6 +45,7 @@ namespace StarResonanceDpsAnalysis.Forms
             BattleTimeText = new AntdUI.Label();
             SortToggleButton = new AntdUI.Button();
             label1 = new AntdUI.Label();
+            label_WindowSizeDebug = new AntdUI.Label(); //debug
             timer_RefreshRunningTime = new System.Windows.Forms.Timer(components);
             timer1 = new System.Windows.Forms.Timer(components);
             sortedProgressBarList1 = new StarResonanceDpsAnalysis.Control.SortedProgressBarList();
@@ -218,6 +219,7 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             panel1.BackColor = Color.Transparent;
 
+            panel1.Controls.Add(label_WindowSizeDebug); // debug (rightmost)
             panel1.Controls.Add(label2); // damage(dps) [docked right]
             panel1.Controls.Add(BattleTimeText); // timer [docked left]
             panel1.Controls.Add(SortToggleButton);
@@ -245,6 +247,18 @@ namespace StarResonanceDpsAnalysis.Forms
             label2.TextAlign = ContentAlignment.MiddleRight;
             //label2.Margin = new Padding(0, 0, 20, 0); // px from right edge
             // 
+            // 
+            // label_WindowSizeDebug
+            // 
+            label_WindowSizeDebug.Dock = DockStyle.Right;
+            label_WindowSizeDebug.Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label_WindowSizeDebug.ForeColor = Color.Gray;
+            label_WindowSizeDebug.Name = "label_WindowSizeDebug";
+            label_WindowSizeDebug.Size = new Size(90, 31);
+            label_WindowSizeDebug.TabIndex = 21;
+            label_WindowSizeDebug.Text = "527 × 442";
+            label_WindowSizeDebug.TextAlign = ContentAlignment.MiddleRight;
+            //
             // BattleTimeText
             // 
             BattleTimeText.Dock = DockStyle.None;
@@ -451,5 +465,6 @@ namespace StarResonanceDpsAnalysis.Forms
         private AntdUI.TooltipComponent tooltip;
         private AntdUI.Button SortToggleButton;
         private AntdUI.Button button_WindowSize;
+        private AntdUI.Label label_WindowSizeDebug; // debug
     }
 }
