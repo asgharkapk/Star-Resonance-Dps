@@ -120,7 +120,7 @@
   <data name="button_Settings.IconSvg" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;!-- License: Apache. Made by bytedance: https://github.com/bytedance/IconPark --&gt;
-&lt;svg width="800px" height="800px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;svg width="800px" height="800px" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
 &lt;rect width="48" height="48" fill="white" fill-opacity="0.01"/&gt;
 &lt;path d="M36.686 15.171C37.9364 16.9643 38.8163 19.0352 39.2147 21.2727H44V26.7273H39.2147C38.8163 28.9648 37.9364 31.0357 36.686 32.829L40.0706 36.2137L36.2137 40.0706L32.829 36.686C31.0357 37.9364 28.9648 38.8163 26.7273 39.2147V44H21.2727V39.2147C19.0352 38.8163 16.9643 37.9364 15.171 36.686L11.7863 40.0706L7.92939 36.2137L11.314 32.829C10.0636 31.0357 9.18372 28.9648 8.78533 26.7273H4V21.2727H8.78533C9.18372 19.0352 10.0636 16.9643 11.314 15.171L7.92939 11.7863L11.7863 7.92939L15.171 11.314C16.9643 10.0636 19.0352 9.18372 21.2727 8.78533V4H26.7273V8.78533C28.9648 9.18372 31.0357 10.0636 32.829 11.314L36.2137 7.92939L40.0706 11.7863L36.686 15.171Z" fill="#000" stroke="#fff" stroke-width="4" stroke-linejoin="round"/&gt;
 &lt;path d="M24 29C26.7614 29 29 26.7614 29 24C29 21.2386 26.7614 19 24 19C21.2386 19 19 21.2386 19 24C19 26.7614 21.2386 29 24 29Z" fill="#000" stroke="white" stroke-width="4" stroke-linejoin="round"/&gt;
@@ -142,7 +142,7 @@
   <data name="button1.IconSvg" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!-- License: PD. Made by puppylinux: https://github.com/puppylinux-woof-CE/puppy_icon_theme --&gt;
-&lt;svg width="800px" height="800px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
+&lt;svg width="800px" height="800px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;path style="fill:#000;stroke:#fff;stroke-width:3;" d="M 93,62 C 83,82 65,96 48,96 32,96 19,89 15,79 L 5,90 5,53 40,53 29,63 c 0,0 5,14 26,14 16,0 38,-15 38,-15 z"/&gt;
   &lt;path style="fill:#fff;stroke:#000;stroke-width:3;" d="M 5,38 C 11,18 32,4 49,4 65,4 78,11 85,21 L 95,10 95,47 57,47 68,37 C 68,37 63,23 42,23 26,23 5,38 5,38 z"/&gt;
 &lt;/svg&gt;</value>
@@ -150,7 +150,7 @@
   <data name="button3.IconSvg" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;!-- License: MIT. Made by Microsoft: https://github.com/microsoft/vscode-codicons --&gt;
-&lt;svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000"&gt;&lt;path d="M11.496 4a3.49 3.49 0 0 0-3.46 3h-3.1a2 2 0 1 0 0 1h3.1a3.5 3.5 0 1 0 3.46-4zm0 6a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/&gt;&lt;/svg&gt;</value>
+&lt;svg width="800px" height="800px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000"&gt;&lt;path d="M11.496 4a3.49 3.49 0 0 0-3.46 3h-3.1a2 2 0 1 0 0 1h3.1a3.5 3.5 0 1 0 3.46-4zm0 6a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/&gt;&lt;/svg&gt;</value>
   </data>
   <metadata name="timer_RefreshRunningTime.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>118, 17</value>
