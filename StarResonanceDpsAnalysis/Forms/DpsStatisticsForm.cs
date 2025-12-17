@@ -854,7 +854,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         }
         private void button_WindowSize_MouseEnter(object sender, EventArgs e)
         {
-            ToolTip(button_WindowSize, Properties.Strings.Tooltip_WindowSize);
+            ToolTip(button_WindowSize, "Window size presets");
         }
 
     }
