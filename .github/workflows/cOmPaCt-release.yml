@@ -105,17 +105,9 @@ jobs:
             "**File Name:** [Star-Resonance-Dps-$version.zip]($zip_url)"
             "**Release Notes:** See release page for full notes."
             ""
-            "## Last Commits"
-            "$commits"
-            "")
-          #            "## Installation"
-          #            "1. Download the [zip file]($zip_url)"
-          #            "2. Extract contents"
-          #            "3. Run `Star-Resonance-Dps.exe` (Windows)"
-          #            ""
-          #            "## Action"
-          #            "This release was created automatically via GitHub Actions."
-          #          )
+            "## Last Commits")
+          # Add each commit line separately
+          $lines += $commits
 
           $lines | Out-File -FilePath latest-release.md -Encoding UTF8
           Write-Host "latest-release.md generated successfully"
