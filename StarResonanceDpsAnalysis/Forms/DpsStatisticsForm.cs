@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Security.Cryptography.Xml;
 using System.Threading.Tasks; // 引用异步任务支持（Task/async/await）
 using System.Windows.Forms;
-
+using System.Linq;
 using AntdUI; // 引用 AntdUI 组件库（第三方 UI 控件/样式）
 using StarResonanceDpsAnalysis.Control; // 引用项目内的 UI 控制/辅助类命名空间
 using StarResonanceDpsAnalysis.Effects;
@@ -814,6 +814,47 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 3 => MetricType.NpcTaken,
                 _ => MetricType.Damage
             });
+        }
+
+        private static readonly (string Name, Size Size)[] WindowSizePresets =
+        {
+            ("Compact", new Size(420, 360)),
+            ("Default", new Size(527, 442)),
+            ("Wide",    new Size(680, 442)),
+            ("Tall",    new Size(527, 600)),
+        };
+        private void button_WindowSize_Click(object sender, EventArgs e)
+        {
+            var items = WindowSizePresets
+                .Select(p => new ContextMenuStripItem(p.Name))
+                .Cast<IContextMenuStripItem>()
+                .ToArray();
+
+            AntdUI.ContextMenuStrip.open(this, it =>
+            {
+                var preset = WindowSizePresets.FirstOrDefault(p => p.Name == it.Text);
+                if (preset.Size != Size.Empty)
+                    ApplyWindowSize(preset.Size);
+            }, items);
+        }
+        private void ApplyWindowSize(Size targetSize)
+        {
+            SuspendLayout();
+
+            var screen = Screen.FromControl(this).WorkingArea;
+
+            int x = Math.Max(screen.Left,
+                screen.Left + (screen.Width - targetSize.Width) / 2);
+            int y = Math.Max(screen.Top,
+                screen.Top + (screen.Height - targetSize.Height) / 2);
+
+            Bounds = new Rectangle(x, y, targetSize.Width, targetSize.Height);
+
+            ResumeLayout();
+        }
+        private void button_WindowSize_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip(button_WindowSize, Properties.Strings.Tooltip_WindowSize);
         }
 
     }

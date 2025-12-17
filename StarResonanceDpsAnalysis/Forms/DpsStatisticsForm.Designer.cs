@@ -53,6 +53,7 @@ namespace StarResonanceDpsAnalysis.Forms
             AlwaysInjuredButton = new AntdUI.Button();
             TotalTreatmentButton = new AntdUI.Button();
             TotalDamageButton = new AntdUI.Button();
+            button_WindowSize = new AntdUI.Button();
             tooltip = new TooltipComponent();
             pageHeader1.SuspendLayout();
             panel1.SuspendLayout();
@@ -68,6 +69,7 @@ namespace StarResonanceDpsAnalysis.Forms
 
             pageHeader1.Controls.Add(PilingModeCheckbox); //bechmark checkbox [docked right]
             pageHeader1.Controls.Add(button_ThemeSwitch); // dark/light [docked right]
+            pageHeader1.Controls.Add(button_WindowSize);
             pageHeader1.Controls.Add(button2); // minimize [docked right]
             pageHeader1.Controls.Add(button3); // current - overal switch [docked left]
             pageHeader1.Controls.Add(button_AlwaysOnTop); // [docked right]
@@ -91,6 +93,18 @@ namespace StarResonanceDpsAnalysis.Forms
             pageHeader1.TabIndex = 16;
             pageHeader1.Text = "B.P.S.R - D.P.S Analyzer: ";
             // 
+            // 
+            // button_WindowSize
+            // 
+            button_WindowSize.ColorScheme = TAMode.Dark;
+            button_WindowSize.Dock = DockStyle.Right;
+            button_WindowSize.Ghost = true;
+            button_WindowSize.IconRatio = 0.8F;
+            button_WindowSize.IconSvg = Properties.Resources.resizeIcon; // add svg
+            button_WindowSize.Size = new Size(24, 25);
+            button_WindowSize.Name = "button_WindowSize";
+            button_WindowSize.Click += button_WindowSize_Click;
+            button_WindowSize.MouseEnter += button_WindowSize_MouseEnter;
             // PilingModeCheckbox
             // 
             PilingModeCheckbox.AutoSizeMode = TAutoSize.Width;
@@ -436,5 +450,6 @@ namespace StarResonanceDpsAnalysis.Forms
         private AntdUI.Button button_ThemeSwitch;
         private AntdUI.TooltipComponent tooltip;
         private AntdUI.Button SortToggleButton;
+        private AntdUI.Button button_WindowSize;
     }
 }
