@@ -15,6 +15,7 @@ A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceD
 - **New Features**
     - **Adde sorting by per second or total switch**
     - **Added automatica GitHub Actions Release**
+    - **Automatic Window Resize presets**
 
 - **Fixed minor bugs**
     - **fixed always using class not subclass for progress bar color and icon**
@@ -26,8 +27,8 @@ A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceD
 - **beta test branch: [monster branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/mOnStEr)**
 - **فارسی branch: [فارسی branch](https://github.com/asgharkapk/Star-Resonance-Dps/tree/فارسی)**
 
-![dark-compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/BRANCH_SELECTOR/dark-compact.jpg)
-![light compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/BRANCH_SELECTOR/light-compact.jpg)
+![dark-mode](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/BRANCH_SELECTOR/dark-mode.jpg)
+![light mode](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/BRANCH_SELECTOR/light-mode.jpg)
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-brightgreen.svg)](https://www.gnu.org/licenses/agpl-3.0.txt)
 
@@ -89,18 +90,18 @@ _No release yet_
 
 ## nOrMaL
 
-# Latest Release - v20251218-122543-nOrMaL-r63
+# Latest Release - v20251218-124637-nOrMaL-r64
 
-**Release Tag:** [v20251218-122543-nOrMaL-r63](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251218-122543-nOrMaL-r63)
-**File Name:** [Star-Resonance-Dps-v20251218-122543-nOrMaL-r63.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251218-122543-nOrMaL-r63/Star-Resonance-Dps-v20251218-122543-nOrMaL-r63.zip)
+**Release Tag:** [v20251218-124637-nOrMaL-r64](https://github.com/asgharkapk/Star-Resonance-Dps/releases/tag/v20251218-124637-nOrMaL-r64)
+**File Name:** [Star-Resonance-Dps-v20251218-124637-nOrMaL-r64.zip](https://github.com/asgharkapk/Star-Resonance-Dps/releases/download/v20251218-124637-nOrMaL-r64/Star-Resonance-Dps-v20251218-124637-nOrMaL-r64.zip)
 **Release Notes:** See release page for full notes.
 
 ## Last Commits
+- `fc74e89` readme by *asgharkapk* on 2025-12-18
+- `d99ff73` Update latest-release.md for v20251218-122543-nOrMaL-r63 by *asgharkapk* on 2025-12-18
 - `e08df4c` WindowSizePresets by *asgharkapk* on 2025-12-18
 - `3087863` Update latest-release.md for v20251218-122315-nOrMaL-r62 by *asgharkapk* on 2025-12-18
 - `c547ed2` Add files via upload by *asgharkapk* on 2025-12-18
-- `e2202eb` Update latest-release.md for v20251218-070004-nOrMaL-r61 by *asgharkapk* on 2025-12-18
-- `a621aad` resize icon by *asgharkapk* on 2025-12-18
 
 ## فارسی
 
