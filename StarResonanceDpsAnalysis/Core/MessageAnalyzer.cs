@@ -364,7 +364,7 @@ namespace StarResonanceDpsAnalysis.Core
                       continue;
                   var reader = new Google.Protobuf.CodedInputStream(attr.RawData.ToByteArray());
 
-                 // Console.WriteLine(@$"发现属性ID {attr.Id} 对应敌人E{enemyUid} 原始数据={Convert.ToBase64String(attr.RawData.ToByteArray())}");
+                  Console.WriteLine(@$"发现属性ID {attr.Id} 对应敌人E{enemyUid} 原始数据={Convert.ToBase64String(attr.RawData.ToByteArray())}");
                   switch (attr.Id)
                   {
                       case (int)AttrType.AttrName:
@@ -372,7 +372,7 @@ namespace StarResonanceDpsAnalysis.Core
             //                // 怪物名直接是 string
                               string enemyName = reader.ReadString();
 
-            //                Console.WriteLine($"发现怪物名 {enemyName}，对应ID {enemyUid}");
+                              Console.WriteLine($"发现怪物名 {enemyName}，对应ID {enemyUid}");
                               break;
                           }
                       case (int)AttrType.AttrId:
@@ -382,7 +382,7 @@ namespace StarResonanceDpsAnalysis.Core
                               string name = MonsterNameResolver.Instance.GetName(templateId);
                               if(!string.IsNullOrEmpty(name))
                               {
-            //                    Console.WriteLine($"怪物名：{name}，对应模板ID {templateId}");
+                                  Console.WriteLine($"怪物名：{name}，对应模板ID {templateId}");
                               }
 
                               break;
@@ -392,25 +392,25 @@ namespace StarResonanceDpsAnalysis.Core
                               var data = attr.RawData.ToByteArray();
                               if (data.Length == 0)
                               {
-            //                    //Console.WriteLine($"怪物 {enemyUid} 的血量数据为空，跳过");
+                                  Console.WriteLine($"怪物 {enemyUid} 的血量数据为空，跳过");
                                   break;
                               }
                               int enemyHp = reader.ReadInt32();
                            
-            //                //Console.WriteLine($"发现怪物当前血量 {enemyHp}，对应敌人ID {enemyUid}"); 
+                              Console.WriteLine($"发现怪物当前血量 {enemyHp}，对应敌人ID {enemyUid}"); 
                               break;
                           }
                       case (int)AttrType.AttrMaxHp:
                           {
                               int enemyMaxHp = reader.ReadInt32();
 
-            //                Console.WriteLine($"发现怪物最大血量 {enemyMaxHp}，对应敌人ID {enemyUid}");
+                              Console.WriteLine($"发现怪物最大血量 {enemyMaxHp}，对应敌人ID {enemyUid}");
                               break;
                           }
                       default:
                           {
             //                // unknown属性静默，可选 debug
-            //                // this.logger.Debug($"Found unknown attrId {attr.Id} for E{enemyUid} {Convert.ToBase64String(attr.RawData)}");
+                              this.logger.Debug($"Found unknown attrId {attr.Id} for E{enemyUid} {Convert.ToBase64String(attr.RawData)}");
                               break;
                           }
                   }
