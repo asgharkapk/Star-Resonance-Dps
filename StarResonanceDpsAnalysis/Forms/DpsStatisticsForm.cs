@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Security.Cryptography.Xml;
 using System.Threading.Tasks; // 引用异步任务支持（Task/async/await）
 using System.Windows.Forms;
-
+using System.Linq;
 using AntdUI; // 引用 AntdUI 组件库（第三方 UI 控件/样式）
 using StarResonanceDpsAnalysis.Control; // 引用项目内的 UI 控制/辅助类命名空间
 using StarResonanceDpsAnalysis.Effects;
@@ -14,7 +14,6 @@ using StarResonanceDpsAnalysis.Plugin.LaunchFunction; // 引用启动相关功�
 using StarResonanceDpsAnalysis.Properties; // 引用资源（图标/本地化字符串等）
 
 using static StarResonanceDpsAnalysis.Control.SkillDetailForm;
-using System.Security.Cryptography.Xml;
 using Button = AntdUI.Button;
 using DocumentFormat.OpenXml.Office2010.Excel;
 using Color = System.Drawing.Color;
@@ -887,6 +886,71 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
                 3 => MetricType.NpcTaken,
                 _ => MetricType.Damage
             });
+        }
+
+        private System.Windows.Forms.Timer _resizeTimer;
+        private Size _startSize;
+        private Size _targetSize;
+        private int _animationStep;
+        private const int AnimationSteps = 10; // number of steps for smoothness
+        private static readonly (string Name, Size Size)[] WindowSizePresets =
+        {
+            ("5-man", new Size(340, 203)),
+            ("12-man", new Size(340, 385)),
+            ("20-man",    new Size(340, 593)),
+            ("collapse",    new Size(340, 50)),
+        };
+        private void button_WindowSize_Click(object sender, EventArgs e)
+        {
+            var items = WindowSizePresets
+                .Select(p => new ContextMenuStripItem(p.Name))
+                .Cast<IContextMenuStripItem>()
+                .ToArray();
+
+            AntdUI.ContextMenuStrip.open(this, it =>
+            {
+                var preset = WindowSizePresets.FirstOrDefault(p => p.Name == it.Text);
+                if (preset.Size != Size.Empty)
+                    ApplyWindowSize(preset.Size);
+            }, items);
+        }
+        private void ApplyWindowSize(Size targetSize)
+        {
+            // Stop any ongoing animation
+            _resizeTimer?.Stop();
+
+            _startSize = this.Size;
+            _targetSize = targetSize;
+            _animationStep = 0;
+
+            if (_resizeTimer == null)
+            {
+                _resizeTimer = new System.Windows.Forms.Timer();
+                _resizeTimer.Interval = 15; // ms, adjust for speed (smaller = faster)
+                _resizeTimer.Tick += ResizeTimer_Tick;
+            }
+
+            _resizeTimer.Start();
+        }
+        private void button_WindowSize_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip(button_WindowSize, "Window size presets");
+        }
+        private void ResizeTimer_Tick(object? sender, EventArgs e)
+        {
+            _animationStep++;
+            if (_animationStep > AnimationSteps)
+            {
+                _resizeTimer.Stop();
+                this.Size = _targetSize; // ensure exact target size
+                return;
+            }
+
+            // Linear interpolation for width and height
+            int newWidth = _startSize.Width + (_targetSize.Width - _startSize.Width) * _animationStep / AnimationSteps;
+            int newHeight = _startSize.Height + (_targetSize.Height - _startSize.Height) * _animationStep / AnimationSteps;
+
+            this.Size = new Size(newWidth, newHeight);
         }
 
     }

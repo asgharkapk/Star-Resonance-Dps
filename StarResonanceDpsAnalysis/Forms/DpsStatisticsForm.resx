@@ -146,6 +146,13 @@ M128 672h768v96H128z&quot; fill=&quot;#ffffff&quot; p-id=&quot;8819&quot;&gt;&lt
 M704 640l-128 128-128-128h160V384h96v256z&quot; fill=&quot;#ffffff&quot; p-id=&quot;8819&quot;&gt;&lt;/path&gt;
 &lt;/svg&gt;</value>
   </data>
+  <data name="resizeIcon" xml:space="preserve">
+    <value>&lt;svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"&gt;
+      &lt;path
+        d="M640 128h256v256h-64V238.6L558.6 512 832 785.4V640h64v256H640v-64h145.4L512 558.6 238.6 832H384v64H128V640h64v145.4L465.4 512 192 238.6V384h-64V128h256v64H238.6L512 465.4 785.4 192H640z"
+        fill="#ffffff"/&gt;
+    &lt;/svg&gt;</value>
+  </data>
   <metadata name="timer_RefreshRunningTime.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>118, 17</value>
   </metadata>
