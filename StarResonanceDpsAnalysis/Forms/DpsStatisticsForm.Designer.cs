@@ -102,7 +102,7 @@ namespace StarResonanceDpsAnalysis.Forms
             button_WindowSize.Ghost = true;
             button_WindowSize.IconRatio = 0.8F;
             button_WindowSize.IconSvg = resources.GetString("resizeIcon");
-            button_WindowSize.Size = new Size(24, 25);
+            button_WindowSize.Size = new Size(20, 25);
             button_WindowSize.Name = "button_WindowSize";
             button_WindowSize.Click += button_WindowSize_Click;
             button_WindowSize.MouseEnter += button_WindowSize_MouseEnter;

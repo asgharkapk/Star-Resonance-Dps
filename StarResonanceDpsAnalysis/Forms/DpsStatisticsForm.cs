@@ -819,10 +819,10 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
 
         private static readonly (string Name, Size Size)[] WindowSizePresets =
         {
-            ("5man", new Size(330, 225)),
-            ("12man", new Size(330, 435)),
-            ("20man",    new Size(330, 675)),
-            ("collapse",    new Size(330, 50)),
+            ("5  man", new Size(340, 225)),
+            ("12 man", new Size(340, 435)),
+            ("20 man",    new Size(340, 675)),
+            ("collapse",    new Size(340, 50)),
         };
         private void button_WindowSize_Click(object sender, EventArgs e)
         {
@@ -842,14 +842,7 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         {
             SuspendLayout();
 
-            var screen = Screen.FromControl(this).WorkingArea;
-
-            int x = Math.Max(screen.Left,
-                screen.Left + (screen.Width - targetSize.Width) / 2);
-            int y = Math.Max(screen.Top,
-                screen.Top + (screen.Height - targetSize.Height) / 2);
-
-            Bounds = new Rectangle(x, y, targetSize.Width, targetSize.Height);
+            this.Size = targetSize;
 
             ResumeLayout();
 
