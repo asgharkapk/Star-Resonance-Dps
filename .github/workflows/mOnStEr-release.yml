@@ -1,9 +1,9 @@
-name: Auto Release   mOnStEr
+name: Auto Release mOnStEr
 
 on:
   push:
     branches:
-      -   mOnStEr   # Trigger on push to   mOnStEr
+      - mOnStEr   # Trigger on push to mOnStEr
   workflow_dispatch: # Allows manual trigger
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
         run: |
           Write-Host "Setting version based on current date and time..."
           $dt = Get-Date -Format "yyyyMMdd-HHmmss"
-          $version = "v$dt-  mOnStEr-r${{ github.run_number }}"
+          $version = "v$dt-mOnStEr-r${{ github.run_number }}"
           Write-Host "Generated version: $version"
           
           # Export as environment variable for this job
@@ -117,13 +117,13 @@ jobs:
         with:
           commit_message: "Update latest-release.md for ${{ steps.set_version.outputs.version }}"
           file_pattern: latest-release.md
-          branch:   mOnStEr
+          branch: mOnStEr
 
       - name: Log Commit
         shell: pwsh
         run: |
           $version = '${{ steps.set_version.outputs.version }}'
-          Write-Host "latest-release.md committed to branch   mOnStEr"
+          Write-Host "latest-release.md committed to branch mOnStEr"
           Write-Host "Commit message: Update latest-release.md for $version"
 
       - name: Notify branch_selector
