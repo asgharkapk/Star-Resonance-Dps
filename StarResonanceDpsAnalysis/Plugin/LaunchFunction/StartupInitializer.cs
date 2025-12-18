@@ -85,7 +85,7 @@ namespace StarResonanceDpsAnalysis.Plugin.LaunchFunction
                 }
             }
 
-           // MonsterNameResolver.Initialize(AppConfig.MonsterNames);//初始化怪物ID与名称的映射关系
+              MonsterNameResolver.Initialize(AppConfig.MonsterNames);//初始化怪物ID与名称的映射关系
 
         
 

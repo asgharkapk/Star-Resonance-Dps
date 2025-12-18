@@ -1,67 +1,137 @@
-name: Auto Release
+name: Auto Release   mOnStEr
 
 on:
   push:
-      branches:
-      - en_translation   # Trigger on push to en_translation
-  workflow_dispatch: # Allows you to run this manually from the Actions tab
+    branches:
+      -   mOnStEr   # Trigger on push to   mOnStEr
+  workflow_dispatch: # Allows manual trigger
 
 jobs:
   build-and-release:
     runs-on: windows-latest
-    
+
     permissions:
-      contents: write # Required to create the release and tag
+      contents: write # Required to create release and tag
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # Required for tagging
+
+      - name: Set Version by DateTime
+        id: set_version
+        shell: pwsh
+        run: |
+          Write-Host "Setting version based on current date and time..."
+          $dt = Get-Date -Format "yyyyMMdd-HHmmss"
+          $version = "v$dt-  mOnStEr-r${{ github.run_number }}"
+          Write-Host "Generated version: $version"
+          
+          # Export as environment variable for this job
+          echo "VERSION=$version" >> $GITHUB_ENV
+          
+          # Set step output for referencing later
+          "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8
+
+      - name: Create Tag
+        shell: pwsh
+        run: |
+          Write-Host "Configuring Git user..."
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git fetch --prune --unshallow
+          git fetch --tags
+
+          $tag = '${{ steps.set_version.outputs.version }}'
+          Write-Host "Creating Git tag $tag..."
+          git tag $tag
+          Write-Host "Pushing Git tag $tag to origin..."
+          git push origin $tag
+          Write-Host "Tag pushed successfully."
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.x' # Ensure this matches your project (6.x, 7.x, or 8.x)
+          dotnet-version: '8.x'
 
       - name: Restore Dependencies
         run: dotnet restore
 
       - name: Build and Publish
-        # Builds for Windows 64-bit
         run: dotnet publish -c Release -r win-x64 --self-contained false -o ./publish
 
       - name: Zip Build Output
         shell: pwsh
         run: |
-          $Version = "v${{ github.run_number }}"
-          Compress-Archive -Path ./publish/* -DestinationPath "./Star-Resonance-Dps-$Version.zip"
+          $version = '${{ steps.set_version.outputs.version }}'
+          $zipPath = "./Star-Resonance-Dps-$version.zip"
+          Write-Host "Zipping build output to $zipPath..."
+          Compress-Archive -Path ./publish/* -DestinationPath $zipPath
+          Write-Host "Zip created: $zipPath"
 
-      - name: Fetch full history
-        run: |
-          git fetch --unshallow || true
-          git fetch --tags
-      
-      - name: Generate commit log
-        run: |
-          echo "### Commits in this release" > release_body.md
-
-          # Get previous tag (if exists)
-          $PREV_TAG = git describe --tags --abbrev=0 --match "v*" 2>$null
-
-          if (-not $PREV_TAG) {
-            Write-Host "No previous tag found → Initial release"
-            echo "- Initial release" >> release_body.md
-          }
-          else {
-            Write-Host "Previous tag: $PREV_TAG"
-            git log --pretty=format:"- %h %s (%an)" "$PREV_TAG..HEAD" >> release_body.md
-          }
-        shell: pwsh
-          
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v${{ github.run_number }}
-          name: Release v${{ github.run_number }}
-          files: ./Star-Resonance-Dps-v${{ github.run_number }}.zip
-          body_path: release_body.md
+          tag_name: ${{ steps.set_version.outputs.version }}
+          name: Release ${{ steps.set_version.outputs.version }}
+          files: ./Star-Resonance-Dps-${{ steps.set_version.outputs.version }}.zip
           generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Log Release Creation
+        shell: pwsh
+        run: |
+          $version = '${{ steps.set_version.outputs.version }}'
+          Write-Host "Release creation requested for tag: $version"
+          Write-Host "Release file: Star-Resonance-Dps-$version.zip"
+
+      - name: Generate latest-release.md
+        shell: pwsh
+        run: |
+          $version = '${{ steps.set_version.outputs.version }}'
+          $repo = '${{ github.repository }}'
+          $release_url = "https://github.com/$repo/releases/tag/$version"
+          $zip_url = "https://github.com/$repo/releases/download/$version/Star-Resonance-Dps-$version.zip"
+
+          $commits = git log -n 5 --pretty=format:'- `%h` %s by *%an* on %ad' --date=short
+
+          $lines = @(
+            "# Latest Release - $version"
+            ""
+            "**Release Tag:** [$version]($release_url)"
+            "**File Name:** [Star-Resonance-Dps-$version.zip]($zip_url)"
+            "**Release Notes:** See release page for full notes."
+            ""
+            "## Last Commits")
+          # Add each commit line separately
+          $lines += $commits
+
+          $lines | Out-File -FilePath latest-release.md -Encoding UTF8
+          Write-Host "latest-release.md generated successfully"
+
+      - name: Commit latest-release.md
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update latest-release.md for ${{ steps.set_version.outputs.version }}"
+          file_pattern: latest-release.md
+          branch:   mOnStEr
+
+      - name: Log Commit
+        shell: pwsh
+        run: |
+          $version = '${{ steps.set_version.outputs.version }}'
+          Write-Host "latest-release.md committed to branch   mOnStEr"
+          Write-Host "Commit message: Update latest-release.md for $version"
+
+      - name: Notify branch_selector
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: branch-release-updated
+          client-payload: |
+            {
+              "branch": "${{ github.ref_name }}"
+            }
