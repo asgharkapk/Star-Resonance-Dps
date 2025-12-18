@@ -96,7 +96,7 @@ jobs:
           $release_url = "https://github.com/$repo/releases/tag/$version"
           $zip_url = "https://github.com/$repo/releases/download/$version/Star-Resonance-Dps-$version.zip"
 
-          $commits = git log -n 5 --pretty=format:'- %h %s توسط %an'
+          $commits = git log -n 5 --pretty=format:'- `%h` %s by *%an* on %ad' --date=short
 
           $lines = @(
             "# آخرین ریلیز - $version"
@@ -105,17 +105,9 @@ jobs:
             "**نام فایل:** [Star-Resonance-Dps-$version.zip]($zip_url)"
             "**یادداشت‌های ریلیز:** برای مشاهده کامل یادداشت‌ها به صفحه ریلیز مراجعه کنید."
             ""
-            "## آخرین کامیت‌ها"
-            "$commits"
-            "")
-          #            "## نصب"
-          #            "1. دانلود [فایل zip]($zip_url)"
-          #            "2. استخراج محتویات"
-          #            "3. اجرای `Star-Resonance-Dps.exe` (ویندوز)"
-          #            ""
-          #            "## اکشن"
-          #            "این ریلیز به صورت خودکار توسط GitHub Actions ایجاد شده است."
-          #          )
+            "## آخرین کامیت‌ها")
+          # Add each commit line separately
+          $lines += $commits
 
           $lines | Out-File -FilePath latest-release.md -Encoding UTF8
           Write-Host "latest-release.md با موفقیت تولید شد"

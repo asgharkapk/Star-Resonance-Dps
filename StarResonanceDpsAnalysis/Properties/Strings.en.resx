@@ -553,13 +553,13 @@
     <value>(s)</value>
   </data>
   <data name="SubProfession_Concerto" xml:space="preserve">
-    <value>کنسرتو</value>
+    <value>خنیابزمو</value>
   </data>
   <data name="SubProfession_IceSpear" xml:space="preserve">
     <value>شمش یخ</value>
   </data>
   <data name="SubProfession_Iai" xml:space="preserve">
-    <value>ایایدو</value>
+    <value>ایی‌آی‌دو</value>
   </data>
   <data name="SubProfession_MoonBlade" xml:space="preserve">
     <value>ماه‌کوب</value>
@@ -568,7 +568,7 @@
     <value>بازداری</value>
   </data>
   <data name="SubProfession_WolfBow" xml:space="preserve">
-    <value>گرگ‌جمع</value>
+    <value>پک وحشی</value>
   </data>
   <data name="SubProfession_LightShield" xml:space="preserve">
     <value>سپر</value>
