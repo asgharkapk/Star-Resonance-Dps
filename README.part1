@@ -15,6 +15,7 @@ A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceD
 - **New Features**
     - **Adde sorting by per second or total switch**
     - **Added automatica GitHub Actions Release**
+    - **Automatic Window Resize presets**
 
 - **Fixed minor bugs**
     - **fixed always using class not subclass for progress bar color and icon**
