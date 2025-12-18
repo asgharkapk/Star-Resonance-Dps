@@ -8,8 +8,8 @@
 - **تم غیر فشرده در [شاخه نرمال](https://github.com/asgharkapk/Star-Resonance-Dps/tree/nOrMaL)**
 - **شاخه تست بتا: [شاخه هیولا](https://github.com/asgharkapk/Star-Resonance-Dps/tree/mOnStEr)**
 
-![dark-compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/cOmPaCt/dark-compact.jpg)
-![light compact](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/cOmPaCt/light-compact.jpg)
+![dark-mode](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/BRANCH_SELECTOR/dark-mode.jpg)
+![light mode](https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/BRANCH_SELECTOR/light-mode.jpg)
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-brightgreen.svg)](https://www.gnu.org/licenses/agpl-3.0.txt)
 
