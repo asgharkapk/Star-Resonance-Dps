@@ -896,9 +896,9 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         private static readonly (string Name, Size Size)[] WindowSizePresets =
         {
             ("4-man", new Size(527, 246)),
-            ("5-man", new Size(527, 275)),
+            ("5-man", new Size(527, 278)),
             ("10-man", new Size(527, 518)),
-            ("12-man", new Size(527, 616)),
+            ("12-man", new Size(527, 613)),
             ("20-man",    new Size(527, 1010)),
             ("collapse",    new Size(527, 30)),
         };
