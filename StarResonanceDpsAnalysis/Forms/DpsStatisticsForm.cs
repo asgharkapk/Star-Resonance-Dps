@@ -817,41 +817,48 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             });
         }
 
-        private static readonly (string Name, Size Size)[] WindowSizePresets =
-        {
-            ("5  man", new Size(340, 225)),
-            ("12 man", new Size(340, 435)),
-            ("20 man",    new Size(340, 675)),
-            ("collapse",    new Size(340, 50)),
-        };
-        private void button_WindowSize_Click(object sender, EventArgs e)
-        {
-            var items = WindowSizePresets
-                .Select(p => new ContextMenuStripItem(p.Name))
-                .Cast<IContextMenuStripItem>()
-                .ToArray();
 
-            AntdUI.ContextMenuStrip.open(this, it =>
-            {
-                var preset = WindowSizePresets.FirstOrDefault(p => p.Name == it.Text);
-                if (preset.Size != Size.Empty)
-                    ApplyWindowSize(preset.Size);
-            }, items);
-        }
+        private System.Windows.Forms.Timer _resizeTimer;
+        private Size _startSize;
+        private Size _targetSize;
+        private int _animationStep;
+        private const int AnimationSteps = 10; // number of steps for smoothness
         private void ApplyWindowSize(Size targetSize)
         {
-            SuspendLayout();
+            // Stop any ongoing animation
+            _resizeTimer?.Stop();
 
-            this.Size = targetSize;
+            _startSize = this.Size;
+            _targetSize = targetSize;
+            _animationStep = 0;
 
-            ResumeLayout();
+            if (_resizeTimer == null)
+            {
+                _resizeTimer = new System.Windows.Forms.Timer();
+                _resizeTimer.Interval = 15; // ms, adjust for speed (smaller = faster)
+                _resizeTimer.Tick += ResizeTimer_Tick;
+            }
 
-            UpdateWindowSizeDebug();
+            _resizeTimer.Start();
         }
-        private void button_WindowSize_MouseEnter(object sender, EventArgs e)
+        private void ResizeTimer_Tick(object? sender, EventArgs e)
         {
-            ToolTip(button_WindowSize, "Window size presets");
+            _animationStep++;
+            if (_animationStep > AnimationSteps)
+            {
+                _resizeTimer.Stop();
+                this.Size = _targetSize; // ensure exact target size
+                UpdateWindowSizeDebug();
+                return;
+            }
+
+            // Linear interpolation for width and height
+            int newWidth = _startSize.Width + (_targetSize.Width - _startSize.Width) * _animationStep / AnimationSteps;
+            int newHeight = _startSize.Height + (_targetSize.Height - _startSize.Height) * _animationStep / AnimationSteps;
+
+            this.Size = new Size(newWidth, newHeight);
         }
+
 
         private void UpdateWindowSizeDebug()
         {
