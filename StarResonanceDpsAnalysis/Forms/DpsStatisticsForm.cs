@@ -817,12 +817,32 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
             });
         }
 
-
         private System.Windows.Forms.Timer _resizeTimer;
         private Size _startSize;
         private Size _targetSize;
         private int _animationStep;
         private const int AnimationSteps = 10; // number of steps for smoothness
+        private static readonly (string Name, Size Size)[] WindowSizePresets =
+        {
+            ("5-man", new Size(340, 203)),
+            ("12-man", new Size(340, 385)),
+            ("20-man",    new Size(340, 593)),
+            ("collapse",    new Size(340, 50)),
+        };
+        private void button_WindowSize_Click(object sender, EventArgs e)
+        {
+            var items = WindowSizePresets
+                .Select(p => new ContextMenuStripItem(p.Name))
+                .Cast<IContextMenuStripItem>()
+                .ToArray();
+
+            AntdUI.ContextMenuStrip.open(this, it =>
+            {
+                var preset = WindowSizePresets.FirstOrDefault(p => p.Name == it.Text);
+                if (preset.Size != Size.Empty)
+                    ApplyWindowSize(preset.Size);
+            }, items);
+        }
         private void ApplyWindowSize(Size targetSize)
         {
             // Stop any ongoing animation
@@ -841,6 +861,10 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
 
             _resizeTimer.Start();
         }
+        private void button_WindowSize_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip(button_WindowSize, "Window size presets");
+        }
         private void ResizeTimer_Tick(object? sender, EventArgs e)
         {
             _animationStep++;
@@ -858,7 +882,6 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
 
             this.Size = new Size(newWidth, newHeight);
         }
-
 
         private void UpdateWindowSizeDebug()
         {
