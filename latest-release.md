@@ -10,3 +10,4 @@
 - `81fccea` farsi release by *asgharkapk* on 2025-12-16
 - `598e87e` به‌روزرسانی latest-release.md برای v20251215-052752-Farsi by *asgharkapk* on 2025-12-15
 - `32b89f2` farsi release by *asgharkapk* on 2025-12-15
+trigger?
