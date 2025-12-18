@@ -118,17 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="button_Settings.IconSvg" xml:space="preserve">
-    <value>&lt;svg class="icon" viewBox="0 0 1024 1024" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"&gt;
-      &lt;rect width="48" height="48" fill="#ffffff" fill-opacity="0.01"/&gt;
-      &lt;path d="M36.686 15.171C37.9364 16.9643 38.8163 19.0352 39.2147 21.2727H44V26.7273H39.2147C38.8163 28.9648 37.9364 31.0357 36.686 32.829L40.0706 36.2137L36.2137 40.0706L32.829 36.686C31.0357 37.9364 28.9648 38.8163 26.7273 39.2147V44H21.2727V39.2147C19.0352 38.8163 16.9643 37.9364 15.171 36.686L11.7863 40.0706L7.92939 36.2137L11.314 32.829C10.0636 31.0357 9.18372 28.9648 8.78533 26.7273H4V21.2727H8.78533C9.18372 19.0352 10.0636 16.9643 11.314 15.171L7.92939 11.7863L11.7863 7.92939L15.171 11.314C16.9643 10.0636 19.0352 9.18372 21.2727 8.78533V4H26.7273V8.78533C28.9648 9.18372 31.0357 10.0636 32.829 11.314L36.2137 7.92939L40.0706 11.7863L36.686 15.171Z" fill="#ffffff"/&gt;
-      &lt;path d="M24 29C26.7614 29 29 26.7614 29 24C29 21.2386 26.7614 19 24 19C21.2386 19 19 21.2386 19 24C19 26.7614 21.2386 29 24 29Z" fill="#ffffff"/&gt;
-    &lt;/svg&gt;</value>
+    <value>&lt;svg t=&quot;1755048146861&quot; class=&quot;icon&quot; viewBox=&quot;0 0 1024 1024&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; p-id=&quot;8818&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;path d=&quot;M128 256h768v96H128z
+M128 464h768v96H128z
+M128 672h768v96H128z&quot; fill=&quot;#ffffff&quot; p-id=&quot;8819&quot;&gt;&lt;/path&gt;
+&lt;/svg&gt;</value>
   </data>
   <data name="button2.IconSvg" xml:space="preserve">
     <value>&lt;svg t="1755048146861" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8818" width="200" height="200"&gt;&lt;path d="M65.23884 456.152041 958.760137 456.152041l0 111.695918L65.23884 567.847959 65.23884 456.152041z" fill="#ffffff" p-id="8819"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
   </data>
   <data name="button_AlwaysOnTop.IconSvg" xml:space="preserve">
-    <value>&lt;svg t="1755048195822" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11049" width="200" height="200"&gt;&lt;path d="M555.5 151.4l303.2 353.1c16 18.6 19.5 44 9.3 66.3-10.2 22.3-31.8 36.1-56.3 36.1H700.5v271.3c0 52.9-43.1 96-96 96h-192c-52.9 0-96-43.1-96-96V606.9H205.3c-24.5 0-46.1-13.8-56.3-36.1-10.2-22.3-6.7-47.7 9.3-66.3l303.2-353.1c11.8-13.7 28.9-21.6 47-21.6s35.2 7.9 47 21.6z m-175 391.5v335.3c0 17.6 14.4 32 32 32h192c17.6 0 32-14.4 32-32V542.9h170.8l-298.8-348-298.8 348h170.8zM860.5 118.9h-704c-17.7 0-32-14.3-32-32s14.3-32 32-32h704c17.7 0 32 14.3 32 32s-14.3 32-32 32z" p-id="11050" fill="#ffffff"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
+    <value>&lt;svg t="1755048195822" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11049" width="200" height="200"&gt;&lt;path d="M402.3 329.1h-69.4c47.3-46.1 111.5-73.1 179-73.1 141.2 0 256 114.8 256 256H841c0-181.5-147.7-329.1-329.1-329.1-81.8 0-159.8 30.8-219.4 83.9v-47.3h-73.1v182.9h182.9v-73.3zM621.7 694.9H691C643.7 741 579.5 768 511.9 768c-141.2 0-256-114.8-256-256h-73.1c0 181.5 147.7 329.1 329.1 329.1 81.9 0 159.9-30.8 219.5-84v47.5h73.1V621.7H621.7v73.2z" p-id="11050" fill="#ffffff"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
   </data>
   <data name="button_AlwaysOnTop.ToggleIconSvg" xml:space="preserve">
     <value>&lt;svg t="1755048207694" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="12096" width="200" height="200"&gt;
@@ -144,9 +144,10 @@
     &lt;/svg&gt;</value>
   </data>
   <data name="button3.IconSvg" xml:space="preserve">
-    <value>&lt;svg class="icon" viewBox="0 0 1024 1024" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"&gt;
-      &lt;path d="M11.496 4a3.49 3.49 0 0 0-3.46 3h-3.1a2 2 0 1 0 0 1h3.1a3.5 3.5 0 1 0 3.46-4zm0 6a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill="#ffffff"/&gt;
-    &lt;/svg&gt;</value>
+    <value>&lt;svg t=&quot;1755048146861&quot; class=&quot;icon&quot; viewBox=&quot;0 0 1024 1024&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; p-id=&quot;8818&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;path d=&quot;M320 384l128-128 128 128H416v256H320V384z
+M704 640l-128 128-128-128h160V384h96v256z&quot; fill=&quot;#ffffff&quot; p-id=&quot;8819&quot;&gt;&lt;/path&gt;
+&lt;/svg&gt;</value>
   </data>
   <metadata name="timer_RefreshRunningTime.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>118, 17</value>
