@@ -895,10 +895,12 @@ namespace StarResonanceDpsAnalysis.Forms // 定义命名空间：窗体相关代
         private const int AnimationSteps = 10; // number of steps for smoothness
         private static readonly (string Name, Size Size)[] WindowSizePresets =
         {
-            ("5-man", new Size(340, 203)),
-            ("12-man", new Size(340, 385)),
-            ("20-man",    new Size(340, 593)),
-            ("collapse",    new Size(340, 50)),
+            ("4-man", new Size(527, 246)),
+            ("5-man", new Size(527, 275)),
+            ("10-man", new Size(527, 518)),
+            ("12-man", new Size(527, 616)),
+            ("20-man",    new Size(527, 1010)),
+            ("collapse",    new Size(527, 30)),
         };
         private void button_WindowSize_Click(object sender, EventArgs e)
         {
