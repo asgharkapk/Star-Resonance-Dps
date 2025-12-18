@@ -8,6 +8,8 @@ using BlueProto;
 using StarResonanceDpsAnalysis.Plugin;
 using StarResonanceDpsAnalysis.Plugin.DamageStatistics;
 using ZstdNet;
+using StarResonanceDpsAnalysis.Core;
+using StarResonanceDpsAnalysis.Core.TabelJson;
 using StarResonanceDpsAnalysis.Core.test;
 using Google.Protobuf.Collections;
 using StarResonanceDpsAnalysis.Core.Module;
