@@ -497,37 +497,37 @@ namespace StarResonanceDpsAnalysis.Forms
             // unknown
             { Properties.Strings.Profession_Unknown, EmptyBitmap() },
             // FROST
-            { Properties.Strings.Profession_FrostMage,      new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },
-            { Properties.Strings.SubProfession_IceRay,      new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },
-            { Properties.Strings.SubProfession_IceSpear,    new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },
+            { Properties.Strings.Profession_FrostMage,      new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },    //Frost Mage
+            { Properties.Strings.SubProfession_IceRay,      new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },    //Icicle 
+            { Properties.Strings.SubProfession_IceSpear,    new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },    //Frostbeam 
             //HeavyGuardian
-            { Properties.Strings.Profession_HeavyGuardian,  new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },
-            { Properties.Strings.SubProfession_RockShield,  new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },
-            { Properties.Strings.SubProfession_Block,       new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },
+            { Properties.Strings.Profession_HeavyGuardian,  new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },    //Heavy Guardian
+            { Properties.Strings.SubProfession_RockShield,  new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },    //Earthfort 
+            { Properties.Strings.SubProfession_Block,       new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },    //Block 
             // ORACLE
-            { Properties.Strings.Profession_VerdantOracle,  new Bitmap(new MemoryStream(Resources.森语者)       ) },
-            { Properties.Strings.SubProfession_Lifebloom,   new Bitmap(new MemoryStream(Resources.森语者)       ) },
-            { Properties.Strings.SubProfession_Thornlash,   new Bitmap(new MemoryStream(Resources.森语者)       ) },
+            { Properties.Strings.Profession_VerdantOracle,  new Bitmap(new MemoryStream(Resources.森语者)       ) },    //Verdant Oracle
+            { Properties.Strings.SubProfession_Lifebloom,   new Bitmap(new MemoryStream(Resources.森语者)       ) },    //Lifebind 
+            { Properties.Strings.SubProfession_Thornlash,   new Bitmap(new MemoryStream(Resources.森语者)       ) },    //Smite 
             // SoulMusician
-            { Properties.Strings.Profession_SoulMusician,   new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },
-            { Properties.Strings.SubProfession_Concerto,    new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },
-            { Properties.Strings.SubProfession_RagingSound, new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },
+            { Properties.Strings.Profession_SoulMusician,   new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },    //Beat Performer
+            { Properties.Strings.SubProfession_Concerto,    new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },    //Concerto 
+            { Properties.Strings.SubProfession_RagingSound, new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },    //Dissonance 
             //Marksman
-            { Properties.Strings.Profession_Marksman,       new Bitmap(new MemoryStream(Resources.神射手)       ) },
-            { Properties.Strings.SubProfession_EagleBow,    new Bitmap(new MemoryStream(Resources.神射手)       ) },
-            { Properties.Strings.SubProfession_WolfBow,     new Bitmap(new MemoryStream(Resources.神射手)       ) },
+            { Properties.Strings.Profession_Marksman,       new Bitmap(new MemoryStream(Resources.神射手)       ) },    //Marksman
+            { Properties.Strings.SubProfession_EagleBow,    new Bitmap(new MemoryStream(Resources.神射手)       ) },    //Falconry 
+            { Properties.Strings.SubProfession_WolfBow,     new Bitmap(new MemoryStream(Resources.神射手)       ) },    //Wildpack 
             //Stormblade
-            { Properties.Strings.Profession_Stormblade,     new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },
-            { Properties.Strings.SubProfession_MoonBlade,   new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },
-            { Properties.Strings.SubProfession_Iai,         new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },
+            { Properties.Strings.Profession_Stormblade,     new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },    //Stormblade 
+            { Properties.Strings.SubProfession_MoonBlade,   new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },    //Moonstrike 
+            { Properties.Strings.SubProfession_Iai,         new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },    //Iaido Slash 
             //
-            { Properties.Strings.Profession_WindKnight,     new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
-            { Properties.Strings.SubProfession_AirStyle,    new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
-            { Properties.Strings.SubProfession_Overdrive,   new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
+            { Properties.Strings.Profession_WindKnight,     new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },    //Wind Knight
+            { Properties.Strings.SubProfession_AirStyle,    new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },    //Skyward 
+            { Properties.Strings.SubProfession_Overdrive,   new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },    //Vanguard 
             //
-            { Properties.Strings.Profession_AegisKnight,    new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
-            { Properties.Strings.SubProfession_Protection,  new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
-            { Properties.Strings.SubProfession_LightShield, new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
+            { Properties.Strings.Profession_AegisKnight,    new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },    //Shield Knight
+            { Properties.Strings.SubProfession_Protection,  new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },    //Recovery 
+            { Properties.Strings.SubProfession_LightShield, new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },    //Shield 
         };
 
 
