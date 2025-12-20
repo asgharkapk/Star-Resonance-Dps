@@ -730,16 +730,31 @@ namespace StarResonanceDpsAnalysis.Forms
                     row[2].Text = $"{totalFmt} ({perSec})";
                     row[3].Text = share;
 
+                    double orderKey = SortByDps ? p.PerSecond : p.Total;
+
+                    // 1️⃣ Get previous ProgressBarData (if exists)
+                    // 1️⃣ Get old OrderValue BEFORE updating it
+                    byId.TryGetValue(p.Uid, out var pb);
+                    double oldOrder = pb?.OrderValue ?? orderKey;
+
+                    // 2️⃣ Compute rank delta
+                    string rankDelta =
+                        orderKey > oldOrder ? "▲" :
+                        orderKey < oldOrder ? "▼" :
+                        "";
+
+                    // 3️⃣
                     if (p.Uid == (long)AppConfig.Uid)
                     {
                         label1.Font = new Font("Segoe UI Emoji", 12f, FontStyle.Regular, GraphicsUnit.Pixel);
-                        label1.Text = $" [👑{i + 1}]";
+                        label1.Text = $" [👑{i + 1}{rankDelta}]";
                         label2.Text = $"{totalFmt} ({perSec})";
                     }
 
                     // 复用旧的 ProgressBarData，避免 UI 抖动；没有则新建
-                    double orderKey = SortByDps ? p.PerSecond : p.Total;
-                    if (!byId.TryGetValue(p.Uid, out var pb))
+                    // 4️⃣ Reuse or create ProgressBarData
+                    // 3️⃣ Create or reuse ProgressBarData
+                    if (pb == null)
                     {
                         pb = new ProgressBarData
                         {
