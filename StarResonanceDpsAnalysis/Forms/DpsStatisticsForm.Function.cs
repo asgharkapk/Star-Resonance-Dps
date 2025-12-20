@@ -494,28 +494,40 @@ namespace StarResonanceDpsAnalysis.Forms
         }
         public static Dictionary<string, Bitmap> imgDict = new Dictionary<string, Bitmap>() // convert to resource key
         {
+            // unknown
             { Properties.Strings.Profession_Unknown, EmptyBitmap() },
-            { Properties.Strings.SubProfession_IceRay,      new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },
+            // FROST
             { Properties.Strings.Profession_FrostMage,      new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },
+            { Properties.Strings.SubProfession_IceRay,      new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },
+            { Properties.Strings.SubProfession_IceSpear,    new Bitmap(new MemoryStream(Resources.冰魔导师)     ) },
+            //HeavyGuardian
             { Properties.Strings.Profession_HeavyGuardian,  new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },
-            { Properties.Strings.Profession_VerdantOracle,  new Bitmap(new MemoryStream(Resources.森语者)       ) },
-            { Properties.Strings.Profession_SoulMusician,   new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },
-            { Properties.Strings.Profession_Marksman,       new Bitmap(new MemoryStream(Resources.神射手)       ) },
-            { Properties.Strings.Profession_Stormblade,     new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },
-            { Properties.Strings.Profession_WindKnight,     new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
-            { Properties.Strings.Profession_AegisKnight,    new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
-            { Properties.Strings.SubProfession_Concerto,    new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },
-            { Properties.Strings.SubProfession_MoonBlade,   new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },
-            { Properties.Strings.SubProfession_EagleBow,    new Bitmap(new MemoryStream(Resources.神射手)       ) },
-            { Properties.Strings.SubProfession_WolfBow,     new Bitmap(new MemoryStream(Resources.神射手)       ) },
-            { Properties.Strings.SubProfession_AirStyle,    new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
-            { Properties.Strings.SubProfession_Overdrive,   new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
-            { Properties.Strings.SubProfession_Protection,  new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
-            { Properties.Strings.SubProfession_LightShield, new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
             { Properties.Strings.SubProfession_RockShield,  new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },
             { Properties.Strings.SubProfession_Block,       new Bitmap(new MemoryStream(Resources.巨刃守护者)   ) },
+            // ORACLE
+            { Properties.Strings.Profession_VerdantOracle,  new Bitmap(new MemoryStream(Resources.森语者)       ) },
             { Properties.Strings.SubProfession_Lifebloom,   new Bitmap(new MemoryStream(Resources.森语者)       ) },
             { Properties.Strings.SubProfession_Thornlash,   new Bitmap(new MemoryStream(Resources.森语者)       ) },
+            // SoulMusician
+            { Properties.Strings.Profession_SoulMusician,   new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },
+            { Properties.Strings.SubProfession_Concerto,    new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },
+            { Properties.Strings.SubProfession_RagingSound, new Bitmap(new MemoryStream(Resources.灵魂乐手)     ) },
+            //Marksman
+            { Properties.Strings.Profession_Marksman,       new Bitmap(new MemoryStream(Resources.神射手)       ) },
+            { Properties.Strings.SubProfession_EagleBow,    new Bitmap(new MemoryStream(Resources.神射手)       ) },
+            { Properties.Strings.SubProfession_WolfBow,     new Bitmap(new MemoryStream(Resources.神射手)       ) },
+            //Stormblade
+            { Properties.Strings.Profession_Stormblade,     new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },
+            { Properties.Strings.SubProfession_MoonBlade,   new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },
+            { Properties.Strings.SubProfession_Iai,         new Bitmap(new MemoryStream(Resources.雷影剑士)     ) },
+            //
+            { Properties.Strings.Profession_WindKnight,     new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
+            { Properties.Strings.SubProfession_AirStyle,    new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
+            { Properties.Strings.SubProfession_Overdrive,   new Bitmap(new MemoryStream(Resources.青岚骑士)     ) },
+            //
+            { Properties.Strings.Profession_AegisKnight,    new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
+            { Properties.Strings.SubProfession_Protection,  new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
+            { Properties.Strings.SubProfession_LightShield, new Bitmap(new MemoryStream(Resources.神盾骑士)     ) },
         };
 
 
@@ -676,16 +688,16 @@ namespace StarResonanceDpsAnalysis.Forms
                     string totalFmt = Common.FormatWithEnglishUnits(p.Total);
                     string perSec = Common.FormatWithEnglishUnits(Math.Round(p.PerSecond, 1));
 
-                    var iconKey = (p?.Profession is string pr && pr != Properties.Strings.Profession_Unknown && imgDict.ContainsKey(pr)) ? pr
-                                : (p?.SubProfession is string sr && sr != Properties.Strings.Profession_Unknown && imgDict.ContainsKey(sr)) ? sr
+                    var iconKey = (p?.SubProfession is string sr && sr != Properties.Strings.Profession_Unknown && imgDict.ContainsKey(sr)) ? sr
+                                : (p?.Profession is string pr && pr != Properties.Strings.Profession_Unknown && imgDict.ContainsKey(pr)) ? pr
                                 : Properties.Strings.Profession_Unknown;
 
                     var profBmp = imgDict.TryGetValue(iconKey, out var bmp) ? bmp : EmptyBitmap(); ;
 
                     var colorMap = Config.IsLight ? colorDict : blackColorDict;
 
-                    var colorKey = (p?.Profession is string pr2 && pr2 != Properties.Strings.Profession_Unknown && colorMap.ContainsKey(pr2)) ? pr2
-                                 : (p?.SubProfession is string sr2 && sr2 != Properties.Strings.Profession_Unknown && colorMap.ContainsKey(sr2)) ? sr2
+                    var colorKey = (p?.SubProfession is string sr2 && sr2 != Properties.Strings.Profession_Unknown && colorMap.ContainsKey(sr2)) ? sr2
+                                 : (p?.Profession is string pr2 && pr2 != Properties.Strings.Profession_Unknown && colorMap.ContainsKey(pr2)) ? pr2
                                  : Properties.Strings.Profession_Unknown;
 
                     var color = colorMap.TryGetValue(colorKey, out var c) ? c : ColorTranslator.FromHtml("#67AEF6");
