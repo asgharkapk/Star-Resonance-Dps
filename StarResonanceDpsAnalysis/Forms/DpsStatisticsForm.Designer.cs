@@ -69,8 +69,8 @@ namespace StarResonanceDpsAnalysis.Forms
             pageHeader1.ColorScheme = TAMode.Dark;
 
             pageHeader1.Controls.Add(PilingModeCheckbox); //bechmark checkbox [docked right]
-            pageHeader1.Controls.Add(button_ThemeSwitch); // dark/light [docked right]
             pageHeader1.Controls.Add(button_WindowSize);
+            pageHeader1.Controls.Add(button_ThemeSwitch); // dark/light [docked right]
             pageHeader1.Controls.Add(button2); // minimize [docked right]
             pageHeader1.Controls.Add(button3); // current - overal switch [docked left]
             pageHeader1.Controls.Add(button_AlwaysOnTop); // [docked right]
@@ -92,7 +92,7 @@ namespace StarResonanceDpsAnalysis.Forms
             pageHeader1.SubGap = 0;
             pageHeader1.SubText = "当前伤害";
             pageHeader1.TabIndex = 16;
-            pageHeader1.Text = "B.P.S.R - D.P.S Analyzer: ";
+            pageHeader1.Text = "BPSR-DPS Analyzer: ";
             // 
             // 
             // button_WindowSize
@@ -219,7 +219,7 @@ namespace StarResonanceDpsAnalysis.Forms
             // 
             panel1.BackColor = Color.Transparent;
 
-            panel1.Controls.Add(label_WindowSizeDebug); // debug (rightmost)
+            //panel1.Controls.Add(label_WindowSizeDebug); // debug (rightmost)
             panel1.Controls.Add(label2); // damage(dps) [docked right]
             panel1.Controls.Add(BattleTimeText); // timer [docked left]
             panel1.Controls.Add(SortToggleButton);
