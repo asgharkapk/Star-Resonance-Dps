@@ -63,7 +63,7 @@ namespace StarResonanceDpsAnalysis.Plugin
             }
             return translated == null ? "" : translated;
         }
-
+/*
         private static Dictionary<string, string> ProfessionKeyValuesEN = new();
         private static Dictionary<string, string> ProfessionKeyValuesCN = new();
 
@@ -139,7 +139,7 @@ namespace StarResonanceDpsAnalysis.Plugin
             // 3️⃣ Fallback
             return Properties.Strings.Profession_Unknown;
         }
-
+*/
 
         public static string GetSubProfessionBySkillId(ulong skillId) =>
             skillId switch
