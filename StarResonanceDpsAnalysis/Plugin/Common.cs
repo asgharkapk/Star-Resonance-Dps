@@ -78,10 +78,12 @@ namespace StarResonanceDpsAnalysis.Plugin
                 var rsCN = rm.GetResourceSet(new CultureInfo("zh"), true, true);
                 if (rsCN != null)
                 {
-                    foreach (DictionaryEntry e in rsCN)
+                    foreach (DictionaryEntry entry in rsCN)
                     {
-                        if (e.Key is string key && key.StartsWith("Profession_"))
-                            ProfessionKeyValuesCN[e.Value?.ToString() ?? ""] = key;
+                        if (entry.Key is string resKey && resKey.StartsWith("Profession_"))
+                        {
+                            ProfessionKeyValuesCN[entry.Value?.ToString() ?? ""] = resKey;
+                        }
                     }
                 }
             }
@@ -91,18 +93,21 @@ namespace StarResonanceDpsAnalysis.Plugin
                 var rsEN = rm.GetResourceSet(new CultureInfo("en"), true, true);
                 if (rsEN != null)
                 {
-                    foreach (DictionaryEntry e in rsEN)
+                    foreach (DictionaryEntry entry in rsEN)
                     {
-                        if (e.Key is string key && key.StartsWith("Profession_"))
-                            ProfessionKeyValuesEN[e.Value?.ToString() ?? ""] = key;
+                        if (entry.Key is string resKey && resKey.StartsWith("Profession_"))
+                        {
+                            ProfessionKeyValuesEN[entry.Value?.ToString() ?? ""] = resKey;
+                        }
                     }
                 }
             }
 
-            if (ProfessionKeyValuesEN.TryGetValue(profession, out var key) ||
-                ProfessionKeyValuesCN.TryGetValue(profession, out key))
+            // 🔧 renamed variable here
+            if (ProfessionKeyValuesEN.TryGetValue(profession, out var resourceKey) ||
+                ProfessionKeyValuesCN.TryGetValue(profession, out resourceKey))
             {
-                return rm.GetString(key, Thread.CurrentThread.CurrentUICulture)
+                return rm.GetString(resourceKey, Thread.CurrentThread.CurrentUICulture)
                     ?? profession;
             }
 
