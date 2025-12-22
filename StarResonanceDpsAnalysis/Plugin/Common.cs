@@ -17,6 +17,9 @@ namespace StarResonanceDpsAnalysis.Plugin
             var ts = TimeSpan.FromSeconds(sec);
             return $"{(int)ts.TotalMinutes:D2}:{ts.Seconds:D2}";
         }
+
+
+
         // Need to convert playerstats to hold resource keys but i can't be bothered...
         private static Dictionary<string, string> SubProfessionKeyValuesEN = new() {};
         private static Dictionary<string, string> SubProfessionKeyValuesCN = new() { };
@@ -60,6 +63,78 @@ namespace StarResonanceDpsAnalysis.Plugin
             }
             return translated == null ? "" : translated;
         }
+
+        private static Dictionary<string, string> ProfessionKeyValuesEN = new();
+        private static Dictionary<string, string> ProfessionKeyValuesCN = new();
+
+        public static string GetTranslatedProfession(string profession)
+        {
+            var rm = Properties.Strings.ResourceManager;
+            if (rm == null)
+                return profession;
+
+            if (ProfessionKeyValuesCN.Count == 0)
+            {
+                var rsCN = rm.GetResourceSet(new CultureInfo("zh"), true, true);
+                if (rsCN != null)
+                {
+                    foreach (DictionaryEntry e in rsCN)
+                    {
+                        if (e.Key is string key && key.StartsWith("Profession_"))
+                            ProfessionKeyValuesCN[e.Value?.ToString() ?? ""] = key;
+                    }
+                }
+            }
+
+            if (ProfessionKeyValuesEN.Count == 0)
+            {
+                var rsEN = rm.GetResourceSet(new CultureInfo("en"), true, true);
+                if (rsEN != null)
+                {
+                    foreach (DictionaryEntry e in rsEN)
+                    {
+                        if (e.Key is string key && key.StartsWith("Profession_"))
+                            ProfessionKeyValuesEN[e.Value?.ToString() ?? ""] = key;
+                    }
+                }
+            }
+
+            if (ProfessionKeyValuesEN.TryGetValue(profession, out var key) ||
+                ProfessionKeyValuesCN.TryGetValue(profession, out key))
+            {
+                return rm.GetString(key, Thread.CurrentThread.CurrentUICulture)
+                    ?? profession;
+            }
+
+            return profession;
+        }
+
+        public static string GetTranslatedRole(string? subProfession, string? profession)
+        {
+            var rm = Properties.Strings.ResourceManager;
+            if (rm == null)
+                return Properties.Strings.Profession_Unknown;
+
+            // 1️⃣ Try SubProfession first
+            if (!string.IsNullOrWhiteSpace(subProfession))
+            {
+                var sp = GetTranslatedSubProfession(subProfession);
+                if (!string.IsNullOrWhiteSpace(sp))
+                    return sp;
+            }
+
+            // 2️⃣ Try Profession
+            if (!string.IsNullOrWhiteSpace(profession))
+            {
+                var prof = GetTranslatedProfession(profession);
+                if (!string.IsNullOrWhiteSpace(prof))
+                    return prof;
+            }
+
+            // 3️⃣ Fallback
+            return Properties.Strings.Profession_Unknown;
+        }
+
 
         public static string GetSubProfessionBySkillId(ulong skillId) =>
             skillId switch

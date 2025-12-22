@@ -718,14 +718,14 @@ namespace StarResonanceDpsAnalysis.Forms
                     string share = $"💀{thedeathCount}"; //(like a Label, TextBox, or Button) doesn’t support emojis
                     row[0].Image = profBmp;
                     // 只要子流派；没有子流派就用战力；否则只显示昵称
-                    string sp = Common.GetTranslatedSubProfession(p.SubProfession);
+                    string role = Common.GetTranslatedRole(p.SubProfession, p.Profession);
 
-                    //row[1].Text = $"{p.Nickname}-{sp}({p.CombatPower})"; //TODO come back here, update subprofession when changing language
-                    //row[1].Text = $"[{sp}]{p.Nickname}-({p.CombatPower})";
-                    //row[1].Text = $"[{sp}]{p.Nickname}({p.CombatPower})";
-                    //row[1].Text = $"[{sp}]{p.Nickname} ({p.CombatPower})";
-                    //row[1].Text = $"[{sp}]-{p.Nickname}-({p.CombatPower})";
-                    row[1].Text = $"[{sp}]{p.Nickname}({p.CombatPower})";
+                    //row[1].Text = $"{p.Nickname}-{role}({p.CombatPower})"; //TODO come back here, update subprofession when changing language
+                    //row[1].Text = $"[{role}]{p.Nickname}-({p.CombatPower})";
+                    //row[1].Text = $"[{role}]{p.Nickname}({p.CombatPower})";
+                    //row[1].Text = $"[{role}]{p.Nickname} ({p.CombatPower})";
+                    //row[1].Text = $"[{role}]-{p.Nickname}-({p.CombatPower})";
+                    row[1].Text = $"[{role}]{p.Nickname}({p.CombatPower})";
 
                     row[2].Text = $"{totalFmt} ({perSec})";
                     row[3].Text = share;
