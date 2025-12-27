@@ -260,10 +260,13 @@
             border-radius: 12px;
             border: 1px solid transparent;
             transition: all 0.3s ease;
-            /* Added for word wrap */
-            white-space: normal;      /* allow text to wrap */
-            word-wrap: break-word;    /* break long words if needed */
-            overflow-wrap: anywhere;  /* modern fallback for very long strings */
+            /* Word wrap */
+            white-space: normal;          /* allow text to wrap */
+            word-wrap: break-word;        /* legacy fallback */
+            overflow-wrap: anywhere;      /* modern fallback */
+            /* Ensure card doesn't exceed its container */
+            max-width: 100%;              /* never go beyond parent width */
+            box-sizing: border-box;       /* include padding in width */
         }
 
         .feature-card:hover {
