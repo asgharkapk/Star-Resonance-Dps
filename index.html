@@ -248,6 +248,11 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
         }
+        
+        .features .feature-grid {
+            grid-template-columns: 1fr;
+        }
+
 
         .feature-card {
             background: var(--surface-color);
@@ -331,6 +336,19 @@
                 flex-direction: column;
             }
         }
+
+        .preview-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: auto;
+        }
+        
+        .preview-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
     </style>
 </head>
 <body>
@@ -383,9 +401,13 @@
                         <div class="window-dot dot-yellow"></div>
                         <div class="window-dot dot-green"></div>
                     </div>
-                    <div class="window-body">
-                        <div class="window-overlay"></div>
-                    </div>
+                        <div class="window-body preview-images">
+                            <img src="https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/BRANCH_SELECTOR/dark-mode.jpg"
+                                 alt="Dark mode preview">
+                            <img src="https://raw.githubusercontent.com/asgharkapk/Star-Resonance-Dps/refs/heads/BRANCH_SELECTOR/light-mode.jpg"
+                                 alt="Light mode preview">
+                            <div class="window-overlay"></div>
+                        </div>
                 </div>
             </div>
         </section>
