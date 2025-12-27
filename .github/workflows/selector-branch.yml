@@ -2,7 +2,7 @@ name: SELECTOR Auto README
 
 on:
   push:
-    branches: [branch_selector]
+    branches: [BRANCH_SELECTOR]
   workflow_dispatch:
   repository_dispatch:
     types: [branch-release-updated]
@@ -139,35 +139,44 @@ jobs:
       shell: bash
       run: |
         echo "::group::Building index.html"
-    
+        
         template="site/index.template.html"
         output="index.html"
-    
-        releases_html="<div class='feature-grid'>"
-    
+        
+        tmp_releases="$(mktemp)"
+        
+        echo "<div class='feature-grid'>" > "$tmp_releases"
+        
         for f in releases/*.md; do
           name=$(basename "$f" .md)
-    
           download="https://github.com/asgharkapk/Star-Resonance-Dps/releases/latest"
-    
-          content=$(sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g' "$f")
-    
-          releases_html+="
-          <div class='feature-card'>
-            <h3>$name</h3>
-            <pre>$content</pre>
-            <a class='btn btn-outline' href='$download'>Download</a>
-          </div>"
+        
+          echo "Processing $name"
+        
+          {
+            echo "<div class='feature-card'>"
+            echo "<h3>$name</h3>"
+            echo "<pre>"
+            sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g' "$f"
+            echo "</pre>"
+            echo "<a class='btn btn-outline' href='$download'>Download</a>"
+            echo "</div>"
+          } >> "$tmp_releases"
         done
-    
-        releases_html+="</div>"
-    
-        sed \
-          -e "s|{{RELEASES}}|$releases_html|" \
-          -e "s|{{LATEST_DOWNLOAD}}|https://github.com/asgharkapk/Star-Resonance-Dps/releases/latest|" \
-          "$template" > "$output"
-    
-        echo "::notice::index.html generated"
+        
+        echo "</div>" >> "$tmp_releases"
+        
+        # Replace placeholders safely
+        sed "/{{RELEASES}}/{
+          r $tmp_releases
+          d
+        }" "$template" \
+        | sed "s|{{LATEST_DOWNLOAD}}|https://github.com/asgharkapk/Star-Resonance-Dps/releases/latest|g" \
+        > "$output"
+        
+        rm "$tmp_releases"
+        
+        echo "::notice::index.html generated successfully"
         echo "::endgroup::"
 
     ### 5. Commit summary to current branch
