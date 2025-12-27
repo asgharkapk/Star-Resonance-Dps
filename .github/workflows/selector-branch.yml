@@ -134,6 +134,42 @@ jobs:
 
         echo "::endgroup::"
 
+    ### 6. Build index.html
+    - name: Build index.html
+      shell: bash
+      run: |
+        echo "::group::Building index.html"
+    
+        template="site/index.template.html"
+        output="index.html"
+    
+        releases_html="<div class='feature-grid'>"
+    
+        for f in releases/*.md; do
+          name=$(basename "$f" .md)
+    
+          download="https://github.com/asgharkapk/Star-Resonance-Dps/releases/latest"
+    
+          content=$(sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g' "$f")
+    
+          releases_html+="
+          <div class='feature-card'>
+            <h3>$name</h3>
+            <pre>$content</pre>
+            <a class='btn btn-outline' href='$download'>Download</a>
+          </div>"
+        done
+    
+        releases_html+="</div>"
+    
+        sed \
+          -e "s|{{RELEASES}}|$releases_html|" \
+          -e "s|{{LATEST_DOWNLOAD}}|https://github.com/asgharkapk/Star-Resonance-Dps/releases/latest|" \
+          "$template" > "$output"
+    
+        echo "::notice::index.html generated"
+        echo "::endgroup::"
+
     ### 5. Commit summary to current branch
     - name: Commit summary to current branch
       shell: pwsh
@@ -150,7 +186,7 @@ jobs:
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
 
-        git add branches-release-summary.md README.md
+        git add branches-release-summary.md README.md index.html
 
         Write-Host "::notice::Git status:"
         git status --short
