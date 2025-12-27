@@ -260,6 +260,10 @@
             border-radius: 12px;
             border: 1px solid transparent;
             transition: all 0.3s ease;
+            /* Added for word wrap */
+            white-space: normal;      /* allow text to wrap */
+            word-wrap: break-word;    /* break long words if needed */
+            overflow-wrap: anywhere;  /* modern fallback for very long strings */
         }
 
         .feature-card:hover {
@@ -359,17 +363,17 @@
             <nav>
                 <a href="#" class="logo">
                     <svg viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        <path d="M4 3l6 6-1.5 1.5L3 4.5 4 3zm16 0l1 1.5-5.5 5.5L14 9l6-6zm-9.5 7.5l1.5 1.5L6 18H4v-2l6.5-6.5zm3 0L20 16v2h-2l-6.5-6.5 1.5-1.5z"/>
                     </svg>
                     Star Resonance DPS
                 </a>
                 <ul class="nav-links">
-                    <li><a href="#">Docs</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">GitHub</a></li>
+                    <li><a href="https://github.com/asgharkapk/Star-Resonance-Dps/tree/BRANCH_SELECTOR/documents">Docs</a></li>
+                    <li><a href="https://github.com/asgharkapk/Star-Resonance-Dps/blob/BRANCH_SELECTOR/README.md">README</a></li>
+                    <li><a href="https://github.com/asgharkapk/Star-Resonance-Dps/tree/BRANCH_SELECTOR">GitHub</a></li>
                 </ul>
                 <div class="nav-cta">
-                    <a href="#" class="btn btn-primary">Download</a>
+                    <a href="{{LATEST_DOWNLOAD}}" class="btn btn-primary">Download</a>
                 </div>
             </nav>
         </div>
@@ -428,10 +432,10 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="#">Documentation</a>
-                <a href="#">GitHub Repository</a>
-                <a href="#">License</a>
-                <a href="#">Report Issue</a>
+                <a href="https://github.com/asgharkapk/Star-Resonance-Dps/tree/BRANCH_SELECTOR/documents">Documentation</a>
+                <a href="https://github.com/asgharkapk/Star-Resonance-Dps/tree/BRANCH_SELECTOR">GitHub Repository</a>
+                <a href="https://github.com/asgharkapk/Star-Resonance-Dps/blob/BRANCH_SELECTOR/LICENSE.txt">License</a>
+                <a href="https://github.com/asgharkapk/Star-Resonance-Dps">Report Issue</a>
             </div>
             <p class="copyright">
                 &copy; 2023 Clash for Windows. All rights reserved. <br>
