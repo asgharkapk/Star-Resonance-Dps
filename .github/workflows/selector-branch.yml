@@ -149,7 +149,8 @@ jobs:
         
         for f in releases/*.md; do
           name=$(basename "$f" .md)
-          download="https://github.com/asgharkapk/Star-Resonance-Dps/releases/latest"
+          branch="$name"
+          download="https://github.com/asgharkapk/Star-Resonance-Dps/blob/$branch/latest-release.md"
         
           echo "Processing $name"
         
@@ -171,7 +172,7 @@ jobs:
           r $tmp_releases
           d
         }" "$template" \
-        | sed "s|{{LATEST_DOWNLOAD}}|https://github.com/asgharkapk/Star-Resonance-Dps/releases/latest|g" \
+        | sed "s|{{LATEST_DOWNLOAD}}|https://github.com/asgharkapk/Star-Resonance-Dps/blob/BRANCH_SELECTOR/branches-release-summary.md|g" \
         > "$output"
         
         rm "$tmp_releases"
