@@ -1,4 +1,4 @@
-# Star Resonance DPS Analysis Tool (Fork)
+# <img src="https://github.com/asgharkapk/Star-Resonance-Dps/blob/cOmPaCt/StarResonanceDpsAnalysis/Assets/ApplicationIcon.png?raw=true" width="64" align="center"> Star Resonance DPS Analysis Tool (Fork)
 
 A fork of [DannyDog/StarResonanceDps](https://github.com/DannyDog/StarResonanceDps) which is fork of [anying1073/StarResonanceDps](https://github.com/anying1073/StarResonanceDps) that is ported from [dmlgzs/StarResonanceDamageCounter](https://github.com/dmlgzs/StarResonanceDamageCounter)
 
